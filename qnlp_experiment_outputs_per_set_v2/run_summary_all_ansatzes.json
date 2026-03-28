@@ -1,0 +1,260 @@
+{
+  "experiment_consolidated_summary": true,
+  "ansatzes_configured": [
+    "IQP",
+    "StronglyEntangling",
+    "Sim14"
+  ],
+  "embedding_model_path_configured": "aravec/full_uni_cbow_300_twitter.mdl",
+  "sets_processed": [
+    "WordOrder",
+    "LexicalAmbiguity",
+    "Morphology"
+  ],
+  "classification_summary_by_run": {
+    "IQP/LexicalAmbiguity": {
+      "GaussianNB": {
+        "classifier": "GaussianNB",
+        "accuracy": 0.23333333333333334,
+        "report": "                     precision    recall  f1-score   support\n\n    Ambiguity_Camel       0.00      0.00      0.00         3\n  Ambiguity_Conquer       0.00      0.00      0.00         1\n      Ambiguity_Eye       0.00      0.00      0.00         2\n     Ambiguity_Flag       0.00      0.00      0.00         2\n      Ambiguity_Hit       0.00      0.00      0.00         1\n     Ambiguity_King       0.50      0.50      0.50         4\nAmbiguity_Knowledge       0.00      0.00      0.00         0\n      Ambiguity_Leg       0.00      0.00      0.00         4\n      Ambiguity_Man       0.67      0.67      0.67         3\n Ambiguity_Multiply       0.00      0.00      0.00         3\n     Ambiguity_Open       0.10      0.50      0.17         2\n  Ambiguity_Possess       0.00      0.00      0.00         1\nAmbiguity_Sentences       0.50      0.50      0.50         4\n   Ambiguity_Spring       0.00      0.00      0.00         0\n\n           accuracy                           0.23        30\n          macro avg       0.13      0.15      0.13        30\n       weighted avg       0.21      0.23      0.21        30\n",
+        "num_samples_train": 67,
+        "num_samples_test": 30,
+        "num_classes": 14,
+        "embedding_type_used": "combined",
+        "cv_scores": [
+          0.25,
+          0.45,
+          0.3157894736842105,
+          0.3157894736842105,
+          0.3684210526315789
+        ],
+        "cv_mean": 0.33999999999999997,
+        "cv_std": 0.06660338640288803
+      },
+      "SVC": {
+        "classifier": "SVC",
+        "accuracy": 0.3333333333333333,
+        "report": "                     precision    recall  f1-score   support\n\n    Ambiguity_Camel       0.43      1.00      0.60         3\n  Ambiguity_Conquer       0.00      0.00      0.00         1\n      Ambiguity_Eye       0.00      0.00      0.00         2\n     Ambiguity_Flag       0.00      0.00      0.00         2\n      Ambiguity_Hit       0.00      0.00      0.00         1\n     Ambiguity_King       0.50      0.50      0.50         4\nAmbiguity_Knowledge       0.00      0.00      0.00         0\n      Ambiguity_Leg       0.00      0.00      0.00         4\n      Ambiguity_Man       0.40      0.67      0.50         3\n Ambiguity_Multiply       0.00      0.00      0.00         3\n     Ambiguity_Open       0.40      1.00      0.57         2\n  Ambiguity_Possess       0.00      0.00      0.00         1\nAmbiguity_Sentences       1.00      0.25      0.40         4\n   Ambiguity_Spring       0.00      0.00      0.00         0\n\n           accuracy                           0.33        30\n          macro avg       0.19      0.24      0.18        30\n       weighted avg       0.31      0.33      0.27        30\n",
+        "num_samples_train": 67,
+        "num_samples_test": 30,
+        "num_classes": 14,
+        "embedding_type_used": "combined",
+        "cv_scores": [
+          0.4,
+          0.5,
+          0.47368421052631576,
+          0.5263157894736842,
+          0.42105263157894735
+        ],
+        "cv_mean": 0.46421052631578946,
+        "cv_std": 0.047356723701903115
+      },
+      "QuantumKernelSVC": {
+        "classifier": "QuantumKernelSVC",
+        "accuracy": 0.0,
+        "report": "                     precision    recall  f1-score   support\n\n  Ambiguity_Conquer       0.00      0.00      0.00       5.0\n     Ambiguity_Flag       0.00      0.00      0.00       0.0\n      Ambiguity_Hit       0.00      0.00      0.00       9.0\n     Ambiguity_King       0.00      0.00      0.00       0.0\nAmbiguity_Knowledge       0.00      0.00      0.00       0.0\n      Ambiguity_Man       0.00      0.00      0.00       0.0\n Ambiguity_Multiply       0.00      0.00      0.00      10.0\n     Ambiguity_Open       0.00      0.00      0.00      10.0\nAmbiguity_Sentences       0.00      0.00      0.00       0.0\n\n           accuracy                           0.00      34.0\n          macro avg       0.00      0.00      0.00      34.0\n       weighted avg       0.00      0.00      0.00      34.0\n",
+        "num_samples_train": 77,
+        "num_samples_test": 34,
+        "num_classes": 14,
+        "kernel_matrix_shape": [
+          111,
+          111
+        ],
+        "kernel_mean_off_diag": 0.4119763283378747
+      },
+      "ClassicalAraVec_GNB": {
+        "classifier": "ClassicalAraVec_GNB",
+        "cv_scores": [
+          0.56,
+          0.64,
+          0.64,
+          0.52,
+          0.76
+        ],
+        "cv_mean": 0.624,
+        "cv_std": 0.082365041127896,
+        "num_samples": 125,
+        "num_classes": 14,
+        "embedding_type_used": "classical_aravec_avg"
+      },
+      "ClassicalAraVec_SVC": {
+        "classifier": "ClassicalAraVec_SVC",
+        "cv_scores": [
+          0.56,
+          0.8,
+          0.72,
+          0.64,
+          0.8
+        ],
+        "cv_mean": 0.7040000000000001,
+        "cv_std": 0.0932952303175248,
+        "num_samples": 125,
+        "num_classes": 14,
+        "embedding_type_used": "classical_aravec_avg"
+      }
+    },
+    "StronglyEntangling/LexicalAmbiguity": {
+      "GaussianNB": {
+        "classifier": "GaussianNB",
+        "accuracy": 0.23333333333333334,
+        "report": "                     precision    recall  f1-score   support\n\n    Ambiguity_Camel       0.00      0.00      0.00         3\n  Ambiguity_Conquer       0.00      0.00      0.00         1\n      Ambiguity_Eye       0.00      0.00      0.00         2\n     Ambiguity_Flag       0.00      0.00      0.00         2\n      Ambiguity_Hit       0.00      0.00      0.00         1\n     Ambiguity_King       0.50      0.50      0.50         4\nAmbiguity_Knowledge       0.00      0.00      0.00         0\n      Ambiguity_Leg       0.00      0.00      0.00         4\n      Ambiguity_Man       0.67      0.67      0.67         3\n Ambiguity_Multiply       0.00      0.00      0.00         3\n     Ambiguity_Open       0.09      0.50      0.15         2\n  Ambiguity_Possess       0.00      0.00      0.00         1\nAmbiguity_Sentences       0.67      0.50      0.57         4\n   Ambiguity_Spring       0.00      0.00      0.00         0\n\n           accuracy                           0.23        30\n          macro avg       0.14      0.15      0.14        30\n       weighted avg       0.23      0.23      0.22        30\n",
+        "num_samples_train": 67,
+        "num_samples_test": 30,
+        "num_classes": 14,
+        "embedding_type_used": "combined",
+        "cv_scores": [
+          0.3,
+          0.45,
+          0.3684210526315789,
+          0.3157894736842105,
+          0.3684210526315789
+        ],
+        "cv_mean": 0.3605263157894737,
+        "cv_std": 0.05252621031526168
+      },
+      "SVC": {
+        "classifier": "SVC",
+        "accuracy": 0.3333333333333333,
+        "report": "                     precision    recall  f1-score   support\n\n    Ambiguity_Camel       0.43      1.00      0.60         3\n  Ambiguity_Conquer       0.00      0.00      0.00         1\n      Ambiguity_Eye       0.00      0.00      0.00         2\n     Ambiguity_Flag       0.00      0.00      0.00         2\n      Ambiguity_Hit       0.00      0.00      0.00         1\n     Ambiguity_King       0.50      0.50      0.50         4\nAmbiguity_Knowledge       0.00      0.00      0.00         0\n      Ambiguity_Leg       0.00      0.00      0.00         4\n      Ambiguity_Man       0.40      0.67      0.50         3\n Ambiguity_Multiply       0.00      0.00      0.00         3\n     Ambiguity_Open       0.40      1.00      0.57         2\n  Ambiguity_Possess       0.00      0.00      0.00         1\nAmbiguity_Sentences       1.00      0.25      0.40         4\n   Ambiguity_Spring       0.00      0.00      0.00         0\n\n           accuracy                           0.33        30\n          macro avg       0.19      0.24      0.18        30\n       weighted avg       0.31      0.33      0.27        30\n",
+        "num_samples_train": 67,
+        "num_samples_test": 30,
+        "num_classes": 14,
+        "embedding_type_used": "combined",
+        "cv_scores": [
+          0.4,
+          0.5,
+          0.47368421052631576,
+          0.5263157894736842,
+          0.42105263157894735
+        ],
+        "cv_mean": 0.46421052631578946,
+        "cv_std": 0.047356723701903115
+      },
+      "QuantumKernelSVC": {
+        "classifier": "QuantumKernelSVC",
+        "accuracy": 0.0,
+        "report": "                     precision    recall  f1-score   support\n\n  Ambiguity_Conquer       0.00      0.00      0.00       5.0\n     Ambiguity_Flag       0.00      0.00      0.00       0.0\n      Ambiguity_Hit       0.00      0.00      0.00       9.0\n     Ambiguity_King       0.00      0.00      0.00       0.0\nAmbiguity_Knowledge       0.00      0.00      0.00       0.0\n      Ambiguity_Man       0.00      0.00      0.00       0.0\n Ambiguity_Multiply       0.00      0.00      0.00      10.0\n     Ambiguity_Open       0.00      0.00      0.00      10.0\nAmbiguity_Sentences       0.00      0.00      0.00       0.0\n\n           accuracy                           0.00      34.0\n          macro avg       0.00      0.00      0.00      34.0\n       weighted avg       0.00      0.00      0.00      34.0\n",
+        "num_samples_train": 77,
+        "num_samples_test": 34,
+        "num_classes": 14,
+        "kernel_matrix_shape": [
+          111,
+          111
+        ],
+        "kernel_mean_off_diag": 0.3788855173176375
+      },
+      "ClassicalAraVec_GNB": {
+        "classifier": "ClassicalAraVec_GNB",
+        "cv_scores": [
+          0.56,
+          0.64,
+          0.64,
+          0.52,
+          0.76
+        ],
+        "cv_mean": 0.624,
+        "cv_std": 0.082365041127896,
+        "num_samples": 125,
+        "num_classes": 14,
+        "embedding_type_used": "classical_aravec_avg"
+      },
+      "ClassicalAraVec_SVC": {
+        "classifier": "ClassicalAraVec_SVC",
+        "cv_scores": [
+          0.56,
+          0.8,
+          0.72,
+          0.64,
+          0.8
+        ],
+        "cv_mean": 0.7040000000000001,
+        "cv_std": 0.0932952303175248,
+        "num_samples": 125,
+        "num_classes": 14,
+        "embedding_type_used": "classical_aravec_avg"
+      }
+    },
+    "Sim14/LexicalAmbiguity": {
+      "GaussianNB": {
+        "classifier": "GaussianNB",
+        "accuracy": 0.26666666666666666,
+        "report": "                     precision    recall  f1-score   support\n\n    Ambiguity_Camel       0.00      0.00      0.00         3\n  Ambiguity_Conquer       0.00      0.00      0.00         1\n      Ambiguity_Eye       0.00      0.00      0.00         2\n     Ambiguity_Flag       0.00      0.00      0.00         2\n      Ambiguity_Hit       0.00      0.00      0.00         1\n     Ambiguity_King       0.50      0.75      0.60         4\nAmbiguity_Knowledge       0.00      0.00      0.00         0\n      Ambiguity_Leg       0.00      0.00      0.00         4\n      Ambiguity_Man       0.67      0.67      0.67         3\n Ambiguity_Multiply       0.00      0.00      0.00         3\n     Ambiguity_Open       0.10      0.50      0.17         2\n  Ambiguity_Possess       0.00      0.00      0.00         1\nAmbiguity_Sentences       0.50      0.50      0.50         4\n\n           accuracy                           0.27        30\n          macro avg       0.14      0.19      0.15        30\n       weighted avg       0.21      0.27      0.22        30\n",
+        "num_samples_train": 67,
+        "num_samples_test": 30,
+        "num_classes": 14,
+        "embedding_type_used": "combined",
+        "cv_scores": [
+          0.2,
+          0.45,
+          0.47368421052631576,
+          0.3157894736842105,
+          0.3157894736842105
+        ],
+        "cv_mean": 0.3510526315789474,
+        "cv_std": 0.10013287570914926
+      },
+      "SVC": {
+        "classifier": "SVC",
+        "accuracy": 0.3333333333333333,
+        "report": "                     precision    recall  f1-score   support\n\n    Ambiguity_Camel       0.50      1.00      0.67         3\n  Ambiguity_Conquer       0.00      0.00      0.00         1\n      Ambiguity_Eye       0.00      0.00      0.00         2\n     Ambiguity_Flag       0.00      0.00      0.00         2\n      Ambiguity_Hit       0.00      0.00      0.00         1\n     Ambiguity_King       0.50      0.50      0.50         4\nAmbiguity_Knowledge       0.00      0.00      0.00         0\n      Ambiguity_Leg       0.00      0.00      0.00         4\n      Ambiguity_Man       0.40      0.67      0.50         3\n Ambiguity_Multiply       0.00      0.00      0.00         3\n     Ambiguity_Open       0.40      1.00      0.57         2\n  Ambiguity_Possess       0.00      0.00      0.00         1\nAmbiguity_Sentences       1.00      0.25      0.40         4\n   Ambiguity_Spring       0.00      0.00      0.00         0\n\n           accuracy                           0.33        30\n          macro avg       0.20      0.24      0.19        30\n       weighted avg       0.32      0.33      0.27        30\n",
+        "num_samples_train": 67,
+        "num_samples_test": 30,
+        "num_classes": 14,
+        "embedding_type_used": "combined",
+        "cv_scores": [
+          0.4,
+          0.5,
+          0.47368421052631576,
+          0.5263157894736842,
+          0.42105263157894735
+        ],
+        "cv_mean": 0.46421052631578946,
+        "cv_std": 0.047356723701903115
+      },
+      "QuantumKernelSVC": {
+        "classifier": "QuantumKernelSVC",
+        "accuracy": 0.0,
+        "report": "                     precision    recall  f1-score   support\n\n  Ambiguity_Conquer       0.00      0.00      0.00       5.0\n      Ambiguity_Eye       0.00      0.00      0.00       0.0\n      Ambiguity_Hit       0.00      0.00      0.00       9.0\n     Ambiguity_King       0.00      0.00      0.00       0.0\n      Ambiguity_Man       0.00      0.00      0.00       0.0\n Ambiguity_Multiply       0.00      0.00      0.00      10.0\n     Ambiguity_Open       0.00      0.00      0.00      10.0\nAmbiguity_Sentences       0.00      0.00      0.00       0.0\n\n           accuracy                           0.00      34.0\n          macro avg       0.00      0.00      0.00      34.0\n       weighted avg       0.00      0.00      0.00      34.0\n",
+        "num_samples_train": 77,
+        "num_samples_test": 34,
+        "num_classes": 14,
+        "kernel_matrix_shape": [
+          111,
+          111
+        ],
+        "kernel_mean_off_diag": 0.560352693178958
+      },
+      "ClassicalAraVec_GNB": {
+        "classifier": "ClassicalAraVec_GNB",
+        "cv_scores": [
+          0.56,
+          0.64,
+          0.64,
+          0.52,
+          0.76
+        ],
+        "cv_mean": 0.624,
+        "cv_std": 0.082365041127896,
+        "num_samples": 125,
+        "num_classes": 14,
+        "embedding_type_used": "classical_aravec_avg"
+      },
+      "ClassicalAraVec_SVC": {
+        "classifier": "ClassicalAraVec_SVC",
+        "cv_scores": [
+          0.56,
+          0.8,
+          0.72,
+          0.64,
+          0.8
+        ],
+        "cv_mean": 0.7040000000000001,
+        "cv_std": 0.0932952303175248,
+        "num_samples": 125,
+        "num_classes": 14,
+        "embedding_type_used": "classical_aravec_avg"
+      }
+    }
+  },
+  "num_runs_processed": 3
+}

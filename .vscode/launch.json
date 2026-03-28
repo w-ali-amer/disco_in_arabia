@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Debug Test Script",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "test_ambiguity_H3.py", 
+            "python": "/home/waj/discocat_arabic_v2/qiskit_lambeq_env/bin/python",// Ensures it runs your test script
+            "console": "integratedTerminal",
+            "justMyCode": false, // VssERY IMPORTANT: Set to false to step into library code (Lambeq)
+            "env": {
+                "PYTHONPATH": "/home/waj/discocat_arabic_v2/qiskit_lambeq_env/lib/python3.10/site-packages"
+                // If you have specific environment variables for your venv, add them here
+                // e.g., "PYTHONPATH": "${workspaceFolder}/your_venv_path/lib/python3.10/site-packages"
+                // but usually VS Code handles venv activation well if you selected the interpreter.
+            }
+        }
+    ]
+}

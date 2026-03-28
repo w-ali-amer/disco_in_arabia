@@ -1,0 +1,29 @@
+{
+  "tag": "Binary_Man_Leg/IQP/L1",
+  "pair_name": "Binary_Man_Leg",
+  "ansatz": "IQP",
+  "n_layers": 1,
+  "pivot": "رجل",
+  "n_samples": 30,
+  "n_folds": 5,
+  "oracle_mean": 0.7333333333333333,
+  "oracle_std": 0.16996731711975951,
+  "oracle_folds": [
+    0.8333333333333334,
+    0.5,
+    1.0,
+    0.6666666666666666,
+    0.6666666666666666
+  ],
+  "oracle_report": "               precision    recall  f1-score   support\n\nAmbiguity_Leg       0.71      0.80      0.75        15\nAmbiguity_Man       0.77      0.67      0.71        15\n\n     accuracy                           0.73        30\n    macro avg       0.74      0.73      0.73        30\n weighted avg       0.74      0.73      0.73        30\n",
+  "auto_mean": 0.6333333333333333,
+  "auto_std": 0.16329931618554525,
+  "auto_folds": [
+    0.8333333333333334,
+    0.3333333333333333,
+    0.6666666666666666,
+    0.6666666666666666,
+    0.6666666666666666
+  ],
+  "auto_report": "               precision    recall  f1-score   support\n\nAmbiguity_Leg       0.62      0.67      0.65        15\nAmbiguity_Man       0.64      0.60      0.62        15\n\n     accuracy                           0.63        30\n    macro avg       0.63      0.63      0.63        30\n weighted avg       0.63      0.63      0.63        30\n"
+}

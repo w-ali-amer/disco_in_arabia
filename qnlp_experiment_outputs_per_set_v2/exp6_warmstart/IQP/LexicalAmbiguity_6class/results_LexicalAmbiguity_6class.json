@@ -1,0 +1,25 @@
+{
+  "exp_name": "LexicalAmbiguity_6class",
+  "ansatz": "IQP",
+  "n_samples": 60,
+  "n_classes": 6,
+  "n_s_qubits": 3,
+  "fold_accuracies": [
+    0.16666666666666666,
+    0.3333333333333333,
+    0.25,
+    0.0,
+    0.08333333333333333
+  ],
+  "accuracy_mean": 0.16666666666666669,
+  "accuracy_std": 0.11785113019775792,
+  "class_list": [
+    "Ambiguity_Hit",
+    "Ambiguity_King",
+    "Ambiguity_Leg",
+    "Ambiguity_Man",
+    "Ambiguity_Multiply",
+    "Ambiguity_Possess"
+  ],
+  "classification_report": "                    precision    recall  f1-score   support\n\n     Ambiguity_Hit       0.00      0.00      0.00        10\n    Ambiguity_King       0.62      0.50      0.56        10\n     Ambiguity_Leg       0.20      0.20      0.20        10\n     Ambiguity_Man       0.50      0.30      0.38        10\nAmbiguity_Multiply       0.00      0.00      0.00        10\n Ambiguity_Possess       0.00      0.00      0.00        10\n\n         micro avg       0.20      0.17      0.18        60\n         macro avg       0.22      0.17      0.19        60\n      weighted avg       0.22      0.17      0.19        60\n"
+}

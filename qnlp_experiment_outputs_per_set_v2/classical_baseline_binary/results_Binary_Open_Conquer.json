@@ -1,0 +1,56 @@
+{
+  "pair_name": "Binary_Open_Conquer",
+  "n": 30,
+  "cls_a": "Ambiguity_Open",
+  "cls_b": "Ambiguity_Conquer",
+  "classifiers": {
+    "SVM_linear": {
+      "mean": 0.8666666666666668,
+      "std": 0.12472191289246472,
+      "folds": [
+        0.6666666666666666,
+        0.8333333333333334,
+        0.8333333333333334,
+        1.0,
+        1.0
+      ],
+      "report": "                   precision    recall  f1-score   support\n\nAmbiguity_Conquer       0.92      0.80      0.86        15\n   Ambiguity_Open       0.82      0.93      0.88        15\n\n         accuracy                           0.87        30\n        macro avg       0.87      0.87      0.87        30\n     weighted avg       0.87      0.87      0.87        30\n"
+    },
+    "SVM_rbf": {
+      "mean": 0.9666666666666668,
+      "std": 0.06666666666666667,
+      "folds": [
+        1.0,
+        0.8333333333333334,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "report": "                   precision    recall  f1-score   support\n\nAmbiguity_Conquer       1.00      0.93      0.97        15\n   Ambiguity_Open       0.94      1.00      0.97        15\n\n         accuracy                           0.97        30\n        macro avg       0.97      0.97      0.97        30\n     weighted avg       0.97      0.97      0.97        30\n"
+    },
+    "RF": {
+      "mean": 0.8666666666666666,
+      "std": 0.06666666666666665,
+      "folds": [
+        0.8333333333333334,
+        0.8333333333333334,
+        0.8333333333333334,
+        1.0,
+        0.8333333333333334
+      ],
+      "report": "                   precision    recall  f1-score   support\n\nAmbiguity_Conquer       0.92      0.80      0.86        15\n   Ambiguity_Open       0.82      0.93      0.88        15\n\n         accuracy                           0.87        30\n        macro avg       0.87      0.87      0.87        30\n     weighted avg       0.87      0.87      0.87        30\n"
+    },
+    "MLP": {
+      "mean": 0.7,
+      "std": 0.19436506316151,
+      "folds": [
+        0.8333333333333334,
+        0.5,
+        0.6666666666666666,
+        0.5,
+        1.0
+      ],
+      "report": "                   precision    recall  f1-score   support\n\nAmbiguity_Conquer       1.00      0.40      0.57        15\n   Ambiguity_Open       0.62      1.00      0.77        15\n\n         accuracy                           0.70        30\n        macro avg       0.81      0.70      0.67        30\n     weighted avg       0.81      0.70      0.67        30\n"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "exp_name": "LexicalAmbiguity_14class_aug",
+  "ansatz": "IQP",
+  "n_samples": 210,
+  "n_classes": 14,
+  "chance": 0.07142857142857142,
+  "n_folds": 5,
+  "mean": 0.0,
+  "std": 0.0,
+  "folds": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "report": ""
+}

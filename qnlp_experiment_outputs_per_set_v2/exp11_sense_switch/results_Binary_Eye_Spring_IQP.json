@@ -1,0 +1,29 @@
+{
+  "tag": "Binary_Eye_Spring/IQP/L1",
+  "pair_name": "Binary_Eye_Spring",
+  "ansatz": "IQP",
+  "n_layers": 1,
+  "pivot": "عين",
+  "n_samples": 30,
+  "n_folds": 5,
+  "oracle_mean": 0.7666666666666667,
+  "oracle_std": 0.08164965809277264,
+  "oracle_folds": [
+    0.6666666666666666,
+    0.6666666666666666,
+    0.8333333333333334,
+    0.8333333333333334,
+    0.8333333333333334
+  ],
+  "oracle_report": "                  precision    recall  f1-score   support\n\n   Ambiguity_Eye       0.75      0.80      0.77        15\nAmbiguity_Spring       0.79      0.73      0.76        15\n\n        accuracy                           0.77        30\n       macro avg       0.77      0.77      0.77        30\n    weighted avg       0.77      0.77      0.77        30\n",
+  "auto_mean": 0.6666666666666666,
+  "auto_std": 0.10540925533894599,
+  "auto_folds": [
+    0.6666666666666666,
+    0.6666666666666666,
+    0.5,
+    0.8333333333333334,
+    0.6666666666666666
+  ],
+  "auto_report": "                  precision    recall  f1-score   support\n\n   Ambiguity_Eye       0.63      0.80      0.71        15\nAmbiguity_Spring       0.73      0.53      0.62        15\n\n        accuracy                           0.67        30\n       macro avg       0.68      0.67      0.66        30\n    weighted avg       0.68      0.67      0.66        30\n"
+}

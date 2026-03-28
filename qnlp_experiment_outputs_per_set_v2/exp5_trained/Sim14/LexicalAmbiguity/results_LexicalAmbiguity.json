@@ -1,0 +1,33 @@
+{
+  "exp_name": "LexicalAmbiguity",
+  "ansatz": "Sim14",
+  "n_samples": 125,
+  "n_classes": 14,
+  "n_s_qubits": 4,
+  "fold_accuracies": [
+    0.08,
+    0.08,
+    0.04,
+    0.08,
+    0.04
+  ],
+  "accuracy_mean": 0.064,
+  "accuracy_std": 0.019595917942265423,
+  "classification_report": "                     precision    recall  f1-score   support\n\n    Ambiguity_Camel       0.00      0.00      0.00        10\n  Ambiguity_Conquer       0.00      0.00      0.00         5\n      Ambiguity_Eye       0.00      0.00      0.00         5\n     Ambiguity_Flag       0.08      0.10      0.09        10\n      Ambiguity_Hit       0.00      0.00      0.00        10\n     Ambiguity_King       0.17      0.20      0.18        10\nAmbiguity_Knowledge       0.00      0.00      0.00        10\n      Ambiguity_Leg       0.00      0.00      0.00        10\n      Ambiguity_Man       0.00      0.00      0.00        10\n Ambiguity_Multiply       0.17      0.10      0.12        10\n     Ambiguity_Open       0.08      0.10      0.09        10\n  Ambiguity_Possess       0.00      0.00      0.00        10\nAmbiguity_Sentences       0.00      0.00      0.00        10\n   Ambiguity_Spring       0.21      0.60      0.32         5\n\n          micro avg       0.07      0.06      0.07       125\n          macro avg       0.05      0.08      0.06       125\n       weighted avg       0.05      0.06      0.05       125\n",
+  "class_list": [
+    "Ambiguity_Camel",
+    "Ambiguity_Conquer",
+    "Ambiguity_Eye",
+    "Ambiguity_Flag",
+    "Ambiguity_Hit",
+    "Ambiguity_King",
+    "Ambiguity_Knowledge",
+    "Ambiguity_Leg",
+    "Ambiguity_Man",
+    "Ambiguity_Multiply",
+    "Ambiguity_Open",
+    "Ambiguity_Possess",
+    "Ambiguity_Sentences",
+    "Ambiguity_Spring"
+  ]
+}

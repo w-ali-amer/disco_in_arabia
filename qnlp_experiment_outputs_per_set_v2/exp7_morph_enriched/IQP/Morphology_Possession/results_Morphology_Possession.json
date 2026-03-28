@@ -1,0 +1,22 @@
+{
+  "exp_name": "Morphology_Possession",
+  "ansatz": "IQP",
+  "n_samples": 66,
+  "n_classes": 3,
+  "n_s_qubits": 2,
+  "fold_accuracies": [
+    0.21428571428571427,
+    0.3076923076923077,
+    0.23076923076923078,
+    0.23076923076923078,
+    0.15384615384615385
+  ],
+  "accuracy_mean": 0.22747252747252747,
+  "accuracy_std": 0.04909518220590918,
+  "class_list": [
+    "Poss_1st",
+    "Poss_2nd",
+    "Poss_3rd"
+  ],
+  "classification_report": "              precision    recall  f1-score   support\n\n    Poss_1st       0.42      0.23      0.29        22\n    Poss_2nd       0.28      0.36      0.31        22\n    Poss_3rd       0.14      0.09      0.11        22\n\n   micro avg       0.27      0.23      0.25        66\n   macro avg       0.28      0.23      0.24        66\nweighted avg       0.28      0.23      0.24        66\n"
+}

@@ -1,0 +1,29 @@
+{
+  "tag": "Binary_Knowledge_Flag/IQP/L1",
+  "pair_name": "Binary_Knowledge_Flag",
+  "ansatz": "IQP",
+  "n_layers": 1,
+  "pivot": "علم",
+  "n_samples": 30,
+  "n_folds": 5,
+  "oracle_mean": 0.6,
+  "oracle_std": 0.13333333333333333,
+  "oracle_folds": [
+    0.5,
+    0.5,
+    0.8333333333333334,
+    0.6666666666666666,
+    0.5
+  ],
+  "oracle_report": "                     precision    recall  f1-score   support\n\n     Ambiguity_Flag       0.59      0.67      0.62        15\nAmbiguity_Knowledge       0.62      0.53      0.57        15\n\n           accuracy                           0.60        30\n          macro avg       0.60      0.60      0.60        30\n       weighted avg       0.60      0.60      0.60        30\n",
+  "auto_mean": 0.5333333333333333,
+  "auto_std": 0.22110831935702668,
+  "auto_folds": [
+    0.16666666666666666,
+    0.5,
+    0.8333333333333334,
+    0.6666666666666666,
+    0.5
+  ],
+  "auto_report": "                     precision    recall  f1-score   support\n\n     Ambiguity_Flag       0.53      0.67      0.59        15\nAmbiguity_Knowledge       0.55      0.40      0.46        15\n\n           accuracy                           0.53        30\n          macro avg       0.54      0.53      0.52        30\n       weighted avg       0.54      0.53      0.52        30\n"
+}

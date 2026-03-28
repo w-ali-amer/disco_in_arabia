@@ -1,0 +1,20 @@
+{
+  "tag": "Morphology_Tense/Sim14/L1/seed777",
+  "exp_name": "Morphology_Tense",
+  "ansatz": "Sim14",
+  "n_layers": 1,
+  "seed": 777,
+  "n_samples": 50,
+  "n_classes": 2,
+  "chance": 0.5,
+  "mean": 0.6,
+  "std": 0.1095445115010332,
+  "folds": [
+    0.7,
+    0.4,
+    0.7,
+    0.6,
+    0.6
+  ],
+  "report": "              precision    recall  f1-score   support\n\n        Past       0.60      0.60      0.60        25\n        Pres       0.60      0.60      0.60        25\n\n    accuracy                           0.60        50\n   macro avg       0.60      0.60      0.60        50\nweighted avg       0.60      0.60      0.60        50\n"
+}

@@ -1,0 +1,29 @@
+{
+  "tag": "Binary_Hit_Multiply/Sim14/L1",
+  "pair_name": "Binary_Hit_Multiply",
+  "ansatz": "Sim14",
+  "n_layers": 1,
+  "pivot": "ضرب",
+  "n_samples": 30,
+  "n_folds": 5,
+  "oracle_mean": 0.5333333333333333,
+  "oracle_std": 0.12472191289246472,
+  "oracle_folds": [
+    0.6666666666666666,
+    0.6666666666666666,
+    0.5,
+    0.5,
+    0.3333333333333333
+  ],
+  "oracle_report": "                    precision    recall  f1-score   support\n\n     Ambiguity_Hit       0.53      0.53      0.53        15\nAmbiguity_Multiply       0.53      0.53      0.53        15\n\n          accuracy                           0.53        30\n         macro avg       0.53      0.53      0.53        30\n      weighted avg       0.53      0.53      0.53        30\n",
+  "auto_mean": 0.4666666666666666,
+  "auto_std": 0.06666666666666668,
+  "auto_folds": [
+    0.5,
+    0.5,
+    0.3333333333333333,
+    0.5,
+    0.5
+  ],
+  "auto_report": "                    precision    recall  f1-score   support\n\n     Ambiguity_Hit       0.45      0.33      0.38        15\nAmbiguity_Multiply       0.47      0.60      0.53        15\n\n          accuracy                           0.47        30\n         macro avg       0.46      0.47      0.46        30\n      weighted avg       0.46      0.47      0.46        30\n"
+}

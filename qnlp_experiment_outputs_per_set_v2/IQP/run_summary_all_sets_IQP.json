@@ -1,0 +1,74 @@
+{
+  "experiment_consolidated_summary": true,
+  "ansatz_configured": "IQP",
+  "embedding_model_path_configured": "aravec/full_uni_cbow_300_twitter.mdl",
+  "sets_processed": [
+    "WordOrder",
+    "LexicalAmbiguity",
+    "Morphology"
+  ],
+  "classification_summary_by_set": {
+    "WordOrder": {
+      "GaussianNB": {
+        "classifier": "GaussianNB",
+        "accuracy": 0.21428571428571427,
+        "report": "                   precision    recall  f1-score   support\n\nWordOrder_Nominal       0.00      0.00      0.00         4\n    WordOrder_SVO       0.33      0.60      0.43         5\n    WordOrder_VSO       0.00      0.00      0.00         5\n\n         accuracy                           0.21        14\n        macro avg       0.11      0.20      0.14        14\n     weighted avg       0.12      0.21      0.15        14\n",
+        "num_samples_train": 31,
+        "num_samples_test": 14,
+        "num_classes": 3,
+        "embedding_type_used": "combined"
+      },
+      "SVC": {
+        "classifier": "SVC",
+        "accuracy": 0.2857142857142857,
+        "report": "                   precision    recall  f1-score   support\n\nWordOrder_Nominal       0.33      0.50      0.40         4\n    WordOrder_SVO       0.33      0.20      0.25         5\n    WordOrder_VSO       0.20      0.20      0.20         5\n\n         accuracy                           0.29        14\n        macro avg       0.29      0.30      0.28        14\n     weighted avg       0.29      0.29      0.28        14\n",
+        "num_samples_train": 31,
+        "num_samples_test": 14,
+        "num_classes": 3,
+        "embedding_type_used": "combined"
+      }
+    },
+    "LexicalAmbiguity": {
+      "GaussianNB": {
+        "classifier": "GaussianNB",
+        "accuracy": 0.1,
+        "report": "                     precision    recall  f1-score   support\n\n    Ambiguity_Camel       0.00      0.00      0.00         3\n  Ambiguity_Conquer       0.00      0.00      0.00         1\n      Ambiguity_Eye       0.00      0.00      0.00         2\n     Ambiguity_Flag       0.00      0.00      0.00         2\n      Ambiguity_Hit       0.00      0.00      0.00         1\n     Ambiguity_King       0.00      0.00      0.00         4\nAmbiguity_Knowledge       0.00      0.00      0.00         0\n      Ambiguity_Leg       0.00      0.00      0.00         4\n      Ambiguity_Man       0.00      0.00      0.00         3\n Ambiguity_Multiply       0.14      0.33      0.20         3\n     Ambiguity_Open       0.14      0.50      0.22         2\n  Ambiguity_Possess       0.00      0.00      0.00         1\nAmbiguity_Sentences       0.25      0.25      0.25         4\n\n           accuracy                           0.10        30\n          macro avg       0.04      0.08      0.05        30\n       weighted avg       0.06      0.10      0.07        30\n",
+        "num_samples_train": 67,
+        "num_samples_test": 30,
+        "num_classes": 14,
+        "embedding_type_used": "combined"
+      },
+      "SVC": {
+        "classifier": "SVC",
+        "accuracy": 0.0,
+        "report": "                     precision    recall  f1-score   support\n\n    Ambiguity_Camel       0.00      0.00      0.00       3.0\n  Ambiguity_Conquer       0.00      0.00      0.00       1.0\n      Ambiguity_Eye       0.00      0.00      0.00       2.0\n     Ambiguity_Flag       0.00      0.00      0.00       2.0\n      Ambiguity_Hit       0.00      0.00      0.00       1.0\n     Ambiguity_King       0.00      0.00      0.00       4.0\nAmbiguity_Knowledge       0.00      0.00      0.00       0.0\n      Ambiguity_Leg       0.00      0.00      0.00       4.0\n      Ambiguity_Man       0.00      0.00      0.00       3.0\n Ambiguity_Multiply       0.00      0.00      0.00       3.0\n     Ambiguity_Open       0.00      0.00      0.00       2.0\n  Ambiguity_Possess       0.00      0.00      0.00       1.0\nAmbiguity_Sentences       0.00      0.00      0.00       4.0\n\n           accuracy                           0.00      30.0\n          macro avg       0.00      0.00      0.00      30.0\n       weighted avg       0.00      0.00      0.00      30.0\n",
+        "num_samples_train": 67,
+        "num_samples_test": 30,
+        "num_classes": 14,
+        "embedding_type_used": "combined"
+      }
+    },
+    "Morphology": {
+      "GaussianNB": {
+        "classifier": "GaussianNB",
+        "accuracy": 0.1509433962264151,
+        "report": "                   precision    recall  f1-score   support\n\n   Morph_AdjPlFem       0.12      0.33      0.18         3\n  Morph_AdjPlMasc       0.20      0.33      0.25         3\n    Morph_DualFem       0.00      0.00      0.00         4\n   Morph_DualMasc       0.00      0.00      0.00         3\n       Morph_Past       0.00      0.00      0.00         4\n   Morph_PlBroken       0.00      0.00      0.00         3\n      Morph_PlFem       0.11      0.50      0.18         2\n     Morph_PlMasc       0.00      0.00      0.00         2\n    Morph_Poss1Pl       0.00      0.00      0.00         3\n    Morph_Poss1Sg       0.00      0.00      0.00         2\nMorph_Poss2MascSg       0.00      0.00      0.00         3\n    Morph_Poss2Pl       0.00      0.00      0.00         3\n Morph_Poss3FemSg       0.67      0.67      0.67         3\nMorph_Poss3MascSg       0.00      0.00      0.00         3\n       Morph_Pres       0.00      0.00      0.00         4\n      Morph_SgFem       0.14      0.25      0.18         4\n     Morph_SgMasc       0.67      0.50      0.57         4\n\n         accuracy                           0.15        53\n        macro avg       0.11      0.15      0.12        53\n     weighted avg       0.12      0.15      0.13        53\n",
+        "num_samples_train": 123,
+        "num_samples_test": 53,
+        "num_classes": 17,
+        "embedding_type_used": "combined"
+      },
+      "SVC": {
+        "classifier": "SVC",
+        "accuracy": 0.2830188679245283,
+        "report": "                   precision    recall  f1-score   support\n\n   Morph_AdjPlFem       0.67      0.67      0.67         3\n  Morph_AdjPlMasc       0.00      0.00      0.00         3\n    Morph_DualFem       0.00      0.00      0.00         4\n   Morph_DualMasc       0.25      0.67      0.36         3\n       Morph_Past       0.25      0.50      0.33         4\n   Morph_PlBroken       0.00      0.00      0.00         3\n      Morph_PlFem       0.00      0.00      0.00         2\n     Morph_PlMasc       0.00      0.00      0.00         2\n    Morph_Poss1Pl       0.33      0.33      0.33         3\n    Morph_Poss1Sg       1.00      0.50      0.67         2\nMorph_Poss2MascSg       0.50      0.33      0.40         3\n    Morph_Poss2Pl       0.00      0.00      0.00         3\n Morph_Poss3FemSg       0.67      0.67      0.67         3\nMorph_Poss3MascSg       0.00      0.00      0.00         3\n       Morph_Pres       0.25      0.25      0.25         4\n      Morph_SgFem       0.12      0.25      0.17         4\n     Morph_SgMasc       0.40      0.50      0.44         4\n\n         accuracy                           0.28        53\n        macro avg       0.26      0.27      0.25        53\n     weighted avg       0.25      0.28      0.25        53\n",
+        "num_samples_train": 123,
+        "num_samples_test": 53,
+        "num_classes": 17,
+        "embedding_type_used": "combined"
+      }
+    }
+  },
+  "num_sets_processed": 3,
+  "num_classification_results": 3
+}

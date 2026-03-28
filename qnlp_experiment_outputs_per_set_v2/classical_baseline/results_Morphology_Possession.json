@@ -1,0 +1,56 @@
+{
+  "exp_name": "Morphology_Possession",
+  "n_samples": 66,
+  "n_classes": 3,
+  "chance": 0.3333333333333333,
+  "classifiers": {
+    "SVM_linear": {
+      "mean": 0.7120879120879122,
+      "std": 0.16408621059279202,
+      "folds": [
+        0.7142857142857143,
+        0.8461538461538461,
+        0.6153846153846154,
+        0.46153846153846156,
+        0.9230769230769231
+      ],
+      "report": "              precision    recall  f1-score   support\n\n    Poss_1st       0.67      0.73      0.70        22\n    Poss_2nd       0.68      0.68      0.68        22\n    Poss_3rd       0.80      0.73      0.76        22\n\n    accuracy                           0.71        66\n   macro avg       0.72      0.71      0.71        66\nweighted avg       0.72      0.71      0.71        66\n"
+    },
+    "SVM_rbf": {
+      "mean": 0.8494505494505494,
+      "std": 0.10663305029194026,
+      "folds": [
+        0.7857142857142857,
+        0.9230769230769231,
+        0.8461538461538461,
+        0.6923076923076923,
+        1.0
+      ],
+      "report": "              precision    recall  f1-score   support\n\n    Poss_1st       0.83      0.86      0.84        22\n    Poss_2nd       0.83      0.86      0.84        22\n    Poss_3rd       0.90      0.82      0.86        22\n\n    accuracy                           0.85        66\n   macro avg       0.85      0.85      0.85        66\nweighted avg       0.85      0.85      0.85        66\n"
+    },
+    "RF": {
+      "mean": 0.7604395604395605,
+      "std": 0.14815208392397994,
+      "folds": [
+        0.5714285714285714,
+        0.9230769230769231,
+        0.9230769230769231,
+        0.6153846153846154,
+        0.7692307692307693
+      ],
+      "report": "              precision    recall  f1-score   support\n\n    Poss_1st       0.73      0.73      0.73        22\n    Poss_2nd       0.70      0.64      0.67        22\n    Poss_3rd       0.83      0.91      0.87        22\n\n    accuracy                           0.76        66\n   macro avg       0.75      0.76      0.75        66\nweighted avg       0.75      0.76      0.75        66\n"
+    },
+    "MLP": {
+      "mean": 0.6230769230769231,
+      "std": 0.12015768732164084,
+      "folds": [
+        0.5,
+        0.8461538461538461,
+        0.6153846153846154,
+        0.5384615384615384,
+        0.6153846153846154
+      ],
+      "report": "              precision    recall  f1-score   support\n\n    Poss_1st       0.52      0.77      0.62        22\n    Poss_2nd       0.75      0.55      0.63        22\n    Poss_3rd       0.71      0.55      0.62        22\n\n    accuracy                           0.62        66\n   macro avg       0.66      0.62      0.62        66\nweighted avg       0.66      0.62      0.62        66\n"
+    }
+  }
+}

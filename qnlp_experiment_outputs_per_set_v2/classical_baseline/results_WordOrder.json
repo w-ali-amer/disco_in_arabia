@@ -1,0 +1,56 @@
+{
+  "exp_name": "WordOrder",
+  "n_samples": 45,
+  "n_classes": 3,
+  "chance": 0.3333333333333333,
+  "classifiers": {
+    "SVM_linear": {
+      "mean": 0.31111111111111106,
+      "std": 0.08314794192830981,
+      "folds": [
+        0.3333333333333333,
+        0.2222222222222222,
+        0.4444444444444444,
+        0.3333333333333333,
+        0.2222222222222222
+      ],
+      "report": "                   precision    recall  f1-score   support\n\nWordOrder_Nominal       0.87      0.87      0.87        15\n    WordOrder_SVO       0.07      0.07      0.07        15\n    WordOrder_VSO       0.00      0.00      0.00        15\n\n         accuracy                           0.31        45\n        macro avg       0.31      0.31      0.31        45\n     weighted avg       0.31      0.31      0.31        45\n"
+    },
+    "SVM_rbf": {
+      "mean": 0.24444444444444446,
+      "std": 0.12957670877434,
+      "folds": [
+        0.3333333333333333,
+        0.1111111111111111,
+        0.4444444444444444,
+        0.1111111111111111,
+        0.2222222222222222
+      ],
+      "report": "                   precision    recall  f1-score   support\n\nWordOrder_Nominal       1.00      0.60      0.75        15\n    WordOrder_SVO       0.06      0.07      0.06        15\n    WordOrder_VSO       0.05      0.07      0.06        15\n\n         accuracy                           0.24        45\n        macro avg       0.37      0.24      0.29        45\n     weighted avg       0.37      0.24      0.29        45\n"
+    },
+    "RF": {
+      "mean": 0.28888888888888886,
+      "std": 0.05443310539518174,
+      "folds": [
+        0.3333333333333333,
+        0.2222222222222222,
+        0.3333333333333333,
+        0.3333333333333333,
+        0.2222222222222222
+      ],
+      "report": "                   precision    recall  f1-score   support\n\nWordOrder_Nominal       0.86      0.80      0.83        15\n    WordOrder_SVO       0.06      0.07      0.06        15\n    WordOrder_VSO       0.00      0.00      0.00        15\n\n         accuracy                           0.29        45\n        macro avg       0.31      0.29      0.30        45\n     weighted avg       0.31      0.29      0.30        45\n"
+    },
+    "MLP": {
+      "mean": 0.3333333333333333,
+      "std": 0.0,
+      "folds": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "report": "                   precision    recall  f1-score   support\n\nWordOrder_Nominal       0.37      1.00      0.54        15\n    WordOrder_SVO       0.00      0.00      0.00        15\n    WordOrder_VSO       0.00      0.00      0.00        15\n\n         accuracy                           0.33        45\n        macro avg       0.12      0.33      0.18        45\n     weighted avg       0.12      0.33      0.18        45\n"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "tag": "Binary_Hit_Multiply/IQP/L1",
+  "pair_name": "Binary_Hit_Multiply",
+  "ansatz": "IQP",
+  "n_layers": 1,
+  "pivot": "ضرب",
+  "n_samples": 30,
+  "n_folds": 5,
+  "oracle_mean": 0.5333333333333333,
+  "oracle_std": 0.1247219128924647,
+  "oracle_folds": [
+    0.5,
+    0.3333333333333333,
+    0.6666666666666666,
+    0.6666666666666666,
+    0.5
+  ],
+  "oracle_report": "                    precision    recall  f1-score   support\n\n     Ambiguity_Hit       0.52      0.80      0.63        15\nAmbiguity_Multiply       0.57      0.27      0.36        15\n\n          accuracy                           0.53        30\n         macro avg       0.55      0.53      0.50        30\n      weighted avg       0.55      0.53      0.50        30\n",
+  "auto_mean": 0.5666666666666667,
+  "auto_std": 0.13333333333333333,
+  "auto_folds": [
+    0.5,
+    0.3333333333333333,
+    0.6666666666666666,
+    0.6666666666666666,
+    0.6666666666666666
+  ],
+  "auto_report": "                    precision    recall  f1-score   support\n\n     Ambiguity_Hit       0.54      0.87      0.67        15\nAmbiguity_Multiply       0.67      0.27      0.38        15\n\n          accuracy                           0.57        30\n         macro avg       0.60      0.57      0.52        30\n      weighted avg       0.60      0.57      0.52        30\n"
+}

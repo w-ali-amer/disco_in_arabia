@@ -1,0 +1,20 @@
+{
+  "tag": "Morphology_Possession/IQP/L2/seed123",
+  "exp_name": "Morphology_Possession",
+  "ansatz": "IQP",
+  "n_layers": 2,
+  "seed": 123,
+  "n_samples": 66,
+  "n_classes": 3,
+  "chance": 0.3333333333333333,
+  "mean": 0.19780219780219782,
+  "std": 0.12587095440242949,
+  "folds": [
+    0.14285714285714285,
+    0.0,
+    0.38461538461538464,
+    0.23076923076923078,
+    0.23076923076923078
+  ],
+  "report": "              precision    recall  f1-score   support\n\n    Poss_1st       0.27      0.18      0.22        22\n    Poss_2nd       0.26      0.23      0.24        22\n    Poss_3rd       0.20      0.18      0.19        22\n\n   micro avg       0.24      0.20      0.22        66\n   macro avg       0.24      0.20      0.22        66\nweighted avg       0.24      0.20      0.22        66\n"
+}

@@ -1,0 +1,56 @@
+{
+  "pair_name": "Binary_Man_Leg",
+  "n": 30,
+  "cls_a": "Ambiguity_Man",
+  "cls_b": "Ambiguity_Leg",
+  "classifiers": {
+    "SVM_linear": {
+      "mean": 0.9666666666666666,
+      "std": 0.06666666666666665,
+      "folds": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.8333333333333334
+      ],
+      "report": "               precision    recall  f1-score   support\n\nAmbiguity_Leg       1.00      0.93      0.97        15\nAmbiguity_Man       0.94      1.00      0.97        15\n\n     accuracy                           0.97        30\n    macro avg       0.97      0.97      0.97        30\n weighted avg       0.97      0.97      0.97        30\n"
+    },
+    "SVM_rbf": {
+      "mean": 0.9666666666666666,
+      "std": 0.06666666666666665,
+      "folds": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.8333333333333334
+      ],
+      "report": "               precision    recall  f1-score   support\n\nAmbiguity_Leg       1.00      0.93      0.97        15\nAmbiguity_Man       0.94      1.00      0.97        15\n\n     accuracy                           0.97        30\n    macro avg       0.97      0.97      0.97        30\n weighted avg       0.97      0.97      0.97        30\n"
+    },
+    "RF": {
+      "mean": 0.9333333333333333,
+      "std": 0.08164965809277258,
+      "folds": [
+        1.0,
+        1.0,
+        1.0,
+        0.8333333333333334,
+        0.8333333333333334
+      ],
+      "report": "               precision    recall  f1-score   support\n\nAmbiguity_Leg       0.93      0.93      0.93        15\nAmbiguity_Man       0.93      0.93      0.93        15\n\n     accuracy                           0.93        30\n    macro avg       0.93      0.93      0.93        30\n weighted avg       0.93      0.93      0.93        30\n"
+    },
+    "MLP": {
+      "mean": 0.7333333333333333,
+      "std": 0.16996731711975951,
+      "folds": [
+        0.6666666666666666,
+        0.8333333333333334,
+        0.6666666666666666,
+        1.0,
+        0.5
+      ],
+      "report": "               precision    recall  f1-score   support\n\nAmbiguity_Leg       0.89      0.53      0.67        15\nAmbiguity_Man       0.67      0.93      0.78        15\n\n     accuracy                           0.73        30\n    macro avg       0.78      0.73      0.72        30\n weighted avg       0.78      0.73      0.72        30\n"
+    }
+  }
+}

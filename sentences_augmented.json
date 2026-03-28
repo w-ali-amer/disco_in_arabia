@@ -1,0 +1,1948 @@
+{
+  "WordOrder": [
+    {
+      "sentence": "الولد يقرا الكتاب",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "البنت تشرب الحليب",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "الطالب كتب الدرس",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "المعلم شرح القاعدة",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "الطبيب فحص المريض",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "المهندس بنى البيت",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "القطة اكلت السمك",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "الطفل يلعب بالكرة",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "الفلاح يزرع الارض",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "العامل يبني الجدار",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "الطائرة تطير عاليا",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "الشمس تشرق صباحا",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "الام تعد الطعام",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "النهر يجري في الوادي",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "الريح تهب بقوة",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "السيارة سريعة",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "السماء صافية",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "الجو لطيف",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "الحديقة جميلة",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "الكتاب مفيد",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "القلم جديد",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "الدرس سهل",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "الماء بارد",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "الليل هادئ",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "المدينة مزدحمة",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "الرياض واسعة",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "المدرسة قريبة",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "القهوة ساخنة",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "الفاكهة طازجة",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "الامتحان صعب",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "يقرا الولد الكتاب",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "تشرب البنت الحليب",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "كتب الطالب الدرس",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "شرح المعلم القاعدة",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "فحص الطبيب المريض",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "بنى المهندس البيت",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "اكلت القطة السمك",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "يلعب الطفل بالكرة",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "يزرع الفلاح الارض",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "يبني العامل الجدار",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "تطير الطائرة عاليا",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "تشرق الشمس صباحا",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "تعد الام الطعام",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "يجري النهر في الوادي",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "تهب الريح بقوة",
+      "label": "WordOrder_VSO"
+    }
+  ],
+  "LexicalAmbiguity": [
+    {
+      "sentence": "جاء الرجل الطويل",
+      "label": "Ambiguity_Man"
+    },
+    {
+      "sentence": "الرجل القوي يعمل",
+      "label": "Ambiguity_Man"
+    },
+    {
+      "sentence": "تحدث الرجل الحكيم",
+      "label": "Ambiguity_Man"
+    },
+    {
+      "sentence": "هذا الرجل طبيب",
+      "label": "Ambiguity_Man"
+    },
+    {
+      "sentence": "رايت رجلا في السوق",
+      "label": "Ambiguity_Man"
+    },
+    {
+      "sentence": "الرجل العجوز جلس",
+      "label": "Ambiguity_Man"
+    },
+    {
+      "sentence": "سال الرجل سؤالا",
+      "label": "Ambiguity_Man"
+    },
+    {
+      "sentence": "اعطى الرجل المال",
+      "label": "Ambiguity_Man"
+    },
+    {
+      "sentence": "ابتسم الرجل السعيد",
+      "label": "Ambiguity_Man"
+    },
+    {
+      "sentence": "يسافر الرجل غدا",
+      "label": "Ambiguity_Man"
+    },
+    {
+      "sentence": "انكسرت رجل الكرسي",
+      "label": "Ambiguity_Leg"
+    },
+    {
+      "sentence": "للطاولة اربع ارجل",
+      "label": "Ambiguity_Leg"
+    },
+    {
+      "sentence": "عالج الطبيب رجل المريض",
+      "label": "Ambiguity_Leg"
+    },
+    {
+      "sentence": "وضع الكتاب على رجله",
+      "label": "Ambiguity_Leg"
+    },
+    {
+      "sentence": "رجل السرير مكسورة",
+      "label": "Ambiguity_Leg"
+    },
+    {
+      "sentence": "اصيبت رجل اللاعب",
+      "label": "Ambiguity_Leg"
+    },
+    {
+      "sentence": "لا تلمس رجل المكتب",
+      "label": "Ambiguity_Leg"
+    },
+    {
+      "sentence": "تحتاج الطاولة الى رجل جديدة",
+      "label": "Ambiguity_Leg"
+    },
+    {
+      "sentence": "الم الرجل شديد",
+      "label": "Ambiguity_Leg"
+    },
+    {
+      "sentence": "طول رجل الزرافة كبير",
+      "label": "Ambiguity_Leg"
+    },
+    {
+      "sentence": "شربت من عين الماء",
+      "label": "Ambiguity_Spring"
+    },
+    {
+      "sentence": "عين الطفل زرقاء",
+      "label": "Ambiguity_Eye"
+    },
+    {
+      "sentence": "هذه عين صافية",
+      "label": "Ambiguity_Eye"
+    },
+    {
+      "sentence": "في الصحراء عين ماء نادرة",
+      "label": "Ambiguity_Spring"
+    },
+    {
+      "sentence": "رايت بعيني اليمنى",
+      "label": "Ambiguity_Eye"
+    },
+    {
+      "sentence": "تدفقت عين الماء بغزارة",
+      "label": "Ambiguity_Spring"
+    },
+    {
+      "sentence": "اصيب اللاعب في عينه",
+      "label": "Ambiguity_Eye"
+    },
+    {
+      "sentence": "وجدوا عين ماء عذبة في الجبل",
+      "label": "Ambiguity_Spring"
+    },
+    {
+      "sentence": "عين الحسود فيها عود",
+      "label": "Ambiguity_Eye"
+    },
+    {
+      "sentence": "نبعت عين جديدة في الوادي",
+      "label": "Ambiguity_Spring"
+    },
+    {
+      "sentence": "رايت جملا في الصحراء",
+      "label": "Ambiguity_Camel"
+    },
+    {
+      "sentence": "الجمل سفينة الصحراء",
+      "label": "Ambiguity_Camel"
+    },
+    {
+      "sentence": "ركبت جملا قويا",
+      "label": "Ambiguity_Camel"
+    },
+    {
+      "sentence": "اشترى ابي جملا",
+      "label": "Ambiguity_Camel"
+    },
+    {
+      "sentence": "الجمل ياكل العشب",
+      "label": "Ambiguity_Camel"
+    },
+    {
+      "sentence": "صوت الجمل رغاء",
+      "label": "Ambiguity_Camel"
+    },
+    {
+      "sentence": "في الحديقة جمل صغير",
+      "label": "Ambiguity_Camel"
+    },
+    {
+      "sentence": "الجمل حيوان صبور",
+      "label": "Ambiguity_Camel"
+    },
+    {
+      "sentence": "شاهدت قافلة جمال",
+      "label": "Ambiguity_Camel"
+    },
+    {
+      "sentence": "لحم الجمل لذيذ",
+      "label": "Ambiguity_Camel"
+    },
+    {
+      "sentence": "قرات جملا مفيدة",
+      "label": "Ambiguity_Sentences"
+    },
+    {
+      "sentence": "الكتاب يحتوي على جمل كثيرة",
+      "label": "Ambiguity_Sentences"
+    },
+    {
+      "sentence": "المعلم شرح الجملة الاسمية",
+      "label": "Ambiguity_Sentences"
+    },
+    {
+      "sentence": "اكتب جملا صحيحة",
+      "label": "Ambiguity_Sentences"
+    },
+    {
+      "sentence": "هذه جملة بسيطة",
+      "label": "Ambiguity_Sentences"
+    },
+    {
+      "sentence": "حلل هذه الجمل",
+      "label": "Ambiguity_Sentences"
+    },
+    {
+      "sentence": "الجمل في اللغة العربية متنوعة",
+      "label": "Ambiguity_Sentences"
+    },
+    {
+      "sentence": "كون جملا من هذه الكلمات",
+      "label": "Ambiguity_Sentences"
+    },
+    {
+      "sentence": "فهمت معنى الجملة",
+      "label": "Ambiguity_Sentences"
+    },
+    {
+      "sentence": "الجملة الفعلية تبدا بفعل",
+      "label": "Ambiguity_Sentences"
+    },
+    {
+      "sentence": "رفعنا علم البلاد عاليا",
+      "label": "Ambiguity_Flag"
+    },
+    {
+      "sentence": "شاهدت علم المملكة يرفرف",
+      "label": "Ambiguity_Flag"
+    },
+    {
+      "sentence": "الوان العلم جميلة",
+      "label": "Ambiguity_Flag"
+    },
+    {
+      "sentence": "نحترم علم دولتنا",
+      "label": "Ambiguity_Flag"
+    },
+    {
+      "sentence": "في المدرسة علم كبير",
+      "label": "Ambiguity_Flag"
+    },
+    {
+      "sentence": "العلم رمز السيادة",
+      "label": "Ambiguity_Flag"
+    },
+    {
+      "sentence": "رسمت علم السعودية",
+      "label": "Ambiguity_Flag"
+    },
+    {
+      "sentence": "احتفلنا بيوم العلم",
+      "label": "Ambiguity_Flag"
+    },
+    {
+      "sentence": "العلم يمثل الوطن",
+      "label": "Ambiguity_Flag"
+    },
+    {
+      "sentence": "يجب احترام العلم",
+      "label": "Ambiguity_Flag"
+    },
+    {
+      "sentence": "اكتسبت علما كثيرا من القراءة",
+      "label": "Ambiguity_Knowledge"
+    },
+    {
+      "sentence": "العلم نور والجهل ظلام",
+      "label": "Ambiguity_Knowledge"
+    },
+    {
+      "sentence": "طلب العلم فريضة",
+      "label": "Ambiguity_Knowledge"
+    },
+    {
+      "sentence": "العالم لديه علم واسع",
+      "label": "Ambiguity_Knowledge"
+    },
+    {
+      "sentence": "يهتم الطلاب بالعلم",
+      "label": "Ambiguity_Knowledge"
+    },
+    {
+      "sentence": "العلم يرفع شان الامم",
+      "label": "Ambiguity_Knowledge"
+    },
+    {
+      "sentence": "بالعلم والعمل نرتقي",
+      "label": "Ambiguity_Knowledge"
+    },
+    {
+      "sentence": "العلم الحديث متطور",
+      "label": "Ambiguity_Knowledge"
+    },
+    {
+      "sentence": "اسعى لزيادة علمي",
+      "label": "Ambiguity_Knowledge"
+    },
+    {
+      "sentence": "العلم طريق النجاح",
+      "label": "Ambiguity_Knowledge"
+    },
+    {
+      "sentence": "كان الملك عادلا",
+      "label": "Ambiguity_King"
+    },
+    {
+      "sentence": "توج الملك في احتفال كبير",
+      "label": "Ambiguity_King"
+    },
+    {
+      "sentence": "يحب الشعب الملك",
+      "label": "Ambiguity_King"
+    },
+    {
+      "sentence": "قصر الملك فخم",
+      "label": "Ambiguity_King"
+    },
+    {
+      "sentence": "اوامر الملك نافذة",
+      "label": "Ambiguity_King"
+    },
+    {
+      "sentence": "حكم الملك البلاد بالعدل",
+      "label": "Ambiguity_King"
+    },
+    {
+      "sentence": "صورة الملك معلقة في المكتب",
+      "label": "Ambiguity_King"
+    },
+    {
+      "sentence": "استقبل الملك الوفود",
+      "label": "Ambiguity_King"
+    },
+    {
+      "sentence": "الملك يولي اهتماما بالتعليم",
+      "label": "Ambiguity_King"
+    },
+    {
+      "sentence": "عهد الملك مزدهر",
+      "label": "Ambiguity_King"
+    },
+    {
+      "sentence": "ملك الفلاح الارض",
+      "label": "Ambiguity_Possess"
+    },
+    {
+      "sentence": "ملك التاجر ثروة كبيرة",
+      "label": "Ambiguity_Possess"
+    },
+    {
+      "sentence": "ملك الطالب قلما جديدا",
+      "label": "Ambiguity_Possess"
+    },
+    {
+      "sentence": "ملك المدير سلطة واسعة",
+      "label": "Ambiguity_Possess"
+    },
+    {
+      "sentence": "ملك الطفل لعبة جميلة",
+      "label": "Ambiguity_Possess"
+    },
+    {
+      "sentence": "ملك الفنان موهبة فريدة",
+      "label": "Ambiguity_Possess"
+    },
+    {
+      "sentence": "ملك العالم اكتشافات عظيمة",
+      "label": "Ambiguity_Possess"
+    },
+    {
+      "sentence": "ملك الشاعر احساسا مرهفا",
+      "label": "Ambiguity_Possess"
+    },
+    {
+      "sentence": "ملك القائد حكمة بالغة",
+      "label": "Ambiguity_Possess"
+    },
+    {
+      "sentence": "ملك المزارع حقلا خصبا",
+      "label": "Ambiguity_Possess"
+    },
+    {
+      "sentence": "ضرب الولد الكرة",
+      "label": "Ambiguity_Hit"
+    },
+    {
+      "sentence": "ضرب المعلم الطالب",
+      "label": "Ambiguity_Hit"
+    },
+    {
+      "sentence": "ضرب اللاعب الهدف",
+      "label": "Ambiguity_Hit"
+    },
+    {
+      "sentence": "ضربت الريح النافذة",
+      "label": "Ambiguity_Hit"
+    },
+    {
+      "sentence": "ضرب المطر الارض",
+      "label": "Ambiguity_Hit"
+    },
+    {
+      "sentence": "ضرب الشرطي اللص",
+      "label": "Ambiguity_Hit"
+    },
+    {
+      "sentence": "ضربت الساعة الجرس",
+      "label": "Ambiguity_Hit"
+    },
+    {
+      "sentence": "ضرب الموج الشاطئ",
+      "label": "Ambiguity_Hit"
+    },
+    {
+      "sentence": "ضرب العامل الحديد",
+      "label": "Ambiguity_Hit"
+    },
+    {
+      "sentence": "ضربت الشمس وجهي",
+      "label": "Ambiguity_Hit"
+    },
+    {
+      "sentence": "تعلمنا كيف نضرب الاعداد",
+      "label": "Ambiguity_Multiply"
+    },
+    {
+      "sentence": "ضرب خمسة في ثلاثة يساوي خمسة عشر",
+      "label": "Ambiguity_Multiply"
+    },
+    {
+      "sentence": "يجب ان نضرب الكميات بدقة",
+      "label": "Ambiguity_Multiply"
+    },
+    {
+      "sentence": "ضربنا الرقم في نفسه",
+      "label": "Ambiguity_Multiply"
+    },
+    {
+      "sentence": "عملية الضرب سهلة",
+      "label": "Ambiguity_Multiply"
+    },
+    {
+      "sentence": "نحتاج ان نضرب هذه الارقام",
+      "label": "Ambiguity_Multiply"
+    },
+    {
+      "sentence": "ضرب المعلم مثالا",
+      "label": "Ambiguity_Multiply"
+    },
+    {
+      "sentence": "يمكننا ضرب الكسور",
+      "label": "Ambiguity_Multiply"
+    },
+    {
+      "sentence": "ضربت الامثلة فهمي للمسالة",
+      "label": "Ambiguity_Multiply"
+    },
+    {
+      "sentence": "ضربت الاسعار بسبب التضخم",
+      "label": "Ambiguity_Multiply"
+    },
+    {
+      "sentence": "فتح الولد الباب",
+      "label": "Ambiguity_Open"
+    },
+    {
+      "sentence": "فتح الطالب الكتاب",
+      "label": "Ambiguity_Open"
+    },
+    {
+      "sentence": "فتح الطبيب العيادة",
+      "label": "Ambiguity_Open"
+    },
+    {
+      "sentence": "فتح العامل النافذة",
+      "label": "Ambiguity_Open"
+    },
+    {
+      "sentence": "فتح الزهرة اوراقها",
+      "label": "Ambiguity_Open"
+    },
+    {
+      "sentence": "فتح القائد المدينة",
+      "label": "Ambiguity_Conquer"
+    },
+    {
+      "sentence": "فتح المسلمون الاندلس",
+      "label": "Ambiguity_Conquer"
+    },
+    {
+      "sentence": "فتح الجيش الحصن",
+      "label": "Ambiguity_Conquer"
+    },
+    {
+      "sentence": "فتح صلاح الدين القدس",
+      "label": "Ambiguity_Conquer"
+    },
+    {
+      "sentence": "فتح الفاتح القسطنطينية",
+      "label": "Ambiguity_Conquer"
+    },
+    {
+      "sentence": "فتح الصندوق بالمفتاح",
+      "label": "Ambiguity_Open"
+    },
+    {
+      "sentence": "فتح الحارس البوابة",
+      "label": "Ambiguity_Open"
+    },
+    {
+      "sentence": "فتح المظلة عندما امطرت",
+      "label": "Ambiguity_Open"
+    },
+    {
+      "sentence": "فتح قلبه للحب",
+      "label": "Ambiguity_Open"
+    },
+    {
+      "sentence": "فتح الشهية برائحة الطعام",
+      "label": "Ambiguity_Open"
+    },
+    {
+      "sentence": "تؤلم عيني من الشاشة",
+      "label": "Ambiguity_Eye"
+    },
+    {
+      "sentence": "وضع الطبيب قطرة في عينه",
+      "label": "Ambiguity_Eye"
+    },
+    {
+      "sentence": "عين الصقر حادة",
+      "label": "Ambiguity_Eye"
+    },
+    {
+      "sentence": "احمرت عيني من البكاء",
+      "label": "Ambiguity_Eye"
+    },
+    {
+      "sentence": "فقد الجندي عينه في المعركة",
+      "label": "Ambiguity_Eye"
+    },
+    {
+      "sentence": "عين الطاووس جميلة",
+      "label": "Ambiguity_Eye"
+    },
+    {
+      "sentence": "غطى عينيه بيده",
+      "label": "Ambiguity_Eye"
+    },
+    {
+      "sentence": "في عيون الام حنان كبير",
+      "label": "Ambiguity_Eye"
+    },
+    {
+      "sentence": "اغمضت عيني للنوم",
+      "label": "Ambiguity_Eye"
+    },
+    {
+      "sentence": "كحلت المراة عينها",
+      "label": "Ambiguity_Eye"
+    },
+    {
+      "sentence": "كشفوا عين ماء في الصحراء",
+      "label": "Ambiguity_Spring"
+    },
+    {
+      "sentence": "تنبع العين من باطن الجبل",
+      "label": "Ambiguity_Spring"
+    },
+    {
+      "sentence": "جلسنا بجانب العين نستريح",
+      "label": "Ambiguity_Spring"
+    },
+    {
+      "sentence": "تجف العين في الصيف",
+      "label": "Ambiguity_Spring"
+    },
+    {
+      "sentence": "ماء العين بارد ونقي",
+      "label": "Ambiguity_Spring"
+    },
+    {
+      "sentence": "يقود الراعي غنمه الى العين",
+      "label": "Ambiguity_Spring"
+    },
+    {
+      "sentence": "بنيت القرية بجوار العين",
+      "label": "Ambiguity_Spring"
+    },
+    {
+      "sentence": "تدفقت العين بعد الامطار",
+      "label": "Ambiguity_Spring"
+    },
+    {
+      "sentence": "العين مصدر مياه القرية",
+      "label": "Ambiguity_Spring"
+    },
+    {
+      "sentence": "نزلنا على العين لنتوضا",
+      "label": "Ambiguity_Spring"
+    },
+    {
+      "sentence": "فتح الاسكندر بلادا كثيرة",
+      "label": "Ambiguity_Conquer"
+    },
+    {
+      "sentence": "فتح العرب بلاد فارس",
+      "label": "Ambiguity_Conquer"
+    },
+    {
+      "sentence": "سعى الجيش لفتح الحصن",
+      "label": "Ambiguity_Conquer"
+    },
+    {
+      "sentence": "فتح السلطان اراضي جديدة",
+      "label": "Ambiguity_Conquer"
+    },
+    {
+      "sentence": "تسمى المدينة بذكرى الفتح",
+      "label": "Ambiguity_Conquer"
+    },
+    {
+      "sentence": "فتح الخليفة الارض بعد معركة",
+      "label": "Ambiguity_Conquer"
+    },
+    {
+      "sentence": "يحتفل الشعب بذكرى الفتح",
+      "label": "Ambiguity_Conquer"
+    },
+    {
+      "sentence": "كان الفتح بداية حضارة",
+      "label": "Ambiguity_Conquer"
+    },
+    {
+      "sentence": "فتح الجيش الحصون المنيعة",
+      "label": "Ambiguity_Conquer"
+    },
+    {
+      "sentence": "امر القائد بفتح المدينة",
+      "label": "Ambiguity_Conquer"
+    },
+    {
+      "sentence": "الرجل المسن يمشي ببطء",
+      "label": "Ambiguity_Man"
+    },
+    {
+      "sentence": "تقدم الرجل بشجاعة",
+      "label": "Ambiguity_Man"
+    },
+    {
+      "sentence": "الرجل الفاضل يحترم الجميع",
+      "label": "Ambiguity_Man"
+    },
+    {
+      "sentence": "الرجل يعتني باسرته",
+      "label": "Ambiguity_Man"
+    },
+    {
+      "sentence": "قابلت رجلا لطيفا",
+      "label": "Ambiguity_Man"
+    },
+    {
+      "sentence": "كسرت رجله في السقوط",
+      "label": "Ambiguity_Leg"
+    },
+    {
+      "sentence": "رجل الكرسي الخشبي قصيرة",
+      "label": "Ambiguity_Leg"
+    },
+    {
+      "sentence": "جبست الممرضة رجل المريض",
+      "label": "Ambiguity_Leg"
+    },
+    {
+      "sentence": "عرج في رجله اليسرى",
+      "label": "Ambiguity_Leg"
+    },
+    {
+      "sentence": "رجل المنضدة مكسورة",
+      "label": "Ambiguity_Leg"
+    },
+    {
+      "sentence": "زار الملك المستشفى",
+      "label": "Ambiguity_King"
+    },
+    {
+      "sentence": "تكلم الملك امام الشعب",
+      "label": "Ambiguity_King"
+    },
+    {
+      "sentence": "انجز الملك مشروعا تنمويا",
+      "label": "Ambiguity_King"
+    },
+    {
+      "sentence": "الملك يرعى العلماء والادباء",
+      "label": "Ambiguity_King"
+    },
+    {
+      "sentence": "احتفل الملك بعيد الاستقلال",
+      "label": "Ambiguity_King"
+    },
+    {
+      "sentence": "ملك الشاب سيارة فارهة",
+      "label": "Ambiguity_Possess"
+    },
+    {
+      "sentence": "ملك الكاتب مكتبة ضخمة",
+      "label": "Ambiguity_Possess"
+    },
+    {
+      "sentence": "ملك الاب ارضا زراعية",
+      "label": "Ambiguity_Possess"
+    },
+    {
+      "sentence": "ملكت المراة خاتم ذهبيا",
+      "label": "Ambiguity_Possess"
+    },
+    {
+      "sentence": "ملك الطفل دراجة جديدة",
+      "label": "Ambiguity_Possess"
+    },
+    {
+      "sentence": "ضرب البرق الشجرة",
+      "label": "Ambiguity_Hit"
+    },
+    {
+      "sentence": "ضرب الحارس المتطفل",
+      "label": "Ambiguity_Hit"
+    },
+    {
+      "sentence": "ضرب الطبل بقوة",
+      "label": "Ambiguity_Hit"
+    },
+    {
+      "sentence": "ضربت البرد النباتات",
+      "label": "Ambiguity_Hit"
+    },
+    {
+      "sentence": "ضرب المتهم رجل الامن",
+      "label": "Ambiguity_Hit"
+    },
+    {
+      "sentence": "ضرب الطالب كسرين معا",
+      "label": "Ambiguity_Multiply"
+    },
+    {
+      "sentence": "ضربنا الطول في العرض لنجد المساحة",
+      "label": "Ambiguity_Multiply"
+    },
+    {
+      "sentence": "تعلم ضرب الاعداد الكبيرة",
+      "label": "Ambiguity_Multiply"
+    },
+    {
+      "sentence": "ضرب العدد اربعة في خمسة",
+      "label": "Ambiguity_Multiply"
+    },
+    {
+      "sentence": "اختبار الضرب كان سهلا",
+      "label": "Ambiguity_Multiply"
+    },
+    {
+      "sentence": "الجمل يتحمل العطش",
+      "label": "Ambiguity_Camel"
+    },
+    {
+      "sentence": "ربطت الجمل بالحبل",
+      "label": "Ambiguity_Camel"
+    },
+    {
+      "sentence": "سباق الجمل تراث خليجي",
+      "label": "Ambiguity_Camel"
+    },
+    {
+      "sentence": "الجمل يحمل البضاعة",
+      "label": "Ambiguity_Camel"
+    },
+    {
+      "sentence": "جلسنا بجانب الجمل",
+      "label": "Ambiguity_Camel"
+    },
+    {
+      "sentence": "صحح المعلم الجمل الخاطئة",
+      "label": "Ambiguity_Sentences"
+    },
+    {
+      "sentence": "ترجمت جملا من العربية",
+      "label": "Ambiguity_Sentences"
+    },
+    {
+      "sentence": "كتب الطالب عشر جمل",
+      "label": "Ambiguity_Sentences"
+    },
+    {
+      "sentence": "الجملة الشرطية لها شرط وجواب",
+      "label": "Ambiguity_Sentences"
+    },
+    {
+      "sentence": "اعد بناء الجملة من جديد",
+      "label": "Ambiguity_Sentences"
+    },
+    {
+      "sentence": "رفع الطلاب العلم في الصباح",
+      "label": "Ambiguity_Flag"
+    },
+    {
+      "sentence": "مزقت الرياح العلم",
+      "label": "Ambiguity_Flag"
+    },
+    {
+      "sentence": "صنع التلاميذ علما ورقيا",
+      "label": "Ambiguity_Flag"
+    },
+    {
+      "sentence": "علم المملكة ملون باللون الاخضر",
+      "label": "Ambiguity_Flag"
+    },
+    {
+      "sentence": "نشرت العلم امام البيت",
+      "label": "Ambiguity_Flag"
+    },
+    {
+      "sentence": "العلم يفتح ابواب الفرص",
+      "label": "Ambiguity_Knowledge"
+    },
+    {
+      "sentence": "يسعى العقلاء لاكتساب العلم",
+      "label": "Ambiguity_Knowledge"
+    },
+    {
+      "sentence": "العلم يبني الامم",
+      "label": "Ambiguity_Knowledge"
+    },
+    {
+      "sentence": "العلوم المختلفة تخدم الانسانية",
+      "label": "Ambiguity_Knowledge"
+    },
+    {
+      "sentence": "علمت ما لم اكن اعرفه",
+      "label": "Ambiguity_Knowledge"
+    },
+    {
+      "sentence": "فتح المتجر ابوابه صباحا",
+      "label": "Ambiguity_Open"
+    },
+    {
+      "sentence": "فتح التطبيق على الهاتف",
+      "label": "Ambiguity_Open"
+    },
+    {
+      "sentence": "فتح الحقيبة واخرج الكتاب",
+      "label": "Ambiguity_Open"
+    },
+    {
+      "sentence": "فتح الصمام لمرور الغاز",
+      "label": "Ambiguity_Open"
+    },
+    {
+      "sentence": "فتحت الزجاجة بصعوبة",
+      "label": "Ambiguity_Open"
+    }
+  ],
+  "Morphology": [
+    {
+      "sentence": "المهندس يعمل",
+      "label": "Morph_SgMasc"
+    },
+    {
+      "sentence": "المهندسون يعملون",
+      "label": "Morph_PlMasc"
+    },
+    {
+      "sentence": "الطالبة تدرس",
+      "label": "Morph_SgFem"
+    },
+    {
+      "sentence": "الطالبات يدرسن",
+      "label": "Morph_PlFem"
+    },
+    {
+      "sentence": "الكتاب جديد",
+      "label": "Morph_SgMasc"
+    },
+    {
+      "sentence": "الكتب جديدة",
+      "label": "Morph_PlBroken"
+    },
+    {
+      "sentence": "السيارة سريعة",
+      "label": "Morph_SgFem"
+    },
+    {
+      "sentence": "السيارات سريعة",
+      "label": "Morph_PlFem"
+    },
+    {
+      "sentence": "البيت كبير",
+      "label": "Morph_SgMasc"
+    },
+    {
+      "sentence": "الغرفة كبيرة",
+      "label": "Morph_SgFem"
+    },
+    {
+      "sentence": "الولد ذكي",
+      "label": "Morph_SgMasc"
+    },
+    {
+      "sentence": "البنت ذكية",
+      "label": "Morph_SgFem"
+    },
+    {
+      "sentence": "كتب الطالب",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "يكتب الطالب",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "قرات البنت",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "تقرا البنت",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "هذا كتابي",
+      "label": "Morph_Poss1Sg"
+    },
+    {
+      "sentence": "هذا كتابك",
+      "label": "Morph_Poss2MascSg"
+    },
+    {
+      "sentence": "هذا قلمه",
+      "label": "Morph_Poss3MascSg"
+    },
+    {
+      "sentence": "هذا قلمها",
+      "label": "Morph_Poss3FemSg"
+    },
+    {
+      "sentence": "المعلمة تشرح",
+      "label": "Morph_SgFem"
+    },
+    {
+      "sentence": "المعلمات يشرحن",
+      "label": "Morph_PlFem"
+    },
+    {
+      "sentence": "اللاعبان ماهران",
+      "label": "Morph_DualMasc"
+    },
+    {
+      "sentence": "اللاعبتان ماهرتان",
+      "label": "Morph_DualFem"
+    },
+    {
+      "sentence": "سافر الرجل",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "يسافر الرجل",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "سافرت المراة",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "تسافر المراة",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "هذه مدرستنا",
+      "label": "Morph_Poss1Pl"
+    },
+    {
+      "sentence": "هذا بيتكم",
+      "label": "Morph_Poss2Pl"
+    },
+    {
+      "sentence": "هؤلاء طلاب مجتهدون",
+      "label": "Morph_AdjPlMasc"
+    },
+    {
+      "sentence": "هؤلاء طالبات مجتهدات",
+      "label": "Morph_AdjPlFem"
+    },
+    {
+      "sentence": "القلم ازرق",
+      "label": "Morph_SgMasc"
+    },
+    {
+      "sentence": "الاقلام زرقاء",
+      "label": "Morph_PlBroken"
+    },
+    {
+      "sentence": "المكتب منظم",
+      "label": "Morph_SgMasc"
+    },
+    {
+      "sentence": "المكاتب منظمة",
+      "label": "Morph_PlBroken"
+    },
+    {
+      "sentence": "الباب مفتوح",
+      "label": "Morph_SgMasc"
+    },
+    {
+      "sentence": "الابواب مفتوحة",
+      "label": "Morph_PlBroken"
+    },
+    {
+      "sentence": "الدرس مفهوم",
+      "label": "Morph_SgMasc"
+    },
+    {
+      "sentence": "الدروس مفهومة",
+      "label": "Morph_PlBroken"
+    },
+    {
+      "sentence": "الكتاب مقروء",
+      "label": "Morph_SgMasc"
+    },
+    {
+      "sentence": "الكتب مقروءة",
+      "label": "Morph_PlBroken"
+    },
+    {
+      "sentence": "الولد يلعب",
+      "label": "Morph_SgMasc"
+    },
+    {
+      "sentence": "الاولاد يلعبون",
+      "label": "Morph_PlMasc"
+    },
+    {
+      "sentence": "المعلم يشرح",
+      "label": "Morph_SgMasc"
+    },
+    {
+      "sentence": "المعلمون يشرحون",
+      "label": "Morph_PlMasc"
+    },
+    {
+      "sentence": "الطبيب يعالج",
+      "label": "Morph_SgMasc"
+    },
+    {
+      "sentence": "الاطباء يعالجون",
+      "label": "Morph_PlMasc"
+    },
+    {
+      "sentence": "الكاتب يكتب",
+      "label": "Morph_SgMasc"
+    },
+    {
+      "sentence": "الكتاب يكتبون",
+      "label": "Morph_PlMasc"
+    },
+    {
+      "sentence": "المهندس يبني",
+      "label": "Morph_SgMasc"
+    },
+    {
+      "sentence": "المهندسون يبنون",
+      "label": "Morph_PlMasc"
+    },
+    {
+      "sentence": "الشجرة مثمرة",
+      "label": "Morph_SgFem"
+    },
+    {
+      "sentence": "الاشجار مثمرة",
+      "label": "Morph_PlBroken"
+    },
+    {
+      "sentence": "القصة ممتعة",
+      "label": "Morph_SgFem"
+    },
+    {
+      "sentence": "القصص ممتعة",
+      "label": "Morph_PlBroken"
+    },
+    {
+      "sentence": "المدينة نظيفة",
+      "label": "Morph_SgFem"
+    },
+    {
+      "sentence": "المدن نظيفة",
+      "label": "Morph_PlBroken"
+    },
+    {
+      "sentence": "الحقيبة ثقيلة",
+      "label": "Morph_SgFem"
+    },
+    {
+      "sentence": "الحقائب ثقيلة",
+      "label": "Morph_PlBroken"
+    },
+    {
+      "sentence": "الوردة جميلة",
+      "label": "Morph_SgFem"
+    },
+    {
+      "sentence": "الورود جميلة",
+      "label": "Morph_PlBroken"
+    },
+    {
+      "sentence": "البنت تلعب",
+      "label": "Morph_SgFem"
+    },
+    {
+      "sentence": "البنات يلعبن",
+      "label": "Morph_PlFem"
+    },
+    {
+      "sentence": "الممرضة تساعد",
+      "label": "Morph_SgFem"
+    },
+    {
+      "sentence": "الممرضات يساعدن",
+      "label": "Morph_PlFem"
+    },
+    {
+      "sentence": "الزهرة تتفتح",
+      "label": "Morph_SgFem"
+    },
+    {
+      "sentence": "الزهرات تتفتحن",
+      "label": "Morph_PlFem"
+    },
+    {
+      "sentence": "الشمس تشرق",
+      "label": "Morph_SgFem"
+    },
+    {
+      "sentence": "الشموس تشرقن",
+      "label": "Morph_PlFem"
+    },
+    {
+      "sentence": "الام تطبخ",
+      "label": "Morph_SgFem"
+    },
+    {
+      "sentence": "الامهات يطبخن",
+      "label": "Morph_PlFem"
+    },
+    {
+      "sentence": "شرب الطفل الحليب",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "اكل الولد التفاحة",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "رسم الفنان لوحة",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "زرعت الفتاة الوردة",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "سمع الطالب الدرس",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "فتح العامل الباب",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "لعب الفريق المباراة",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "نجح الطالب في الامتحان",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "سافر المسافر الى المدينة",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "عاد المسافر من الرحلة",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "يشرب الطفل الحليب",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "ياكل الولد التفاحة",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "يرسم الفنان لوحة",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "تزرع الفتاة الوردة",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "يسمع الطالب الدرس",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "يفتح العامل الباب",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "يلعب الفريق المباراة",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "ينجح الطالب في الامتحان",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "يسافر المسافر الى المدينة",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "يعود المسافر من الرحلة",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "هذا بيتي",
+      "label": "Morph_Poss1Sg"
+    },
+    {
+      "sentence": "هذا قلمي",
+      "label": "Morph_Poss1Sg"
+    },
+    {
+      "sentence": "هذه سيارتي",
+      "label": "Morph_Poss1Sg"
+    },
+    {
+      "sentence": "هذا كتابي الجديد",
+      "label": "Morph_Poss1Sg"
+    },
+    {
+      "sentence": "هذه مدرستي الكبيرة",
+      "label": "Morph_Poss1Sg"
+    },
+    {
+      "sentence": "هذا هاتفي الذكي",
+      "label": "Morph_Poss1Sg"
+    },
+    {
+      "sentence": "هذا اخي الصغير",
+      "label": "Morph_Poss1Sg"
+    },
+    {
+      "sentence": "هذه لعبتي المفضلة",
+      "label": "Morph_Poss1Sg"
+    },
+    {
+      "sentence": "هذا حاسوبي المحمول",
+      "label": "Morph_Poss1Sg"
+    },
+    {
+      "sentence": "هذا فستاني الجديد",
+      "label": "Morph_Poss1Sg"
+    },
+    {
+      "sentence": "هذا دفترك",
+      "label": "Morph_Poss2MascSg"
+    },
+    {
+      "sentence": "هذا مفتاحك",
+      "label": "Morph_Poss2MascSg"
+    },
+    {
+      "sentence": "هذه حقيبتك",
+      "label": "Morph_Poss2MascSg"
+    },
+    {
+      "sentence": "هذا قلمك الرصاص",
+      "label": "Morph_Poss2MascSg"
+    },
+    {
+      "sentence": "هذه ساعتك الانيقة",
+      "label": "Morph_Poss2MascSg"
+    },
+    {
+      "sentence": "هذا عنوانك الجديد",
+      "label": "Morph_Poss2MascSg"
+    },
+    {
+      "sentence": "هذا رقم هاتفك",
+      "label": "Morph_Poss2MascSg"
+    },
+    {
+      "sentence": "هذه دراجتك النارية",
+      "label": "Morph_Poss2MascSg"
+    },
+    {
+      "sentence": "هذا مشروعك المثير",
+      "label": "Morph_Poss2MascSg"
+    },
+    {
+      "sentence": "هذا رايك الصائب",
+      "label": "Morph_Poss2MascSg"
+    },
+    {
+      "sentence": "هذا كتابه",
+      "label": "Morph_Poss3MascSg"
+    },
+    {
+      "sentence": "هذا قلمه الجديد",
+      "label": "Morph_Poss3MascSg"
+    },
+    {
+      "sentence": "هذه سيارته الفاخرة",
+      "label": "Morph_Poss3MascSg"
+    },
+    {
+      "sentence": "هذا بيته الواسع",
+      "label": "Morph_Poss3MascSg"
+    },
+    {
+      "sentence": "هذا عمله المتقن",
+      "label": "Morph_Poss3MascSg"
+    },
+    {
+      "sentence": "هذا حلمه الكبير",
+      "label": "Morph_Poss3MascSg"
+    },
+    {
+      "sentence": "هذا جهده المضني",
+      "label": "Morph_Poss3MascSg"
+    },
+    {
+      "sentence": "هذا نجاحه الباهر",
+      "label": "Morph_Poss3MascSg"
+    },
+    {
+      "sentence": "هذا اختراعه العظيم",
+      "label": "Morph_Poss3MascSg"
+    },
+    {
+      "sentence": "هذا رايه السديد",
+      "label": "Morph_Poss3MascSg"
+    },
+    {
+      "sentence": "هذا كتابها",
+      "label": "Morph_Poss3FemSg"
+    },
+    {
+      "sentence": "هذا قلمها الجميل",
+      "label": "Morph_Poss3FemSg"
+    },
+    {
+      "sentence": "هذه حقيبتها الانيقة",
+      "label": "Morph_Poss3FemSg"
+    },
+    {
+      "sentence": "هذه مدرستها القريبة",
+      "label": "Morph_Poss3FemSg"
+    },
+    {
+      "sentence": "هذا فستانها الجديد",
+      "label": "Morph_Poss3FemSg"
+    },
+    {
+      "sentence": "هذا هاتفها الحديث",
+      "label": "Morph_Poss3FemSg"
+    },
+    {
+      "sentence": "هذا سرها الدفين",
+      "label": "Morph_Poss3FemSg"
+    },
+    {
+      "sentence": "هذه موهبتها الرائعة",
+      "label": "Morph_Poss3FemSg"
+    },
+    {
+      "sentence": "هذا تصميمها المبتكر",
+      "label": "Morph_Poss3FemSg"
+    },
+    {
+      "sentence": "هذا رايها الحكيم",
+      "label": "Morph_Poss3FemSg"
+    },
+    {
+      "sentence": "الممرضان يعتنيان بالمريض",
+      "label": "Morph_DualMasc"
+    },
+    {
+      "sentence": "الطالبان يدرسان بجد",
+      "label": "Morph_DualMasc"
+    },
+    {
+      "sentence": "الكتابان مفيدان جدا",
+      "label": "Morph_DualMasc"
+    },
+    {
+      "sentence": "القلمان جديدان وجميلان",
+      "label": "Morph_DualMasc"
+    },
+    {
+      "sentence": "الولدان يلعبان في الحديقة",
+      "label": "Morph_DualMasc"
+    },
+    {
+      "sentence": "المعلمان يشرحان الدرس بوضوح",
+      "label": "Morph_DualMasc"
+    },
+    {
+      "sentence": "المهندسان يصممان المشروع",
+      "label": "Morph_DualMasc"
+    },
+    {
+      "sentence": "اللاعبان يسجلان الاهداف",
+      "label": "Morph_DualMasc"
+    },
+    {
+      "sentence": "الرجلان يتحدثان بهدوء",
+      "label": "Morph_DualMasc"
+    },
+    {
+      "sentence": "الصديقان يمشيان معا",
+      "label": "Morph_DualMasc"
+    },
+    {
+      "sentence": "الممرضتان تعتنيان بالطفل",
+      "label": "Morph_DualFem"
+    },
+    {
+      "sentence": "الطالبتان تدرسان معا",
+      "label": "Morph_DualFem"
+    },
+    {
+      "sentence": "القصتان ممتعتان وشائقتان",
+      "label": "Morph_DualFem"
+    },
+    {
+      "sentence": "الوردتان متفتحتان وجميلتان",
+      "label": "Morph_DualFem"
+    },
+    {
+      "sentence": "البنتان تلعبان بالدمية",
+      "label": "Morph_DualFem"
+    },
+    {
+      "sentence": "المعلمتان تشرحان الدرس بسهولة",
+      "label": "Morph_DualFem"
+    },
+    {
+      "sentence": "المهندستان تصممان المبنى",
+      "label": "Morph_DualFem"
+    },
+    {
+      "sentence": "اللاعبتان تجريان بسرعة",
+      "label": "Morph_DualFem"
+    },
+    {
+      "sentence": "المراتان تتحدثان بلطف",
+      "label": "Morph_DualFem"
+    },
+    {
+      "sentence": "الصديقتان تتبادلان الاسرار",
+      "label": "Morph_DualFem"
+    },
+    {
+      "sentence": "هذا منزلنا الجديد",
+      "label": "Morph_Poss1Pl"
+    },
+    {
+      "sentence": "هذه سياراتنا العائلية",
+      "label": "Morph_Poss1Pl"
+    },
+    {
+      "sentence": "هذا مشروعنا المشترك",
+      "label": "Morph_Poss1Pl"
+    },
+    {
+      "sentence": "هذه مدرستنا الثانوية",
+      "label": "Morph_Poss1Pl"
+    },
+    {
+      "sentence": "هذا فريقنا المتميز",
+      "label": "Morph_Poss1Pl"
+    },
+    {
+      "sentence": "هذه حديقتنا الخلفية",
+      "label": "Morph_Poss1Pl"
+    },
+    {
+      "sentence": "هذا مستقبلنا المشرق",
+      "label": "Morph_Poss1Pl"
+    },
+    {
+      "sentence": "هذه ذكرياتنا الجميلة",
+      "label": "Morph_Poss1Pl"
+    },
+    {
+      "sentence": "هذا وطننا الغالي",
+      "label": "Morph_Poss1Pl"
+    },
+    {
+      "sentence": "هذه قيمنا النبيلة",
+      "label": "Morph_Poss1Pl"
+    },
+    {
+      "sentence": "هذا كتابكم المفيد",
+      "label": "Morph_Poss2Pl"
+    },
+    {
+      "sentence": "هذه اقلامكم الملونة",
+      "label": "Morph_Poss2Pl"
+    },
+    {
+      "sentence": "هذه حقائبكم المدرسية",
+      "label": "Morph_Poss2Pl"
+    },
+    {
+      "sentence": "هذه هواتفكم الذكية",
+      "label": "Morph_Poss2Pl"
+    },
+    {
+      "sentence": "هذه منازلكم الانيقة",
+      "label": "Morph_Poss2Pl"
+    },
+    {
+      "sentence": "هذه سياراتكم الحديثة",
+      "label": "Morph_Poss2Pl"
+    },
+    {
+      "sentence": "هذه مشاريعكم الناجحة",
+      "label": "Morph_Poss2Pl"
+    },
+    {
+      "sentence": "هذه افكاركم المبتكرة",
+      "label": "Morph_Poss2Pl"
+    },
+    {
+      "sentence": "هذه جهودكم المثمرة",
+      "label": "Morph_Poss2Pl"
+    },
+    {
+      "sentence": "هذه ارائكم السديدة",
+      "label": "Morph_Poss2Pl"
+    },
+    {
+      "sentence": "هؤلاء رجال صادقون",
+      "label": "Morph_AdjPlMasc"
+    },
+    {
+      "sentence": "هؤلاء طلاب مجتهدون ونشيطون",
+      "label": "Morph_AdjPlMasc"
+    },
+    {
+      "sentence": "هؤلاء مهندسون بارعون ومبدعون",
+      "label": "Morph_AdjPlMasc"
+    },
+    {
+      "sentence": "هؤلاء اطباء ماهرون ورحيمون",
+      "label": "Morph_AdjPlMasc"
+    },
+    {
+      "sentence": "هؤلاء معلمون مخلصون ومتفانون",
+      "label": "Morph_AdjPlMasc"
+    },
+    {
+      "sentence": "هؤلاء فنانون موهوبون وملهمون",
+      "label": "Morph_AdjPlMasc"
+    },
+    {
+      "sentence": "هؤلاء كتاب مبدعون ومثقفون",
+      "label": "Morph_AdjPlMasc"
+    },
+    {
+      "sentence": "هؤلاء علماء بارزون ومكتشفون",
+      "label": "Morph_AdjPlMasc"
+    },
+    {
+      "sentence": "هؤلاء قادة حكماء وعادلون",
+      "label": "Morph_AdjPlMasc"
+    },
+    {
+      "sentence": "هؤلاء اصدقاء اوفياء ومخلصون",
+      "label": "Morph_AdjPlMasc"
+    },
+    {
+      "sentence": "هؤلاء نساء فاضلات",
+      "label": "Morph_AdjPlFem"
+    },
+    {
+      "sentence": "هؤلاء طالبات مجتهدات ومهذبات",
+      "label": "Morph_AdjPlFem"
+    },
+    {
+      "sentence": "هؤلاء ممرضات رحيمات ومتفانيات",
+      "label": "Morph_AdjPlFem"
+    },
+    {
+      "sentence": "هؤلاء معلمات قديرات ومربيات",
+      "label": "Morph_AdjPlFem"
+    },
+    {
+      "sentence": "هؤلاء فنانات مبدعات وانيقات",
+      "label": "Morph_AdjPlFem"
+    },
+    {
+      "sentence": "هؤلاء كاتبات لامعات ومؤثرات",
+      "label": "Morph_AdjPlFem"
+    },
+    {
+      "sentence": "هؤلاء عالمات باحثات ومجتهدات",
+      "label": "Morph_AdjPlFem"
+    },
+    {
+      "sentence": "هؤلاء قائدات ملهمات وقويات",
+      "label": "Morph_AdjPlFem"
+    },
+    {
+      "sentence": "هؤلاء صديقات مخلصات وودودات",
+      "label": "Morph_AdjPlFem"
+    },
+    {
+      "sentence": "هؤلاء امهات حنونات وعطوفات",
+      "label": "Morph_AdjPlFem"
+    },
+    {
+      "sentence": "كتبت الطالبة الدرس",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "اكل الولد التفاح",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "لعب الاطفال في الحديقة",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "سافر الاب الى الرياض",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "شرح المعلم الدرس بوضوح",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "بكى الطفل كثيرا",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "نجح الطالب في الاختبار",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "جاء الضيوف مبكرا",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "ساعدت الام ابنتها",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "فهم الجميع الشرح",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "اشترى الرجل الخبز",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "تكتب الطالبة الدرس",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "ياكل الولد التفاح",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "يلعب الاطفال في الحديقة",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "يسافر الاب الى الرياض",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "يشرح المعلم الدرس",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "يبكي الطفل كثيرا",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "ينجح الطالب في الاختبار",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "يجيء الضيوف مبكرا",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "تساعد الام ابنتها",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "يفهم الجميع الشرح",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "يشتري الرجل الخبز",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "المهندسون يعملون في المشروع",
+      "label": "Morph_PlMasc"
+    },
+    {
+      "sentence": "الاطباء يعالجون المرضى",
+      "label": "Morph_PlMasc"
+    },
+    {
+      "sentence": "الطلاب يدرسون بجد",
+      "label": "Morph_PlMasc"
+    },
+    {
+      "sentence": "المعلمون يشرحون الدرس",
+      "label": "Morph_PlMasc"
+    },
+    {
+      "sentence": "اللاعبون يتدربون يوميا",
+      "label": "Morph_PlMasc"
+    },
+    {
+      "sentence": "الموظفون حضروا الاجتماع",
+      "label": "Morph_PlMasc"
+    },
+    {
+      "sentence": "المزارعون يحرثون الارض",
+      "label": "Morph_PlMasc"
+    },
+    {
+      "sentence": "الصيادون يصطادون السمك",
+      "label": "Morph_PlMasc"
+    },
+    {
+      "sentence": "الجنود يحمون الحدود",
+      "label": "Morph_PlMasc"
+    },
+    {
+      "sentence": "الطالبات يكتبن الواجب",
+      "label": "Morph_PlFem"
+    },
+    {
+      "sentence": "المعلمات يدرسن الرياضيات",
+      "label": "Morph_PlFem"
+    },
+    {
+      "sentence": "الممرضات يعملن في المستشفى",
+      "label": "Morph_PlFem"
+    },
+    {
+      "sentence": "الامهات يتحدثن عن الاطفال",
+      "label": "Morph_PlFem"
+    },
+    {
+      "sentence": "الفتيات يلعبن في الملعب",
+      "label": "Morph_PlFem"
+    },
+    {
+      "sentence": "الطبيبات يعالجن المريضات",
+      "label": "Morph_PlFem"
+    },
+    {
+      "sentence": "الموظفات يحضرن الاجتماع",
+      "label": "Morph_PlFem"
+    }
+  ]
+}

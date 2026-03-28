@@ -1,0 +1,200 @@
+{
+  "results": [
+    {
+      "exp_name": "LexicalAmbiguity_6class",
+      "ansatz": "IQP",
+      "n_samples": 60,
+      "n_classes": 6,
+      "n_s_qubits": 3,
+      "fold_accuracies": [
+        0.16666666666666666,
+        0.16666666666666666,
+        0.0,
+        0.0,
+        0.08333333333333333
+      ],
+      "accuracy_mean": 0.08333333333333333,
+      "accuracy_std": 0.07453559924999298,
+      "class_list": [
+        "Ambiguity_Hit",
+        "Ambiguity_King",
+        "Ambiguity_Leg",
+        "Ambiguity_Man",
+        "Ambiguity_Multiply",
+        "Ambiguity_Possess"
+      ],
+      "classification_report": "                    precision    recall  f1-score   support\n\n     Ambiguity_Hit       0.00      0.00      0.00        10\n    Ambiguity_King       0.17      0.10      0.12        10\n     Ambiguity_Leg       0.25      0.30      0.27        10\n     Ambiguity_Man       0.11      0.10      0.11        10\nAmbiguity_Multiply       0.00      0.00      0.00        10\n Ambiguity_Possess       0.00      0.00      0.00        10\n\n         micro avg       0.11      0.08      0.09        60\n         macro avg       0.09      0.08      0.08        60\n      weighted avg       0.09      0.08      0.08        60\n"
+    },
+    {
+      "exp_name": "LexicalAmbiguity_6class",
+      "ansatz": "Sim14",
+      "n_samples": 60,
+      "n_classes": 6,
+      "n_s_qubits": 3,
+      "fold_accuracies": [
+        0.16666666666666666,
+        0.08333333333333333,
+        0.08333333333333333,
+        0.0,
+        0.08333333333333333
+      ],
+      "accuracy_mean": 0.08333333333333333,
+      "accuracy_std": 0.05270462766947299,
+      "class_list": [
+        "Ambiguity_Hit",
+        "Ambiguity_King",
+        "Ambiguity_Leg",
+        "Ambiguity_Man",
+        "Ambiguity_Multiply",
+        "Ambiguity_Possess"
+      ],
+      "classification_report": "                    precision    recall  f1-score   support\n\n     Ambiguity_Hit       0.00      0.00      0.00        10\n    Ambiguity_King       0.17      0.10      0.12        10\n     Ambiguity_Leg       0.17      0.10      0.12        10\n     Ambiguity_Man       0.29      0.20      0.24        10\nAmbiguity_Multiply       0.00      0.00      0.00        10\n Ambiguity_Possess       0.17      0.10      0.12        10\n\n         micro avg       0.11      0.08      0.10        60\n         macro avg       0.13      0.08      0.10        60\n      weighted avg       0.13      0.08      0.10        60\n"
+    },
+    {
+      "exp_name": "Morphology_Tense",
+      "ansatz": "IQP",
+      "n_samples": 28,
+      "n_classes": 2,
+      "n_s_qubits": 1,
+      "fold_accuracies": [
+        0.8333333333333334,
+        0.6666666666666666,
+        0.3333333333333333,
+        0.8,
+        0.4
+      ],
+      "accuracy_mean": 0.6066666666666667,
+      "accuracy_std": 0.20483055327649624,
+      "class_list": [
+        "Past",
+        "Pres"
+      ],
+      "classification_report": "              precision    recall  f1-score   support\n\n        Past       0.58      0.79      0.67        14\n        Pres       0.67      0.43      0.52        14\n\n    accuracy                           0.61        28\n   macro avg       0.62      0.61      0.59        28\nweighted avg       0.62      0.61      0.59        28\n"
+    },
+    {
+      "exp_name": "Morphology_Tense",
+      "ansatz": "Sim14",
+      "n_samples": 28,
+      "n_classes": 2,
+      "n_s_qubits": 1,
+      "fold_accuracies": [
+        0.6666666666666666,
+        0.6666666666666666,
+        0.6666666666666666,
+        1.0,
+        0.6
+      ],
+      "accuracy_mean": 0.72,
+      "accuracy_std": 0.1423610433604175,
+      "class_list": [
+        "Past",
+        "Pres"
+      ],
+      "classification_report": "              precision    recall  f1-score   support\n\n        Past       0.71      0.71      0.71        14\n        Pres       0.71      0.71      0.71        14\n\n    accuracy                           0.71        28\n   macro avg       0.71      0.71      0.71        28\nweighted avg       0.71      0.71      0.71        28\n"
+    },
+    {
+      "exp_name": "Morphology_Number",
+      "ansatz": "IQP",
+      "n_samples": 98,
+      "n_classes": 3,
+      "n_s_qubits": 2,
+      "fold_accuracies": [
+        0.45,
+        0.25,
+        0.3,
+        0.3684210526315789,
+        0.2631578947368421
+      ],
+      "accuracy_mean": 0.3263157894736842,
+      "accuracy_std": 0.07426463126592438,
+      "class_list": [
+        "Du",
+        "Pl",
+        "Sg"
+      ],
+      "classification_report": "              precision    recall  f1-score   support\n\n          Du       0.32      0.27      0.29        22\n          Pl       0.53      0.40      0.46        47\n          Sg       0.33      0.24      0.28        29\n\n   micro avg       0.42      0.33      0.37        98\n   macro avg       0.39      0.31      0.34        98\nweighted avg       0.42      0.33      0.37        98\n"
+    },
+    {
+      "exp_name": "Morphology_Number",
+      "ansatz": "Sim14",
+      "n_samples": 98,
+      "n_classes": 3,
+      "n_s_qubits": 2,
+      "fold_accuracies": [
+        0.35,
+        0.2,
+        0.35,
+        0.2631578947368421,
+        0.21052631578947367
+      ],
+      "accuracy_mean": 0.27473684210526317,
+      "accuracy_std": 0.06507187587945282,
+      "class_list": [
+        "Du",
+        "Pl",
+        "Sg"
+      ],
+      "classification_report": "              precision    recall  f1-score   support\n\n          Du       0.33      0.41      0.37        22\n          Pl       0.48      0.21      0.29        47\n          Sg       0.31      0.28      0.29        29\n\n   micro avg       0.36      0.28      0.31        98\n   macro avg       0.37      0.30      0.32        98\nweighted avg       0.39      0.28      0.31        98\n"
+    },
+    {
+      "exp_name": "Morphology_Possession",
+      "ansatz": "IQP",
+      "n_samples": 66,
+      "n_classes": 3,
+      "n_s_qubits": 2,
+      "fold_accuracies": [
+        0.21428571428571427,
+        0.3076923076923077,
+        0.23076923076923078,
+        0.23076923076923078,
+        0.15384615384615385
+      ],
+      "accuracy_mean": 0.22747252747252747,
+      "accuracy_std": 0.04909518220590918,
+      "class_list": [
+        "Poss_1st",
+        "Poss_2nd",
+        "Poss_3rd"
+      ],
+      "classification_report": "              precision    recall  f1-score   support\n\n    Poss_1st       0.42      0.23      0.29        22\n    Poss_2nd       0.28      0.36      0.31        22\n    Poss_3rd       0.14      0.09      0.11        22\n\n   micro avg       0.27      0.23      0.25        66\n   macro avg       0.28      0.23      0.24        66\nweighted avg       0.28      0.23      0.24        66\n"
+    },
+    {
+      "exp_name": "Morphology_Possession",
+      "ansatz": "Sim14",
+      "n_samples": 66,
+      "n_classes": 3,
+      "n_s_qubits": 2,
+      "fold_accuracies": [
+        0.14285714285714285,
+        0.23076923076923078,
+        0.07692307692307693,
+        0.38461538461538464,
+        0.15384615384615385
+      ],
+      "accuracy_mean": 0.19780219780219782,
+      "accuracy_std": 0.10540289062225758,
+      "class_list": [
+        "Poss_1st",
+        "Poss_2nd",
+        "Poss_3rd"
+      ],
+      "classification_report": "              precision    recall  f1-score   support\n\n    Poss_1st       0.29      0.23      0.26        22\n    Poss_2nd       0.25      0.23      0.24        22\n    Poss_3rd       0.20      0.14      0.16        22\n\n   micro avg       0.25      0.20      0.22        66\n   macro avg       0.25      0.20      0.22        66\nweighted avg       0.25      0.20      0.22        66\n"
+    }
+  ],
+  "settings": {
+    "epochs": 300,
+    "n_folds": 5,
+    "batch_size": 8,
+    "warmstart": true,
+    "morph_enriched_labels": true,
+    "verb_rescue": true,
+    "optimizer": "SPSA",
+    "spsa": {
+      "a": 0.05,
+      "c": 0.06,
+      "A": 30,
+      "alpha": 0.602,
+      "gamma": 0.101
+    }
+  }
+}

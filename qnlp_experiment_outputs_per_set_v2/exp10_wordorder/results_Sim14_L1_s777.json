@@ -1,0 +1,19 @@
+{
+  "tag": "WordOrder/Sim14/L1/seed777",
+  "ansatz": "Sim14",
+  "n_layers": 1,
+  "seed": 777,
+  "n_samples": 120,
+  "n_classes": 3,
+  "chance": 0.3333333333333333,
+  "mean": 0.25833333333333336,
+  "std": 0.08079466429027214,
+  "folds": [
+    0.2916666666666667,
+    0.375,
+    0.25,
+    0.125,
+    0.25
+  ],
+  "report": "                   precision    recall  f1-score   support\n\nWordOrder_Nominal       0.37      0.25      0.30        40\n    WordOrder_SVO       0.25      0.28      0.26        40\n    WordOrder_VSO       0.34      0.25      0.29        40\n\n        micro avg       0.31      0.26      0.28       120\n        macro avg       0.32      0.26      0.28       120\n     weighted avg       0.32      0.26      0.28       120\n"
+}

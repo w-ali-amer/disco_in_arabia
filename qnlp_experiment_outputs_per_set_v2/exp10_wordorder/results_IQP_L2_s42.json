@@ -1,0 +1,19 @@
+{
+  "tag": "WordOrder/IQP/L2/seed42",
+  "ansatz": "IQP",
+  "n_layers": 2,
+  "seed": 42,
+  "n_samples": 120,
+  "n_classes": 3,
+  "chance": 0.3333333333333333,
+  "mean": 0.25,
+  "std": 0.08333333333333334,
+  "folds": [
+    0.25,
+    0.125,
+    0.375,
+    0.20833333333333334,
+    0.2916666666666667
+  ],
+  "report": "                   precision    recall  f1-score   support\n\nWordOrder_Nominal       0.30      0.25      0.27        40\n    WordOrder_SVO       0.29      0.25      0.27        40\n    WordOrder_VSO       0.34      0.25      0.29        40\n\n        micro avg       0.31      0.25      0.28       120\n        macro avg       0.31      0.25      0.28       120\n     weighted avg       0.31      0.25      0.28       120\n"
+}

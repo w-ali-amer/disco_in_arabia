@@ -1,0 +1,22 @@
+{
+  "exp_name": "Morphology_Number",
+  "ansatz": "Sim14",
+  "n_samples": 98,
+  "n_classes": 3,
+  "n_s_qubits": 2,
+  "fold_accuracies": [
+    0.35,
+    0.25,
+    0.35,
+    0.2631578947368421,
+    0.21052631578947367
+  ],
+  "accuracy_mean": 0.2847368421052631,
+  "accuracy_std": 0.056032242399940146,
+  "classification_report": "              precision    recall  f1-score   support\n\n          Du       0.33      0.36      0.35        22\n          Pl       0.44      0.23      0.31        47\n          Sg       0.32      0.31      0.32        29\n\n   micro avg       0.36      0.29      0.32        98\n   macro avg       0.36      0.30      0.32        98\nweighted avg       0.38      0.29      0.32        98\n",
+  "class_list": [
+    "Du",
+    "Pl",
+    "Sg"
+  ]
+}

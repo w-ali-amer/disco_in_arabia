@@ -1,0 +1,5536 @@
+{
+  "WordOrder": [
+    {
+      "sentence": "الولد يقرا الكتاب",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "البنت تشرب الحليب",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "الطالب كتب الدرس",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "المعلم شرح القاعدة",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "الطبيب فحص المريض",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "المهندس بنى البيت",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "القطة اكلت السمك",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "الطفل يلعب بالكرة",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "الفلاح يزرع الارض",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "العامل يبني الجدار",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "الطائرة تطير عاليا",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "الشمس تشرق صباحا",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "الام تعد الطعام",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "النهر يجري في الوادي",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "الريح تهب بقوة",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "السيارة سريعة",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "السماء صافية",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "الجو لطيف",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "الحديقة جميلة",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "الكتاب مفيد",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "القلم جديد",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "الدرس سهل",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "الماء بارد",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "الليل هادئ",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "المدينة مزدحمة",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "الرياض واسعة",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "المدرسة قريبة",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "القهوة ساخنة",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "الفاكهة طازجة",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "الامتحان صعب",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "يقرا الولد الكتاب",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "تشرب البنت الحليب",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "كتب الطالب الدرس",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "شرح المعلم القاعدة",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "فحص الطبيب المريض",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "بنى المهندس البيت",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "اكلت القطة السمك",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "يلعب الطفل بالكرة",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "يزرع الفلاح الارض",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "يبني العامل الجدار",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "تطير الطائرة عاليا",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "تشرق الشمس صباحا",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "تعد الام الطعام",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "يجري النهر في الوادي",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "تهب الريح بقوة",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "الفتاة ترسم اللوحة",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "ترسم الفتاة اللوحة",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "الرجل يشتري الخبز",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "يشتري الرجل الخبز",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "الصبي يحمل الحقيبة",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "يحمل الصبي الحقيبة",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "الموظف ارسل الرسالة",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "ارسل الموظف الرسالة",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "الشاب قرا المجلة",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "قرا الشاب المجلة",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "البنت تغسل الصحون",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "تغسل البنت الصحون",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "المدير وقع الوثيقة",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "وقع المدير الوثيقة",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "الطفل يحب الحلوى",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "يحب الطفل الحلوى",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "الطالبة تدرس الفيزياء",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "تدرس الطالبة الفيزياء",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "الشرطي يحرس المبنى",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "يحرس الشرطي المبنى",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "المزارع يقطف الثمار",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "يقطف المزارع الثمار",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "العجوز يعبر الشارع",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "يعبر العجوز الشارع",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "الطباخ يعد الوجبة",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "يعد الطباخ الوجبة",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "الحارس يفتح الباب",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "يفتح الحارس الباب",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "السائق يوقف السيارة",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "يوقف السائق السيارة",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "المعلمة تصحح الاوراق",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "تصحح المعلمة الاوراق",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "الولد يطعم القطة",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "يطعم الولد القطة",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "الطبيبة تفحص الطفل",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "تفحص الطبيبة الطفل",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "الرياضي يحمل الكاس",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "يحمل الرياضي الكاس",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "الكاتب يكتب الرواية",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "يكتب الكاتب الرواية",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "الولد احضر الماء",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "احضر الولد الماء",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "الطالب حفظ القصيدة",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "حفظ الطالب القصيدة",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "البنت رسمت الصورة",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "رسمت البنت الصورة",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "المهندسة صممت المشروع",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "صممت المهندسة المشروع",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "الطفل تناول الدواء",
+      "label": "WordOrder_SVO"
+    },
+    {
+      "sentence": "تناول الطفل الدواء",
+      "label": "WordOrder_VSO"
+    },
+    {
+      "sentence": "الرجل طويل",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "البيت كبير",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "الصبي ذكي",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "الفتاة جميلة",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "الكلب وفي",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "الطعام لذيذ",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "الهواء نظيف",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "الصوت عالي",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "البحر واسع",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "الجبل شاهق",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "القلب قوي",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "الليمون حامض",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "العسل حلو",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "الثلج ابيض",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "النهر عميق",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "الطريق طويل",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "الولد كسول",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "الام حنون",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "الطقس ممطر",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "المسجد قريب",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "البنك بعيد",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "الكتاب ثمين",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "الطالبة مجتهدة",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "القاضي عادل",
+      "label": "WordOrder_Nominal"
+    },
+    {
+      "sentence": "الجندي شجاع",
+      "label": "WordOrder_Nominal"
+    }
+  ],
+  "LexicalAmbiguity": [
+    {
+      "sentence": "جاء الرجل الطويل",
+      "label": "Ambiguity_Man"
+    },
+    {
+      "sentence": "الرجل القوي يعمل",
+      "label": "Ambiguity_Man"
+    },
+    {
+      "sentence": "تحدث الرجل الحكيم",
+      "label": "Ambiguity_Man"
+    },
+    {
+      "sentence": "هذا الرجل طبيب",
+      "label": "Ambiguity_Man"
+    },
+    {
+      "sentence": "رايت رجلا في السوق",
+      "label": "Ambiguity_Man"
+    },
+    {
+      "sentence": "الرجل العجوز جلس",
+      "label": "Ambiguity_Man"
+    },
+    {
+      "sentence": "سال الرجل سؤالا",
+      "label": "Ambiguity_Man"
+    },
+    {
+      "sentence": "اعطى الرجل المال",
+      "label": "Ambiguity_Man"
+    },
+    {
+      "sentence": "ابتسم الرجل السعيد",
+      "label": "Ambiguity_Man"
+    },
+    {
+      "sentence": "يسافر الرجل غدا",
+      "label": "Ambiguity_Man"
+    },
+    {
+      "sentence": "انكسرت رجل الكرسي",
+      "label": "Ambiguity_Leg"
+    },
+    {
+      "sentence": "للطاولة اربع ارجل",
+      "label": "Ambiguity_Leg"
+    },
+    {
+      "sentence": "عالج الطبيب رجل المريض",
+      "label": "Ambiguity_Leg"
+    },
+    {
+      "sentence": "وضع الكتاب على رجله",
+      "label": "Ambiguity_Leg"
+    },
+    {
+      "sentence": "رجل السرير مكسورة",
+      "label": "Ambiguity_Leg"
+    },
+    {
+      "sentence": "اصيبت رجل اللاعب",
+      "label": "Ambiguity_Leg"
+    },
+    {
+      "sentence": "لا تلمس رجل المكتب",
+      "label": "Ambiguity_Leg"
+    },
+    {
+      "sentence": "تحتاج الطاولة الى رجل جديدة",
+      "label": "Ambiguity_Leg"
+    },
+    {
+      "sentence": "الم الرجل شديد",
+      "label": "Ambiguity_Leg"
+    },
+    {
+      "sentence": "طول رجل الزرافة كبير",
+      "label": "Ambiguity_Leg"
+    },
+    {
+      "sentence": "شربت من عين الماء",
+      "label": "Ambiguity_Spring"
+    },
+    {
+      "sentence": "عين الطفل زرقاء",
+      "label": "Ambiguity_Eye"
+    },
+    {
+      "sentence": "هذه عين صافية",
+      "label": "Ambiguity_Eye"
+    },
+    {
+      "sentence": "في الصحراء عين ماء نادرة",
+      "label": "Ambiguity_Spring"
+    },
+    {
+      "sentence": "رايت بعيني اليمنى",
+      "label": "Ambiguity_Eye"
+    },
+    {
+      "sentence": "تدفقت عين الماء بغزارة",
+      "label": "Ambiguity_Spring"
+    },
+    {
+      "sentence": "اصيب اللاعب في عينه",
+      "label": "Ambiguity_Eye"
+    },
+    {
+      "sentence": "وجدوا عين ماء عذبة في الجبل",
+      "label": "Ambiguity_Spring"
+    },
+    {
+      "sentence": "عين الحسود فيها عود",
+      "label": "Ambiguity_Eye"
+    },
+    {
+      "sentence": "نبعت عين جديدة في الوادي",
+      "label": "Ambiguity_Spring"
+    },
+    {
+      "sentence": "رايت جملا في الصحراء",
+      "label": "Ambiguity_Camel"
+    },
+    {
+      "sentence": "الجمل سفينة الصحراء",
+      "label": "Ambiguity_Camel"
+    },
+    {
+      "sentence": "ركبت جملا قويا",
+      "label": "Ambiguity_Camel"
+    },
+    {
+      "sentence": "اشترى ابي جملا",
+      "label": "Ambiguity_Camel"
+    },
+    {
+      "sentence": "الجمل ياكل العشب",
+      "label": "Ambiguity_Camel"
+    },
+    {
+      "sentence": "صوت الجمل رغاء",
+      "label": "Ambiguity_Camel"
+    },
+    {
+      "sentence": "في الحديقة جمل صغير",
+      "label": "Ambiguity_Camel"
+    },
+    {
+      "sentence": "الجمل حيوان صبور",
+      "label": "Ambiguity_Camel"
+    },
+    {
+      "sentence": "شاهدت قافلة جمال",
+      "label": "Ambiguity_Camel"
+    },
+    {
+      "sentence": "لحم الجمل لذيذ",
+      "label": "Ambiguity_Camel"
+    },
+    {
+      "sentence": "قرات جملا مفيدة",
+      "label": "Ambiguity_Sentences"
+    },
+    {
+      "sentence": "الكتاب يحتوي على جمل كثيرة",
+      "label": "Ambiguity_Sentences"
+    },
+    {
+      "sentence": "المعلم شرح الجملة الاسمية",
+      "label": "Ambiguity_Sentences"
+    },
+    {
+      "sentence": "اكتب جملا صحيحة",
+      "label": "Ambiguity_Sentences"
+    },
+    {
+      "sentence": "هذه جملة بسيطة",
+      "label": "Ambiguity_Sentences"
+    },
+    {
+      "sentence": "حلل هذه الجمل",
+      "label": "Ambiguity_Sentences"
+    },
+    {
+      "sentence": "الجمل في اللغة العربية متنوعة",
+      "label": "Ambiguity_Sentences"
+    },
+    {
+      "sentence": "كون جملا من هذه الكلمات",
+      "label": "Ambiguity_Sentences"
+    },
+    {
+      "sentence": "فهمت معنى الجملة",
+      "label": "Ambiguity_Sentences"
+    },
+    {
+      "sentence": "الجملة الفعلية تبدا بفعل",
+      "label": "Ambiguity_Sentences"
+    },
+    {
+      "sentence": "رفعنا علم البلاد عاليا",
+      "label": "Ambiguity_Flag"
+    },
+    {
+      "sentence": "شاهدت علم المملكة يرفرف",
+      "label": "Ambiguity_Flag"
+    },
+    {
+      "sentence": "الوان العلم جميلة",
+      "label": "Ambiguity_Flag"
+    },
+    {
+      "sentence": "نحترم علم دولتنا",
+      "label": "Ambiguity_Flag"
+    },
+    {
+      "sentence": "في المدرسة علم كبير",
+      "label": "Ambiguity_Flag"
+    },
+    {
+      "sentence": "العلم رمز السيادة",
+      "label": "Ambiguity_Flag"
+    },
+    {
+      "sentence": "رسمت علم السعودية",
+      "label": "Ambiguity_Flag"
+    },
+    {
+      "sentence": "احتفلنا بيوم العلم",
+      "label": "Ambiguity_Flag"
+    },
+    {
+      "sentence": "العلم يمثل الوطن",
+      "label": "Ambiguity_Flag"
+    },
+    {
+      "sentence": "يجب احترام العلم",
+      "label": "Ambiguity_Flag"
+    },
+    {
+      "sentence": "اكتسبت علما كثيرا من القراءة",
+      "label": "Ambiguity_Knowledge"
+    },
+    {
+      "sentence": "العلم نور والجهل ظلام",
+      "label": "Ambiguity_Knowledge"
+    },
+    {
+      "sentence": "طلب العلم فريضة",
+      "label": "Ambiguity_Knowledge"
+    },
+    {
+      "sentence": "العالم لديه علم واسع",
+      "label": "Ambiguity_Knowledge"
+    },
+    {
+      "sentence": "يهتم الطلاب بالعلم",
+      "label": "Ambiguity_Knowledge"
+    },
+    {
+      "sentence": "العلم يرفع شان الامم",
+      "label": "Ambiguity_Knowledge"
+    },
+    {
+      "sentence": "بالعلم والعمل نرتقي",
+      "label": "Ambiguity_Knowledge"
+    },
+    {
+      "sentence": "العلم الحديث متطور",
+      "label": "Ambiguity_Knowledge"
+    },
+    {
+      "sentence": "اسعى لزيادة علمي",
+      "label": "Ambiguity_Knowledge"
+    },
+    {
+      "sentence": "العلم طريق النجاح",
+      "label": "Ambiguity_Knowledge"
+    },
+    {
+      "sentence": "كان الملك عادلا",
+      "label": "Ambiguity_King"
+    },
+    {
+      "sentence": "توج الملك في احتفال كبير",
+      "label": "Ambiguity_King"
+    },
+    {
+      "sentence": "يحب الشعب الملك",
+      "label": "Ambiguity_King"
+    },
+    {
+      "sentence": "قصر الملك فخم",
+      "label": "Ambiguity_King"
+    },
+    {
+      "sentence": "اوامر الملك نافذة",
+      "label": "Ambiguity_King"
+    },
+    {
+      "sentence": "حكم الملك البلاد بالعدل",
+      "label": "Ambiguity_King"
+    },
+    {
+      "sentence": "صورة الملك معلقة في المكتب",
+      "label": "Ambiguity_King"
+    },
+    {
+      "sentence": "استقبل الملك الوفود",
+      "label": "Ambiguity_King"
+    },
+    {
+      "sentence": "الملك يولي اهتماما بالتعليم",
+      "label": "Ambiguity_King"
+    },
+    {
+      "sentence": "عهد الملك مزدهر",
+      "label": "Ambiguity_King"
+    },
+    {
+      "sentence": "ملك الفلاح الارض",
+      "label": "Ambiguity_Possess"
+    },
+    {
+      "sentence": "ملك التاجر ثروة كبيرة",
+      "label": "Ambiguity_Possess"
+    },
+    {
+      "sentence": "ملك الطالب قلما جديدا",
+      "label": "Ambiguity_Possess"
+    },
+    {
+      "sentence": "ملك المدير سلطة واسعة",
+      "label": "Ambiguity_Possess"
+    },
+    {
+      "sentence": "ملك الطفل لعبة جميلة",
+      "label": "Ambiguity_Possess"
+    },
+    {
+      "sentence": "ملك الفنان موهبة فريدة",
+      "label": "Ambiguity_Possess"
+    },
+    {
+      "sentence": "ملك العالم اكتشافات عظيمة",
+      "label": "Ambiguity_Possess"
+    },
+    {
+      "sentence": "ملك الشاعر احساسا مرهفا",
+      "label": "Ambiguity_Possess"
+    },
+    {
+      "sentence": "ملك القائد حكمة بالغة",
+      "label": "Ambiguity_Possess"
+    },
+    {
+      "sentence": "ملك المزارع حقلا خصبا",
+      "label": "Ambiguity_Possess"
+    },
+    {
+      "sentence": "ضرب الولد الكرة",
+      "label": "Ambiguity_Hit"
+    },
+    {
+      "sentence": "ضرب المعلم الطالب",
+      "label": "Ambiguity_Hit"
+    },
+    {
+      "sentence": "ضرب اللاعب الهدف",
+      "label": "Ambiguity_Hit"
+    },
+    {
+      "sentence": "ضربت الريح النافذة",
+      "label": "Ambiguity_Hit"
+    },
+    {
+      "sentence": "ضرب المطر الارض",
+      "label": "Ambiguity_Hit"
+    },
+    {
+      "sentence": "ضرب الشرطي اللص",
+      "label": "Ambiguity_Hit"
+    },
+    {
+      "sentence": "ضربت الساعة الجرس",
+      "label": "Ambiguity_Hit"
+    },
+    {
+      "sentence": "ضرب الموج الشاطئ",
+      "label": "Ambiguity_Hit"
+    },
+    {
+      "sentence": "ضرب العامل الحديد",
+      "label": "Ambiguity_Hit"
+    },
+    {
+      "sentence": "ضربت الشمس وجهي",
+      "label": "Ambiguity_Hit"
+    },
+    {
+      "sentence": "تعلمنا كيف نضرب الاعداد",
+      "label": "Ambiguity_Multiply"
+    },
+    {
+      "sentence": "ضرب خمسة في ثلاثة يساوي خمسة عشر",
+      "label": "Ambiguity_Multiply"
+    },
+    {
+      "sentence": "يجب ان نضرب الكميات بدقة",
+      "label": "Ambiguity_Multiply"
+    },
+    {
+      "sentence": "ضربنا الرقم في نفسه",
+      "label": "Ambiguity_Multiply"
+    },
+    {
+      "sentence": "عملية الضرب سهلة",
+      "label": "Ambiguity_Multiply"
+    },
+    {
+      "sentence": "نحتاج ان نضرب هذه الارقام",
+      "label": "Ambiguity_Multiply"
+    },
+    {
+      "sentence": "ضرب المعلم مثالا",
+      "label": "Ambiguity_Multiply"
+    },
+    {
+      "sentence": "يمكننا ضرب الكسور",
+      "label": "Ambiguity_Multiply"
+    },
+    {
+      "sentence": "ضربت الامثلة فهمي للمسالة",
+      "label": "Ambiguity_Multiply"
+    },
+    {
+      "sentence": "ضربت الاسعار بسبب التضخم",
+      "label": "Ambiguity_Multiply"
+    },
+    {
+      "sentence": "فتح الولد الباب",
+      "label": "Ambiguity_Open"
+    },
+    {
+      "sentence": "فتح الطالب الكتاب",
+      "label": "Ambiguity_Open"
+    },
+    {
+      "sentence": "فتح الطبيب العيادة",
+      "label": "Ambiguity_Open"
+    },
+    {
+      "sentence": "فتح العامل النافذة",
+      "label": "Ambiguity_Open"
+    },
+    {
+      "sentence": "فتح الزهرة اوراقها",
+      "label": "Ambiguity_Open"
+    },
+    {
+      "sentence": "فتح القائد المدينة",
+      "label": "Ambiguity_Conquer"
+    },
+    {
+      "sentence": "فتح المسلمون الاندلس",
+      "label": "Ambiguity_Conquer"
+    },
+    {
+      "sentence": "فتح الجيش الحصن",
+      "label": "Ambiguity_Conquer"
+    },
+    {
+      "sentence": "فتح صلاح الدين القدس",
+      "label": "Ambiguity_Conquer"
+    },
+    {
+      "sentence": "فتح الفاتح القسطنطينية",
+      "label": "Ambiguity_Conquer"
+    },
+    {
+      "sentence": "فتح الصندوق بالمفتاح",
+      "label": "Ambiguity_Open"
+    },
+    {
+      "sentence": "فتح الحارس البوابة",
+      "label": "Ambiguity_Open"
+    },
+    {
+      "sentence": "فتح المظلة عندما امطرت",
+      "label": "Ambiguity_Open"
+    },
+    {
+      "sentence": "فتح قلبه للحب",
+      "label": "Ambiguity_Open"
+    },
+    {
+      "sentence": "فتح الشهية برائحة الطعام",
+      "label": "Ambiguity_Open"
+    },
+    {
+      "sentence": "تؤلم عيني من الشاشة",
+      "label": "Ambiguity_Eye"
+    },
+    {
+      "sentence": "وضع الطبيب قطرة في عينه",
+      "label": "Ambiguity_Eye"
+    },
+    {
+      "sentence": "عين الصقر حادة",
+      "label": "Ambiguity_Eye"
+    },
+    {
+      "sentence": "احمرت عيني من البكاء",
+      "label": "Ambiguity_Eye"
+    },
+    {
+      "sentence": "فقد الجندي عينه في المعركة",
+      "label": "Ambiguity_Eye"
+    },
+    {
+      "sentence": "عين الطاووس جميلة",
+      "label": "Ambiguity_Eye"
+    },
+    {
+      "sentence": "غطى عينيه بيده",
+      "label": "Ambiguity_Eye"
+    },
+    {
+      "sentence": "في عيون الام حنان كبير",
+      "label": "Ambiguity_Eye"
+    },
+    {
+      "sentence": "اغمضت عيني للنوم",
+      "label": "Ambiguity_Eye"
+    },
+    {
+      "sentence": "كحلت المراة عينها",
+      "label": "Ambiguity_Eye"
+    },
+    {
+      "sentence": "كشفوا عين ماء في الصحراء",
+      "label": "Ambiguity_Spring"
+    },
+    {
+      "sentence": "تنبع العين من باطن الجبل",
+      "label": "Ambiguity_Spring"
+    },
+    {
+      "sentence": "جلسنا بجانب العين نستريح",
+      "label": "Ambiguity_Spring"
+    },
+    {
+      "sentence": "تجف العين في الصيف",
+      "label": "Ambiguity_Spring"
+    },
+    {
+      "sentence": "ماء العين بارد ونقي",
+      "label": "Ambiguity_Spring"
+    },
+    {
+      "sentence": "يقود الراعي غنمه الى العين",
+      "label": "Ambiguity_Spring"
+    },
+    {
+      "sentence": "بنيت القرية بجوار العين",
+      "label": "Ambiguity_Spring"
+    },
+    {
+      "sentence": "تدفقت العين بعد الامطار",
+      "label": "Ambiguity_Spring"
+    },
+    {
+      "sentence": "العين مصدر مياه القرية",
+      "label": "Ambiguity_Spring"
+    },
+    {
+      "sentence": "نزلنا على العين لنتوضا",
+      "label": "Ambiguity_Spring"
+    },
+    {
+      "sentence": "فتح الاسكندر بلادا كثيرة",
+      "label": "Ambiguity_Conquer"
+    },
+    {
+      "sentence": "فتح العرب بلاد فارس",
+      "label": "Ambiguity_Conquer"
+    },
+    {
+      "sentence": "سعى الجيش لفتح الحصن",
+      "label": "Ambiguity_Conquer"
+    },
+    {
+      "sentence": "فتح السلطان اراضي جديدة",
+      "label": "Ambiguity_Conquer"
+    },
+    {
+      "sentence": "تسمى المدينة بذكرى الفتح",
+      "label": "Ambiguity_Conquer"
+    },
+    {
+      "sentence": "فتح الخليفة الارض بعد معركة",
+      "label": "Ambiguity_Conquer"
+    },
+    {
+      "sentence": "يحتفل الشعب بذكرى الفتح",
+      "label": "Ambiguity_Conquer"
+    },
+    {
+      "sentence": "كان الفتح بداية حضارة",
+      "label": "Ambiguity_Conquer"
+    },
+    {
+      "sentence": "فتح الجيش الحصون المنيعة",
+      "label": "Ambiguity_Conquer"
+    },
+    {
+      "sentence": "امر القائد بفتح المدينة",
+      "label": "Ambiguity_Conquer"
+    },
+    {
+      "sentence": "الرجل المسن يمشي ببطء",
+      "label": "Ambiguity_Man"
+    },
+    {
+      "sentence": "تقدم الرجل بشجاعة",
+      "label": "Ambiguity_Man"
+    },
+    {
+      "sentence": "الرجل الفاضل يحترم الجميع",
+      "label": "Ambiguity_Man"
+    },
+    {
+      "sentence": "الرجل يعتني باسرته",
+      "label": "Ambiguity_Man"
+    },
+    {
+      "sentence": "قابلت رجلا لطيفا",
+      "label": "Ambiguity_Man"
+    },
+    {
+      "sentence": "كسرت رجله في السقوط",
+      "label": "Ambiguity_Leg"
+    },
+    {
+      "sentence": "رجل الكرسي الخشبي قصيرة",
+      "label": "Ambiguity_Leg"
+    },
+    {
+      "sentence": "جبست الممرضة رجل المريض",
+      "label": "Ambiguity_Leg"
+    },
+    {
+      "sentence": "عرج في رجله اليسرى",
+      "label": "Ambiguity_Leg"
+    },
+    {
+      "sentence": "رجل المنضدة مكسورة",
+      "label": "Ambiguity_Leg"
+    },
+    {
+      "sentence": "زار الملك المستشفى",
+      "label": "Ambiguity_King"
+    },
+    {
+      "sentence": "تكلم الملك امام الشعب",
+      "label": "Ambiguity_King"
+    },
+    {
+      "sentence": "انجز الملك مشروعا تنمويا",
+      "label": "Ambiguity_King"
+    },
+    {
+      "sentence": "الملك يرعى العلماء والادباء",
+      "label": "Ambiguity_King"
+    },
+    {
+      "sentence": "احتفل الملك بعيد الاستقلال",
+      "label": "Ambiguity_King"
+    },
+    {
+      "sentence": "ملك الشاب سيارة فارهة",
+      "label": "Ambiguity_Possess"
+    },
+    {
+      "sentence": "ملك الكاتب مكتبة ضخمة",
+      "label": "Ambiguity_Possess"
+    },
+    {
+      "sentence": "ملك الاب ارضا زراعية",
+      "label": "Ambiguity_Possess"
+    },
+    {
+      "sentence": "ملكت المراة خاتم ذهبيا",
+      "label": "Ambiguity_Possess"
+    },
+    {
+      "sentence": "ملك الطفل دراجة جديدة",
+      "label": "Ambiguity_Possess"
+    },
+    {
+      "sentence": "ضرب البرق الشجرة",
+      "label": "Ambiguity_Hit"
+    },
+    {
+      "sentence": "ضرب الحارس المتطفل",
+      "label": "Ambiguity_Hit"
+    },
+    {
+      "sentence": "ضرب الطبل بقوة",
+      "label": "Ambiguity_Hit"
+    },
+    {
+      "sentence": "ضربت البرد النباتات",
+      "label": "Ambiguity_Hit"
+    },
+    {
+      "sentence": "ضرب المتهم رجل الامن",
+      "label": "Ambiguity_Hit"
+    },
+    {
+      "sentence": "ضرب الطالب كسرين معا",
+      "label": "Ambiguity_Multiply"
+    },
+    {
+      "sentence": "ضربنا الطول في العرض لنجد المساحة",
+      "label": "Ambiguity_Multiply"
+    },
+    {
+      "sentence": "تعلم ضرب الاعداد الكبيرة",
+      "label": "Ambiguity_Multiply"
+    },
+    {
+      "sentence": "ضرب العدد اربعة في خمسة",
+      "label": "Ambiguity_Multiply"
+    },
+    {
+      "sentence": "اختبار الضرب كان سهلا",
+      "label": "Ambiguity_Multiply"
+    },
+    {
+      "sentence": "الجمل يتحمل العطش",
+      "label": "Ambiguity_Camel"
+    },
+    {
+      "sentence": "ربطت الجمل بالحبل",
+      "label": "Ambiguity_Camel"
+    },
+    {
+      "sentence": "سباق الجمل تراث خليجي",
+      "label": "Ambiguity_Camel"
+    },
+    {
+      "sentence": "الجمل يحمل البضاعة",
+      "label": "Ambiguity_Camel"
+    },
+    {
+      "sentence": "جلسنا بجانب الجمل",
+      "label": "Ambiguity_Camel"
+    },
+    {
+      "sentence": "صحح المعلم الجمل الخاطئة",
+      "label": "Ambiguity_Sentences"
+    },
+    {
+      "sentence": "ترجمت جملا من العربية",
+      "label": "Ambiguity_Sentences"
+    },
+    {
+      "sentence": "كتب الطالب عشر جمل",
+      "label": "Ambiguity_Sentences"
+    },
+    {
+      "sentence": "الجملة الشرطية لها شرط وجواب",
+      "label": "Ambiguity_Sentences"
+    },
+    {
+      "sentence": "اعد بناء الجملة من جديد",
+      "label": "Ambiguity_Sentences"
+    },
+    {
+      "sentence": "رفع الطلاب العلم في الصباح",
+      "label": "Ambiguity_Flag"
+    },
+    {
+      "sentence": "مزقت الرياح العلم",
+      "label": "Ambiguity_Flag"
+    },
+    {
+      "sentence": "صنع التلاميذ علما ورقيا",
+      "label": "Ambiguity_Flag"
+    },
+    {
+      "sentence": "علم المملكة ملون باللون الاخضر",
+      "label": "Ambiguity_Flag"
+    },
+    {
+      "sentence": "نشرت العلم امام البيت",
+      "label": "Ambiguity_Flag"
+    },
+    {
+      "sentence": "العلم يفتح ابواب الفرص",
+      "label": "Ambiguity_Knowledge"
+    },
+    {
+      "sentence": "يسعى العقلاء لاكتساب العلم",
+      "label": "Ambiguity_Knowledge"
+    },
+    {
+      "sentence": "العلم يبني الامم",
+      "label": "Ambiguity_Knowledge"
+    },
+    {
+      "sentence": "العلوم المختلفة تخدم الانسانية",
+      "label": "Ambiguity_Knowledge"
+    },
+    {
+      "sentence": "علمت ما لم اكن اعرفه",
+      "label": "Ambiguity_Knowledge"
+    },
+    {
+      "sentence": "فتح المتجر ابوابه صباحا",
+      "label": "Ambiguity_Open"
+    },
+    {
+      "sentence": "فتح التطبيق على الهاتف",
+      "label": "Ambiguity_Open"
+    },
+    {
+      "sentence": "فتح الحقيبة واخرج الكتاب",
+      "label": "Ambiguity_Open"
+    },
+    {
+      "sentence": "فتح الصمام لمرور الغاز",
+      "label": "Ambiguity_Open"
+    },
+    {
+      "sentence": "فتحت الزجاجة بصعوبة",
+      "label": "Ambiguity_Open"
+    }
+  ],
+  "Morphology": [
+    {
+      "sentence": "المهندس يعمل",
+      "label": "Morph_SgMasc"
+    },
+    {
+      "sentence": "المهندسون يعملون",
+      "label": "Morph_PlMasc"
+    },
+    {
+      "sentence": "الطالبة تدرس",
+      "label": "Morph_SgFem"
+    },
+    {
+      "sentence": "الطالبات يدرسن",
+      "label": "Morph_PlFem"
+    },
+    {
+      "sentence": "الكتاب جديد",
+      "label": "Morph_SgMasc"
+    },
+    {
+      "sentence": "الكتب جديدة",
+      "label": "Morph_PlBroken"
+    },
+    {
+      "sentence": "السيارة سريعة",
+      "label": "Morph_SgFem"
+    },
+    {
+      "sentence": "السيارات سريعة",
+      "label": "Morph_PlFem"
+    },
+    {
+      "sentence": "البيت كبير",
+      "label": "Morph_SgMasc"
+    },
+    {
+      "sentence": "الغرفة كبيرة",
+      "label": "Morph_SgFem"
+    },
+    {
+      "sentence": "الولد ذكي",
+      "label": "Morph_SgMasc"
+    },
+    {
+      "sentence": "البنت ذكية",
+      "label": "Morph_SgFem"
+    },
+    {
+      "sentence": "كتب الطالب",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "يكتب الطالب",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "قرات البنت",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "تقرا البنت",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "هذا كتابي",
+      "label": "Morph_Poss1Sg"
+    },
+    {
+      "sentence": "هذا كتابك",
+      "label": "Morph_Poss2MascSg"
+    },
+    {
+      "sentence": "هذا قلمه",
+      "label": "Morph_Poss3MascSg"
+    },
+    {
+      "sentence": "هذا قلمها",
+      "label": "Morph_Poss3FemSg"
+    },
+    {
+      "sentence": "المعلمة تشرح",
+      "label": "Morph_SgFem"
+    },
+    {
+      "sentence": "المعلمات يشرحن",
+      "label": "Morph_PlFem"
+    },
+    {
+      "sentence": "اللاعبان ماهران",
+      "label": "Morph_DualMasc"
+    },
+    {
+      "sentence": "اللاعبتان ماهرتان",
+      "label": "Morph_DualFem"
+    },
+    {
+      "sentence": "سافر الرجل",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "يسافر الرجل",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "سافرت المراة",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "تسافر المراة",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "هذه مدرستنا",
+      "label": "Morph_Poss1Pl"
+    },
+    {
+      "sentence": "هذا بيتكم",
+      "label": "Morph_Poss2Pl"
+    },
+    {
+      "sentence": "هؤلاء طلاب مجتهدون",
+      "label": "Morph_AdjPlMasc"
+    },
+    {
+      "sentence": "هؤلاء طالبات مجتهدات",
+      "label": "Morph_AdjPlFem"
+    },
+    {
+      "sentence": "القلم ازرق",
+      "label": "Morph_SgMasc"
+    },
+    {
+      "sentence": "الاقلام زرقاء",
+      "label": "Morph_PlBroken"
+    },
+    {
+      "sentence": "المكتب منظم",
+      "label": "Morph_SgMasc"
+    },
+    {
+      "sentence": "المكاتب منظمة",
+      "label": "Morph_PlBroken"
+    },
+    {
+      "sentence": "الباب مفتوح",
+      "label": "Morph_SgMasc"
+    },
+    {
+      "sentence": "الابواب مفتوحة",
+      "label": "Morph_PlBroken"
+    },
+    {
+      "sentence": "الدرس مفهوم",
+      "label": "Morph_SgMasc"
+    },
+    {
+      "sentence": "الدروس مفهومة",
+      "label": "Morph_PlBroken"
+    },
+    {
+      "sentence": "الكتاب مقروء",
+      "label": "Morph_SgMasc"
+    },
+    {
+      "sentence": "الكتب مقروءة",
+      "label": "Morph_PlBroken"
+    },
+    {
+      "sentence": "الولد يلعب",
+      "label": "Morph_SgMasc"
+    },
+    {
+      "sentence": "الاولاد يلعبون",
+      "label": "Morph_PlMasc"
+    },
+    {
+      "sentence": "المعلم يشرح",
+      "label": "Morph_SgMasc"
+    },
+    {
+      "sentence": "المعلمون يشرحون",
+      "label": "Morph_PlMasc"
+    },
+    {
+      "sentence": "الطبيب يعالج",
+      "label": "Morph_SgMasc"
+    },
+    {
+      "sentence": "الاطباء يعالجون",
+      "label": "Morph_PlMasc"
+    },
+    {
+      "sentence": "الكاتب يكتب",
+      "label": "Morph_SgMasc"
+    },
+    {
+      "sentence": "الكتاب يكتبون",
+      "label": "Morph_PlMasc"
+    },
+    {
+      "sentence": "المهندس يبني",
+      "label": "Morph_SgMasc"
+    },
+    {
+      "sentence": "المهندسون يبنون",
+      "label": "Morph_PlMasc"
+    },
+    {
+      "sentence": "الشجرة مثمرة",
+      "label": "Morph_SgFem"
+    },
+    {
+      "sentence": "الاشجار مثمرة",
+      "label": "Morph_PlBroken"
+    },
+    {
+      "sentence": "القصة ممتعة",
+      "label": "Morph_SgFem"
+    },
+    {
+      "sentence": "القصص ممتعة",
+      "label": "Morph_PlBroken"
+    },
+    {
+      "sentence": "المدينة نظيفة",
+      "label": "Morph_SgFem"
+    },
+    {
+      "sentence": "المدن نظيفة",
+      "label": "Morph_PlBroken"
+    },
+    {
+      "sentence": "الحقيبة ثقيلة",
+      "label": "Morph_SgFem"
+    },
+    {
+      "sentence": "الحقائب ثقيلة",
+      "label": "Morph_PlBroken"
+    },
+    {
+      "sentence": "الوردة جميلة",
+      "label": "Morph_SgFem"
+    },
+    {
+      "sentence": "الورود جميلة",
+      "label": "Morph_PlBroken"
+    },
+    {
+      "sentence": "البنت تلعب",
+      "label": "Morph_SgFem"
+    },
+    {
+      "sentence": "البنات يلعبن",
+      "label": "Morph_PlFem"
+    },
+    {
+      "sentence": "الممرضة تساعد",
+      "label": "Morph_SgFem"
+    },
+    {
+      "sentence": "الممرضات يساعدن",
+      "label": "Morph_PlFem"
+    },
+    {
+      "sentence": "الزهرة تتفتح",
+      "label": "Morph_SgFem"
+    },
+    {
+      "sentence": "الزهرات تتفتحن",
+      "label": "Morph_PlFem"
+    },
+    {
+      "sentence": "الشمس تشرق",
+      "label": "Morph_SgFem"
+    },
+    {
+      "sentence": "الشموس تشرقن",
+      "label": "Morph_PlFem"
+    },
+    {
+      "sentence": "الام تطبخ",
+      "label": "Morph_SgFem"
+    },
+    {
+      "sentence": "الامهات يطبخن",
+      "label": "Morph_PlFem"
+    },
+    {
+      "sentence": "شرب الطفل الحليب",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "اكل الولد التفاحة",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "رسم الفنان لوحة",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "زرعت الفتاة الوردة",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "سمع الطالب الدرس",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "فتح العامل الباب",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "لعب الفريق المباراة",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "نجح الطالب في الامتحان",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "سافر المسافر الى المدينة",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "عاد المسافر من الرحلة",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "يشرب الطفل الحليب",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "ياكل الولد التفاحة",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "يرسم الفنان لوحة",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "تزرع الفتاة الوردة",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "يسمع الطالب الدرس",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "يفتح العامل الباب",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "يلعب الفريق المباراة",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "ينجح الطالب في الامتحان",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "يسافر المسافر الى المدينة",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "يعود المسافر من الرحلة",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "هذا بيتي",
+      "label": "Morph_Poss1Sg"
+    },
+    {
+      "sentence": "هذا قلمي",
+      "label": "Morph_Poss1Sg"
+    },
+    {
+      "sentence": "هذه سيارتي",
+      "label": "Morph_Poss1Sg"
+    },
+    {
+      "sentence": "هذا كتابي الجديد",
+      "label": "Morph_Poss1Sg"
+    },
+    {
+      "sentence": "هذه مدرستي الكبيرة",
+      "label": "Morph_Poss1Sg"
+    },
+    {
+      "sentence": "هذا هاتفي الذكي",
+      "label": "Morph_Poss1Sg"
+    },
+    {
+      "sentence": "هذا اخي الصغير",
+      "label": "Morph_Poss1Sg"
+    },
+    {
+      "sentence": "هذه لعبتي المفضلة",
+      "label": "Morph_Poss1Sg"
+    },
+    {
+      "sentence": "هذا حاسوبي المحمول",
+      "label": "Morph_Poss1Sg"
+    },
+    {
+      "sentence": "هذا فستاني الجديد",
+      "label": "Morph_Poss1Sg"
+    },
+    {
+      "sentence": "هذا دفترك",
+      "label": "Morph_Poss2MascSg"
+    },
+    {
+      "sentence": "هذا مفتاحك",
+      "label": "Morph_Poss2MascSg"
+    },
+    {
+      "sentence": "هذه حقيبتك",
+      "label": "Morph_Poss2MascSg"
+    },
+    {
+      "sentence": "هذا قلمك الرصاص",
+      "label": "Morph_Poss2MascSg"
+    },
+    {
+      "sentence": "هذه ساعتك الانيقة",
+      "label": "Morph_Poss2MascSg"
+    },
+    {
+      "sentence": "هذا عنوانك الجديد",
+      "label": "Morph_Poss2MascSg"
+    },
+    {
+      "sentence": "هذا رقم هاتفك",
+      "label": "Morph_Poss2MascSg"
+    },
+    {
+      "sentence": "هذه دراجتك النارية",
+      "label": "Morph_Poss2MascSg"
+    },
+    {
+      "sentence": "هذا مشروعك المثير",
+      "label": "Morph_Poss2MascSg"
+    },
+    {
+      "sentence": "هذا رايك الصائب",
+      "label": "Morph_Poss2MascSg"
+    },
+    {
+      "sentence": "هذا كتابه",
+      "label": "Morph_Poss3MascSg"
+    },
+    {
+      "sentence": "هذا قلمه الجديد",
+      "label": "Morph_Poss3MascSg"
+    },
+    {
+      "sentence": "هذه سيارته الفاخرة",
+      "label": "Morph_Poss3MascSg"
+    },
+    {
+      "sentence": "هذا بيته الواسع",
+      "label": "Morph_Poss3MascSg"
+    },
+    {
+      "sentence": "هذا عمله المتقن",
+      "label": "Morph_Poss3MascSg"
+    },
+    {
+      "sentence": "هذا حلمه الكبير",
+      "label": "Morph_Poss3MascSg"
+    },
+    {
+      "sentence": "هذا جهده المضني",
+      "label": "Morph_Poss3MascSg"
+    },
+    {
+      "sentence": "هذا نجاحه الباهر",
+      "label": "Morph_Poss3MascSg"
+    },
+    {
+      "sentence": "هذا اختراعه العظيم",
+      "label": "Morph_Poss3MascSg"
+    },
+    {
+      "sentence": "هذا رايه السديد",
+      "label": "Morph_Poss3MascSg"
+    },
+    {
+      "sentence": "هذا كتابها",
+      "label": "Morph_Poss3FemSg"
+    },
+    {
+      "sentence": "هذا قلمها الجميل",
+      "label": "Morph_Poss3FemSg"
+    },
+    {
+      "sentence": "هذه حقيبتها الانيقة",
+      "label": "Morph_Poss3FemSg"
+    },
+    {
+      "sentence": "هذه مدرستها القريبة",
+      "label": "Morph_Poss3FemSg"
+    },
+    {
+      "sentence": "هذا فستانها الجديد",
+      "label": "Morph_Poss3FemSg"
+    },
+    {
+      "sentence": "هذا هاتفها الحديث",
+      "label": "Morph_Poss3FemSg"
+    },
+    {
+      "sentence": "هذا سرها الدفين",
+      "label": "Morph_Poss3FemSg"
+    },
+    {
+      "sentence": "هذه موهبتها الرائعة",
+      "label": "Morph_Poss3FemSg"
+    },
+    {
+      "sentence": "هذا تصميمها المبتكر",
+      "label": "Morph_Poss3FemSg"
+    },
+    {
+      "sentence": "هذا رايها الحكيم",
+      "label": "Morph_Poss3FemSg"
+    },
+    {
+      "sentence": "الممرضان يعتنيان بالمريض",
+      "label": "Morph_DualMasc"
+    },
+    {
+      "sentence": "الطالبان يدرسان بجد",
+      "label": "Morph_DualMasc"
+    },
+    {
+      "sentence": "الكتابان مفيدان جدا",
+      "label": "Morph_DualMasc"
+    },
+    {
+      "sentence": "القلمان جديدان وجميلان",
+      "label": "Morph_DualMasc"
+    },
+    {
+      "sentence": "الولدان يلعبان في الحديقة",
+      "label": "Morph_DualMasc"
+    },
+    {
+      "sentence": "المعلمان يشرحان الدرس بوضوح",
+      "label": "Morph_DualMasc"
+    },
+    {
+      "sentence": "المهندسان يصممان المشروع",
+      "label": "Morph_DualMasc"
+    },
+    {
+      "sentence": "اللاعبان يسجلان الاهداف",
+      "label": "Morph_DualMasc"
+    },
+    {
+      "sentence": "الرجلان يتحدثان بهدوء",
+      "label": "Morph_DualMasc"
+    },
+    {
+      "sentence": "الصديقان يمشيان معا",
+      "label": "Morph_DualMasc"
+    },
+    {
+      "sentence": "الممرضتان تعتنيان بالطفل",
+      "label": "Morph_DualFem"
+    },
+    {
+      "sentence": "الطالبتان تدرسان معا",
+      "label": "Morph_DualFem"
+    },
+    {
+      "sentence": "القصتان ممتعتان وشائقتان",
+      "label": "Morph_DualFem"
+    },
+    {
+      "sentence": "الوردتان متفتحتان وجميلتان",
+      "label": "Morph_DualFem"
+    },
+    {
+      "sentence": "البنتان تلعبان بالدمية",
+      "label": "Morph_DualFem"
+    },
+    {
+      "sentence": "المعلمتان تشرحان الدرس بسهولة",
+      "label": "Morph_DualFem"
+    },
+    {
+      "sentence": "المهندستان تصممان المبنى",
+      "label": "Morph_DualFem"
+    },
+    {
+      "sentence": "اللاعبتان تجريان بسرعة",
+      "label": "Morph_DualFem"
+    },
+    {
+      "sentence": "المراتان تتحدثان بلطف",
+      "label": "Morph_DualFem"
+    },
+    {
+      "sentence": "الصديقتان تتبادلان الاسرار",
+      "label": "Morph_DualFem"
+    },
+    {
+      "sentence": "هذا منزلنا الجديد",
+      "label": "Morph_Poss1Pl"
+    },
+    {
+      "sentence": "هذه سياراتنا العائلية",
+      "label": "Morph_Poss1Pl"
+    },
+    {
+      "sentence": "هذا مشروعنا المشترك",
+      "label": "Morph_Poss1Pl"
+    },
+    {
+      "sentence": "هذه مدرستنا الثانوية",
+      "label": "Morph_Poss1Pl"
+    },
+    {
+      "sentence": "هذا فريقنا المتميز",
+      "label": "Morph_Poss1Pl"
+    },
+    {
+      "sentence": "هذه حديقتنا الخلفية",
+      "label": "Morph_Poss1Pl"
+    },
+    {
+      "sentence": "هذا مستقبلنا المشرق",
+      "label": "Morph_Poss1Pl"
+    },
+    {
+      "sentence": "هذه ذكرياتنا الجميلة",
+      "label": "Morph_Poss1Pl"
+    },
+    {
+      "sentence": "هذا وطننا الغالي",
+      "label": "Morph_Poss1Pl"
+    },
+    {
+      "sentence": "هذه قيمنا النبيلة",
+      "label": "Morph_Poss1Pl"
+    },
+    {
+      "sentence": "هذا كتابكم المفيد",
+      "label": "Morph_Poss2Pl"
+    },
+    {
+      "sentence": "هذه اقلامكم الملونة",
+      "label": "Morph_Poss2Pl"
+    },
+    {
+      "sentence": "هذه حقائبكم المدرسية",
+      "label": "Morph_Poss2Pl"
+    },
+    {
+      "sentence": "هذه هواتفكم الذكية",
+      "label": "Morph_Poss2Pl"
+    },
+    {
+      "sentence": "هذه منازلكم الانيقة",
+      "label": "Morph_Poss2Pl"
+    },
+    {
+      "sentence": "هذه سياراتكم الحديثة",
+      "label": "Morph_Poss2Pl"
+    },
+    {
+      "sentence": "هذه مشاريعكم الناجحة",
+      "label": "Morph_Poss2Pl"
+    },
+    {
+      "sentence": "هذه افكاركم المبتكرة",
+      "label": "Morph_Poss2Pl"
+    },
+    {
+      "sentence": "هذه جهودكم المثمرة",
+      "label": "Morph_Poss2Pl"
+    },
+    {
+      "sentence": "هذه ارائكم السديدة",
+      "label": "Morph_Poss2Pl"
+    },
+    {
+      "sentence": "هؤلاء رجال صادقون",
+      "label": "Morph_AdjPlMasc"
+    },
+    {
+      "sentence": "هؤلاء طلاب مجتهدون ونشيطون",
+      "label": "Morph_AdjPlMasc"
+    },
+    {
+      "sentence": "هؤلاء مهندسون بارعون ومبدعون",
+      "label": "Morph_AdjPlMasc"
+    },
+    {
+      "sentence": "هؤلاء اطباء ماهرون ورحيمون",
+      "label": "Morph_AdjPlMasc"
+    },
+    {
+      "sentence": "هؤلاء معلمون مخلصون ومتفانون",
+      "label": "Morph_AdjPlMasc"
+    },
+    {
+      "sentence": "هؤلاء فنانون موهوبون وملهمون",
+      "label": "Morph_AdjPlMasc"
+    },
+    {
+      "sentence": "هؤلاء كتاب مبدعون ومثقفون",
+      "label": "Morph_AdjPlMasc"
+    },
+    {
+      "sentence": "هؤلاء علماء بارزون ومكتشفون",
+      "label": "Morph_AdjPlMasc"
+    },
+    {
+      "sentence": "هؤلاء قادة حكماء وعادلون",
+      "label": "Morph_AdjPlMasc"
+    },
+    {
+      "sentence": "هؤلاء اصدقاء اوفياء ومخلصون",
+      "label": "Morph_AdjPlMasc"
+    },
+    {
+      "sentence": "هؤلاء نساء فاضلات",
+      "label": "Morph_AdjPlFem"
+    },
+    {
+      "sentence": "هؤلاء طالبات مجتهدات ومهذبات",
+      "label": "Morph_AdjPlFem"
+    },
+    {
+      "sentence": "هؤلاء ممرضات رحيمات ومتفانيات",
+      "label": "Morph_AdjPlFem"
+    },
+    {
+      "sentence": "هؤلاء معلمات قديرات ومربيات",
+      "label": "Morph_AdjPlFem"
+    },
+    {
+      "sentence": "هؤلاء فنانات مبدعات وانيقات",
+      "label": "Morph_AdjPlFem"
+    },
+    {
+      "sentence": "هؤلاء كاتبات لامعات ومؤثرات",
+      "label": "Morph_AdjPlFem"
+    },
+    {
+      "sentence": "هؤلاء عالمات باحثات ومجتهدات",
+      "label": "Morph_AdjPlFem"
+    },
+    {
+      "sentence": "هؤلاء قائدات ملهمات وقويات",
+      "label": "Morph_AdjPlFem"
+    },
+    {
+      "sentence": "هؤلاء صديقات مخلصات وودودات",
+      "label": "Morph_AdjPlFem"
+    },
+    {
+      "sentence": "هؤلاء امهات حنونات وعطوفات",
+      "label": "Morph_AdjPlFem"
+    },
+    {
+      "sentence": "كتبت الطالبة الدرس",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "اكل الولد التفاح",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "لعب الاطفال في الحديقة",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "سافر الاب الى الرياض",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "شرح المعلم الدرس بوضوح",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "بكى الطفل كثيرا",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "نجح الطالب في الاختبار",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "جاء الضيوف مبكرا",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "ساعدت الام ابنتها",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "فهم الجميع الشرح",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "اشترى الرجل الخبز",
+      "label": "Morph_Past"
+    },
+    {
+      "sentence": "تكتب الطالبة الدرس",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "ياكل الولد التفاح",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "يلعب الاطفال في الحديقة",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "يسافر الاب الى الرياض",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "يشرح المعلم الدرس",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "يبكي الطفل كثيرا",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "ينجح الطالب في الاختبار",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "يجيء الضيوف مبكرا",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "تساعد الام ابنتها",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "يفهم الجميع الشرح",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "يشتري الرجل الخبز",
+      "label": "Morph_Pres"
+    },
+    {
+      "sentence": "المهندسون يعملون في المشروع",
+      "label": "Morph_PlMasc"
+    },
+    {
+      "sentence": "الاطباء يعالجون المرضى",
+      "label": "Morph_PlMasc"
+    },
+    {
+      "sentence": "الطلاب يدرسون بجد",
+      "label": "Morph_PlMasc"
+    },
+    {
+      "sentence": "المعلمون يشرحون الدرس",
+      "label": "Morph_PlMasc"
+    },
+    {
+      "sentence": "اللاعبون يتدربون يوميا",
+      "label": "Morph_PlMasc"
+    },
+    {
+      "sentence": "الموظفون حضروا الاجتماع",
+      "label": "Morph_PlMasc"
+    },
+    {
+      "sentence": "المزارعون يحرثون الارض",
+      "label": "Morph_PlMasc"
+    },
+    {
+      "sentence": "الصيادون يصطادون السمك",
+      "label": "Morph_PlMasc"
+    },
+    {
+      "sentence": "الجنود يحمون الحدود",
+      "label": "Morph_PlMasc"
+    },
+    {
+      "sentence": "الطالبات يكتبن الواجب",
+      "label": "Morph_PlFem"
+    },
+    {
+      "sentence": "المعلمات يدرسن الرياضيات",
+      "label": "Morph_PlFem"
+    },
+    {
+      "sentence": "الممرضات يعملن في المستشفى",
+      "label": "Morph_PlFem"
+    },
+    {
+      "sentence": "الامهات يتحدثن عن الاطفال",
+      "label": "Morph_PlFem"
+    },
+    {
+      "sentence": "الفتيات يلعبن في الملعب",
+      "label": "Morph_PlFem"
+    },
+    {
+      "sentence": "الطبيبات يعالجن المريضات",
+      "label": "Morph_PlFem"
+    },
+    {
+      "sentence": "الموظفات يحضرن الاجتماع",
+      "label": "Morph_PlFem"
+    }
+  ],
+  "WordOrderMatched": [
+    {
+      "sentence": "الولد يقرا الكتاب",
+      "label": "WordOrder_SVO",
+      "pair_id": 0,
+      "source": "original"
+    },
+    {
+      "sentence": "البنت تشرب الحليب",
+      "label": "WordOrder_SVO",
+      "pair_id": 1,
+      "source": "original"
+    },
+    {
+      "sentence": "الطالب كتب الدرس",
+      "label": "WordOrder_SVO",
+      "pair_id": 2,
+      "source": "original"
+    },
+    {
+      "sentence": "المعلم شرح القاعدة",
+      "label": "WordOrder_SVO",
+      "pair_id": 3,
+      "source": "original"
+    },
+    {
+      "sentence": "الطبيب فحص المريض",
+      "label": "WordOrder_SVO",
+      "pair_id": 4,
+      "source": "original"
+    },
+    {
+      "sentence": "المهندس بنى البيت",
+      "label": "WordOrder_SVO",
+      "pair_id": 5,
+      "source": "original"
+    },
+    {
+      "sentence": "القطة اكلت السمك",
+      "label": "WordOrder_SVO",
+      "pair_id": 6,
+      "source": "original"
+    },
+    {
+      "sentence": "الطفل يلعب بالكرة",
+      "label": "WordOrder_SVO",
+      "pair_id": 7,
+      "source": "original"
+    },
+    {
+      "sentence": "الفلاح يزرع الارض",
+      "label": "WordOrder_SVO",
+      "pair_id": 8,
+      "source": "original"
+    },
+    {
+      "sentence": "العامل يبني الجدار",
+      "label": "WordOrder_SVO",
+      "pair_id": 9,
+      "source": "original"
+    },
+    {
+      "sentence": "الطائرة تطير عاليا",
+      "label": "WordOrder_SVO",
+      "pair_id": 10,
+      "source": "original"
+    },
+    {
+      "sentence": "الشمس تشرق صباحا",
+      "label": "WordOrder_SVO",
+      "pair_id": 11,
+      "source": "original"
+    },
+    {
+      "sentence": "الام تعد الطعام",
+      "label": "WordOrder_SVO",
+      "pair_id": 12,
+      "source": "original"
+    },
+    {
+      "sentence": "النهر يجري في الوادي",
+      "label": "WordOrder_SVO",
+      "pair_id": 13,
+      "source": "original"
+    },
+    {
+      "sentence": "الريح تهب بقوة",
+      "label": "WordOrder_SVO",
+      "pair_id": 14,
+      "source": "original"
+    },
+    {
+      "sentence": "يقرا الولد الكتاب",
+      "label": "WordOrder_VSO",
+      "pair_id": 30,
+      "source": "original"
+    },
+    {
+      "sentence": "تشرب البنت الحليب",
+      "label": "WordOrder_VSO",
+      "pair_id": 31,
+      "source": "original"
+    },
+    {
+      "sentence": "كتب الطالب الدرس",
+      "label": "WordOrder_VSO",
+      "pair_id": 32,
+      "source": "original"
+    },
+    {
+      "sentence": "شرح المعلم القاعدة",
+      "label": "WordOrder_VSO",
+      "pair_id": 33,
+      "source": "original"
+    },
+    {
+      "sentence": "فحص الطبيب المريض",
+      "label": "WordOrder_VSO",
+      "pair_id": 34,
+      "source": "original"
+    },
+    {
+      "sentence": "بنى المهندس البيت",
+      "label": "WordOrder_VSO",
+      "pair_id": 35,
+      "source": "original"
+    },
+    {
+      "sentence": "اكلت القطة السمك",
+      "label": "WordOrder_VSO",
+      "pair_id": 36,
+      "source": "original"
+    },
+    {
+      "sentence": "يلعب الطفل بالكرة",
+      "label": "WordOrder_VSO",
+      "pair_id": 37,
+      "source": "original"
+    },
+    {
+      "sentence": "يزرع الفلاح الارض",
+      "label": "WordOrder_VSO",
+      "pair_id": 38,
+      "source": "original"
+    },
+    {
+      "sentence": "يبني العامل الجدار",
+      "label": "WordOrder_VSO",
+      "pair_id": 39,
+      "source": "original"
+    },
+    {
+      "sentence": "تطير الطائرة عاليا",
+      "label": "WordOrder_VSO",
+      "pair_id": 0,
+      "source": "original"
+    },
+    {
+      "sentence": "تشرق الشمس صباحا",
+      "label": "WordOrder_VSO",
+      "pair_id": 1,
+      "source": "original"
+    },
+    {
+      "sentence": "تعد الام الطعام",
+      "label": "WordOrder_VSO",
+      "pair_id": 2,
+      "source": "original"
+    },
+    {
+      "sentence": "يجري النهر في الوادي",
+      "label": "WordOrder_VSO",
+      "pair_id": 3,
+      "source": "original"
+    },
+    {
+      "sentence": "تهب الريح بقوة",
+      "label": "WordOrder_VSO",
+      "pair_id": 4,
+      "source": "original"
+    },
+    {
+      "sentence": "الفتاة ترسم اللوحة",
+      "label": "WordOrder_SVO",
+      "pair_id": 5,
+      "source": "original"
+    },
+    {
+      "sentence": "ترسم الفتاة اللوحة",
+      "label": "WordOrder_VSO",
+      "pair_id": 6,
+      "source": "original"
+    },
+    {
+      "sentence": "الرجل يشتري الخبز",
+      "label": "WordOrder_SVO",
+      "pair_id": 7,
+      "source": "original"
+    },
+    {
+      "sentence": "يشتري الرجل الخبز",
+      "label": "WordOrder_VSO",
+      "pair_id": 8,
+      "source": "original"
+    },
+    {
+      "sentence": "الصبي يحمل الحقيبة",
+      "label": "WordOrder_SVO",
+      "pair_id": 9,
+      "source": "original"
+    },
+    {
+      "sentence": "يحمل الصبي الحقيبة",
+      "label": "WordOrder_VSO",
+      "pair_id": 10,
+      "source": "original"
+    },
+    {
+      "sentence": "الموظف ارسل الرسالة",
+      "label": "WordOrder_SVO",
+      "pair_id": 11,
+      "source": "original"
+    },
+    {
+      "sentence": "ارسل الموظف الرسالة",
+      "label": "WordOrder_VSO",
+      "pair_id": 12,
+      "source": "original"
+    },
+    {
+      "sentence": "الشاب قرا المجلة",
+      "label": "WordOrder_SVO",
+      "pair_id": 13,
+      "source": "original"
+    },
+    {
+      "sentence": "قرا الشاب المجلة",
+      "label": "WordOrder_VSO",
+      "pair_id": 14,
+      "source": "original"
+    },
+    {
+      "sentence": "البنت تغسل الصحون",
+      "label": "WordOrder_SVO",
+      "pair_id": 15,
+      "source": "original"
+    },
+    {
+      "sentence": "تغسل البنت الصحون",
+      "label": "WordOrder_VSO",
+      "pair_id": 16,
+      "source": "original"
+    },
+    {
+      "sentence": "المدير وقع الوثيقة",
+      "label": "WordOrder_SVO",
+      "pair_id": 17,
+      "source": "original"
+    },
+    {
+      "sentence": "وقع المدير الوثيقة",
+      "label": "WordOrder_VSO",
+      "pair_id": 18,
+      "source": "original"
+    },
+    {
+      "sentence": "الطفل يحب الحلوى",
+      "label": "WordOrder_SVO",
+      "pair_id": 19,
+      "source": "original"
+    },
+    {
+      "sentence": "يحب الطفل الحلوى",
+      "label": "WordOrder_VSO",
+      "pair_id": 20,
+      "source": "original"
+    },
+    {
+      "sentence": "الطالبة تدرس الفيزياء",
+      "label": "WordOrder_SVO",
+      "pair_id": 21,
+      "source": "original"
+    },
+    {
+      "sentence": "تدرس الطالبة الفيزياء",
+      "label": "WordOrder_VSO",
+      "pair_id": 22,
+      "source": "original"
+    },
+    {
+      "sentence": "الشرطي يحرس المبنى",
+      "label": "WordOrder_SVO",
+      "pair_id": 23,
+      "source": "original"
+    },
+    {
+      "sentence": "يحرس الشرطي المبنى",
+      "label": "WordOrder_VSO",
+      "pair_id": 24,
+      "source": "original"
+    },
+    {
+      "sentence": "المزارع يقطف الثمار",
+      "label": "WordOrder_SVO",
+      "pair_id": 25,
+      "source": "original"
+    },
+    {
+      "sentence": "يقطف المزارع الثمار",
+      "label": "WordOrder_VSO",
+      "pair_id": 26,
+      "source": "original"
+    },
+    {
+      "sentence": "العجوز يعبر الشارع",
+      "label": "WordOrder_SVO",
+      "pair_id": 27,
+      "source": "original"
+    },
+    {
+      "sentence": "يعبر العجوز الشارع",
+      "label": "WordOrder_VSO",
+      "pair_id": 28,
+      "source": "original"
+    },
+    {
+      "sentence": "الطباخ يعد الوجبة",
+      "label": "WordOrder_SVO",
+      "pair_id": 29,
+      "source": "original"
+    },
+    {
+      "sentence": "يعد الطباخ الوجبة",
+      "label": "WordOrder_VSO",
+      "pair_id": 30,
+      "source": "original"
+    },
+    {
+      "sentence": "الحارس يفتح الباب",
+      "label": "WordOrder_SVO",
+      "pair_id": 31,
+      "source": "original"
+    },
+    {
+      "sentence": "يفتح الحارس الباب",
+      "label": "WordOrder_VSO",
+      "pair_id": 32,
+      "source": "original"
+    },
+    {
+      "sentence": "السائق يوقف السيارة",
+      "label": "WordOrder_SVO",
+      "pair_id": 33,
+      "source": "original"
+    },
+    {
+      "sentence": "يوقف السائق السيارة",
+      "label": "WordOrder_VSO",
+      "pair_id": 34,
+      "source": "original"
+    },
+    {
+      "sentence": "المعلمة تصحح الاوراق",
+      "label": "WordOrder_SVO",
+      "pair_id": 35,
+      "source": "original"
+    },
+    {
+      "sentence": "تصحح المعلمة الاوراق",
+      "label": "WordOrder_VSO",
+      "pair_id": 36,
+      "source": "original"
+    },
+    {
+      "sentence": "الولد يطعم القطة",
+      "label": "WordOrder_SVO",
+      "pair_id": 37,
+      "source": "original"
+    },
+    {
+      "sentence": "يطعم الولد القطة",
+      "label": "WordOrder_VSO",
+      "pair_id": 38,
+      "source": "original"
+    },
+    {
+      "sentence": "الطبيبة تفحص الطفل",
+      "label": "WordOrder_SVO",
+      "pair_id": 39,
+      "source": "original"
+    },
+    {
+      "sentence": "تفحص الطبيبة الطفل",
+      "label": "WordOrder_VSO",
+      "pair_id": 0,
+      "source": "original"
+    },
+    {
+      "sentence": "الرياضي يحمل الكاس",
+      "label": "WordOrder_SVO",
+      "pair_id": 1,
+      "source": "original"
+    },
+    {
+      "sentence": "يحمل الرياضي الكاس",
+      "label": "WordOrder_VSO",
+      "pair_id": 2,
+      "source": "original"
+    },
+    {
+      "sentence": "الكاتب يكتب الرواية",
+      "label": "WordOrder_SVO",
+      "pair_id": 3,
+      "source": "original"
+    },
+    {
+      "sentence": "يكتب الكاتب الرواية",
+      "label": "WordOrder_VSO",
+      "pair_id": 4,
+      "source": "original"
+    },
+    {
+      "sentence": "الولد احضر الماء",
+      "label": "WordOrder_SVO",
+      "pair_id": 5,
+      "source": "original"
+    },
+    {
+      "sentence": "احضر الولد الماء",
+      "label": "WordOrder_VSO",
+      "pair_id": 6,
+      "source": "original"
+    },
+    {
+      "sentence": "الطالب حفظ القصيدة",
+      "label": "WordOrder_SVO",
+      "pair_id": 7,
+      "source": "original"
+    },
+    {
+      "sentence": "حفظ الطالب القصيدة",
+      "label": "WordOrder_VSO",
+      "pair_id": 8,
+      "source": "original"
+    },
+    {
+      "sentence": "البنت رسمت الصورة",
+      "label": "WordOrder_SVO",
+      "pair_id": 9,
+      "source": "original"
+    },
+    {
+      "sentence": "رسمت البنت الصورة",
+      "label": "WordOrder_VSO",
+      "pair_id": 10,
+      "source": "original"
+    },
+    {
+      "sentence": "المهندسة صممت المشروع",
+      "label": "WordOrder_SVO",
+      "pair_id": 11,
+      "source": "original"
+    },
+    {
+      "sentence": "صممت المهندسة المشروع",
+      "label": "WordOrder_VSO",
+      "pair_id": 12,
+      "source": "original"
+    },
+    {
+      "sentence": "الطفل تناول الدواء",
+      "label": "WordOrder_SVO",
+      "pair_id": 13,
+      "source": "original"
+    },
+    {
+      "sentence": "تناول الطفل الدواء",
+      "label": "WordOrder_VSO",
+      "pair_id": 14,
+      "source": "original"
+    },
+    {
+      "sentence": "الرجل يفتح الباب",
+      "label": "WordOrder_SVO",
+      "pair_id": 41,
+      "source": "generated"
+    },
+    {
+      "sentence": "يفتح الرجل الباب",
+      "label": "WordOrder_VSO",
+      "pair_id": 41,
+      "source": "generated"
+    },
+    {
+      "sentence": "المراة غسلت الثياب",
+      "label": "WordOrder_SVO",
+      "pair_id": 42,
+      "source": "generated"
+    },
+    {
+      "sentence": "غسلت المراة الثياب",
+      "label": "WordOrder_VSO",
+      "pair_id": 42,
+      "source": "generated"
+    },
+    {
+      "sentence": "الولد يكسر الزجاج",
+      "label": "WordOrder_SVO",
+      "pair_id": 43,
+      "source": "generated"
+    },
+    {
+      "sentence": "يكسر الولد الزجاج",
+      "label": "WordOrder_VSO",
+      "pair_id": 43,
+      "source": "generated"
+    },
+    {
+      "sentence": "البنت رسمت الصورة",
+      "label": "WordOrder_SVO",
+      "pair_id": 44,
+      "source": "generated"
+    },
+    {
+      "sentence": "رسمت البنت الصورة",
+      "label": "WordOrder_VSO",
+      "pair_id": 44,
+      "source": "generated"
+    },
+    {
+      "sentence": "الاستاذ يصحح الواجب",
+      "label": "WordOrder_SVO",
+      "pair_id": 45,
+      "source": "generated"
+    },
+    {
+      "sentence": "يصحح الاستاذ الواجب",
+      "label": "WordOrder_VSO",
+      "pair_id": 45,
+      "source": "generated"
+    },
+    {
+      "sentence": "الطالبة حلت المسالة",
+      "label": "WordOrder_SVO",
+      "pair_id": 46,
+      "source": "generated"
+    },
+    {
+      "sentence": "حلت الطالبة المسالة",
+      "label": "WordOrder_VSO",
+      "pair_id": 46,
+      "source": "generated"
+    },
+    {
+      "sentence": "الشرطي يمسك اللص",
+      "label": "WordOrder_SVO",
+      "pair_id": 47,
+      "source": "generated"
+    },
+    {
+      "sentence": "يمسك الشرطي اللص",
+      "label": "WordOrder_VSO",
+      "pair_id": 47,
+      "source": "generated"
+    },
+    {
+      "sentence": "الطفلة لبست الفستان",
+      "label": "WordOrder_SVO",
+      "pair_id": 48,
+      "source": "generated"
+    },
+    {
+      "sentence": "لبست الطفلة الفستان",
+      "label": "WordOrder_VSO",
+      "pair_id": 48,
+      "source": "generated"
+    },
+    {
+      "sentence": "المدير يوقع العقد",
+      "label": "WordOrder_SVO",
+      "pair_id": 49,
+      "source": "generated"
+    },
+    {
+      "sentence": "يوقع المدير العقد",
+      "label": "WordOrder_VSO",
+      "pair_id": 49,
+      "source": "generated"
+    },
+    {
+      "sentence": "الممرضة ضمدت الجرح",
+      "label": "WordOrder_SVO",
+      "pair_id": 50,
+      "source": "generated"
+    },
+    {
+      "sentence": "ضمدت الممرضة الجرح",
+      "label": "WordOrder_VSO",
+      "pair_id": 50,
+      "source": "generated"
+    },
+    {
+      "sentence": "الصياد يصيد السمك",
+      "label": "WordOrder_SVO",
+      "pair_id": 51,
+      "source": "generated"
+    },
+    {
+      "sentence": "يصيد الصياد السمك",
+      "label": "WordOrder_VSO",
+      "pair_id": 51,
+      "source": "generated"
+    },
+    {
+      "sentence": "الطباخ طبخ الطعام",
+      "label": "WordOrder_SVO",
+      "pair_id": 52,
+      "source": "generated"
+    },
+    {
+      "sentence": "طبخ الطباخ الطعام",
+      "label": "WordOrder_VSO",
+      "pair_id": 52,
+      "source": "generated"
+    },
+    {
+      "sentence": "الحارس يفتش الحقيبة",
+      "label": "WordOrder_SVO",
+      "pair_id": 53,
+      "source": "generated"
+    },
+    {
+      "sentence": "يفتش الحارس الحقيبة",
+      "label": "WordOrder_VSO",
+      "pair_id": 53,
+      "source": "generated"
+    },
+    {
+      "sentence": "العالم اكتشف الحقيقة",
+      "label": "WordOrder_SVO",
+      "pair_id": 54,
+      "source": "generated"
+    },
+    {
+      "sentence": "اكتشف العالم الحقيقة",
+      "label": "WordOrder_VSO",
+      "pair_id": 54,
+      "source": "generated"
+    },
+    {
+      "sentence": "الراعي يرعى الغنم",
+      "label": "WordOrder_SVO",
+      "pair_id": 55,
+      "source": "generated"
+    },
+    {
+      "sentence": "يرعى الراعي الغنم",
+      "label": "WordOrder_VSO",
+      "pair_id": 55,
+      "source": "generated"
+    },
+    {
+      "sentence": "الجندي حمى المدينة",
+      "label": "WordOrder_SVO",
+      "pair_id": 56,
+      "source": "generated"
+    },
+    {
+      "sentence": "حمى الجندي المدينة",
+      "label": "WordOrder_VSO",
+      "pair_id": 56,
+      "source": "generated"
+    },
+    {
+      "sentence": "السائق يوقف السيارة",
+      "label": "WordOrder_SVO",
+      "pair_id": 57,
+      "source": "generated"
+    },
+    {
+      "sentence": "يوقف السائق السيارة",
+      "label": "WordOrder_VSO",
+      "pair_id": 57,
+      "source": "generated"
+    },
+    {
+      "sentence": "المحامي دافع الموكل",
+      "label": "WordOrder_SVO",
+      "pair_id": 58,
+      "source": "generated"
+    },
+    {
+      "sentence": "دافع المحامي الموكل",
+      "label": "WordOrder_VSO",
+      "pair_id": 58,
+      "source": "generated"
+    },
+    {
+      "sentence": "الكاتب ينشر الكتاب",
+      "label": "WordOrder_SVO",
+      "pair_id": 59,
+      "source": "generated"
+    },
+    {
+      "sentence": "ينشر الكاتب الكتاب",
+      "label": "WordOrder_VSO",
+      "pair_id": 59,
+      "source": "generated"
+    },
+    {
+      "sentence": "الطيار قاد الطائرة",
+      "label": "WordOrder_SVO",
+      "pair_id": 60,
+      "source": "generated"
+    },
+    {
+      "sentence": "قاد الطيار الطائرة",
+      "label": "WordOrder_VSO",
+      "pair_id": 60,
+      "source": "generated"
+    }
+  ],
+  "TenseBinary": [
+    {
+      "sentence": "كتب الطالب الدرس",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "يكتب الطالب الدرس",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "قرات البنت القصة",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "تقرا البنت القصة",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "سافر الرجل الى المدينة",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "يسافر الرجل الى المدينة",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "شرب الطفل الحليب",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "يشرب الطفل الحليب",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "اكلت القطة السمك",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "تاكل القطة السمك",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "فتح المعلم الكتاب",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "يفتح المعلم الكتاب",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "رسم الولد الصورة",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "يرسم الولد الصورة",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "غسلت المراة الملابس",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "تغسل المراة الملابس",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "بنى المهندس البيت",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "يبني المهندس البيت",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "فحص الطبيب المريض",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "يفحص الطبيب المريض",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "شرح الاستاذ القاعدة",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "يشرح الاستاذ القاعدة",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "لعبت البنت بالدمية",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "تلعب البنت بالدمية",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "ركب الفارس الحصان",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "يركب الفارس الحصان",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "صاد الصياد السمك",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "يصيد الصياد السمك",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "زرع الفلاح القمح",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "يزرع الفلاح القمح",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "ضرب اللاعب الكرة",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "يضرب اللاعب الكرة",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "حمل العامل الصندوق",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "يحمل العامل الصندوق",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "قادت المراة السيارة",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "تقود المراة السيارة",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "دخل الطالب الفصل",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "يدخل الطالب الفصل",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "خرجت المعلمة من الغرفة",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "تخرج المعلمة من الغرفة",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "اشترى الرجل الخبز",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "يشتري الرجل الخبز",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "باعت المراة الثياب",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "تبيع المراة الثياب",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "حل الطالب المسالة",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "يحل الطالب المسالة",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "نظفت الخادمة البيت",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "تنظف الخادمة البيت",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "طبخ الطباخ الطعام",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "يطبخ الطباخ الطعام",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "كسر الولد الزجاج",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "يكسر الولد الزجاج",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "فتشت الشرطية الحقيبة",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "تفتش الشرطية الحقيبة",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "رفع الجندي العلم",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "يرفع الجندي العلم",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "خاط الخياط الثوب",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "يخيط الخياط الثوب",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "مسح الولد السبورة",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "يمسح الولد السبورة",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "فتحت البنت النافذة",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "تفتح البنت النافذة",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "اغلق الحارس الباب",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "يغلق الحارس الباب",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "حمت الامهات الاطفال",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "تحمي الامهات الاطفال",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "اوقف السائق السيارة",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "يوقف السائق السيارة",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "نشر الكاتب المقال",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "ينشر الكاتب المقال",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "حضر المدير الاجتماع",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "يحضر المدير الاجتماع",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "غادر الطيار المطار",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "يغادر الطيار المطار",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "درست الطالبة الفيزياء",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "تدرس الطالبة الفيزياء",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "ربح الفريق المباراة",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "يربح الفريق المباراة",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "خسرت البنت اللعبة",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "تخسر البنت اللعبة",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "وصل القطار المحطة",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "يصل القطار المحطة",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "غادرت الطائرة المطار",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "تغادر الطائرة المطار",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "فاز الرياضي بالميدالية",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "يفوز الرياضي بالميدالية",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "اكمل الطالب الواجب",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "يكمل الطالب الواجب",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "تركت البنت المدرسة",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "تترك البنت المدرسة",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "زار الرجل العائلة",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "يزور الرجل العائلة",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "استقبلت المراة الضيوف",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "تستقبل المراة الضيوف",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "ادار المدير الشركة",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "يدير المدير الشركة",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "اعد الطباخ العشاء",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "يعد الطباخ العشاء",
+      "label": "Tense_Pres"
+    },
+    {
+      "sentence": "حكم القاضي بالبراءة",
+      "label": "Tense_Past"
+    },
+    {
+      "sentence": "يحكم القاضي بالبراءة",
+      "label": "Tense_Pres"
+    }
+  ],
+  "WordSenseDisambiguation": [
+    {
+      "sentence": "الرجل فتح الباب",
+      "label": "WSD_فتح_open",
+      "verb": "فتح",
+      "sense": "open"
+    },
+    {
+      "sentence": "الولد فتح الصندوق",
+      "label": "WSD_فتح_open",
+      "verb": "فتح",
+      "sense": "open"
+    },
+    {
+      "sentence": "الطالب فتح الكتاب",
+      "label": "WSD_فتح_open",
+      "verb": "فتح",
+      "sense": "open"
+    },
+    {
+      "sentence": "المدير فتح الملف",
+      "label": "WSD_فتح_open",
+      "verb": "فتح",
+      "sense": "open"
+    },
+    {
+      "sentence": "الطبيب فتح الحقيبة",
+      "label": "WSD_فتح_open",
+      "verb": "فتح",
+      "sense": "open"
+    },
+    {
+      "sentence": "البائع فتح المتجر",
+      "label": "WSD_فتح_open",
+      "verb": "فتح",
+      "sense": "open"
+    },
+    {
+      "sentence": "العامل فتح النافذة",
+      "label": "WSD_فتح_open",
+      "verb": "فتح",
+      "sense": "open"
+    },
+    {
+      "sentence": "الطفل فتح العلبة",
+      "label": "WSD_فتح_open",
+      "verb": "فتح",
+      "sense": "open"
+    },
+    {
+      "sentence": "المراة فتحت الباب",
+      "label": "WSD_فتح_open",
+      "verb": "فتح",
+      "sense": "open"
+    },
+    {
+      "sentence": "الاستاذ فتح الدفتر",
+      "label": "WSD_فتح_open",
+      "verb": "فتح",
+      "sense": "open"
+    },
+    {
+      "sentence": "السائق فتح الشنطة",
+      "label": "WSD_فتح_open",
+      "verb": "فتح",
+      "sense": "open"
+    },
+    {
+      "sentence": "المهندس فتح الحاسوب",
+      "label": "WSD_فتح_open",
+      "verb": "فتح",
+      "sense": "open"
+    },
+    {
+      "sentence": "الجندي فتح الخزانة",
+      "label": "WSD_فتح_open",
+      "verb": "فتح",
+      "sense": "open"
+    },
+    {
+      "sentence": "الطباخ فتح الوعاء",
+      "label": "WSD_فتح_open",
+      "verb": "فتح",
+      "sense": "open"
+    },
+    {
+      "sentence": "التاجر فتح الصندوق",
+      "label": "WSD_فتح_open",
+      "verb": "فتح",
+      "sense": "open"
+    },
+    {
+      "sentence": "الرجل يفتح الباب",
+      "label": "WSD_فتح_open",
+      "verb": "فتح",
+      "sense": "open"
+    },
+    {
+      "sentence": "الطالب يفتح الكتاب",
+      "label": "WSD_فتح_open",
+      "verb": "فتح",
+      "sense": "open"
+    },
+    {
+      "sentence": "المراة تفتح النافذة",
+      "label": "WSD_فتح_open",
+      "verb": "فتح",
+      "sense": "open"
+    },
+    {
+      "sentence": "العامل يفتح العلبة",
+      "label": "WSD_فتح_open",
+      "verb": "فتح",
+      "sense": "open"
+    },
+    {
+      "sentence": "الولد يفتح الحقيبة",
+      "label": "WSD_فتح_open",
+      "verb": "فتح",
+      "sense": "open"
+    },
+    {
+      "sentence": "الجيش فتح المدينة",
+      "label": "WSD_فتح_conquer",
+      "verb": "فتح",
+      "sense": "conquer"
+    },
+    {
+      "sentence": "القائد فتح البلاد",
+      "label": "WSD_فتح_conquer",
+      "verb": "فتح",
+      "sense": "conquer"
+    },
+    {
+      "sentence": "المحارب فتح الحصن",
+      "label": "WSD_فتح_conquer",
+      "verb": "فتح",
+      "sense": "conquer"
+    },
+    {
+      "sentence": "الملك فتح المنطقة",
+      "label": "WSD_فتح_conquer",
+      "verb": "فتح",
+      "sense": "conquer"
+    },
+    {
+      "sentence": "الجنود فتحوا الارض",
+      "label": "WSD_فتح_conquer",
+      "verb": "فتح",
+      "sense": "conquer"
+    },
+    {
+      "sentence": "الفاتح فتح القلعة",
+      "label": "WSD_فتح_conquer",
+      "verb": "فتح",
+      "sense": "conquer"
+    },
+    {
+      "sentence": "الامير فتح الاقليم",
+      "label": "WSD_فتح_conquer",
+      "verb": "فتح",
+      "sense": "conquer"
+    },
+    {
+      "sentence": "الجيش فتح البلدة",
+      "label": "WSD_فتح_conquer",
+      "verb": "فتح",
+      "sense": "conquer"
+    },
+    {
+      "sentence": "القائد فتح الميناء",
+      "label": "WSD_فتح_conquer",
+      "verb": "فتح",
+      "sense": "conquer"
+    },
+    {
+      "sentence": "الغازي فتح الاقليم",
+      "label": "WSD_فتح_conquer",
+      "verb": "فتح",
+      "sense": "conquer"
+    },
+    {
+      "sentence": "العسكر فتح القلعة",
+      "label": "WSD_فتح_conquer",
+      "verb": "فتح",
+      "sense": "conquer"
+    },
+    {
+      "sentence": "المقاتل فتح المدينة",
+      "label": "WSD_فتح_conquer",
+      "verb": "فتح",
+      "sense": "conquer"
+    },
+    {
+      "sentence": "السلطان فتح البلاد",
+      "label": "WSD_فتح_conquer",
+      "verb": "فتح",
+      "sense": "conquer"
+    },
+    {
+      "sentence": "الجيش يفتح المدينة",
+      "label": "WSD_فتح_conquer",
+      "verb": "فتح",
+      "sense": "conquer"
+    },
+    {
+      "sentence": "القائد يفتح البلاد",
+      "label": "WSD_فتح_conquer",
+      "verb": "فتح",
+      "sense": "conquer"
+    },
+    {
+      "sentence": "المحارب يفتح الحصن",
+      "label": "WSD_فتح_conquer",
+      "verb": "فتح",
+      "sense": "conquer"
+    },
+    {
+      "sentence": "الملك يفتح الارض",
+      "label": "WSD_فتح_conquer",
+      "verb": "فتح",
+      "sense": "conquer"
+    },
+    {
+      "sentence": "الجنود يفتحون الحصن",
+      "label": "WSD_فتح_conquer",
+      "verb": "فتح",
+      "sense": "conquer"
+    },
+    {
+      "sentence": "الامير يفتح المنطقة",
+      "label": "WSD_فتح_conquer",
+      "verb": "فتح",
+      "sense": "conquer"
+    },
+    {
+      "sentence": "القوات فتحت الارض",
+      "label": "WSD_فتح_conquer",
+      "verb": "فتح",
+      "sense": "conquer"
+    },
+    {
+      "sentence": "العامل رفع الصندوق",
+      "label": "WSD_رفع_lift",
+      "verb": "رفع",
+      "sense": "lift"
+    },
+    {
+      "sentence": "الولد رفع الحجر",
+      "label": "WSD_رفع_lift",
+      "verb": "رفع",
+      "sense": "lift"
+    },
+    {
+      "sentence": "الجندي رفع السلاح",
+      "label": "WSD_رفع_lift",
+      "verb": "رفع",
+      "sense": "lift"
+    },
+    {
+      "sentence": "الرياضي رفع الثقل",
+      "label": "WSD_رفع_lift",
+      "verb": "رفع",
+      "sense": "lift"
+    },
+    {
+      "sentence": "البناء رفع الطوب",
+      "label": "WSD_رفع_lift",
+      "verb": "رفع",
+      "sense": "lift"
+    },
+    {
+      "sentence": "الطفل رفع الكرة",
+      "label": "WSD_رفع_lift",
+      "verb": "رفع",
+      "sense": "lift"
+    },
+    {
+      "sentence": "السائق رفع الحقيبة",
+      "label": "WSD_رفع_lift",
+      "verb": "رفع",
+      "sense": "lift"
+    },
+    {
+      "sentence": "الطباخ رفع القدر",
+      "label": "WSD_رفع_lift",
+      "verb": "رفع",
+      "sense": "lift"
+    },
+    {
+      "sentence": "الحارس رفع السلاح",
+      "label": "WSD_رفع_lift",
+      "verb": "رفع",
+      "sense": "lift"
+    },
+    {
+      "sentence": "المهندس رفع المعدات",
+      "label": "WSD_رفع_lift",
+      "verb": "رفع",
+      "sense": "lift"
+    },
+    {
+      "sentence": "المزارع رفع الحمل",
+      "label": "WSD_رفع_lift",
+      "verb": "رفع",
+      "sense": "lift"
+    },
+    {
+      "sentence": "الطالب رفع الكتاب",
+      "label": "WSD_رفع_lift",
+      "verb": "رفع",
+      "sense": "lift"
+    },
+    {
+      "sentence": "العمال رفعوا العمود",
+      "label": "WSD_رفع_lift",
+      "verb": "رفع",
+      "sense": "lift"
+    },
+    {
+      "sentence": "الفلاح رفع المحصول",
+      "label": "WSD_رفع_lift",
+      "verb": "رفع",
+      "sense": "lift"
+    },
+    {
+      "sentence": "العامل يرفع الصندوق",
+      "label": "WSD_رفع_lift",
+      "verb": "رفع",
+      "sense": "lift"
+    },
+    {
+      "sentence": "الولد يرفع الكتاب",
+      "label": "WSD_رفع_lift",
+      "verb": "رفع",
+      "sense": "lift"
+    },
+    {
+      "sentence": "الجندي يرفع الحجر",
+      "label": "WSD_رفع_lift",
+      "verb": "رفع",
+      "sense": "lift"
+    },
+    {
+      "sentence": "الرياضي يرفع الوزن",
+      "label": "WSD_رفع_lift",
+      "verb": "رفع",
+      "sense": "lift"
+    },
+    {
+      "sentence": "الطفل يرفع اللعبة",
+      "label": "WSD_رفع_lift",
+      "verb": "رفع",
+      "sense": "lift"
+    },
+    {
+      "sentence": "البناء يرفع الاعمدة",
+      "label": "WSD_رفع_lift",
+      "verb": "رفع",
+      "sense": "lift"
+    },
+    {
+      "sentence": "المحامي رفع الشكوى",
+      "label": "WSD_رفع_file",
+      "verb": "رفع",
+      "sense": "file"
+    },
+    {
+      "sentence": "المواطن رفع القضية",
+      "label": "WSD_رفع_file",
+      "verb": "رفع",
+      "sense": "file"
+    },
+    {
+      "sentence": "الموظف رفع التقرير",
+      "label": "WSD_رفع_file",
+      "verb": "رفع",
+      "sense": "file"
+    },
+    {
+      "sentence": "المدير رفع الطلب",
+      "label": "WSD_رفع_file",
+      "verb": "رفع",
+      "sense": "file"
+    },
+    {
+      "sentence": "الطالب رفع الاعتراض",
+      "label": "WSD_رفع_file",
+      "verb": "رفع",
+      "sense": "file"
+    },
+    {
+      "sentence": "المحكوم رفع الاستئناف",
+      "label": "WSD_رفع_file",
+      "verb": "رفع",
+      "sense": "file"
+    },
+    {
+      "sentence": "المسؤول رفع التوصية",
+      "label": "WSD_رفع_file",
+      "verb": "رفع",
+      "sense": "file"
+    },
+    {
+      "sentence": "الصحفي رفع البلاغ",
+      "label": "WSD_رفع_file",
+      "verb": "رفع",
+      "sense": "file"
+    },
+    {
+      "sentence": "النائب رفع الاقتراح",
+      "label": "WSD_رفع_file",
+      "verb": "رفع",
+      "sense": "file"
+    },
+    {
+      "sentence": "المستثمر رفع العريضة",
+      "label": "WSD_رفع_file",
+      "verb": "رفع",
+      "sense": "file"
+    },
+    {
+      "sentence": "الشركة رفعت الدعوى",
+      "label": "WSD_رفع_file",
+      "verb": "رفع",
+      "sense": "file"
+    },
+    {
+      "sentence": "المعلم رفع الشكوى",
+      "label": "WSD_رفع_file",
+      "verb": "رفع",
+      "sense": "file"
+    },
+    {
+      "sentence": "المحامي يرفع الشكوى",
+      "label": "WSD_رفع_file",
+      "verb": "رفع",
+      "sense": "file"
+    },
+    {
+      "sentence": "المواطن يرفع القضية",
+      "label": "WSD_رفع_file",
+      "verb": "رفع",
+      "sense": "file"
+    },
+    {
+      "sentence": "الموظف يرفع التقرير",
+      "label": "WSD_رفع_file",
+      "verb": "رفع",
+      "sense": "file"
+    },
+    {
+      "sentence": "المدير يرفع الطلب",
+      "label": "WSD_رفع_file",
+      "verb": "رفع",
+      "sense": "file"
+    },
+    {
+      "sentence": "الطالب يرفع الطعن",
+      "label": "WSD_رفع_file",
+      "verb": "رفع",
+      "sense": "file"
+    },
+    {
+      "sentence": "المحكوم يرفع الطعن",
+      "label": "WSD_رفع_file",
+      "verb": "رفع",
+      "sense": "file"
+    },
+    {
+      "sentence": "المسؤول يرفع الاقتراح",
+      "label": "WSD_رفع_file",
+      "verb": "رفع",
+      "sense": "file"
+    },
+    {
+      "sentence": "المدعي رفع الاتهام",
+      "label": "WSD_رفع_file",
+      "verb": "رفع",
+      "sense": "file"
+    },
+    {
+      "sentence": "النجار قطع الخشب",
+      "label": "WSD_قطع_cut",
+      "verb": "قطع",
+      "sense": "cut"
+    },
+    {
+      "sentence": "الطباخ قطع اللحم",
+      "label": "WSD_قطع_cut",
+      "verb": "قطع",
+      "sense": "cut"
+    },
+    {
+      "sentence": "الحلاق قطع الشعر",
+      "label": "WSD_قطع_cut",
+      "verb": "قطع",
+      "sense": "cut"
+    },
+    {
+      "sentence": "الجراح قطع الورم",
+      "label": "WSD_قطع_cut",
+      "verb": "قطع",
+      "sense": "cut"
+    },
+    {
+      "sentence": "الفلاح قطع الزرع",
+      "label": "WSD_قطع_cut",
+      "verb": "قطع",
+      "sense": "cut"
+    },
+    {
+      "sentence": "العامل قطع الحبل",
+      "label": "WSD_قطع_cut",
+      "verb": "قطع",
+      "sense": "cut"
+    },
+    {
+      "sentence": "الحداد قطع المعدن",
+      "label": "WSD_قطع_cut",
+      "verb": "قطع",
+      "sense": "cut"
+    },
+    {
+      "sentence": "الخياط قطع القماش",
+      "label": "WSD_قطع_cut",
+      "verb": "قطع",
+      "sense": "cut"
+    },
+    {
+      "sentence": "الطفل قطع الورقة",
+      "label": "WSD_قطع_cut",
+      "verb": "قطع",
+      "sense": "cut"
+    },
+    {
+      "sentence": "المزارع قطع الاشجار",
+      "label": "WSD_قطع_cut",
+      "verb": "قطع",
+      "sense": "cut"
+    },
+    {
+      "sentence": "الصياد قطع الخيط",
+      "label": "WSD_قطع_cut",
+      "verb": "قطع",
+      "sense": "cut"
+    },
+    {
+      "sentence": "البناء قطع الاسمنت",
+      "label": "WSD_قطع_cut",
+      "verb": "قطع",
+      "sense": "cut"
+    },
+    {
+      "sentence": "النجار يقطع الخشب",
+      "label": "WSD_قطع_cut",
+      "verb": "قطع",
+      "sense": "cut"
+    },
+    {
+      "sentence": "الطباخ يقطع اللحم",
+      "label": "WSD_قطع_cut",
+      "verb": "قطع",
+      "sense": "cut"
+    },
+    {
+      "sentence": "الحلاق يقطع الشعر",
+      "label": "WSD_قطع_cut",
+      "verb": "قطع",
+      "sense": "cut"
+    },
+    {
+      "sentence": "الجراح يقطع الجلد",
+      "label": "WSD_قطع_cut",
+      "verb": "قطع",
+      "sense": "cut"
+    },
+    {
+      "sentence": "العامل يقطع الاسلاك",
+      "label": "WSD_قطع_cut",
+      "verb": "قطع",
+      "sense": "cut"
+    },
+    {
+      "sentence": "الفلاح يقطع الحشائش",
+      "label": "WSD_قطع_cut",
+      "verb": "قطع",
+      "sense": "cut"
+    },
+    {
+      "sentence": "الخياط يقطع الجلد",
+      "label": "WSD_قطع_cut",
+      "verb": "قطع",
+      "sense": "cut"
+    },
+    {
+      "sentence": "الحداد يقطع الاسلاك",
+      "label": "WSD_قطع_cut",
+      "verb": "قطع",
+      "sense": "cut"
+    },
+    {
+      "sentence": "الرجل قطع العلاقة",
+      "label": "WSD_قطع_sever",
+      "verb": "قطع",
+      "sense": "sever"
+    },
+    {
+      "sentence": "المسافر قطع المسافة",
+      "label": "WSD_قطع_sever",
+      "verb": "قطع",
+      "sense": "sever"
+    },
+    {
+      "sentence": "الرياضي قطع الشوط",
+      "label": "WSD_قطع_sever",
+      "verb": "قطع",
+      "sense": "sever"
+    },
+    {
+      "sentence": "الطالب قطع التعهد",
+      "label": "WSD_قطع_sever",
+      "verb": "قطع",
+      "sense": "sever"
+    },
+    {
+      "sentence": "المدير قطع التواصل",
+      "label": "WSD_قطع_sever",
+      "verb": "قطع",
+      "sense": "sever"
+    },
+    {
+      "sentence": "المسؤول قطع العقد",
+      "label": "WSD_قطع_sever",
+      "verb": "قطع",
+      "sense": "sever"
+    },
+    {
+      "sentence": "السياسي قطع الصمت",
+      "label": "WSD_قطع_sever",
+      "verb": "قطع",
+      "sense": "sever"
+    },
+    {
+      "sentence": "الجيش قطع الامداد",
+      "label": "WSD_قطع_sever",
+      "verb": "قطع",
+      "sense": "sever"
+    },
+    {
+      "sentence": "الزعيم قطع الصلة",
+      "label": "WSD_قطع_sever",
+      "verb": "قطع",
+      "sense": "sever"
+    },
+    {
+      "sentence": "المواطن قطع الصمت",
+      "label": "WSD_قطع_sever",
+      "verb": "قطع",
+      "sense": "sever"
+    },
+    {
+      "sentence": "النائب قطع التواصل",
+      "label": "WSD_قطع_sever",
+      "verb": "قطع",
+      "sense": "sever"
+    },
+    {
+      "sentence": "اللاعب قطع الشوط",
+      "label": "WSD_قطع_sever",
+      "verb": "قطع",
+      "sense": "sever"
+    },
+    {
+      "sentence": "الرجل يقطع العلاقة",
+      "label": "WSD_قطع_sever",
+      "verb": "قطع",
+      "sense": "sever"
+    },
+    {
+      "sentence": "المسافر يقطع المسافة",
+      "label": "WSD_قطع_sever",
+      "verb": "قطع",
+      "sense": "sever"
+    },
+    {
+      "sentence": "الطالب يقطع التعهد",
+      "label": "WSD_قطع_sever",
+      "verb": "قطع",
+      "sense": "sever"
+    },
+    {
+      "sentence": "المدير يقطع التواصل",
+      "label": "WSD_قطع_sever",
+      "verb": "قطع",
+      "sense": "sever"
+    },
+    {
+      "sentence": "السياسي يقطع الصلة",
+      "label": "WSD_قطع_sever",
+      "verb": "قطع",
+      "sense": "sever"
+    },
+    {
+      "sentence": "المسؤول يقطع العقد",
+      "label": "WSD_قطع_sever",
+      "verb": "قطع",
+      "sense": "sever"
+    },
+    {
+      "sentence": "الزعيم يقطع الصمت",
+      "label": "WSD_قطع_sever",
+      "verb": "قطع",
+      "sense": "sever"
+    },
+    {
+      "sentence": "الشركة قطعت العلاقة",
+      "label": "WSD_قطع_sever",
+      "verb": "قطع",
+      "sense": "sever"
+    },
+    {
+      "sentence": "الجندي ضرب العدو",
+      "label": "WSD_ضرب_strike",
+      "verb": "ضرب",
+      "sense": "strike"
+    },
+    {
+      "sentence": "الرجل ضرب الكلب",
+      "label": "WSD_ضرب_strike",
+      "verb": "ضرب",
+      "sense": "strike"
+    },
+    {
+      "sentence": "الطفل ضرب الكرة",
+      "label": "WSD_ضرب_strike",
+      "verb": "ضرب",
+      "sense": "strike"
+    },
+    {
+      "sentence": "اللاعب ضرب الكرة",
+      "label": "WSD_ضرب_strike",
+      "verb": "ضرب",
+      "sense": "strike"
+    },
+    {
+      "sentence": "الحارس ضرب المهاجم",
+      "label": "WSD_ضرب_strike",
+      "verb": "ضرب",
+      "sense": "strike"
+    },
+    {
+      "sentence": "الطباخ ضرب اللحم",
+      "label": "WSD_ضرب_strike",
+      "verb": "ضرب",
+      "sense": "strike"
+    },
+    {
+      "sentence": "الحداد ضرب المعدن",
+      "label": "WSD_ضرب_strike",
+      "verb": "ضرب",
+      "sense": "strike"
+    },
+    {
+      "sentence": "المزارع ضرب الارض",
+      "label": "WSD_ضرب_strike",
+      "verb": "ضرب",
+      "sense": "strike"
+    },
+    {
+      "sentence": "الولد ضرب الباب",
+      "label": "WSD_ضرب_strike",
+      "verb": "ضرب",
+      "sense": "strike"
+    },
+    {
+      "sentence": "الرياضي ضرب الهدف",
+      "label": "WSD_ضرب_strike",
+      "verb": "ضرب",
+      "sense": "strike"
+    },
+    {
+      "sentence": "الجندي يضرب العدو",
+      "label": "WSD_ضرب_strike",
+      "verb": "ضرب",
+      "sense": "strike"
+    },
+    {
+      "sentence": "الرجل يضرب الكلب",
+      "label": "WSD_ضرب_strike",
+      "verb": "ضرب",
+      "sense": "strike"
+    },
+    {
+      "sentence": "الطفل يضرب الكرة",
+      "label": "WSD_ضرب_strike",
+      "verb": "ضرب",
+      "sense": "strike"
+    },
+    {
+      "sentence": "اللاعب يضرب الكرة",
+      "label": "WSD_ضرب_strike",
+      "verb": "ضرب",
+      "sense": "strike"
+    },
+    {
+      "sentence": "الحداد يضرب المعدن",
+      "label": "WSD_ضرب_strike",
+      "verb": "ضرب",
+      "sense": "strike"
+    },
+    {
+      "sentence": "المزارع يضرب الارض",
+      "label": "WSD_ضرب_strike",
+      "verb": "ضرب",
+      "sense": "strike"
+    },
+    {
+      "sentence": "الولد يضرب الباب",
+      "label": "WSD_ضرب_strike",
+      "verb": "ضرب",
+      "sense": "strike"
+    },
+    {
+      "sentence": "الملاكم ضرب الخصم",
+      "label": "WSD_ضرب_strike",
+      "verb": "ضرب",
+      "sense": "strike"
+    },
+    {
+      "sentence": "الفارس ضرب الجواد",
+      "label": "WSD_ضرب_strike",
+      "verb": "ضرب",
+      "sense": "strike"
+    },
+    {
+      "sentence": "العامل ضرب المسمار",
+      "label": "WSD_ضرب_strike",
+      "verb": "ضرب",
+      "sense": "strike"
+    },
+    {
+      "sentence": "المعلم ضرب مثلا",
+      "label": "WSD_ضرب_exemplify",
+      "verb": "ضرب",
+      "sense": "exemplify"
+    },
+    {
+      "sentence": "الخطيب ضرب مثلا",
+      "label": "WSD_ضرب_exemplify",
+      "verb": "ضرب",
+      "sense": "exemplify"
+    },
+    {
+      "sentence": "الزعيم ضرب موعدا",
+      "label": "WSD_ضرب_exemplify",
+      "verb": "ضرب",
+      "sense": "exemplify"
+    },
+    {
+      "sentence": "المدير ضرب موعدا",
+      "label": "WSD_ضرب_exemplify",
+      "verb": "ضرب",
+      "sense": "exemplify"
+    },
+    {
+      "sentence": "الرياضي ضرب رقما",
+      "label": "WSD_ضرب_exemplify",
+      "verb": "ضرب",
+      "sense": "exemplify"
+    },
+    {
+      "sentence": "الفريق ضرب رقما",
+      "label": "WSD_ضرب_exemplify",
+      "verb": "ضرب",
+      "sense": "exemplify"
+    },
+    {
+      "sentence": "العالم ضرب مثلا",
+      "label": "WSD_ضرب_exemplify",
+      "verb": "ضرب",
+      "sense": "exemplify"
+    },
+    {
+      "sentence": "المستثمر ضرب موعدا",
+      "label": "WSD_ضرب_exemplify",
+      "verb": "ضرب",
+      "sense": "exemplify"
+    },
+    {
+      "sentence": "السياسي ضرب موعدا",
+      "label": "WSD_ضرب_exemplify",
+      "verb": "ضرب",
+      "sense": "exemplify"
+    },
+    {
+      "sentence": "الكاتب ضرب مثلا",
+      "label": "WSD_ضرب_exemplify",
+      "verb": "ضرب",
+      "sense": "exemplify"
+    },
+    {
+      "sentence": "المعلم يضرب مثلا",
+      "label": "WSD_ضرب_exemplify",
+      "verb": "ضرب",
+      "sense": "exemplify"
+    },
+    {
+      "sentence": "الخطيب يضرب مثلا",
+      "label": "WSD_ضرب_exemplify",
+      "verb": "ضرب",
+      "sense": "exemplify"
+    },
+    {
+      "sentence": "المدير يضرب موعدا",
+      "label": "WSD_ضرب_exemplify",
+      "verb": "ضرب",
+      "sense": "exemplify"
+    },
+    {
+      "sentence": "الرياضي يضرب رقما",
+      "label": "WSD_ضرب_exemplify",
+      "verb": "ضرب",
+      "sense": "exemplify"
+    },
+    {
+      "sentence": "الفريق يضرب رقما",
+      "label": "WSD_ضرب_exemplify",
+      "verb": "ضرب",
+      "sense": "exemplify"
+    },
+    {
+      "sentence": "العالم يضرب مثلا",
+      "label": "WSD_ضرب_exemplify",
+      "verb": "ضرب",
+      "sense": "exemplify"
+    },
+    {
+      "sentence": "المستثمر يضرب موعدا",
+      "label": "WSD_ضرب_exemplify",
+      "verb": "ضرب",
+      "sense": "exemplify"
+    },
+    {
+      "sentence": "السياسي يضرب موعدا",
+      "label": "WSD_ضرب_exemplify",
+      "verb": "ضرب",
+      "sense": "exemplify"
+    },
+    {
+      "sentence": "الكاتب يضرب مثلا",
+      "label": "WSD_ضرب_exemplify",
+      "verb": "ضرب",
+      "sense": "exemplify"
+    },
+    {
+      "sentence": "الملاكم ضرب رقما",
+      "label": "WSD_ضرب_exemplify",
+      "verb": "ضرب",
+      "sense": "exemplify"
+    }
+  ],
+  "WordSenseDisambiguation_v2": [
+    {
+      "sentence": "الطالب رفع الملف",
+      "label": "WSD_رفع_lift",
+      "verb": "رفع",
+      "sense": "lift"
+    },
+    {
+      "sentence": "المعلم رفع الملف",
+      "label": "WSD_رفع_lift",
+      "verb": "رفع",
+      "sense": "lift"
+    },
+    {
+      "sentence": "المدير رفع الورقة",
+      "label": "WSD_رفع_lift",
+      "verb": "رفع",
+      "sense": "lift"
+    },
+    {
+      "sentence": "الطبيب رفع التقرير",
+      "label": "WSD_رفع_lift",
+      "verb": "رفع",
+      "sense": "lift"
+    },
+    {
+      "sentence": "المهندس رفع الكتاب",
+      "label": "WSD_رفع_lift",
+      "verb": "رفع",
+      "sense": "lift"
+    },
+    {
+      "sentence": "الضابط رفع الورقة",
+      "label": "WSD_رفع_lift",
+      "verb": "رفع",
+      "sense": "lift"
+    },
+    {
+      "sentence": "الموظف رفع الملف",
+      "label": "WSD_رفع_lift",
+      "verb": "رفع",
+      "sense": "lift"
+    },
+    {
+      "sentence": "الصحفي رفع التقرير",
+      "label": "WSD_رفع_lift",
+      "verb": "رفع",
+      "sense": "lift"
+    },
+    {
+      "sentence": "الرياضي رفع الثقل",
+      "label": "WSD_رفع_lift",
+      "verb": "رفع",
+      "sense": "lift"
+    },
+    {
+      "sentence": "الباحث رفع الصندوق",
+      "label": "WSD_رفع_lift",
+      "verb": "رفع",
+      "sense": "lift"
+    },
+    {
+      "sentence": "الطالب رفع الحقيبة",
+      "label": "WSD_رفع_lift",
+      "verb": "رفع",
+      "sense": "lift"
+    },
+    {
+      "sentence": "المعلم رفع الكرسي",
+      "label": "WSD_رفع_lift",
+      "verb": "رفع",
+      "sense": "lift"
+    },
+    {
+      "sentence": "المدير رفع الحقيبة",
+      "label": "WSD_رفع_lift",
+      "verb": "رفع",
+      "sense": "lift"
+    },
+    {
+      "sentence": "الطبيب رفع الجهاز",
+      "label": "WSD_رفع_lift",
+      "verb": "رفع",
+      "sense": "lift"
+    },
+    {
+      "sentence": "المهندس رفع المعدات",
+      "label": "WSD_رفع_lift",
+      "verb": "رفع",
+      "sense": "lift"
+    },
+    {
+      "sentence": "الضابط رفع السلاح",
+      "label": "WSD_رفع_lift",
+      "verb": "رفع",
+      "sense": "lift"
+    },
+    {
+      "sentence": "الموظف رفع الصندوق",
+      "label": "WSD_رفع_lift",
+      "verb": "رفع",
+      "sense": "lift"
+    },
+    {
+      "sentence": "الصحفي رفع الكاميرا",
+      "label": "WSD_رفع_lift",
+      "verb": "رفع",
+      "sense": "lift"
+    },
+    {
+      "sentence": "المسؤول رفع الحقيبة",
+      "label": "WSD_رفع_lift",
+      "verb": "رفع",
+      "sense": "lift"
+    },
+    {
+      "sentence": "الشرطي رفع السلاح",
+      "label": "WSD_رفع_lift",
+      "verb": "رفع",
+      "sense": "lift"
+    },
+    {
+      "sentence": "الرياضي رفع الكرة",
+      "label": "WSD_رفع_lift",
+      "verb": "رفع",
+      "sense": "lift"
+    },
+    {
+      "sentence": "الباحث رفع المعدات",
+      "label": "WSD_رفع_lift",
+      "verb": "رفع",
+      "sense": "lift"
+    },
+    {
+      "sentence": "الشرطي رفع الكرسي",
+      "label": "WSD_رفع_lift",
+      "verb": "رفع",
+      "sense": "lift"
+    },
+    {
+      "sentence": "المسؤول رفع الصندوق",
+      "label": "WSD_رفع_lift",
+      "verb": "رفع",
+      "sense": "lift"
+    },
+    {
+      "sentence": "العالم رفع الجهاز",
+      "label": "WSD_رفع_lift",
+      "verb": "رفع",
+      "sense": "lift"
+    },
+    {
+      "sentence": "الطالب رفع الملف",
+      "label": "WSD_رفع_file",
+      "verb": "رفع",
+      "sense": "file"
+    },
+    {
+      "sentence": "المعلم رفع الملف",
+      "label": "WSD_رفع_file",
+      "verb": "رفع",
+      "sense": "file"
+    },
+    {
+      "sentence": "المدير رفع الورقة",
+      "label": "WSD_رفع_file",
+      "verb": "رفع",
+      "sense": "file"
+    },
+    {
+      "sentence": "الطبيب رفع التقرير",
+      "label": "WSD_رفع_file",
+      "verb": "رفع",
+      "sense": "file"
+    },
+    {
+      "sentence": "المهندس رفع الكتاب",
+      "label": "WSD_رفع_file",
+      "verb": "رفع",
+      "sense": "file"
+    },
+    {
+      "sentence": "الضابط رفع الورقة",
+      "label": "WSD_رفع_file",
+      "verb": "رفع",
+      "sense": "file"
+    },
+    {
+      "sentence": "الموظف رفع الملف",
+      "label": "WSD_رفع_file",
+      "verb": "رفع",
+      "sense": "file"
+    },
+    {
+      "sentence": "الصحفي رفع التقرير",
+      "label": "WSD_رفع_file",
+      "verb": "رفع",
+      "sense": "file"
+    },
+    {
+      "sentence": "الرياضي رفع الشكوى",
+      "label": "WSD_رفع_file",
+      "verb": "رفع",
+      "sense": "file"
+    },
+    {
+      "sentence": "الباحث رفع الطلب",
+      "label": "WSD_رفع_file",
+      "verb": "رفع",
+      "sense": "file"
+    },
+    {
+      "sentence": "الطالب رفع الاعتراض",
+      "label": "WSD_رفع_file",
+      "verb": "رفع",
+      "sense": "file"
+    },
+    {
+      "sentence": "المعلم رفع التوصية",
+      "label": "WSD_رفع_file",
+      "verb": "رفع",
+      "sense": "file"
+    },
+    {
+      "sentence": "المدير رفع العريضة",
+      "label": "WSD_رفع_file",
+      "verb": "رفع",
+      "sense": "file"
+    },
+    {
+      "sentence": "الطبيب رفع البلاغ",
+      "label": "WSD_رفع_file",
+      "verb": "رفع",
+      "sense": "file"
+    },
+    {
+      "sentence": "المهندس رفع الاقتراح",
+      "label": "WSD_رفع_file",
+      "verb": "رفع",
+      "sense": "file"
+    },
+    {
+      "sentence": "الضابط رفع البلاغ",
+      "label": "WSD_رفع_file",
+      "verb": "رفع",
+      "sense": "file"
+    },
+    {
+      "sentence": "الموظف رفع الطلب",
+      "label": "WSD_رفع_file",
+      "verb": "رفع",
+      "sense": "file"
+    },
+    {
+      "sentence": "الصحفي رفع الشكوى",
+      "label": "WSD_رفع_file",
+      "verb": "رفع",
+      "sense": "file"
+    },
+    {
+      "sentence": "المسؤول رفع الشكوى",
+      "label": "WSD_رفع_file",
+      "verb": "رفع",
+      "sense": "file"
+    },
+    {
+      "sentence": "الشرطي رفع البلاغ",
+      "label": "WSD_رفع_file",
+      "verb": "رفع",
+      "sense": "file"
+    },
+    {
+      "sentence": "الرياضي رفع الاحتجاج",
+      "label": "WSD_رفع_file",
+      "verb": "رفع",
+      "sense": "file"
+    },
+    {
+      "sentence": "الباحث رفع الاقتراح",
+      "label": "WSD_رفع_file",
+      "verb": "رفع",
+      "sense": "file"
+    },
+    {
+      "sentence": "الشرطي رفع الاعتراض",
+      "label": "WSD_رفع_file",
+      "verb": "رفع",
+      "sense": "file"
+    },
+    {
+      "sentence": "المسؤول رفع العريضة",
+      "label": "WSD_رفع_file",
+      "verb": "رفع",
+      "sense": "file"
+    },
+    {
+      "sentence": "العالم رفع الطلب",
+      "label": "WSD_رفع_file",
+      "verb": "رفع",
+      "sense": "file"
+    },
+    {
+      "sentence": "الرجل حمل الرسالة",
+      "label": "WSD_حمل_carry",
+      "verb": "حمل",
+      "sense": "carry"
+    },
+    {
+      "sentence": "المراة حملت الرسالة",
+      "label": "WSD_حمل_carry",
+      "verb": "حمل",
+      "sense": "carry"
+    },
+    {
+      "sentence": "الطالب حمل الفكرة",
+      "label": "WSD_حمل_carry",
+      "verb": "حمل",
+      "sense": "carry"
+    },
+    {
+      "sentence": "الجندي حمل الخبر",
+      "label": "WSD_حمل_carry",
+      "verb": "حمل",
+      "sense": "carry"
+    },
+    {
+      "sentence": "المسافر حمل الرسالة",
+      "label": "WSD_حمل_carry",
+      "verb": "حمل",
+      "sense": "carry"
+    },
+    {
+      "sentence": "التاجر حمل الخبر",
+      "label": "WSD_حمل_carry",
+      "verb": "حمل",
+      "sense": "carry"
+    },
+    {
+      "sentence": "البريدي حمل الرسالة",
+      "label": "WSD_حمل_carry",
+      "verb": "حمل",
+      "sense": "carry"
+    },
+    {
+      "sentence": "المعلم حمل الفكرة",
+      "label": "WSD_حمل_carry",
+      "verb": "حمل",
+      "sense": "carry"
+    },
+    {
+      "sentence": "الطفل حمل الحقيبة",
+      "label": "WSD_حمل_carry",
+      "verb": "حمل",
+      "sense": "carry"
+    },
+    {
+      "sentence": "الفلاح حمل المحصول",
+      "label": "WSD_حمل_carry",
+      "verb": "حمل",
+      "sense": "carry"
+    },
+    {
+      "sentence": "العامل حمل الصندوق",
+      "label": "WSD_حمل_carry",
+      "verb": "حمل",
+      "sense": "carry"
+    },
+    {
+      "sentence": "الطبيب حمل الحقيبة",
+      "label": "WSD_حمل_carry",
+      "verb": "حمل",
+      "sense": "carry"
+    },
+    {
+      "sentence": "الرجل حمل الصندوق",
+      "label": "WSD_حمل_carry",
+      "verb": "حمل",
+      "sense": "carry"
+    },
+    {
+      "sentence": "المراة حملت الحقيبة",
+      "label": "WSD_حمل_carry",
+      "verb": "حمل",
+      "sense": "carry"
+    },
+    {
+      "sentence": "الطالب حمل الكتاب",
+      "label": "WSD_حمل_carry",
+      "verb": "حمل",
+      "sense": "carry"
+    },
+    {
+      "sentence": "الجندي حمل السلاح",
+      "label": "WSD_حمل_carry",
+      "verb": "حمل",
+      "sense": "carry"
+    },
+    {
+      "sentence": "المسافر حمل الحقيبة",
+      "label": "WSD_حمل_carry",
+      "verb": "حمل",
+      "sense": "carry"
+    },
+    {
+      "sentence": "التاجر حمل البضاعة",
+      "label": "WSD_حمل_carry",
+      "verb": "حمل",
+      "sense": "carry"
+    },
+    {
+      "sentence": "الصياد حمل الشبكة",
+      "label": "WSD_حمل_carry",
+      "verb": "حمل",
+      "sense": "carry"
+    },
+    {
+      "sentence": "البريدي حمل الطرد",
+      "label": "WSD_حمل_carry",
+      "verb": "حمل",
+      "sense": "carry"
+    },
+    {
+      "sentence": "العامل حمل الحمل",
+      "label": "WSD_حمل_carry",
+      "verb": "حمل",
+      "sense": "carry"
+    },
+    {
+      "sentence": "الطبيب حمل الجهاز",
+      "label": "WSD_حمل_carry",
+      "verb": "حمل",
+      "sense": "carry"
+    },
+    {
+      "sentence": "المسافر حمل الخبر",
+      "label": "WSD_حمل_carry",
+      "verb": "حمل",
+      "sense": "carry"
+    },
+    {
+      "sentence": "الطالب حمل الرسالة",
+      "label": "WSD_حمل_carry",
+      "verb": "حمل",
+      "sense": "carry"
+    },
+    {
+      "sentence": "الفلاح حمل الخشب",
+      "label": "WSD_حمل_carry",
+      "verb": "حمل",
+      "sense": "carry"
+    },
+    {
+      "sentence": "الخطاب حمل الرسالة",
+      "label": "WSD_حمل_convey",
+      "verb": "حمل",
+      "sense": "convey"
+    },
+    {
+      "sentence": "النص حمل الرسالة",
+      "label": "WSD_حمل_convey",
+      "verb": "حمل",
+      "sense": "convey"
+    },
+    {
+      "sentence": "المقال حمل الفكرة",
+      "label": "WSD_حمل_convey",
+      "verb": "حمل",
+      "sense": "convey"
+    },
+    {
+      "sentence": "القصيدة حملت الخبر",
+      "label": "WSD_حمل_convey",
+      "verb": "حمل",
+      "sense": "convey"
+    },
+    {
+      "sentence": "الرواية حملت الرسالة",
+      "label": "WSD_حمل_convey",
+      "verb": "حمل",
+      "sense": "convey"
+    },
+    {
+      "sentence": "الكتاب حمل الفكرة",
+      "label": "WSD_حمل_convey",
+      "verb": "حمل",
+      "sense": "convey"
+    },
+    {
+      "sentence": "الوثيقة حملت الخبر",
+      "label": "WSD_حمل_convey",
+      "verb": "حمل",
+      "sense": "convey"
+    },
+    {
+      "sentence": "الرسالة حملت الفكرة",
+      "label": "WSD_حمل_convey",
+      "verb": "حمل",
+      "sense": "convey"
+    },
+    {
+      "sentence": "الفيلم حمل الرسالة",
+      "label": "WSD_حمل_convey",
+      "verb": "حمل",
+      "sense": "convey"
+    },
+    {
+      "sentence": "الحكاية حملت الخبر",
+      "label": "WSD_حمل_convey",
+      "verb": "حمل",
+      "sense": "convey"
+    },
+    {
+      "sentence": "الاغنية حملت الرسالة",
+      "label": "WSD_حمل_convey",
+      "verb": "حمل",
+      "sense": "convey"
+    },
+    {
+      "sentence": "البيان حمل الفكرة",
+      "label": "WSD_حمل_convey",
+      "verb": "حمل",
+      "sense": "convey"
+    },
+    {
+      "sentence": "الحديث حمل الرسالة",
+      "label": "WSD_حمل_convey",
+      "verb": "حمل",
+      "sense": "convey"
+    },
+    {
+      "sentence": "الخطاب حمل الفكرة",
+      "label": "WSD_حمل_convey",
+      "verb": "حمل",
+      "sense": "convey"
+    },
+    {
+      "sentence": "النص حمل الخبر",
+      "label": "WSD_حمل_convey",
+      "verb": "حمل",
+      "sense": "convey"
+    },
+    {
+      "sentence": "المقال حمل الرسالة",
+      "label": "WSD_حمل_convey",
+      "verb": "حمل",
+      "sense": "convey"
+    },
+    {
+      "sentence": "القصيدة حملت الفكرة",
+      "label": "WSD_حمل_convey",
+      "verb": "حمل",
+      "sense": "convey"
+    },
+    {
+      "sentence": "الرواية حملت الفكرة",
+      "label": "WSD_حمل_convey",
+      "verb": "حمل",
+      "sense": "convey"
+    },
+    {
+      "sentence": "الكتاب حمل الرسالة",
+      "label": "WSD_حمل_convey",
+      "verb": "حمل",
+      "sense": "convey"
+    },
+    {
+      "sentence": "الوثيقة حملت الفكرة",
+      "label": "WSD_حمل_convey",
+      "verb": "حمل",
+      "sense": "convey"
+    },
+    {
+      "sentence": "الفيلم حمل الفكرة",
+      "label": "WSD_حمل_convey",
+      "verb": "حمل",
+      "sense": "convey"
+    },
+    {
+      "sentence": "الحكاية حملت الرسالة",
+      "label": "WSD_حمل_convey",
+      "verb": "حمل",
+      "sense": "convey"
+    },
+    {
+      "sentence": "البيان حمل الخبر",
+      "label": "WSD_حمل_convey",
+      "verb": "حمل",
+      "sense": "convey"
+    },
+    {
+      "sentence": "الحديث حمل الفكرة",
+      "label": "WSD_حمل_convey",
+      "verb": "حمل",
+      "sense": "convey"
+    },
+    {
+      "sentence": "الاغنية حملت الفكرة",
+      "label": "WSD_حمل_convey",
+      "verb": "حمل",
+      "sense": "convey"
+    },
+    {
+      "sentence": "الطالب قطع الورقة",
+      "label": "WSD_قطع_cut",
+      "verb": "قطع",
+      "sense": "cut"
+    },
+    {
+      "sentence": "المعلم قطع الخيط",
+      "label": "WSD_قطع_cut",
+      "verb": "قطع",
+      "sense": "cut"
+    },
+    {
+      "sentence": "المدير قطع الورقة",
+      "label": "WSD_قطع_cut",
+      "verb": "قطع",
+      "sense": "cut"
+    },
+    {
+      "sentence": "الطبيب قطع الجلد",
+      "label": "WSD_قطع_cut",
+      "verb": "قطع",
+      "sense": "cut"
+    },
+    {
+      "sentence": "المهندس قطع الاسلاك",
+      "label": "WSD_قطع_cut",
+      "verb": "قطع",
+      "sense": "cut"
+    },
+    {
+      "sentence": "الصحفي قطع الخيط",
+      "label": "WSD_قطع_cut",
+      "verb": "قطع",
+      "sense": "cut"
+    },
+    {
+      "sentence": "الرياضي قطع الحبل",
+      "label": "WSD_قطع_cut",
+      "verb": "قطع",
+      "sense": "cut"
+    },
+    {
+      "sentence": "الضابط قطع الحبل",
+      "label": "WSD_قطع_cut",
+      "verb": "قطع",
+      "sense": "cut"
+    },
+    {
+      "sentence": "الموظف قطع الورقة",
+      "label": "WSD_قطع_cut",
+      "verb": "قطع",
+      "sense": "cut"
+    },
+    {
+      "sentence": "الباحث قطع الاسلاك",
+      "label": "WSD_قطع_cut",
+      "verb": "قطع",
+      "sense": "cut"
+    },
+    {
+      "sentence": "الشرطي قطع الحبل",
+      "label": "WSD_قطع_cut",
+      "verb": "قطع",
+      "sense": "cut"
+    },
+    {
+      "sentence": "المسؤول قطع الخيط",
+      "label": "WSD_قطع_cut",
+      "verb": "قطع",
+      "sense": "cut"
+    },
+    {
+      "sentence": "الطالب قطع الخشب",
+      "label": "WSD_قطع_cut",
+      "verb": "قطع",
+      "sense": "cut"
+    },
+    {
+      "sentence": "المعلم قطع القماش",
+      "label": "WSD_قطع_cut",
+      "verb": "قطع",
+      "sense": "cut"
+    },
+    {
+      "sentence": "المدير قطع الاسمنت",
+      "label": "WSD_قطع_cut",
+      "verb": "قطع",
+      "sense": "cut"
+    },
+    {
+      "sentence": "الطبيب قطع الورم",
+      "label": "WSD_قطع_cut",
+      "verb": "قطع",
+      "sense": "cut"
+    },
+    {
+      "sentence": "المهندس قطع الخشب",
+      "label": "WSD_قطع_cut",
+      "verb": "قطع",
+      "sense": "cut"
+    },
+    {
+      "sentence": "الرياضي قطع الشعر",
+      "label": "WSD_قطع_cut",
+      "verb": "قطع",
+      "sense": "cut"
+    },
+    {
+      "sentence": "الضابط قطع الاسلاك",
+      "label": "WSD_قطع_cut",
+      "verb": "قطع",
+      "sense": "cut"
+    },
+    {
+      "sentence": "الموظف قطع الاسمنت",
+      "label": "WSD_قطع_cut",
+      "verb": "قطع",
+      "sense": "cut"
+    },
+    {
+      "sentence": "الباحث قطع الخشب",
+      "label": "WSD_قطع_cut",
+      "verb": "قطع",
+      "sense": "cut"
+    },
+    {
+      "sentence": "الشرطي قطع الاسلاك",
+      "label": "WSD_قطع_cut",
+      "verb": "قطع",
+      "sense": "cut"
+    },
+    {
+      "sentence": "المسؤول قطع الحبل",
+      "label": "WSD_قطع_cut",
+      "verb": "قطع",
+      "sense": "cut"
+    },
+    {
+      "sentence": "الطالب قطع القماش",
+      "label": "WSD_قطع_cut",
+      "verb": "قطع",
+      "sense": "cut"
+    },
+    {
+      "sentence": "العالم قطع الخيط",
+      "label": "WSD_قطع_cut",
+      "verb": "قطع",
+      "sense": "cut"
+    },
+    {
+      "sentence": "الطالب قطع التواصل",
+      "label": "WSD_قطع_sever",
+      "verb": "قطع",
+      "sense": "sever"
+    },
+    {
+      "sentence": "المعلم قطع الصلة",
+      "label": "WSD_قطع_sever",
+      "verb": "قطع",
+      "sense": "sever"
+    },
+    {
+      "sentence": "المدير قطع التواصل",
+      "label": "WSD_قطع_sever",
+      "verb": "قطع",
+      "sense": "sever"
+    },
+    {
+      "sentence": "الطبيب قطع العلاقة",
+      "label": "WSD_قطع_sever",
+      "verb": "قطع",
+      "sense": "sever"
+    },
+    {
+      "sentence": "المهندس قطع الاتصال",
+      "label": "WSD_قطع_sever",
+      "verb": "قطع",
+      "sense": "sever"
+    },
+    {
+      "sentence": "الصحفي قطع الصمت",
+      "label": "WSD_قطع_sever",
+      "verb": "قطع",
+      "sense": "sever"
+    },
+    {
+      "sentence": "الرياضي قطع التعهد",
+      "label": "WSD_قطع_sever",
+      "verb": "قطع",
+      "sense": "sever"
+    },
+    {
+      "sentence": "الضابط قطع الامداد",
+      "label": "WSD_قطع_sever",
+      "verb": "قطع",
+      "sense": "sever"
+    },
+    {
+      "sentence": "الموظف قطع التواصل",
+      "label": "WSD_قطع_sever",
+      "verb": "قطع",
+      "sense": "sever"
+    },
+    {
+      "sentence": "الباحث قطع الصلة",
+      "label": "WSD_قطع_sever",
+      "verb": "قطع",
+      "sense": "sever"
+    },
+    {
+      "sentence": "الشرطي قطع الاتصال",
+      "label": "WSD_قطع_sever",
+      "verb": "قطع",
+      "sense": "sever"
+    },
+    {
+      "sentence": "المسؤول قطع العلاقة",
+      "label": "WSD_قطع_sever",
+      "verb": "قطع",
+      "sense": "sever"
+    },
+    {
+      "sentence": "الطالب قطع العلاقة",
+      "label": "WSD_قطع_sever",
+      "verb": "قطع",
+      "sense": "sever"
+    },
+    {
+      "sentence": "المعلم قطع التواصل",
+      "label": "WSD_قطع_sever",
+      "verb": "قطع",
+      "sense": "sever"
+    },
+    {
+      "sentence": "المدير قطع العقد",
+      "label": "WSD_قطع_sever",
+      "verb": "قطع",
+      "sense": "sever"
+    },
+    {
+      "sentence": "الطبيب قطع الصلة",
+      "label": "WSD_قطع_sever",
+      "verb": "قطع",
+      "sense": "sever"
+    },
+    {
+      "sentence": "المهندس قطع العلاقة",
+      "label": "WSD_قطع_sever",
+      "verb": "قطع",
+      "sense": "sever"
+    },
+    {
+      "sentence": "الصحفي قطع الاتصال",
+      "label": "WSD_قطع_sever",
+      "verb": "قطع",
+      "sense": "sever"
+    },
+    {
+      "sentence": "الرياضي قطع الصمت",
+      "label": "WSD_قطع_sever",
+      "verb": "قطع",
+      "sense": "sever"
+    },
+    {
+      "sentence": "الضابط قطع العلاقة",
+      "label": "WSD_قطع_sever",
+      "verb": "قطع",
+      "sense": "sever"
+    },
+    {
+      "sentence": "الموظف قطع العقد",
+      "label": "WSD_قطع_sever",
+      "verb": "قطع",
+      "sense": "sever"
+    },
+    {
+      "sentence": "الباحث قطع التواصل",
+      "label": "WSD_قطع_sever",
+      "verb": "قطع",
+      "sense": "sever"
+    },
+    {
+      "sentence": "الشرطي قطع الصلة",
+      "label": "WSD_قطع_sever",
+      "verb": "قطع",
+      "sense": "sever"
+    },
+    {
+      "sentence": "المسؤول قطع التواصل",
+      "label": "WSD_قطع_sever",
+      "verb": "قطع",
+      "sense": "sever"
+    },
+    {
+      "sentence": "العالم قطع الاتصال",
+      "label": "WSD_قطع_sever",
+      "verb": "قطع",
+      "sense": "sever"
+    },
+    {
+      "sentence": "المعلم ضرب الطاولة",
+      "label": "WSD_ضرب_strike",
+      "verb": "ضرب",
+      "sense": "strike"
+    },
+    {
+      "sentence": "الرياضي ضرب الكرة",
+      "label": "WSD_ضرب_strike",
+      "verb": "ضرب",
+      "sense": "strike"
+    },
+    {
+      "sentence": "المدير ضرب المكتب",
+      "label": "WSD_ضرب_strike",
+      "verb": "ضرب",
+      "sense": "strike"
+    },
+    {
+      "sentence": "اللاعب ضرب الكرة",
+      "label": "WSD_ضرب_strike",
+      "verb": "ضرب",
+      "sense": "strike"
+    },
+    {
+      "sentence": "المدرب ضرب الجدار",
+      "label": "WSD_ضرب_strike",
+      "verb": "ضرب",
+      "sense": "strike"
+    },
+    {
+      "sentence": "الطالب ضرب الطاولة",
+      "label": "WSD_ضرب_strike",
+      "verb": "ضرب",
+      "sense": "strike"
+    },
+    {
+      "sentence": "الصحفي ضرب الباب",
+      "label": "WSD_ضرب_strike",
+      "verb": "ضرب",
+      "sense": "strike"
+    },
+    {
+      "sentence": "السياسي ضرب المكتب",
+      "label": "WSD_ضرب_strike",
+      "verb": "ضرب",
+      "sense": "strike"
+    },
+    {
+      "sentence": "العالم ضرب الهدف",
+      "label": "WSD_ضرب_strike",
+      "verb": "ضرب",
+      "sense": "strike"
+    },
+    {
+      "sentence": "الكاتب ضرب الجدار",
+      "label": "WSD_ضرب_strike",
+      "verb": "ضرب",
+      "sense": "strike"
+    },
+    {
+      "sentence": "الشرطي ضرب الباب",
+      "label": "WSD_ضرب_strike",
+      "verb": "ضرب",
+      "sense": "strike"
+    },
+    {
+      "sentence": "الجندي ضرب الهدف",
+      "label": "WSD_ضرب_strike",
+      "verb": "ضرب",
+      "sense": "strike"
+    },
+    {
+      "sentence": "العامل ضرب المسمار",
+      "label": "WSD_ضرب_strike",
+      "verb": "ضرب",
+      "sense": "strike"
+    },
+    {
+      "sentence": "المهندس ضرب المسمار",
+      "label": "WSD_ضرب_strike",
+      "verb": "ضرب",
+      "sense": "strike"
+    },
+    {
+      "sentence": "المعلم ضرب الجدار",
+      "label": "WSD_ضرب_strike",
+      "verb": "ضرب",
+      "sense": "strike"
+    },
+    {
+      "sentence": "الرياضي ضرب الهدف",
+      "label": "WSD_ضرب_strike",
+      "verb": "ضرب",
+      "sense": "strike"
+    },
+    {
+      "sentence": "المدير ضرب الباب",
+      "label": "WSD_ضرب_strike",
+      "verb": "ضرب",
+      "sense": "strike"
+    },
+    {
+      "sentence": "اللاعب ضرب الجدار",
+      "label": "WSD_ضرب_strike",
+      "verb": "ضرب",
+      "sense": "strike"
+    },
+    {
+      "sentence": "المدرب ضرب الكرة",
+      "label": "WSD_ضرب_strike",
+      "verb": "ضرب",
+      "sense": "strike"
+    },
+    {
+      "sentence": "الطالب ضرب الكرة",
+      "label": "WSD_ضرب_strike",
+      "verb": "ضرب",
+      "sense": "strike"
+    },
+    {
+      "sentence": "الصحفي ضرب الطاولة",
+      "label": "WSD_ضرب_strike",
+      "verb": "ضرب",
+      "sense": "strike"
+    },
+    {
+      "sentence": "السياسي ضرب الجدار",
+      "label": "WSD_ضرب_strike",
+      "verb": "ضرب",
+      "sense": "strike"
+    },
+    {
+      "sentence": "العالم ضرب المكتب",
+      "label": "WSD_ضرب_strike",
+      "verb": "ضرب",
+      "sense": "strike"
+    },
+    {
+      "sentence": "الكاتب ضرب الجدار",
+      "label": "WSD_ضرب_strike",
+      "verb": "ضرب",
+      "sense": "strike"
+    },
+    {
+      "sentence": "الشرطي ضرب الجدار",
+      "label": "WSD_ضرب_strike",
+      "verb": "ضرب",
+      "sense": "strike"
+    },
+    {
+      "sentence": "المعلم ضرب مثلاً",
+      "label": "WSD_ضرب_exemplify",
+      "verb": "ضرب",
+      "sense": "exemplify"
+    },
+    {
+      "sentence": "الرياضي ضرب رقماً",
+      "label": "WSD_ضرب_exemplify",
+      "verb": "ضرب",
+      "sense": "exemplify"
+    },
+    {
+      "sentence": "المدير ضرب موعداً",
+      "label": "WSD_ضرب_exemplify",
+      "verb": "ضرب",
+      "sense": "exemplify"
+    },
+    {
+      "sentence": "اللاعب ضرب رقماً",
+      "label": "WSD_ضرب_exemplify",
+      "verb": "ضرب",
+      "sense": "exemplify"
+    },
+    {
+      "sentence": "المدرب ضرب موعداً",
+      "label": "WSD_ضرب_exemplify",
+      "verb": "ضرب",
+      "sense": "exemplify"
+    },
+    {
+      "sentence": "الطالب ضرب موعداً",
+      "label": "WSD_ضرب_exemplify",
+      "verb": "ضرب",
+      "sense": "exemplify"
+    },
+    {
+      "sentence": "الصحفي ضرب موعداً",
+      "label": "WSD_ضرب_exemplify",
+      "verb": "ضرب",
+      "sense": "exemplify"
+    },
+    {
+      "sentence": "السياسي ضرب مثلاً",
+      "label": "WSD_ضرب_exemplify",
+      "verb": "ضرب",
+      "sense": "exemplify"
+    },
+    {
+      "sentence": "العالم ضرب رقماً",
+      "label": "WSD_ضرب_exemplify",
+      "verb": "ضرب",
+      "sense": "exemplify"
+    },
+    {
+      "sentence": "الكاتب ضرب مثلاً",
+      "label": "WSD_ضرب_exemplify",
+      "verb": "ضرب",
+      "sense": "exemplify"
+    },
+    {
+      "sentence": "الشرطي ضرب موعداً",
+      "label": "WSD_ضرب_exemplify",
+      "verb": "ضرب",
+      "sense": "exemplify"
+    },
+    {
+      "sentence": "الجندي ضرب رقماً",
+      "label": "WSD_ضرب_exemplify",
+      "verb": "ضرب",
+      "sense": "exemplify"
+    },
+    {
+      "sentence": "العامل ضرب موعداً",
+      "label": "WSD_ضرب_exemplify",
+      "verb": "ضرب",
+      "sense": "exemplify"
+    },
+    {
+      "sentence": "المهندس ضرب رقماً",
+      "label": "WSD_ضرب_exemplify",
+      "verb": "ضرب",
+      "sense": "exemplify"
+    },
+    {
+      "sentence": "المعلم ضرب رقماً",
+      "label": "WSD_ضرب_exemplify",
+      "verb": "ضرب",
+      "sense": "exemplify"
+    },
+    {
+      "sentence": "الرياضي ضرب مثلاً",
+      "label": "WSD_ضرب_exemplify",
+      "verb": "ضرب",
+      "sense": "exemplify"
+    },
+    {
+      "sentence": "المدير ضرب رقماً",
+      "label": "WSD_ضرب_exemplify",
+      "verb": "ضرب",
+      "sense": "exemplify"
+    },
+    {
+      "sentence": "اللاعب ضرب موعداً",
+      "label": "WSD_ضرب_exemplify",
+      "verb": "ضرب",
+      "sense": "exemplify"
+    },
+    {
+      "sentence": "المدرب ضرب مثلاً",
+      "label": "WSD_ضرب_exemplify",
+      "verb": "ضرب",
+      "sense": "exemplify"
+    },
+    {
+      "sentence": "الطالب ضرب رقماً",
+      "label": "WSD_ضرب_exemplify",
+      "verb": "ضرب",
+      "sense": "exemplify"
+    },
+    {
+      "sentence": "الصحفي ضرب مثلاً",
+      "label": "WSD_ضرب_exemplify",
+      "verb": "ضرب",
+      "sense": "exemplify"
+    },
+    {
+      "sentence": "السياسي ضرب موعداً",
+      "label": "WSD_ضرب_exemplify",
+      "verb": "ضرب",
+      "sense": "exemplify"
+    },
+    {
+      "sentence": "العالم ضرب مثلاً",
+      "label": "WSD_ضرب_exemplify",
+      "verb": "ضرب",
+      "sense": "exemplify"
+    },
+    {
+      "sentence": "الكاتب ضرب رقماً",
+      "label": "WSD_ضرب_exemplify",
+      "verb": "ضرب",
+      "sense": "exemplify"
+    },
+    {
+      "sentence": "الشرطي ضرب مثلاً",
+      "label": "WSD_ضرب_exemplify",
+      "verb": "ضرب",
+      "sense": "exemplify"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "tag": "Morphology_Number/IQP/L2/seed42",
+  "exp_name": "Morphology_Number",
+  "ansatz": "IQP",
+  "n_layers": 2,
+  "seed": 42,
+  "n_samples": 114,
+  "n_classes": 3,
+  "chance": 0.3333333333333333,
+  "mean": 0.2189723320158103,
+  "std": 0.07695237010996338,
+  "folds": [
+    0.30434782608695654,
+    0.08695652173913043,
+    0.2608695652173913,
+    0.2608695652173913,
+    0.18181818181818182
+  ],
+  "report": "              precision    recall  f1-score   support\n\n          Du       0.14      0.18      0.16        22\n          Pl       0.40      0.22      0.29        63\n          Sg       0.23      0.24      0.24        29\n\n   micro avg       0.27      0.22      0.24       114\n   macro avg       0.26      0.22      0.23       114\nweighted avg       0.31      0.22      0.25       114\n"
+}

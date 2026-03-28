@@ -1,0 +1,22 @@
+{
+  "exp_name": "Morphology_Number",
+  "ansatz": "StronglyEntangling",
+  "n_samples": 98,
+  "n_classes": 3,
+  "n_s_qubits": 2,
+  "fold_accuracies": [
+    0.3,
+    0.25,
+    0.3,
+    0.3157894736842105,
+    0.2631578947368421
+  ],
+  "accuracy_mean": 0.28578947368421054,
+  "accuracy_std": 0.024887558773761868,
+  "classification_report": "              precision    recall  f1-score   support\n\n          Du       0.24      0.32      0.27        22\n          Pl       0.47      0.34      0.40        47\n          Sg       0.24      0.17      0.20        29\n\n   micro avg       0.33      0.29      0.31        98\n   macro avg       0.32      0.28      0.29        98\nweighted avg       0.35      0.29      0.31        98\n",
+  "class_list": [
+    "Du",
+    "Pl",
+    "Sg"
+  ]
+}

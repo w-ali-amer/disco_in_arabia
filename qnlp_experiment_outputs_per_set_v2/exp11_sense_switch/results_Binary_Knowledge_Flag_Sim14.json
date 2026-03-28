@@ -1,0 +1,29 @@
+{
+  "tag": "Binary_Knowledge_Flag/Sim14/L1",
+  "pair_name": "Binary_Knowledge_Flag",
+  "ansatz": "Sim14",
+  "n_layers": 1,
+  "pivot": "علم",
+  "n_samples": 30,
+  "n_folds": 5,
+  "oracle_mean": 0.4666666666666667,
+  "oracle_std": 0.22110831935702668,
+  "oracle_folds": [
+    0.8333333333333334,
+    0.5,
+    0.5,
+    0.16666666666666666,
+    0.3333333333333333
+  ],
+  "oracle_report": "                     precision    recall  f1-score   support\n\n     Ambiguity_Flag       0.45      0.33      0.38        15\nAmbiguity_Knowledge       0.47      0.60      0.53        15\n\n           accuracy                           0.47        30\n          macro avg       0.46      0.47      0.46        30\n       weighted avg       0.46      0.47      0.46        30\n",
+  "auto_mean": 0.4999999999999999,
+  "auto_std": 0.14907119849998596,
+  "auto_folds": [
+    0.6666666666666666,
+    0.5,
+    0.3333333333333333,
+    0.3333333333333333,
+    0.6666666666666666
+  ],
+  "auto_report": "                     precision    recall  f1-score   support\n\n     Ambiguity_Flag       0.50      0.40      0.44        15\nAmbiguity_Knowledge       0.50      0.60      0.55        15\n\n           accuracy                           0.50        30\n          macro avg       0.50      0.50      0.49        30\n       weighted avg       0.50      0.50      0.49        30\n"
+}

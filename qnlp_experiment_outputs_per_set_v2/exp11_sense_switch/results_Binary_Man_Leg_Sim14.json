@@ -1,0 +1,29 @@
+{
+  "tag": "Binary_Man_Leg/Sim14/L1",
+  "pair_name": "Binary_Man_Leg",
+  "ansatz": "Sim14",
+  "n_layers": 1,
+  "pivot": "رجل",
+  "n_samples": 30,
+  "n_folds": 5,
+  "oracle_mean": 0.5666666666666667,
+  "oracle_std": 0.16996731711975951,
+  "oracle_folds": [
+    0.5,
+    0.6666666666666666,
+    0.8333333333333334,
+    0.5,
+    0.3333333333333333
+  ],
+  "oracle_report": "               precision    recall  f1-score   support\n\nAmbiguity_Leg       0.55      0.80      0.65        15\nAmbiguity_Man       0.62      0.33      0.43        15\n\n     accuracy                           0.57        30\n    macro avg       0.59      0.57      0.54        30\n weighted avg       0.59      0.57      0.54        30\n",
+  "auto_mean": 0.5666666666666667,
+  "auto_std": 0.08164965809277258,
+  "auto_folds": [
+    0.5,
+    0.6666666666666666,
+    0.5,
+    0.6666666666666666,
+    0.5
+  ],
+  "auto_report": "               precision    recall  f1-score   support\n\nAmbiguity_Leg       0.55      0.80      0.65        15\nAmbiguity_Man       0.62      0.33      0.43        15\n\n     accuracy                           0.57        30\n    macro avg       0.59      0.57      0.54        30\n weighted avg       0.59      0.57      0.54        30\n"
+}

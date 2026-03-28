@@ -1,0 +1,20 @@
+{
+  "tag": "Morphology_Number/Sim14/L2/seed42",
+  "exp_name": "Morphology_Number",
+  "ansatz": "Sim14",
+  "n_layers": 2,
+  "seed": 42,
+  "n_samples": 114,
+  "n_classes": 3,
+  "chance": 0.3333333333333333,
+  "mean": 0.32529644268774704,
+  "std": 0.0691372028587707,
+  "folds": [
+    0.391304347826087,
+    0.30434782608695654,
+    0.21739130434782608,
+    0.30434782608695654,
+    0.4090909090909091
+  ],
+  "report": "              precision    recall  f1-score   support\n\n          Du       0.17      0.18      0.17        22\n          Pl       0.67      0.38      0.48        63\n          Sg       0.32      0.31      0.32        29\n\n   micro avg       0.42      0.32      0.37       114\n   macro avg       0.38      0.29      0.32       114\nweighted avg       0.48      0.32      0.38       114\n"
+}

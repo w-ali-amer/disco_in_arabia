@@ -1,0 +1,45 @@
+# Virtual environment — 6.2GB, never commit
+qiskit_lambeq_env/
+
+# AraVec model files — 2.9GB, publicly available from original authors
+aravec/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Windows Zone.Identifier metadata (WSL artifact)
+*:Zone.Identifier
+
+# Experiment logs — large, not needed for reproducibility
+*.log
+
+# Scratch/personal files
+res.txt
+type_debug.txt
+promptaistud.txt
+promptgem.txt
+promptgem2.txt
+promptgpt.txt
+qnlp_experiment.txt
+qnlp_experiment_exp5.log
+qnlp_experiment_exp6.log
+qnlp_experiment_exp7.log
+baseline_binary_stdout.log
+qnlp_baseline_binary.log
+qnlp_baseline_classical.log
+
+# Downloaded/artifact files
+quantum_boxes[1]
+
+# TensorBoard training logs
+runs/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+disco_in_arabia/

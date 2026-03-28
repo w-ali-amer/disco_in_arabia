@@ -1,0 +1,22 @@
+{
+  "exp_name": "WordOrder",
+  "ansatz": "Sim14",
+  "n_samples": 45,
+  "n_classes": 3,
+  "n_s_qubits": 2,
+  "fold_accuracies": [
+    0.0,
+    0.1111111111111111,
+    0.3333333333333333,
+    0.2222222222222222,
+    0.1111111111111111
+  ],
+  "accuracy_mean": 0.15555555555555553,
+  "accuracy_std": 0.11331154474650632,
+  "classification_report": "                   precision    recall  f1-score   support\n\nWordOrder_Nominal       0.18      0.13      0.15        15\n    WordOrder_SVO       0.31      0.27      0.29        15\n    WordOrder_VSO       0.14      0.07      0.09        15\n\n        micro avg       0.23      0.16      0.18        45\n        macro avg       0.21      0.16      0.18        45\n     weighted avg       0.21      0.16      0.18        45\n",
+  "class_list": [
+    "WordOrder_Nominal",
+    "WordOrder_SVO",
+    "WordOrder_VSO"
+  ]
+}

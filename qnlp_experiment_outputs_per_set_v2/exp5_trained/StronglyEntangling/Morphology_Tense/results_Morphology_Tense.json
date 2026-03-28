@@ -1,0 +1,21 @@
+{
+  "exp_name": "Morphology_Tense",
+  "ansatz": "StronglyEntangling",
+  "n_samples": 28,
+  "n_classes": 2,
+  "n_s_qubits": 1,
+  "fold_accuracies": [
+    0.5,
+    0.16666666666666666,
+    0.3333333333333333,
+    0.2,
+    0.2
+  ],
+  "accuracy_mean": 0.27999999999999997,
+  "accuracy_std": 0.12400716825158847,
+  "classification_report": "              precision    recall  f1-score   support\n\n        Past       0.29      0.29      0.29        14\n        Pres       0.29      0.29      0.29        14\n\n    accuracy                           0.29        28\n   macro avg       0.29      0.29      0.29        28\nweighted avg       0.29      0.29      0.29        28\n",
+  "class_list": [
+    "Past",
+    "Pres"
+  ]
+}

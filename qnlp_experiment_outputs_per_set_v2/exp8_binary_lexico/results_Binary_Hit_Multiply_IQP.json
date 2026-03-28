@@ -1,0 +1,18 @@
+{
+  "exp_name": "Binary_Hit_Multiply",
+  "ansatz": "IQP",
+  "n_samples": 30,
+  "n_classes": 2,
+  "chance": 0.5,
+  "n_folds": 5,
+  "mean": 0.5333333333333333,
+  "std": 0.06666666666666665,
+  "folds": [
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.6666666666666666
+  ],
+  "report": "                    precision    recall  f1-score   support\n\n     Ambiguity_Hit       0.52      0.80      0.63        15\nAmbiguity_Multiply       0.57      0.27      0.36        15\n\n          accuracy                           0.53        30\n         macro avg       0.55      0.53      0.50        30\n      weighted avg       0.55      0.53      0.50        30\n"
+}

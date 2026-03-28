@@ -1,0 +1,1730 @@
+[
+  {
+    "sentence": "المهندس يعمل",
+    "label": "Morph_SgMasc",
+    "original_index": 0,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "المهندسون يعملون",
+    "label": "Morph_PlMasc",
+    "original_index": 1,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الطالبة تدرس",
+    "label": "Morph_SgFem",
+    "original_index": 2,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الطالبات يدرسن",
+    "label": "Morph_PlFem",
+    "original_index": 3,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الكتاب جديد",
+    "label": "Morph_SgMasc",
+    "original_index": 4,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الكتب جديدة",
+    "label": "Morph_PlBroken",
+    "original_index": 5,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "السيارة سريعة",
+    "label": "Morph_SgFem",
+    "original_index": 6,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "السيارات سريعة",
+    "label": "Morph_PlFem",
+    "original_index": 7,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "البيت كبير",
+    "label": "Morph_SgMasc",
+    "original_index": 8,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الغرفة كبيرة",
+    "label": "Morph_SgFem",
+    "original_index": 9,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الولد ذكي",
+    "label": "Morph_SgMasc",
+    "original_index": 10,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "البنت ذكية",
+    "label": "Morph_SgFem",
+    "original_index": 11,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "كتب الطالب",
+    "label": "Morph_Past",
+    "original_index": 12,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "يكتب الطالب",
+    "label": "Morph_Pres",
+    "original_index": 13,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "قرات البنت",
+    "label": "Morph_Past",
+    "original_index": 14,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "تقرا البنت",
+    "label": "Morph_Pres",
+    "original_index": 15,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذا كتابي",
+    "label": "Morph_Poss1Sg",
+    "original_index": 16,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذا كتابك",
+    "label": "Morph_Poss2MascSg",
+    "original_index": 17,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذا قلمه",
+    "label": "Morph_Poss3MascSg",
+    "original_index": 18,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذا قلمها",
+    "label": "Morph_Poss3FemSg",
+    "original_index": 19,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "المعلمة تشرح",
+    "label": "Morph_SgFem",
+    "original_index": 20,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "المعلمات يشرحن",
+    "label": "Morph_PlFem",
+    "original_index": 21,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "اللاعبان ماهران",
+    "label": "Morph_DualMasc",
+    "original_index": 22,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "اللاعبتان ماهرتان",
+    "label": "Morph_DualFem",
+    "original_index": 23,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "سافر الرجل",
+    "label": "Morph_Past",
+    "original_index": 24,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "يسافر الرجل",
+    "label": "Morph_Pres",
+    "original_index": 25,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "سافرت المراة",
+    "label": "Morph_Past",
+    "original_index": 26,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "تسافر المراة",
+    "label": "Morph_Pres",
+    "original_index": 27,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذه مدرستنا",
+    "label": "Morph_Poss1Pl",
+    "original_index": 28,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذا بيتكم",
+    "label": "Morph_Poss2Pl",
+    "original_index": 29,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هؤلاء طلاب مجتهدون",
+    "label": "Morph_AdjPlMasc",
+    "original_index": 30,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هؤلاء طالبات مجتهدات",
+    "label": "Morph_AdjPlFem",
+    "original_index": 31,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "القلم ازرق",
+    "label": "Morph_SgMasc",
+    "original_index": 32,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الاقلام زرقاء",
+    "label": "Morph_PlBroken",
+    "original_index": 33,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "المكتب منظم",
+    "label": "Morph_SgMasc",
+    "original_index": 34,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "المكاتب منظمة",
+    "label": "Morph_PlBroken",
+    "original_index": 35,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الباب مفتوح",
+    "label": "Morph_SgMasc",
+    "original_index": 36,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الابواب مفتوحة",
+    "label": "Morph_PlBroken",
+    "original_index": 37,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الدرس مفهوم",
+    "label": "Morph_SgMasc",
+    "original_index": 38,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الدروس مفهومة",
+    "label": "Morph_PlBroken",
+    "original_index": 39,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الكتاب مقروء",
+    "label": "Morph_SgMasc",
+    "original_index": 40,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الكتب مقروءة",
+    "label": "Morph_PlBroken",
+    "original_index": 41,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الولد يلعب",
+    "label": "Morph_SgMasc",
+    "original_index": 42,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الاولاد يلعبون",
+    "label": "Morph_PlMasc",
+    "original_index": 43,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "المعلم يشرح",
+    "label": "Morph_SgMasc",
+    "original_index": 44,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "المعلمون يشرحون",
+    "label": "Morph_PlMasc",
+    "original_index": 45,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الطبيب يعالج",
+    "label": "Morph_SgMasc",
+    "original_index": 46,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الاطباء يعالجون",
+    "label": "Morph_PlMasc",
+    "original_index": 47,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الكاتب يكتب",
+    "label": "Morph_SgMasc",
+    "original_index": 48,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الكتاب يكتبون",
+    "label": "Morph_PlMasc",
+    "original_index": 49,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "المهندس يبني",
+    "label": "Morph_SgMasc",
+    "original_index": 50,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "المهندسون يبنون",
+    "label": "Morph_PlMasc",
+    "original_index": 51,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الشجرة مثمرة",
+    "label": "Morph_SgFem",
+    "original_index": 52,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الاشجار مثمرة",
+    "label": "Morph_PlBroken",
+    "original_index": 53,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "القصة ممتعة",
+    "label": "Morph_SgFem",
+    "original_index": 54,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "القصص ممتعة",
+    "label": "Morph_PlBroken",
+    "original_index": 55,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "المدينة نظيفة",
+    "label": "Morph_SgFem",
+    "original_index": 56,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "المدن نظيفة",
+    "label": "Morph_PlBroken",
+    "original_index": 57,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الحقيبة ثقيلة",
+    "label": "Morph_SgFem",
+    "original_index": 58,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الحقائب ثقيلة",
+    "label": "Morph_PlBroken",
+    "original_index": 59,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الوردة جميلة",
+    "label": "Morph_SgFem",
+    "original_index": 60,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الورود جميلة",
+    "label": "Morph_PlBroken",
+    "original_index": 61,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "البنت تلعب",
+    "label": "Morph_SgFem",
+    "original_index": 62,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "البنات يلعبن",
+    "label": "Morph_PlFem",
+    "original_index": 63,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الممرضة تساعد",
+    "label": "Morph_SgFem",
+    "original_index": 64,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الممرضات يساعدن",
+    "label": "Morph_PlFem",
+    "original_index": 65,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الزهرة تتفتح",
+    "label": "Morph_SgFem",
+    "original_index": 66,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الزهرات تتفتحن",
+    "label": "Morph_PlFem",
+    "original_index": 67,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الشمس تشرق",
+    "label": "Morph_SgFem",
+    "original_index": 68,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الشموس تشرقن",
+    "label": "Morph_PlFem",
+    "original_index": 69,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الام تطبخ",
+    "label": "Morph_SgFem",
+    "original_index": 70,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الامهات يطبخن",
+    "label": "Morph_PlFem",
+    "original_index": 71,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "شرب الطفل الحليب",
+    "label": "Morph_Past",
+    "original_index": 72,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "اكل الولد التفاحة",
+    "label": "Morph_Past",
+    "original_index": 73,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "رسم الفنان لوحة",
+    "label": "Morph_Past",
+    "original_index": 74,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "زرعت الفتاة الوردة",
+    "label": "Morph_Past",
+    "original_index": 75,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "سمع الطالب الدرس",
+    "label": "Morph_Past",
+    "original_index": 76,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "فتح العامل الباب",
+    "label": "Morph_Past",
+    "original_index": 77,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "لعب الفريق المباراة",
+    "label": "Morph_Past",
+    "original_index": 78,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "نجح الطالب في الامتحان",
+    "label": "Morph_Past",
+    "original_index": 79,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "سافر المسافر الى المدينة",
+    "label": "Morph_Past",
+    "original_index": 80,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "عاد المسافر من الرحلة",
+    "label": "Morph_Past",
+    "original_index": 81,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "يشرب الطفل الحليب",
+    "label": "Morph_Pres",
+    "original_index": 82,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "ياكل الولد التفاحة",
+    "label": "Morph_Pres",
+    "original_index": 83,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "يرسم الفنان لوحة",
+    "label": "Morph_Pres",
+    "original_index": 84,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "تزرع الفتاة الوردة",
+    "label": "Morph_Pres",
+    "original_index": 85,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "يسمع الطالب الدرس",
+    "label": "Morph_Pres",
+    "original_index": 86,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "يفتح العامل الباب",
+    "label": "Morph_Pres",
+    "original_index": 87,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "يلعب الفريق المباراة",
+    "label": "Morph_Pres",
+    "original_index": 88,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "ينجح الطالب في الامتحان",
+    "label": "Morph_Pres",
+    "original_index": 89,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "يسافر المسافر الى المدينة",
+    "label": "Morph_Pres",
+    "original_index": 90,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "يعود المسافر من الرحلة",
+    "label": "Morph_Pres",
+    "original_index": 91,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذا بيتي",
+    "label": "Morph_Poss1Sg",
+    "original_index": 92,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذا قلمي",
+    "label": "Morph_Poss1Sg",
+    "original_index": 93,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذه سيارتي",
+    "label": "Morph_Poss1Sg",
+    "original_index": 94,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذا كتابي الجديد",
+    "label": "Morph_Poss1Sg",
+    "original_index": 95,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذه مدرستي الكبيرة",
+    "label": "Morph_Poss1Sg",
+    "original_index": 96,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذا هاتفي الذكي",
+    "label": "Morph_Poss1Sg",
+    "original_index": 97,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذا اخي الصغير",
+    "label": "Morph_Poss1Sg",
+    "original_index": 98,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذه لعبتي المفضلة",
+    "label": "Morph_Poss1Sg",
+    "original_index": 99,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذا حاسوبي المحمول",
+    "label": "Morph_Poss1Sg",
+    "original_index": 100,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذا فستاني الجديد",
+    "label": "Morph_Poss1Sg",
+    "original_index": 101,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذا دفترك",
+    "label": "Morph_Poss2MascSg",
+    "original_index": 102,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذا مفتاحك",
+    "label": "Morph_Poss2MascSg",
+    "original_index": 103,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذه حقيبتك",
+    "label": "Morph_Poss2MascSg",
+    "original_index": 104,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذا قلمك الرصاص",
+    "label": "Morph_Poss2MascSg",
+    "original_index": 105,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذه ساعتك الانيقة",
+    "label": "Morph_Poss2MascSg",
+    "original_index": 106,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذا عنوانك الجديد",
+    "label": "Morph_Poss2MascSg",
+    "original_index": 107,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذا رقم هاتفك",
+    "label": "Morph_Poss2MascSg",
+    "original_index": 108,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذه دراجتك النارية",
+    "label": "Morph_Poss2MascSg",
+    "original_index": 109,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذا مشروعك المثير",
+    "label": "Morph_Poss2MascSg",
+    "original_index": 110,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذا رايك الصائب",
+    "label": "Morph_Poss2MascSg",
+    "original_index": 111,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذا كتابه",
+    "label": "Morph_Poss3MascSg",
+    "original_index": 112,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذا قلمه الجديد",
+    "label": "Morph_Poss3MascSg",
+    "original_index": 113,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذه سيارته الفاخرة",
+    "label": "Morph_Poss3MascSg",
+    "original_index": 114,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذا بيته الواسع",
+    "label": "Morph_Poss3MascSg",
+    "original_index": 115,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذا عمله المتقن",
+    "label": "Morph_Poss3MascSg",
+    "original_index": 116,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذا حلمه الكبير",
+    "label": "Morph_Poss3MascSg",
+    "original_index": 117,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذا جهده المضني",
+    "label": "Morph_Poss3MascSg",
+    "original_index": 118,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذا نجاحه الباهر",
+    "label": "Morph_Poss3MascSg",
+    "original_index": 119,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذا اختراعه العظيم",
+    "label": "Morph_Poss3MascSg",
+    "original_index": 120,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذا رايه السديد",
+    "label": "Morph_Poss3MascSg",
+    "original_index": 121,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذا كتابها",
+    "label": "Morph_Poss3FemSg",
+    "original_index": 122,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذا قلمها الجميل",
+    "label": "Morph_Poss3FemSg",
+    "original_index": 123,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذه حقيبتها الانيقة",
+    "label": "Morph_Poss3FemSg",
+    "original_index": 124,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذه مدرستها القريبة",
+    "label": "Morph_Poss3FemSg",
+    "original_index": 125,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذا فستانها الجديد",
+    "label": "Morph_Poss3FemSg",
+    "original_index": 126,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذا هاتفها الحديث",
+    "label": "Morph_Poss3FemSg",
+    "original_index": 127,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذا سرها الدفين",
+    "label": "Morph_Poss3FemSg",
+    "original_index": 128,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذه موهبتها الرائعة",
+    "label": "Morph_Poss3FemSg",
+    "original_index": 129,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذا تصميمها المبتكر",
+    "label": "Morph_Poss3FemSg",
+    "original_index": 130,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذا رايها الحكيم",
+    "label": "Morph_Poss3FemSg",
+    "original_index": 131,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الممرضان يعتنيان بالمريض",
+    "label": "Morph_DualMasc",
+    "original_index": 132,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الطالبان يدرسان بجد",
+    "label": "Morph_DualMasc",
+    "original_index": 133,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الكتابان مفيدان جدا",
+    "label": "Morph_DualMasc",
+    "original_index": 134,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "القلمان جديدان وجميلان",
+    "label": "Morph_DualMasc",
+    "original_index": 135,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الولدان يلعبان في الحديقة",
+    "label": "Morph_DualMasc",
+    "original_index": 136,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "المعلمان يشرحان الدرس بوضوح",
+    "label": "Morph_DualMasc",
+    "original_index": 137,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "المهندسان يصممان المشروع",
+    "label": "Morph_DualMasc",
+    "original_index": 138,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "اللاعبان يسجلان الاهداف",
+    "label": "Morph_DualMasc",
+    "original_index": 139,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الرجلان يتحدثان بهدوء",
+    "label": "Morph_DualMasc",
+    "original_index": 140,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الصديقان يمشيان معا",
+    "label": "Morph_DualMasc",
+    "original_index": 141,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الممرضتان تعتنيان بالطفل",
+    "label": "Morph_DualFem",
+    "original_index": 142,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الطالبتان تدرسان معا",
+    "label": "Morph_DualFem",
+    "original_index": 143,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "القصتان ممتعتان وشائقتان",
+    "label": "Morph_DualFem",
+    "original_index": 144,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الوردتان متفتحتان وجميلتان",
+    "label": "Morph_DualFem",
+    "original_index": 145,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "البنتان تلعبان بالدمية",
+    "label": "Morph_DualFem",
+    "original_index": 146,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "المعلمتان تشرحان الدرس بسهولة",
+    "label": "Morph_DualFem",
+    "original_index": 147,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "المهندستان تصممان المبنى",
+    "label": "Morph_DualFem",
+    "original_index": 148,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "اللاعبتان تجريان بسرعة",
+    "label": "Morph_DualFem",
+    "original_index": 149,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "المراتان تتحدثان بلطف",
+    "label": "Morph_DualFem",
+    "original_index": 150,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الصديقتان تتبادلان الاسرار",
+    "label": "Morph_DualFem",
+    "original_index": 151,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذا منزلنا الجديد",
+    "label": "Morph_Poss1Pl",
+    "original_index": 152,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذه سياراتنا العائلية",
+    "label": "Morph_Poss1Pl",
+    "original_index": 153,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذا مشروعنا المشترك",
+    "label": "Morph_Poss1Pl",
+    "original_index": 154,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذه مدرستنا الثانوية",
+    "label": "Morph_Poss1Pl",
+    "original_index": 155,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذا فريقنا المتميز",
+    "label": "Morph_Poss1Pl",
+    "original_index": 156,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذه حديقتنا الخلفية",
+    "label": "Morph_Poss1Pl",
+    "original_index": 157,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذا مستقبلنا المشرق",
+    "label": "Morph_Poss1Pl",
+    "original_index": 158,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذه ذكرياتنا الجميلة",
+    "label": "Morph_Poss1Pl",
+    "original_index": 159,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذا وطننا الغالي",
+    "label": "Morph_Poss1Pl",
+    "original_index": 160,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذه قيمنا النبيلة",
+    "label": "Morph_Poss1Pl",
+    "original_index": 161,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذا كتابكم المفيد",
+    "label": "Morph_Poss2Pl",
+    "original_index": 162,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذه اقلامكم الملونة",
+    "label": "Morph_Poss2Pl",
+    "original_index": 163,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذه حقائبكم المدرسية",
+    "label": "Morph_Poss2Pl",
+    "original_index": 164,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذه هواتفكم الذكية",
+    "label": "Morph_Poss2Pl",
+    "original_index": 165,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذه منازلكم الانيقة",
+    "label": "Morph_Poss2Pl",
+    "original_index": 166,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذه سياراتكم الحديثة",
+    "label": "Morph_Poss2Pl",
+    "original_index": 167,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذه مشاريعكم الناجحة",
+    "label": "Morph_Poss2Pl",
+    "original_index": 168,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذه افكاركم المبتكرة",
+    "label": "Morph_Poss2Pl",
+    "original_index": 169,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذه جهودكم المثمرة",
+    "label": "Morph_Poss2Pl",
+    "original_index": 170,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذه ارائكم السديدة",
+    "label": "Morph_Poss2Pl",
+    "original_index": 171,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هؤلاء رجال صادقون",
+    "label": "Morph_AdjPlMasc",
+    "original_index": 172,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هؤلاء طلاب مجتهدون ونشيطون",
+    "label": "Morph_AdjPlMasc",
+    "original_index": 173,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هؤلاء مهندسون بارعون ومبدعون",
+    "label": "Morph_AdjPlMasc",
+    "original_index": 174,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هؤلاء اطباء ماهرون ورحيمون",
+    "label": "Morph_AdjPlMasc",
+    "original_index": 175,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هؤلاء معلمون مخلصون ومتفانون",
+    "label": "Morph_AdjPlMasc",
+    "original_index": 176,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هؤلاء فنانون موهوبون وملهمون",
+    "label": "Morph_AdjPlMasc",
+    "original_index": 177,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هؤلاء كتاب مبدعون ومثقفون",
+    "label": "Morph_AdjPlMasc",
+    "original_index": 178,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هؤلاء علماء بارزون ومكتشفون",
+    "label": "Morph_AdjPlMasc",
+    "original_index": 179,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هؤلاء قادة حكماء وعادلون",
+    "label": "Morph_AdjPlMasc",
+    "original_index": 180,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هؤلاء اصدقاء اوفياء ومخلصون",
+    "label": "Morph_AdjPlMasc",
+    "original_index": 181,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هؤلاء نساء فاضلات",
+    "label": "Morph_AdjPlFem",
+    "original_index": 182,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هؤلاء طالبات مجتهدات ومهذبات",
+    "label": "Morph_AdjPlFem",
+    "original_index": 183,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هؤلاء ممرضات رحيمات ومتفانيات",
+    "label": "Morph_AdjPlFem",
+    "original_index": 184,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هؤلاء معلمات قديرات ومربيات",
+    "label": "Morph_AdjPlFem",
+    "original_index": 185,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هؤلاء فنانات مبدعات وانيقات",
+    "label": "Morph_AdjPlFem",
+    "original_index": 186,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هؤلاء كاتبات لامعات ومؤثرات",
+    "label": "Morph_AdjPlFem",
+    "original_index": 187,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هؤلاء عالمات باحثات ومجتهدات",
+    "label": "Morph_AdjPlFem",
+    "original_index": 188,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هؤلاء قائدات ملهمات وقويات",
+    "label": "Morph_AdjPlFem",
+    "original_index": 189,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هؤلاء صديقات مخلصات وودودات",
+    "label": "Morph_AdjPlFem",
+    "original_index": 190,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هؤلاء امهات حنونات وعطوفات",
+    "label": "Morph_AdjPlFem",
+    "original_index": 191,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  }
+]

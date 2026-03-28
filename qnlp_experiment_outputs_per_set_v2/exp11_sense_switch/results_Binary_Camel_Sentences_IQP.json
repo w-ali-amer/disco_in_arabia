@@ -1,0 +1,29 @@
+{
+  "tag": "Binary_Camel_Sentences/IQP/L1",
+  "pair_name": "Binary_Camel_Sentences",
+  "ansatz": "IQP",
+  "n_layers": 1,
+  "pivot": "جمل",
+  "n_samples": 30,
+  "n_folds": 5,
+  "oracle_mean": 0.5666666666666667,
+  "oracle_std": 0.20000000000000004,
+  "oracle_folds": [
+    0.3333333333333333,
+    0.6666666666666666,
+    0.8333333333333334,
+    0.6666666666666666,
+    0.3333333333333333
+  ],
+  "oracle_report": "                     precision    recall  f1-score   support\n\n    Ambiguity_Camel       0.55      0.73      0.63        15\nAmbiguity_Sentences       0.60      0.40      0.48        15\n\n           accuracy                           0.57        30\n          macro avg       0.57      0.57      0.55        30\n       weighted avg       0.57      0.57      0.55        30\n",
+  "auto_mean": 0.5666666666666667,
+  "auto_std": 0.20000000000000004,
+  "auto_folds": [
+    0.3333333333333333,
+    0.6666666666666666,
+    0.8333333333333334,
+    0.6666666666666666,
+    0.3333333333333333
+  ],
+  "auto_report": "                     precision    recall  f1-score   support\n\n    Ambiguity_Camel       0.55      0.73      0.63        15\nAmbiguity_Sentences       0.60      0.40      0.48        15\n\n           accuracy                           0.57        30\n          macro avg       0.57      0.57      0.55        30\n       weighted avg       0.57      0.57      0.55        30\n"
+}

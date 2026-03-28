@@ -1,0 +1,56 @@
+{
+  "pair_name": "Binary_Eye_Spring",
+  "n": 30,
+  "cls_a": "Ambiguity_Eye",
+  "cls_b": "Ambiguity_Spring",
+  "classifiers": {
+    "SVM_linear": {
+      "mean": 0.9666666666666666,
+      "std": 0.06666666666666665,
+      "folds": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.8333333333333334
+      ],
+      "report": "                  precision    recall  f1-score   support\n\n   Ambiguity_Eye       1.00      0.93      0.97        15\nAmbiguity_Spring       0.94      1.00      0.97        15\n\n        accuracy                           0.97        30\n       macro avg       0.97      0.97      0.97        30\n    weighted avg       0.97      0.97      0.97        30\n"
+    },
+    "SVM_rbf": {
+      "mean": 1.0,
+      "std": 0.0,
+      "folds": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "report": "                  precision    recall  f1-score   support\n\n   Ambiguity_Eye       1.00      1.00      1.00        15\nAmbiguity_Spring       1.00      1.00      1.00        15\n\n        accuracy                           1.00        30\n       macro avg       1.00      1.00      1.00        30\n    weighted avg       1.00      1.00      1.00        30\n"
+    },
+    "RF": {
+      "mean": 0.9333333333333333,
+      "std": 0.08164965809277258,
+      "folds": [
+        0.8333333333333334,
+        0.8333333333333334,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "report": "                  precision    recall  f1-score   support\n\n   Ambiguity_Eye       0.88      1.00      0.94        15\nAmbiguity_Spring       1.00      0.87      0.93        15\n\n        accuracy                           0.93        30\n       macro avg       0.94      0.93      0.93        30\n    weighted avg       0.94      0.93      0.93        30\n"
+    },
+    "MLP": {
+      "mean": 0.7666666666666666,
+      "std": 0.13333333333333336,
+      "folds": [
+        0.6666666666666666,
+        0.6666666666666666,
+        1.0,
+        0.8333333333333334,
+        0.6666666666666666
+      ],
+      "report": "                  precision    recall  f1-score   support\n\n   Ambiguity_Eye       0.90      0.60      0.72        15\nAmbiguity_Spring       0.70      0.93      0.80        15\n\n        accuracy                           0.77        30\n       macro avg       0.80      0.77      0.76        30\n    weighted avg       0.80      0.77      0.76        30\n"
+    }
+  }
+}

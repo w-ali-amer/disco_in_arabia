@@ -1,0 +1,21 @@
+{
+  "exp_name": "Morphology_Tense",
+  "ansatz": "IQP",
+  "n_samples": 28,
+  "n_classes": 2,
+  "n_s_qubits": 1,
+  "fold_accuracies": [
+    0.8333333333333334,
+    0.6666666666666666,
+    0.3333333333333333,
+    0.8,
+    0.4
+  ],
+  "accuracy_mean": 0.6066666666666667,
+  "accuracy_std": 0.20483055327649624,
+  "class_list": [
+    "Past",
+    "Pres"
+  ],
+  "classification_report": "              precision    recall  f1-score   support\n\n        Past       0.58      0.79      0.67        14\n        Pres       0.67      0.43      0.52        14\n\n    accuracy                           0.61        28\n   macro avg       0.62      0.61      0.59        28\nweighted avg       0.62      0.61      0.59        28\n"
+}

@@ -1,0 +1,1127 @@
+[
+  {
+    "sentence": "جاء الرجل الطويل",
+    "label": "Ambiguity_Man",
+    "original_index": 0,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الرجل القوي يعمل",
+    "label": "Ambiguity_Man",
+    "original_index": 1,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "تحدث الرجل الحكيم",
+    "label": "Ambiguity_Man",
+    "original_index": 2,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذا الرجل طبيب",
+    "label": "Ambiguity_Man",
+    "original_index": 3,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "رايت رجلا في السوق",
+    "label": "Ambiguity_Man",
+    "original_index": 4,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الرجل العجوز جلس",
+    "label": "Ambiguity_Man",
+    "original_index": 5,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "سال الرجل سؤالا",
+    "label": "Ambiguity_Man",
+    "original_index": 6,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "اعطى الرجل المال",
+    "label": "Ambiguity_Man",
+    "original_index": 7,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "ابتسم الرجل السعيد",
+    "label": "Ambiguity_Man",
+    "original_index": 8,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "يسافر الرجل غدا",
+    "label": "Ambiguity_Man",
+    "original_index": 9,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "انكسرت رجل الكرسي",
+    "label": "Ambiguity_Leg",
+    "original_index": 10,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "للطاولة اربع ارجل",
+    "label": "Ambiguity_Leg",
+    "original_index": 11,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "عالج الطبيب رجل المريض",
+    "label": "Ambiguity_Leg",
+    "original_index": 12,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "وضع الكتاب على رجله",
+    "label": "Ambiguity_Leg",
+    "original_index": 13,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "رجل السرير مكسورة",
+    "label": "Ambiguity_Leg",
+    "original_index": 14,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "اصيبت رجل اللاعب",
+    "label": "Ambiguity_Leg",
+    "original_index": 15,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "لا تلمس رجل المكتب",
+    "label": "Ambiguity_Leg",
+    "original_index": 16,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "تحتاج الطاولة الى رجل جديدة",
+    "label": "Ambiguity_Leg",
+    "original_index": 17,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الم الرجل شديد",
+    "label": "Ambiguity_Leg",
+    "original_index": 18,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "طول رجل الزرافة كبير",
+    "label": "Ambiguity_Leg",
+    "original_index": 19,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "شربت من عين الماء",
+    "label": "Ambiguity_Spring",
+    "original_index": 20,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "عين الطفل زرقاء",
+    "label": "Ambiguity_Eye",
+    "original_index": 21,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذه عين صافية",
+    "label": "Ambiguity_Eye",
+    "original_index": 22,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "في الصحراء عين ماء نادرة",
+    "label": "Ambiguity_Spring",
+    "original_index": 23,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "رايت بعيني اليمنى",
+    "label": "Ambiguity_Eye",
+    "original_index": 24,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "تدفقت عين الماء بغزارة",
+    "label": "Ambiguity_Spring",
+    "original_index": 25,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "اصيب اللاعب في عينه",
+    "label": "Ambiguity_Eye",
+    "original_index": 26,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "وجدوا عين ماء عذبة في الجبل",
+    "label": "Ambiguity_Spring",
+    "original_index": 27,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "عين الحسود فيها عود",
+    "label": "Ambiguity_Eye",
+    "original_index": 28,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "نبعت عين جديدة في الوادي",
+    "label": "Ambiguity_Spring",
+    "original_index": 29,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "رايت جملا في الصحراء",
+    "label": "Ambiguity_Camel",
+    "original_index": 30,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الجمل سفينة الصحراء",
+    "label": "Ambiguity_Camel",
+    "original_index": 31,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "ركبت جملا قويا",
+    "label": "Ambiguity_Camel",
+    "original_index": 32,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "اشترى ابي جملا",
+    "label": "Ambiguity_Camel",
+    "original_index": 33,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الجمل ياكل العشب",
+    "label": "Ambiguity_Camel",
+    "original_index": 34,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "صوت الجمل رغاء",
+    "label": "Ambiguity_Camel",
+    "original_index": 35,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "في الحديقة جمل صغير",
+    "label": "Ambiguity_Camel",
+    "original_index": 36,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الجمل حيوان صبور",
+    "label": "Ambiguity_Camel",
+    "original_index": 37,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "شاهدت قافلة جمال",
+    "label": "Ambiguity_Camel",
+    "original_index": 38,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "لحم الجمل لذيذ",
+    "label": "Ambiguity_Camel",
+    "original_index": 39,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "قرات جملا مفيدة",
+    "label": "Ambiguity_Sentences",
+    "original_index": 40,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الكتاب يحتوي على جمل كثيرة",
+    "label": "Ambiguity_Sentences",
+    "original_index": 41,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "المعلم شرح الجملة الاسمية",
+    "label": "Ambiguity_Sentences",
+    "original_index": 42,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "اكتب جملا صحيحة",
+    "label": "Ambiguity_Sentences",
+    "original_index": 43,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "هذه جملة بسيطة",
+    "label": "Ambiguity_Sentences",
+    "original_index": 44,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "حلل هذه الجمل",
+    "label": "Ambiguity_Sentences",
+    "original_index": 45,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الجمل في اللغة العربية متنوعة",
+    "label": "Ambiguity_Sentences",
+    "original_index": 46,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "كون جملا من هذه الكلمات",
+    "label": "Ambiguity_Sentences",
+    "original_index": 47,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "فهمت معنى الجملة",
+    "label": "Ambiguity_Sentences",
+    "original_index": 48,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الجملة الفعلية تبدا بفعل",
+    "label": "Ambiguity_Sentences",
+    "original_index": 49,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "رفعنا علم البلاد عاليا",
+    "label": "Ambiguity_Flag",
+    "original_index": 50,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "شاهدت علم المملكة يرفرف",
+    "label": "Ambiguity_Flag",
+    "original_index": 51,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الوان العلم جميلة",
+    "label": "Ambiguity_Flag",
+    "original_index": 52,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "نحترم علم دولتنا",
+    "label": "Ambiguity_Flag",
+    "original_index": 53,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "في المدرسة علم كبير",
+    "label": "Ambiguity_Flag",
+    "original_index": 54,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "العلم رمز السيادة",
+    "label": "Ambiguity_Flag",
+    "original_index": 55,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "رسمت علم السعودية",
+    "label": "Ambiguity_Flag",
+    "original_index": 56,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "احتفلنا بيوم العلم",
+    "label": "Ambiguity_Flag",
+    "original_index": 57,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "العلم يمثل الوطن",
+    "label": "Ambiguity_Flag",
+    "original_index": 58,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "يجب احترام العلم",
+    "label": "Ambiguity_Flag",
+    "original_index": 59,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "اكتسبت علما كثيرا من القراءة",
+    "label": "Ambiguity_Knowledge",
+    "original_index": 60,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "العلم نور والجهل ظلام",
+    "label": "Ambiguity_Knowledge",
+    "original_index": 61,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "طلب العلم فريضة",
+    "label": "Ambiguity_Knowledge",
+    "original_index": 62,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "العالم لديه علم واسع",
+    "label": "Ambiguity_Knowledge",
+    "original_index": 63,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "يهتم الطلاب بالعلم",
+    "label": "Ambiguity_Knowledge",
+    "original_index": 64,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "العلم يرفع شان الامم",
+    "label": "Ambiguity_Knowledge",
+    "original_index": 65,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "بالعلم والعمل نرتقي",
+    "label": "Ambiguity_Knowledge",
+    "original_index": 66,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "العلم الحديث متطور",
+    "label": "Ambiguity_Knowledge",
+    "original_index": 67,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "اسعى لزيادة علمي",
+    "label": "Ambiguity_Knowledge",
+    "original_index": 68,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "العلم طريق النجاح",
+    "label": "Ambiguity_Knowledge",
+    "original_index": 69,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "كان الملك عادلا",
+    "label": "Ambiguity_King",
+    "original_index": 70,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "توج الملك في احتفال كبير",
+    "label": "Ambiguity_King",
+    "original_index": 71,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "يحب الشعب الملك",
+    "label": "Ambiguity_King",
+    "original_index": 72,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "قصر الملك فخم",
+    "label": "Ambiguity_King",
+    "original_index": 73,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "اوامر الملك نافذة",
+    "label": "Ambiguity_King",
+    "original_index": 74,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "حكم الملك البلاد بالعدل",
+    "label": "Ambiguity_King",
+    "original_index": 75,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "صورة الملك معلقة في المكتب",
+    "label": "Ambiguity_King",
+    "original_index": 76,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "استقبل الملك الوفود",
+    "label": "Ambiguity_King",
+    "original_index": 77,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الملك يولي اهتماما بالتعليم",
+    "label": "Ambiguity_King",
+    "original_index": 78,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "عهد الملك مزدهر",
+    "label": "Ambiguity_King",
+    "original_index": 79,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "ملك الفلاح الارض",
+    "label": "Ambiguity_Possess",
+    "original_index": 80,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "ملك التاجر ثروة كبيرة",
+    "label": "Ambiguity_Possess",
+    "original_index": 81,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "ملك الطالب قلما جديدا",
+    "label": "Ambiguity_Possess",
+    "original_index": 82,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "ملك المدير سلطة واسعة",
+    "label": "Ambiguity_Possess",
+    "original_index": 83,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "ملك الطفل لعبة جميلة",
+    "label": "Ambiguity_Possess",
+    "original_index": 84,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "ملك الفنان موهبة فريدة",
+    "label": "Ambiguity_Possess",
+    "original_index": 85,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "ملك العالم اكتشافات عظيمة",
+    "label": "Ambiguity_Possess",
+    "original_index": 86,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "ملك الشاعر احساسا مرهفا",
+    "label": "Ambiguity_Possess",
+    "original_index": 87,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "ملك القائد حكمة بالغة",
+    "label": "Ambiguity_Possess",
+    "original_index": 88,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "ملك المزارع حقلا خصبا",
+    "label": "Ambiguity_Possess",
+    "original_index": 89,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "ضرب الولد الكرة",
+    "label": "Ambiguity_Hit",
+    "original_index": 90,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "ضرب المعلم الطالب",
+    "label": "Ambiguity_Hit",
+    "original_index": 91,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "ضرب اللاعب الهدف",
+    "label": "Ambiguity_Hit",
+    "original_index": 92,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "ضربت الريح النافذة",
+    "label": "Ambiguity_Hit",
+    "original_index": 93,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "ضرب المطر الارض",
+    "label": "Ambiguity_Hit",
+    "original_index": 94,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "ضرب الشرطي اللص",
+    "label": "Ambiguity_Hit",
+    "original_index": 95,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "ضربت الساعة الجرس",
+    "label": "Ambiguity_Hit",
+    "original_index": 96,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "ضرب الموج الشاطئ",
+    "label": "Ambiguity_Hit",
+    "original_index": 97,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "ضرب العامل الحديد",
+    "label": "Ambiguity_Hit",
+    "original_index": 98,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "ضربت الشمس وجهي",
+    "label": "Ambiguity_Hit",
+    "original_index": 99,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "تعلمنا كيف نضرب الاعداد",
+    "label": "Ambiguity_Multiply",
+    "original_index": 100,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "ضرب خمسة في ثلاثة يساوي خمسة عشر",
+    "label": "Ambiguity_Multiply",
+    "original_index": 101,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "يجب ان نضرب الكميات بدقة",
+    "label": "Ambiguity_Multiply",
+    "original_index": 102,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "ضربنا الرقم في نفسه",
+    "label": "Ambiguity_Multiply",
+    "original_index": 103,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "عملية الضرب سهلة",
+    "label": "Ambiguity_Multiply",
+    "original_index": 104,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "نحتاج ان نضرب هذه الارقام",
+    "label": "Ambiguity_Multiply",
+    "original_index": 105,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "ضرب المعلم مثالا",
+    "label": "Ambiguity_Multiply",
+    "original_index": 106,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "يمكننا ضرب الكسور",
+    "label": "Ambiguity_Multiply",
+    "original_index": 107,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "ضربت الامثلة فهمي للمسالة",
+    "label": "Ambiguity_Multiply",
+    "original_index": 108,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "ضربت الاسعار بسبب التضخم",
+    "label": "Ambiguity_Multiply",
+    "original_index": 109,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "فتح الولد الباب",
+    "label": "Ambiguity_Open",
+    "original_index": 110,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "فتح الطالب الكتاب",
+    "label": "Ambiguity_Open",
+    "original_index": 111,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "فتح الطبيب العيادة",
+    "label": "Ambiguity_Open",
+    "original_index": 112,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "فتح العامل النافذة",
+    "label": "Ambiguity_Open",
+    "original_index": 113,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "فتح الزهرة اوراقها",
+    "label": "Ambiguity_Open",
+    "original_index": 114,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "فتح القائد المدينة",
+    "label": "Ambiguity_Conquer",
+    "original_index": 115,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "فتح المسلمون الاندلس",
+    "label": "Ambiguity_Conquer",
+    "original_index": 116,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "فتح الجيش الحصن",
+    "label": "Ambiguity_Conquer",
+    "original_index": 117,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "فتح صلاح الدين القدس",
+    "label": "Ambiguity_Conquer",
+    "original_index": 118,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "فتح الفاتح القسطنطينية",
+    "label": "Ambiguity_Conquer",
+    "original_index": 119,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "فتح الصندوق بالمفتاح",
+    "label": "Ambiguity_Open",
+    "original_index": 120,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "فتح الحارس البوابة",
+    "label": "Ambiguity_Open",
+    "original_index": 121,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "فتح المظلة عندما امطرت",
+    "label": "Ambiguity_Open",
+    "original_index": 122,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "فتح قلبه للحب",
+    "label": "Ambiguity_Open",
+    "original_index": 123,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "فتح الشهية برائحة الطعام",
+    "label": "Ambiguity_Open",
+    "original_index": 124,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  }
+]

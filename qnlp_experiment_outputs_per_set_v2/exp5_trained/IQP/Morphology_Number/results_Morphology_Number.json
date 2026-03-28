@@ -1,0 +1,22 @@
+{
+  "exp_name": "Morphology_Number",
+  "ansatz": "IQP",
+  "n_samples": 98,
+  "n_classes": 3,
+  "n_s_qubits": 2,
+  "fold_accuracies": [
+    0.45,
+    0.25,
+    0.25,
+    0.3157894736842105,
+    0.2631578947368421
+  ],
+  "accuracy_mean": 0.3057894736842105,
+  "accuracy_std": 0.07607766843396971,
+  "classification_report": "              precision    recall  f1-score   support\n\n          Du       0.32      0.27      0.29        22\n          Pl       0.50      0.38      0.43        47\n          Sg       0.29      0.21      0.24        29\n\n   micro avg       0.39      0.31      0.34        98\n   macro avg       0.37      0.29      0.32        98\nweighted avg       0.40      0.31      0.34        98\n",
+  "class_list": [
+    "Du",
+    "Pl",
+    "Sg"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "exp_name": "Binary_Man_Leg",
+  "ansatz": "Sim14",
+  "n_samples": 30,
+  "n_classes": 2,
+  "chance": 0.5,
+  "n_folds": 5,
+  "mean": 0.5,
+  "std": 0.21081851067789195,
+  "folds": [
+    0.16666666666666666,
+    0.6666666666666666,
+    0.6666666666666666,
+    0.6666666666666666,
+    0.3333333333333333
+  ],
+  "report": "               precision    recall  f1-score   support\n\nAmbiguity_Leg       0.50      0.53      0.52        15\nAmbiguity_Man       0.50      0.47      0.48        15\n\n     accuracy                           0.50        30\n    macro avg       0.50      0.50      0.50        30\n weighted avg       0.50      0.50      0.50        30\n"
+}

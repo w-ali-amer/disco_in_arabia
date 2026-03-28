@@ -1,0 +1,18 @@
+{
+  "exp_name": "Binary_Knowledge_Flag",
+  "ansatz": "Sim14",
+  "n_samples": 30,
+  "n_classes": 2,
+  "chance": 0.5,
+  "n_folds": 5,
+  "mean": 0.5333333333333333,
+  "std": 0.1247219128924647,
+  "folds": [
+    0.6666666666666666,
+    0.3333333333333333,
+    0.5,
+    0.6666666666666666,
+    0.5
+  ],
+  "report": "                     precision    recall  f1-score   support\n\n     Ambiguity_Flag       0.53      0.60      0.56        15\nAmbiguity_Knowledge       0.54      0.47      0.50        15\n\n           accuracy                           0.53        30\n          macro avg       0.53      0.53      0.53        30\n       weighted avg       0.53      0.53      0.53        30\n"
+}

@@ -1,0 +1,56 @@
+{
+  "pair_name": "Binary_Hit_Multiply",
+  "n": 30,
+  "cls_a": "Ambiguity_Hit",
+  "cls_b": "Ambiguity_Multiply",
+  "classifiers": {
+    "SVM_linear": {
+      "mean": 0.8666666666666666,
+      "std": 0.12472191289246473,
+      "folds": [
+        1.0,
+        0.8333333333333334,
+        1.0,
+        0.6666666666666666,
+        0.8333333333333334
+      ],
+      "report": "                    precision    recall  f1-score   support\n\n     Ambiguity_Hit       0.79      1.00      0.88        15\nAmbiguity_Multiply       1.00      0.73      0.85        15\n\n          accuracy                           0.87        30\n         macro avg       0.89      0.87      0.86        30\n      weighted avg       0.89      0.87      0.86        30\n"
+    },
+    "SVM_rbf": {
+      "mean": 0.8333333333333334,
+      "std": 0.18257418583505536,
+      "folds": [
+        1.0,
+        0.8333333333333334,
+        1.0,
+        0.5,
+        0.8333333333333334
+      ],
+      "report": "                    precision    recall  f1-score   support\n\n     Ambiguity_Hit       0.78      0.93      0.85        15\nAmbiguity_Multiply       0.92      0.73      0.81        15\n\n          accuracy                           0.83        30\n         macro avg       0.85      0.83      0.83        30\n      weighted avg       0.85      0.83      0.83        30\n"
+    },
+    "RF": {
+      "mean": 0.8,
+      "std": 0.0666666666666667,
+      "folds": [
+        0.8333333333333334,
+        0.8333333333333334,
+        0.8333333333333334,
+        0.6666666666666666,
+        0.8333333333333334
+      ],
+      "report": "                    precision    recall  f1-score   support\n\n     Ambiguity_Hit       0.76      0.87      0.81        15\nAmbiguity_Multiply       0.85      0.73      0.79        15\n\n          accuracy                           0.80        30\n         macro avg       0.81      0.80      0.80        30\n      weighted avg       0.81      0.80      0.80        30\n"
+    },
+    "MLP": {
+      "mean": 0.7666666666666667,
+      "std": 0.08164965809277264,
+      "folds": [
+        0.8333333333333334,
+        0.8333333333333334,
+        0.6666666666666666,
+        0.6666666666666666,
+        0.8333333333333334
+      ],
+      "report": "                    precision    recall  f1-score   support\n\n     Ambiguity_Hit       0.72      0.87      0.79        15\nAmbiguity_Multiply       0.83      0.67      0.74        15\n\n          accuracy                           0.77        30\n         macro avg       0.78      0.77      0.76        30\n      weighted avg       0.78      0.77      0.76        30\n"
+    }
+  }
+}

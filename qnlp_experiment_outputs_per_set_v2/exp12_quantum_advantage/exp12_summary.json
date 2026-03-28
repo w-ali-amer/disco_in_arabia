@@ -1,0 +1,179 @@
+{
+  "scenario1_tense": {
+    "quantum_exp5": 0.753,
+    "classical_best": 0.547,
+    "delta": 0.206,
+    "source": "exp5_trained / exp9_tense_deep"
+  },
+  "scenario2_wordorder": {
+    "classical": {
+      "tag": "WordOrder_SVO-VSO_Classical",
+      "mean": 0.1,
+      "std": 0.030618621784789725,
+      "folds": [
+        0.125,
+        0.125,
+        0.0625,
+        0.125,
+        0.0625
+      ]
+    },
+    "qfm_iqp_l1": {
+      "tag": "WordOrder_SVO-VSO_QFM_IQP_L1",
+      "mean": 0.525,
+      "std": 0.075,
+      "folds": [
+        0.625,
+        0.4375,
+        0.4375,
+        0.5625,
+        0.5625
+      ],
+      "report": "              precision    recall  f1-score   support\n\n         SVO       0.52      0.60      0.56        40\n         VSO       0.53      0.45      0.49        40\n\n    accuracy                           0.53        80\n   macro avg       0.53      0.53      0.52        80\nweighted avg       0.53      0.53      0.52        80\n"
+    },
+    "qfm_iqp_l2": {
+      "tag": "WordOrder_SVO-VSO_QFM_IQP_L2",
+      "mean": 0.6375,
+      "std": 0.046770717334674264,
+      "folds": [
+        0.625,
+        0.6875,
+        0.625,
+        0.5625,
+        0.6875
+      ],
+      "report": "              precision    recall  f1-score   support\n\n         SVO       0.65      0.60      0.62        40\n         VSO       0.63      0.68      0.65        40\n\n    accuracy                           0.64        80\n   macro avg       0.64      0.64      0.64        80\nweighted avg       0.64      0.64      0.64        80\n"
+    },
+    "spsa_iqp_l1": {
+      "tag": "WordOrder_SVO-VSO_SPSA_IQP_L1",
+      "mean": 0.5375,
+      "std": 0.075,
+      "folds": [
+        0.625,
+        0.5,
+        0.5,
+        0.4375,
+        0.625
+      ]
+    }
+  },
+  "scenario3_lexico_structural": {
+    "King_Possess": {
+      "classical": {
+        "tag": "King_Possess_Classical",
+        "mean": 1.0,
+        "std": 0.0,
+        "folds": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "qfm_iqp_l1": {
+        "tag": "King_Possess_QFM_IQP_L1",
+        "mean": 0.6333333333333333,
+        "std": 0.06666666666666665,
+        "folds": [
+          0.6666666666666666,
+          0.6666666666666666,
+          0.6666666666666666,
+          0.6666666666666666,
+          0.5
+        ],
+        "report": "                   precision    recall  f1-score   support\n\n   Ambiguity_King       0.60      0.80      0.69        15\nAmbiguity_Possess       0.70      0.47      0.56        15\n\n         accuracy                           0.63        30\n        macro avg       0.65      0.63      0.62        30\n     weighted avg       0.65      0.63      0.62        30\n"
+      },
+      "spsa_iqp_l1": {
+        "tag": "King_Possess_SPSA_IQP_L1",
+        "mean": 0.5333333333333333,
+        "std": 0.1632993161855452,
+        "folds": [
+          0.6666666666666666,
+          0.6666666666666666,
+          0.3333333333333333,
+          0.3333333333333333,
+          0.6666666666666666
+        ]
+      }
+    },
+    "Hit_Multiply": {
+      "classical": {
+        "tag": "Hit_Multiply_Classical",
+        "mean": 0.8333333333333334,
+        "std": 0.18257418583505536,
+        "folds": [
+          1.0,
+          0.8333333333333334,
+          1.0,
+          0.5,
+          0.8333333333333334
+        ]
+      },
+      "qfm_iqp_l1": {
+        "tag": "Hit_Multiply_QFM_IQP_L1",
+        "mean": 0.5,
+        "std": 0.23570226039551584,
+        "folds": [
+          0.16666666666666666,
+          0.5,
+          0.6666666666666666,
+          0.3333333333333333,
+          0.8333333333333334
+        ],
+        "report": "                    precision    recall  f1-score   support\n\n     Ambiguity_Hit       0.50      0.33      0.40        15\nAmbiguity_Multiply       0.50      0.67      0.57        15\n\n          accuracy                           0.50        30\n         macro avg       0.50      0.50      0.49        30\n      weighted avg       0.50      0.50      0.49        30\n"
+      },
+      "spsa_iqp_l1": {
+        "tag": "Hit_Multiply_SPSA_IQP_L1",
+        "mean": 0.5333333333333333,
+        "std": 0.06666666666666665,
+        "folds": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.6666666666666666
+        ]
+      }
+    },
+    "Open_Conquer": {
+      "classical": {
+        "tag": "Open_Conquer_Classical",
+        "mean": 0.9666666666666668,
+        "std": 0.06666666666666667,
+        "folds": [
+          1.0,
+          0.8333333333333334,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "qfm_iqp_l1": {
+        "tag": "Open_Conquer_QFM_IQP_L1",
+        "mean": 0.6333333333333333,
+        "std": 0.06666666666666667,
+        "folds": [
+          0.6666666666666666,
+          0.6666666666666666,
+          0.5,
+          0.6666666666666666,
+          0.6666666666666666
+        ],
+        "report": "                   precision    recall  f1-score   support\n\nAmbiguity_Conquer       0.61      0.73      0.67        15\n   Ambiguity_Open       0.67      0.53      0.59        15\n\n         accuracy                           0.63        30\n        macro avg       0.64      0.63      0.63        30\n     weighted avg       0.64      0.63      0.63        30\n"
+      },
+      "spsa_iqp_l1": {
+        "tag": "Open_Conquer_SPSA_IQP_L1",
+        "mean": 0.4666666666666666,
+        "std": 0.19436506316151,
+        "folds": [
+          0.5,
+          0.16666666666666666,
+          0.6666666666666666,
+          0.3333333333333333,
+          0.6666666666666666
+        ]
+      }
+    }
+  }
+}

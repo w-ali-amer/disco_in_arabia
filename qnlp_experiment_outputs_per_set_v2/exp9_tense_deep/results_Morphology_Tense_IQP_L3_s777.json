@@ -1,0 +1,20 @@
+{
+  "tag": "Morphology_Tense/IQP/L3/seed777",
+  "exp_name": "Morphology_Tense",
+  "ansatz": "IQP",
+  "n_layers": 3,
+  "seed": 777,
+  "n_samples": 50,
+  "n_classes": 2,
+  "chance": 0.5,
+  "mean": 0.6599999999999999,
+  "std": 0.14966629547095767,
+  "folds": [
+    0.6,
+    0.4,
+    0.8,
+    0.8,
+    0.7
+  ],
+  "report": "              precision    recall  f1-score   support\n\n        Past       0.64      0.72      0.68        25\n        Pres       0.68      0.60      0.64        25\n\n    accuracy                           0.66        50\n   macro avg       0.66      0.66      0.66        50\nweighted avg       0.66      0.66      0.66        50\n"
+}

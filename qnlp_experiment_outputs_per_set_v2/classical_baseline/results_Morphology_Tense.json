@@ -1,0 +1,56 @@
+{
+  "exp_name": "Morphology_Tense",
+  "n_samples": 28,
+  "n_classes": 2,
+  "chance": 0.5,
+  "classifiers": {
+    "SVM_linear": {
+      "mean": 0.5333333333333333,
+      "std": 0.09189365834726813,
+      "folds": [
+        0.5,
+        0.5,
+        0.6666666666666666,
+        0.4,
+        0.6
+      ],
+      "report": "              precision    recall  f1-score   support\n\n        Past       0.55      0.43      0.48        14\n        Pres       0.53      0.64      0.58        14\n\n    accuracy                           0.54        28\n   macro avg       0.54      0.54      0.53        28\nweighted avg       0.54      0.54      0.53        28\n"
+    },
+    "SVM_rbf": {
+      "mean": 0.5466666666666666,
+      "std": 0.1528979325490629,
+      "folds": [
+        0.3333333333333333,
+        0.5,
+        0.5,
+        0.8,
+        0.6
+      ],
+      "report": "              precision    recall  f1-score   support\n\n        Past       0.53      0.57      0.55        14\n        Pres       0.54      0.50      0.52        14\n\n    accuracy                           0.54        28\n   macro avg       0.54      0.54      0.54        28\nweighted avg       0.54      0.54      0.54        28\n"
+    },
+    "RF": {
+      "mean": 0.3266666666666666,
+      "std": 0.15260697523012795,
+      "folds": [
+        0.3333333333333333,
+        0.16666666666666666,
+        0.3333333333333333,
+        0.6,
+        0.2
+      ],
+      "report": "              precision    recall  f1-score   support\n\n        Past       0.33      0.36      0.34        14\n        Pres       0.31      0.29      0.30        14\n\n    accuracy                           0.32        28\n   macro avg       0.32      0.32      0.32        28\nweighted avg       0.32      0.32      0.32        28\n"
+    },
+    "MLP": {
+      "mean": 0.4666666666666667,
+      "std": 0.1398411797560202,
+      "folds": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.6666666666666666,
+        0.4,
+        0.6
+      ],
+      "report": "              precision    recall  f1-score   support\n\n        Past       0.33      0.07      0.12        14\n        Pres       0.48      0.86      0.62        14\n\n    accuracy                           0.46        28\n   macro avg       0.41      0.46      0.37        28\nweighted avg       0.41      0.46      0.37        28\n"
+    }
+  }
+}

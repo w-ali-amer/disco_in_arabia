@@ -1,0 +1,18 @@
+{
+  "exp_name": "Binary_Knowledge_Flag",
+  "ansatz": "IQP",
+  "n_samples": 30,
+  "n_classes": 2,
+  "chance": 0.5,
+  "n_folds": 5,
+  "mean": 0.7,
+  "std": 0.19436506316151003,
+  "folds": [
+    0.5,
+    1.0,
+    0.6666666666666666,
+    0.8333333333333334,
+    0.5
+  ],
+  "report": "                     precision    recall  f1-score   support\n\n     Ambiguity_Flag       0.67      0.80      0.73        15\nAmbiguity_Knowledge       0.75      0.60      0.67        15\n\n           accuracy                           0.70        30\n          macro avg       0.71      0.70      0.70        30\n       weighted avg       0.71      0.70      0.70        30\n"
+}

@@ -1,0 +1,56 @@
+{
+  "pair_name": "Binary_Knowledge_Flag",
+  "n": 30,
+  "cls_a": "Ambiguity_Knowledge",
+  "cls_b": "Ambiguity_Flag",
+  "classifiers": {
+    "SVM_linear": {
+      "mean": 0.7666666666666667,
+      "std": 0.22607766610417562,
+      "folds": [
+        0.5,
+        0.5,
+        1.0,
+        0.8333333333333334,
+        1.0
+      ],
+      "report": "                     precision    recall  f1-score   support\n\n     Ambiguity_Flag       0.79      0.73      0.76        15\nAmbiguity_Knowledge       0.75      0.80      0.77        15\n\n           accuracy                           0.77        30\n          macro avg       0.77      0.77      0.77        30\n       weighted avg       0.77      0.77      0.77        30\n"
+    },
+    "SVM_rbf": {
+      "mean": 0.7666666666666667,
+      "std": 0.16996731711975951,
+      "folds": [
+        0.5,
+        0.6666666666666666,
+        1.0,
+        0.8333333333333334,
+        0.8333333333333334
+      ],
+      "report": "                     precision    recall  f1-score   support\n\n     Ambiguity_Flag       0.75      0.80      0.77        15\nAmbiguity_Knowledge       0.79      0.73      0.76        15\n\n           accuracy                           0.77        30\n          macro avg       0.77      0.77      0.77        30\n       weighted avg       0.77      0.77      0.77        30\n"
+    },
+    "RF": {
+      "mean": 0.7333333333333334,
+      "std": 0.22607766610417562,
+      "folds": [
+        0.3333333333333333,
+        0.6666666666666666,
+        0.8333333333333334,
+        0.8333333333333334,
+        1.0
+      ],
+      "report": "                     precision    recall  f1-score   support\n\n     Ambiguity_Flag       0.77      0.67      0.71        15\nAmbiguity_Knowledge       0.71      0.80      0.75        15\n\n           accuracy                           0.73        30\n          macro avg       0.74      0.73      0.73        30\n       weighted avg       0.74      0.73      0.73        30\n"
+    },
+    "MLP": {
+      "mean": 0.7333333333333333,
+      "std": 0.16996731711975951,
+      "folds": [
+        0.6666666666666666,
+        0.5,
+        0.8333333333333334,
+        0.6666666666666666,
+        1.0
+      ],
+      "report": "                     precision    recall  f1-score   support\n\n     Ambiguity_Flag       0.82      0.60      0.69        15\nAmbiguity_Knowledge       0.68      0.87      0.76        15\n\n           accuracy                           0.73        30\n          macro avg       0.75      0.73      0.73        30\n       weighted avg       0.75      0.73      0.73        30\n"
+    }
+  }
+}

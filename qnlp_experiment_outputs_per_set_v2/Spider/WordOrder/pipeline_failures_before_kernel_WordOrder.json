@@ -1,0 +1,407 @@
+[
+  {
+    "sentence": "الولد يقرا الكتاب",
+    "label": "WordOrder_SVO",
+    "original_index": 0,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "البنت تشرب الحليب",
+    "label": "WordOrder_SVO",
+    "original_index": 1,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الطالب كتب الدرس",
+    "label": "WordOrder_SVO",
+    "original_index": 2,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "المعلم شرح القاعدة",
+    "label": "WordOrder_SVO",
+    "original_index": 3,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الطبيب فحص المريض",
+    "label": "WordOrder_SVO",
+    "original_index": 4,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "المهندس بنى البيت",
+    "label": "WordOrder_SVO",
+    "original_index": 5,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "القطة اكلت السمك",
+    "label": "WordOrder_SVO",
+    "original_index": 6,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الطفل يلعب بالكرة",
+    "label": "WordOrder_SVO",
+    "original_index": 7,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الفلاح يزرع الارض",
+    "label": "WordOrder_SVO",
+    "original_index": 8,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "العامل يبني الجدار",
+    "label": "WordOrder_SVO",
+    "original_index": 9,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الطائرة تطير عاليا",
+    "label": "WordOrder_SVO",
+    "original_index": 10,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الشمس تشرق صباحا",
+    "label": "WordOrder_SVO",
+    "original_index": 11,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الام تعد الطعام",
+    "label": "WordOrder_SVO",
+    "original_index": 12,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "النهر يجري في الوادي",
+    "label": "WordOrder_SVO",
+    "original_index": 13,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الريح تهب بقوة",
+    "label": "WordOrder_SVO",
+    "original_index": 14,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "السيارة سريعة",
+    "label": "WordOrder_Nominal",
+    "original_index": 15,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "السماء صافية",
+    "label": "WordOrder_Nominal",
+    "original_index": 16,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الجو لطيف",
+    "label": "WordOrder_Nominal",
+    "original_index": 17,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الحديقة جميلة",
+    "label": "WordOrder_Nominal",
+    "original_index": 18,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الكتاب مفيد",
+    "label": "WordOrder_Nominal",
+    "original_index": 19,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "القلم جديد",
+    "label": "WordOrder_Nominal",
+    "original_index": 20,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الدرس سهل",
+    "label": "WordOrder_Nominal",
+    "original_index": 21,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الماء بارد",
+    "label": "WordOrder_Nominal",
+    "original_index": 22,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الليل هادئ",
+    "label": "WordOrder_Nominal",
+    "original_index": 23,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "المدينة مزدحمة",
+    "label": "WordOrder_Nominal",
+    "original_index": 24,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الرياض واسعة",
+    "label": "WordOrder_Nominal",
+    "original_index": 25,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "المدرسة قريبة",
+    "label": "WordOrder_Nominal",
+    "original_index": 26,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "القهوة ساخنة",
+    "label": "WordOrder_Nominal",
+    "original_index": 27,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الفاكهة طازجة",
+    "label": "WordOrder_Nominal",
+    "original_index": 28,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "الامتحان صعب",
+    "label": "WordOrder_Nominal",
+    "original_index": 29,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "يقرا الولد الكتاب",
+    "label": "WordOrder_VSO",
+    "original_index": 30,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "تشرب البنت الحليب",
+    "label": "WordOrder_VSO",
+    "original_index": 31,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "كتب الطالب الدرس",
+    "label": "WordOrder_VSO",
+    "original_index": 32,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "شرح المعلم القاعدة",
+    "label": "WordOrder_VSO",
+    "original_index": 33,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "فحص الطبيب المريض",
+    "label": "WordOrder_VSO",
+    "original_index": 34,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "بنى المهندس البيت",
+    "label": "WordOrder_VSO",
+    "original_index": 35,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "اكلت القطة السمك",
+    "label": "WordOrder_VSO",
+    "original_index": 36,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "يلعب الطفل بالكرة",
+    "label": "WordOrder_VSO",
+    "original_index": 37,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "يزرع الفلاح الارض",
+    "label": "WordOrder_VSO",
+    "original_index": 38,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "يبني العامل الجدار",
+    "label": "WordOrder_VSO",
+    "original_index": 39,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "تطير الطائرة عاليا",
+    "label": "WordOrder_VSO",
+    "original_index": 40,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "تشرق الشمس صباحا",
+    "label": "WordOrder_VSO",
+    "original_index": 41,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "تعد الام الطعام",
+    "label": "WordOrder_VSO",
+    "original_index": 42,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "يجري النهر في الوادي",
+    "label": "WordOrder_VSO",
+    "original_index": 43,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  },
+  {
+    "sentence": "تهب الريح بقوة",
+    "label": "WordOrder_VSO",
+    "original_index": 44,
+    "error": "Main processor (camel_test2) failed to produce a valid circuit.",
+    "interpretation": null,
+    "circuit_representation_str": null,
+    "circuit_representation_type": null
+  }
+]

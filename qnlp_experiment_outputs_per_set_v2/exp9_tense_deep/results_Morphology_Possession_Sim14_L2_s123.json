@@ -1,0 +1,20 @@
+{
+  "tag": "Morphology_Possession/Sim14/L2/seed123",
+  "exp_name": "Morphology_Possession",
+  "ansatz": "Sim14",
+  "n_layers": 2,
+  "seed": 123,
+  "n_samples": 66,
+  "n_classes": 3,
+  "chance": 0.3333333333333333,
+  "mean": 0.2582417582417582,
+  "std": 0.08000120757451121,
+  "folds": [
+    0.21428571428571427,
+    0.23076923076923078,
+    0.3076923076923077,
+    0.38461538461538464,
+    0.15384615384615385
+  ],
+  "report": "              precision    recall  f1-score   support\n\n    Poss_1st       0.31      0.18      0.23        22\n    Poss_2nd       0.30      0.32      0.31        22\n    Poss_3rd       0.38      0.27      0.32        22\n\n   micro avg       0.33      0.26      0.29        66\n   macro avg       0.33      0.26      0.29        66\nweighted avg       0.33      0.26      0.29        66\n"
+}
