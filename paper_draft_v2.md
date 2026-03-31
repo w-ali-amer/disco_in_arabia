@@ -1,10 +1,12 @@
 # Quantum Compositional NLP for Arabic: Grammar, Morphology, and Word Sense in Circuit Topology
 
-**[YOUR NAME]**
-**[Institution / Affiliation]**
-**[Email]**
+**Wajahath Mohammed**
+
+**wajahath123@gmail.com**
 
 **Working Draft — March 2026**
+
+**Preprint:** https://doi.org/10.5281/zenodo.19316164
 
 ---
 
@@ -56,7 +58,7 @@ In the quantum setting, this string diagram is compiled into a quantum circuit: 
 
 The Instantaneous Quantum Polynomial (IQP) ansatz constructs circuits where noun-type words are represented as single qubits initialised by parameterised Hadamard-and-Z-rotation gates, and entanglement between qubits is introduced by parameterised controlled-Z rotation gates. The depth of entanglement — the number of entangling layers — is a hyperparameter. At depth zero (L0), no entangling gates are applied; each qubit evolves independently. At depth one (L1) or two (L2), entangling gates couple adjacent qubits according to the diagram topology.
 
-The L0/L1 comparison is the paper's central experimental design. A depth-zero IQP circuit is a product of independent single-qubit states. Without entanglement, the output distribution is a product distribution: the measurement probability of the sentence qubit is independent of the measurement probabilities of all word qubits. For a two-class problem, this means the output is exactly uniform — 50% for each class — regardless of which sentence is presented and regardless of the parameter values. This is not approximate; it is exact by the mathematics of product states. The depth-zero circuit therefore serves as a zero-parameter, zero-variance baseline: anything above 50% in a depth-L1 circuit is caused by the entangling gates.
+The L0/L1 comparison is the paper's central experimental design. In QFM mode, circuit parameters are fixed to values derived from word embeddings. At depth zero (L0), there are no entangling gates: word qubits evolve independently, and no information from word qubits can propagate to the sentence qubit. The sentence qubit does not correspond to any word and has no embedding-derived parameter; it receives no gates at L0 and thus produces a constant output — predicting the same class for every input sentence regardless of its structure or vocabulary. On a balanced binary dataset, constant prediction gives exactly 50% accuracy. Crucially, it does so with *zero variance*: because the output is deterministic (not random), it does not fluctuate across seeds or cross-validation folds. This is not a measurement — it is a structural property of the circuit architecture. The depth-zero circuit therefore serves as a zero-variance baseline: any improvement at depth L1 is caused entirely by the entangling gates that allow word qubit states to influence the sentence qubit's output.
 
 ---
 
@@ -68,7 +70,7 @@ The theoretical foundations of the present work are the original DisCoCat paper 
 
 The first empirical QNLP experiments at scale were reported by Lorenz, Pearson, Meichanetzidis, Kartsaklis, and Coecke (2023), who classified English sentences into food and IT topics on real IBM quantum hardware and demonstrated that the syntax-sensitive DisCoCat model is trainable on device. Their dataset size (approximately 130 sentences) is comparable to the datasets used here. The most recent hardware milestone is Duneau, Bruhn, Matos, Laakkonen, Saiti, Pearson, Meichanetzidis, and Coecke (NeurIPS 2024), who ran the DisCoCirc text-level model on Quantinuum's H1-1 trapped-ion processor and demonstrated compositional generalisation — the ability to correctly process sentence combinations that were not present in training — on a task where neither GPT-4, LSTMs, nor transformer baselines succeeded. This NeurIPS 2024 result is particularly relevant to the present work: it establishes that quantum compositional models have a measurable advantage on compositional generalisation tasks at the level of hardware execution, and that this advantage is not replicated by contemporary large language models. The Arabic word order and WSD tasks studied here are precisely the kind of structural composition problem where this advantage is theoretically expected.
 
-The methodological design of the present work is directly validated by a 2025 survey of the QNLP field (Nausheen et al., 2025), which identifies entanglement layer ablation as an outstanding open problem — the survey explicitly states that "few if any reviewed papers systematically ablate entanglement layers" — and lists Arabic as a notable gap in the QNLP language coverage. The L0/L1 ablation of Experiment 1 is a direct response to the first gap; the language choice addresses the second.
+The methodological design of the present work is directly validated by a 2025 survey of the QNLP field (Nausheen et al., 2025), which identifies systematic entanglement layer ablation as an outstanding open problem across the reviewed literature and lists Arabic as a notable gap in QNLP language coverage. The L0/L1 ablation of Experiment 1 is a direct response to the first gap; the language choice addresses the second.
 
 ### 3.2 QNLP Beyond English
 
@@ -129,6 +131,8 @@ For VSO, a Swap operation is required to align the two backward-pointing types w
 &nbsp;&nbsp;&nbsp;&nbsp;*(s ⊗ n^l ⊗ n^l) ⊗ n ⊗ n → s*, after Swap(n^l, n) at position 2–3, contracted by two cups
 
 The VSO diagram has a structurally distinct topology from the SVO diagram: the additional Swap operation in the VSO case produces a different gate count after compilation, specifically fewer controlled gates in the compiled IQP circuit. This structural difference is the signature that the topology-only classifier (Section 5) exploits.
+
+**Why the Swap is not an engineering choice.** The Swap is not an ad hoc workaround — it is the unique minimal operation required by the pregroup type mathematics. When a VSO verb is assigned type *s ⊗ n^l ⊗ n^l*, the tensored diagram has wire sequence *s n^l n^l n n*. To fire the cups that reduce this to *s*, the second *n^l* must cross the first *n* — there is no other valid reduction path. The Swap is the proof that the verb type was assigned correctly. This is what distinguishes the pipeline from approaches that label a sentence as "VSO" without changing the circuit topology: the label alone does nothing; the different verb type, and the Swap it necessitates, are what produce structurally distinct circuits for SVO and VSO sentences containing identical words. No existing lambeq pipeline assigns *s ⊗ n^l ⊗ n^l* to VSO verbs; the assignment is specific to Arabic (and to other VSO languages not yet covered in the QNLP literature) and was implemented from scratch in `arabic_dep_reader.py`.
 
 *Concrete walkthrough.* Consider the matched pair used in Experiment 1. The SVO sentence *الولد كتب الدرسَ* (al-waladu kataba al-darsa — "The boy wrote the lesson") is analysed by Stanza as: *الولد* = nsubj, *كتب* = root (verb), *الدرس* = obj. Since the subject precedes the verb, `arabic_dep_reader.py` assigns the verb type *n^r ⊗ s ⊗ n^l*, and the reduction proceeds as:
 
@@ -204,7 +208,7 @@ Binary classification (SVO vs. VSO) on the 120 matched-pair sentences of `WordOr
 
 > **[Figure 3 — TO INSERT: Learning curves (accuracy vs. training set size per class, N=5/10/20/40). Two lines: AraVec descending from 46% to 19% (red, "more data → worse, spurious anti-correlation"); QFM L1 ascending from 56% to 67% (green, "more data → better, structural encoding"). These trajectories diverge in opposite directions.]**
 
-| Method | Accuracy | 95% CI |
+| Method | Accuracy | 95% CI[^3] |
 |---|---|---|
 | AraVec (bag-of-words) | 12.8% | — |
 | Topology-only (0 params) | 35.8% | — |
@@ -215,15 +219,19 @@ Binary classification (SVO vs. VSO) on the 120 matched-pair sentences of `WordOr
 | AraBERT (frozen CLS) | 86.1% | — |
 | AraBERT (fine-tuned) | **100.0%** | — |[^2]
 
-[^2]: Fine-tuned AraBERT results were obtained from a dedicated re-run using a manual PyTorch training loop. The primary multi-task run (Experiment 2 and Experiment 3 sharing a single script) raised an exception during the fine-tuning phase and fell back to the untrained (chance-level) default; the dedicated re-run isolated this experiment and resolved the issue. Results are retained separately in the output files and the reported 100% figure is drawn from the dedicated run.
+[^2]: Fine-tuned AraBERT was run in a dedicated script isolated from the quantum circuit experiments, using a manual PyTorch training loop (the HuggingFace Trainer API was incompatible with the installed version of `accelerate`). Results are stored separately in `arabert_finetuned_results.json`.
+
+[^3]: Confidence intervals computed as mean ± 1.96 × (std / √n) across n = 150 evaluations (10 random seeds × 15 stratified cross-validation folds), treating each fold-seed pair as an independent evaluation. This is a normal approximation; cross-validation folds within a seed are correlated, so intervals are indicative rather than exact.
 
 ### 6.3 Analysis
 
 **The below-chance AraVec result.** At 12.8% — 37 percentage points *below* chance — AraVec requires explanation rather than dismissal. With matched pairs, both members of each pair produce identical averaged word vectors. In cross-validation, a fold whose training set contains slightly more VSO sentences (due to stratification randomness at small N) will produce a model biased toward predicting VSO for all test sentences. Since the test set contains the matched-pair partner of each training sentence, the model's bias toward one class produces systematic errors on the other. This bias *worsens* with more data: at N=5 per class, AraVec achieves 46%; at N=40, it falls to 19%. The model is not failing at random — it is learning spurious anti-correlations from the symmetric training data. This is precisely the property the matched-pair design was constructed to expose.
 
-**The zero-variance L0 result.** QFM L0 achieves exactly 50.0% across all 10 seeds, all 15 cross-validation folds, with variance of 0.000. This is a theorem, not a measurement. A product IQP circuit (L0) applies independent single-qubit rotations to each qubit with no entangling gates. The output distribution for a single qubit is determined by the rotation angle on that qubit alone; the sentence-level output qubit's distribution is independent of the word-level qubits' rotations. For a binary problem, this independence guarantees a uniform 50/50 output regardless of sentence identity, parameter values, or random seed. The L0 circuit does not "not learn well" — it is structurally incapable of producing a non-uniform output. This establishes the zero line of the ablation with certainty.
+**The zero-variance L0 result.** QFM L0 achieves exactly 50.0% across all 10 seeds, all 15 cross-validation folds, with variance of 0.000. This is a structural property of the circuit, not a measured average. In QFM mode, parameters are fixed to word embedding values. The sentence qubit has no corresponding word and therefore no embedding-derived parameter; at L0 it receives no gates. Without entangling gates, nothing from the word qubits propagates to the sentence qubit. The circuit therefore produces a constant prediction — the same class for every sentence — regardless of which sentence is presented or which random seed initialises the fold. On a balanced dataset, constant prediction gives exactly 50%. The zero variance is the signature of this: a random 50/50 output would fluctuate across folds; a constant output does not. The L0 circuit does not "fail to learn" — it is architecturally incapable of encoding any sentence-level information without entanglement. This establishes the zero line of the ablation with certainty.
 
 **The L1 result and the causal claim.** Adding one entangling layer (L1) raises accuracy to 64.9% (CI [62.8, 66.3]). Between L0 and L1, exactly one variable changes: the introduction of parameterised controlled-Z rotation gates that couple adjacent qubits. The grammar is the same. The words are the same. The classifier is the same. The evaluation protocol is the same. The 15-percentage-point gain is caused by the entangling gates, which allow the structural difference between SVO and VSO circuits (the Swap operation in VSO produces different qubit connectivity) to influence the measurement outcome. This is the central causal claim of the paper.
+
+**On the circularity objection.** A natural challenge is that the result is circular: different circuits were built for SVO and VSO by construction, so of course a classifier trained on those circuits detects word order. This objection collapses against the L0 result. At L0, the topology is already different — by construction, because the grammar assigns different verb types. The topological difference is present in the circuit before any training occurs. The L0 classifier still scores exactly 50%. The topological difference is there; it is simply *informationally inaccessible* without entanglement. Entanglement is not just an ingredient of the circuit — it is the mechanism that converts topological structure into a measurable output difference. The circularity objection would be valid if L0 scored above chance, which it cannot, by theorem. What the construction provides is a principled encoding; what the ablation shows is that the encoding requires entanglement to be readable. These are distinct claims.
 
 **L2 vs. L1.** QFM L2 (61.8%) is slightly lower than L1. This is the standard overfitting pattern: more parameters require more data to achieve their representational potential. At N=120 total, L1 is the optimal depth.
 
@@ -336,6 +344,10 @@ We report all SPSA results in two forms: *raw* (the actual measured accuracy) an
 
 ### 8.5 Interpretation
 
+**Why QFM succeeds at word order but not at WSD.** The word order experiment (Experiment 1) and the WSD experiment differ in where the structural signal lives. For word order, SVO and VSO sentences produce circuits with different gate topologies — different verb types, a Swap present or absent. This topological difference is visible in the untrained circuit output: even with parameters fixed to word embedding values, the SVM can distinguish SVO from VSO circuits because their output distributions differ structurally. The signal is in the circuit's wiring, and QFM reads it directly.
+
+For WSD, all four verbs produce SVO sentences in both senses — the grammatical structure is the same. There is no topological difference between a LIFT sentence and a FILE sentence; both are *n ⊗ (n^r ⊗ s ⊗ n^l) ⊗ n → s*. The structural signal is instead encoded in the word parameter values: the morphological tag on an animate subject (PER-3, human) versus a semiotic subject (PER-3, institution), or the semantic class of the object. These differences propagate to the circuit's measurement outcome only when the parameters are tuned to express them — which QFM, with parameters fixed to generic word embedding values, does not do. SPSA, by training, can find parameter settings that align the circuit's measurement axis with the WSD discrimination axis. This is why SPSA (after symmetric correction) succeeds where QFM does not: the signal requires parameter optimisation to become readable, not just a different circuit topology.
+
 **رفع (lift/file) — the most controlled test.** AraVec 50.0% confirms the matched-pair design works: lexical signal has been removed. The QFM and trained circuits cannot exceed chance, suggesting that the structural distinction between lift and file is not strongly expressed in the current IQP topology (both senses produce SVO sentences with the same formal structure — the only difference is the semantic class of the object, which is not currently represented in the grammar type assignment). AraBERT achieves 67.3% — the transformer likely exploits soft semantic priming between subject type (animate, institutional) and the verb reading, a statistical regularity that survives even after vocabulary control.
 
 **حمل (carry/convey) — subject animacy.** SPSA base achieves 69.1% raw (only 9% inversion) — the strongest single result in the WSD experiment. The subject-animacy contrast (animate noun vs. inanimate semiotic noun) produces different pregroup type assignments in principle (Holes, 2004: animate agents take different argument structure frames), which SPSA learns from the small training set. The ancilla hurts here (69.1% → 55.2%): when the gradient signal is already clean, the extra parameters from the ancilla introduce noise rather than signal.
@@ -374,7 +386,7 @@ The choice of Arabic is not arbitrary. Several properties make it the most infor
 
 ### 9.3 Compositional Generalisation and the Duneau et al. Precedent
 
-Duneau et al. (NeurIPS 2024) demonstrated on Quantinuum's H1-1 trapped-ion hardware that quantum compositional models can pass compositional generalisation tests that GPT-4, LSTMs, and transformer baselines fail. Compositional generalisation is the ability to correctly process novel combinations of familiar components — for example, understanding a sentence structure that was not present in training because it is composed of elements that *were* present in training. This is the formal property that DisCoCat is designed to encode.
+Duneau et al. (2024, NeurIPS Workshop on Compositional Learning) demonstrated on Quantinuum's H1-1 trapped-ion hardware that quantum compositional models can pass compositional generalisation tests that GPT-4, LSTMs, and transformer baselines fail. Compositional generalisation is the ability to correctly process novel combinations of familiar components — for example, understanding a sentence structure that was not present in training because it is composed of elements that *were* present in training. This is the formal property that DisCoCat is designed to encode.
 
 Arabic compositional generalisation is where the practical stakes are highest. Arabic morphology generates thousands of word forms from a small set of roots and patterns. A system that has learned the meaning of the root k-t-b and the meaning of the imperfect-aspect pattern should generalise to the word form *yaktubu* (he writes, imperfect) without having seen it in training, because the meaning is the composition of root and pattern. Current statistical Arabic NLP systems treat each surface form as an independent token and cannot generalise in this way. The quantum compositional model, extended to explicit root-and-pattern qubit decomposition (Section 10), would perform this generalisation by circuit construction, not by pattern matching.
 
@@ -400,13 +412,13 @@ One important property of the trapped-ion approach (H-series specifically) is mi
 
 ### 10.1 Real Hardware Experiments: An Immediate Milestone
 
-The matched-pair word order experiment requires 120 sentences, each producing a circuit of 3–4 qubits. Quantinuum's H1-1 trapped-ion processor currently operates with 20 qubits and sub-1% two-qubit gate error rates; Duneau et al. (NeurIPS 2024) demonstrated QNLP on this platform with a 130-sentence dataset — precisely our scale. The Arabic word order experiment is executable on existing hardware. Beyond its scientific value (replacing simulation with genuine quantum computation and characterising the effect of hardware noise on structural encoding), this would constitute the first Arabic NLP experiment on a quantum processor — a milestone with global news significance and strategic value for the Gulf states investing simultaneously in Arabic AI and quantum computing.
+The matched-pair word order experiment requires 120 sentences, each producing a circuit of 3–4 qubits. Quantinuum's H1-1 trapped-ion processor currently operates with 20 qubits and sub-1% two-qubit gate error rates; Duneau et al. (2024) demonstrated QNLP on this platform at comparable scale (NeurIPS 2024 Workshop on Compositional Learning). The Arabic word order experiment is executable on existing hardware. Beyond its scientific value (replacing simulation with genuine quantum computation and characterising the effect of hardware noise on structural encoding), this would constitute the first Arabic NLP experiment on a quantum processor — a milestone with global news significance and strategic value for the Gulf states investing simultaneously in Arabic AI and quantum computing.
 
 ### 10.2 Morphological Tensor Products: A New Architecture
 
 The most structurally motivated extension of this work is explicit root-and-pattern circuit decomposition. Rather than representing the Arabic verb *yaktubu* as a single opaque qubit state, we would assign separate qubit registers to the consonantal root (k-t-b, 3 qubits encoding the writing concept) and the vowel pattern (ya-...-u, 2 qubits encoding imperfect aspect, 3rd person masculine), entangled through controlled gates that model the morphological composition rule. The resulting circuit would explicitly represent the compositional structure of Arabic morphology — the meaning of the verb form is an entangled state of root and pattern qubits.
 
-The practical implications are significant. Arabic morphology generates approximately 28,000 theoretically distinct verb forms from each root. A classical NLP system must learn each form separately, requiring thousands of annotated training examples per root. A quantum model with explicit root-and-pattern decomposition generalises across all forms of a root that share the same root-qubit parameters, because the variation between forms is encoded in the pattern-qubit parameters alone. This is a structural solution to the data sparsity problem that is specific to Semitic languages and directly enabled by the Kiraz formal correspondence. No analogous architecture is possible for Persian, Hindi, or Urdu.
+The practical implications are significant. Arabic morphology generates approximately 28,000 theoretically distinct verb forms from each root. A classical NLP system must learn each form separately, requiring thousands of annotated training examples per root. A quantum model with explicit root-and-pattern decomposition generalises across all forms of a root that share the same root-qubit parameters, because the variation between forms is encoded in the pattern-qubit parameters alone. This is a structural solution to the data sparsity problem that is specific to Semitic languages and directly enabled by the Kiraz formal correspondence (Habash, 2010). No analogous architecture is possible for Persian, Hindi, or Urdu.
 
 Concrete applications within 5 years: Arabic morphological disambiguation for digitised historical texts (legal documents, hadith collections, classical literature), where training data is unavailable and existing statistical systems fail; Arabic voice-to-text systems for under-resourced dialects where surface forms differ from MSA but share the same root inventory; Arabic legal document processing where morphological ambiguity carries legal consequences.
 
@@ -464,7 +476,7 @@ Coecke, B., de Felice, G., Meichanetzidis, K., & Toumi, A. (2020). Foundations f
 
 Djemmal, R., & Belhadef, H. (2025). AraBERT-QC: a novel quantum-based classification architecture to classify short Arabic sentences. *The Journal of Supercomputing*. https://doi.org/10.1007/s11227-025-07966-5
 
-Duneau, T., Bruhn, S., Matos, G., Laakkonen, T., Saiti, K., Pearson, A., Meichanetzidis, K., & Coecke, B. (2024). Scalable and interpretable quantum natural language processing: An implementation on trapped ions. *Advances in Neural Information Processing Systems (NeurIPS 2024)*. arXiv:2409.08777.
+Duneau, T., Bruhn, S., Matos, G., Laakkonen, T., Saiti, K., Pearson, A., Meichanetzidis, K., & Coecke, B. (2024). Scalable and interpretable quantum natural language processing: An implementation on trapped ions. *NeurIPS 2024 Workshop on Compositional Learning: Perspectives, Methods, and Paths Forward* (Oral). arXiv:2409.08777.
 
 Gero, S., Whitehead, H., & Rendell, L. (2016). Individual, unit and vocal clan level identity cues in sperm whale codas. *Royal Society Open Science, 3*(1), 150372. https://doi.org/10.1098/rsos.150372
 
@@ -504,4 +516,4 @@ Zaghouani, W., Diab, M., Mansouri, A., Pradhan, S., & Palmer, M. (2010). The rev
 
 ---
 
-*Word count: approximately 12,700. Version 3 — March 2026.*
+

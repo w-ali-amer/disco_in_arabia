@@ -43,3 +43,12 @@ runs/
 # OS
 .DS_Store
 disco_in_arabia/
+
+# Private documents — not for the repo
+ilyas_khan_brief.md
+ilyas_khan_brief.pdf
+deep-research-report.md
+paper_draft_v1.md
+tough_questions.md
+honest_vulnerabilities.md
+layman_explainer.md

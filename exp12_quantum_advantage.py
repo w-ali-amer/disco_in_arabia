@@ -2,7 +2,14 @@
 """
 exp12_quantum_advantage.py
 --------------------------
-Three targeted demonstrations of quantum advantage in Arabic DisCoCat.
+NOTE ON NAMING: "quantum advantage" here refers to structural-encoding advantage
+over bag-of-words baselines (AraVec averaged embeddings), not quantum computational
+advantage over the best possible classical algorithm. The paper uses the framing
+"structural inductive bias" for this comparison. The final paper results are in
+exp13_arabert_comparison.py, which includes the AraBERT comparison and the clean
+L0/L1 entanglement ablation. See README.md and https://doi.org/10.5281/zenodo.19316164
+
+Three targeted demonstrations of structural-encoding advantage in Arabic DisCoCat.
 
 The key insight shared by all three scenarios:
   Quantum circuit TOPOLOGY encodes grammatical structure.
