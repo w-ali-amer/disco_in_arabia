@@ -1,0 +1,20 @@
+# Core — versions are pinned where compatibility is known to be fragile
+# lambeq 0.5.0 requires numpy <2.0; do not upgrade numpy independently
+lambeq==0.5.0
+numpy==1.26.4
+discopy==1.2.0
+pytket==2.5.0
+pytket-qiskit==0.68.0
+qiskit==2.0.2
+qiskit-aer==0.17.0
+
+# Arabic NLP
+camel_tools==1.5.6
+camel-kenlm==2025.4.8
+stanza==1.10.1
+gensim==4.3.3
+
+# Classical ML and deep learning
+torch>=2.0.0
+transformers>=4.30.0
+scikit-learn>=1.0.0

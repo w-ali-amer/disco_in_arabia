@@ -46,11 +46,11 @@ The experiments depend on a chain of modules. `arabic_dep_reader.py` is the entr
 
 | File | Paper | Description |
 |------|-------|-------------|
-| `exp8.py` | §A | Binary lexical ambiguity per polysemous pair. 7 pairs, 300 epochs, AraVec warm-start. |
-| `exp9_tense_deep.py` | §A | Tense ablation across n_layers=1/2/3, 3 seeds, 500 epochs. Also Number and Possession. |
-| `exp10_wordorder.py` | §A | Word order 3-class (SVO/VSO/Nominal). Establishes why 3-class is too hard for SPSA at N=40. |
-| `exp11_sense_switch.py` | §A | Sense-switch: polysemous words get two parameter sets. |
-| `exp12_quantum_advantage.py` | §A | Earlier framing of structural encoding vs. bag-of-words. See note at top of file — "quantum advantage" here means advantage over AraVec, not computational quantum advantage. |
+| `exp8.py` | not in paper | Binary lexical ambiguity per polysemous pair. 7 pairs, 300 epochs, AraVec warm-start. Informed the WSD design in §8. |
+| `exp9_tense_deep.py` | not in paper | Tense ablation across n_layers=1/2/3, 3 seeds, 500 epochs. Informed the tense experiment in §7. |
+| `exp10_wordorder.py` | not in paper | Word order 3-class (SVO/VSO/Nominal). Established why 3-class is too hard for SPSA at N=40; motivated the matched-pair binary design in §6. |
+| `exp11_sense_switch.py` | not in paper | Sense-switch: polysemous words get two parameter sets. Exploratory. |
+| `exp12_quantum_advantage.py` | not in paper | Earlier framing of structural encoding vs. bag-of-words. See note at top of file — "quantum advantage" here means advantage over AraVec, not computational quantum advantage. |
 | `exp13_arabert_comparison.py` | §6 §7 §8 | **Main paper experiment.** Word order L0/L1 ablation, tense, WSD. QFM vs. SPSA vs. AraBERT. |
 | `exp14_ancillary_wsd.py` | §8 | Ancilla qubit WSD with density-matrix label encoding. SPSA inversion analysis. |
 | `reprocess_exp14_symmetric.py` | §8.3 | Post-processes exp14 results: symmetric SPSA correction (max(acc, 1−acc) per fold). |
@@ -71,25 +71,50 @@ The experiments depend on a chain of modules. `arabic_dep_reader.py` is the entr
 
 ## Environment
 
-```bash
-source qiskit_lambeq_env/bin/activate   # Python 3.x, lambeq 0.5.0
+**Python 3.10.** Other versions are untested.
 
-# Required: lambeq, camel-tools, stanza, transformers, torch, scikit-learn
-# AraVec:   place models in aravec/ (publicly available from original authors)
-# AraBERT:  aubmindlab/bert-base-arabertv02 (cached via HuggingFace)
+```bash
+python3.10 -m venv qiskit_lambeq_env
+source qiskit_lambeq_env/bin/activate
+pip install -r requirements.txt
 ```
+
+> **Important:** `lambeq==0.5.0` requires `numpy<2.0`. Do not upgrade numpy independently — it will break silently.
+
+**Stanza Arabic model** (required before first run):
+```bash
+python3 -c "import stanza; stanza.download('ar')"
+```
+
+**CAMeL Tools Arabic models** (required before first run):
+```bash
+camel-downloader -d morphology-db-msa-r13
+```
+
+**AraVec** (required for AraVec baseline experiments only):
+Download from [github.com/bakrianoo/aravec](https://github.com/bakrianoo/aravec) and place the model files in an `aravec/` directory at the project root. The experiments use the Twitter CBOW model. `aravec/` is gitignored due to size.
+
+**AraBERT** (`aubmindlab/bert-base-arabertv02`) downloads automatically from HuggingFace on first run.
+
+---
 
 ## Reproducing the main result
 
+`sentences.json` already contains all datasets including `WordOrderMatched` and `WordSenseDisambiguation_v2`. The generate scripts only need to be run if you modify the raw data or start from scratch.
+
 ```bash
-python generate_exp13_data.py       # build matched-pair word order dataset
-python exp13_arabert_comparison.py  # main ablation + AraBERT comparison
+# Main experiment — word order L0/L1 ablation + AraBERT comparison
+python exp13_arabert_comparison.py
 # outputs → qnlp_experiment_outputs_per_set_v2/exp13_arabert/
 
-python generate_exp14_data_v2.py    # build WSD dataset
-python exp14_ancillary_wsd.py       # ancilla qubit WSD
-python reprocess_exp14_symmetric.py # apply symmetric SPSA correction
+# WSD experiment — ancilla qubit + SPSA inversion analysis
+python exp14_ancillary_wsd.py
+python reprocess_exp14_symmetric.py   # apply symmetric SPSA correction
 # outputs → qnlp_experiment_outputs_per_set_v2/exp14_ancillary_wsd_v2/
+
+# Regenerate datasets from scratch (optional)
+python generate_exp13_data.py         # rebuilds WordOrderMatched + TenseBinary
+python generate_exp14_data_v2.py      # rebuilds WordSenseDisambiguation_v2
 ```
 
 ---
