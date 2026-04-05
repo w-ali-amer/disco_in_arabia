@@ -88,7 +88,7 @@ python3 -c "import stanza; stanza.download('ar')"
 
 **CAMeL Tools Arabic models** (required before first run):
 ```bash
-camel-downloader -d morphology-db-msa-r13
+camel_data -i defaults
 ```
 
 **AraVec** (required for AraVec baseline experiments only):
@@ -118,6 +118,10 @@ python generate_exp14_data_v2.py      # rebuilds WordSenseDisambiguation_v2
 ```
 
 ---
+
+## Questions and issues
+
+If you run into problems setting up the environment or running the experiments, feel free to open a GitHub issue or email wajahath123@gmail.com directly. Happy to help.
 
 ## Citation
 
