@@ -213,20 +213,31 @@ def finetune_arabert(train_texts, train_y, test_texts, test_y, n_labels, seed):
 # ═══════════════════════════════════════════════════════════════════════════════
 
 def warmstart_weights(model: NumpyModel) -> np.ndarray:
+    """Fixed 2026-08-01 (see ERRATUM.md): lambeq symbol names carry morph tags
+    (e.g. الولد_NUM-s_GEN-m__n_0), so the AraVec lookup always missed and every
+    parameter silently fell back to the md5 hash in the published exp13 runs.
+    Set QFM_WARMSTART=legacy to reproduce the published (hash-fallback) numbers."""
+    legacy = os.environ.get("QFM_WARMSTART", "fixed").lower() == "legacy"
     weights = np.empty(len(model.symbols))
+    n_hits = 0
     for i, sym in enumerate(model.symbols):
         name = str(sym)
         word = name.split("__")[0]
+        if not legacy:
+            word = word.split("_")[0]  # strip morph tags -> bare surface form
         try:
             idx = int(name.rsplit("_", 1)[-1])
         except ValueError:
             idx = 0
         vec = _aravec_vec(word)
         if vec is not None:
+            n_hits += 1
             weights[i] = (float(vec[idx % len(vec)]) + 1.0) * math.pi
         else:
             h = int(hashlib.md5(name.encode()).hexdigest()[:8], 16)
             weights[i] = (h / 0xFFFFFFFF) * 2 * math.pi
+    logger.info(f"warmstart mode={'legacy' if legacy else 'fixed'}: "
+                f"{n_hits}/{len(model.symbols)} symbols matched AraVec")
     return weights
 
 

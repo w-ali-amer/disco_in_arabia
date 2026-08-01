@@ -2250,721 +2250,841 @@
       "sentence": "الولد يقرا الكتاب",
       "label": "WordOrder_SVO",
       "pair_id": 0,
-      "source": "original"
+      "source": "original",
+      "pair_id_legacy": 0
     },
     {
       "sentence": "البنت تشرب الحليب",
       "label": "WordOrder_SVO",
       "pair_id": 1,
-      "source": "original"
+      "source": "original",
+      "pair_id_legacy": 1
     },
     {
       "sentence": "الطالب كتب الدرس",
       "label": "WordOrder_SVO",
       "pair_id": 2,
-      "source": "original"
+      "source": "original",
+      "pair_id_legacy": 2
     },
     {
       "sentence": "المعلم شرح القاعدة",
       "label": "WordOrder_SVO",
       "pair_id": 3,
-      "source": "original"
+      "source": "original",
+      "pair_id_legacy": 3
     },
     {
       "sentence": "الطبيب فحص المريض",
       "label": "WordOrder_SVO",
       "pair_id": 4,
-      "source": "original"
+      "source": "original",
+      "pair_id_legacy": 4
     },
     {
       "sentence": "المهندس بنى البيت",
       "label": "WordOrder_SVO",
       "pair_id": 5,
-      "source": "original"
+      "source": "original",
+      "pair_id_legacy": 5
     },
     {
       "sentence": "القطة اكلت السمك",
       "label": "WordOrder_SVO",
       "pair_id": 6,
-      "source": "original"
+      "source": "original",
+      "pair_id_legacy": 6
     },
     {
       "sentence": "الطفل يلعب بالكرة",
       "label": "WordOrder_SVO",
       "pair_id": 7,
-      "source": "original"
+      "source": "original",
+      "pair_id_legacy": 7
     },
     {
       "sentence": "الفلاح يزرع الارض",
       "label": "WordOrder_SVO",
       "pair_id": 8,
-      "source": "original"
+      "source": "original",
+      "pair_id_legacy": 8
     },
     {
       "sentence": "العامل يبني الجدار",
       "label": "WordOrder_SVO",
       "pair_id": 9,
-      "source": "original"
+      "source": "original",
+      "pair_id_legacy": 9
     },
     {
       "sentence": "الطائرة تطير عاليا",
       "label": "WordOrder_SVO",
       "pair_id": 10,
-      "source": "original"
+      "source": "original",
+      "pair_id_legacy": 10
     },
     {
       "sentence": "الشمس تشرق صباحا",
       "label": "WordOrder_SVO",
       "pair_id": 11,
-      "source": "original"
+      "source": "original",
+      "pair_id_legacy": 11
     },
     {
       "sentence": "الام تعد الطعام",
       "label": "WordOrder_SVO",
       "pair_id": 12,
-      "source": "original"
+      "source": "original",
+      "pair_id_legacy": 12
     },
     {
       "sentence": "النهر يجري في الوادي",
       "label": "WordOrder_SVO",
       "pair_id": 13,
-      "source": "original"
+      "source": "original",
+      "pair_id_legacy": 13
     },
     {
       "sentence": "الريح تهب بقوة",
       "label": "WordOrder_SVO",
       "pair_id": 14,
-      "source": "original"
+      "source": "original",
+      "pair_id_legacy": 14
     },
     {
       "sentence": "يقرا الولد الكتاب",
       "label": "WordOrder_VSO",
-      "pair_id": 30,
-      "source": "original"
+      "pair_id": 0,
+      "source": "original",
+      "pair_id_legacy": 30
     },
     {
       "sentence": "تشرب البنت الحليب",
       "label": "WordOrder_VSO",
-      "pair_id": 31,
-      "source": "original"
+      "pair_id": 1,
+      "source": "original",
+      "pair_id_legacy": 31
     },
     {
       "sentence": "كتب الطالب الدرس",
       "label": "WordOrder_VSO",
-      "pair_id": 32,
-      "source": "original"
+      "pair_id": 2,
+      "source": "original",
+      "pair_id_legacy": 32
     },
     {
       "sentence": "شرح المعلم القاعدة",
       "label": "WordOrder_VSO",
-      "pair_id": 33,
-      "source": "original"
+      "pair_id": 3,
+      "source": "original",
+      "pair_id_legacy": 33
     },
     {
       "sentence": "فحص الطبيب المريض",
       "label": "WordOrder_VSO",
-      "pair_id": 34,
-      "source": "original"
+      "pair_id": 4,
+      "source": "original",
+      "pair_id_legacy": 34
     },
     {
       "sentence": "بنى المهندس البيت",
       "label": "WordOrder_VSO",
-      "pair_id": 35,
-      "source": "original"
+      "pair_id": 5,
+      "source": "original",
+      "pair_id_legacy": 35
     },
     {
       "sentence": "اكلت القطة السمك",
       "label": "WordOrder_VSO",
-      "pair_id": 36,
-      "source": "original"
+      "pair_id": 6,
+      "source": "original",
+      "pair_id_legacy": 36
     },
     {
       "sentence": "يلعب الطفل بالكرة",
       "label": "WordOrder_VSO",
-      "pair_id": 37,
-      "source": "original"
+      "pair_id": 7,
+      "source": "original",
+      "pair_id_legacy": 37
     },
     {
       "sentence": "يزرع الفلاح الارض",
       "label": "WordOrder_VSO",
-      "pair_id": 38,
-      "source": "original"
+      "pair_id": 8,
+      "source": "original",
+      "pair_id_legacy": 38
     },
     {
       "sentence": "يبني العامل الجدار",
       "label": "WordOrder_VSO",
-      "pair_id": 39,
-      "source": "original"
+      "pair_id": 9,
+      "source": "original",
+      "pair_id_legacy": 39
     },
     {
       "sentence": "تطير الطائرة عاليا",
       "label": "WordOrder_VSO",
-      "pair_id": 0,
-      "source": "original"
+      "pair_id": 10,
+      "source": "original",
+      "pair_id_legacy": 0
     },
     {
       "sentence": "تشرق الشمس صباحا",
       "label": "WordOrder_VSO",
-      "pair_id": 1,
-      "source": "original"
+      "pair_id": 11,
+      "source": "original",
+      "pair_id_legacy": 1
     },
     {
       "sentence": "تعد الام الطعام",
       "label": "WordOrder_VSO",
-      "pair_id": 2,
-      "source": "original"
+      "pair_id": 12,
+      "source": "original",
+      "pair_id_legacy": 2
     },
     {
       "sentence": "يجري النهر في الوادي",
       "label": "WordOrder_VSO",
-      "pair_id": 3,
-      "source": "original"
+      "pair_id": 13,
+      "source": "original",
+      "pair_id_legacy": 3
     },
     {
       "sentence": "تهب الريح بقوة",
       "label": "WordOrder_VSO",
-      "pair_id": 4,
-      "source": "original"
+      "pair_id": 14,
+      "source": "original",
+      "pair_id_legacy": 4
     },
     {
       "sentence": "الفتاة ترسم اللوحة",
       "label": "WordOrder_SVO",
-      "pair_id": 5,
-      "source": "original"
+      "pair_id": 15,
+      "source": "original",
+      "pair_id_legacy": 5
     },
     {
       "sentence": "ترسم الفتاة اللوحة",
       "label": "WordOrder_VSO",
-      "pair_id": 6,
-      "source": "original"
+      "pair_id": 15,
+      "source": "original",
+      "pair_id_legacy": 6
     },
     {
       "sentence": "الرجل يشتري الخبز",
       "label": "WordOrder_SVO",
-      "pair_id": 7,
-      "source": "original"
+      "pair_id": 16,
+      "source": "original",
+      "pair_id_legacy": 7
     },
     {
       "sentence": "يشتري الرجل الخبز",
       "label": "WordOrder_VSO",
-      "pair_id": 8,
-      "source": "original"
+      "pair_id": 16,
+      "source": "original",
+      "pair_id_legacy": 8
     },
     {
       "sentence": "الصبي يحمل الحقيبة",
       "label": "WordOrder_SVO",
-      "pair_id": 9,
-      "source": "original"
+      "pair_id": 17,
+      "source": "original",
+      "pair_id_legacy": 9
     },
     {
       "sentence": "يحمل الصبي الحقيبة",
       "label": "WordOrder_VSO",
-      "pair_id": 10,
-      "source": "original"
+      "pair_id": 17,
+      "source": "original",
+      "pair_id_legacy": 10
     },
     {
       "sentence": "الموظف ارسل الرسالة",
       "label": "WordOrder_SVO",
-      "pair_id": 11,
-      "source": "original"
+      "pair_id": 18,
+      "source": "original",
+      "pair_id_legacy": 11
     },
     {
       "sentence": "ارسل الموظف الرسالة",
       "label": "WordOrder_VSO",
-      "pair_id": 12,
-      "source": "original"
+      "pair_id": 18,
+      "source": "original",
+      "pair_id_legacy": 12
     },
     {
       "sentence": "الشاب قرا المجلة",
       "label": "WordOrder_SVO",
-      "pair_id": 13,
-      "source": "original"
+      "pair_id": 19,
+      "source": "original",
+      "pair_id_legacy": 13
     },
     {
       "sentence": "قرا الشاب المجلة",
       "label": "WordOrder_VSO",
-      "pair_id": 14,
-      "source": "original"
+      "pair_id": 19,
+      "source": "original",
+      "pair_id_legacy": 14
     },
     {
       "sentence": "البنت تغسل الصحون",
       "label": "WordOrder_SVO",
-      "pair_id": 15,
-      "source": "original"
+      "pair_id": 20,
+      "source": "original",
+      "pair_id_legacy": 15
     },
     {
       "sentence": "تغسل البنت الصحون",
       "label": "WordOrder_VSO",
-      "pair_id": 16,
-      "source": "original"
+      "pair_id": 20,
+      "source": "original",
+      "pair_id_legacy": 16
     },
     {
       "sentence": "المدير وقع الوثيقة",
       "label": "WordOrder_SVO",
-      "pair_id": 17,
-      "source": "original"
+      "pair_id": 21,
+      "source": "original",
+      "pair_id_legacy": 17
     },
     {
       "sentence": "وقع المدير الوثيقة",
       "label": "WordOrder_VSO",
-      "pair_id": 18,
-      "source": "original"
+      "pair_id": 21,
+      "source": "original",
+      "pair_id_legacy": 18
     },
     {
       "sentence": "الطفل يحب الحلوى",
       "label": "WordOrder_SVO",
-      "pair_id": 19,
-      "source": "original"
+      "pair_id": 22,
+      "source": "original",
+      "pair_id_legacy": 19
     },
     {
       "sentence": "يحب الطفل الحلوى",
       "label": "WordOrder_VSO",
-      "pair_id": 20,
-      "source": "original"
+      "pair_id": 22,
+      "source": "original",
+      "pair_id_legacy": 20
     },
     {
       "sentence": "الطالبة تدرس الفيزياء",
       "label": "WordOrder_SVO",
-      "pair_id": 21,
-      "source": "original"
+      "pair_id": 23,
+      "source": "original",
+      "pair_id_legacy": 21
     },
     {
       "sentence": "تدرس الطالبة الفيزياء",
       "label": "WordOrder_VSO",
-      "pair_id": 22,
-      "source": "original"
+      "pair_id": 23,
+      "source": "original",
+      "pair_id_legacy": 22
     },
     {
       "sentence": "الشرطي يحرس المبنى",
       "label": "WordOrder_SVO",
-      "pair_id": 23,
-      "source": "original"
+      "pair_id": 24,
+      "source": "original",
+      "pair_id_legacy": 23
     },
     {
       "sentence": "يحرس الشرطي المبنى",
       "label": "WordOrder_VSO",
       "pair_id": 24,
-      "source": "original"
+      "source": "original",
+      "pair_id_legacy": 24
     },
     {
       "sentence": "المزارع يقطف الثمار",
       "label": "WordOrder_SVO",
       "pair_id": 25,
-      "source": "original"
+      "source": "original",
+      "pair_id_legacy": 25
     },
     {
       "sentence": "يقطف المزارع الثمار",
       "label": "WordOrder_VSO",
-      "pair_id": 26,
-      "source": "original"
+      "pair_id": 25,
+      "source": "original",
+      "pair_id_legacy": 26
     },
     {
       "sentence": "العجوز يعبر الشارع",
       "label": "WordOrder_SVO",
-      "pair_id": 27,
-      "source": "original"
+      "pair_id": 26,
+      "source": "original",
+      "pair_id_legacy": 27
     },
     {
       "sentence": "يعبر العجوز الشارع",
       "label": "WordOrder_VSO",
-      "pair_id": 28,
-      "source": "original"
+      "pair_id": 26,
+      "source": "original",
+      "pair_id_legacy": 28
     },
     {
       "sentence": "الطباخ يعد الوجبة",
       "label": "WordOrder_SVO",
-      "pair_id": 29,
-      "source": "original"
+      "pair_id": 27,
+      "source": "original",
+      "pair_id_legacy": 29
     },
     {
       "sentence": "يعد الطباخ الوجبة",
       "label": "WordOrder_VSO",
-      "pair_id": 30,
-      "source": "original"
+      "pair_id": 27,
+      "source": "original",
+      "pair_id_legacy": 30
     },
     {
       "sentence": "الحارس يفتح الباب",
       "label": "WordOrder_SVO",
-      "pair_id": 31,
-      "source": "original"
+      "pair_id": 28,
+      "source": "original",
+      "pair_id_legacy": 31
     },
     {
       "sentence": "يفتح الحارس الباب",
       "label": "WordOrder_VSO",
-      "pair_id": 32,
-      "source": "original"
+      "pair_id": 28,
+      "source": "original",
+      "pair_id_legacy": 32
     },
     {
       "sentence": "السائق يوقف السيارة",
       "label": "WordOrder_SVO",
-      "pair_id": 33,
-      "source": "original"
+      "pair_id": 29,
+      "source": "original",
+      "pair_id_legacy": 33
     },
     {
       "sentence": "يوقف السائق السيارة",
       "label": "WordOrder_VSO",
-      "pair_id": 34,
-      "source": "original"
+      "pair_id": 29,
+      "source": "original",
+      "pair_id_legacy": 34
     },
     {
       "sentence": "المعلمة تصحح الاوراق",
       "label": "WordOrder_SVO",
-      "pair_id": 35,
-      "source": "original"
+      "pair_id": 31,
+      "source": "original",
+      "pair_id_legacy": 35
     },
     {
       "sentence": "تصحح المعلمة الاوراق",
       "label": "WordOrder_VSO",
-      "pair_id": 36,
-      "source": "original"
+      "pair_id": 31,
+      "source": "original",
+      "pair_id_legacy": 36
     },
     {
       "sentence": "الولد يطعم القطة",
       "label": "WordOrder_SVO",
-      "pair_id": 37,
-      "source": "original"
+      "pair_id": 32,
+      "source": "original",
+      "pair_id_legacy": 37
     },
     {
       "sentence": "يطعم الولد القطة",
       "label": "WordOrder_VSO",
-      "pair_id": 38,
-      "source": "original"
+      "pair_id": 32,
+      "source": "original",
+      "pair_id_legacy": 38
     },
     {
       "sentence": "الطبيبة تفحص الطفل",
       "label": "WordOrder_SVO",
-      "pair_id": 39,
-      "source": "original"
+      "pair_id": 33,
+      "source": "original",
+      "pair_id_legacy": 39
     },
     {
       "sentence": "تفحص الطبيبة الطفل",
       "label": "WordOrder_VSO",
-      "pair_id": 0,
-      "source": "original"
+      "pair_id": 33,
+      "source": "original",
+      "pair_id_legacy": 0
     },
     {
       "sentence": "الرياضي يحمل الكاس",
       "label": "WordOrder_SVO",
-      "pair_id": 1,
-      "source": "original"
+      "pair_id": 34,
+      "source": "original",
+      "pair_id_legacy": 1
     },
     {
       "sentence": "يحمل الرياضي الكاس",
       "label": "WordOrder_VSO",
-      "pair_id": 2,
-      "source": "original"
+      "pair_id": 34,
+      "source": "original",
+      "pair_id_legacy": 2
     },
     {
       "sentence": "الكاتب يكتب الرواية",
       "label": "WordOrder_SVO",
-      "pair_id": 3,
-      "source": "original"
+      "pair_id": 35,
+      "source": "original",
+      "pair_id_legacy": 3
     },
     {
       "sentence": "يكتب الكاتب الرواية",
       "label": "WordOrder_VSO",
-      "pair_id": 4,
-      "source": "original"
+      "pair_id": 35,
+      "source": "original",
+      "pair_id_legacy": 4
     },
     {
       "sentence": "الولد احضر الماء",
       "label": "WordOrder_SVO",
-      "pair_id": 5,
-      "source": "original"
+      "pair_id": 36,
+      "source": "original",
+      "pair_id_legacy": 5
     },
     {
       "sentence": "احضر الولد الماء",
       "label": "WordOrder_VSO",
-      "pair_id": 6,
-      "source": "original"
+      "pair_id": 36,
+      "source": "original",
+      "pair_id_legacy": 6
     },
     {
       "sentence": "الطالب حفظ القصيدة",
       "label": "WordOrder_SVO",
-      "pair_id": 7,
-      "source": "original"
+      "pair_id": 37,
+      "source": "original",
+      "pair_id_legacy": 7
     },
     {
       "sentence": "حفظ الطالب القصيدة",
       "label": "WordOrder_VSO",
-      "pair_id": 8,
-      "source": "original"
+      "pair_id": 37,
+      "source": "original",
+      "pair_id_legacy": 8
     },
     {
       "sentence": "البنت رسمت الصورة",
       "label": "WordOrder_SVO",
-      "pair_id": 9,
-      "source": "original"
+      "pair_id": 38,
+      "source": "original",
+      "pair_id_legacy": 9
     },
     {
       "sentence": "رسمت البنت الصورة",
       "label": "WordOrder_VSO",
-      "pair_id": 10,
-      "source": "original"
+      "pair_id": 38,
+      "source": "original",
+      "pair_id_legacy": 10
     },
     {
       "sentence": "المهندسة صممت المشروع",
       "label": "WordOrder_SVO",
-      "pair_id": 11,
-      "source": "original"
+      "pair_id": 40,
+      "source": "original",
+      "pair_id_legacy": 11
     },
     {
       "sentence": "صممت المهندسة المشروع",
       "label": "WordOrder_VSO",
-      "pair_id": 12,
-      "source": "original"
+      "pair_id": 40,
+      "source": "original",
+      "pair_id_legacy": 12
     },
     {
       "sentence": "الطفل تناول الدواء",
       "label": "WordOrder_SVO",
-      "pair_id": 13,
-      "source": "original"
+      "pair_id": 41,
+      "source": "original",
+      "pair_id_legacy": 13
     },
     {
       "sentence": "تناول الطفل الدواء",
       "label": "WordOrder_VSO",
-      "pair_id": 14,
-      "source": "original"
+      "pair_id": 41,
+      "source": "original",
+      "pair_id_legacy": 14
     },
     {
       "sentence": "الرجل يفتح الباب",
       "label": "WordOrder_SVO",
-      "pair_id": 41,
-      "source": "generated"
+      "pair_id": 42,
+      "source": "generated",
+      "pair_id_legacy": 41
     },
     {
       "sentence": "يفتح الرجل الباب",
       "label": "WordOrder_VSO",
-      "pair_id": 41,
-      "source": "generated"
+      "pair_id": 42,
+      "source": "generated",
+      "pair_id_legacy": 41
     },
     {
       "sentence": "المراة غسلت الثياب",
       "label": "WordOrder_SVO",
-      "pair_id": 42,
-      "source": "generated"
+      "pair_id": 43,
+      "source": "generated",
+      "pair_id_legacy": 42
     },
     {
       "sentence": "غسلت المراة الثياب",
       "label": "WordOrder_VSO",
-      "pair_id": 42,
-      "source": "generated"
+      "pair_id": 43,
+      "source": "generated",
+      "pair_id_legacy": 42
     },
     {
       "sentence": "الولد يكسر الزجاج",
       "label": "WordOrder_SVO",
-      "pair_id": 43,
-      "source": "generated"
+      "pair_id": 44,
+      "source": "generated",
+      "pair_id_legacy": 43
     },
     {
       "sentence": "يكسر الولد الزجاج",
       "label": "WordOrder_VSO",
-      "pair_id": 43,
-      "source": "generated"
+      "pair_id": 44,
+      "source": "generated",
+      "pair_id_legacy": 43
     },
     {
       "sentence": "البنت رسمت الصورة",
       "label": "WordOrder_SVO",
-      "pair_id": 44,
-      "source": "generated"
+      "pair_id": 39,
+      "source": "generated",
+      "pair_id_legacy": 44
     },
     {
       "sentence": "رسمت البنت الصورة",
       "label": "WordOrder_VSO",
-      "pair_id": 44,
-      "source": "generated"
+      "pair_id": 39,
+      "source": "generated",
+      "pair_id_legacy": 44
     },
     {
       "sentence": "الاستاذ يصحح الواجب",
       "label": "WordOrder_SVO",
       "pair_id": 45,
-      "source": "generated"
+      "source": "generated",
+      "pair_id_legacy": 45
     },
     {
       "sentence": "يصحح الاستاذ الواجب",
       "label": "WordOrder_VSO",
       "pair_id": 45,
-      "source": "generated"
+      "source": "generated",
+      "pair_id_legacy": 45
     },
     {
       "sentence": "الطالبة حلت المسالة",
       "label": "WordOrder_SVO",
       "pair_id": 46,
-      "source": "generated"
+      "source": "generated",
+      "pair_id_legacy": 46
     },
     {
       "sentence": "حلت الطالبة المسالة",
       "label": "WordOrder_VSO",
       "pair_id": 46,
-      "source": "generated"
+      "source": "generated",
+      "pair_id_legacy": 46
     },
     {
       "sentence": "الشرطي يمسك اللص",
       "label": "WordOrder_SVO",
       "pair_id": 47,
-      "source": "generated"
+      "source": "generated",
+      "pair_id_legacy": 47
     },
     {
       "sentence": "يمسك الشرطي اللص",
       "label": "WordOrder_VSO",
       "pair_id": 47,
-      "source": "generated"
+      "source": "generated",
+      "pair_id_legacy": 47
     },
     {
       "sentence": "الطفلة لبست الفستان",
       "label": "WordOrder_SVO",
       "pair_id": 48,
-      "source": "generated"
+      "source": "generated",
+      "pair_id_legacy": 48
     },
     {
       "sentence": "لبست الطفلة الفستان",
       "label": "WordOrder_VSO",
       "pair_id": 48,
-      "source": "generated"
+      "source": "generated",
+      "pair_id_legacy": 48
     },
     {
       "sentence": "المدير يوقع العقد",
       "label": "WordOrder_SVO",
       "pair_id": 49,
-      "source": "generated"
+      "source": "generated",
+      "pair_id_legacy": 49
     },
     {
       "sentence": "يوقع المدير العقد",
       "label": "WordOrder_VSO",
       "pair_id": 49,
-      "source": "generated"
+      "source": "generated",
+      "pair_id_legacy": 49
     },
     {
       "sentence": "الممرضة ضمدت الجرح",
       "label": "WordOrder_SVO",
       "pair_id": 50,
-      "source": "generated"
+      "source": "generated",
+      "pair_id_legacy": 50
     },
     {
       "sentence": "ضمدت الممرضة الجرح",
       "label": "WordOrder_VSO",
       "pair_id": 50,
-      "source": "generated"
+      "source": "generated",
+      "pair_id_legacy": 50
     },
     {
       "sentence": "الصياد يصيد السمك",
       "label": "WordOrder_SVO",
       "pair_id": 51,
-      "source": "generated"
+      "source": "generated",
+      "pair_id_legacy": 51
     },
     {
       "sentence": "يصيد الصياد السمك",
       "label": "WordOrder_VSO",
       "pair_id": 51,
-      "source": "generated"
+      "source": "generated",
+      "pair_id_legacy": 51
     },
     {
       "sentence": "الطباخ طبخ الطعام",
       "label": "WordOrder_SVO",
       "pair_id": 52,
-      "source": "generated"
+      "source": "generated",
+      "pair_id_legacy": 52
     },
     {
       "sentence": "طبخ الطباخ الطعام",
       "label": "WordOrder_VSO",
       "pair_id": 52,
-      "source": "generated"
+      "source": "generated",
+      "pair_id_legacy": 52
     },
     {
       "sentence": "الحارس يفتش الحقيبة",
       "label": "WordOrder_SVO",
       "pair_id": 53,
-      "source": "generated"
+      "source": "generated",
+      "pair_id_legacy": 53
     },
     {
       "sentence": "يفتش الحارس الحقيبة",
       "label": "WordOrder_VSO",
       "pair_id": 53,
-      "source": "generated"
+      "source": "generated",
+      "pair_id_legacy": 53
     },
     {
       "sentence": "العالم اكتشف الحقيقة",
       "label": "WordOrder_SVO",
       "pair_id": 54,
-      "source": "generated"
+      "source": "generated",
+      "pair_id_legacy": 54
     },
     {
       "sentence": "اكتشف العالم الحقيقة",
       "label": "WordOrder_VSO",
       "pair_id": 54,
-      "source": "generated"
+      "source": "generated",
+      "pair_id_legacy": 54
     },
     {
       "sentence": "الراعي يرعى الغنم",
       "label": "WordOrder_SVO",
       "pair_id": 55,
-      "source": "generated"
+      "source": "generated",
+      "pair_id_legacy": 55
     },
     {
       "sentence": "يرعى الراعي الغنم",
       "label": "WordOrder_VSO",
       "pair_id": 55,
-      "source": "generated"
+      "source": "generated",
+      "pair_id_legacy": 55
     },
     {
       "sentence": "الجندي حمى المدينة",
       "label": "WordOrder_SVO",
       "pair_id": 56,
-      "source": "generated"
+      "source": "generated",
+      "pair_id_legacy": 56
     },
     {
       "sentence": "حمى الجندي المدينة",
       "label": "WordOrder_VSO",
       "pair_id": 56,
-      "source": "generated"
+      "source": "generated",
+      "pair_id_legacy": 56
     },
     {
       "sentence": "السائق يوقف السيارة",
       "label": "WordOrder_SVO",
-      "pair_id": 57,
-      "source": "generated"
+      "pair_id": 30,
+      "source": "generated",
+      "pair_id_legacy": 57
     },
     {
       "sentence": "يوقف السائق السيارة",
       "label": "WordOrder_VSO",
-      "pair_id": 57,
-      "source": "generated"
+      "pair_id": 30,
+      "source": "generated",
+      "pair_id_legacy": 57
     },
     {
       "sentence": "المحامي دافع الموكل",
       "label": "WordOrder_SVO",
-      "pair_id": 58,
-      "source": "generated"
+      "pair_id": 57,
+      "source": "generated",
+      "pair_id_legacy": 58
     },
     {
       "sentence": "دافع المحامي الموكل",
       "label": "WordOrder_VSO",
-      "pair_id": 58,
-      "source": "generated"
+      "pair_id": 57,
+      "source": "generated",
+      "pair_id_legacy": 58
     },
     {
       "sentence": "الكاتب ينشر الكتاب",
       "label": "WordOrder_SVO",
-      "pair_id": 59,
-      "source": "generated"
+      "pair_id": 58,
+      "source": "generated",
+      "pair_id_legacy": 59
     },
     {
       "sentence": "ينشر الكاتب الكتاب",
       "label": "WordOrder_VSO",
-      "pair_id": 59,
-      "source": "generated"
+      "pair_id": 58,
+      "source": "generated",
+      "pair_id_legacy": 59
     },
     {
       "sentence": "الطيار قاد الطائرة",
       "label": "WordOrder_SVO",
-      "pair_id": 60,
-      "source": "generated"
+      "pair_id": 59,
+      "source": "generated",
+      "pair_id_legacy": 60
     },
     {
       "sentence": "قاد الطيار الطائرة",
       "label": "WordOrder_VSO",
-      "pair_id": 60,
-      "source": "generated"
+      "pair_id": 59,
+      "source": "generated",
+      "pair_id_legacy": 60
     }
   ],
   "TenseBinary": [

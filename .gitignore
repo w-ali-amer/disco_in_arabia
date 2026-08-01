@@ -47,3 +47,6 @@ disco_in_arabia/
 # Paper drafts — published separately on Zenodo
 *.md
 *.pdf
+
+# Erratum documentation must ship despite *.md rule
+!ERRATUM.md
