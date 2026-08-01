@@ -56,3 +56,25 @@ sentences affected, the effect on reported accuracy is bounded above by
 for reproducibility (identical word multisets make them easy to exclude);
 this will be noted in the journal version and fixed in any standalone
 benchmark release.
+
+## Verification re-run (2026-08-02, exp13b)
+
+Task A word-order QFM re-run under both warmstart modes, identical protocol
+(10 seeds x 5-fold stratified CV, SVM-RBF on NumpyModel probability features):
+
+| condition | legacy (published behaviour) | fixed (repaired AraVec) |
+|-----------|------------------------------|--------------------------|
+| L0        | 50.00% (exact)               | 50.00% (exact)           |
+| L1        | 64.92% [62.4, 67.3]          | 63.58% [61.7, 65.4]      |
+| L2        | 61.83% [58.9, 64.7]          | 64.50% [62.4, 66.6]      |
+
+The legacy path reproduces the published numbers (64.9 / 61.8 / 50.0) exactly.
+The repaired embedding-derived parameters land within ~1pp: word content adds
+essentially nothing to this task, and the discriminative signal is topological,
+as the paper argues. Fold-level data in results_exp13b.json.
+
+One further correction to the exp15 symbol-audit note: that audit ran on a
+pair_id-scrambled (non-twin) pair, which is why it reported zero shared
+symbols. True multiset twins DO share parameters (twin_audit.py: the subject
+noun contributes 3 identical symbols to both circuits). The corrected
+mechanism analysis is in results_exp17.json.
