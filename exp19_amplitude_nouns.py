@@ -71,7 +71,11 @@ for w, row in zip(nlist, S2):
 print(f"[19] {len(targets)} noun targets (PCA-2, unit norm)", flush=True)
 
 # ── solver: <0| Rx(s2) Rz(s1) Rx(s0) == <target| up to global phase ────────
-S2s, S1s, S0s = sympy.symbols("s2 s1 s0")
+try:
+    from lambeq import Symbol as LSymbol
+except ImportError:
+    from lambeq.backend.symbol import Symbol as LSymbol
+S2s, S1s, S0s = LSymbol("s2"), LSymbol("s1"), LSymbol("s0")
 _amp = {}
 for k in (0, 1):
     d = Ket(k) >> Rx(S2s) >> Rz(S1s) >> Rx(S0s) >> Bra(0)
