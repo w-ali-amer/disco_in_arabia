@@ -51,3 +51,4 @@ disco_in_arabia/
 # Erratum documentation must ship despite *.md rule
 !ERRATUM.md
 !RESULTS_EXP21.md
+!EXP23_FAMILY_REVIEW.md
