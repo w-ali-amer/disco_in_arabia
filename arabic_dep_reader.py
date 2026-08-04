@@ -27,6 +27,19 @@ from lambeq.backend.grammar import Ty, Cup, Id, Word, Diagram, Swap
 N = Ty('n')   # noun type
 S = Ty('s')   # sentence type
 
+# ── Modifier-extension switch ─────────────────────────────────────────────
+# When True, the four modifier rules (attributive adjective, idafa, post-verbal
+# adverb, prepositional adjunct) also *extend* the core SVO/VSO/SV/VS/nominal
+# patterns (i.e. they fire on sentences a core rule already handles, adding the
+# previously-dropped modifier wiring).  When False (default) the core dispatch
+# is byte-identical to the original reader — the modifier rules then only fire
+# on sentences that would otherwise reach _fallback (pure promotions, so they
+# can never regress a diagram a core rule already produced).  This flag exists
+# because the greedy dispatch already handles modifier-bearing sentences via
+# core rules (dropping the modifier); enabling enrichment therefore changes
+# those diagrams, which the regression gate forbids for the live pipeline.
+ENRICH_MODIFIERS = False
+
 # ── Analysis backend  (reuse camel_test2 which already works) ─────────────
 try:
     from camel_test2 import analyze_arabic_sentence_with_morph
@@ -167,6 +180,238 @@ def _nominal(subj: str, pred: str) -> Diagram:
     return words >> (Cup(N, N.r) @ Id(S))
 
 
+# ═══════════════════════════════════════════════════════════════════════════
+#  MODIFIER RULES  (attributive adjective, idafa, adverb, prepositional adjunct)
+#  ---------------------------------------------------------------------------
+#  Word-box types (dual conventions match the existing core builders):
+#     adjective  n.r @ n       [noun][adj]                → Cup(n,n.r)      → n
+#     mudaf N1   n  @ n.l       [mudaf N1][mudaf-ilayh N2] → Cup(n.l,n)      → n
+#     adverb     s.r @ s        [clause][adverb]           → Cup(s,s.r)      → s
+#     prep       s.r @ s @ n.l  [clause][prep][obj]        → Cup(s,s.r)+Cup(n.l,n) → s
+# ═══════════════════════════════════════════════════════════════════════════
+
+def _adj(word: str) -> Word:
+    """Attributive adjective (noun-then-adjective order): n.r @ n"""
+    return Word(word, N.r @ N)
+
+def _mudaf(word: str) -> Word:
+    """Idafa head (mudaf), first noun of a construct: n @ n.l"""
+    return Word(word, N @ N.l)
+
+def _adverb(word: str) -> Word:
+    """Post-verbal adverb, modifies the whole clause: s.r @ s"""
+    return Word(word, S.r @ S)
+
+def _prep(word: str) -> Word:
+    """Preposition of a clause-modifying PP adjunct: s.r @ s @ n.l"""
+    return Word(word, S.r @ S @ N.l)
+
+
+def _np_idafa(n1: str, n2: str) -> Diagram:
+    """
+    Idafa construct  N1 N2  →  n
+    (mudaf) n @ n.l  ⊗  (mudaf-ilayh) n   →   n   via Cup(n.l, n).
+    """
+    words = _mudaf(n1) @ _noun(n2)
+    return words >> (Id(N) @ Cup(N.l, N))
+
+
+# ── NP-aware core builders: identical topology to _svo/_vso/_sv/_vs/_nominal,
+#    but accept a pre-built noun-phrase Diagram (cod == n) in the subject/object
+#    slot, so an adjective- or idafa-enriched NP can be plugged straight in.
+#    When the NP slots are plain _noun(...) states these produce byte-identical
+#    diagrams to the original string builders. ────────────────────────────────
+
+def _svo_np(subj_np: Diagram, verb: str, obj_np: Diagram) -> Diagram:
+    words = subj_np @ _verb_trans_svo(verb) @ obj_np
+    cups  = Cup(N, N.r) @ Id(S) @ Cup(N.l, N)
+    return words >> cups
+
+def _vso_np(verb: str, subj_np: Diagram, obj_np: Diagram) -> Diagram:
+    words = _verb_trans_vso(verb) @ subj_np @ obj_np
+    swap  = Id(S) @ Id(N.l) @ Swap(N.l, N) @ Id(N)
+    cups  = Id(S) @ Cup(N.l, N) @ Cup(N.l, N)
+    return words >> swap >> cups
+
+def _sv_np(subj_np: Diagram, verb: str) -> Diagram:
+    words = subj_np @ _verb_intrans_sv(verb)
+    return words >> (Cup(N, N.r) @ Id(S))
+
+def _vs_np(verb: str, subj_np: Diagram) -> Diagram:
+    words = _verb_intrans_vs(verb) @ subj_np
+    return words >> (Id(S) @ Cup(N.l, N))
+
+def _nominal_np(subj_np: Diagram, pred: str) -> Diagram:
+    words = subj_np @ _predicate(pred)
+    return words >> (Cup(N, N.r) @ Id(S))
+
+
+def _attach_adverb(clause: Diagram, adverb: str) -> Diagram:
+    """clause(s) ⊗ adverb(s.r @ s)  →  s   via Cup(s, s.r)."""
+    d = clause @ _adverb(adverb)
+    return d >> (Cup(S, S.r) @ Id(S))
+
+def _attach_pp(clause: Diagram, prep: str, obj: str) -> Diagram:
+    """clause(s) ⊗ prep(s.r @ s @ n.l) ⊗ obj(n) → s  via Cup(s,s.r)+Cup(n.l,n)."""
+    d = clause @ _prep(prep) @ _noun(obj)
+    return d >> (Cup(S, S.r) @ Id(S) @ Cup(N.l, N))
+
+
+def _build_extended(tokens: List[str], analyses: List[Dict], roles: Dict):
+    """
+    Try to build a modifier-enriched diagram (cod == s) directly from the
+    Stanza dependency tree.  Returns (Diagram, tag) when at least one in-scope
+    modifier — attributive adjective (amod), idafa (adjacent nmod noun),
+    post-verbal adverb (obl/advmod ADJ/ADV, no case child) or prepositional
+    adjunct (obl noun WITH a case child) — is detected and wired; otherwise
+    None (so the caller keeps the original behaviour).
+
+    Conservative by design: only fires when the core skeleton (verb+subject,
+    or subject+predicate) is confidently identifiable, so it does not mangle
+    Stanza mis-parses into spurious constructions.
+    """
+    n = len(analyses)
+    if n == 0:
+        return None
+    dg = roles.get('dependency_graph', {}) or {}
+
+    def deps_of(i):
+        return dg.get(i, [])
+    def has_case_child(i):
+        return any(r == 'case' for _, r in deps_of(i))
+    def enr(i):
+        return _enriched(analyses[i]['text'], analyses[i])
+
+    used = set()
+
+    def build_np(head_idx):
+        """Noun phrase (cod n) for head_idx, optionally enriched with idafa
+        (adjacent nmod noun) and/or an attributive adjective (amod)."""
+        used.add(head_idx)
+        cons = []
+        # idafa: first nmod NOUN/PROPN dependent immediately following the head
+        idafa_idx = None
+        for di, dr in deps_of(head_idx):
+            if di in used:
+                continue
+            da = analyses[di]
+            if dr in ('nmod', 'nmod:poss') and da['upos'] in ('NOUN', 'PROPN') \
+                    and di == head_idx + 1:
+                idafa_idx = di
+                break
+        if idafa_idx is not None:
+            used.add(idafa_idx)
+            dia = _np_idafa(enr(head_idx), enr(idafa_idx))
+            cons.append('idafa')
+        else:
+            dia = _noun(enr(head_idx))
+        # attributive adjective: an amod ADJ dependent that follows the head
+        adj_idx = None
+        for di, dr in deps_of(head_idx):
+            if di in used:
+                continue
+            if dr == 'amod' and analyses[di]['upos'] == 'ADJ' and di > head_idx:
+                adj_idx = di
+                break
+        if adj_idx is not None:
+            used.add(adj_idx)
+            dia = (dia @ _adj(enr(adj_idx))) >> (Cup(N, N.r) @ Id(N))
+            cons.append('amod')
+        return dia, cons
+
+    constructions = []
+
+    # ── Verb-headed clause ────────────────────────────────────────────────
+    verb_idx = roles.get('verb')
+    if verb_idx is None or analyses[verb_idx]['upos'] != 'VERB':
+        verb_idx = None
+        for i, a in enumerate(analyses):
+            if a['upos'] == 'VERB':
+                verb_idx = i
+                break
+
+    if verb_idx is not None and analyses[verb_idx]['upos'] == 'VERB':
+        subj_idx = None
+        obj_idx = None
+        for di, dr in deps_of(verb_idx):
+            if dr in ('nsubj', 'nsubj:pass', 'csubj') and subj_idx is None \
+                    and analyses[di]['upos'] in ('NOUN', 'PROPN', 'PRON'):
+                subj_idx = di
+            elif dr in ('obj', 'iobj') and obj_idx is None \
+                    and analyses[di]['upos'] in ('NOUN', 'PROPN'):
+                obj_idx = di
+        if subj_idx is None:
+            return None  # no confident subject → leave to existing dispatch
+        vw = enr(verb_idx)
+        if obj_idx is not None:
+            snp, sc = build_np(subj_idx)
+            onp, oc = build_np(obj_idx)
+            constructions += sc + oc
+            if subj_idx < verb_idx:
+                clause, core = _svo_np(snp, vw, onp), 'SVO'
+            else:
+                clause, core = _vso_np(vw, snp, onp), 'VSO'
+        else:
+            snp, sc = build_np(subj_idx)
+            constructions += sc
+            if subj_idx < verb_idx:
+                clause, core = _sv_np(snp, vw), 'SV'
+            else:
+                clause, core = _vs_np(vw, snp), 'VS'
+
+        # post-verbal adverb (obl/advmod ADJ/ADV, no preposition child)
+        for di, dr in deps_of(verb_idx):
+            if di in used or di in (subj_idx, obj_idx):
+                continue
+            da = analyses[di]
+            if dr in ('advmod', 'obl') and da['upos'] in ('ADJ', 'ADV') \
+                    and not has_case_child(di):
+                used.add(di)
+                clause = _attach_adverb(clause, enr(di))
+                constructions.append('adverb')
+                break
+
+        # prepositional adjunct (obl noun WITH a case/preposition child)
+        for di, dr in deps_of(verb_idx):
+            if di in used or di in (subj_idx, obj_idx):
+                continue
+            da = analyses[di]
+            if dr in ('obl', 'obl:arg', 'nmod') and da['upos'] in ('NOUN', 'PROPN') \
+                    and has_case_child(di):
+                prep_i = None
+                for ci, cr in deps_of(di):
+                    if cr == 'case':
+                        prep_i = ci
+                        break
+                if prep_i is not None:
+                    used.add(di)
+                    used.add(prep_i)
+                    clause = _attach_pp(clause, enr(prep_i), enr(di))
+                    constructions.append('pp')
+                    break
+
+        if not constructions:
+            return None
+        return clause, core + '+' + '+'.join(constructions)
+
+    # ── Nominal clause (no verb): subject + predicate, enrich the subject ──
+    subj_idx = roles.get('subject')
+    if subj_idx is None:
+        subj_idx = roles.get('root')
+    pred_idx = roles.get('predicate_idx')
+    if subj_idx is None or pred_idx is None or pred_idx == subj_idx:
+        return None
+    if not (0 <= subj_idx < n and 0 <= pred_idx < n):
+        return None
+    used.add(pred_idx)   # protect the predicate from being consumed as a modifier
+    snp, sc = build_np(subj_idx)
+    constructions += sc
+    if not constructions:
+        return None
+    clause = _nominal_np(snp, enr(pred_idx))
+    return clause, 'NOM+' + '+'.join(constructions)
+
+
 def _fallback(tokens: List[str], analyses: List[Dict]) -> Diagram:
     """
     Robust fallback guaranteed to produce cod == s.
@@ -270,46 +515,77 @@ def sentence_to_diagram_from_parse(
                      f"verb={verb_str!r}→{e_verb!r}  obj={obj_str!r}  pred={pred_str!r}")
 
     diagram = None
-    try:
-        # ── Transitive verbal ────────────────────────────────────────────
-        if subj_str and verb_str and obj_str:
-            if subj_idx < verb_idx:               # subject BEFORE verb → SVO
-                diagram = _svo(e_subj, e_verb, e_obj)
-                logger.debug("→ SVO")
-            else:                                  # verb BEFORE subject  → VSO
-                diagram = _vso(e_verb, e_subj, e_obj)
-                logger.debug("→ VSO")
 
-        # ── Intransitive verbal ──────────────────────────────────────────
-        elif subj_str and verb_str:
-            if subj_idx < verb_idx:
-                diagram = _sv(e_subj, e_verb)
-                logger.debug("→ SV")
-            else:
-                diagram = _vs(e_verb, e_subj)
-                logger.debug("→ VS")
+    # ── Modifier-enrichment layer (opt-in via ENRICH_MODIFIERS) ──────────
+    #    Extends the core patterns with attributive adjectives / idafa /
+    #    adverbs / PP adjuncts.  Off by default → core dispatch below runs
+    #    unchanged and every non-fallback diagram stays byte-identical.
+    if ENRICH_MODIFIERS:
+        try:
+            _ext = _build_extended(tokens, analyses, roles)
+        except Exception as _exc:
+            logger.warning(f"Extended build raised {_exc!r}; ignoring.")
+            _ext = None
+        if _ext is not None:
+            diagram, _tag = _ext
+            logger.debug(f"→ {_tag}")
 
-        # ── Nominal (subject + predicate, no verb) ───────────────────────
-        elif subj_str and pred_str:
-            diagram = _nominal(e_subj, e_pred)
-            logger.debug("→ Nominal")
+    if diagram is None:
+        try:
+            # ── Transitive verbal ────────────────────────────────────────
+            if subj_str and verb_str and obj_str:
+                if subj_idx < verb_idx:               # subject BEFORE verb → SVO
+                    diagram = _svo(e_subj, e_verb, e_obj)
+                    logger.debug("→ SVO")
+                else:                                  # verb BEFORE subject  → VSO
+                    diagram = _vso(e_verb, e_subj, e_obj)
+                    logger.debug("→ VSO")
 
-        # ── Verb + object only (no explicit subject) ────────────────────
-        elif verb_str and obj_str:
-            diagram = _vs(e_verb, e_obj)
-            logger.debug("→ VO-as-VS")
+            # ── Intransitive verbal ──────────────────────────────────────
+            elif subj_str and verb_str:
+                if subj_idx < verb_idx:
+                    diagram = _sv(e_subj, e_verb)
+                    logger.debug("→ SV")
+                else:
+                    diagram = _vs(e_verb, e_subj)
+                    logger.debug("→ VS")
 
-        # ── Single verb ──────────────────────────────────────────────────
-        elif verb_str:
-            root_idx = roles.get('root')
-            root_str = _tok(root_idx)
-            fake_subj = root_str or (tokens[0] if tokens else 'subj')
-            diagram = _vs(e_verb, fake_subj)
-            logger.debug("→ V-only-as-VS")
+            # ── Nominal (subject + predicate, no verb) ───────────────────
+            elif subj_str and pred_str:
+                diagram = _nominal(e_subj, e_pred)
+                logger.debug("→ Nominal")
 
-    except Exception as exc:
-        logger.warning(f"Diagram build raised {exc!r}, using fallback.")
-        diagram = None
+            # ── Verb + object only (no explicit subject) ────────────────
+            elif verb_str and obj_str:
+                diagram = _vs(e_verb, e_obj)
+                logger.debug("→ VO-as-VS")
+
+            # ── Single verb ──────────────────────────────────────────────
+            elif verb_str:
+                root_idx = roles.get('root')
+                root_str = _tok(root_idx)
+                fake_subj = root_str or (tokens[0] if tokens else 'subj')
+                diagram = _vs(e_verb, fake_subj)
+                logger.debug("→ V-only-as-VS")
+
+        except Exception as exc:
+            logger.warning(f"Diagram build raised {exc!r}, using fallback.")
+            diagram = None
+
+    # ── Modifier-rescue layer (always on) ────────────────────────────────
+    #    Runs only when the core dispatch produced nothing, i.e. exactly the
+    #    sentences that would otherwise reach _fallback.  It can therefore
+    #    only PROMOTE a fallback to a real modifier rule, never regress a
+    #    diagram a core rule already produced.
+    if diagram is None:
+        try:
+            _resc = _build_extended(tokens, analyses, roles)
+        except Exception as _exc:
+            logger.warning(f"Rescue build raised {_exc!r}; ignoring.")
+            _resc = None
+        if _resc is not None:
+            diagram, _tag = _resc
+            logger.debug(f"→ {_tag}")
 
     if diagram is None:
         diagram = _fallback(tokens, analyses)
