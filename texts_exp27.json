@@ -1,0 +1,46 @@
+[
+  {
+    "referent": "رجل(man/leg)",
+    "senses": [
+      "man",
+      "leg"
+    ],
+    "S1": "دخل رجل",
+    "S2_disambig": "[verb خ.ر.ج selecting sense B]",
+    "S2_neutral": "[verb ز.ر.ع]",
+    "note": "surfaces are documentation; gates run on anchors; native review pending"
+  },
+  {
+    "referent": "جمل(camel/sentence)",
+    "senses": [
+      "camel",
+      "sentence"
+    ],
+    "S1": "دخل جمل",
+    "S2_disambig": "[verb ل.ع.ب selecting sense A]",
+    "S2_neutral": "[verb ق.ط.ع]",
+    "note": "surfaces are documentation; gates run on anchors; native review pending"
+  },
+  {
+    "referent": "جمل(camel/beauty)",
+    "senses": [
+      "camel",
+      "beauty"
+    ],
+    "S1": "دخل جمل",
+    "S2_disambig": "[verb خ.ر.ج selecting sense B]",
+    "S2_neutral": "[verb ف.ه.م]",
+    "note": "surfaces are documentation; gates run on anchors; native review pending"
+  },
+  {
+    "referent": "عين(eye/spring)",
+    "senses": [
+      "eye",
+      "spring"
+    ],
+    "S1": "دخل عين",
+    "S2_disambig": "[verb ف.ت.ح selecting sense A]",
+    "S2_neutral": "[verb ن.ش.ر]",
+    "note": "surfaces are documentation; gates run on anchors; native review pending"
+  }
+]
