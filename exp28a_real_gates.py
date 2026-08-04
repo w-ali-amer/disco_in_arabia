@@ -136,6 +136,11 @@ def track_wires(prog, names):
         else:  # 2-qubit
             for wid in (wires[off], wires[off + 1]):
                 info[wid]["ops"].append(oi)
+            if kind == "SWAP":
+                # VSO circuits contain Swap: the tracker must exchange wire
+                # IDENTITIES or every downstream wire is mislabeled
+                # (caught by the closure gate)
+                wires[off], wires[off + 1] = wires[off + 1], wires[off]
     return info, wires  # wires = ids still open at end (the s wire(s))
 
 def find_subject_wire(prog, names, info, subj_base):
@@ -146,24 +151,28 @@ def find_subject_wire(prog, names, info, subj_base):
     return cands[0]
 
 def run_surgical(prog, names, w, subj_wid, info, input_vec,
-                 keep_subject_word=False, postselect_s=True):
-    """Execute with subject ket replaced by input_vec; subject word ops
-    (its Rx/Rz symbols + bra) removed unless keep_subject_word."""
-    skip = set()
-    if not keep_subject_word:
-        skip = set(info[subj_wid]["symops"])
-        if info[subj_wid]["bra"] is not None:
-            skip.add(info[subj_wid]["bra"])
+                 keep_subject_word=False):
+    """Execute with subject ket replaced by input_vec; subject Euler ops
+    skipped; subject bra STASHED (axis moved to tensor end so downstream
+    offsets stay valid). Returns (state, open_wire_ids, subj_axis)."""
+    skip_syms = set() if keep_subject_word else set(info[subj_wid]["symops"])
+    subj_bra = None if keep_subject_word else info[subj_wid]["bra"]
     st = np.array(1.0 + 0j)
     wires = []
+    stashed = 0
     for oi, (kind, off, arg) in enumerate(prog):
-        if oi in skip:
+        if oi in skip_syms:
             continue
         if kind == "ket":
             vec = input_vec if (oi == info[subj_wid]["ket"]) else KETS[arg]
             st = np.moveaxis(np.tensordot(st, vec, 0), -1, off)
             wires.insert(off, oi)
         elif kind == "bra":
+            if oi == subj_bra:
+                st = np.moveaxis(st, off, st.ndim - 1)
+                wires.pop(off)
+                stashed += 1
+                continue
             st = np.take(st, arg, axis=off)
             wires.pop(off)
         elif kind == "scalar":
@@ -182,10 +191,14 @@ def run_surgical(prog, names, w, subj_wid, info, input_vec,
             st = apply2(st, FORMS[k2](w[arg]), off, off + 1)
         else:
             st = apply2(st, FIXED2[arg], off, off + 1)
-    # open wires now: subject-out (ket-op id of subj) and s wire(s)
-    subj_axis = wires.index(info[subj_wid]["ket"]) \
-        if not keep_subject_word and info[subj_wid]["bra"] is not None else None
+    if stashed:
+        subj_axis = st.ndim - 1
+    elif not keep_subject_word:
+        subj_axis = wires.index(info[subj_wid]["ket"])
+    else:
+        subj_axis = None
     return st, wires, subj_axis
+
 
 def weights_for(names):
     w = np.empty(len(names))
@@ -203,18 +216,21 @@ def weights_for(names):
     return w
 
 # ── parse frames, compile, surgery, closure ─────────────────────────────────
-SUBJ = "الرجل"
-# TRANSITIVE frames: the OBJECT is the potential disambiguator — 2-word
-# intransitives yielded unitary (evidence-free) gates in the first run
-FRAMES_T = [("فتح", "الباب"), ("قرا", "الكتاب"), ("اكل", "الطعام"),
-            ("شرب", "الحليب"), ("حمل", "الحقيبة"), ("كتب", "الدرس")]
-FRAME_VERBS = [f"{v}+{o}" for v, o in FRAMES_T]
-sent_list = [f"{v} {SUBJ} {o}" for v, o in FRAMES_T]
+# VERIFIED true-VSO frames (3-leg verb, object present in circuit — the
+# earlier frames silently DROPPED the object: 2-leg parse, no evidence
+# possible). Per-frame subject; surgery removes it anyway.
+FRAMES_V = [("قرأ الطالب كتاب النحو", "الطالب"),
+            ("حمل الولد حقيبة المدرسة", "الولد"),
+            ("فتح المدير باب المكتب", "المدير"),
+            ("كتب الطالب الدرس الجديد", "الطالب")]
+FRAME_VERBS = [s.split()[0] + "+" + s.split()[2] for s, _ in FRAMES_V]
+sent_list = [s for s, _ in FRAMES_V]
+SUBJS = [su for _, su in FRAMES_V]
 diagrams = exp13.sentences_to_diagrams(sent_list, log_interval=999)
 ansatz = exp13.make_ansatz(1, 1)
 
 gates = {}
-for v, d in zip(FRAME_VERBS, diagrams):
+for v, d, SUBJ in zip(FRAME_VERBS, diagrams, SUBJS):
     if d is None:
         print(f"[28a] frame {v}: parse failed — skipped", flush=True)
         continue
@@ -237,9 +253,7 @@ for v, d in zip(FRAME_VERBS, diagrams):
 
     # CLOSURE: opened gate (+ s open) contracted with removed effect must
     # equal the lambdify pipeline state.
-    st, wires, saxis = run_surgical(prog, names, w, swid, info, KETS[0],
-                                    postselect_s=False)
-    subj_axis = wires.index(info[swid]["ket"])
+    st, wires, subj_axis = run_surgical(prog, names, w, swid, info, KETS[0])
     eff_ops = sorted(info[swid]["symops"])
     E = np.eye(2, dtype=complex)
     for oi in eff_ops:
@@ -254,13 +268,15 @@ for v, d in zip(FRAME_VERBS, diagrams):
     ref = np.asarray(c.lambdify(*syms)(*vals).eval()).flatten()
     f_close = abs(np.vdot(closed / np.linalg.norm(closed),
                           ref / np.linalg.norm(ref))) ** 2
-    assert f_close > 1 - 1e-9, f"CLOSURE FAILED frame {v}: {f_close}"
+    if os.environ.get("GATE_SWAP"):
+        f_close = float("nan")   # counterfactual ansatz: closure N/A
+    else:
+        assert f_close > 1 - 1e-9, f"CLOSURE FAILED frame {v}: {f_close}"
 
     # gate matrix: input basis -> subject-out, s post-selected <0|
     cols = []
     for b in (0, 1):
-        st, wires, _ = run_surgical(prog, names, w, swid, info, KETS[b])
-        subj_ax = wires.index(info[swid]["ket"])
+        st, wires, subj_ax = run_surgical(prog, names, w, swid, info, KETS[b])
         s_axes = [a for a in range(st.ndim) if a != subj_ax]
         v_out = st
         for a in sorted(s_axes, reverse=True):
