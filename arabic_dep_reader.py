@@ -40,6 +40,31 @@ S = Ty('s')   # sentence type
 # those diagrams, which the regression gate forbids for the live pipeline.
 ENRICH_MODIFIERS = False
 
+# ── CAMeL-POS fusion switch ───────────────────────────────────────────────
+# Stanza systematically reads masdar-capable sentence-initial verbs (فتح,
+# رفع, قطع …) as nouns, parsing VSO clauses as iḍāfa NPs ("the man's opening
+# of the door") — no token gets upos VERB, so verb-rescue never fires and the
+# sentence falls through to nominal/fallback.  When this flag is on (env
+# ARABIC_POS_FUSION=1, read at call time) and Stanza found NO verb anywhere,
+# a conservative rescue asks the CAMeL analyzer whether the sentence-initial
+# token has a verb reading; if it does and at least two nominals follow, the
+# clause is rebuilt as VSO.  Verbs never carry the definite article, so
+# ال-initial subjects can never trigger a spurious verb reading.  Off by
+# default: the live pipeline and all published numbers are byte-identical.
+import os
+
+def _camel_has_verb_reading(token_text: str) -> bool:
+    try:
+        import camel_test2
+        if getattr(camel_test2, 'CAMEL_ANALYZER', None) is None:
+            return False
+        for ana in camel_test2.CAMEL_ANALYZER.analyze(token_text) or []:
+            if isinstance(ana, dict) and ana.get('pos') == 'verb':
+                return True
+    except Exception as exc:
+        logger.debug(f"POS-fusion CAMeL query failed for {token_text!r}: {exc!r}")
+    return False
+
 # ── Analysis backend  (reuse camel_test2 which already works) ─────────────
 try:
     from camel_test2 import analyze_arabic_sentence_with_morph
@@ -502,6 +527,62 @@ def sentence_to_diagram_from_parse(
                                 break
                 logger.debug(f"Verb-rescue: using idx={verb_idx} ({analyses[verb_idx]['text']})")
                 break
+
+    # ── CAMeL-POS fusion rescue (opt-in, see flag comment at top) ────────
+    if os.environ.get("ARABIC_POS_FUSION", "0") == "1" and len(analyses) >= 3:
+        def _nominal_candidate(i):
+            # NOUN/PROPN/PRON, plus ال-definite ADJ/X (Stanza tags
+            # profession nouns like النجار as ADJ or X); exclude
+            # prepositional objects.
+            a = analyses[i]
+            if a.get('upos') not in ('NOUN', 'PROPN', 'PRON', 'ADJ', 'X'):
+                return False
+            if a.get('upos') in ('ADJ', 'X') and not a['text'].startswith('ال'):
+                return False
+            if i > 0 and analyses[i - 1].get('upos') == 'ADP':
+                return False
+            # fused-preposition tokens (بالميدالية = ب+ال…) are PP heads,
+            # not bare nominals — promoting them fabricates transitivity
+            if a['text'].startswith(('بال', 'كال', 'لل')):
+                return False
+            return True
+        # Rule 1: no verb anywhere — masdar mis-parse ("قطع النجار الخشب"
+        # read as an NP).  CAMeL confirms a verb reading for token 0.
+        if (verb_idx is None
+                and analyses[0].get('upos') in ('NOUN', 'PROPN', 'X', 'ADJ')
+                and _camel_has_verb_reading(analyses[0]['text'])):
+            nominals = [i for i in range(1, len(analyses))
+                        if _nominal_candidate(i)]
+            if len(nominals) >= 2:
+                verb_idx, subj_idx, obj_idx = 0, nominals[0], nominals[1]
+                pred_idx = None
+                logger.debug(f"POS-fusion rule 1: VSO "
+                             f"verb={analyses[0]['text']!r} "
+                             f"subj_idx={subj_idx} obj_idx={obj_idx}")
+        # Rule 2: verb + subject found but the object was swallowed as an
+        # iḍāfa modifier of the subject ("فتح الرجل الباب" parsed VS with
+        # الباب attached to الرجل) — promote the first free nominal after
+        # both back to object.
+        elif (verb_idx is not None and subj_idx is not None
+                and obj_idx is None):
+            for k in range(max(verb_idx, subj_idx) + 1, len(analyses)):
+                if k not in (verb_idx, subj_idx) and _nominal_candidate(k):
+                    obj_idx = k
+                    logger.debug(f"POS-fusion rule 2: promoted obj_idx={k} "
+                                 f"({analyses[k]['text']!r})")
+                    break
+        # Rule 3: VO_NO_SUBJ with two free post-verbal nominals is VSO —
+        # Stanza read "فتح الرجل الباب" as pro-drop "he opened the man's
+        # door"; post-verbal NP1 is the subject, NP2 the object.  Genuine
+        # pro-drop clauses have no second nominal and stay untouched.
+        elif (verb_idx is not None and subj_idx is None
+                and obj_idx is not None and obj_idx > verb_idx):
+            for k in range(obj_idx + 1, len(analyses)):
+                if k != verb_idx and _nominal_candidate(k):
+                    subj_idx, obj_idx = obj_idx, k
+                    logger.debug(f"POS-fusion rule 3: VSO subj_idx={subj_idx} "
+                                 f"obj_idx={obj_idx}")
+                    break
 
     subj_str = _tok(subj_idx)
     verb_str = _tok(verb_idx)
