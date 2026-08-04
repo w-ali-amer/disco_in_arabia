@@ -97,10 +97,14 @@ for (sent, SUBJ), d in zip(FRAMES_V, diagrams):
     print(f"[29] gate {tag}: closure={f:.12f}", flush=True)
 
 # A1: passing directions and alignment
+# passing direction INTO the selected outcome = conj of the S_OUT row
+# (the top singular vector maximizes total output, not the evidence
+# component — v1 used it by mistake; the CAL verb own-selectivity of ~0
+# exposed the error)
 vs = []
 for M in gates:
-    U, S, Vh = np.linalg.svd(M)
-    vs.append(Vh[0, :].conj())
+    r = M[S_OUT, :].conj()
+    vs.append(r / np.linalg.norm(r))
 align = np.zeros((4, 4))
 for i in range(4):
     for j in range(4):
