@@ -1,10 +1,14 @@
 # -*- coding: utf-8 -*-
-"""Exp 30b: joint multi-frame verb-parameter solve.
+"""Exp 32: joint multi-frame solve with CRx (non-diagonal) verb entanglers.
 
-exp30 found: per-frame solves reach corpus preference directions
-(residual -> 0) but single-frame-solved params did not keep their direction
-in a new frame (n=2, mean alignment 0.50). exp30b is the decisive,
-overdetermined version:
+Identical harness to exp30b (joint multi-frame solve, supervised animacy
+axis, LOO transfer, random-theta null, cross-verb control) with ONE change:
+gate surgery replaces the verb's diagonal CRz entanglers with CRx in the
+compiled program.  Three prior results (bare-wire sense filtering, the
+conformality escape, sentence-order sensitivity) all demand this
+non-diagonal ansatz; exp32 asks whether it also widens the encoder's
+dynamic range: a lower random-theta null and lower joint residuals than
+exp30b on the same frames.  Design unchanged otherwise:
 
   * frame supply scaled: all label-identified VSO transitive sentences per
     verb (WordOrderMatched/WordOrder _VSO + WSD/WSD_v2 verb-initial), built
@@ -80,10 +84,10 @@ for split, ds in data_all.items():
         elif lab.endswith("_SVO"):
             subjects[hn(t[1])].append(t[0])
 
-print("[30b] frame supply:",
+print("[32] frame supply:",
       {surface[k]: len(v) for k, v in
        sorted(frames.items(), key=lambda kv: -len(kv[1]))}, flush=True)
-print("[30b] subject counts:",
+print("[32] subject counts:",
       {surface.get(k, k): len(v) for k, v in subjects.items()
        if k in frames}, flush=True)
 
@@ -103,7 +107,7 @@ anim_words = sorted({w for k in frames for w in subjects[k]})
 inan_words = sorted(set(objects_pool))
 anim_vecs = [v for v in (vec(w) for w in anim_words) if v is not None]
 inan_vecs = [v for v in (vec(w) for w in inan_words) if v is not None]
-print(f"[30b] animacy pools: {len(anim_vecs)}/{len(anim_words)} subject "
+print(f"[32] animacy pools: {len(anim_vecs)}/{len(anim_words)} subject "
       f"vectors, {len(inan_vecs)}/{len(inan_words)} object vectors",
       flush=True)
 axis = np.mean(anim_vecs, axis=0) - np.mean(inan_vecs, axis=0)
@@ -141,7 +145,7 @@ for k in sorted(frames, key=lambda k: -len(frames[k])):
     T2B[surface[k]] = {"man": sm, "leg": sl, "camel": sc, "beauty": sb,
                        "man>leg": bool(sm > sl),
                        "camel>beauty": bool(sc > sb)}
-    print(f"[30b] T2b {surface[k]}: man={sm:.3f} leg={sl:.3f} "
+    print(f"[32] T2b {surface[k]}: man={sm:.3f} leg={sl:.3f} "
           f"(man>leg: {sm > sl}) | camel={sc:.3f} beauty={sb:.3f} "
           f"(camel>beauty: {sc > sb})", flush=True)
 
@@ -149,7 +153,7 @@ for k in sorted(frames, key=lambda k: -len(frames[k])):
 CAND = {k: fs[::max(1, len(fs) // MAX_TRY_PER_VERB)][:MAX_TRY_PER_VERB]
         for k, fs in frames.items() if len(fs) >= MIN_FRAMES}
 all_sents = [f for fs in CAND.values() for f, _, _ in fs]
-print(f"[30b] parsing {len(all_sents)} candidate frames for "
+print(f"[32] parsing {len(all_sents)} candidate frames for "
       f"{len(CAND)} verbs", flush=True)
 diagrams = exp13.sentences_to_diagrams(all_sents, log_interval=50)
 dmap = dict(zip(all_sents, diagrams))
@@ -175,9 +179,21 @@ def build(sent, SUBJ):
     except AssertionError:
         return None
     w = ns["weights_for"](names)
-    vidx = [i for i, nm in enumerate(names) if "s@n.l@n.l" in nm]
-    return dict(c=c, names=names, sym_index=sym_index, prog=prog,
-                info=info, swid=swid, w=w, vidx=sorted(vidx))
+    vidx = sorted(i for i, nm in enumerate(names) if "s@n.l@n.l" in nm)
+    # ── CRx surgery: verb's parameterized diagonal entanglers -> CRx ──
+    vset = set(vidx[:2])
+    n_sw = n_1q = 0
+    prog2 = []
+    for kind, off, arg in prog:
+        if kind == "CRz" and arg in vset:
+            prog2.append(("CRx", off, arg)); n_sw += 1
+        else:
+            if kind in ("Rx", "Rz") and arg in vset:
+                n_1q += 1
+            prog2.append((kind, off, arg))
+    return dict(c=c, names=names, sym_index=sym_index, prog=prog2,
+                info=info, swid=swid, w=w, vidx=vidx,
+                surgery=(n_sw, n_1q))
 
 def run_sf(G, w, input_vec):
     H_M, FIXED1, FIXED2 = ns["H_M"], ns["FIXED1"], ns["FIXED2"]
@@ -245,7 +261,11 @@ for k, fs in CAND.items():
             gs.append(dict(G=G, sent=sent, subj=subj, split=split))
         if len(gs) >= MAX_USE_PER_VERB:
             break
-    print(f"[30b] {surface[k]}: usable frames {len(gs)}/{len(fs)} attempted",
+    if gs:
+        sw = [g["G"]["surgery"] for g in gs]
+        print(f"[32] {surface[k]}: surgery per frame (CRz->CRx, 1q-param): "
+              f"{sw}", flush=True)
+    print(f"[32] {surface[k]}: usable frames {len(gs)}/{len(fs)} attempted",
           flush=True)
     if len(gs) >= MIN_FRAMES:
         USABLE[k] = gs
@@ -301,7 +321,7 @@ for k, gs in USABLE.items():
         "null_p95": float(np.quantile(null_means, 0.95)),
         "p_value": p,
     }
-    print(f"[30b] {v}: M={len(gs)} | T1b indiv residual "
+    print(f"[32] {v}: M={len(gs)} | T1b indiv residual "
           f"med={np.median(indiv):.2e} max={max(indiv):.2e} | "
           f"T3b joint residual={jb.fun:.4f} theta={jb.x.round(3)} | "
           f"T4b LOO mean={obs:.4f} (null mean={null_means.mean():.3f}, "
@@ -322,18 +342,18 @@ for k, gs in USABLE.items():
     OUT["cross_verb"][v] = {"matched_mean": float(np.mean(matched)),
                             "mismatched": row}
     if row:
-        print(f"[30b] XV {v}: matched={np.mean(matched):.3f} vs "
+        print(f"[32] XV {v}: matched={np.mean(matched):.3f} vs "
               f"mismatched={np.mean(list(row.values())):.3f} "
               f"({ {a: round(b,3) for a,b in row.items()} })", flush=True)
 
 ms = [OUT["verbs"][surface[k]]["T4b_loo_mean"] for k in USABLE
       if surface[k] in OUT["verbs"]]
 if ms:
-    print(f"[30b] SUMMARY: LOO transfer mean={np.mean(ms):.4f} over "
+    print(f"[32] SUMMARY: LOO transfer mean={np.mean(ms):.4f} over "
           f"{len(ms)} verbs (random-theta null ~"
           f"{np.mean([OUT['verbs'][surface[k]]['null_mean'] for k in USABLE]):.3f})",
           flush=True)
 OUT["config"]["pos_fusion"] = FUSION
-json.dump(OUT, open(f"results_exp30b_s{S_OUT}{TAG}.json", "w"), indent=2,
+json.dump(OUT, open(f"results_exp32_s{S_OUT}{TAG}.json", "w"), indent=2,
           ensure_ascii=False)
-print("[30b] DONE", flush=True)
+print("[32] DONE", flush=True)
