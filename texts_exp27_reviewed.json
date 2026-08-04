@@ -1,0 +1,70 @@
+[
+  {
+    "referent": "رجل(man/leg)",
+    "senses": [
+      "man",
+      "leg"
+    ],
+    "S1": "دخل رجل",
+    "S2_disambig": "خرج الرجل",
+    "S2_neutral": "زرع الرجل",
+    "surface_ambiguity": true,
+    "surface_ambiguity_note": "ORTHOGRAPHIC-ONLY: رَجُل (man) and رِجْل (leg) share the identical undiacritized skeleton رجل, so an isolated bare token is genuinely ambiguous. But they differ in gender (man=masc, leg=fem), so ANY agreeing verb resolves it: دخل رجل (masc) forces the MAN reading; a leg would need دخلت. Ambiguity survives only in undiacritized isolation, not in a real inflected clause.",
+    "semantic_match_disambig": "MISMATCH",
+    "semantic_match_disambig_reason": "Physics dPB=+0.168 selects sense B (leg). But خرج (to go out) is a motion verb that naturally takes an animate/human subject: خرج الرجل = the man went out selects MAN (sense A). Lexis contradicts the anchor.",
+    "semantic_match_neutral": "MATCH",
+    "semantic_match_neutral_reason": "Physics dPB_neu=-0.011 selects sense A (man). زرع (to plant) requires an animate agent, so زرع الرجل = the man planted also favors MAN (sense A). Note: this neutral verb is not truly neutral - it imposes an animacy constraint that happens to agree with the near-zero dPB.",
+    "note": "surfaces authored by native review 2026-08; gates run on anchors, not on these surfaces"
+  },
+  {
+    "referent": "جمل(camel/sentence)",
+    "senses": [
+      "camel",
+      "sentence"
+    ],
+    "S1": "دخل جمل",
+    "S2_disambig": "لعب الجمل",
+    "S2_neutral": "قطع الجمل",
+    "surface_ambiguity": false,
+    "surface_ambiguity_note": "NOT A SURFACE AMBIGUITY. camel = جَمَل (skeleton جمل); sentence = جُمْلة (skeleton جملة, with taa marbuta ة). Different surface forms - جمل never reads as sentence. S1 دخل جمل is monosemous (camel only). The ambiguity is an ANCHOR-LEVEL abstraction in the circuit, with no orthographic reality; relabel honestly.",
+    "semantic_match_disambig": "MATCH",
+    "semantic_match_disambig_reason": "Physics dPB=-0.018 selects sense A (camel). لعب (to play) needs an animate agent: لعب الجمل = the camel played selects CAMEL (sense A). A sentence cannot play. Lexis agrees with the anchor.",
+    "semantic_match_neutral": "MISMATCH",
+    "semantic_match_neutral_reason": "Physics dPB_neu=+0.149 selects sense B (sentence). But قطع (to cut/cross) with this referent reads as قطع الجمل = the camel crossed (traversed), an animate agent = CAMEL (sense A). No natural reading of قطع selects sentence. Anchor contradicts lexis.",
+    "note": "surfaces authored by native review 2026-08; gates run on anchors, not on these surfaces"
+  },
+  {
+    "referent": "جمل(camel/beauty)",
+    "senses": [
+      "camel",
+      "beauty"
+    ],
+    "S1": "دخل جمل",
+    "S2_disambig": "خرج الجمل",
+    "S2_neutral": "فهم الجمل",
+    "surface_ambiguity": false,
+    "surface_ambiguity_note": "NOT A SURFACE AMBIGUITY. camel = جَمَل (skeleton جمل); beauty = جَمال (skeleton جمال, with medial alif). They share the historic root ج.م.ل but are distinct surface words - جمل never reads as beauty. This is a ROOT-LEVEL polysemy abstracted by the anchor, not a surface ambiguity; more etymologically motivated than the camel/sentence pair but still not readable off the surface.",
+    "semantic_match_disambig": "MISMATCH",
+    "semantic_match_disambig_reason": "Physics dPB=+0.191 selects sense B (beauty). But خرج (to go out) takes a concrete/animate mover: خرج الجمل = the camel went out selects CAMEL (sense A). An abstract noun beauty does not go out. Lexis contradicts the anchor. (Same verb خرج also mismatches for referent 1.)",
+    "semantic_match_neutral": "MATCH",
+    "semantic_match_neutral_reason": "Physics dPB_neu=-0.072 selects sense A (camel). فهم (to understand) needs an animate/sentient agent: فهم الجمل = the camel understood weakly favors the animate CAMEL (sense A) over the abstract beauty. Weak but consistent with the negative dPB.",
+    "note": "surfaces authored by native review 2026-08; gates run on anchors, not on these surfaces"
+  },
+  {
+    "referent": "عين(eye/spring)",
+    "senses": [
+      "eye",
+      "spring"
+    ],
+    "S1": "ظهرت عين",
+    "S2_disambig": "فتح العين",
+    "S2_neutral": "نشرت العين",
+    "surface_ambiguity": true,
+    "surface_ambiguity_note": "GENUINE surface ambiguity. eye and (water) spring are BOTH عَيْن - identical surface AND identical diacritics, classic Arabic polysemy. Both senses are feminine, so verb agreement does not resolve them. S1 ظهرت عين = an eye / a spring appeared is truly ambiguous. Best native-demo candidate of the four. (Corrected original دخل عين: عين is feminine -> needs ظهرت/دخلت, and appear fits both senses where enter fit neither.)",
+    "semantic_match_disambig": "MATCH",
+    "semantic_match_disambig_reason": "Physics dPB=-0.151 selects sense A (eye). فتح (to open) collocates strongly with the eye: فتح العين = opened the eye is the canonical phrase, selecting EYE (sense A). A spring is not idiomatically opened. Lexis agrees with the anchor - the cleanest disambig match in the set.",
+    "semantic_match_neutral": "MISMATCH",
+    "semantic_match_neutral_reason": "Physics dPB_neu=+0.197 selects sense B (spring). But نشر (to publish / spread / saw) has no natural reading over eye or spring: نشرت العين is strained for both, and its core sense (publish) selects neither. The strong push to spring has no lexical support. Anchor contradicts lexis.",
+    "note": "surfaces authored by native review 2026-08; gates run on anchors, not on these surfaces"
+  }
+]
