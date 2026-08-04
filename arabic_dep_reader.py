@@ -296,7 +296,11 @@ def _build_extended(tokens: List[str], analyses: List[Dict], roles: Dict):
                 continue
             da = analyses[di]
             if dr in ('nmod', 'nmod:poss') and da['upos'] in ('NOUN', 'PROPN') \
-                    and di == head_idx + 1:
+                    and di == head_idx + 1 \
+                    and not tokens[head_idx].startswith('\u0627\u0644'):
+                # true idafa: the mudaf never carries the definite article
+                # (reviewer tightening #1; adjectival idafa is the documented
+                # exception, absent from current datasets)
                 idafa_idx = di
                 break
         if idafa_idx is not None:
