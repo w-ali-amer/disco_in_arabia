@@ -1,0 +1,159 @@
+{
+  "rows": [
+    {
+      "verb": "يحمل",
+      "sent": "يحمل الصبي الحقيبة",
+      "hw_orig": 0.17587209302325582,
+      "hw_swap": 0.8079999999999999,
+      "hw_correct": false,
+      "matches_prediction": true
+    },
+    {
+      "verb": "يحمل",
+      "sent": "يحمل الصبي الحقيبة",
+      "hw_orig": 0.17010116148370175,
+      "hw_swap": 0.841279799247177,
+      "hw_correct": false,
+      "matches_prediction": true
+    },
+    {
+      "verb": "فتح",
+      "sent": "فتح العامل النافذة",
+      "hw_orig": 0.7580645161290324,
+      "hw_swap": 0.7707317073170732,
+      "hw_correct": false,
+      "matches_prediction": true
+    },
+    {
+      "verb": "فتح",
+      "sent": "فتح الاستاذ الدفتر",
+      "hw_orig": 0.7265415549597855,
+      "hw_swap": 0.5994897959183674,
+      "hw_correct": true,
+      "matches_prediction": true
+    },
+    {
+      "verb": "رفع",
+      "sent": "رفع الرياضي الثقل",
+      "hw_orig": 0.7245337159253946,
+      "hw_swap": 0.9254498714652954,
+      "hw_correct": false,
+      "matches_prediction": true
+    },
+    {
+      "verb": "رفع",
+      "sent": "رفع الموظف التقرير",
+      "hw_orig": 0.9123414071510958,
+      "hw_swap": 0.31892274982282065,
+      "hw_correct": true,
+      "matches_prediction": true
+    },
+    {
+      "verb": "رفع",
+      "sent": "رفع المدعي الاتهام",
+      "hw_orig": 0.8149696048632219,
+      "hw_swap": 0.27943840579710144,
+      "hw_correct": true,
+      "matches_prediction": true
+    },
+    {
+      "verb": "قطع",
+      "sent": "قطع المزارع الاشجار",
+      "hw_orig": 0.34653465346534656,
+      "hw_swap": 0.9243027888446214,
+      "hw_correct": false,
+      "matches_prediction": true
+    },
+    {
+      "verb": "قطع",
+      "sent": "قطع الرجل العلاقة",
+      "hw_orig": 0.4702462380300958,
+      "hw_swap": 0.6950191570881226,
+      "hw_correct": false,
+      "matches_prediction": true
+    },
+    {
+      "verb": "قطع",
+      "sent": "قطع الطالب التعهد",
+      "hw_orig": 0.8496343692870202,
+      "hw_swap": 0.29946524064171126,
+      "hw_correct": true,
+      "matches_prediction": true
+    },
+    {
+      "verb": "قطع",
+      "sent": "قطع المواطن الصمت",
+      "hw_orig": 0.9370629370629371,
+      "hw_swap": 0.6532438478747203,
+      "hw_correct": true,
+      "matches_prediction": true
+    },
+    {
+      "verb": "قطع",
+      "sent": "قطع الطبيب الجلد",
+      "hw_orig": 0.8245243128964059,
+      "hw_swap": 0.67803738317757,
+      "hw_correct": true,
+      "matches_prediction": true
+    },
+    {
+      "verb": "ضرب",
+      "sent": "ضرب الجندي العدو",
+      "hw_orig": 0.8711934156378601,
+      "hw_swap": 0.621822033898305,
+      "hw_correct": true,
+      "matches_prediction": true
+    },
+    {
+      "verb": "ضرب",
+      "sent": "ضرب الرياضي الهدف",
+      "hw_orig": 0.6749435665914221,
+      "hw_swap": 0.30769230769230765,
+      "hw_correct": true,
+      "matches_prediction": true
+    },
+    {
+      "verb": "ضرب",
+      "sent": "ضرب العامل المسمار",
+      "hw_orig": 0.9612927470875612,
+      "hw_swap": 0.22784810126582278,
+      "hw_correct": true,
+      "matches_prediction": true
+    },
+    {
+      "verb": "ضرب",
+      "sent": "ضرب الزعيم موعدا",
+      "hw_orig": 0.8675832127351666,
+      "hw_swap": 0.03130041949015812,
+      "hw_correct": true,
+      "matches_prediction": true
+    },
+    {
+      "verb": "ضرب",
+      "sent": "ضرب المعلم الطاولة",
+      "hw_orig": 1.0315315315315317,
+      "hw_swap": 0.5054054054054054,
+      "hw_correct": true,
+      "matches_prediction": true
+    },
+    {
+      "verb": "حمل",
+      "sent": "حمل الطالب الفكرة",
+      "hw_orig": 0.6427238805970149,
+      "hw_swap": 0.18652849740932645,
+      "hw_correct": true,
+      "matches_prediction": true
+    },
+    {
+      "verb": "حمل",
+      "sent": "حمل الطفل الحقيبة",
+      "hw_orig": 0.19900290818446195,
+      "hw_swap": 0.5123123123123123,
+      "hw_correct": false,
+      "matches_prediction": true
+    }
+  ],
+  "hw_correct": 12,
+  "prediction_agreement": 19,
+  "n": 19
+}
