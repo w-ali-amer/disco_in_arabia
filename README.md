@@ -130,3 +130,27 @@ Mohammed, W. (2026). Quantum Compositional NLP for Arabic: Grammar, Morphology,
 and Word Sense in Circuit Topology. Zenodo.
 https://doi.org/10.5281/zenodo.19316164
 ```
+
+## Recent results (August 2026) — beyond the paper
+
+The paper (arXiv:2607.14100) covers sentence-level word order, tense, and WSD.
+Since then, committed in this repo:
+
+- **Exact zero-training verb encoder** — `exp33_mixed_ansatz.py`, `exp38_analog_native.py`:
+  4 closed-form parameters per verb reproduce corpus selectional preferences across
+  all syntactic frames (LOO transfer 1.000, 6/6 verbs, p=0.003).
+- **Gate-to-analog compilation** — `exp37_analog_compile.py`, `exp37b_analog_xx.py`:
+  every solved verb block compiles to a 2-atom global-drive Rydberg schedule at
+  F=1.000000 (exchange-symmetric CRz·XX family).
+- **Measured classical walls** — `exp34b_scaling.py`, `exp36*_entanglement*.py`:
+  discourse register costs ×6.4 per referent exactly (wall ≈15 referents);
+  volume-law entanglement under dense co-reference, fastest with solved parameters.
+- **Argument-swap plausibility** — `exp34a_swap_plausibility.py`: 36/54 zero-training,
+  parity with structure-aware classical scoring.
+- **First Arabic QNLP on quantum hardware** — `exp35_*.py`, `results_exp35_hardware.json`:
+  ibm_kingston (156-qubit Heron), 114 circuits, 10k shots — hardware reproduced
+  19/19 noiseless decisions.
+- **Parser fix** — CAMeL-POS fusion in `arabic_dep_reader.py` (flag-gated, off by
+  default; published numbers unchanged).
+- **In progress** — S1 vocabulary scale-up from Arabic Wikipedia (`s1*_*.py`) and the
+  story-mode DisCoCirc port (`18_s2_discocirc_port_spec.md`).
