@@ -12,7 +12,7 @@ import numpy as np
 from qiskit import qpy, transpile
 from qiskit_ibm_runtime import QiskitRuntimeService, SamplerV2
 
-SHOT_CAP = 30000
+SHOT_CAP = 10000
 meta = json.load(open("exp35_meta.json"))
 with open("exp35_circuits.qpy", "rb") as f:
     circuits = qpy.load(f)
