@@ -152,5 +152,3 @@ Since then, committed in this repo:
   19/19 noiseless decisions.
 - **Parser fix** — CAMeL-POS fusion in `arabic_dep_reader.py` (flag-gated, off by
   default; published numbers unchanged).
-- **In progress** — S1 vocabulary scale-up from Arabic Wikipedia (`s1*_*.py`) and the
-  story-mode DisCoCirc port (`18_s2_discocirc_port_spec.md`).
