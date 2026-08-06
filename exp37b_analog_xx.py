@@ -40,18 +40,24 @@ def fidelity(p, Ut):
 
 r = json.load(open("results_exp38_s0.json"))
 npar = 1 + 4*B + 4
+out = {}
 for v, d in r["variants"]["zxx4"]["verbs"].items():
     th = d["T3b_theta"]
-    Ut = crz(th[0]) @ xxg(th[2])
-    best = None
-    for s in range(12):
-        x0 = np.random.default_rng(s).uniform(-2, 2, npar)
-        res = minimize(lambda p: 1 - fidelity(p, Ut), x0,
-                       method="Nelder-Mead",
-                       options={"maxiter": 20000, "xatol": 1e-10,
-                                "fatol": 1e-12})
-        if best is None or res.fun < best.fun:
-            best = res
-    print(f"[37b] {v}: F={1-best.fun:.6f} (theta={th[0]:.3f}, xx={th[2]:.3f})",
-          flush=True)
-print("[37b] DONE", flush=True)
+    fids = []
+    for (a, b) in ((0, 2), (1, 3)):          # block1 = (th[0], th[2]), block2 = (th[1], th[3])
+        Ut = crz(th[a]) @ xxg(th[b])
+        best = None
+        for s in range(12):
+            x0 = np.random.default_rng(s).uniform(-2, 2, npar)
+            res = minimize(lambda p: 1 - fidelity(p, Ut), x0,
+                           method="Nelder-Mead",
+                           options={"maxiter": 20000, "xatol": 1e-10,
+                                    "fatol": 1e-12})
+            if best is None or res.fun < best.fun:
+                best = res
+        fids.append(1 - best.fun)
+    out[v] = {"F_block1": fids[0], "F_block2": fids[1],
+              "theta": [float(x) for x in th]}
+    print(f"[37b] {v}: F1={fids[0]:.6f} F2={fids[1]:.6f}", flush=True)
+json.dump({"model": "unitary, decay-free, square pulses, V free",
+           "verbs": out}, open("results_exp37b.json", "w"), indent=2)
