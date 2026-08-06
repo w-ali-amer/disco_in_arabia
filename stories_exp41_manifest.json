@@ -1,0 +1,132 @@
+{
+ "experiment": "exp41",
+ "design_doc": "qnlp_private_docs/22_phase2_trained_story_qa_design.md §2 (commit cacac31)",
+ "seed": 41,
+ "dataset_sha256": "2cb3ccd67ac0759c8d76dca432be0214325b1036556326a305a94a0cc2b23013",
+ "n_items": 3040,
+ "split_counts": {
+  "train": 2000,
+  "val": 500,
+  "test_a": 180,
+  "test_b": 180,
+  "test_c": 180
+ },
+ "split_qtype_counts": {
+  "test_a/Q1": 136,
+  "test_a/Q2": 44,
+  "test_b/Q1": 136,
+  "test_b/Q2": 44,
+  "test_c/Q1": 136,
+  "test_c/Q2": 44,
+  "train/Q0": 300,
+  "train/Q1": 1200,
+  "train/Q2": 500,
+  "val/Q0": 70,
+  "val/Q1": 300,
+  "val/Q2": 130
+ },
+ "humans": [
+  "الطالب",
+  "الرجل",
+  "الولد",
+  "المدير",
+  "المعلم",
+  "الطبيب",
+  "العامل",
+  "المهندس",
+  "الشرطي",
+  "الكاتب",
+  "الطباخ",
+  "الجندي",
+  "الفلاح",
+  "الحارس",
+  "اللاعب",
+  "الموظف",
+  "الصحفي",
+  "السائق",
+  "المسافر",
+  "الضابط",
+  "الباحث",
+  "القائد",
+  "الصياد",
+  "المريض"
+ ],
+ "objects": [
+  "الكتاب",
+  "الحقيبة",
+  "الباب",
+  "الرسالة",
+  "الصندوق",
+  "البيت",
+  "الجدار",
+  "السيارة",
+  "الملف",
+  "التقرير",
+  "الورقة",
+  "الخبز",
+  "الصورة",
+  "النافذة",
+  "العقد",
+  "القصيدة",
+  "الوثيقة",
+  "الدرس",
+  "المكتب",
+  "المشروع"
+ ],
+ "holdout_verb_argument_pairs": [
+  [
+   "حمل",
+   "الطبيب"
+  ],
+  [
+   "حمل",
+   "المهندس"
+  ],
+  [
+   "رفع",
+   "المريض"
+  ],
+  [
+   "رفع",
+   "المسافر"
+  ],
+  [
+   "سأل",
+   "الحارس"
+  ],
+  [
+   "سأل",
+   "الضابط"
+  ],
+  [
+   "ساعد",
+   "الجندي"
+  ],
+  [
+   "ساعد",
+   "الموظف"
+  ],
+  [
+   "ضرب",
+   "الطباخ"
+  ],
+  [
+   "ضرب",
+   "الفلاح"
+  ],
+  [
+   "عالج",
+   "الشرطي"
+  ],
+  [
+   "عالج",
+   "الكاتب"
+  ]
+ ],
+ "notes": [
+  "every item has a bag-of-words-identical swap twin with flipped answer (same split)",
+  "all human referents masculine so argument exchange preserves the token bag",
+  "Q0 single-hop items are the labeled control class, train/val only",
+  "test_c core events use held-out (verb, referent) pairings unseen in any other split"
+ ]
+}

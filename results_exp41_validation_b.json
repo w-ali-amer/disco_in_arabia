@@ -1,0 +1,88 @@
+{
+ "experiment": "exp41_validation",
+ "design_doc": "qnlp_private_docs/22_phase2_trained_story_qa_design.md §2.3 (commit cacac31)",
+ "timestamp": "2026-08-07T01:23:41.909937",
+ "dataset_file": "stories_exp41.json",
+ "dataset_sha256": "2cb3ccd67ac0759c8d76dca432be0214325b1036556326a305a94a0cc2b23013",
+ "dataset_hash_matches_meta": true,
+ "n_train": 2000,
+ "n_val": 500,
+ "n_test": 540,
+ "criteria": {
+  "accuracy_bound": 0.55,
+  "ci": "95% normal approx must contain 0.5",
+  "chi2_alpha": 0.05
+ },
+ "V1_bag_of_embeddings": {
+  "test_accuracy": 0.5,
+  "ci95": [
+   0.45782751467463034,
+   0.5421724853253697
+  ],
+  "n_test": 540,
+  "train_accuracy": 0.5,
+  "best_val_accuracy": 0.5,
+  "per_split_accuracy": {
+   "test_a": 0.5,
+   "test_b": 0.5,
+   "test_c": 0.5
+  },
+  "passed": true
+ },
+ "V2_ngram_logistic": {
+  "test_accuracy": 0.47962962962962963,
+  "ci95": [
+   0.4374921579526127,
+   0.5217671013066465
+  ],
+  "n_test": 540,
+  "selected_C": 1.0,
+  "best_val_accuracy": 0.484,
+  "n_features": 2120,
+  "per_split_accuracy": {
+   "test_a": 0.4888888888888889,
+   "test_b": 0.4388888888888889,
+   "test_c": 0.5111111111111111
+  },
+  "passed": true
+ },
+ "V3_balance_audit": {
+  "n_yes": 1520,
+  "n_no": 1520,
+  "classes_balanced_50_50": true,
+  "min_p": 1.0,
+  "n_tests": 64,
+  "verb_min_p": 1.0,
+  "referent_min_p": 1.0,
+  "template_min_p": 1.0,
+  "pro_drop_min_p": 1.0,
+  "passed": true
+ },
+ "V4_dedup": {
+  "n_verbatim_duplicates": 0,
+  "n_near_dup_groups": 0,
+  "near_dup_groups_sample": [],
+  "passed": true
+ },
+ "V5_single_sentence_oracle": {
+  "test_accuracy_best_sentence": 0.5,
+  "ci95_best_sentence": [
+   0.45782751467463034,
+   0.5421724853253697
+  ],
+  "test_accuracy_max_yes": 0.5,
+  "ci95_max_yes": [
+   0.45782751467463034,
+   0.5421724853253697
+  ],
+  "n_test": 540,
+  "sentence_level_val_accuracy": 0.5,
+  "passed": true
+ },
+ "v1_passed": true,
+ "v2_passed": true,
+ "v3_passed": true,
+ "v4_passed": true,
+ "v5_passed": true,
+ "all_passed": true
+}
