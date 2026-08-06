@@ -2,6 +2,7 @@
 """Exp 36b: entanglement scaling with ARBITRARY referent-pair coupling
 (discourse co-reference is not a path graph).  Otherwise as exp36."""
 import numpy as np
+import json
 
 def crz(t):
     d = np.ones(4, complex); d[3] = np.exp(1j*np.pi*t); return np.diag(d)
@@ -29,6 +30,7 @@ def half_entropy(psi,k):
     return float(-(p*np.log2(p)).sum())
 
 T = 200
+out = {}
 for k in (8, 12, 16):
     rng = np.random.default_rng(11)
     sched = []
@@ -47,7 +49,11 @@ for k in (8, 12, 16):
             psi = ap2f(psi, crz(th), i, j, k)
             if reg=="zx4": psi = ap2f(psi, crx(ph), i, j, k)
             S.append(half_entropy(psi,k))
+        out[(k,reg)] = (S[29], S[59], S[-1])
         print(f"[36b] k={k:2d} {reg:4s}: S@30={S[29]:.3f} S@60={S[59]:.3f} "
               f"S@120={S[119]:.3f} S@200={S[-1]:.3f} maxS={k//2} "
               f"MPS-bond@60~{2**S[59]:.0f} @200~{2**S[-1]:.0f}", flush=True)
+json.dump({f"k{k}_{reg}": {"S30": v[0], "S60": v[1], "S200": v[2]}
+           for (k, reg), v in out.items()},
+          open("results_exp36b.json", "w"), indent=2)
 print("[36b] DONE", flush=True)

@@ -33,6 +33,7 @@ def half_entropy(psi,k):
     return float(-(p*np.log2(p)).sum())
 
 T = 200
+results36c = {}
 for k in (12, 16):
     rng = np.random.default_rng(11)
     psi = np.zeros(2**k, complex); psi[0]=1.0
@@ -48,7 +49,9 @@ for k in (12, 16):
         psi = ap2f(psi, crz(th1), int(i), int(j), k)
         psi = ap2f(psi, crx(ph1), int(i), int(j), k)
         S.append(half_entropy(psi,k))
+    results36c[f"k{k}"] = {"S30": S[29], "S60": S[59], "S200": S[-1]}
     print(f"[36c] k={k:2d} solved-zx4: S@30={S[29]:.3f} S@60={S[59]:.3f} "
           f"S@200={S[-1]:.3f} maxS={k//2} MPS-bond@60~{2**S[59]:.0f} "
           f"@200~{2**S[-1]:.0f}", flush=True)
+json.dump(results36c, open("results_exp36c.json", "w"), indent=2)
 print("[36c] DONE", flush=True)

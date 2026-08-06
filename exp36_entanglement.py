@@ -14,6 +14,7 @@ Metric: half-chain von Neumann entropy S(t) (base 2).  Tensor-network cost
 per cut ~ 2^S.  Report growth rate, S at T=30 (a realistic text), final S.
 """
 import numpy as np
+import json
 
 def crz(t):
     d = np.ones(4, complex); d[3] = np.exp(1j*np.pi*t); return np.diag(d)
@@ -64,4 +65,7 @@ for k in (8, 12, 16):
         print(f"[36] k={k:2d} {reg:4s}: S@30={S[29]:.3f}  S@60={S[-1]:.3f}  "
               f"rate(10-30)={rate:.4f}/sentence  maxS={k//2}  "
               f"MPS-bond@30~{2**S[29]:.0f}", flush=True)
+json.dump({f"k{k}_{reg}": {"S30": v[0], "S60": v[1], "rate": v[2]}
+           for (k, reg), v in out.items()},
+          open("results_exp36.json", "w"), indent=2)
 print("[36] DONE", flush=True)
