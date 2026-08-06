@@ -1,0 +1,43 @@
+{
+  "derived_from": "results_exp21c.json :: pooled.{pre,post}_test_auc_A_vs_B",
+  "source_script": "exp21c_pooled_addendum.py",
+  "note": "purely derived; no new model runs. Exists because results_exp21c.json must not be overwritten.",
+  "inputs": {
+    "pre_test_auc_A_vs_B": [
+      0.4861111111111111,
+      0.6013888888888889,
+      0.5555555555555556,
+      0.6166666666666667,
+      0.5736111111111111
+    ],
+    "post_test_auc_A_vs_B": [
+      0.5152777777777777,
+      0.6319444444444444,
+      0.601388888888889,
+      0.5513888888888889,
+      0.5125
+    ]
+  },
+  "pre_one_sample_t_vs_0.5": {
+    "t": 2.928244957936525,
+    "df": 4,
+    "p_one_sided_greater": 0.021444428795004765,
+    "p_two_sided": 0.04288885759000953,
+    "interpretation": "the UNTRAINED (exact-AE init) encoder passes the pooled test at least as strongly as the trained one; the pooled POST result therefore reflects a property of the initialisation, not of training"
+  },
+  "post_one_sample_t_vs_0.5": {
+    "t": 2.642490987816165,
+    "df": 4,
+    "p_one_sided_greater": 0.02871529697742449,
+    "p_two_sided": 0.05743059395484898,
+    "matches_results_exp21c": true
+  },
+  "paired_post_minus_pre": {
+    "t": -0.17158271494160487,
+    "df": 4,
+    "p_two_sided": 0.8720962090277737,
+    "mean_difference": -0.004166666666666652,
+    "interpretation": "training has no detectable effect on held-out AUC"
+  },
+  "caveat": "all three share the non-independence caveat of results_exp21c.json::pooled.one_sample_t_vs_0.5 (the 5 splits re-sample the same 58 couples / 116 sentences)"
+}
