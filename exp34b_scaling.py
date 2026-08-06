@@ -135,9 +135,10 @@ for name, ram in [("16GB laptop", 16e9), ("1TB node", 1e12),
     kw = int(np.floor(np.log(ram / 16) / np.log(4)))
     print(f"[34b] mixed-regime RAM wall on {name}: k={kw} referents",
           flush=True)
-print("[34b] a 100-referent discourse needs 16*4^100 ≈ 2.6e121 bytes "
-      "classically (exact simulation); neutral-atom register holds it in "
-      "100 atoms", flush=True)
+print("[34b] a 100-referent discourse needs 16*4^100 ≈ 2.6e61 bytes "
+      "classically (exact dense simulation; tops the ~1e80-atom count of "
+      "the observable universe at k≈131); neutral-atom register holds it "
+      "in 100 atoms", flush=True)
 print("[34b] CAVEAT (part of the result): this bounds exact classical "
       "simulation of THIS architecture; task-level classical algorithms "
       "may be cheaper; no quantum task advantage is claimed at current "
