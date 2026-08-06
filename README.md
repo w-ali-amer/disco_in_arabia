@@ -134,21 +134,32 @@ https://doi.org/10.5281/zenodo.19316164
 ## Recent results (August 2026) — beyond the paper
 
 The paper (arXiv:2607.14100) covers sentence-level word order, tense, and WSD.
+See [ERRATUM.md](ERRATUM.md) for corrections to the paper's methods description (published numbers unchanged) and [RESULTS_EXP21.md](RESULTS_EXP21.md) for a measured negative result: matched classical controls decisively beat the trained quantum pipeline on sentence-level semantic geometry.
 Since then, committed in this repo:
 
-- **Exact zero-training verb encoder** — `exp33_mixed_ansatz.py`, `exp38_analog_native.py`:
-  4 closed-form parameters per verb reproduce corpus selectional preferences across
-  all syntactic frames (LOO transfer 1.000, 6/6 verbs, p=0.003).
-- **Gate-to-analog compilation** — `exp37_analog_compile.py`, `exp37b_analog_xx.py`:
-  every solved verb block compiles to a 2-atom global-drive Rydberg schedule at
-  F=1.000000 (exchange-symmetric CRz·XX family).
-- **Measured classical walls** — `exp34b_scaling.py`, `exp36*_entanglement*.py`:
-  discourse register costs ×6.4 per referent exactly (wall ≈15 referents);
-  volume-law entanglement under dense co-reference, fastest with solved parameters.
-- **Argument-swap plausibility** — `exp34a_swap_plausibility.py`: 36/54 zero-training,
-  parity with structure-aware classical scoring.
+- **Frame-invariant 4-parameter verb blocks** — `exp33_mixed_ansatz.py`, `exp38_analog_native.py`:
+  4 numerically solved parameters per verb (no gradient training; targets from pre-trained AraVec
+  centroids over this repo's own corpus) reproduce the same evidence direction on held-out syntactic
+  frames (mean LOO alignment 0.996, 6 verbs / 5 lemmas). Caveats, measured: cross-verb parameters are
+  87–99.9% interchangeable, and both mixed variants failed the pre-registered verb-specificity
+  criterion (0.036 < 0.05) — the block is frame-stable but only weakly verb-specific.
+- **Gate-to-analog compilation** — `exp37_analog_compile.py`, `exp37b_analog_xx.py`,
+  `results_exp37b.json`: the original CRz·CRx blocks do NOT all compile (F 0.79–0.997,
+  `results_exp37.json`); the re-solved exchange-symmetric CRz·XX family compiles at F≈1 on a
+  decay-free pulse model — a compiler-correctness check for a family chosen to be expressible.
+- **Measured simulation-cost wall** — `exp34b_scaling.py`: exact dense density-matrix simulation of
+  the discourse register costs ×4 memory per referent (measured step-time ×6.4 on one machine,
+  cache-transition regime; asymptotic ratio ≈4); 16 GB wall ≈14 referents. Bounds exact simulation
+  of THIS architecture only; no task-level quantum advantage is claimed.
+- **Entanglement scaling** — `exp36*.py`, `results_exp36*.json`: half-chain entropy saturates toward
+  the k/2 ceiling under dense random co-reference coupling (surrogate random schedules; solved
+  entangler angles in the 36c variant). Adjacent-pair-only coupling (results_exp36.json) does not saturate — dense cross-references are what force the growth.
+- **Argument-swap plausibility** — `exp34a_swap_plausibility.py`: 36/54 vs 50% chance (p=0.0099,
+  uncorrected). By construction equivalent to the 2D classical cosine it was solved against
+  (decisions agree 53/54; the classical computation scores 37/54).
 - **First Arabic QNLP on quantum hardware** — `exp35_*.py`, `results_exp35_hardware.json`:
-  ibm_kingston (156-qubit Heron), 114 circuits, 10k shots — hardware reproduced
-  19/19 noiseless decisions.
-- **Parser fix** — CAMeL-POS fusion in `arabic_dep_reader.py` (flag-gated, off by
-  default; published numbers unchanged).
+  ibm_kingston (Heron; 4-qubit circuits), the 19 highest-margin of 54 pairs, 114 circuits, 10k
+  shots, no error mitigation — hardware reproduced 19/19 noiseless decisions (12 of 19 semantically
+  correct; the same 7 misses as the noiseless model).
+- **Parser fix** — CAMeL-POS fusion in `arabic_dep_reader.py` (flag-gated, off by default;
+  published numbers unchanged).
