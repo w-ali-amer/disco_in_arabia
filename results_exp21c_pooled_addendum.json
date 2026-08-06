@@ -1,5 +1,5 @@
 {
-  "derived_from": "results_exp21c.json :: pooled.{pre,post}_test_auc_A_vs_B",
+  "derived_from": "results_exp21c.json :: pooled.{pre,post}_test_auc_A_vs_B and seeds.*.{pre,post}.test.A_vs_{B,C}",
   "source_script": "exp21c_pooled_addendum.py",
   "note": "purely derived; no new model runs. Exists because results_exp21c.json must not be overwritten.",
   "inputs": {
@@ -18,18 +18,83 @@
       0.5125
     ]
   },
+  "recentred_pooled_t_vs_permutation_null": {
+    "what": "one-sample t of (observed test AUC - that seed's own sentence-level permutation-null mean) against 0",
+    "why": "the permutation null is not centred at 0.5 (its mean is 0.484-0.615), so a t-test against 0.5 charges a pair-TYPE main effect -- which carries no twin information -- to 'transfer'. Re-centring on each seed's own null mean makes the pooled test ask the same question as the per-seed permutation test.",
+    "null_means_post": [
+      0.5212515277777778,
+      0.5685509722222222,
+      0.615065,
+      0.4836918055555556,
+      0.541443888888889
+    ],
+    "null_means_pre": [
+      0.4339083333333334,
+      0.49443701388888894,
+      0.5861470833333334,
+      0.5636341666666667,
+      0.5371980555555556
+    ],
+    "null_mean_of_null_means_post": 0.546000638888889,
+    "null_mean_range_post": [
+      0.4836918055555556,
+      0.615065
+    ],
+    "shifts_post": [
+      -0.005973750000000111,
+      0.06339347222222225,
+      -0.013676111111111,
+      0.06769708333333335,
+      -0.02894388888888899
+    ],
+    "shifts_pre": [
+      0.05220277777777771,
+      0.10695187499999992,
+      -0.03059152777777785,
+      0.05303250000000004,
+      0.03641305555555552
+    ],
+    "post": {
+      "t": 0.8098752779601829,
+      "df": 4,
+      "p_one_sided_greater": 0.2317191826873011,
+      "p_two_sided": 0.4634383653746022,
+      "mean": 0.0164993611111111,
+      "sd": 0.04555478359912937
+    },
+    "pre": {
+      "t": 1.976546949552292,
+      "df": 4,
+      "p_one_sided_greater": 0.05963600762388581,
+      "p_two_sided": 0.11927201524777162,
+      "mean": 0.04360173611111107,
+      "sd": 0.049326653183490325
+    },
+    "post_vs_derangement_null": {
+      "t": 0.8433941979458954,
+      "df": 4,
+      "p_one_sided_greater": 0.22324523096889765,
+      "p_two_sided": 0.4464904619377953,
+      "mean": 0.018971263888888847,
+      "sd": 0.050297993249135246
+    }
+  },
   "pre_one_sample_t_vs_0.5": {
     "t": 2.928244957936525,
     "df": 4,
     "p_one_sided_greater": 0.021444428795004765,
     "p_two_sided": 0.04288885759000953,
-    "interpretation": "the UNTRAINED (exact-AE init) encoder passes the pooled test at least as strongly as the trained one; the pooled POST result therefore reflects a property of the initialisation, not of training"
+    "mean": 0.5666666666666667,
+    "sd": 0.05090803557808682,
+    "interpretation": "the UNTRAINED (exact-AE init) encoder passes the uncentred pooled test at least as strongly as the trained one; colour only -- comparing two non-independent p-values is not itself a test"
   },
   "post_one_sample_t_vs_0.5": {
     "t": 2.642490987816165,
     "df": 4,
     "p_one_sided_greater": 0.02871529697742449,
     "p_two_sided": 0.05743059395484898,
+    "mean": 0.5625,
+    "sd": 0.05288731323516605,
     "matches_results_exp21c": true
   },
   "paired_post_minus_pre": {
@@ -37,7 +102,47 @@
     "df": 4,
     "p_two_sided": 0.8720962090277737,
     "mean_difference": -0.004166666666666652,
-    "interpretation": "training has no detectable effect on held-out AUC"
+    "interpretation": "training has no detectable effect on held-out AUC; this is the primary within-split comparison"
   },
-  "caveat": "all three share the non-independence caveat of results_exp21c.json::pooled.one_sample_t_vs_0.5 (the 5 splits re-sample the same 58 couples / 116 sentences)"
+  "a_vs_c_pooled": {
+    "endpoint": "twin pairs vs cross-order NON-twin pairs (controls for word-order composition, unlike A_vs_B)",
+    "post_auc_per_seed": {
+      "42": 0.4097222222222222,
+      "43": 0.6215277777777778,
+      "44": 0.5243055555555556,
+      "45": 0.6354166666666666,
+      "46": 0.42361111111111116
+    },
+    "pre_auc_per_seed": {
+      "42": 0.5590277777777778,
+      "43": 0.7048611111111112,
+      "44": 0.42708333333333337,
+      "45": 0.5659722222222222,
+      "46": 0.4930555555555555
+    },
+    "post_mean": 0.5229166666666667,
+    "post_sd": 0.10613306019355788,
+    "pre_mean": 0.55,
+    "pre_sd": 0.10328329134765672,
+    "mean_change_pre_to_post": -0.027083333333333348,
+    "p_sentence_per_seed": {
+      "42": 0.5889411058894111,
+      "43": 0.24897510248975102,
+      "44": 0.5669433056694331,
+      "45": 0.18898110188981102,
+      "46": 0.7130286971302869
+    },
+    "p_derangement_per_seed": {
+      "42": 0.6029397060293971,
+      "43": 0.21937806219378062,
+      "44": 0.5854414558544145,
+      "45": 0.1673832616738326,
+      "46": 0.7391260873912608
+    },
+    "n_seeds_sig_sentence_level": 0,
+    "n_seeds_sig_derangement": 0,
+    "min_p_sentence": 0.18898110188981102,
+    "interpretation": "training moves the twin-vs-non-twin-cross-order separation DOWN by 0.027; 0/5 significant"
+  },
+  "caveat": "all of these share the non-independence caveat of results_exp21c.json::pooled.one_sample_t_vs_0.5 (the 5 splits re-sample the same 58 couples / 116 sentences)"
 }
