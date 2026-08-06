@@ -1,0 +1,9 @@
+{
+  "seed": 42,
+  "C2_auc": 0.9958333333333332,
+  "C1_auc": 1.0,
+  "C2_params": 144,
+  "C2_val_margin": 0.8406993354231138,
+  "C1_note": "twins are identical vectors: order-blind by construction on matched pairs",
+  "runtime_sec": 5.8
+}
