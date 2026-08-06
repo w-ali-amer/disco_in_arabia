@@ -9,17 +9,29 @@ For every harvested verb with enough real-corpus subject vectors:
   * VALIDATION subsample: for the 12 best-harvested verbs, the full
     multi-frame LOO battery on real corpus sentences (fit on N−1 real
     frames, test the held-out one) — the exp38 proof repeated on real text.
+  * DIAL-SWAP CONTROL: each verb's validation frames evaluated under 5
+    randomly drawn other verbs' dials (seeded RNG); stored in
+    bank["swap_control"] = {matched_mean, swapped_mean, gap}.
 Output: s1_dial_bank.json + summary.
 
 Run in the lambeq env with ARABIC_POS_FUSION=1.
+
+Env overrides:
+  S1C_IN    – input harvest JSON (default s1_harvest.json)
+  S1C_OUT   – output bank JSON (default s1_dial_bank.json)
+  S1C_LIMIT – cap number of verbs solved (0 = all; use 3 for dry-run)
 """
 import json, os
 import numpy as np
 from scipy.optimize import minimize
 
-S_OUT = int(os.environ.get("S_OUT", "0"))
-MIN_SUBJ = 15
-N_VALIDATE = 12
+S_OUT     = int(os.environ.get("S_OUT",      "0"))
+S1C_IN    = os.environ.get("S1C_IN",    "s1_harvest.json")
+S1C_OUT   = os.environ.get("S1C_OUT",   "s1_dial_bank.json")
+S1C_LIMIT = int(os.environ.get("S1C_LIMIT", "0"))
+
+MIN_SUBJ       = 15
+N_VALIDATE     = 12
 MAX_VAL_FRAMES = 6
 
 src = open("exp28a_real_gates.py", encoding="utf-8").read()
@@ -30,7 +42,7 @@ exp13, NumpyModel = ns["exp13"], ns["NumpyModel"]
 KETS, FORMS = ns["KETS"], ns["FORMS"]
 apply1, apply2 = ns["apply1"], ns["apply2"]
 
-harvest = json.load(open("s1_harvest.json"))
+harvest = json.load(open(S1C_IN))
 
 def hn(w):
     return w.replace("أ", "ا").replace("إ", "ا").replace("آ", "ا")
@@ -182,6 +194,10 @@ def fit(Gs, tgt, n_starts=6):
 
 # ── canonical frames: parse once, in bulk ────────────────────────────────
 verbs = [v for v, r in harvest.items() if r["n_hit"] >= MIN_SUBJ]
+if S1C_LIMIT:
+    verbs = verbs[:S1C_LIMIT]
+    print(f"[s1c] S1C_LIMIT={S1C_LIMIT}: capped to {len(verbs)} verbs for dry-run",
+          flush=True)
 print(f"[s1c] {len(verbs)} verbs pass the {MIN_SUBJ}-subject bar", flush=True)
 canon = {v: f"{v} الرجل الكتاب" for v in verbs}
 best_harvested = sorted(verbs, key=lambda v: -harvest[v]["n_hit"])[:N_VALIDATE]
@@ -222,6 +238,7 @@ print(f"[s1c] BANK: {n_solved} verbs solved | median residual "
 
 # ── validation battery on real corpus frames ─────────────────────────────
 VAL = {}
+val_Gs_store = {}  # saved for dial-swap control below
 for v in best_harvested:
     if v not in bank:
         continue
@@ -233,6 +250,7 @@ for v in best_harvested:
             subs.append(subj)
         if len(Gs) >= MAX_VAL_FRAMES:
             break
+    val_Gs_store[v] = Gs  # save before the <4 skip so swap control can use them
     if len(Gs) < 4:
         print(f"[s1c] VAL {v}: only {len(Gs)} usable real frames — skipped",
               flush=True)
@@ -252,7 +270,47 @@ for v in best_harvested:
 if VAL:
     print(f"[s1c] VALIDATION: mean LOO {np.mean([d['loo_mean'] for d in VAL.values()]):.4f} "
           f"over {len(VAL)} verbs on real corpus frames", flush=True)
+
+# ── dial-swap sanity control (seeded RNG, no date-dependent seeds) ────────
+# For each verb with validation frames, evaluate its frames under 5 randomly
+# drawn OTHER verbs' dials.  Measures cross-verb dial interchangeability
+# (cf. exp39: ~99%); thresholds are owned by Task 10's design doc.
+import random as _sr
+_swap_rng = _sr.Random(42)
+
+eligible_swap = [v for v in best_harvested
+                 if v in bank and v in val_Gs_store and val_Gs_store[v]]
+if len(eligible_swap) >= 2:
+    matched_acc, swapped_acc = [], []
+    for v in eligible_swap:
+        Gs_v = val_Gs_store[v]
+        tgt_v, _ = pref_from(harvest[v]["subjects"])
+        if tgt_v is None:
+            continue
+        own_dials = bank[v]["dials"]
+        m = float(np.mean([align(G, own_dials, tgt_v) for G in Gs_v]))
+        matched_acc.append(m)
+        others = [u for u in eligible_swap if u != v]
+        drawn = _swap_rng.sample(others, min(5, len(others)))
+        per_draw = [float(np.mean([align(G, bank[u]["dials"], tgt_v)
+                                   for G in Gs_v]))
+                    for u in drawn]
+        if per_draw:
+            swapped_acc.append(float(np.mean(per_draw)))
+    mm = float(np.mean(matched_acc)) if matched_acc else 0.0
+    sm = float(np.mean(swapped_acc)) if swapped_acc else 0.0
+    bank["swap_control"] = {
+        "matched_mean": round(mm, 6),
+        "swapped_mean": round(sm, 6),
+        "gap":          round(mm - sm, 6),
+    }
+    print(f"[s1c] swap_control: matched={mm:.4f} swapped={sm:.4f} "
+          f"gap={mm - sm:.4f} over {len(matched_acc)} verbs", flush=True)
+else:
+    print(f"[s1c] swap_control: only {len(eligible_swap)} eligible verbs "
+          f"(<2 required), skipped", flush=True)
+
 json.dump({"bank": bank, "validation": VAL,
            "basis": {"e1_note": "animacy axis from harvested pools"}},
-          open("s1_dial_bank.json", "w"), indent=1, ensure_ascii=False)
+          open(S1C_OUT, "w"), indent=1, ensure_ascii=False)
 print("[s1c] DONE", flush=True)
