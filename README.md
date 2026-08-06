@@ -134,7 +134,7 @@ https://doi.org/10.5281/zenodo.19316164
 ## Recent results (August 2026) — beyond the paper
 
 The paper (arXiv:2607.14100) covers sentence-level word order, tense, and WSD.
-See [ERRATUM.md](ERRATUM.md) for corrections to the paper's methods description (published numbers unchanged) and [RESULTS_EXP21.md](RESULTS_EXP21.md) for a measured negative result: matched classical controls decisively beat the trained quantum pipeline on sentence-level semantic geometry.
+See [ERRATUM.md](ERRATUM.md) for corrections to the paper's methods description (published numbers unchanged) and [RESULTS_EXP21_v2.md](RESULTS_EXP21_v2.md) for a measured negative: on leakage-free splits 0/5 seeds show significant transfer (quantum POST mean AUC 0.563 vs matched classical control 0.975 on all five splits); v1's apparent positive was train→test leakage (see RESULTS_EXP21.md, superseded).
 Since then, committed in this repo:
 
 - **Frame-invariant 4-parameter verb blocks** — `exp33_mixed_ansatz.py`, `exp38_analog_native.py`:
@@ -142,7 +142,7 @@ Since then, committed in this repo:
   centroids over this repo's own corpus) reproduce the same evidence direction on held-out syntactic
   frames (mean LOO alignment 0.996, 6 verbs / 5 lemmas). Caveats, measured: cross-verb parameters are
   87–99.9% interchangeable, and both mixed variants failed the pre-registered verb-specificity
-  criterion (0.036 < 0.05) — the block is frame-stable but only weakly verb-specific.
+  criterion (0.036 < 0.05) — the block is frame-stable but only weakly verb-specific. A pre-registered follow-up control (exp39, results_exp39.json) retired the ‘verb encoder’ reading outright: other verbs’ parameters reproduce a verb’s target at 98.9% of matched alignment (median, both gate families), and a dial-permutation test found no verb-specific task signal beyond a tie-at-max (right-tail p = 0.083; a full derangement ties the original assignment).
 - **Gate-to-analog compilation** — `exp37_analog_compile.py`, `exp37b_analog_xx.py`,
   `results_exp37b.json`: the original CRz·CRx blocks do NOT all compile (F 0.79–0.997,
   `results_exp37.json`); the re-solved exchange-symmetric CRz·XX family compiles at F≈1 on a

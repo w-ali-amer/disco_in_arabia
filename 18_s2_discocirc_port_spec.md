@@ -57,8 +57,9 @@ rhetoric says it should (التقديم والتأخير).
 **Forgetting / evidence channels.** Two variants, built in this order:
  - **U-variant (pure unitary):** no channels. Classically 2^k statevector;
    MPS-attackable in principle, but exp36b/exp36c measured volume-law entanglement
-   saturation under arbitrary-pair co-reference with solved dials (S_200 ≈ 7.27
-   nats at k=16, growing with k; results_exp36b.json, results_exp36c.json).
+   saturation under arbitrary-pair co-reference: S_200 ≈ 7.27 bits at k=16 under
+   random entangler schedules (36b surrogate; results_exp36b.json); 36c with solved
+   entangler angles reaches 7.282 bits (results_exp36c.json), growing with k.
    Note: exp36 is the adjacent-pair variant; it does not saturate and must not
    be cited for volume-law claims. This is the first hardware target.
  - **C-variant (channels):** mid-text discard/reset of exited referents and
@@ -112,7 +113,8 @@ entanglement saturation under arbitrary-pair co-reference.
    protocol above. **Precondition (blocked until resolved):** this milestone is
    blocked until a mechanism distinguishes verbs beyond the shared-frame
    machinery. Exp39 verdict: dials interchangeable at 98.9% median cross-verb
-   alignment (both gate families); S1 dry-run swap gap = 0.034;
+   alignment (both gate families); an uncommitted 3-verb dry-run observed a swap gap
+   of ~0.03 (to be archived by the first committed S1 harvest);
    dials_carry_task_signal_strict = false (right-tail p = 0.083; a derangement
    where no verb receives its own dial ties the original assignment exactly).
 4. **Entanglement audit:** measured bond-dimension growth per story config —
@@ -163,4 +165,5 @@ entanglement saturation under arbitrary-pair co-reference.
   pre-registered permissive pass (dials_carry_task_signal = true) holds only at
   the boundary via tie-at-max. The M3/M-QA milestones are blocked until a
   mechanism distinguishes verbs beyond the shared-frame machinery (exp39: dials
-  interchangeable at 98.9%; S1 dry-run swap gap 0.034).
+  interchangeable at 98.9%; an uncommitted 3-verb dry-run observed a swap gap of ~0.03
+  (to be archived by the first committed S1 harvest)).

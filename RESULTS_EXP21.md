@@ -1,3 +1,5 @@
+> **SUPERSEDED by [RESULTS_EXP21_v2.md](RESULTS_EXP21_v2.md).** The "2/5 significant" result reported here was traced to verbatim twin-pair leakage in exactly those two splits; on leakage-free splits the positive vanishes. Every reader must cite v2; v1 is kept as a historical record only.
+
 # Exp21 series — trained semantic geometry: final accounting (2026-08-03)
 
 ## Question

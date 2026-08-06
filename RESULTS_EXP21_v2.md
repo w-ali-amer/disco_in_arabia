@@ -271,7 +271,7 @@ cell-for-cell with the de-duplicated table above.
    last case "marginal fragile transfer"; that was too generous and is
    retracted.
 
-Pre-registered verdict rule, evaluated in
+Verdict rule stated in advance in the script (committed with the results; no separate prior design doc — see RESEARCH_RULES.md rule 1, adopted the same day), evaluated in
 `results_exp21c.json :: verdicts` (computed at runtime, not hardcoded):
 `robust_transfer` = false, `c2_dominates` = true,
 **`conclusion_unchanged` = true** — the direction of the v1 conclusion stands;
