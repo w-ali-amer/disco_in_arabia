@@ -34,7 +34,17 @@ to load exp28a's header), so no existing file is modified:
     loop after the marker is replicated here.
 
 A sanity gate compares the recomputed matched per-frame alignments against the
-archived T3b_per_frame_alignment; a mismatch > 1e-6 aborts the verdicts.
+archived T3b_per_frame_alignment.  It is ENFORCING: on a deviation > 1e-6 the
+JSON carries "verdicts": null and "invalidated_by_sanity_gate": true, and the
+Q1/Q2 numbers are explicitly marked not reportable.
+
+Q2 also records two post-hoc companion fields (added after the first run, and
+explicitly NOT a revision of the pre-registered criterion): the permutation
+distribution is discrete and tie-heavy, so `perm_quantile` can read 1.0 while
+dozens of permutations match the original exactly.
+`dials_carry_task_signal_strict` requires the original to STRICTLY beat >= 95%
+of permutations, and `derangement_max_equals_orig` flags whether an assignment
+in which no verb gets its own dial ties the original.
 
 Run with ARABIC_POS_FUSION=1.
 """
@@ -46,11 +56,12 @@ if os.environ.get("ARABIC_POS_FUSION", "0") != "1":
     print("[39] WARNING: ARABIC_POS_FUSION is off — frame supply will be "
           "starved; exp39 must run with fusion on to match exp33/38.",
           flush=True)
-MAX_USE_PER_VERB = 10
-MIN_FRAMES = 4
 SANITY_TOL = 1e-6
 RETIRE_RATIO = 0.95          # Q1 pre-registered threshold
-TOP_FRAC = 0.95              # Q2 pre-registered percentile
+TOP_TAIL = 0.05              # Q2 pre-registered tail fraction
+TOP_FRAC = 1 - TOP_TAIL      # -> 95th percentile of the permutation distribution
+STRICT_FRAC = 0.95           # companion (post-hoc, NOT pre-registered): share of
+                             # permutations the original must STRICTLY beat
 
 # ── Q1 machinery: exec exp38's header slice ──────────────────────────────
 src38 = open("exp38_analog_native.py", encoding="utf-8").read()
@@ -60,6 +71,9 @@ exec(compile(head38, "exp38_head", "exec"), n38)
 surface, subjects = n38["surface"], n38["subjects"]
 CAND, build = n38["CAND"], n38["build"]
 make_variant, align38, pref_from = n38["make_variant"], n38["align"], n38["pref_from"]
+# frame-selection constants come from the exec'd source, never re-declared here
+MAX_USE_PER_VERB = n38["MAX_USE_PER_VERB"]
+MIN_FRAMES = n38["MIN_FRAMES"]
 
 # usable frames — replicated verbatim from exp33/exp38 (identical in both)
 USABLE = {}
@@ -151,6 +165,8 @@ s34, C34 = n34["surface"], n34["CAND"]
 build34, make_zx4 = n34["build"], n34["make_zx4"]
 swap_sent, align34, enc34, vec34 = (n34["swap_sent"], n34["align"],
                                     n34["enc"], n34["vec"])
+assert n34["MAX_USE_PER_VERB"] == MAX_USE_PER_VERB, "frame cap differs exp34a/exp38"
+assert n34["MIN_FRAMES"] == MIN_FRAMES, "min-frame floor differs exp34a/exp38"
 
 # pair build — replicated verbatim from exp34a (loop lives after the marker)
 PAIRS = {}
@@ -218,6 +234,12 @@ quantile = float(np.mean(accs <= ident_acc))
 n_ge = int(np.sum(accs >= ident_acc))
 der = np.array([a for a, _, d in rows if d])
 dials_carry_task_signal = bool(ident_acc >= p95)
+# companion statistics (post-hoc, NOT pre-registered): `quantile` reads 1.0 under
+# ties and is a copy trap, so the tie structure is recorded explicitly.
+n_strict = int(np.sum(accs < ident_acc))
+frac_strict = float(n_strict / accs.size)
+dials_carry_task_signal_strict = bool(frac_strict >= STRICT_FRAC)
+derangement_max_equals_orig = bool(der.max() == ident_acc)
 
 Q2 = {
     "n_pairs": int(N_TOTAL),
@@ -237,34 +259,73 @@ Q2 = {
     "perm_p95_threshold": p95,
     "perm_quantile": quantile,
     "n_perms_ge_orig": n_ge,
+    "n_perms_tied_with_orig_excl_identity": int(n_ge - 1),
+    "n_perms_strictly_beaten_by_orig": n_strict,
+    "frac_perms_strictly_beaten_by_orig": frac_strict,
     "perm_p_value": float(n_ge / accs.size),
     "n_derangements": int(der.size),
     "derangement_mean": float(der.mean()),
     "derangement_max": float(der.max()),
-    "criterion_top_fraction": 1 - TOP_FRAC,
+    "criterion_top_fraction": TOP_TAIL,
     "criterion_passed": dials_carry_task_signal,
+    "companion_strict_threshold": STRICT_FRAC,
+    "dials_carry_task_signal_strict": dials_carry_task_signal_strict,
+    "derangement_max_equals_orig": derangement_max_equals_orig,
+    "companion_fields_note": (
+        "dials_carry_task_signal_strict and derangement_max_equals_orig are "
+        "post-hoc descriptive fields added after the first run; they do NOT "
+        "revise the pre-registered criterion (criterion_passed), they record "
+        "the tie structure that perm_quantile=1.0 hides."),
 }
 print(f"[39] Q2: orig acc = {ident_acc:.4f} ({Q2['orig_correct']}/{N_TOTAL}) | "
       f"perm mean={accs.mean():.4f} max={accs.max():.4f} "
       f"p95={p95:.4f} | quantile={quantile:.4f} "
       f"({n_ge} of {accs.size} perms >= orig) -> "
       f"dials_carry_task_signal={dials_carry_task_signal}", flush=True)
+print(f"[39] Q2 companion: strictly beats {n_strict}/{accs.size} "
+      f"= {frac_strict:.4f} (>= {STRICT_FRAC} ? "
+      f"{dials_carry_task_signal_strict}) | {n_ge - 1} non-identity "
+      f"permutations tie the original | derangement_max_equals_orig="
+      f"{derangement_max_equals_orig}", flush=True)
 
 OUT = {
     "design_doc": "20_exp39_informative_null_design.md",
     "config": {"S_OUT": S_OUT, "retire_ratio": RETIRE_RATIO,
-               "top_fraction": 1 - TOP_FRAC, "sanity_tol": SANITY_TOL,
+               "top_fraction": TOP_TAIL, "sanity_tol": SANITY_TOL,
+               "strict_companion_threshold": STRICT_FRAC,
+               "max_use_per_verb": MAX_USE_PER_VERB,
+               "min_frames": MIN_FRAMES,
                "fusion": os.environ.get("ARABIC_POS_FUSION", "0")},
     "sanity": sanity,
     "Q1": Q1,
     "Q2": Q2,
-    "verdicts": {
+}
+# Sanity gate is enforcing, not advisory: if the rebuilt circuits do not
+# reproduce the archived per-frame alignments, the verdicts are not reportable
+# and the JSON says so instead of carrying numbers computed on wrong circuits.
+if sanity["passed"]:
+    OUT["invalidated_by_sanity_gate"] = False
+    OUT["verdicts"] = {
         "verb_label_retired": verb_label_retired,
         "dials_carry_task_signal": dials_carry_task_signal,
-    },
-}
-json.dump(OUT, open("results_exp39.json", "w"), indent=2, ensure_ascii=False)
-print(f"[39] VERDICTS: verb_label_retired={verb_label_retired} | "
-      f"dials_carry_task_signal={dials_carry_task_signal} | "
-      f"sanity_passed={sanity['passed']}", flush=True)
+    }
+else:
+    OUT["invalidated_by_sanity_gate"] = True
+    OUT["verdicts"] = None
+    OUT["sanity_failure_note"] = (
+        f"rebuilt circuits deviate from archived T3b_per_frame_alignment by "
+        f"more than {SANITY_TOL}; verdicts withheld — see Q1/Q2 blocks for the "
+        f"raw numbers, which are NOT to be reported as pre-registered results.")
+with open("results_exp39.json", "w") as fh:
+    json.dump(OUT, fh, indent=2, ensure_ascii=False)
+    fh.write("\n")
+if sanity["passed"]:
+    print(f"[39] VERDICTS: verb_label_retired={verb_label_retired} | "
+          f"dials_carry_task_signal={dials_carry_task_signal} | "
+          f"sanity_passed=True", flush=True)
+else:
+    print(f"[39] SANITY GATE FAILED "
+          f"(max dev {sanity['max_abs_dev_vs_archived']} > {SANITY_TOL}) — "
+          f"verdicts withheld, results_exp39.json marked invalidated",
+          flush=True)
 print("[39] DONE", flush=True)

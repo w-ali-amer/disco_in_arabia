@@ -3,8 +3,11 @@
   "config": {
     "S_OUT": 0,
     "retire_ratio": 0.95,
-    "top_fraction": 0.050000000000000044,
+    "top_fraction": 0.05,
     "sanity_tol": 1e-06,
+    "strict_companion_threshold": 0.95,
+    "max_use_per_verb": 10,
+    "min_frames": 4,
     "fusion": "1"
   },
   "sanity": {
@@ -465,13 +468,21 @@
     "perm_p95_threshold": 0.7592592592592593,
     "perm_quantile": 1.0,
     "n_perms_ge_orig": 60,
+    "n_perms_tied_with_orig_excl_identity": 59,
+    "n_perms_strictly_beaten_by_orig": 660,
+    "frac_perms_strictly_beaten_by_orig": 0.9166666666666666,
     "perm_p_value": 0.08333333333333333,
     "n_derangements": 265,
     "derangement_mean": 0.7111111111111111,
     "derangement_max": 0.7592592592592593,
-    "criterion_top_fraction": 0.050000000000000044,
-    "criterion_passed": true
+    "criterion_top_fraction": 0.05,
+    "criterion_passed": true,
+    "companion_strict_threshold": 0.95,
+    "dials_carry_task_signal_strict": false,
+    "derangement_max_equals_orig": true,
+    "companion_fields_note": "dials_carry_task_signal_strict and derangement_max_equals_orig are post-hoc descriptive fields added after the first run; they do NOT revise the pre-registered criterion (criterion_passed), they record the tie structure that perm_quantile=1.0 hides."
   },
+  "invalidated_by_sanity_gate": false,
   "verdicts": {
     "verb_label_retired": true,
     "dials_carry_task_signal": true
