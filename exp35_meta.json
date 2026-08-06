@@ -1,0 +1,5084 @@
+{
+  "pairs": [
+    {
+      "verb": "يحمل",
+      "pair": 0,
+      "sent": "يحمل الصبي الحقيبة",
+      "theta": [
+        0.708569822630992,
+        -1.6694928670226018e-08,
+        1.388964240238039,
+        0.053986730375154515
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 0,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.18995145159306298,
+          "sv_check_dev": 1.6653345369377348e-16,
+          "acceptance": 0.16745177013543977,
+          "basis_circuit_indices": [
+            1,
+            2
+          ],
+          "basis_p_raw": [
+            0.19140437642389063,
+            0.0660912967228882
+          ],
+          "p_raw_v": 0.031807706809054724,
+          "align_ratio_pred": 0.12352715065205601
+        },
+        "swap": {
+          "circuit_index": 3,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.6969352617412989,
+          "sv_check_dev": 3.3306690738754696e-16,
+          "acceptance": 0.19102823722696255,
+          "basis_circuit_indices": [
+            4,
+            5
+          ],
+          "basis_p_raw": [
+            0.1140816524952216,
+            0.03939201525650924
+          ],
+          "p_raw_v": 0.13313431451175203,
+          "align_ratio_pred": 0.8674733357328691
+        }
+      },
+      "hw_native_correct": false,
+      "align_correct": false,
+      "align_margin": 0.7439461850808137,
+      "ratio_correct": false,
+      "min_p_raw": 0.031807706809054724
+    },
+    {
+      "verb": "يحمل",
+      "pair": 1,
+      "sent": "يحمل الرياضي الكاس",
+      "theta": [
+        0.9537731982536379,
+        -1.201717739003681e-08,
+        -0.20095709859639715,
+        0.1230447611191301
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 6,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.0786197380504455,
+          "sv_check_dev": 6.938893903907228e-17,
+          "acceptance": 0.05877187897135625,
+          "basis_circuit_indices": [
+            7,
+            8
+          ],
+          "basis_p_raw": [
+            0.018951167330973316,
+            0.0003148717705965079
+          ],
+          "p_raw_v": 0.004620629729460519,
+          "align_ratio_pred": 0.2398328844398548
+        },
+        "swap": {
+          "circuit_index": 9,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.11096078709343725,
+          "sv_check_dev": 8.326672684688674e-17,
+          "acceptance": 0.018954302837551732,
+          "basis_circuit_indices": [
+            10,
+            11
+          ],
+          "basis_p_raw": [
+            0.004358502149616877,
+            7.241598897103945e-05
+          ],
+          "p_raw_v": 0.0021031843616621097,
+          "align_ratio_pred": 0.47466107381807116
+        }
+      },
+      "hw_native_correct": false,
+      "align_correct": false,
+      "align_margin": 0.23482818937821637,
+      "ratio_correct": false,
+      "min_p_raw": 7.241598897103945e-05
+    },
+    {
+      "verb": "يحمل",
+      "pair": 2,
+      "sent": "يحمل الصبي الحقيبة",
+      "theta": [
+        0.708569822630992,
+        -1.6694928670226018e-08,
+        1.388964240238039,
+        0.053986730375154515
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 12,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.18995145159306298,
+          "sv_check_dev": 1.6653345369377348e-16,
+          "acceptance": 0.16745177013543977,
+          "basis_circuit_indices": [
+            13,
+            14
+          ],
+          "basis_p_raw": [
+            0.19140437642389063,
+            0.0660912967228882
+          ],
+          "p_raw_v": 0.031807706809054724,
+          "align_ratio_pred": 0.12352715065205601
+        },
+        "swap": {
+          "circuit_index": 15,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.6969352617412989,
+          "sv_check_dev": 3.3306690738754696e-16,
+          "acceptance": 0.19102823722696255,
+          "basis_circuit_indices": [
+            16,
+            17
+          ],
+          "basis_p_raw": [
+            0.1140816524952216,
+            0.03939201525650924
+          ],
+          "p_raw_v": 0.13313431451175203,
+          "align_ratio_pred": 0.8674733357328691
+        }
+      },
+      "hw_native_correct": false,
+      "align_correct": false,
+      "align_margin": 0.7439461850808137,
+      "ratio_correct": false,
+      "min_p_raw": 0.031807706809054724
+    },
+    {
+      "verb": "يحمل",
+      "pair": 3,
+      "sent": "يحمل الرياضي الكاس",
+      "theta": [
+        0.9537731982536379,
+        -1.201717739003681e-08,
+        -0.20095709859639715,
+        0.1230447611191301
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 18,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.0786197380504455,
+          "sv_check_dev": 6.938893903907228e-17,
+          "acceptance": 0.05877187897135625,
+          "basis_circuit_indices": [
+            19,
+            20
+          ],
+          "basis_p_raw": [
+            0.018951167330973316,
+            0.0003148717705965079
+          ],
+          "p_raw_v": 0.004620629729460519,
+          "align_ratio_pred": 0.2398328844398548
+        },
+        "swap": {
+          "circuit_index": 21,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.11096078709343725,
+          "sv_check_dev": 8.326672684688674e-17,
+          "acceptance": 0.018954302837551732,
+          "basis_circuit_indices": [
+            22,
+            23
+          ],
+          "basis_p_raw": [
+            0.004358502149616877,
+            7.241598897103945e-05
+          ],
+          "p_raw_v": 0.0021031843616621097,
+          "align_ratio_pred": 0.47466107381807116
+        }
+      },
+      "hw_native_correct": false,
+      "align_correct": false,
+      "align_margin": 0.23482818937821637,
+      "ratio_correct": false,
+      "min_p_raw": 7.241598897103945e-05
+    },
+    {
+      "verb": "فتح",
+      "pair": 0,
+      "sent": "فتح الرجل الباب",
+      "theta": [
+        0.8953517798862237,
+        2.000000000536562,
+        0.06161507072484446,
+        2.745887897984815
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 24,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.1450673320487017,
+          "sv_check_dev": 0.0,
+          "acceptance": 0.05310180145221478,
+          "basis_circuit_indices": [
+            25,
+            26
+          ],
+          "basis_p_raw": [
+            0.011794717971427865,
+            0.0023811971472839934
+          ],
+          "p_raw_v": 0.007703336663652671,
+          "align_ratio_pred": 0.543410185454938
+        },
+        "swap": {
+          "circuit_index": 27,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.01997752075841362,
+          "sv_check_dev": 1.734723475976807e-17,
+          "acceptance": 0.3697040829540752,
+          "basis_circuit_indices": [
+            28,
+            29
+          ],
+          "basis_p_raw": [
+            0.007716930373478279,
+            2.0836857796450072e-20
+          ],
+          "p_raw_v": 0.0073857709916853136,
+          "align_ratio_pred": 0.9570866438122726
+        }
+      },
+      "hw_native_correct": true,
+      "align_correct": false,
+      "align_margin": 0.4136764583573347,
+      "ratio_correct": false,
+      "min_p_raw": 2.0836857796450072e-20
+    },
+    {
+      "verb": "فتح",
+      "pair": 1,
+      "sent": "فتح الولد الصندوق",
+      "theta": [
+        0.8925065192331378,
+        1.9999999997615214,
+        0.12045773052437622,
+        2.447312152369994
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 30,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.03285672051573294,
+          "sv_check_dev": 6.938893903907228e-18,
+          "acceptance": 0.02299625302724858,
+          "basis_circuit_indices": [
+            31,
+            32
+          ],
+          "basis_p_raw": [
+            0.003046161816576745,
+            0.0006168761947037308
+          ],
+          "p_raw_v": 0.0007555814586253839,
+          "align_ratio_pred": 0.2062718039776109
+        },
+        "swap": {
+          "circuit_index": 33,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.011350064457943076,
+          "sv_check_dev": 0.0,
+          "acceptance": 0.1630431309894928,
+          "basis_circuit_indices": [
+            34,
+            35
+          ],
+          "basis_p_raw": [
+            0.016241972924095505,
+            0.0032891510986243345
+          ],
+          "p_raw_v": 0.0018505500461555996,
+          "align_ratio_pred": 0.09474877349623721
+        }
+      },
+      "hw_native_correct": true,
+      "align_correct": true,
+      "align_margin": 0.11152303048137381,
+      "ratio_correct": true,
+      "min_p_raw": 0.0006168761947037308
+    },
+    {
+      "verb": "فتح",
+      "pair": 2,
+      "sent": "فتح الطالب الكتاب",
+      "theta": [
+        0.8988455304592822,
+        2.0000000009332357,
+        0.13144710084165737,
+        2.3844305548251024
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 36,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.10434853582391128,
+          "sv_check_dev": 2.7755575615628914e-17,
+          "acceptance": 0.2084829402470538,
+          "basis_circuit_indices": [
+            37,
+            38
+          ],
+          "basis_p_raw": [
+            0.01873273758760959,
+            0.003308884847242981
+          ],
+          "p_raw_v": 0.021754889559044043,
+          "align_ratio_pred": 0.9869912990000618
+        },
+        "swap": {
+          "circuit_index": 39,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.0005538585558656858,
+          "sv_check_dev": 9.324138683375338e-18,
+          "acceptance": 0.010226493586588276,
+          "basis_circuit_indices": [
+            40,
+            41
+          ],
+          "basis_p_raw": [
+            0.0014863695166469223,
+            0.00026254707756025197
+          ],
+          "p_raw_v": 5.664030969437385e-06,
+          "align_ratio_pred": 0.003238594103456961
+        }
+      },
+      "hw_native_correct": true,
+      "align_correct": true,
+      "align_margin": 0.9837527048966053,
+      "ratio_correct": true,
+      "min_p_raw": 5.664030969437385e-06
+    },
+    {
+      "verb": "فتح",
+      "pair": 3,
+      "sent": "فتح المدير الملف",
+      "theta": [
+        0.8625007947511184,
+        2.0000000016254047,
+        0.09544754462740415,
+        2.6470952432408668
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 42,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.12189858989869666,
+          "sv_check_dev": 2.7755575615628914e-17,
+          "acceptance": 0.22905342123761424,
+          "basis_circuit_indices": [
+            43,
+            44
+          ],
+          "basis_p_raw": [
+            0.025788475158862522,
+            0.00407999109742931
+          ],
+          "p_raw_v": 0.027921289060337348,
+          "align_ratio_pred": 0.9348082630274225
+        },
+        "swap": {
+          "circuit_index": 45,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.007521598946483153,
+          "sv_check_dev": 4.336808689942018e-18,
+          "acceptance": 0.12247980824079802,
+          "basis_circuit_indices": [
+            46,
+            47
+          ],
+          "basis_p_raw": [
+            0.008686088122521128,
+            0.0013742248276043007
+          ],
+          "p_raw_v": 0.0009212439966294444,
+          "align_ratio_pred": 0.09157210130505518
+        }
+      },
+      "hw_native_correct": true,
+      "align_correct": true,
+      "align_margin": 0.8432361617223674,
+      "ratio_correct": true,
+      "min_p_raw": 0.0009212439966294444
+    },
+    {
+      "verb": "فتح",
+      "pair": 4,
+      "sent": "فتح الطبيب الحقيبة",
+      "theta": [
+        1.6725273811177996,
+        -1.87290943437181e-09,
+        0.22904227255529255,
+        -0.26131544492508474
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 48,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.9676766698773309,
+          "sv_check_dev": 0.0,
+          "acceptance": 0.279452706014772,
+          "basis_circuit_indices": [
+            49,
+            50
+          ],
+          "basis_p_raw": [
+            0.2501608063949371,
+            0.045631214122993174
+          ],
+          "p_raw_v": 0.27041986394458334,
+          "align_ratio_pred": 0.9142229850253552
+        },
+        "swap": {
+          "circuit_index": 51,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.9681204425087051,
+          "sv_check_dev": 1.1102230246251565e-16,
+          "acceptance": 0.311924734232088,
+          "basis_circuit_indices": [
+            52,
+            53
+          ],
+          "basis_p_raw": [
+            0.27135698739380026,
+            0.04949755681651182
+          ],
+          "p_raw_v": 0.3019807117341793,
+          "align_ratio_pred": 0.9411763591424734
+        }
+      },
+      "hw_native_correct": false,
+      "align_correct": false,
+      "align_margin": 0.02695337411711729,
+      "ratio_correct": false,
+      "min_p_raw": 0.045631214122993174
+    },
+    {
+      "verb": "فتح",
+      "pair": 5,
+      "sent": "فتح البائع المتجر",
+      "theta": [
+        1.0106505735602371,
+        0.9999999992978419,
+        -0.004523264514815599,
+        0.020001836849689703
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 54,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.0014855697726681256,
+          "sv_check_dev": 2.168404344971009e-19,
+          "acceptance": 0.045311746168409904,
+          "basis_circuit_indices": [
+            55,
+            56
+          ],
+          "basis_p_raw": [
+            0.00010703841306643212,
+            1.9229972097916386e-05
+          ],
+          "p_raw_v": 6.731376045460052e-05,
+          "align_ratio_pred": 0.5331006678115525
+        },
+        "swap": {
+          "circuit_index": 57,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 9.852094285363864e-08,
+          "sv_check_dev": 5.293955920339377e-23,
+          "acceptance": 0.021984262624619423,
+          "basis_circuit_indices": [
+            58,
+            59
+          ],
+          "basis_p_raw": [
+            7.367810901588187e-06,
+            1.323663129584479e-06
+          ],
+          "p_raw_v": 2.165910281719513e-09,
+          "align_ratio_pred": 0.0002491994193333953
+        }
+      },
+      "hw_native_correct": true,
+      "align_correct": true,
+      "align_margin": 0.532851468392219,
+      "ratio_correct": true,
+      "min_p_raw": 2.165910281719513e-09
+    },
+    {
+      "verb": "فتح",
+      "pair": 6,
+      "sent": "فتح العامل النافذة",
+      "theta": [
+        0.3420183285536337,
+        0.9999999990784949,
+        1.399263774799246,
+        0.5406836349526476
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 60,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.9505305079593962,
+          "sv_check_dev": 0.0,
+          "acceptance": 0.006945710965150157,
+          "basis_circuit_indices": [
+            61,
+            62
+          ],
+          "basis_p_raw": [
+            0.006514447247189617,
+            0.0010449382455922167
+          ],
+          "p_raw_v": 0.0066021101718433265,
+          "align_ratio_pred": 0.8733659869770403
+        },
+        "swap": {
+          "circuit_index": 63,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.9118153254931572,
+          "sv_check_dev": 1.1102230246251565e-16,
+          "acceptance": 0.03857652673447609,
+          "basis_circuit_indices": [
+            64,
+            65
+          ],
+          "basis_p_raw": [
+            0.032192846716003594,
+            0.005163835999525862
+          ],
+          "p_raw_v": 0.035174668280791806,
+          "align_ratio_pred": 0.9415897163205401
+        }
+      },
+      "hw_native_correct": true,
+      "align_correct": false,
+      "align_margin": 0.06822372934350063,
+      "ratio_correct": false,
+      "min_p_raw": 0.0010449382455922167
+    },
+    {
+      "verb": "فتح",
+      "pair": 7,
+      "sent": "فتح الطفل العلبة",
+      "theta": [
+        0.8803658737764511,
+        2.000000000912946,
+        0.11076561465857923,
+        2.535036581426258
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 66,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.13066530880130064,
+          "sv_check_dev": 5.551115123125783e-17,
+          "acceptance": 0.008068536278728472,
+          "basis_circuit_indices": [
+            67,
+            68
+          ],
+          "basis_p_raw": [
+            0.001447258008907411,
+            0.0002908778821829932
+          ],
+          "p_raw_v": 0.0010542777844345535,
+          "align_ratio_pred": 0.6065565930942037
+        },
+        "swap": {
+          "circuit_index": 69,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.15113354367951123,
+          "sv_check_dev": 5.551115123125783e-17,
+          "acceptance": 0.11749917624924584,
+          "basis_circuit_indices": [
+            70,
+            71
+          ],
+          "basis_p_raw": [
+            0.015093196036634539,
+            0.0030335136963727206
+          ],
+          "p_raw_v": 0.01775806688597198,
+          "align_ratio_pred": 0.9796630026924295
+        }
+      },
+      "hw_native_correct": false,
+      "align_correct": false,
+      "align_margin": 0.37310640959822583,
+      "ratio_correct": false,
+      "min_p_raw": 0.0002908778821829932
+    },
+    {
+      "verb": "فتح",
+      "pair": 8,
+      "sent": "فتح الاستاذ الدفتر",
+      "theta": [
+        0.8683976150784836,
+        1.999999998699898,
+        0.10182456806012027,
+        2.608872181217518
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 72,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.19264740968131083,
+          "sv_check_dev": 1.3877787807814457e-16,
+          "acceptance": 0.14166820125291765,
+          "basis_circuit_indices": [
+            73,
+            74
+          ],
+          "basis_p_raw": [
+            0.023376412023454345,
+            0.004120725011429079
+          ],
+          "p_raw_v": 0.0272920120055852,
+          "align_ratio_pred": 0.9925401313948431
+        },
+        "swap": {
+          "circuit_index": 75,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.2514594594338823,
+          "sv_check_dev": 1.6653345369377348e-16,
+          "acceptance": 0.08760012246126148,
+          "basis_circuit_indices": [
+            76,
+            77
+          ],
+          "basis_p_raw": [
+            0.02177783329431279,
+            0.0038389322381558325
+          ],
+          "p_raw_v": 0.022027879440450687,
+          "align_ratio_pred": 0.8599008884447528
+        }
+      },
+      "hw_native_correct": false,
+      "align_correct": true,
+      "align_margin": 0.13263924295009122,
+      "ratio_correct": true,
+      "min_p_raw": 0.0038389322381558325
+    },
+    {
+      "verb": "فتح",
+      "pair": 9,
+      "sent": "فتح السائق الشنطة",
+      "theta": [
+        0.8924062692055849,
+        1.9999999983607983,
+        0.13357935020180367,
+        2.406241555186364
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 78,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.11467267121332504,
+          "sv_check_dev": 1.942890293094024e-16,
+          "acceptance": 0.002175199739825087,
+          "basis_circuit_indices": [
+            79,
+            80
+          ],
+          "basis_p_raw": [
+            0.00021308885707516846,
+            3.635737593478927e-05
+          ],
+          "p_raw_v": 0.0002494359645882728,
+          "align_ratio_pred": 0.9999588351302763
+        },
+        "swap": {
+          "circuit_index": 81,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.10958745038034068,
+          "sv_check_dev": 0.0,
+          "acceptance": 0.16757704709921614,
+          "basis_circuit_indices": [
+            82,
+            83
+          ],
+          "basis_p_raw": [
+            0.01606659468224113,
+            0.0027412944028199306
+          ],
+          "p_raw_v": 0.018364341333869362,
+          "align_ratio_pred": 0.9764169307259469
+        }
+      },
+      "hw_native_correct": true,
+      "align_correct": true,
+      "align_margin": 0.02354190440432602,
+      "ratio_correct": true,
+      "min_p_raw": 3.635737593478927e-05
+    },
+    {
+      "verb": "رفع",
+      "pair": 0,
+      "sent": "رفع العامل الصندوق",
+      "theta": [
+        1.0885873566797577,
+        0.9999999968892557,
+        -0.10863712547784068,
+        0.6050169849954257
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 84,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.08571867532481464,
+          "sv_check_dev": 2.7755575615628914e-17,
+          "acceptance": 0.04411124235250072,
+          "basis_circuit_indices": [
+            85,
+            86
+          ],
+          "basis_p_raw": [
+            0.006994600465704057,
+            1.0799931243082602e-18
+          ],
+          "p_raw_v": 0.003781157261388221,
+          "align_ratio_pred": 0.5405823077283686
+        },
+        "swap": {
+          "circuit_index": 87,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.012800413479060248,
+          "sv_check_dev": 3.469446951953614e-18,
+          "acceptance": 0.037742017532659496,
+          "basis_circuit_indices": [
+            88,
+            89
+          ],
+          "basis_p_raw": [
+            0.003309381420807173,
+            0.0008102710245338633
+          ],
+          "p_raw_v": 0.00048311342995198295,
+          "align_ratio_pred": 0.1172704339411791
+        }
+      },
+      "hw_native_correct": true,
+      "align_correct": true,
+      "align_margin": 0.4233118737871895,
+      "ratio_correct": true,
+      "min_p_raw": 1.0799931243082602e-18
+    },
+    {
+      "verb": "رفع",
+      "pair": 1,
+      "sent": "رفع الرياضي الثقل",
+      "theta": [
+        0.2600556142241772,
+        0.9912524466597349,
+        1.6731660960058132,
+        1.057890550304796
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 90,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.8224329390140586,
+          "sv_check_dev": 0.0,
+          "acceptance": 0.058764846828435136,
+          "basis_circuit_indices": [
+            91,
+            92
+          ],
+          "basis_p_raw": [
+            0.0497358366662073,
+            0.011684912276972693
+          ],
+          "p_raw_v": 0.04833014568782089,
+          "align_ratio_pred": 0.786870015742251
+        },
+        "swap": {
+          "circuit_index": 93,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.8362923366961101,
+          "sv_check_dev": 1.1102230246251565e-16,
+          "acceptance": 0.039846141120279635,
+          "basis_circuit_indices": [
+            94,
+            95
+          ],
+          "basis_p_raw": [
+            0.02716503640911266,
+            0.007256176066132976
+          ],
+          "p_raw_v": 0.03332302246580162,
+          "align_ratio_pred": 0.9680955454362978
+        }
+      },
+      "hw_native_correct": false,
+      "align_correct": false,
+      "align_margin": 0.18122552969404682,
+      "ratio_correct": false,
+      "min_p_raw": 0.007256176066132976
+    },
+    {
+      "verb": "رفع",
+      "pair": 2,
+      "sent": "رفع السائق الحقيبة",
+      "theta": [
+        1.0174265612513742,
+        0.9915532748316553,
+        -0.008717830993747205,
+        0.04445013932505839
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 96,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.006200268660319459,
+          "sv_check_dev": 8.673617379884035e-19,
+          "acceptance": 0.06289159753596314,
+          "basis_circuit_indices": [
+            97,
+            98
+          ],
+          "basis_p_raw": [
+            0.0003148402547828166,
+            7.650805382107084e-05
+          ],
+          "p_raw_v": 0.00038994480119965684,
+          "align_ratio_pred": 0.9964136617601913
+        },
+        "swap": {
+          "circuit_index": 99,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.03332803625087341,
+          "sv_check_dev": 6.245004513516506e-17,
+          "acceptance": 0.006726152246801047,
+          "basis_circuit_indices": [
+            100,
+            101
+          ],
+          "basis_p_raw": [
+            0.00019773763366540852,
+            4.73498196036761e-05
+          ],
+          "p_raw_v": 0.00022416944591027932,
+          "align_ratio_pred": 0.9146508436895006
+        }
+      },
+      "hw_native_correct": false,
+      "align_correct": true,
+      "align_margin": 0.08176281807069063,
+      "ratio_correct": true,
+      "min_p_raw": 4.73498196036761e-05
+    },
+    {
+      "verb": "رفع",
+      "pair": 3,
+      "sent": "رفع المهندس المعدات",
+      "theta": [
+        0.9509136773963367,
+        1.9854765514500472,
+        0.0818773813476765,
+        2.2158485783013253
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 102,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.02143941363674507,
+          "sv_check_dev": 3.469446951953614e-18,
+          "acceptance": 0.017644008789293536,
+          "basis_circuit_indices": [
+            103,
+            104
+          ],
+          "basis_p_raw": [
+            0.0003426055659496798,
+            6.0991715659483205e-05
+          ],
+          "p_raw_v": 0.00037827720264402975,
+          "align_ratio_pred": 0.9372640002326557
+        },
+        "swap": {
+          "circuit_index": 105,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.014950798894030178,
+          "sv_check_dev": 1.734723475976807e-18,
+          "acceptance": 0.25305079658840723,
+          "basis_circuit_indices": [
+            106,
+            107
+          ],
+          "basis_p_raw": [
+            0.006141598253494342,
+            0.001621788045178662
+          ],
+          "p_raw_v": 0.003783311569767414,
+          "align_ratio_pred": 0.4873274914084973
+        }
+      },
+      "hw_native_correct": true,
+      "align_correct": true,
+      "align_margin": 0.44993650882415787,
+      "ratio_correct": true,
+      "min_p_raw": 6.0991715659483205e-05
+    },
+    {
+      "verb": "رفع",
+      "pair": 4,
+      "sent": "رفع الفلاح المحصول",
+      "theta": [
+        0.9169340428829148,
+        0.9757292953653096,
+        0.04663552581775858,
+        -0.19695658901668733
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 108,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.6980383090821141,
+          "sv_check_dev": 1.1102230246251565e-16,
+          "acceptance": 0.000328164819854334,
+          "basis_circuit_indices": [
+            109,
+            110
+          ],
+          "basis_p_raw": [
+            0.00021117107839988014,
+            2.2245409767041267e-05
+          ],
+          "p_raw_v": 0.0002290716159513559,
+          "align_ratio_pred": 0.9813857527817043
+        },
+        "swap": {
+          "circuit_index": 111,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.003118382463623248,
+          "sv_check_dev": 1.3010426069826053e-18,
+          "acceptance": 0.056792794124210524,
+          "basis_circuit_indices": [
+            112,
+            113
+          ],
+          "basis_p_raw": [
+            0.002264396738957902,
+            0.000599150640320093
+          ],
+          "p_raw_v": 0.00017710165325710361,
+          "align_ratio_pred": 0.06184694359824332
+        }
+      },
+      "hw_native_correct": true,
+      "align_correct": true,
+      "align_margin": 0.9195388091834611,
+      "ratio_correct": true,
+      "min_p_raw": 2.2245409767041267e-05
+    },
+    {
+      "verb": "رفع",
+      "pair": 5,
+      "sent": "رفع الموظف التقرير",
+      "theta": [
+        0.25907781663890667,
+        0.9913405268785961,
+        1.6646009138106423,
+        1.0449613982538024
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 114,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.8440487221024378,
+          "sv_check_dev": 0.0,
+          "acceptance": 0.18193300693799022,
+          "basis_circuit_indices": [
+            115,
+            116
+          ],
+          "basis_p_raw": [
+            0.12943995995066376,
+            0.02998021820141817
+          ],
+          "p_raw_v": 0.1535603220142646,
+          "align_ratio_pred": 0.9632426948348582
+        },
+        "swap": {
+          "circuit_index": 117,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.6055403651526354,
+          "sv_check_dev": 1.1102230246251565e-16,
+          "acceptance": 0.06676729328296321,
+          "basis_circuit_indices": [
+            118,
+            119
+          ],
+          "basis_p_raw": [
+            0.1039672674419253,
+            0.02624595430019054
+          ],
+          "p_raw_v": 0.04043029115481864,
+          "align_ratio_pred": 0.3104929792374683
+        }
+      },
+      "hw_native_correct": true,
+      "align_correct": true,
+      "align_margin": 0.6527497155973899,
+      "ratio_correct": true,
+      "min_p_raw": 0.02624595430019054
+    },
+    {
+      "verb": "رفع",
+      "pair": 6,
+      "sent": "رفع المحكوم الاستئناف",
+      "theta": [
+        0.9906547880054788,
+        1.9916025956510293,
+        0.01861277160834313,
+        2.0441621425066705
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 120,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.0011804717143680925,
+          "sv_check_dev": 6.505213034913027e-19,
+          "acceptance": 0.4039236019373957,
+          "basis_circuit_indices": [
+            121,
+            122
+          ],
+          "basis_p_raw": [
+            0.0003888548704673608,
+            9.597368676031539e-05
+          ],
+          "p_raw_v": 0.0004768203868527727,
+          "align_ratio_pred": 0.9834824697194088
+        },
+        "swap": {
+          "circuit_index": 123,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.00465765377343753,
+          "sv_check_dev": 6.938893903907228e-18,
+          "acceptance": 0.018255777948605875,
+          "basis_circuit_indices": [
+            124,
+            125
+          ],
+          "basis_p_raw": [
+            0.0001304823447270824,
+            3.131263264065357e-05
+          ],
+          "p_raw_v": 8.502909304936167e-05,
+          "align_ratio_pred": 0.5255360483539805
+        }
+      },
+      "hw_native_correct": false,
+      "align_correct": true,
+      "align_margin": 0.45794642136542674,
+      "ratio_correct": true,
+      "min_p_raw": 3.131263264065357e-05
+    },
+    {
+      "verb": "رفع",
+      "pair": 7,
+      "sent": "رفع النائب الاقتراح",
+      "theta": [
+        1.016836717412195,
+        0.991717510319279,
+        -0.008313943588786926,
+        0.04218842087356631
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 126,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.0024355509668615083,
+          "sv_check_dev": 0.0,
+          "acceptance": 0.14232274353983734,
+          "basis_circuit_indices": [
+            127,
+            128
+          ],
+          "basis_p_raw": [
+            0.0002860793913618991,
+            7.023596238373479e-05
+          ],
+          "p_raw_v": 0.0003466342956348333,
+          "align_ratio_pred": 0.9728300843367201
+        },
+        "swap": {
+          "circuit_index": 129,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.00013157705024992628,
+          "sv_check_dev": 1.3552527156068805e-19,
+          "acceptance": 0.4799594129285663,
+          "basis_circuit_indices": [
+            130,
+            131
+          ],
+          "basis_p_raw": [
+            0.00033768612485513395,
+            8.100598272096751e-05
+          ],
+          "p_raw_v": 6.315164379282715e-05,
+          "align_ratio_pred": 0.1508307480607303
+        }
+      },
+      "hw_native_correct": true,
+      "align_correct": true,
+      "align_margin": 0.8219993362759905,
+      "ratio_correct": true,
+      "min_p_raw": 6.315164379282715e-05
+    },
+    {
+      "verb": "رفع",
+      "pair": 8,
+      "sent": "رفع المدعي الاتهام",
+      "theta": [
+        0.25784291646542923,
+        0.9917260375813934,
+        1.6636982026741443,
+        1.0420792745048937
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 132,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.8387018251165683,
+          "sv_check_dev": 1.1102230246251565e-16,
+          "acceptance": 0.2650047494430646,
+          "basis_circuit_indices": [
+            133,
+            134
+          ],
+          "basis_p_raw": [
+            0.20075879433120047,
+            0.049321348549929804
+          ],
+          "p_raw_v": 0.22225996702245723,
+          "align_ratio_pred": 0.8887549585578384
+        },
+        "swap": {
+          "circuit_index": 135,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.49317941672787075,
+          "sv_check_dev": 0.0,
+          "acceptance": 0.09181305846355237,
+          "basis_circuit_indices": [
+            136,
+            137
+          ],
+          "basis_p_raw": [
+            0.16749489993449487,
+            0.03898658164656065
+          ],
+          "p_raw_v": 0.045280310621056655,
+          "align_ratio_pred": 0.21929477778994724
+        }
+      },
+      "hw_native_correct": true,
+      "align_correct": true,
+      "align_margin": 0.6694601807678916,
+      "ratio_correct": true,
+      "min_p_raw": 0.03898658164656065
+    },
+    {
+      "verb": "رفع",
+      "pair": 9,
+      "sent": "رفع المدير الورقة",
+      "theta": [
+        1.016900322034994,
+        0.9917071292878357,
+        -0.008372329268666434,
+        0.04245104492065826
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 138,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.002377501787798388,
+          "sv_check_dev": 0.0,
+          "acceptance": 0.14659842688313995,
+          "basis_circuit_indices": [
+            139,
+            140
+          ],
+          "basis_p_raw": [
+            0.00028837440856185366,
+            7.115373490094522e-05
+          ],
+          "p_raw_v": 0.00034853802200309646,
+          "align_ratio_pred": 0.9694318187337131
+        },
+        "swap": {
+          "circuit_index": 141,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.01666844695380841,
+          "sv_check_dev": 3.469446951953614e-17,
+          "acceptance": 0.007802956534005909,
+          "basis_circuit_indices": [
+            142,
+            143
+          ],
+          "basis_p_raw": [
+            0.00011131514231916207,
+            2.80672707937472e-05
+          ],
+          "p_raw_v": 0.00013006316706994995,
+          "align_ratio_pred": 0.9331390106195816
+        }
+      },
+      "hw_native_correct": false,
+      "align_correct": true,
+      "align_margin": 0.036292808114130715,
+      "ratio_correct": true,
+      "min_p_raw": 2.80672707937472e-05
+    },
+    {
+      "verb": "قطع",
+      "pair": 0,
+      "sent": "قطع النجار الخشب",
+      "theta": [
+        0.5059876846944829,
+        1.0000000008222267,
+        1.317694962187516,
+        0.5062854550529725
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 144,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.975806544569837,
+          "sv_check_dev": 0.0,
+          "acceptance": 0.008530850739761233,
+          "basis_circuit_indices": [
+            145,
+            146
+          ],
+          "basis_p_raw": [
+            0.00655778965426956,
+            0.002021297990106259
+          ],
+          "p_raw_v": 0.008324459982607446,
+          "align_ratio_pred": 0.9703199603124116
+        },
+        "swap": {
+          "circuit_index": 147,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.9817950705130281,
+          "sv_check_dev": 1.1102230246251565e-16,
+          "acceptance": 0.06001774911943665,
+          "basis_circuit_indices": [
+            148,
+            149
+          ],
+          "basis_p_raw": [
+            0.04570990737952615,
+            0.014089098194642324
+          ],
+          "p_raw_v": 0.05892513022875054,
+          "align_ratio_pred": 0.9853864568979485
+        }
+      },
+      "hw_native_correct": false,
+      "align_correct": false,
+      "align_margin": 0.015066496585536271,
+      "ratio_correct": false,
+      "min_p_raw": 0.002021297990106259
+    },
+    {
+      "verb": "قطع",
+      "pair": 1,
+      "sent": "قطع الجراح الورم",
+      "theta": [
+        0.9787276499742839,
+        2.0000000010169896,
+        0.036733762692496674,
+        2.102543300125169
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 150,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.03046381662003828,
+          "sv_check_dev": 3.5388358909926865e-16,
+          "acceptance": 0.00013695423790788055,
+          "basis_circuit_indices": [
+            151,
+            152
+          ],
+          "basis_p_raw": [
+            1.0861479767577576e-05,
+            3.391127914783854e-06
+          ],
+          "p_raw_v": 4.17214878896272e-06,
+          "align_ratio_pred": 0.29272880317375444
+        },
+        "swap": {
+          "circuit_index": 153,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 1.4012009711378822e-05,
+          "sv_check_dev": 5.421010862427522e-19,
+          "acceptance": 0.004511069998639746,
+          "basis_circuit_indices": [
+            154,
+            155
+          ],
+          "basis_p_raw": [
+            6.60637115219943e-05,
+            2.062614751712857e-05
+          ],
+          "p_raw_v": 6.320915662965222e-08,
+          "align_ratio_pred": 0.0007291413013040673
+        }
+      },
+      "hw_native_correct": true,
+      "align_correct": true,
+      "align_margin": 0.2919996618724518,
+      "ratio_correct": true,
+      "min_p_raw": 6.320915662965222e-08
+    },
+    {
+      "verb": "قطع",
+      "pair": 2,
+      "sent": "قطع الحداد المعدن",
+      "theta": [
+        0.9305376966302885,
+        2.0000000004598815,
+        0.08913620662096913,
+        2.3491033770937286
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 156,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.04351454058269858,
+          "sv_check_dev": 1.1102230246251565e-16,
+          "acceptance": 0.005323252740398034,
+          "basis_circuit_indices": [
+            157,
+            158
+          ],
+          "basis_p_raw": [
+            0.00019349272230729392,
+            5.981251071327885e-05
+          ],
+          "p_raw_v": 0.00023163889740401112,
+          "align_ratio_pred": 0.9144655033052477
+        },
+        "swap": {
+          "circuit_index": 159,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 3.047096225638363e-05,
+          "sv_check_dev": 4.2351647362715017e-19,
+          "acceptance": 0.17816563619509182,
+          "basis_circuit_indices": [
+            160,
+            161
+          ],
+          "basis_p_raw": [
+            0.01116677839830229,
+            0.00345187682532743
+          ],
+          "p_raw_v": 5.428878375885144e-06,
+          "align_ratio_pred": 0.0003713664692707068
+        }
+      },
+      "hw_native_correct": true,
+      "align_correct": true,
+      "align_margin": 0.9140941368359767,
+      "ratio_correct": true,
+      "min_p_raw": 5.428878375885144e-06
+    },
+    {
+      "verb": "قطع",
+      "pair": 3,
+      "sent": "قطع المزارع الاشجار",
+      "theta": [
+        1.2760181216209237,
+        0.999999999491239,
+        0.5884847227241685,
+        0.8922937389715743
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 162,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.31064625785780936,
+          "sv_check_dev": 1.1102230246251565e-16,
+          "acceptance": 0.016381784267873248,
+          "basis_circuit_indices": [
+            163,
+            164
+          ],
+          "basis_p_raw": [
+            0.014067126544862823,
+            0.004240883440910652
+          ],
+          "p_raw_v": 0.005088939979848759,
+          "align_ratio_pred": 0.27796248657299183
+        },
+        "swap": {
+          "circuit_index": 165,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.8734915713216496,
+          "sv_check_dev": 2.220446049250313e-16,
+          "acceptance": 0.17832969461862833,
+          "basis_circuit_indices": [
+            166,
+            167
+          ],
+          "basis_p_raw": [
+            0.13468618077548955,
+            0.0406044824349903
+          ],
+          "p_raw_v": 0.1557694851657356,
+          "align_ratio_pred": 0.8886353803037175
+        }
+      },
+      "hw_native_correct": false,
+      "align_correct": false,
+      "align_margin": 0.6106728937307258,
+      "ratio_correct": false,
+      "min_p_raw": 0.004240883440910652
+    },
+    {
+      "verb": "قطع",
+      "pair": 4,
+      "sent": "قطع الرجل العلاقة",
+      "theta": [
+        1.5723777552358442,
+        1.0000000007233694,
+        2.287685354269345,
+        0.6058051644622635
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 168,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.6042086379311005,
+          "sv_check_dev": 0.0,
+          "acceptance": 0.21122344022699815,
+          "basis_circuit_indices": [
+            169,
+            170
+          ],
+          "basis_p_raw": [
+            0.21482434921309543,
+            0.06938278094137063
+          ],
+          "p_raw_v": 0.12762302711867576,
+          "align_ratio_pred": 0.44904935020213205
+        },
+        "swap": {
+          "circuit_index": 171,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.9412717755884638,
+          "sv_check_dev": 0.0,
+          "acceptance": 0.10905849171716399,
+          "basis_circuit_indices": [
+            172,
+            173
+          ],
+          "basis_p_raw": [
+            0.09301772979947748,
+            0.030042352317968705
+          ],
+          "p_raw_v": 0.10265368014161472,
+          "align_ratio_pred": 0.8341752936882003
+        }
+      },
+      "hw_native_correct": false,
+      "align_correct": false,
+      "align_margin": 0.3851259434860683,
+      "ratio_correct": false,
+      "min_p_raw": 0.030042352317968705
+    },
+    {
+      "verb": "قطع",
+      "pair": 5,
+      "sent": "قطع الطالب التعهد",
+      "theta": [
+        1.538271685081327,
+        1.000000001204716,
+        0.2969141590411039,
+        0.548689586656929
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 174,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.9843948206291244,
+          "sv_check_dev": 0.0,
+          "acceptance": 0.20310899468646332,
+          "basis_circuit_indices": [
+            175,
+            176
+          ],
+          "basis_p_raw": [
+            0.16052006622279896,
+            0.04989795711074496
+          ],
+          "p_raw_v": 0.19993944239254285,
+          "align_ratio_pred": 0.9502011245282399
+        },
+        "swap": {
+          "circuit_index": 177,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.27429516080932154,
+          "sv_check_dev": 5.551115123125783e-17,
+          "acceptance": 0.01399350233695545,
+          "basis_circuit_indices": [
+            178,
+            179
+          ],
+          "basis_p_raw": [
+            0.011002731813956671,
+            0.0034202193843430807
+          ],
+          "p_raw_v": 0.003838349973800811,
+          "align_ratio_pred": 0.2661279179987307
+        }
+      },
+      "hw_native_correct": true,
+      "align_correct": true,
+      "align_margin": 0.684073206529509,
+      "ratio_correct": true,
+      "min_p_raw": 0.0034202193843430807
+    },
+    {
+      "verb": "قطع",
+      "pair": 6,
+      "sent": "قطع السياسي الصمت",
+      "theta": [
+        0.9687680228384472,
+        1.999999999128304,
+        0.0534604671431122,
+        2.1457261556329836
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 180,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.020299603665872586,
+          "sv_check_dev": 6.938893903907228e-18,
+          "acceptance": 0.043959530166606885,
+          "basis_circuit_indices": [
+            181,
+            182
+          ],
+          "basis_p_raw": [
+            0.0008608200525325552,
+            0.0002526862592036194
+          ],
+          "p_raw_v": 0.0008923610397200899,
+          "align_ratio_pred": 0.8013973789952965
+        },
+        "swap": {
+          "circuit_index": 183,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.023571672820618627,
+          "sv_check_dev": 2.42861286636753e-17,
+          "acceptance": 0.03245438032953609,
+          "basis_circuit_indices": [
+            184,
+            185
+          ],
+          "basis_p_raw": [
+            0.0008487742613204108,
+            0.0002491503198882365
+          ],
+          "p_raw_v": 0.0007650040347237465,
+          "align_ratio_pred": 0.696772845618953
+        }
+      },
+      "hw_native_correct": false,
+      "align_correct": true,
+      "align_margin": 0.10462453337634359,
+      "ratio_correct": true,
+      "min_p_raw": 0.0002491503198882365
+    },
+    {
+      "verb": "قطع",
+      "pair": 7,
+      "sent": "قطع المواطن الصمت",
+      "theta": [
+        1.3664953669093851,
+        1.0000000014667967,
+        0.45507182624329745,
+        0.5699881167643626
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 186,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.7509253779997098,
+          "sv_check_dev": 1.1102230246251565e-16,
+          "acceptance": 0.07254703148381997,
+          "basis_circuit_indices": [
+            187,
+            188
+          ],
+          "basis_p_raw": [
+            0.04262766268119294,
+            0.013170593444516706
+          ],
+          "p_raw_v": 0.05447740703974435,
+          "align_ratio_pred": 0.9763281296284689
+        },
+        "swap": {
+          "circuit_index": 189,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.951387468450268,
+          "sv_check_dev": 1.1102230246251565e-16,
+          "acceptance": 0.0890894473602681,
+          "basis_circuit_indices": [
+            190,
+            191
+          ],
+          "basis_p_raw": [
+            0.09163190071914647,
+            0.028311345972157318
+          ],
+          "p_raw_v": 0.08475858378971889,
+          "align_ratio_pred": 0.7066557403424375
+        }
+      },
+      "hw_native_correct": false,
+      "align_correct": true,
+      "align_margin": 0.2696723892860312,
+      "ratio_correct": true,
+      "min_p_raw": 0.013170593444516706
+    },
+    {
+      "verb": "قطع",
+      "pair": 8,
+      "sent": "قطع الطالب الورقة",
+      "theta": [
+        1.449683219333153,
+        1.0000000006944654,
+        2.37297408422258,
+        0.4765133589287116
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 192,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.8661505566766279,
+          "sv_check_dev": 1.1102230246251565e-16,
+          "acceptance": 0.20680719655558472,
+          "basis_circuit_indices": [
+            193,
+            194
+          ],
+          "basis_p_raw": [
+            0.1438102662054291,
+            0.044703684913368555
+          ],
+          "p_raw_v": 0.17912616842135248,
+          "align_ratio_pred": 0.9502011249473564
+        },
+        "swap": {
+          "circuit_index": 195,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.8109713872944064,
+          "sv_check_dev": 2.220446049250313e-16,
+          "acceptance": 0.014181524675547407,
+          "basis_circuit_indices": [
+            196,
+            197
+          ],
+          "basis_p_raw": [
+            0.00964100121382332,
+            0.002996922894180546
+          ],
+          "p_raw_v": 0.01150081074007854,
+          "align_ratio_pred": 0.9100237223924167
+        }
+      },
+      "hw_native_correct": true,
+      "align_correct": true,
+      "align_margin": 0.040177402554939734,
+      "ratio_correct": true,
+      "min_p_raw": 0.002996922894180546
+    },
+    {
+      "verb": "قطع",
+      "pair": 9,
+      "sent": "قطع الطبيب الجلد",
+      "theta": [
+        1.5504902759977455,
+        1.0000000004271719,
+        0.6258316082696203,
+        -0.4767334137365783
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 198,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.734193263811055,
+          "sv_check_dev": 1.1102230246251565e-16,
+          "acceptance": 0.22101453141503727,
+          "basis_circuit_indices": [
+            199,
+            200
+          ],
+          "basis_p_raw": [
+            0.14612928006453904,
+            0.04575422247459025
+          ],
+          "p_raw_v": 0.1622673801692772,
+          "align_ratio_pred": 0.845655713086576
+        },
+        "swap": {
+          "circuit_index": 201,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.5703761496512164,
+          "sv_check_dev": 1.1102230246251565e-16,
+          "acceptance": 0.26012107169591536,
+          "basis_circuit_indices": [
+            202,
+            203
+          ],
+          "basis_p_raw": [
+            0.16533726927351247,
+            0.05176839434139743
+          ],
+          "p_raw_v": 0.14836685531706426,
+          "align_ratio_pred": 0.6833854669965185
+        }
+      },
+      "hw_native_correct": true,
+      "align_correct": true,
+      "align_margin": 0.16227024609005725,
+      "ratio_correct": true,
+      "min_p_raw": 0.04575422247459025
+    },
+    {
+      "verb": "ضرب",
+      "pair": 0,
+      "sent": "ضرب الجندي العدو",
+      "theta": [
+        1.57441962642997,
+        2.0000000011517196,
+        0.30025812806667124,
+        1.6151771550882408
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 204,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.9802816780004159,
+          "sv_check_dev": 0.0,
+          "acceptance": 0.21963296225924023,
+          "basis_circuit_indices": [
+            205,
+            206
+          ],
+          "basis_p_raw": [
+            0.17360843730901712,
+            0.062320320670214056
+          ],
+          "p_raw_v": 0.21530216878769,
+          "align_ratio_pred": 0.9125728064344029
+        },
+        "swap": {
+          "circuit_index": 207,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.6243511752826767,
+          "sv_check_dev": 2.220446049250313e-16,
+          "acceptance": 0.2795008905718111,
+          "basis_circuit_indices": [
+            208,
+            209
+          ],
+          "basis_p_raw": [
+            0.19700151730054175,
+            0.07071774807401739
+          ],
+          "p_raw_v": 0.17450670952106512,
+          "align_ratio_pred": 0.6518272387940303
+        }
+      },
+      "hw_native_correct": true,
+      "align_correct": true,
+      "align_margin": 0.2607455676403727,
+      "ratio_correct": true,
+      "min_p_raw": 0.062320320670214056
+    },
+    {
+      "verb": "ضرب",
+      "pair": 1,
+      "sent": "ضرب اللاعب الكرة",
+      "theta": [
+        1.5202074060776545,
+        1.9999999984205634,
+        0.6478757486186877,
+        0.5159988698955188
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 210,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.9309457292449888,
+          "sv_check_dev": 0.0,
+          "acceptance": 0.11490706083697723,
+          "basis_circuit_indices": [
+            211,
+            212
+          ],
+          "basis_p_raw": [
+            0.08851905290285658,
+            0.029518366316779416
+          ],
+          "p_raw_v": 0.10697223754627805,
+          "align_ratio_pred": 0.9062570009873852
+        },
+        "swap": {
+          "circuit_index": 213,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.0006393061000990225,
+          "sv_check_dev": 9.324138683375338e-18,
+          "acceptance": 0.05769130891169037,
+          "basis_circuit_indices": [
+            214,
+            215
+          ],
+          "basis_p_raw": [
+            0.04088576784082401,
+            0.013634139012817006
+          ],
+          "p_raw_v": 3.688240570994129e-05,
+          "align_ratio_pred": 0.000676494290589166
+        }
+      },
+      "hw_native_correct": true,
+      "align_correct": true,
+      "align_margin": 0.9055805066967956,
+      "ratio_correct": true,
+      "min_p_raw": 3.688240570994129e-05
+    },
+    {
+      "verb": "ضرب",
+      "pair": 2,
+      "sent": "ضرب الحداد المعدن",
+      "theta": [
+        0.30570405681167356,
+        1.0000000082753497,
+        1.553468452517253,
+        0.8009341349107626
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 216,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.6373336826855507,
+          "sv_check_dev": 2.220446049250313e-16,
+          "acceptance": 0.006331251737718407,
+          "basis_circuit_indices": [
+            217,
+            218
+          ],
+          "basis_p_raw": [
+            0.0033214997638631306,
+            0.0011740735943031415
+          ],
+          "p_raw_v": 0.004035119986009363,
+          "align_ratio_pred": 0.8975762743765511
+        },
+        "swap": {
+          "circuit_index": 219,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.004414963808086001,
+          "sv_check_dev": 4.683753385137379e-17,
+          "acceptance": 0.13664374992716707,
+          "basis_circuit_indices": [
+            220,
+            221
+          ],
+          "basis_p_raw": [
+            0.19168919517737115,
+            0.06775772609039074
+          ],
+          "p_raw_v": 0.0006032772105295903,
+          "align_ratio_pred": 0.002325243281291354
+        }
+      },
+      "hw_native_correct": true,
+      "align_correct": true,
+      "align_margin": 0.8952510310952587,
+      "ratio_correct": true,
+      "min_p_raw": 0.0006032772105295903
+    },
+    {
+      "verb": "ضرب",
+      "pair": 3,
+      "sent": "ضرب الرياضي الهدف",
+      "theta": [
+        1.3680751556656028,
+        1.0000000003209935,
+        2.4644988003453605,
+        0.5792798297182549
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 222,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.9944229431354881,
+          "sv_check_dev": 0.0,
+          "acceptance": 0.03138734418127568,
+          "basis_circuit_indices": [
+            223,
+            224
+          ],
+          "basis_p_raw": [
+            0.02771185412798641,
+            0.009277570538731107
+          ],
+          "p_raw_v": 0.031212295177950697,
+          "align_ratio_pred": 0.843816724893129
+        },
+        "swap": {
+          "circuit_index": 225,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.3451275746068862,
+          "sv_check_dev": 1.6653345369377348e-16,
+          "acceptance": 0.013601202371313265,
+          "basis_circuit_indices": [
+            226,
+            227
+          ],
+          "basis_p_raw": [
+            0.015755339864202824,
+            0.005274684142826882
+          ],
+          "p_raw_v": 0.004694149986148774,
+          "align_ratio_pred": 0.22321182251526012
+        }
+      },
+      "hw_native_correct": true,
+      "align_correct": true,
+      "align_margin": 0.6206049023778695,
+      "ratio_correct": true,
+      "min_p_raw": 0.004694149986148774
+    },
+    {
+      "verb": "ضرب",
+      "pair": 4,
+      "sent": "ضرب العامل المسمار",
+      "theta": [
+        1.581153913030597,
+        2.000000000054274,
+        0.29264515708903716,
+        1.625131997578895
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 228,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.8932112185957164,
+          "sv_check_dev": 0.0,
+          "acceptance": 0.27779836293350235,
+          "basis_circuit_indices": [
+            229,
+            230
+          ],
+          "basis_p_raw": [
+            0.1937554995697771,
+            0.06627424075257528
+          ],
+          "p_raw_v": 0.2481326142797287,
+          "align_ratio_pred": 0.9542470564025672
+        },
+        "swap": {
+          "circuit_index": 231,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.37166733127940804,
+          "sv_check_dev": 1.1102230246251565e-16,
+          "acceptance": 0.034199362633826176,
+          "basis_circuit_indices": [
+            232,
+            233
+          ],
+          "basis_p_raw": [
+            0.037675321302685645,
+            0.01288687712670678
+          ],
+          "p_raw_v": 0.012710785841570878,
+          "align_ratio_pred": 0.25138910562444894
+        }
+      },
+      "hw_native_correct": true,
+      "align_correct": true,
+      "align_margin": 0.7028579507781187,
+      "ratio_correct": true,
+      "min_p_raw": 0.012710785841570878
+    },
+    {
+      "verb": "ضرب",
+      "pair": 5,
+      "sent": "ضرب الزعيم موعدا",
+      "theta": [
+        1.7012462627244576,
+        3.2115325141187446e-09,
+        0.3521824791007374,
+        -0.039119868212010994
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 234,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.8592173597378021,
+          "sv_check_dev": 1.1102230246251565e-16,
+          "acceptance": 0.28480882487748205,
+          "basis_circuit_indices": [
+            235,
+            236
+          ],
+          "basis_p_raw": [
+            0.18544298362073144,
+            0.06362363516644393
+          ],
+          "p_raw_v": 0.24471268654125622,
+          "align_ratio_pred": 0.9825190052881413
+        },
+        "swap": {
+          "circuit_index": 237,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.014082524433858797,
+          "sv_check_dev": 3.8163916471489756e-17,
+          "acceptance": 0.12251117727401063,
+          "basis_circuit_indices": [
+            238,
+            239
+          ],
+          "basis_p_raw": [
+            0.22738541291468942,
+            0.07801366419905081
+          ],
+          "p_raw_v": 0.001725266647382066,
+          "align_ratio_pred": 0.005649220238931901
+        }
+      },
+      "hw_native_correct": true,
+      "align_correct": true,
+      "align_margin": 0.9768697850492094,
+      "ratio_correct": true,
+      "min_p_raw": 0.001725266647382066
+    },
+    {
+      "verb": "ضرب",
+      "pair": 6,
+      "sent": "ضرب الفريق رقما",
+      "theta": [
+        1.4711033705903256,
+        1.999999999517601,
+        0.35394199389373093,
+        1.479531977512368
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 240,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.6069818844236322,
+          "sv_check_dev": 0.0,
+          "acceptance": 0.12468732304968122,
+          "basis_circuit_indices": [
+            241,
+            242
+          ],
+          "basis_p_raw": [
+            0.09954830722759678,
+            0.03162828434332466
+          ],
+          "p_raw_v": 0.0756829463084337,
+          "align_ratio_pred": 0.5769546639540123
+        },
+        "swap": {
+          "circuit_index": 243,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.0009267443269037512,
+          "sv_check_dev": 2.8189256484623115e-18,
+          "acceptance": 0.10387151881552266,
+          "basis_circuit_indices": [
+            244,
+            245
+          ],
+          "basis_p_raw": [
+            0.07285730098062508,
+            0.023148072412191325
+          ],
+          "p_raw_v": 9.626234078916217e-05,
+          "align_ratio_pred": 0.0010026765938953683
+        }
+      },
+      "hw_native_correct": true,
+      "align_correct": true,
+      "align_margin": 0.5759519873601174,
+      "ratio_correct": true,
+      "min_p_raw": 9.626234078916217e-05
+    },
+    {
+      "verb": "ضرب",
+      "pair": 7,
+      "sent": "ضرب السياسي موعدا",
+      "theta": [
+        1.705810264443421,
+        1.782046455177038e-09,
+        0.3531424155409515,
+        -0.032693442525192504
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 246,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.8355390723543411,
+          "sv_check_dev": 1.1102230246251565e-16,
+          "acceptance": 0.24583770212420553,
+          "basis_circuit_indices": [
+            247,
+            248
+          ],
+          "basis_p_raw": [
+            0.18735961841217114,
+            0.062401692881454945
+          ],
+          "p_raw_v": 0.2054070055825815,
+          "align_ratio_pred": 0.8224132253257572
+        },
+        "swap": {
+          "circuit_index": 249,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.012127335883977252,
+          "sv_check_dev": 2.0816681711721685e-17,
+          "acceptance": 0.028830023252852267,
+          "basis_circuit_indices": [
+            250,
+            251
+          ],
+          "basis_p_raw": [
+            0.055521163500140844,
+            0.018491789586983276
+          ],
+          "p_raw_v": 0.00034963137553021325,
+          "align_ratio_pred": 0.004723921434652739
+        }
+      },
+      "hw_native_correct": true,
+      "align_correct": true,
+      "align_margin": 0.8176893038911052,
+      "ratio_correct": true,
+      "min_p_raw": 0.00034963137553021325
+    },
+    {
+      "verb": "ضرب",
+      "pair": 8,
+      "sent": "ضرب المعلم الطاولة",
+      "theta": [
+        0.3104509858170358,
+        1.0000000000586875,
+        1.6633849656365192,
+        1.087343804655064
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 252,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.865862715905084,
+          "sv_check_dev": 0.0,
+          "acceptance": 0.0480266179388561,
+          "basis_circuit_indices": [
+            253,
+            254
+          ],
+          "basis_p_raw": [
+            0.03115920062928194,
+            0.010930458753033351
+          ],
+          "p_raw_v": 0.04158445784427377,
+          "align_ratio_pred": 0.9879970152893707
+        },
+        "swap": {
+          "circuit_index": 255,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.6320941802223847,
+          "sv_check_dev": 3.3306690738754696e-16,
+          "acceptance": 0.11123857011730982,
+          "basis_circuit_indices": [
+            256,
+            257
+          ],
+          "basis_p_raw": [
+            0.10248986395162206,
+            0.035952823154075546
+          ],
+          "p_raw_v": 0.07031325278741125,
+          "align_ratio_pred": 0.5078870849547207
+        }
+      },
+      "hw_native_correct": true,
+      "align_correct": true,
+      "align_margin": 0.48010993033465066,
+      "ratio_correct": true,
+      "min_p_raw": 0.010930458753033351
+    },
+    {
+      "verb": "ضرب",
+      "pair": 9,
+      "sent": "ضرب اللاعب الكرة",
+      "theta": [
+        1.6819174302759787,
+        3.102745861692083e-11,
+        0.3168399200324113,
+        -0.13822905920153508
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 258,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.8409450991075937,
+          "sv_check_dev": 0.0,
+          "acceptance": 0.16946430052744024,
+          "basis_circuit_indices": [
+            259,
+            260
+          ],
+          "basis_p_raw": [
+            0.11792653627060813,
+            0.03932485320749463
+          ],
+          "p_raw_v": 0.14251017300224728,
+          "align_ratio_pred": 0.9062570033576193
+        },
+        "swap": {
+          "circuit_index": 261,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.0016072245547025363,
+          "sv_check_dev": 4.119968255444917e-18,
+          "acceptance": 0.03057154115736706,
+          "basis_circuit_indices": [
+            262,
+            263
+          ],
+          "basis_p_raw": [
+            0.05446869149354442,
+            0.018163624282767948
+          ],
+          "p_raw_v": 4.913533162321966e-05,
+          "align_ratio_pred": 0.0006764940797776987
+        }
+      },
+      "hw_native_correct": true,
+      "align_correct": true,
+      "align_margin": 0.9055805092778417,
+      "ratio_correct": true,
+      "min_p_raw": 4.913533162321966e-05
+    },
+    {
+      "verb": "حمل",
+      "pair": 0,
+      "sent": "حمل الرجل الرسالة",
+      "theta": [
+        0.42073937931906785,
+        8.211791412535251e-09,
+        1.6060028420492278,
+        1.2355593529318614
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 264,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.14960472414022413,
+          "sv_check_dev": 1.3877787807814457e-16,
+          "acceptance": 0.0058578573127348035,
+          "basis_circuit_indices": [
+            265,
+            266
+          ],
+          "basis_p_raw": [
+            0.002664181991219736,
+            0.0038107055978213963
+          ],
+          "p_raw_v": 0.0008763631273244857,
+          "align_ratio_pred": 0.13534800647469875
+        },
+        "swap": {
+          "circuit_index": 267,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.17773188960639894,
+          "sv_check_dev": 2.7755575615628914e-17,
+          "acceptance": 0.10698415003713654,
+          "basis_circuit_indices": [
+            268,
+            269
+          ],
+          "basis_p_raw": [
+            0.04801751690249129,
+            0.06868172449657498
+          ],
+          "p_raw_v": 0.01901449514403477,
+          "align_ratio_pred": 0.16293589329353522
+        }
+      },
+      "hw_native_correct": false,
+      "align_correct": false,
+      "align_margin": 0.027587886818836505,
+      "ratio_correct": false,
+      "min_p_raw": 0.0008763631273244857
+    },
+    {
+      "verb": "حمل",
+      "pair": 1,
+      "sent": "حمل الطالب الفكرة",
+      "theta": [
+        1.5222171799198776,
+        -9.489915508034722e-09,
+        0.5218022411231045,
+        -0.5002104175398112
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 270,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.7520857367729203,
+          "sv_check_dev": 1.1102230246251565e-16,
+          "acceptance": 0.08309724814433124,
+          "basis_circuit_indices": [
+            271,
+            272
+          ],
+          "basis_p_raw": [
+            0.038056703872127645,
+            0.050226620993897235
+          ],
+          "p_raw_v": 0.06249625509443155,
+          "align_ratio_pred": 0.7079055437623502
+        },
+        "swap": {
+          "circuit_index": 273,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.22578482702336367,
+          "sv_check_dev": 1.3877787807814457e-16,
+          "acceptance": 0.012692491045431615,
+          "basis_circuit_indices": [
+            274,
+            275
+          ],
+          "basis_p_raw": [
+            0.005775123446838908,
+            0.0076219143841524855
+          ],
+          "p_raw_v": 0.002865771895188368,
+          "align_ratio_pred": 0.21391086084410182
+        }
+      },
+      "hw_native_correct": true,
+      "align_correct": true,
+      "align_margin": 0.4939946829182482,
+      "ratio_correct": true,
+      "min_p_raw": 0.002865771895188368
+    },
+    {
+      "verb": "حمل",
+      "pair": 2,
+      "sent": "حمل الجندي الخبر",
+      "theta": [
+        1.4035944188421383,
+        1.0000000039639736,
+        0.5697874034133343,
+        -0.10033098220583093
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 276,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.7730490579617603,
+          "sv_check_dev": 1.1102230246251565e-16,
+          "acceptance": 0.04818165695990729,
+          "basis_circuit_indices": [
+            277,
+            278
+          ],
+          "basis_p_raw": [
+            0.023913110500455824,
+            0.032481823361506346
+          ],
+          "p_raw_v": 0.037246784523893024,
+          "align_ratio_pred": 0.6604633071307778
+        },
+        "swap": {
+          "circuit_index": 279,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.607064911143567,
+          "sv_check_dev": 3.3306690738754696e-16,
+          "acceptance": 0.27945694354061734,
+          "basis_circuit_indices": [
+            280,
+            281
+          ],
+          "basis_p_raw": [
+            0.10641065103953086,
+            0.1445404580607422
+          ],
+          "p_raw_v": 0.1696485045989376,
+          "align_ratio_pred": 0.6760221351767399
+        }
+      },
+      "hw_native_correct": true,
+      "align_correct": false,
+      "align_margin": 0.015558828045962758,
+      "ratio_correct": false,
+      "min_p_raw": 0.023913110500455824
+    },
+    {
+      "verb": "حمل",
+      "pair": 3,
+      "sent": "حمل المسافر الرسالة",
+      "theta": [
+        0.47787012091922576,
+        -4.1577112188308416e-09,
+        1.5618583485268371,
+        1.455121008823356
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 282,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.00018960544583199963,
+          "sv_check_dev": 1.1384122811097797e-18,
+          "acceptance": 0.00587368931972895,
+          "basis_circuit_indices": [
+            283,
+            284
+          ],
+          "basis_p_raw": [
+            0.002647370043257005,
+            0.0034251751918096917
+          ],
+          "p_raw_v": 1.1136834821458688e-06,
+          "align_ratio_pred": 0.00018339649011007108
+        },
+        "swap": {
+          "circuit_index": 285,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.17714743634465602,
+          "sv_check_dev": 2.7755575615628914e-17,
+          "acceptance": 0.1745014607986788,
+          "basis_circuit_indices": [
+            286,
+            287
+          ],
+          "basis_p_raw": [
+            0.07418950071714144,
+            0.09598659745802077
+          ],
+          "p_raw_v": 0.03091248641888343,
+          "align_ratio_pred": 0.18164998933672352
+        }
+      },
+      "hw_native_correct": false,
+      "align_correct": false,
+      "align_margin": 0.1814665928466134,
+      "ratio_correct": false,
+      "min_p_raw": 1.1136834821458688e-06
+    },
+    {
+      "verb": "حمل",
+      "pair": 4,
+      "sent": "حمل التاجر الخبر",
+      "theta": [
+        0.5614267355848226,
+        0.999999997327186,
+        1.4722477858633911,
+        0.34355744326113424
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 288,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.7984533923040499,
+          "sv_check_dev": 1.1102230246251565e-16,
+          "acceptance": 0.04513091562794401,
+          "basis_circuit_indices": [
+            289,
+            290
+          ],
+          "basis_p_raw": [
+            0.023921228498383962,
+            0.029922700865466306
+          ],
+          "p_raw_v": 0.03603493268091976,
+          "align_ratio_pred": 0.6692478262017943
+        },
+        "swap": {
+          "circuit_index": 291,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.5641397689818566,
+          "sv_check_dev": 4.440892098500626e-16,
+          "acceptance": 0.13167456266260497,
+          "basis_circuit_indices": [
+            292,
+            293
+          ],
+          "basis_p_raw": [
+            0.05024851341090924,
+            0.06285510090182395
+          ],
+          "p_raw_v": 0.07428285736126891,
+          "align_ratio_pred": 0.6567682015525667
+        }
+      },
+      "hw_native_correct": true,
+      "align_correct": true,
+      "align_margin": 0.01247962464922725,
+      "ratio_correct": true,
+      "min_p_raw": 0.023921228498383962
+    },
+    {
+      "verb": "حمل",
+      "pair": 5,
+      "sent": "حمل البريدي الرسالة",
+      "theta": [
+        0.9852049917412962,
+        1.0000000086888656,
+        0.014638872829358657,
+        2.5363867947287604
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 294,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 3.1495036593444076e-07,
+          "sv_check_dev": 4.182225177068108e-21,
+          "acceptance": 0.0060790319197774395,
+          "basis_circuit_indices": [
+            295,
+            296
+          ],
+          "basis_p_raw": [
+            5.80531966642115e-06,
+            6.995001396081615e-06
+          ],
+          "p_raw_v": 1.914593327661025e-09,
+          "align_ratio_pred": 0.00014957385196138798
+        },
+        "swap": {
+          "circuit_index": 297,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.00036859062617567367,
+          "sv_check_dev": 2.168404344971009e-19,
+          "acceptance": 0.22199543965798665,
+          "basis_circuit_indices": [
+            298,
+            299
+          ],
+          "basis_p_raw": [
+            0.00018984117646113498,
+            0.00022874524550248505
+          ],
+          "p_raw_v": 8.182543811168123e-05,
+          "align_ratio_pred": 0.19548039262198716
+        }
+      },
+      "hw_native_correct": false,
+      "align_correct": false,
+      "align_margin": 0.19533081877002573,
+      "ratio_correct": false,
+      "min_p_raw": 1.914593327661025e-09
+    },
+    {
+      "verb": "حمل",
+      "pair": 6,
+      "sent": "حمل المعلم الفكرة",
+      "theta": [
+        1.4180510095839791,
+        0.9999999935377595,
+        0.5734814724552769,
+        0.0021183349593650283
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 300,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.8488508616514949,
+          "sv_check_dev": 0.0,
+          "acceptance": 0.09230589935667036,
+          "basis_circuit_indices": [
+            301,
+            302
+          ],
+          "basis_p_raw": [
+            0.041477846870491004,
+            0.05239666854024075
+          ],
+          "p_raw_v": 0.0783539422044258,
+          "align_ratio_pred": 0.834666808788324
+        },
+        "swap": {
+          "circuit_index": 303,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.8802330746374178,
+          "sv_check_dev": 2.220446049250313e-16,
+          "acceptance": 0.20172860264214132,
+          "basis_circuit_indices": [
+            304,
+            305
+          ],
+          "basis_p_raw": [
+            0.18778613061291385,
+            7.645347508843897e-17
+          ],
+          "p_raw_v": 0.17756818814600195,
+          "align_ratio_pred": 0.9455873421878298
+        }
+      },
+      "hw_native_correct": false,
+      "align_correct": false,
+      "align_margin": 0.1109205333995058,
+      "ratio_correct": false,
+      "min_p_raw": 7.645347508843897e-17
+    },
+    {
+      "verb": "حمل",
+      "pair": 7,
+      "sent": "حمل الطفل الحقيبة",
+      "theta": [
+        1.6068532346724593,
+        1.0000000069841266,
+        0.4196309151338681,
+        0.059909584668643115
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 306,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.24742863881576657,
+          "sv_check_dev": 2.498001805406602e-16,
+          "acceptance": 0.16811992218395722,
+          "basis_circuit_indices": [
+            307,
+            308
+          ],
+          "basis_p_raw": [
+            0.0946265014200521,
+            0.1360212843420162
+          ],
+          "p_raw_v": 0.04159768350378909,
+          "align_ratio_pred": 0.1803515406243719
+        },
+        "swap": {
+          "circuit_index": 309,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.6853853073116221,
+          "sv_check_dev": 2.220446049250313e-16,
+          "acceptance": 0.12954421945326008,
+          "basis_circuit_indices": [
+            310,
+            311
+          ],
+          "basis_p_raw": [
+            0.06410571094537082,
+            0.09214903894232922
+          ],
+          "p_raw_v": 0.08878770466041684,
+          "align_ratio_pred": 0.5682240362243604
+        }
+      },
+      "hw_native_correct": false,
+      "align_correct": false,
+      "align_margin": 0.3878724955999884,
+      "ratio_correct": false,
+      "min_p_raw": 0.04159768350378909
+    },
+    {
+      "verb": "حمل",
+      "pair": 8,
+      "sent": "حمل الفلاح المحصول",
+      "theta": [
+        1.5363766677113253,
+        0.9999999924503622,
+        0.49577707878795046,
+        0.4541453627010231
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 312,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.7211465790629846,
+          "sv_check_dev": 0.0,
+          "acceptance": 0.009318242540261085,
+          "basis_circuit_indices": [
+            313,
+            314
+          ],
+          "basis_p_raw": [
+            0.004681860425244541,
+            0.005733421120935604
+          ],
+          "p_raw_v": 0.006719818730788457,
+          "align_ratio_pred": 0.6451883898667131
+        },
+        "swap": {
+          "circuit_index": 315,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.012107387206608795,
+          "sv_check_dev": 2.0816681711721685e-17,
+          "acceptance": 0.055013142293154474,
+          "basis_circuit_indices": [
+            316,
+            317
+          ],
+          "basis_p_raw": [
+            0.024504611948271936,
+            0.030008425612895854
+          ],
+          "p_raw_v": 0.0006660654151954889,
+          "align_ratio_pred": 0.012218460848895323
+        }
+      },
+      "hw_native_correct": true,
+      "align_correct": true,
+      "align_margin": 0.632969929017818,
+      "ratio_correct": true,
+      "min_p_raw": 0.0006660654151954889
+    },
+    {
+      "verb": "حمل",
+      "pair": 9,
+      "sent": "حمل العامل الصندوق",
+      "theta": [
+        0.9989809891874193,
+        0.999999989189452,
+        0.0009573587275877458,
+        2.9684251159933566
+      ],
+      "roles": {
+        "orig": {
+          "circuit_index": 318,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 8.879666545646794e-06,
+          "sv_check_dev": 5.793705359219414e-19,
+          "acceptance": 0.03212505267252767,
+          "basis_circuit_indices": [
+            319,
+            320
+          ],
+          "basis_p_raw": [
+            1.343908922644646e-07,
+            1.5235135466321674e-07
+          ],
+          "p_raw_v": 2.852597554934037e-07,
+          "align_ratio_pred": 0.994829881365017
+        },
+        "swap": {
+          "circuit_index": 321,
+          "n_qubits": 4,
+          "s_qubit": 0,
+          "post": [
+            [
+              1,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "clbit_order": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "p_predicted": 0.00014232742619780273,
+          "sv_check_dev": 5.339695699491109e-18,
+          "acceptance": 0.0012535289852593405,
+          "basis_circuit_indices": [
+            322,
+            323
+          ],
+          "basis_p_raw": [
+            1.9829167387164184e-07,
+            2.2479205823540972e-07
+          ],
+          "p_raw_v": 1.7841155413631203e-07,
+          "align_ratio_pred": 0.4216932502882647
+        }
+      },
+      "hw_native_correct": false,
+      "align_correct": true,
+      "align_margin": 0.5731366310767522,
+      "ratio_correct": true,
+      "min_p_raw": 1.343908922644646e-07
+    }
+  ],
+  "S_OUT": 0,
+  "n_pairs": 54,
+  "hw_native_correct": 32,
+  "agreement_with_exp34a": 44
+}
