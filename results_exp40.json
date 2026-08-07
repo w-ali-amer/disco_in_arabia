@@ -1,0 +1,83 @@
+{
+ "experiment": "exp40 mini-Duneau calibration harness",
+ "spec": "doc 22 SS9 (frozen); target Duneau et al. arXiv:2409.08777",
+ "smoke": false,
+ "torch_version": "2.7.1+cu126",
+ "python_version": "3.10.13",
+ "dataset": {
+  "path": "duneau_mini_data.json",
+  "seed": 40,
+  "sha256": "4d1f22187b76f538991cf041659c20e79818c5dfdbf3e7c686368a597d6a8d4e",
+  "sizes_full": {
+   "train": 406,
+   "validA": 98,
+   "valid_comp": 304
+  },
+  "sizes_used": {
+   "train": 406,
+   "validA": 98,
+   "valid_comp": 304
+  }
+ },
+ "config": {
+  "optimizer": "Adam (full autodiff, no SPSA)",
+  "lr": 0.005,
+  "batch_size": 8,
+  "max_epochs": 30,
+  "n_seeds": 5,
+  "ansatz": "Sim-et-al Circuit 4, 3 layers; follows on 3 wires (follower, followee, ancilla); question effects on 2 wires",
+  "model_selection": "best validA accuracy only (never valid_comp)",
+  "dtype": "torch.complex64"
+ },
+ "per_seed": [
+  {
+   "seed": 0,
+   "train_acc": 0.49014778325123154,
+   "validA_acc": 0.5102040816326531,
+   "comp_acc": 0.5164473684210527,
+   "best_epoch": 1,
+   "epochs_run": 30,
+   "mean_grad_norm_last_epoch": 0.1888039452730954
+  },
+  {
+   "seed": 1,
+   "train_acc": 0.6403940886699507,
+   "validA_acc": 0.5714285714285714,
+   "comp_acc": 0.4901315789473684,
+   "best_epoch": 20,
+   "epochs_run": 30,
+   "mean_grad_norm_last_epoch": 0.2105362017168372
+  },
+  {
+   "seed": 2,
+   "train_acc": 0.6600985221674877,
+   "validA_acc": 0.6020408163265306,
+   "comp_acc": 0.45394736842105265,
+   "best_epoch": 24,
+   "epochs_run": 30,
+   "mean_grad_norm_last_epoch": 0.19397784394839687
+  },
+  {
+   "seed": 3,
+   "train_acc": 0.6650246305418719,
+   "validA_acc": 0.6224489795918368,
+   "comp_acc": 0.5263157894736842,
+   "best_epoch": 25,
+   "epochs_run": 30,
+   "mean_grad_norm_last_epoch": 0.21871746837798284
+  },
+  {
+   "seed": 4,
+   "train_acc": 0.5665024630541872,
+   "validA_acc": 0.5102040816326531,
+   "comp_acc": 0.5,
+   "best_epoch": 2,
+   "epochs_run": 30,
+   "mean_grad_norm_last_epoch": 0.1672071301216517
+  }
+ ],
+ "harness_calibrated": false,
+ "verdict_rule": ">=1 of 5 seeds: 100% train AND 100% validA AND >=95% valid_comp",
+ "git_untracked_note": "68 untracked paths in repo at run time; exp40 file git states: ['?? duneau_task_gen.py', '?? exp40_mini_duneau.py', '?? torch_sv_sim.py']",
+ "wall_time_sec": 2000.9
+}

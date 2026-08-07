@@ -1,0 +1,89 @@
+{
+ "experiment": "exp40 mini-Duneau calibration harness",
+ "spec": "doc 22 SS9 (frozen); target Duneau et al. arXiv:2409.08777",
+ "smoke": false,
+ "torch_version": "2.7.1+cu126",
+ "python_version": "3.10.13",
+ "dataset": {
+  "path": "duneau_mini_data_b.json",
+  "seed": 40,
+  "sha256": "f22eeea3cc9f14a084bffd05043fda226c274fafcd36f66cac696773bdb0fde3",
+  "sizes_full": {
+   "train": 406,
+   "validA": 98,
+   "valid_comp": 304
+  },
+  "sizes_used": {
+   "train": 406,
+   "validA": 98,
+   "valid_comp": 304
+  }
+ },
+ "config": {
+  "optimizer": "Adam (full autodiff, no SPSA)",
+  "lr": 0.005,
+  "batch_size": 1,
+  "max_epochs": 30,
+  "n_seeds": 5,
+  "ansatz": "Sim-et-al Circuit 4, 3 layers; follows on 3 wires (follower, followee, ancilla); question effects on 2 wires",
+  "model_selection": "best validA accuracy only (never valid_comp)",
+  "dtype": "torch.complex64"
+ },
+ "harness_fixes": [
+  "generator v1.1: walk events restricted to the introduction block. v1.0 emitted mid-story re-walks whose overwrite semantics (direction := d) is not realizable by any unitary verb, making a fraction of stories intrinsically unlearnable -- diagnosed via the failed 2-actor sanity (train plateau ~0.81 in both readout modes). Matches the paper's dynamics (post-introduction events are turns/follows/goes-opposite).",
+  "readout: loss logits changed from raw p to log(p+1e-12); softmax(log p) = p/(p_pos+p_neg), i.e. cross-entropy on the normalized two-outcome probability (Duneau-style normalization). Raw-p logits bound the logit gap to <=1 and gave ~6x smaller CE gradient norms. Prediction rule (argmax of the two effect values) unchanged.",
+  "batch size default 8 -> 1 (config parity with the paper; also 8x more optimizer steps per epoch).",
+  "torch_sv_sim.py public API unchanged."
+ ],
+ "per_seed": [
+  {
+   "seed": 0,
+   "train_acc": 1.0,
+   "validA_acc": 1.0,
+   "comp_acc": 1.0,
+   "best_epoch": 11,
+   "epochs_run": 11,
+   "mean_grad_norm_last_epoch": 0.4316354275302554
+  },
+  {
+   "seed": 1,
+   "train_acc": 0.7118226600985221,
+   "validA_acc": 0.7142857142857143,
+   "comp_acc": 0.555921052631579,
+   "best_epoch": 12,
+   "epochs_run": 30,
+   "mean_grad_norm_last_epoch": 1.1124542191519167
+  },
+  {
+   "seed": 2,
+   "train_acc": 1.0,
+   "validA_acc": 1.0,
+   "comp_acc": 1.0,
+   "best_epoch": 5,
+   "epochs_run": 5,
+   "mean_grad_norm_last_epoch": 0.9868915540121642
+  },
+  {
+   "seed": 3,
+   "train_acc": 1.0,
+   "validA_acc": 1.0,
+   "comp_acc": 1.0,
+   "best_epoch": 9,
+   "epochs_run": 9,
+   "mean_grad_norm_last_epoch": 0.7841901776545673
+  },
+  {
+   "seed": 4,
+   "train_acc": 0.8399014778325123,
+   "validA_acc": 0.8367346938775511,
+   "comp_acc": 0.7894736842105263,
+   "best_epoch": 30,
+   "epochs_run": 30,
+   "mean_grad_norm_last_epoch": 1.3181417400167865
+  }
+ ],
+ "harness_calibrated": true,
+ "verdict_rule": ">=1 of 5 seeds: 100% train AND 100% validA AND >=95% valid_comp",
+ "git_untracked_note": "68 untracked paths in repo at run time; exp40 file git states: ['?? duneau_task_gen.py', '?? exp40_mini_duneau.py', '?? torch_sv_sim.py']",
+ "wall_time_sec": 1745.0
+}
