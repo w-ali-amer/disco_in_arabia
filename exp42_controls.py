@@ -77,18 +77,45 @@ def c1_permutation_test(models, compiled_union, verbs, n_perm=1000,
 
 
 # ----------------------------------------------------------------- C2
-C2_VERBSET_A_SIZE = 8                                     # fixed split
+def c2_verb_split(verb_inventory):
+    """Deterministic swap-balanced disjoint split, fixed BEFORE any C2
+    training. FLAGGED CHANGE from the earlier alphabetical scaffold split
+    (first 8 sorted): that split left verbset B with a single
+    swap-capable verb, which is generator-infeasible (Q1 bridge questions
+    draw two verbs from the swap pool). Doc 22 SS6 pre-registers only
+    disjointness and the <= chance + 5pp criterion; the split rule is
+    implementation scaffolding. Rule: sort swap verbs and non-swap verbs
+    separately, alternate A/B."""
+    swap = sorted(v for v, c in verb_inventory.items() if c["swap"])
+    nons = sorted(v for v, c in verb_inventory.items() if not c["swap"])
+    va = sorted(swap[0::2] + nons[0::2])
+    vb = sorted(swap[1::2] + nons[1::2])
+    return va, vb
 
 
-def c2_verb_split(verbs):
-    vs = sorted(verbs)
-    return vs[:C2_VERBSET_A_SIZE], vs[C2_VERBSET_A_SIZE:]
+def c2_bijection(verb_inventory):
+    """Fixed kind-matched bijection: B swap verbs -> A swap blocks, B
+    non-swap verbs -> A non-swap blocks (so borrowed blocks are at least
+    type-applicable; any residual skill is what C2 measures)."""
+    va, vb = c2_verb_split(verb_inventory)
+    swap_a = [v for v in va if verb_inventory[v]["swap"]]
+    non_a = [v for v in va if not verb_inventory[v]["swap"]]
+    vmap = {}
+    i = j = 0
+    for b in vb:
+        if verb_inventory[b]["swap"]:
+            vmap[b] = swap_a[i % len(swap_a)]
+            i += 1
+        else:
+            vmap[b] = non_a[j % len(non_a)]
+            j += 1
+    return vmap
 
 
-def c2_scaffold_report(items, verbs):
+def c2_scaffold_report(items, verb_inventory):
     """How feasible is C2 on the frozen dataset? (Answer: it is not --
-    this report is the evidence for the dedicated generator run.)"""
-    va, vb = c2_verb_split(verbs)
+    this report is the evidence for the dedicated generator runs.)"""
+    va, vb = c2_verb_split(verb_inventory)
     va_set = set(va)
 
     def qverbs(q):                                        # Q0/Q2 vs Q1
@@ -101,23 +128,23 @@ def c2_scaffold_report(items, verbs):
         "control": "C2 informative-null scaffold",
         "verbset_A": va, "verbset_B": vb,
         "n_train_stories_verbset_A_only": n_a_only,
-        "note": "if n_train_stories_verbset_A_only is too small to train "
-                "on, C2 requires a dedicated exp41-generator run with "
-                "verb inventory restricted to verbset_A (pre-training "
-                "generator work is allowed; the frozen exp42 dataset is "
-                "not touched). Evaluation: verbset_B stories with the "
-                "fixed bijection B[i]->A[i]; pass = acc <= 0.55.",
+        "note": "C2 uses dedicated exp41-generator runs with restricted "
+                "verb inventories (exp42_c2_datagen.py): train on the "
+                "A-inventory dataset, evaluate on the B-inventory "
+                "dataset's test stories via the fixed kind-matched "
+                "bijection (c2_bijection); pass = acc <= 0.55. The frozen "
+                "main dataset is untouched.",
     }
 
 
-def c2_eval_disjoint(model, compiled_b_stories, verbs):
-    """Evaluate a model trained on verbset-A stories on verbset-B stories
-    via the fixed bijection B[i] -> A[i]. Pass = acc <= chance + 5pp."""
-    va, vb = c2_verb_split(verbs)
-    vmap = {b: va[i % len(va)] for i, b in enumerate(vb)}
+def c2_eval_disjoint(model, compiled_b_stories, verb_inventory):
+    """Evaluate a model whose blocks were trained on verbset-A stories on
+    verbset-B stories via the fixed bijection. Pass = acc <= chance+5pp."""
+    vmap = c2_bijection(verb_inventory)
     acc = _accuracy(model, compiled_b_stories, vmap)
     return {"control": "C2 informative-null", "verb_map": vmap,
-            "accuracy": acc, "passed": bool(acc <= 0.55)}
+            "accuracy": acc, "n_items": len(compiled_b_stories),
+            "passed": bool(acc <= 0.55)}
 
 
 # ----------------------------------------------------------------- C3

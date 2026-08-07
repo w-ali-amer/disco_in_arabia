@@ -213,7 +213,7 @@ def main():
     check_name_augmentation(compiled, vocab, meta)
     check_autodiff(compiled, verbs, vocab)
     print("[selftest] C2 scaffold: %s"
-          % ctl.c2_scaffold_report(items, verbs))
+          % ctl.c2_scaffold_report(items, meta["verb_inventory"]))
     print("[selftest] ALL CHECKS PASSED (mechanical only; training remains "
           "gated on results_exp40b.json harness_calibrated=true)")
 

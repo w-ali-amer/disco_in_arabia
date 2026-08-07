@@ -267,6 +267,8 @@ def main():
     ap.add_argument("--epochs", type=int, default=30)
     ap.add_argument("--lr", type=float, default=0.005)
     ap.add_argument("--batch", type=int, default=1)      # exp40b parity
+    ap.add_argument("--fresh", action="store_true",
+                    help="ignore per-arm checkpoints and retrain")
     args = ap.parse_args()
 
     check_gate(args.smoke)
@@ -308,11 +310,33 @@ def main():
     results_per_arm, models_per_arm = {}, {}
     smoke_report = {}
     for arm in arms:
-        details, models = [], []
-        for seed in range(n_seeds):
-            m, d = train_seed(arm, seed, data, meta, vocab, cfg)
-            models.append(m)
-            details.append(d)
+        # Per-arm checkpointing (mechanical robustness only, full runs):
+        # a crash in a later arm must not lose finished arms, and "rerun
+        # THAT arm" = delete its two checkpoint files and relaunch.
+        ck_json, ck_pt = "exp42_ckpt_%s.json" % arm, "exp42_ckpt_%s.pt" % arm
+        if (not args.smoke and not args.fresh
+                and os.path.exists(ck_json) and os.path.exists(ck_pt)):
+            with open(ck_json, encoding="utf-8") as f:
+                details = json.load(f)
+            states = torch.load(ck_pt, weights_only=True)
+            models = []
+            for d, st in zip(details, states):
+                m = make_model(arm, verbs, vocab, d["seed"])
+                m.load_state_dict(st)
+                models.append(m)
+            print("[ckpt] %s: loaded %d seeds from checkpoint"
+                  % (arm, len(models)), flush=True)
+        else:
+            details, models = [], []
+            for seed in range(n_seeds):
+                m, d = train_seed(arm, seed, data, meta, vocab, cfg)
+                models.append(m)
+                details.append(d)
+            if not args.smoke:
+                with open(ck_json, "w", encoding="utf-8") as f:
+                    json.dump(details, f, ensure_ascii=False)
+                torch.save([m.state_dict() for m in models], ck_pt)
+                print("[ckpt] %s: saved" % arm, flush=True)
         results_per_arm[arm] = details
         models_per_arm[arm] = models
         if args.smoke:
@@ -369,7 +393,8 @@ def main():
     if tier_s:
         verdicts["tier_s_passed"] = bool(all(tier_s))
 
-    controls = {"C2_scaffold": ctl.c2_scaffold_report(items, verbs)}
+    controls = {"C2_scaffold": ctl.c2_scaffold_report(
+        items, meta["verb_inventory"])}
     if "A2" in models_per_arm:
         probe_item = next(it for it in by_split["test_a"]
                           if "SVO" in it["order_flags"]
