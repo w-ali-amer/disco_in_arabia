@@ -1,0 +1,125 @@
+{
+ "experiment": "exp43b_b1_init_audit",
+ "note": "training-free witnesses for the exp43b Phase-1 write-up; carries NO pre-registered verdicts (none exist for this audit). Motivation and the Lemma-1 argument are in the module docstring and in qnlp_private_docs/24.",
+ "rung": "L1",
+ "dataset_sha256": "88cd70ad530356911c17f18d0b42de3edf3c956324513a1455c9548aaef15534",
+ "embeddings_sha256": "00c1ecffcaf05b38df082f8a3cbed1d013bddb3e39bc00adf1c2513b4ea674ac",
+ "n_twin_pairs_audited": 200,
+ "n_pairs_with_opposite_answers": 200,
+ "verbs": [
+  "حمل",
+  "رفع",
+  "سأل",
+  "ساعد",
+  "ضرب",
+  "عالج"
+ ],
+ "torch_version": "2.7.1+cu126",
+ "arms": {
+  "B1": {
+   "0": {
+    "rel_commutator_with_SWAP_per_verb": {
+     "حمل": 0.536663,
+     "رفع": 0.253843,
+     "سأل": 0.294898,
+     "ساعد": 0.27276,
+     "ضرب": 0.245401,
+     "عالج": 0.505975
+    },
+    "rel_commutator_max": 0.536663,
+    "rel_commutator_mean": 0.35159,
+    "twin_value_L1_gap": {
+     "min": 0.00056198,
+     "p25": 0.02101237,
+     "median": 0.05202809,
+     "p75": 0.1344482,
+     "max": 1.07320833,
+     "n": 200
+    },
+    "frac_twin_pairs_predicting_identically": 0.86,
+    "init_accuracy_on_audited_items": 0.54,
+    "grad_global_norm_at_init": 0.8306185139498595,
+    "grad_norm_dress_only_at_init": 0.6406199917364903,
+    "grad_frac_in_dress": 0.5948367073330572
+   },
+   "1": {
+    "rel_commutator_with_SWAP_per_verb": {
+     "حمل": 0.206501,
+     "رفع": 0.376536,
+     "سأل": 0.211292,
+     "ساعد": 0.292658,
+     "ضرب": 0.384641,
+     "عالج": 0.277874
+    },
+    "rel_commutator_max": 0.384641,
+    "rel_commutator_mean": 0.291584,
+    "twin_value_L1_gap": {
+     "min": 0.00013557,
+     "p25": 0.00950256,
+     "median": 0.02288213,
+     "p75": 0.05822855,
+     "max": 1.48186553,
+     "n": 200
+    },
+    "frac_twin_pairs_predicting_identically": 0.865,
+    "init_accuracy_on_audited_items": 0.4825,
+    "grad_global_norm_at_init": 0.9102313244478318,
+    "grad_norm_dress_only_at_init": 0.6375717142617404,
+    "grad_frac_in_dress": 0.49063048422832145
+   }
+  },
+  "A3": {
+   "0": {
+    "rel_commutator_with_SWAP_per_verb": {
+     "حمل": 1.212536,
+     "رفع": 0.976271,
+     "سأل": 1.070138,
+     "ساعد": 1.015098,
+     "ضرب": 1.301235,
+     "عالج": 1.282253
+    },
+    "rel_commutator_max": 1.301235,
+    "rel_commutator_mean": 1.142922,
+    "twin_value_L1_gap": {
+     "min": 0.00255263,
+     "p25": 0.12554368,
+     "median": 0.24752608,
+     "p75": 0.46889457,
+     "max": 1.36898446,
+     "n": 200
+    },
+    "frac_twin_pairs_predicting_identically": 0.54,
+    "init_accuracy_on_audited_items": 0.465,
+    "grad_global_norm_at_init": 0.288721870192271,
+    "grad_norm_dress_only_at_init": 0.0,
+    "grad_frac_in_dress": 0.0
+   },
+   "1": {
+    "rel_commutator_with_SWAP_per_verb": {
+     "حمل": 1.391182,
+     "رفع": 1.026937,
+     "سأل": 1.233401,
+     "ساعد": 1.392702,
+     "ضرب": 1.379766,
+     "عالج": 0.931652
+    },
+    "rel_commutator_max": 1.392702,
+    "rel_commutator_mean": 1.22594,
+    "twin_value_L1_gap": {
+     "min": 0.00926664,
+     "p25": 0.17633727,
+     "median": 0.3643032,
+     "p75": 0.60988855,
+     "max": 1.54387999,
+     "n": 200
+    },
+    "frac_twin_pairs_predicting_identically": 0.5,
+    "init_accuracy_on_audited_items": 0.54,
+    "grad_global_norm_at_init": 0.3980989613254057,
+    "grad_norm_dress_only_at_init": 0.0,
+    "grad_frac_in_dress": 0.0
+   }
+  }
+ },
+ "wall_time_sec": 25.1
+}
