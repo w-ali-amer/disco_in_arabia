@@ -1,0 +1,104 @@
+{
+ "experiment": "exp43b rung validation",
+ "rung": "L2",
+ "dataset_sha256": "95e2c3407cb9052c7c2a2f4a1a4b8471e53225fc784a005ce8dca128ba9e38c7",
+ "n_train": 1200,
+ "n_val": 300,
+ "n_test": 300,
+ "note_n_test": "rung size fixed by doc 23 (300 < the doc-22 main-dataset 500 minimum; CI bounds recorded at n=300)",
+ "V1_bag_of_embeddings": {
+  "test_accuracy": 0.5,
+  "ci95": [
+   0.4434196736194167,
+   0.5565803263805833
+  ],
+  "n_test": 300,
+  "train_accuracy": 0.5,
+  "best_val_accuracy": 0.5,
+  "per_split_accuracy": {
+   "test_a": 0.47,
+   "test_b": 0.52,
+   "test_c": 0.51
+  },
+  "passed": true,
+  "per_split_note": "single rung test split round-robined over test_a/b/c; thirds are arbitrary partitions"
+ },
+ "V2_ngram_logistic": {
+  "test_accuracy": 0.5133333333333333,
+  "ci95": [
+   0.4567731279798374,
+   0.5698935386868292
+  ],
+  "n_test": 300,
+  "selected_C": 10.0,
+  "best_val_accuracy": 0.5066666666666667,
+  "n_features": 1200,
+  "per_split_accuracy": {
+   "test_a": 0.5,
+   "test_b": 0.57,
+   "test_c": 0.47
+  },
+  "passed": true,
+  "per_split_note": "single rung test split round-robined over test_a/b/c; thirds are arbitrary partitions"
+ },
+ "V3_balance_audit": {
+  "n_yes": 900,
+  "n_no": 900,
+  "classes_balanced_50_50": true,
+  "min_p": 1.0,
+  "n_tests": 55,
+  "verb_min_p": 1.0,
+  "referent_min_p": 1.0,
+  "template_min_p": 1.0,
+  "pro_drop_min_p": 1.0,
+  "passed": true
+ },
+ "V4_dedup": {
+  "n_verbatim_duplicates": 0,
+  "n_near_dup_groups": 0,
+  "near_dup_groups_sample": [],
+  "passed": true
+ },
+ "V5_single_sentence_oracle": {
+  "mode": "two_hop_subset",
+  "note": "L2 mixes one-hop items, which elevate full-test V5 by design; the pass criterion applies to the two-hop subset (n=150).",
+  "full_test": {
+   "test_accuracy_best_sentence": 0.5,
+   "ci95_best_sentence": [
+    0.4434196736194167,
+    0.5565803263805833
+   ],
+   "test_accuracy_max_yes": 0.5,
+   "ci95_max_yes": [
+    0.4434196736194167,
+    0.5565803263805833
+   ],
+   "n_test": 300,
+   "sentence_level_val_accuracy": 0.5,
+   "passed": true
+  },
+  "two_hop_subset": {
+   "test_accuracy_best_sentence": 0.5,
+   "ci95_best_sentence": [
+    0.41998333506908286,
+    0.5800166649309172
+   ],
+   "test_accuracy_max_yes": 0.5,
+   "ci95_max_yes": [
+    0.41998333506908286,
+    0.5800166649309172
+   ],
+   "n_test": 150,
+   "sentence_level_val_accuracy": 0.5,
+   "passed": true
+  },
+  "gated": true,
+  "passed": true
+ },
+ "v1_passed": true,
+ "v2_passed": true,
+ "v3_passed": true,
+ "v4_passed": true,
+ "all_passed_v1_to_v4": true,
+ "all_passed": true
+}

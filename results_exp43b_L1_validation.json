@@ -1,0 +1,89 @@
+{
+ "experiment": "exp43b rung validation",
+ "rung": "L1",
+ "dataset_sha256": "88cd70ad530356911c17f18d0b42de3edf3c956324513a1455c9548aaef15534",
+ "n_train": 1200,
+ "n_val": 300,
+ "n_test": 300,
+ "note_n_test": "rung size fixed by doc 23 (300 < the doc-22 main-dataset 500 minimum; CI bounds recorded at n=300)",
+ "V1_bag_of_embeddings": {
+  "test_accuracy": 0.5,
+  "ci95": [
+   0.4434196736194167,
+   0.5565803263805833
+  ],
+  "n_test": 300,
+  "train_accuracy": 0.5,
+  "best_val_accuracy": 0.5,
+  "per_split_accuracy": {
+   "test_a": 0.45,
+   "test_b": 0.52,
+   "test_c": 0.53
+  },
+  "passed": true,
+  "per_split_note": "single rung test split round-robined over test_a/b/c; thirds are arbitrary partitions"
+ },
+ "V2_ngram_logistic": {
+  "test_accuracy": 0.49,
+  "ci95": [
+   0.4334309908165257,
+   0.5465690091834743
+  ],
+  "n_test": 300,
+  "selected_C": 0.1,
+  "best_val_accuracy": 0.49,
+  "n_features": 1149,
+  "per_split_accuracy": {
+   "test_a": 0.54,
+   "test_b": 0.41,
+   "test_c": 0.52
+  },
+  "passed": true,
+  "per_split_note": "single rung test split round-robined over test_a/b/c; thirds are arbitrary partitions"
+ },
+ "V3_balance_audit": {
+  "n_yes": 900,
+  "n_no": 900,
+  "classes_balanced_50_50": true,
+  "min_p": 1.0,
+  "n_tests": 55,
+  "verb_min_p": 1.0,
+  "referent_min_p": 1.0,
+  "template_min_p": 1.0,
+  "pro_drop_min_p": 1.0,
+  "passed": true
+ },
+ "V4_dedup": {
+  "n_verbatim_duplicates": 0,
+  "n_near_dup_groups": 0,
+  "near_dup_groups_sample": [],
+  "passed": true
+ },
+ "V5_single_sentence_oracle": {
+  "mode": "na_by_design",
+  "note": "L1 is one-hop by construction: every item IS single-sentence-answerable, so the oracle SHOULD succeed; V5 is recorded, not gated (doc 23: V-suite 'for the record').",
+  "full_test": {
+   "test_accuracy_best_sentence": 0.5,
+   "ci95_best_sentence": [
+    0.4434196736194167,
+    0.5565803263805833
+   ],
+   "test_accuracy_max_yes": 0.5,
+   "ci95_max_yes": [
+    0.4434196736194167,
+    0.5565803263805833
+   ],
+   "n_test": 300,
+   "sentence_level_val_accuracy": 0.5,
+   "passed": true
+  },
+  "gated": false,
+  "passed": null
+ },
+ "v1_passed": true,
+ "v2_passed": true,
+ "v3_passed": true,
+ "v4_passed": true,
+ "all_passed_v1_to_v4": true,
+ "all_passed": true
+}
