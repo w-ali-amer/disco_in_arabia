@@ -1,0 +1,445 @@
+{
+ "experiment": "exp43a",
+ "design_doc": "qnlp_private_docs/23_exp43_ladder_representability_design.md exp43a (commit ef15d76; verdict criteria frozen)",
+ "timestamp": "2026-08-08T15:48:19.533858",
+ "smoke": false,
+ "dataset_file": "stories_exp43a_family.json",
+ "family_dataset_sha256": "93f52af6daae07f13e48b11d87233d779a21caeb66225571cb85307207b0dfc4",
+ "family_seed": 4301,
+ "family_definition": "the train split (200 items = 100 twin pairs); val/test splits exist only so the frozen V-suite can run for the record",
+ "family_n_items": 200,
+ "embeddings_sha256": "00c1ecffcaf05b38df082f8a3cbed1d013bddb3e39bc00adf1c2513b4ea674ac",
+ "verbs": [
+  "حمل",
+  "رفع",
+  "ساعد",
+  "ضرب",
+  "فتح",
+  "قطع"
+ ],
+ "parameterization": {
+  "blocks": "Cartan/KAK two-qubit form (A1xA2)exp(i(aXX+bYY+cZZ))(B1xB2), XZX-Euler locals, 15 params/verb; covers ALL of SU(4) up to global phase (Khaneja-Glaser/Kraus-Cirac), and global phases are irrelevant to every model probability -- provably universal, unlike the Circuit-4 3-layer ansatz exp42 used for A3",
+  "effects": "two shared KAK effects; effect vector Q|00> ranges over all two-qubit pure states (Schmidt argument)",
+  "readout": "inherited verbatim from committed exp42_models.QuantumStoryModel (two-effect log-p softmax, inverse-preparation question encoding)",
+  "intro": "frozen exp42 noun-embedding Ry angles (exp42 model class: only blocks + effects are trainable)"
+ },
+ "budget": {
+  "n_restarts": 40,
+  "optimizer": "Adam",
+  "lr": 0.02,
+  "max_epochs": 500,
+  "batch_size": 1,
+  "early_stop_train_acc": 0.99,
+  "lbfgs_polish_top": 3,
+  "lbfgs_max_iter": 300,
+  "restart_seeds": "43000 + restart_index"
+ },
+ "execution_notes": [
+  "restarts sharded over 5 independent single-threaded worker processes (wall-clock only; restart seeds and per-restart training identical to the serial protocol)",
+  "restarts after a certificate are skipped/aborted (the frozen verdict is an existence claim); recorded per restart",
+  "eval uses per-epoch cached block matrices (identical math; parity with committed exp42 predict asserted at startup)"
+ ],
+ "restarts_completed": 40,
+ "restarts_skipped_or_aborted": [],
+ "per_restart": [
+  {
+   "restart": 0,
+   "seed": 43000,
+   "best_train_acc_adam": 0.69,
+   "best_epoch": 384,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 4383.3
+  },
+  {
+   "restart": 1,
+   "seed": 43001,
+   "best_train_acc_adam": 0.705,
+   "best_epoch": 160,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 4232.7,
+   "best_train_acc_after_polish": 0.93
+  },
+  {
+   "restart": 2,
+   "seed": 43002,
+   "best_train_acc_adam": 0.665,
+   "best_epoch": 80,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 4217.9
+  },
+  {
+   "restart": 3,
+   "seed": 43003,
+   "best_train_acc_adam": 0.675,
+   "best_epoch": 360,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 4235.1
+  },
+  {
+   "restart": 4,
+   "seed": 43004,
+   "best_train_acc_adam": 0.665,
+   "best_epoch": 335,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 4241.0
+  },
+  {
+   "restart": 5,
+   "seed": 43005,
+   "best_train_acc_adam": 0.65,
+   "best_epoch": 146,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 4262.2
+  },
+  {
+   "restart": 6,
+   "seed": 43006,
+   "best_train_acc_adam": 0.67,
+   "best_epoch": 305,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 4308.4
+  },
+  {
+   "restart": 7,
+   "seed": 43007,
+   "best_train_acc_adam": 0.675,
+   "best_epoch": 371,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 4465.9
+  },
+  {
+   "restart": 8,
+   "seed": 43008,
+   "best_train_acc_adam": 0.695,
+   "best_epoch": 282,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 4393.5,
+   "best_train_acc_after_polish": 0.955
+  },
+  {
+   "restart": 9,
+   "seed": 43009,
+   "best_train_acc_adam": 0.67,
+   "best_epoch": 211,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 4205.6
+  },
+  {
+   "restart": 10,
+   "seed": 43010,
+   "best_train_acc_adam": 0.67,
+   "best_epoch": 252,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 4212.6
+  },
+  {
+   "restart": 11,
+   "seed": 43011,
+   "best_train_acc_adam": 0.66,
+   "best_epoch": 49,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 4270.4
+  },
+  {
+   "restart": 12,
+   "seed": 43012,
+   "best_train_acc_adam": 0.675,
+   "best_epoch": 115,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 4252.5
+  },
+  {
+   "restart": 13,
+   "seed": 43013,
+   "best_train_acc_adam": 0.665,
+   "best_epoch": 8,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 4257.5
+  },
+  {
+   "restart": 14,
+   "seed": 43014,
+   "best_train_acc_adam": 0.675,
+   "best_epoch": 342,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 4284.0
+  },
+  {
+   "restart": 15,
+   "seed": 43015,
+   "best_train_acc_adam": 0.675,
+   "best_epoch": 3,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 4465.4
+  },
+  {
+   "restart": 16,
+   "seed": 43016,
+   "best_train_acc_adam": 0.67,
+   "best_epoch": 374,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 4400.1
+  },
+  {
+   "restart": 17,
+   "seed": 43017,
+   "best_train_acc_adam": 0.67,
+   "best_epoch": 326,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 4213.9
+  },
+  {
+   "restart": 18,
+   "seed": 43018,
+   "best_train_acc_adam": 0.645,
+   "best_epoch": 217,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 4222.6
+  },
+  {
+   "restart": 19,
+   "seed": 43019,
+   "best_train_acc_adam": 0.665,
+   "best_epoch": 454,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 4255.4
+  },
+  {
+   "restart": 20,
+   "seed": 43020,
+   "best_train_acc_adam": 0.665,
+   "best_epoch": 368,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 4262.1
+  },
+  {
+   "restart": 21,
+   "seed": 43021,
+   "best_train_acc_adam": 0.66,
+   "best_epoch": 59,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 4259.3
+  },
+  {
+   "restart": 22,
+   "seed": 43022,
+   "best_train_acc_adam": 0.685,
+   "best_epoch": 211,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 4305.8
+  },
+  {
+   "restart": 23,
+   "seed": 43023,
+   "best_train_acc_adam": 0.65,
+   "best_epoch": 169,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 4440.5
+  },
+  {
+   "restart": 24,
+   "seed": 43024,
+   "best_train_acc_adam": 0.655,
+   "best_epoch": 93,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 4412.7
+  },
+  {
+   "restart": 25,
+   "seed": 43025,
+   "best_train_acc_adam": 0.665,
+   "best_epoch": 14,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 4208.7
+  },
+  {
+   "restart": 26,
+   "seed": 43026,
+   "best_train_acc_adam": 0.665,
+   "best_epoch": 78,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 4205.4
+  },
+  {
+   "restart": 27,
+   "seed": 43027,
+   "best_train_acc_adam": 0.66,
+   "best_epoch": 183,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 4252.5
+  },
+  {
+   "restart": 28,
+   "seed": 43028,
+   "best_train_acc_adam": 0.695,
+   "best_epoch": 316,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 4241.0
+  },
+  {
+   "restart": 29,
+   "seed": 43029,
+   "best_train_acc_adam": 0.665,
+   "best_epoch": 467,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 4248.8
+  },
+  {
+   "restart": 30,
+   "seed": 43030,
+   "best_train_acc_adam": 0.705,
+   "best_epoch": 55,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 4288.7,
+   "best_train_acc_after_polish": 0.95
+  },
+  {
+   "restart": 31,
+   "seed": 43031,
+   "best_train_acc_adam": 0.69,
+   "best_epoch": 201,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 4456.9
+  },
+  {
+   "restart": 32,
+   "seed": 43032,
+   "best_train_acc_adam": 0.685,
+   "best_epoch": 391,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 4423.6
+  },
+  {
+   "restart": 33,
+   "seed": 43033,
+   "best_train_acc_adam": 0.675,
+   "best_epoch": 173,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 4226.7
+  },
+  {
+   "restart": 34,
+   "seed": 43034,
+   "best_train_acc_adam": 0.665,
+   "best_epoch": 43,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 4206.4
+  },
+  {
+   "restart": 35,
+   "seed": 43035,
+   "best_train_acc_adam": 0.685,
+   "best_epoch": 5,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 4261.3
+  },
+  {
+   "restart": 36,
+   "seed": 43036,
+   "best_train_acc_adam": 0.65,
+   "best_epoch": 118,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 4256.0
+  },
+  {
+   "restart": 37,
+   "seed": 43037,
+   "best_train_acc_adam": 0.675,
+   "best_epoch": 10,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 4263.5
+  },
+  {
+   "restart": 38,
+   "seed": 43038,
+   "best_train_acc_adam": 0.655,
+   "best_epoch": 307,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 4315.3
+  },
+  {
+   "restart": 39,
+   "seed": 43039,
+   "best_train_acc_adam": 0.67,
+   "best_epoch": 85,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 4423.9
+  }
+ ],
+ "lbfgs_polish": [
+  {
+   "restart": 1,
+   "train_acc_after_lbfgs": 0.93,
+   "final_loss": 0.6056650876998901
+  },
+  {
+   "restart": 30,
+   "train_acc_after_lbfgs": 0.95,
+   "final_loss": 0.5953283309936523
+  },
+  {
+   "restart": 8,
+   "train_acc_after_lbfgs": 0.955,
+   "final_loss": 0.6423945426940918
+  }
+ ],
+ "best_restart": {
+  "restart": 8,
+  "best_train_acc": 0.955
+ },
+ "verdicts": {
+  "bridge_representable": false,
+  "bridge_unrepresentable_proved": false,
+  "representability_open": true
+ },
+ "analytic_findings_summary": [
+  "Lemma 1 (exact): for blocks commuting with SWAP (A1 class) twin stories compile to identical statevectors; any readout is at exactly 50% on twins (verified to float precision, analysis W1).",
+  "Prop 2 (refutes the strong form of doc 23's candidate obstruction): for generic full-SU(4) assignments the twin reduced states on the two queried wires DIFFER for every family pair (analysis W2: trace distances median ~0.5, none below 1e-3), and the effect-pair readout form is information-complete on the queried-wire reduced state (a Hermitian difference vanishing in all rank-1 effects is zero). Any unrepresentability could therefore only arise from sharing blocks/effects family-wide, not from per-item information loss under partial trace.",
+  "Prop 3 (reduction): representability == existence of blocks plus ONE traceless rank-<=2 Hermitian decision functional D with sign Tr[rho_tilde D] = label across the family; the unranked relaxation of the best-D fit at fixed random blocks reaches only ~0.59-0.63 (analysis W3), locating the difficulty in family-wide sharing.",
+  "No impossibility proof found; no exact hand construction found (obstacles: random temporal order of the two core events (48% e1-first), filler traffic on the queried wires by shared verbs (99% of pairs, mean 2.4 touches), item-dependent frozen intro angles vs fixed effects -- analysis W4). Decision therefore falls to this numerical certificate, per the frozen protocol."
+ ],
+ "analysis_results_file": "results_exp43a_analysis*.json",
+ "torch_version": "2.7.1+cu126",
+ "wall_time_sec_finalize": 3860.2,
+ "git_note": "local commit only, author w-ali-amer, no push"
+}

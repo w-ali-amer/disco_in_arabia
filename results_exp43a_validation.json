@@ -1,0 +1,88 @@
+{
+ "experiment": "exp41_validation",
+ "design_doc": "qnlp_private_docs/22_phase2_trained_story_qa_design.md §2.3 (commit cacac31)",
+ "timestamp": "2026-08-08T05:04:16.148990",
+ "dataset_file": "stories_exp43a_family.json",
+ "dataset_sha256": "93f52af6daae07f13e48b11d87233d779a21caeb66225571cb85307207b0dfc4",
+ "dataset_hash_matches_meta": true,
+ "n_train": 200,
+ "n_val": 100,
+ "n_test": 504,
+ "criteria": {
+  "accuracy_bound": 0.55,
+  "ci": "95% normal approx must contain 0.5",
+  "chi2_alpha": 0.05
+ },
+ "V1_bag_of_embeddings": {
+  "test_accuracy": 0.5,
+  "ci95": [
+   0.45634733048763737,
+   0.5436526695123627
+  ],
+  "n_test": 504,
+  "train_accuracy": 0.5,
+  "best_val_accuracy": 0.5,
+  "per_split_accuracy": {
+   "test_a": 0.5,
+   "test_b": 0.5,
+   "test_c": 0.5
+  },
+  "passed": true
+ },
+ "V2_ngram_logistic": {
+  "test_accuracy": 0.4781746031746032,
+  "ci95": [
+   0.43456354121033114,
+   0.5217856651388753
+  ],
+  "n_test": 504,
+  "selected_C": 0.1,
+  "best_val_accuracy": 0.52,
+  "n_features": 746,
+  "per_split_accuracy": {
+   "test_a": 0.4642857142857143,
+   "test_b": 0.47023809523809523,
+   "test_c": 0.5
+  },
+  "passed": true
+ },
+ "V3_balance_audit": {
+  "n_yes": 402,
+  "n_no": 402,
+  "classes_balanced_50_50": true,
+  "min_p": 1.0,
+  "n_tests": 55,
+  "verb_min_p": 1.0,
+  "referent_min_p": 1.0,
+  "template_min_p": 1.0,
+  "pro_drop_min_p": 1.0,
+  "passed": true
+ },
+ "V4_dedup": {
+  "n_verbatim_duplicates": 0,
+  "n_near_dup_groups": 0,
+  "near_dup_groups_sample": [],
+  "passed": true
+ },
+ "V5_single_sentence_oracle": {
+  "test_accuracy_best_sentence": 0.5,
+  "ci95_best_sentence": [
+   0.45634733048763737,
+   0.5436526695123627
+  ],
+  "test_accuracy_max_yes": 0.5,
+  "ci95_max_yes": [
+   0.45634733048763737,
+   0.5436526695123627
+  ],
+  "n_test": 504,
+  "sentence_level_val_accuracy": 0.5,
+  "passed": true
+ },
+ "v1_passed": true,
+ "v2_passed": true,
+ "v3_passed": true,
+ "v4_passed": true,
+ "v5_passed": true,
+ "all_passed": true
+}
