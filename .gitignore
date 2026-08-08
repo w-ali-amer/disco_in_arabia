@@ -61,5 +61,6 @@ tough_questions.md
 *_design.md
 .git-credentials
 *.tgz
-# Live-experiment intermediates: commit only after the run writes its results JSON.
-exp43b_ckpt/
+# NOTE: experiment checkpoint dirs are deliberately NOT ignored -- they are
+# research artifacts and get committed once a run writes its results JSON.
+# The pre-commit guard blocks staging them only while that run is still live.
