@@ -53,3 +53,13 @@ disco_in_arabia/
 !RESULTS_EXP21.md
 !RESULTS_EXP21_v2.md
 !EXP23_FAMILY_REVIEW.md
+
+# --- secret / privacy guards (2026-08-08) ---
+# Private review-prep and design docs live ONLY in qnlp_private_docs (no remote).
+honest_vulnerabilities.md
+tough_questions.md
+*_design.md
+.git-credentials
+*.tgz
+# Live-experiment intermediates: commit only after the run writes its results JSON.
+exp43b_ckpt/
