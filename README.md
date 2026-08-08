@@ -9,18 +9,31 @@ First application of pregroup grammar-based QNLP to Arabic. Converts Arabic sent
 
 ## Repository structure
 
-This repository has two levels:
-
 ```
-/                        ← working code only — everything needed to reproduce the paper
-└── dev_history/         ← development record — earlier iterations and abandoned approaches
+/                                    ← ACTIVE line only: trained-block story QA (exp40–43)
+└── archive/
+    ├── 01_parser_pipeline/          ← Arabic pipeline: Stanza + CAMeL → pregroup → lambeq
+    ├── 02_discocat_paper/           ← exp8–exp20, the published paper line (+ figures, outputs)
+    ├── 03_semantic_geometry/        ← exp21–exp32, density-matrix geometry
+    ├── 04_frames_scaling_hardware/  ← exp33–exp39 + S1, frames / scaling / IBM hardware
+    └── 05_dev_history/              ← superseded iterations, kept for transparency
 ```
 
-The root contains only the files that actually run the experiments reported in the paper. `dev_history/` preserves the full development journey — the pipeline went through many iterations before converging on the current design. Those files are not needed to reproduce results but are kept for transparency. See `dev_history/README.md` for a description of each.
+The root holds only the **active** line — the trained-block story-QA experiments
+(exp40–43), which import nothing but `torch` and are self-contained. Everything
+else is a closed era and lives under `archive/`, with each era's code, data and
+results kept together. See [`archive/README.md`](archive/README.md) for the map
+and for how to re-run archived experiments.
+
+Files were moved with `git mv`; `git log --follow <path>` gives the full history
+including the period when a file lived at the root.
 
 ---
 
-## Root files — what each does
+## The paper's files — what each does
+
+These now live in `archive/02_discocat_paper/`, with the pipeline they import in
+`archive/01_parser_pipeline/`.
 
 ### Pipeline (load order matters)
 
@@ -61,6 +74,8 @@ The experiments depend on a chain of modules. `arabic_dep_reader.py` is the entr
 
 ### Results and figures
 
+All paths below are relative to `archive/02_discocat_paper/`.
+
 | Path | Contents |
 |------|---------|
 | `qnlp_experiment_outputs_per_set_v2/exp13_arabert/` | Main results JSON (taskA_wordorder.json, learning_curves.json, arabert_finetuned_results.json) |
@@ -70,6 +85,11 @@ The experiments depend on a chain of modules. `arabic_dep_reader.py` is the entr
 ---
 
 ## Environment
+
+There are **two** environments. The active exp40–43 line at the root needs only
+`torch` (`requirements_mac.txt`, Python 3.12) and none of the setup below. The
+heavy stack described here is required only for the archived pipeline and the
+exp8–exp39 experiments.
 
 **Python 3.10.** Other versions are untested.
 
@@ -103,6 +123,9 @@ Download from [github.com/bakrianoo/aravec](https://github.com/bakrianoo/aravec)
 `sentences.json` already contains all datasets including `WordOrderMatched` and `WordSenseDisambiguation_v2`. The generate scripts only need to be run if you modify the raw data or start from scratch.
 
 ```bash
+cd archive/02_discocat_paper
+export PYTHONPATH=../01_parser_pipeline      # the pipeline these experiments import
+
 # Main experiment — word order L0/L1 ablation + AraBERT comparison
 python exp13_arabert_comparison.py
 # outputs → qnlp_experiment_outputs_per_set_v2/exp13_arabert/
@@ -163,3 +186,37 @@ Since then, committed in this repo:
   correct; the same 7 misses as the noiseless model).
 - **Parser fix** — CAMeL-POS fusion in `arabic_dep_reader.py` (flag-gated, off by default;
   published numbers unchanged).
+
+## Current line (exp40–43) — trained blocks on story QA
+
+At the repository root, and independent of everything above: this line trains the
+verb blocks on a story question-answering loss rather than solving them against
+classical targets, with a Duneau-style compositional-generalisation gate. It
+imports only `torch` (see `requirements_mac.txt`); the lambeq/numpy<2 constraint
+does not apply to it. Design criteria for each experiment were committed before
+its results file existed, and each results JSON stores computed pass/fail
+booleans — **the verdicts below are those booleans, not a reading of the numbers.**
+
+- **exp42 — the main pre-registered run returned a null.** `results_exp42.json`:
+  `tier_q_passed = false`, `tier_s_passed = false`, `content_earned = false`. All
+  seven arms sat at chance on the held-out set; A2 vs B1 mean paired difference
+  +1.0pp, one-sided p = 0.26; the trained-dial-swap control (C1) placed the
+  original assignment below the permutation 95th percentile. `results_exp42_c2.json`:
+  `c2_passed = false` (mean disjoint-verb transfer 0.588 against a 0.55 bar).
+  The harness itself is calibrated — it solves the Duneau mini task to 100/100/100
+  (`results_exp40b.json`, `harness_calibrated = true`).
+- **exp43a — representability is OPEN, not resolved.** `results_exp43a.json`:
+  `bridge_representable = false`, `bridge_unrepresentable_proved = false`,
+  `representability_open = true`. 40 restarts of provably-universal SU(4) blocks
+  plus L-BFGS polish reached train 0.955 against a pre-registered 0.99 bar. No
+  impossibility proof was found and no exact construction was found, so this is
+  reported as open and **never** as "proved impossible".
+- **exp43b — difficulty ladder, in progress.** The atomic-swap rung L1 is
+  learnable by the universal quantum arm and was not learnt by the
+  structure-matched classical baseline at the same frozen budget. That asymmetry
+  is **not yet a result**: `results_exp43b_b1_init_audit.json` shows the classical
+  arm begins with 86% of L1's twin pairs behaviourally degenerate, inside the
+  SWAP-commuting neighbourhood where exp43a's Lemma 1 forces exactly 50% on twins,
+  and its observed ceiling matches that degeneracy to ~1pp. A pre-registered
+  remediation (matched initialisation plus a per-arm memorisation control) must
+  run before any comparative claim is made.
