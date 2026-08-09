@@ -1,0 +1,46 @@
+{
+ "experiment": "exp43b_hop_split",
+ "note": "training-free re-evaluation of the committed Phase-1 checkpoints, partitioned by item hop_count. Witnesses for the Phase-1 write-up; carries NO pre-registered verdicts. results_exp43b_phase1.json is unmodified.",
+ "motivation": "rung_learnable_L2=false, yet A3's best L2 run reached 0.721 train / 0.703 val. L2 is 50/50 one-hop/two-hop; this locates that signal.",
+ "embeddings_sha256": "00c1ecffcaf05b38df082f8a3cbed1d013bddb3e39bc00adf1c2513b4ea674ac",
+ "platform": "macOS-26.5.2-arm64-arm-64bit",
+ "python": "3.12.13",
+ "torch": "2.13.0",
+ "rungs": {
+  "L1": {
+   "dataset_sha256": "88cd70ad530356911c17f18d0b42de3edf3c956324513a1455c9548aaef15534",
+   "hop_mix_per_split": {
+    "train": {
+     "1": 1200
+    },
+    "val": {
+     "1": 300
+    },
+    "test": {
+     "1": 300
+    }
+   },
+   "per_checkpoint": {}
+  },
+  "L2": {
+   "dataset_sha256": "95e2c3407cb9052c7c2a2f4a1a4b8471e53225fc784a005ce8dca128ba9e38c7",
+   "hop_mix_per_split": {
+    "train": {
+     "1": 600,
+     "2": 600
+    },
+    "val": {
+     "2": 150,
+     "1": 150
+    },
+    "test": {
+     "1": 150,
+     "2": 150
+    }
+   },
+   "per_checkpoint": {}
+  }
+ },
+ "limitation": "exp43b_phase1.py stores per-epoch curves and summary accuracies in each checkpoint but does NOT persist the best-val state_dict, so a per-hop split of the trained models cannot be recomputed from the committed artifacts alone. Reported here: the hop composition of every split, and the aggregate accuracies each checkpoint did record. Obtaining the per-hop breakdown requires re-running the L2 grid with state saving enabled -- a new run, and therefore a new design doc.",
+ "wall_time_sec": 0.1
+}

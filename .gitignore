@@ -54,12 +54,7 @@ disco_in_arabia/
 !RESULTS_EXP21_v2.md
 !EXP23_FAMILY_REVIEW.md
 
-# --- secret / privacy guards (2026-08-08) ---
-# Private review-prep and design docs live ONLY in qnlp_private_docs (no remote).
-honest_vulnerabilities.md
-tough_questions.md
-*_design.md
-.git-credentials
+# --- local artifacts ---
 *.tgz
 # NOTE: experiment checkpoint dirs are deliberately NOT ignored -- they are
 # research artifacts and get committed once a run writes its results JSON.
