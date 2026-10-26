@@ -1,0 +1,17 @@
+{
+ "doc": "94 pre-registration bound calculator",
+ "results": {
+  "classical_1bit_max_n2": 0.75,
+  "classical_1bit_max_n3": 0.75,
+  "qubit_analytic_n2": 0.8535533905932737,
+  "qubit_numeric_n2": 0.8535534143447876,
+  "rebit_numeric_n2": 0.8535534143447876,
+  "qubit_analytic_n3": 0.7886751345948129,
+  "qubit_numeric_n3": 0.7886752486228943,
+  "rebit_numeric_n3": 0.7696723937988281,
+  "compositional_note": "2->1: RY(a_g)\u00b7RY(a_n) = RY(a_g+a_n); choosing a_g in {pi/4, 3pi/4}, a_n in {0, pi} gives polar angles {pi/4,3pi/4,5pi/4,7pi/4}: the four optimal 2->1 codewords (XZ plane). 3->1: RY(theta_g) with theta_g in {arccos(1/sqrt3), pi-arccos(1/sqrt3)} then RZ(b1)\u00b7RZ(b2) = RZ(b1+b2) with b1 in {pi/4, 5pi/4}, b2 in {0, pi/2}: azimuths {pi/4,3pi/4,5pi/4,7pi/4} -> the 8 cube-corner codewords.",
+  "compositional_2to1": 0.6767766922712326,
+  "compositional_3to1": 0.6642664223909378
+ },
+ "self_sha256": "5b68e56994de867e79f56d9747ce52f6877f0c14a6f469d3c0ed83031fd0334e"
+}

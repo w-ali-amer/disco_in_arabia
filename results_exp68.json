@@ -1,0 +1,1102 @@
+{
+ "experiment": "exp68",
+ "spec": "qnlp_private_docs/54_exp68_width_lever.md (1025d21, FROZEN)",
+ "lever": "WIDTH -- the third and final cell of doc 54 SS1's three-lever ledger",
+ "aggregated_from": "exp68_ckpt/*.json (30 runs)",
+ "aggregator": "exp68_aggregate.py (doc 53 SS7.3 / doc 54 SS13.1: the runner ships WITH its aggregator; nothing else writes a results file for exp68)",
+ "platform": "macOS-26.5.2-arm64-arm-64bit",
+ "python": "3.12.13",
+ "torch": "2.13.0",
+ "numpy": "2.5.1",
+ "dataset": "stories_exp68_WN.json",
+ "dataset_sha256": "9a0b990088a89f5c2697da6f470891a9472fe8e3f4fc2a9d94b81911d54a6ec1",
+ "dataset_generator": "exp68_datagen.py",
+ "vsuite_results": "results_exp68_WN_validation.json",
+ "smoke_results": "results_exp68_smoke_validation.json",
+ "target_category": {
+  "key": "nonoccupational",
+  "gloss": "non-occupational state",
+  "bearers": [
+   "الرجل",
+   "المريض",
+   "المسافر",
+   "الولد"
+  ],
+  "n_nonbearers": 20,
+  "source": "doc 54 SS6.3, FROZEN; membership doc 54 SS5.2, user-confirmed 2026-08-23 and imported from instrument_sb_bounds.CATEGORIES"
+ },
+ "split": "held-out = UNSEEN PAIRINGS, not unseen nouns (doc 54 SS6.1.1). 25 test casts -> 150 pairs -> 300 test items, matching exp60/exp61 so SS7's 0.06 bar transfers exactly.",
+ "arms_run": [
+  "F1",
+  "F2",
+  "FA",
+  "S-shuffle-F1",
+  "S-shuffle-F2",
+  "S-shuffle-FA"
+ ],
+ "n_seeds": 5,
+ "n_runs": 30,
+ "sd_convention": "sample sd, ddof=1 (statistics.stdev)",
+ "training": {
+  "lr": 0.02,
+  "batch": 8,
+  "max_epochs": 150,
+  "optimiser": "Adam",
+  "rng_base": 55000,
+  "model_selection": "best in-distribution val accuracy",
+  "seeds_vary": "OPTIMISER INITIALISATION ONLY -- doc 54 SS6.2: the features are deterministic constants, so unlike exp61 there is no per-seed angle draw",
+  "lineage": "the exp60 / exp61 / exp65 loop, unchanged"
+ },
+ "feature_maps": {
+  "F1": "theta = (p1 + 1) pi, p1 = PC1-raw / 8.669494516224397",
+  "F2": "theta0 = (p1 + 1) pi on qubit 0, theta1 = (p2 + 1) pi on qubit 1, p2 = PC2-raw / 10.160404144924657",
+  "FA": "phi = atan2(PC2, PC1) -- the existing exp42 map, verified equal to the frozen exp42_noun_embeddings angle to 4.0e-15",
+  "provenance": "PCA over all 44 referents, centred, PC signs pinned to the frozen vec2 plane (doc 54 SS3.2/SS6.2), computed by the committed instrument_sb_bounds.load_raw; the runtime map is bit-identical (max abs diff 0.0) to an independent recomputation from the committed source files, asserted at smoke"
+ },
+ "arms": {
+  "F1": {
+   "mean": 0.6566666666666666,
+   "sd": 0.033166247903553984,
+   "per_seed": [
+    0.6466666666666666,
+    0.68,
+    0.6166666666666667,
+    0.64,
+    0.7
+   ],
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_seeds": 5,
+   "val_per_seed": [
+    0.7651515151515151,
+    0.8181818181818182,
+    0.7878787878787878,
+    0.8106060606060606,
+    0.7954545454545454
+   ],
+   "train_per_seed": [
+    0.6666666666666666,
+    0.6458333333333334,
+    0.7045454545454546,
+    0.6912878787878788,
+    0.6212121212121212
+   ],
+   "selected_epoch_per_seed": [
+    7,
+    83,
+    19,
+    106,
+    7
+   ],
+   "val_minus_heldout_per_seed": [
+    0.11848484848484853,
+    0.13818181818181818,
+    0.17121212121212115,
+    0.17060606060606054,
+    0.09545454545454546
+   ],
+   "mean_val_minus_heldout": 0.13878787878787877,
+   "gate_met_per_seed": [
+    false,
+    false,
+    false,
+    false,
+    false
+   ],
+   "wires": 2,
+   "n_params": 120,
+   "wall_sec_total": 1974.7994780540466,
+   "ckpt_sha256": [
+    "5b881e016436401d31302ce211db53d687aaa57ca930cd0998f1156e1f7b5ddd",
+    "4feb2b2aefba5a21b8245bf4a4149ffd440a9b7a9591f6a83876516a830920de",
+    "4e7ba9da69f003a006b9dd67525c8fbe2445d1d6a7a63ae6e479ce49316991c0",
+    "68173c0e010986b23584d563814a3ae813fb4b3e0439223472af654c45045bb1",
+    "e4e474fe3768e5088ea51df6e72ac51f8ce8ed60e9c70667d92e77199b67f69c"
+   ]
+  },
+  "F2": {
+   "mean": 0.9586666666666667,
+   "sd": 0.0208965706915433,
+   "per_seed": [
+    0.96,
+    0.9666666666666667,
+    0.9866666666666667,
+    0.95,
+    0.93
+   ],
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_seeds": 5,
+   "val_per_seed": [
+    0.9848484848484849,
+    1.0,
+    1.0,
+    1.0,
+    0.9848484848484849
+   ],
+   "train_per_seed": [
+    0.9848484848484849,
+    0.9848484848484849,
+    0.9924242424242424,
+    0.9810606060606061,
+    0.990530303030303
+   ],
+   "selected_epoch_per_seed": [
+    31,
+    87,
+    124,
+    102,
+    11
+   ],
+   "val_minus_heldout_per_seed": [
+    0.024848484848484897,
+    0.033333333333333326,
+    0.013333333333333308,
+    0.050000000000000044,
+    0.05484848484848481
+   ],
+   "mean_val_minus_heldout": 0.035272727272727275,
+   "gate_met_per_seed": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   "wires": 4,
+   "n_params": 264,
+   "wall_sec_total": 10438.356230735779,
+   "ckpt_sha256": [
+    "0c1e1f5c94527b439fffd1a6f31c37f82967157ecc25b0bbb6046628dba75e23",
+    "8fc52e6ba95372c0b38e5514bc3f5e959987a8ea7e04a6f0926aeeeadf5a2096",
+    "07dddcf7789f983baca9ca825a50115317ce5837ed657919d6957102aeaed861",
+    "89995a665a92a490f7f702a2653d64f9b9342f1d8d358d803689a7439b25939e",
+    "658c3e9eed61246429a686fc580b42ff4d1555316a6e6f68bd5b3c4554d51453"
+   ]
+  },
+  "FA": {
+   "mean": 0.9186666666666666,
+   "sd": 0.001825741858350596,
+   "per_seed": [
+    0.9166666666666666,
+    0.9166666666666666,
+    0.92,
+    0.92,
+    0.92
+   ],
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_seeds": 5,
+   "val_per_seed": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "train_per_seed": [
+    0.8939393939393939,
+    0.9071969696969697,
+    0.9090909090909091,
+    0.8939393939393939,
+    0.9053030303030303
+   ],
+   "selected_epoch_per_seed": [
+    69,
+    122,
+    28,
+    21,
+    40
+   ],
+   "val_minus_heldout_per_seed": [
+    0.08333333333333337,
+    0.08333333333333337,
+    0.07999999999999996,
+    0.07999999999999996,
+    0.07999999999999996
+   ],
+   "mean_val_minus_heldout": 0.08133333333333333,
+   "gate_met_per_seed": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   "wires": 2,
+   "n_params": 120,
+   "wall_sec_total": 2524.3896782398224,
+   "ckpt_sha256": [
+    "1831861aa152d0895ccb2cb02e1ffd99d4a06831504e70ffb1c9cfe86fe3b9b5",
+    "672730db6db52669dc9db163d37dd4f2bf2bea124a1f90ce7e0f4946d509717a",
+    "bdcb0652701d6e853b8ceef897fe70f4312c7fa6d6c1609bdbca5b4f0612813a",
+    "07d8c819da44c513f09add6560fc23d6bb26a0cd54d7070421735cdd60fdc059",
+    "40f7203d1d536133d4e8b6f6348cb447b720d2bccd0652c106142d4a266cf780"
+   ]
+  }
+ },
+ "floors": {
+  "F1": {
+   "mean": 0.492,
+   "sd": 0.03262582480864575,
+   "per_seed": [
+    0.49666666666666665,
+    0.5,
+    0.5233333333333333,
+    0.5033333333333333,
+    0.43666666666666665
+   ],
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_seeds": 5,
+   "val_per_seed": [
+    0.5378787878787878,
+    0.553030303030303,
+    0.6136363636363636,
+    0.5454545454545454,
+    0.5757575757575758
+   ],
+   "train_per_seed": [
+    0.5454545454545454,
+    0.5662878787878788,
+    0.5700757575757576,
+    0.5757575757575758,
+    0.5511363636363636
+   ],
+   "selected_epoch_per_seed": [
+    34,
+    8,
+    68,
+    27,
+    14
+   ],
+   "val_minus_heldout_per_seed": [
+    0.0412121212121212,
+    0.05303030303030298,
+    0.09030303030303033,
+    0.042121212121212115,
+    0.13909090909090915
+   ],
+   "mean_val_minus_heldout": 0.07315151515151516,
+   "gate_met_per_seed": [
+    false,
+    false,
+    false,
+    false,
+    false
+   ],
+   "wires": 2,
+   "n_params": 120,
+   "wall_sec_total": 2417.6694169044495,
+   "ckpt_sha256": [
+    "438a05678b2029a90e1276a6e6ef1250461d5df491999429512eb40b907227e0",
+    "a0e85a3c862f5827368f323fdbc9ad61079dcd0d6411c8885e41a214b7fdbc8b",
+    "d2eaa67ac90ca9775e6e7bd3a3048f3c9defaec9edf5b9cd1c9df43394923d8a",
+    "07ef4e4907b27065dd2d7975b67bef588540335d4f7abde89a4fe2f432e03ed1",
+    "6f5470543e9f543c0791eac9f2c6e874aa24415ed0cbc7b0b9e57dc5115e2585"
+   ]
+  },
+  "F2": {
+   "mean": 0.5006666666666667,
+   "sd": 0.011879019787470324,
+   "per_seed": [
+    0.49,
+    0.49333333333333335,
+    0.5166666666666667,
+    0.49333333333333335,
+    0.51
+   ],
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_seeds": 5,
+   "val_per_seed": [
+    0.6212121212121212,
+    0.5757575757575758,
+    0.5757575757575758,
+    0.5757575757575758,
+    0.5454545454545454
+   ],
+   "train_per_seed": [
+    0.6439393939393939,
+    0.6136363636363636,
+    0.6022727272727273,
+    0.6439393939393939,
+    0.5795454545454546
+   ],
+   "selected_epoch_per_seed": [
+    22,
+    82,
+    133,
+    16,
+    5
+   ],
+   "val_minus_heldout_per_seed": [
+    0.13121212121212122,
+    0.08242424242424246,
+    0.05909090909090908,
+    0.08242424242424246,
+    0.035454545454545405
+   ],
+   "mean_val_minus_heldout": 0.07812121212121212,
+   "gate_met_per_seed": [
+    false,
+    false,
+    false,
+    false,
+    false
+   ],
+   "wires": 4,
+   "n_params": 264,
+   "wall_sec_total": 5292.272489070892,
+   "ckpt_sha256": [
+    "15e8cb89a8f1ce34c112e78ca535f90358a2ab4919db5ba4beb78f32868bbee3",
+    "f875bc57240ec6113d407979a7cd02c58053cb7b16c9cb6575fe85237a777170",
+    "9b311a119501b06190072cc8123586d3f65ca80b69cae7fc578c909099a7bc39",
+    "8aaf5a859ec04b87a7d5e8c637bf85c2d94cc20ddcc781e06f430121a510b78a",
+    "4c195d30c9d2a45edede41672f940cadf96c4dbe9a50f2c15956c46843ea8114"
+   ]
+  },
+  "FA": {
+   "mean": 0.5133333333333333,
+   "sd": 0.04203173404306163,
+   "per_seed": [
+    0.4866666666666667,
+    0.5033333333333333,
+    0.5566666666666666,
+    0.4633333333333333,
+    0.5566666666666666
+   ],
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_seeds": 5,
+   "val_per_seed": [
+    0.5378787878787878,
+    0.5681818181818182,
+    0.5757575757575758,
+    0.5757575757575758,
+    0.6060606060606061
+   ],
+   "train_per_seed": [
+    0.5738636363636364,
+    0.5435606060606061,
+    0.5246212121212122,
+    0.5189393939393939,
+    0.5681818181818182
+   ],
+   "selected_epoch_per_seed": [
+    71,
+    56,
+    1,
+    118,
+    79
+   ],
+   "val_minus_heldout_per_seed": [
+    0.05121212121212115,
+    0.06484848484848493,
+    0.01909090909090916,
+    0.11242424242424248,
+    0.049393939393939434
+   ],
+   "mean_val_minus_heldout": 0.05939393939393943,
+   "gate_met_per_seed": [
+    false,
+    false,
+    false,
+    false,
+    false
+   ],
+   "wires": 2,
+   "n_params": 120,
+   "wall_sec_total": 2418.5965859889984,
+   "ckpt_sha256": [
+    "af4dad8d3e31202eedb72ac2c86e1681050ca823ad7874998f3eb1cb73c1ea57",
+    "5090f381adf948d7fac0fde65dc676e7ec9a59b1f993093ae70124ce7da52857",
+    "dba707296cbd85ad96bf69bbbfba3fe99135beeedb4b50c63241df46e013569b",
+    "4b495bae6dee11670742f5c6e55ea1e186d6db98fba6a74beeb5edf57e288a11",
+    "25f5f7f1ac843c00b5a7d5e2a0078781ce2c0bb4be51d947d22d1b1ee3262809"
+   ]
+  }
+ },
+ "floor_clearance": {
+  "F1": {
+   "arm_mean": 0.6566666666666666,
+   "floor_mean": 0.492,
+   "delta_over_floor": 0.16466666666666663,
+   "sd_units_over_floor_using_floor_sd": 5.047126551817639,
+   "readings": {
+    "floor_sd": {
+     "sd": 0.03262582480864575,
+     "bar": 0.5572516496172915,
+     "clears": true
+    },
+    "arm_sd": {
+     "sd": 0.033166247903553984,
+     "bar": 0.558332495807108,
+     "clears": true
+    },
+    "pooled_sd": {
+     "sd": 0.03289714611060087,
+     "bar": 0.5577942922212017,
+     "clears": true
+    }
+   },
+   "primary_reading": "floor_sd",
+   "clears_floor": true,
+   "clears_under_all_readings": true,
+   "clears_under_any_reading": true,
+   "readings_agree": true
+  },
+  "F2": {
+   "arm_mean": 0.9586666666666667,
+   "floor_mean": 0.5006666666666667,
+   "delta_over_floor": 0.45799999999999996,
+   "sd_units_over_floor_using_floor_sd": 38.55536973539569,
+   "readings": {
+    "floor_sd": {
+     "sd": 0.011879019787470324,
+     "bar": 0.5244247062416073,
+     "clears": true
+    },
+    "arm_sd": {
+     "sd": 0.0208965706915433,
+     "bar": 0.5424598080497534,
+     "clears": true
+    },
+    "pooled_sd": {
+     "sd": 0.01699673171197595,
+     "bar": 0.5346601300906186,
+     "clears": true
+    }
+   },
+   "primary_reading": "floor_sd",
+   "clears_floor": true,
+   "clears_under_all_readings": true,
+   "clears_under_any_reading": true,
+   "readings_agree": true
+  },
+  "FA": {
+   "arm_mean": 0.9186666666666666,
+   "floor_mean": 0.5133333333333333,
+   "delta_over_floor": 0.4053333333333333,
+   "sd_units_over_floor_using_floor_sd": 9.643507282332633,
+   "readings": {
+    "floor_sd": {
+     "sd": 0.04203173404306163,
+     "bar": 0.5973968014194566,
+     "clears": true
+    },
+    "arm_sd": {
+     "sd": 0.001825741858350596,
+     "bar": 0.5169848170500345,
+     "clears": true
+    },
+    "pooled_sd": {
+     "sd": 0.02974894956128703,
+     "bar": 0.5728312324559074,
+     "clears": true
+    }
+   },
+   "primary_reading": "floor_sd",
+   "clears_floor": true,
+   "clears_under_all_readings": true,
+   "clears_under_any_reading": true,
+   "readings_agree": true
+  }
+ },
+ "comparator": {
+  "source": "exp68_ckpt/comparator.json",
+  "arms": {
+   "F1": {
+    "mean": 0.696,
+    "sd": 0.029664793948382628,
+    "per_seed": [
+     0.7,
+     0.74,
+     0.7,
+     0.66,
+     0.68
+    ],
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "feature_dim": 9,
+    "val_per_seed": [
+     0.7727272727272727,
+     0.8181818181818182,
+     0.8181818181818182,
+     0.7727272727272727,
+     0.8181818181818182
+    ],
+    "train_per_seed": [
+     0.625,
+     0.6477272727272727,
+     0.625,
+     0.5795454545454546,
+     0.625
+    ],
+    "train_loss_init_per_seed": [
+     0.7673923885651251,
+     0.7311852596657121,
+     0.7360910434444806,
+     0.8789803775067389,
+     0.8062439444960962
+    ],
+    "train_loss_final_per_seed": [
+     0.5839363877409179,
+     0.5839363877411777,
+     0.583936387740918,
+     0.5839363877409179,
+     0.5839363877409196
+    ],
+    "grad_norm_final_per_seed": [
+     7.4385586102324405e-09,
+     9.96299443655947e-08,
+     8.290095861547915e-10,
+     3.378759664203857e-12,
+     5.3241091360223815e-08
+    ]
+   },
+   "F2": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "per_seed": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "feature_dim": 81,
+    "val_per_seed": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "train_per_seed": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "train_loss_init_per_seed": [
+     0.835526878349725,
+     0.5848700008665131,
+     0.819950926501107,
+     0.6049894242229319,
+     0.7358036641884578
+    ],
+    "train_loss_final_per_seed": [
+     2.8711250547842657e-12,
+     1.765739070083403e-12,
+     2.52433680015841e-12,
+     1.906654127432045e-12,
+     4.726446506672019e-12
+    ],
+    "grad_norm_final_per_seed": [
+     4.418379730744772e-12,
+     3.136134854256957e-12,
+     3.2016819474879487e-12,
+     7.621927678938595e-12,
+     3.7006736292800864e-12
+    ]
+   },
+   "FA": {
+    "mean": 0.924,
+    "sd": 0.008944271909999118,
+    "per_seed": [
+     0.92,
+     0.92,
+     0.92,
+     0.94,
+     0.92
+    ],
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "feature_dim": 9,
+    "val_per_seed": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "train_per_seed": [
+     0.8863636363636364,
+     0.9090909090909091,
+     0.8863636363636364,
+     0.8863636363636364,
+     0.9090909090909091
+    ],
+    "train_loss_init_per_seed": [
+     0.8177995911006445,
+     0.6542952428112461,
+     0.6344577336805184,
+     0.8619438850816177,
+     0.49036083019490606
+    ],
+    "train_loss_final_per_seed": [
+     0.16798105290298335,
+     0.16798105718555575,
+     0.16798105510954955,
+     0.1679810532364573,
+     0.16798105169557087
+    ],
+    "grad_norm_final_per_seed": [
+     2.395603885135037e-09,
+     1.1495571628317838e-07,
+     6.792032904351868e-08,
+     2.8847577398127537e-09,
+     9.293804734660144e-10
+    ]
+   }
+  },
+  "floors": {
+   "F1": {
+    "mean": 0.4866666666666667,
+    "sd": 0.04136557881996952,
+    "per_seed": [
+     0.5,
+     0.54,
+     0.4266666666666667,
+     0.47333333333333333,
+     0.49333333333333335
+    ],
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "feature_dim": 9,
+    "val_per_seed": [
+     0.6060606060606061,
+     0.5,
+     0.5151515151515151,
+     0.5303030303030303,
+     0.5757575757575758
+    ],
+    "train_per_seed": [
+     0.5265151515151515,
+     0.5340909090909091,
+     0.5227272727272727,
+     0.5492424242424242,
+     0.5151515151515151
+    ],
+    "train_loss_init_per_seed": [
+     0.7754010496706198,
+     0.7122921687689323,
+     0.7163375274614586,
+     0.9543115389345639,
+     0.7431126493576791
+    ],
+    "train_loss_final_per_seed": [
+     0.6874586228699813,
+     0.6870209976185779,
+     0.691490730593638,
+     0.6847706690658648,
+     0.6870484833719683
+    ],
+    "grad_norm_final_per_seed": [
+     8.980325222394441e-08,
+     7.932275820342333e-11,
+     1.1168136465376187e-07,
+     6.890856896826686e-17,
+     4.856648346915133e-09
+    ]
+   },
+   "F2": {
+    "mean": 0.48533333333333334,
+    "sd": 0.038412960775701145,
+    "per_seed": [
+     0.5466666666666666,
+     0.44666666666666666,
+     0.46,
+     0.4866666666666667,
+     0.4866666666666667
+    ],
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "feature_dim": 81,
+    "val_per_seed": [
+     0.6060606060606061,
+     0.5151515151515151,
+     0.4696969696969697,
+     0.5606060606060606,
+     0.6060606060606061
+    ],
+    "train_per_seed": [
+     0.6363636363636364,
+     0.5795454545454546,
+     0.5984848484848485,
+     0.6060606060606061,
+     0.6022727272727273
+    ],
+    "train_loss_init_per_seed": [
+     0.9240806958060328,
+     0.8479800524143044,
+     0.8642102995149405,
+     0.8616512880309778,
+     0.7772240136163783
+    ],
+    "train_loss_final_per_seed": [
+     0.6303356278032024,
+     0.6513067875829407,
+     0.653371050002503,
+     0.63787930709293,
+     0.6541399196725972
+    ],
+    "grad_norm_final_per_seed": [
+     2.5497147565897174e-07,
+     3.073138871641125e-07,
+     1.711661880472945e-06,
+     3.6799196850164e-07,
+     9.87982517468358e-07
+    ]
+   },
+   "FA": {
+    "mean": 0.512,
+    "sd": 0.020221001184137454,
+    "per_seed": [
+     0.5133333333333333,
+     0.5466666666666666,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "feature_dim": 9,
+    "val_per_seed": [
+     0.5757575757575758,
+     0.5,
+     0.5,
+     0.5,
+     0.4393939393939394
+    ],
+    "train_per_seed": [
+     0.553030303030303,
+     0.5340909090909091,
+     0.5227272727272727,
+     0.5075757575757576,
+     0.5189393939393939
+    ],
+    "train_loss_init_per_seed": [
+     0.8927602702922857,
+     0.6965696230649471,
+     0.7164957922950933,
+     0.885565530811069,
+     0.7237728323809751
+    ],
+    "train_loss_final_per_seed": [
+     0.6858047338106391,
+     0.6880003552928521,
+     0.6915052130544992,
+     0.6899592479832929,
+     0.688215806461473
+    ],
+    "grad_norm_final_per_seed": [
+     3.3588579898074703e-06,
+     5.509519529796358e-07,
+     1.9776208863344909e-07,
+     3.5628235843134765e-07,
+     8.109228578866179e-08
+    ]
+   }
+  },
+  "floor_clearance": {
+   "F1": {
+    "arm_mean": 0.696,
+    "floor_mean": 0.4866666666666667,
+    "delta_over_floor": 0.20933333333333326,
+    "sd_units_over_floor_using_floor_sd": 5.060568214079386,
+    "readings": {
+     "floor_sd": {
+      "sd": 0.04136557881996952,
+      "bar": 0.5693978243066058,
+      "clears": true
+     },
+     "arm_sd": {
+      "sd": 0.029664793948382628,
+      "bar": 0.5459962545634319,
+      "clears": true
+     },
+     "pooled_sd": {
+      "sd": 0.035993826631181565,
+      "bar": 0.5586543199290298,
+      "clears": true
+     }
+    },
+    "primary_reading": "floor_sd",
+    "clears_floor": true,
+    "clears_under_all_readings": true,
+    "clears_under_any_reading": true,
+    "readings_agree": true
+   },
+   "F2": {
+    "arm_mean": 1.0,
+    "floor_mean": 0.48533333333333334,
+    "delta_over_floor": 0.5146666666666666,
+    "sd_units_over_floor_using_floor_sd": 13.398255595862032,
+    "readings": {
+     "floor_sd": {
+      "sd": 0.038412960775701145,
+      "bar": 0.5621592548847356,
+      "clears": true
+     },
+     "arm_sd": {
+      "sd": 0.0,
+      "bar": 0.48533333333333334,
+      "clears": true
+     },
+     "pooled_sd": {
+      "sd": 0.027162065049951143,
+      "bar": 0.5396574634332356,
+      "clears": true
+     }
+    },
+    "primary_reading": "floor_sd",
+    "clears_floor": true,
+    "clears_under_all_readings": true,
+    "clears_under_any_reading": true,
+    "readings_agree": true
+   },
+   "FA": {
+    "arm_mean": 0.924,
+    "floor_mean": 0.512,
+    "delta_over_floor": 0.41200000000000003,
+    "sd_units_over_floor_using_floor_sd": 20.374856627929834,
+    "readings": {
+     "floor_sd": {
+      "sd": 0.020221001184137454,
+      "bar": 0.5524420023682749,
+      "clears": true
+     },
+     "arm_sd": {
+      "sd": 0.008944271909999118,
+      "bar": 0.5298885438199983,
+      "clears": true
+     },
+     "pooled_sd": {
+      "sd": 0.01563471919941141,
+      "bar": 0.5432694383988228,
+      "clears": true
+     }
+    },
+    "primary_reading": "floor_sd",
+    "clears_floor": true,
+    "clears_under_all_readings": true,
+    "clears_under_any_reading": true,
+    "readings_agree": true
+   }
+  },
+  "comparator_minus_circuit": {
+   "F1": 0.03933333333333333,
+   "F2": 0.04133333333333333,
+   "FA": 0.005333333333333412
+  },
+  "comparator_matches_or_exceeds_circuit": {
+   "F1": true,
+   "F2": true,
+   "FA": true
+  },
+  "comparator_matches_or_exceeds_all_arms": true,
+  "tie_margin": 0.02,
+  "F2_minus_FA": 0.07599999999999996,
+  "F2_minus_F1": 0.30400000000000005,
+  "features": "per referent: u = (1, cos t, sin t) for F1/FA (d = 3) and u(theta0) (x) u(theta1) for F2 (d = 9); joint by OUTER PRODUCT ordered AGENT-FIRST -> 9 dims for F1/FA, 81 for F2",
+  "frame_check": {
+   "F1": {
+    "dim": 9,
+    "twin_pairs_checked": 150,
+    "wire_frame_identical_twin_pairs": 150,
+    "agent_frame_identical_twin_pairs": 0,
+    "wire_frame_is_a_null_instrument": true
+   },
+   "FA": {
+    "dim": 9,
+    "twin_pairs_checked": 150,
+    "wire_frame_identical_twin_pairs": 150,
+    "agent_frame_identical_twin_pairs": 0,
+    "wire_frame_is_a_null_instrument": true
+   },
+   "F2": {
+    "dim": 81,
+    "twin_pairs_checked": 150,
+    "wire_frame_identical_twin_pairs": 150,
+    "agent_frame_identical_twin_pairs": 0,
+    "wire_frame_is_a_null_instrument": true
+   }
+  },
+  "optimiser": {
+   "fit_seed_base": 68001,
+   "per_seed_init": "FIT_SEED + seed",
+   "restarts": 0,
+   "adam_steps": 3000,
+   "adam_lr": 0.05,
+   "lbfgs_rounds": 10,
+   "lbfgs_max_iter": 200,
+   "line_search": "strong_wolfe",
+   "batching": "FULL batch",
+   "dtype": "float64",
+   "model_selection": "best HARD argmax accuracy on the val split",
+   "reported_accuracy": "HARD argmax on held-out test",
+   "seeds_vary": "optimiser INITIALISATION ONLY -- doc 54 SS6.2's rule for the circuit arms, applied identically here. The features are frozen constants, so the five fits sit on ONE geometry and the spread is init spread, not data spread. Unlike exp67, whose five fits sat on five seed-indexed angle draws."
+  },
+  "registered_prediction": "doc 54 SS8: the classical comparator MATCHES OR EXCEEDS every arm -- registered so it cannot become a post-hoc surprise, and so no exp68 number can be read as a quantum result",
+  "arbiter_row": "SS8.1 row 1 -- F2 clears floor",
+  "arbiter_reading_SS8_1": "F2 CLEARS ITS FLOOR -- doc 54 SS8.1 row 1: width converts at the circuit level and the reading is doc 54 SS9's, not SS8.1's. The comparator's role here is the GUARD only: it matches or exceeds F2 (1.0000 vs 0.9587, +0.0413), so no exp68 number may be read as a quantum result.",
+  "arbiter_reading_SS8_2": "width_adds_information is FALSE on the circuit (F2 - FA = +0.0400 against a 0.06 bar), so doc 54 SS8.2's blocking clause -- which guards against a circuit gap LARGER than the information gap -- has nothing to arbitrate. The comparator's own F2 - FA gap on the IDENTICAL features is +0.0760, which CLEARS the same bar. This is SS8.2 running in the direction the clause does not cover, and it is the sharper reading of the two: the added information is REAL and linearly extractable at +0.0760, and the circuit converts only +0.0400 of it. The gap between the two is not an information deficit and cannot be attributed to sample size -- the comparator ran on the SAME items, which is exactly the case doc 54 SS14 registered in advance. It sits on the CONVERSION side, alongside exp67's arity finding (doc 53 SS7.1.3), and it is doc 54 SS11.1's 'supply proved, conversion absent' spine appearing a third time.",
+  "SS8_2_blocked_the_claim": false,
+  "function_class_qualifier": "doc 54 SS8.3: 'identical features' makes the comparator a RESTRICTION of the circuit's conditional function class -- the circuit carries one 9-dim (or 81-dim) form PER VERB AND EVENT DIRECTION, the comparator carries one. A comparator loss on a cell is therefore not automatically a circuit win, and this qualifier travels with every number in this file."
+ },
+ "bounds_context_only_doc54_SS12": {
+  "note": "doc 54 SS7: NO criterion is read against any bound. doc 52 SS2.2 removed a 9-dim-per-referent bound's standing as an instrument on a 24-noun inventory. These numbers exist to show the registered prediction structure and to arm SS9.2's bug-hunt row, and for nothing else.",
+  "per_twin_bounds": {
+   "F1": 0.7625,
+   "F2": 1.0,
+   "FA": 0.925
+  },
+  "bug_hunt": {
+   "F1": {
+    "per_twin_bound_doc54_SS12": 0.7625,
+    "measured_mean": 0.6566666666666666,
+    "excess": -0.10583333333333333,
+    "margin": 0.06,
+    "can_fire": true,
+    "fires": false
+   },
+   "F2": {
+    "per_twin_bound_doc54_SS12": 1.0,
+    "measured_mean": 0.9586666666666667,
+    "excess": -0.04133333333333333,
+    "margin": 0.06,
+    "can_fire": false,
+    "fires": false,
+    "note": "F2's per-twin bound is 1.0000, so no measured accuracy can exceed it by more than 0 and doc 54 SS9.2's bug-hunt row CANNOT fire for this arm, as the registration states."
+   },
+   "FA": {
+    "per_twin_bound_doc54_SS12": 0.925,
+    "measured_mean": 0.9186666666666666,
+    "excess": -0.006333333333333413,
+    "margin": 0.06,
+    "can_fire": true,
+    "fires": false
+   }
+  },
+  "bug_hunt_triggered": false
+ },
+ "verdicts": {
+  "width_registered_lifts": true,
+  "width_adds_information": false,
+  "anchor_real_category_binds": true,
+  "floor_gate_all_arms": true,
+  "floor_gate_per_arm": {
+   "F1": true,
+   "F2": true,
+   "FA": true
+  },
+  "bug_hunt_triggered": false,
+  "run_is_interpretable": true,
+  "criterion_bars": {
+   "delta_bar": 0.06,
+   "floor_sd_multiple": 2.0,
+   "anchor_absolute": 0.65,
+   "threshold_provenance": "0.06 ~ 2 x the binomial SD at n_test = 300 (sqrt(0.25/300) = 0.02887), the bar exp61 SS8 and exp67 SS4 used. INHERITED, not chosen for doc 54, and the reason exp68's n_test is deliberately 300."
+  },
+  "measured": {
+   "F2_minus_F1": 0.30200000000000005,
+   "F2_minus_FA": 0.040000000000000036,
+   "F1_mean": 0.6566666666666666,
+   "F2_mean": 0.9586666666666667,
+   "FA_mean": 0.9186666666666666
+  },
+  "registered_expectations_doc54_SS9_1": {
+   "width_registered_lifts": "NO DIRECTION REGISTERED (doc 54 SS6.3/SS9.1)",
+   "width_adds_information": "expected FALSE",
+   "anchor_real_category_binds": "expected TRUE"
+  },
+  "outcome_row_doc54_SS9_2": "row2_reparameterisation_not_information"
+ },
+ "meta_notes": {
+  "headline": "doc 54 SS9.2 row that fired: row2_reparameterisation_not_information. width_registered_lifts = True (F2 - F1 = +0.3020 vs a 0.06 bar), width_adds_information = False (F2 - FA = +0.0400), anchor_real_category_binds = True (FA 0.9187, floor 0.5133, bar max(floor + 2 SD, 0.65) = 0.6500). Held-out means over 5 seeds: F1 0.6567 +- 0.0332, F2 0.9587 +- 0.0209, FA 0.9187 +- 0.0018, against matched shuffled floors 0.4920 / 0.5007 / 0.5133.",
+  "registered_outcome_row": "F2 LIFTS OVER F1 BUT NOT OVER FA -- WIDTH IS A REPARAMETERISATION WIN, NOT AN INFORMATION WIN. The model was already extracting what the second feature adds, via the angle. Reported as the third negative in the ledger. MAY NOT BE REPORTED AS 'WIDTH WORKS'.",
+  "matched_floors_departure_from_SS13": "doc 54 SS13 costed '~20 runs (4 arms x 5 seeds)', treating S-shuffle as ONE arm. This run used THREE floor arms -- S-shuffle-F1, S-shuffle-F2, S-shuffle-FA -- for 30 runs, because doc 54 SS7 states the gate twice as 'its MATCHED S-shuffle floor' and 'ITS matched S-shuffle mean'. The floor is architecture-dependent here in a way it was not in exp61, where all arms shared one circuit family: F2 is a 4-wire circuit with an 81-dimensional joint class against ~190 constraints, which is exactly doc 52 SS2.2's interpolation regime, and the measured floors bear it out (F2's shuffled floor 0.5007 vs F1's 0.4920 and FA's 0.5133). Borrowing the 2-wire floor for F2 would have been an unmatched comparator -- the exp44 failure class -- and would have made F2's gate the easiest instead of the hardest. SS13 is a cost estimate; SS7 is a frozen criterion, so SS7 governs. Extra floors can only make gates stricter; they cannot manufacture a positive.",
+  "floor_reading_sensitivity": "doc 54 SS7 says '>= 2 SD' without naming whose SD, so all three readings are computed (floor's own sd -- PRIMARY, arm's sd, pooled). Agreement per arm: F1 True, F2 True, FA True. All readings agree, so no verdict depends on the choice.",
+  "anchor": "doc 50 Part A's T = 1 anchor -- SB with a REAL semantic category -- delivered here for the first time. FA reaches 0.9187 against a matched shuffled floor of 0.5133 (+0.4053, 9.6 floor-SDs) and the 0.65 absolute bar. doc 54 SS9.1 registered this as expected TRUE and doc 54 SS9.2 row 5 as the thing that would invalidate the whole run. Verdict: ANCHOR HOLDS.",
+  "comparator_arbiter": "F2 CLEARS ITS FLOOR -- doc 54 SS8.1 row 1: width converts at the circuit level and the reading is doc 54 SS9's, not SS8.1's. The comparator's role here is the GUARD only: it matches or exceeds F2 (1.0000 vs 0.9587, +0.0413), so no exp68 number may be read as a quantum result.",
+  "comparator_SS8_2": "width_adds_information is FALSE on the circuit (F2 - FA = +0.0400 against a 0.06 bar), so doc 54 SS8.2's blocking clause -- which guards against a circuit gap LARGER than the information gap -- has nothing to arbitrate. The comparator's own F2 - FA gap on the IDENTICAL features is +0.0760, which CLEARS the same bar. This is SS8.2 running in the direction the clause does not cover, and it is the sharper reading of the two: the added information is REAL and linearly extractable at +0.0760, and the circuit converts only +0.0400 of it. The gap between the two is not an information deficit and cannot be attributed to sample size -- the comparator ran on the SAME items, which is exactly the case doc 54 SS14 registered in advance. It sits on the CONVERSION side, alongside exp67's arity finding (doc 53 SS7.1.3), and it is doc 54 SS11.1's 'supply proved, conversion absent' spine appearing a third time.",
+  "comparator_guard": "doc 54 SS8's registered prediction was that the comparator MATCHES OR EXCEEDS every arm. Measured, comparator minus circuit: F1 +0.0393, F2 +0.0413, FA +0.0053 (tie margin 0.02). Verdict True. doc 52 SS1 already proved the product-state kernel factorises and is classically O(n) for this encoding family, so nothing in exp68 can be read as quantum advantage whichever way these deltas point.",
+  "instrument_corroboration": "A consistency check, NOT a criterion (doc 54 SS7 reads nothing against a bound). The comparator lands on doc 54 SS12's INDEPENDENTLY computed per-twin bounds without ever being fitted to them: LR(F1) 0.6960 vs bound 0.7625, LR(F2) 1.0000 vs 1.0000, LR(FA) 0.9240 vs 0.9250. The bounds come from a MAX-FS search over the same per-referent feature maps (instrument_sb_bounds.py); the comparator comes from gradient descent on held-out-split data. Two unrelated computations agreeing to within 0.0665 on the largest discrepancy is evidence that the feature frame and the bound instrument describe the same object. It also confirms that the F1 arm is genuinely information-starved by the geometry and not by the optimiser: the best linear model on F1's features cannot reach what F2's reach trivially.",
+  "floors_are_real_floors": "The shuffled floors sit at chance for every arm INCLUDING the 81-dimensional one: circuit floors 0.4920 (F1) / 0.5007 (F2) / 0.5133 (FA), comparator floors 0.4867 / 0.4853 / 0.5120. This matters because doc 52 SS2.2 showed that a 9-dim-per-referent (81-dim joint) class INTERPOLATES random labellings on this inventory -- and it does here too, on TRAIN: the F2 comparator drives its training loss to 0.6454 on shuffled labels. What it cannot do is carry that interpolation to unseen PAIRINGS. So the held-out split is doing the work doc 52 SS2.2 warned the bound could not, and the floor gate is a real gate rather than a formality.",
+  "bug_hunt_row": "doc 54 SS9.2's last row: any arm exceeding its per-twin bound by more than 0.06 is a BUG HUNT, not a result. F1 0.6567 vs bound 0.7625 (excess -0.1058), FA 0.9187 vs 0.9250 (-0.0063). F2's bound is 1.0000 so the row cannot fire for it, as doc 54 states. Triggered: False.",
+  "model_selection": "doc 54 SS14's checklist entry, answered with numbers: selection is on in-distribution val ONLY and the val-minus-held-out gap is reported per seed. Mean gaps: F1 +0.1388, F2 +0.0353, FA +0.0813.",
+  "stop_condition": "doc 54 SS11, verbatim in intent: exp68 completes the three-lever enquiry ledger -- frequency K (exp61/62/63), readout arity M (exp67), width (exp68) -- and is the LAST experiment before the write-up, REGARDLESS OF ITS OUTCOME. A positive is a finding for the write-up; a negative is the third cell of a coherent ledger and is equally a finding. Neither licenses a fourth lever, a follow-up rung, or 'one more seed'.",
+  "scope": "doc 54 SS10, and no outcome above escapes it. NOT quantum advantage. NOT novel-filler binding -- the split is over unseen PAIRINGS, not unseen nouns, which is the price of doc 54 SS4.3's legitimate inventory-wide PCA fit. NOT 'meaning' in general: one category, one task family, 24 nouns, 2 referents, simulation. NOT a statement about the AraVec model: PC1/PC2 over 44 words explain a small share of its variance. The doc 54 SS12 bounds bound THIS feature map and THIS inventory only.",
+  "provenance": "Aggregation only: nothing was trained here. 30 runs from exp68_ckpt, dataset sha 9a0b990088a8, comparator from exp68_ckpt/comparator.json. Total training wall time 25066 s across the runs as executed."
+ },
+ "git_note": {
+  "exp42_paths": [],
+  "n_untracked": 252
+ },
+ "wall_time_sec": 0.053639888763427734
+}

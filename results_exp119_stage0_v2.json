@@ -1,0 +1,154 @@
+{
+ "doc": "119 (984ae87, A0 c049911)",
+ "c_conditioning_from_exp120": "lr=0.1,init=1.0",
+ "tasks": {
+  "word_order": {
+   "n": 120,
+   "classes": [
+    "WordOrder_SVO",
+    "WordOrder_VSO"
+   ],
+   "structure_original": {
+    "n|n.r @ s @ n.l|n": 48,
+    "n|n.r @ s": 21,
+    "s @ n.l|n": 34,
+    "s @ n.l @ n.l|n|n": 17
+   },
+   "structure_improved": {
+    "n|n.r @ s @ n.l|n": 55,
+    "s @ n.l @ n.l|n|n": 56,
+    "n|n.r @ s": 2,
+    "s @ n.l|n": 7
+   },
+   "collisions_original": 2,
+   "collisions_improved": 2,
+   "agreement_disagreements_improved": 15,
+   "e1_box_stats": {
+    "factorised": 334,
+    "surface_kept": 15,
+    "unmatched": 2
+   },
+   "evaluator_failures": 2
+  },
+  "tense": {
+   "n": 100,
+   "classes": [
+    "Tense_Past",
+    "Tense_Pres"
+   ],
+   "structure_original": {
+    "s @ n.l @ n.l|n|n": 32,
+    "s @ n.l|n": 48,
+    "n|n.r @ s": 20
+   },
+   "structure_improved": {
+    "s @ n.l @ n.l|n|n": 88,
+    "s @ n.l|n": 12
+   },
+   "collisions_original": 3,
+   "collisions_improved": 0,
+   "agreement_disagreements_improved": 13,
+   "e1_box_stats": {
+    "factorised": 279,
+    "surface_kept": 8,
+    "unmatched": 1
+   },
+   "evaluator_failures": 2
+  },
+  "wsd_حمل": {
+   "n": 50,
+   "classes": [
+    "WSD_حمل_carry",
+    "WSD_حمل_convey"
+   ],
+   "structure_original": {
+    "n|n.r @ s @ n.l|n": 40,
+    "n|n.r @ s": 10
+   },
+   "structure_improved": {
+    "n|n.r @ s @ n.l|n": 41,
+    "s @ n.l @ n.l|n|n": 8,
+    "s @ n.l|n": 1
+   },
+   "collisions_original": 3,
+   "collisions_improved": 4,
+   "agreement_disagreements_improved": 0,
+   "e1_box_stats": {
+    "factorised": 139,
+    "surface_kept": 10
+   },
+   "evaluator_failures": 1
+  },
+  "wsd_رفع": {
+   "n": 34,
+   "classes": [
+    "WSD_رفع_file",
+    "WSD_رفع_lift"
+   ],
+   "structure_original": {
+    "n|n.r @ s": 23,
+    "n|n.r @ s @ n.l|n": 11
+   },
+   "structure_improved": {
+    "s @ n.l|n": 4,
+    "n|n.r @ s @ n.l|n": 26,
+    "s @ n.l @ n.l|n|n": 4
+   },
+   "collisions_original": 10,
+   "collisions_improved": 0,
+   "agreement_disagreements_improved": 2,
+   "e1_box_stats": {
+    "factorised": 97,
+    "surface_kept": 1
+   },
+   "evaluator_failures": 1
+  },
+  "wsd_ضرب": {
+   "n": 50,
+   "classes": [
+    "WSD_ضرب_exemplify",
+    "WSD_ضرب_strike"
+   ],
+   "structure_original": {
+    "n|n.r @ s": 33,
+    "n|n.r @ s @ n.l|n": 17
+   },
+   "structure_improved": {
+    "n|n.r @ s @ n.l|n": 35,
+    "s @ n.l|n": 6,
+    "s @ n.l @ n.l|n|n": 7,
+    "n|n.r @ s": 2
+   },
+   "collisions_original": 4,
+   "collisions_improved": 0,
+   "agreement_disagreements_improved": 0,
+   "e1_box_stats": {
+    "factorised": 142
+   },
+   "evaluator_failures": 1
+  },
+  "wsd_قطع": {
+   "n": 50,
+   "classes": [
+    "WSD_قطع_cut",
+    "WSD_قطع_sever"
+   ],
+   "structure_original": {
+    "n|n.r @ s": 47,
+    "n|n.r @ s @ n.l|n": 3
+   },
+   "structure_improved": {
+    "s @ n.l @ n.l|n|n": 4,
+    "n|n.r @ s @ n.l|n": 43,
+    "s @ n.l|n": 3
+   },
+   "collisions_original": 40,
+   "collisions_improved": 0,
+   "agreement_disagreements_improved": 0,
+   "e1_box_stats": {
+    "factorised": 147
+   },
+   "evaluator_failures": 1
+  }
+ }
+}

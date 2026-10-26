@@ -1,0 +1,169 @@
+{
+ "experiment": "exp57",
+ "spec": "qnlp_private_docs/43_exp57_mechanism_and_compressed_aravec.md (FROZEN)",
+ "aggregated_from": "exp57_ckpt (35 checkpoints, 7 conditions x 5 seeds, written 2026-08-19)",
+ "platform": "macOS-26.5.2-arm64-arm-64bit",
+ "python": "3.12.13",
+ "per_condition": {
+  "M-tight": {
+   "mean": 0.8566666666666667,
+   "sd": 0.03399346342395189,
+   "per_seed": [
+    0.8133333333333334,
+    0.8333333333333334,
+    0.8733333333333333,
+    0.9,
+    0.8633333333333333
+   ],
+   "gate_met": [
+    "True",
+    "True",
+    "True",
+    "True",
+    "True"
+   ]
+  },
+  "M-wide": {
+   "mean": 0.5773333333333334,
+   "sd": 0.03646916505762094,
+   "per_seed": [
+    0.5733333333333334,
+    0.6333333333333333,
+    0.5566666666666666,
+    0.5366666666666666,
+    0.5866666666666667
+   ],
+   "gate_met": [
+    "False",
+    "False",
+    "False",
+    "False",
+    "False"
+   ]
+  },
+  "M-wide-R8": {
+   "mean": 0.534,
+   "sd": 0.04323064756499593,
+   "per_seed": [
+    0.5666666666666667,
+    0.52,
+    0.47,
+    0.58,
+    0.5333333333333333
+   ],
+   "gate_met": [
+    "False",
+    "False",
+    "False",
+    "False",
+    "False"
+   ]
+  },
+  "M-wide-ROT": {
+   "mean": 0.52,
+   "sd": 0.02357022603955159,
+   "per_seed": [
+    0.5533333333333333,
+    0.51,
+    0.49,
+    0.5166666666666667,
+    0.53
+   ],
+   "gate_met": [
+    "False",
+    "False",
+    "False",
+    "False",
+    "False"
+   ]
+  },
+  "M-tight-R8": {
+   "mean": 0.8686666666666667,
+   "sd": 0.019522067285795076,
+   "per_seed": [
+    0.8966666666666666,
+    0.8633333333333333,
+    0.85,
+    0.8533333333333334,
+    0.88
+   ],
+   "gate_met": [
+    "True",
+    "True",
+    "True",
+    "True",
+    "True"
+   ]
+  },
+  "C-AraVec": {
+   "mean": 0.8286666666666667,
+   "sd": 0.031055505863605642,
+   "per_seed": [
+    0.78,
+    0.8333333333333334,
+    0.83,
+    0.8666666666666667,
+    0.8333333333333334
+   ],
+   "gate_met": [
+    "True",
+    "True",
+    "True",
+    "True",
+    "True"
+   ]
+  },
+  "C-AraVec-Pw": {
+   "mean": 0.8546666666666667,
+   "sd": 0.014452988925785882,
+   "per_seed": [
+    0.8533333333333334,
+    0.85,
+    0.8366666666666667,
+    0.8566666666666667,
+    0.8766666666666667
+   ],
+   "gate_met": [
+    "True",
+    "True",
+    "True",
+    "True",
+    "True"
+   ]
+  }
+ },
+ "instrument_gate": {
+  "M_tight_minus_M_wide": 0.2793333333333333,
+  "bar": 0.15,
+  "passed": true
+ },
+ "rescue_fractions": {
+  "M-wide-R8": -0.15513126491646778,
+  "M-wide-ROT": -0.2052505966587113
+ },
+ "q2_contrasts": {
+  "C_AraVec_vs_M_tight": {
+   "mean_paired_diff": -0.028,
+   "one_sided_p": 0.9879506024698765
+  },
+  "C_AraVec_vs_C_AraVec_Pw": {
+   "mean_paired_diff": -0.026,
+   "one_sided_p": 0.976451177441128
+  },
+  "method": "per-item correctness averaged over 5 seeds per condition; one-sided paired sign-flip permutation, 20000 draws, seed 57900"
+ },
+ "verdicts": {
+  "readout_capacity_explains": false,
+  "optimisation_explains": false,
+  "spread_mechanism_open": true,
+  "semantics_helps_when_conditioned": false
+ },
+ "meta_notes": {
+  "repair": "results file written 2026-08-25 from checkpoints untouched since 2026-08-19; the third instance of the results-without-aggregator gap-class (doc 49 SS11.1, doc 53 SS7.3). Criteria computed from doc 43's frozen bars, not asserted.",
+  "reading": "doc 43 SS6's consequence table applies to whichever verdicts hold."
+ },
+ "git_note": {
+  "exp42_paths": [],
+  "n_untracked": 245
+ }
+}

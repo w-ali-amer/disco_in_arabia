@@ -1,0 +1,104 @@
+{
+ "experiment": "exp62-A Stage A validation",
+ "design_doc": "qnlp_private_docs/48_exp62_selection_optimisation_width.md (19e69d2, FROZEN incl. SS8 amendment)",
+ "dataset_sha256": "b83a654e57cf80b740653b48435e3a7eb0c6c310cfba32e909ca2ed371221c4c",
+ "split_counts": {
+  "train": 240,
+  "val_indist": 60,
+  "val_novel": 108,
+  "test": 192
+ },
+ "per_novel_inventory": {
+  "test": {
+   "V1_bag_of_embeddings": {
+    "test_accuracy": 0.5,
+    "twin_features_identical": true,
+    "passed": true
+   },
+   "V2_ngram": {
+    "train_nouns_val_accuracy": 1.0,
+    "heldout_accuracy": 0.5,
+    "n_features": 201,
+    "V2H_bar": 0.55,
+    "V2H_passed": true
+   },
+   "V3_balance": {
+    "verb_p": 1.0,
+    "bearer_wire_p": 1.0,
+    "order_flag_p": 1.0,
+    "wire0_noun_p": 1.0,
+    "agent_noun_p_DESCRIPTIVE": 9.15728293678574e-94,
+    "n_yes": 246,
+    "n_no": 246,
+    "classes_balanced": true,
+    "min_p": 1.0,
+    "passed": true
+   },
+   "V4_dedup": {
+    "n_distinct_circuits": 492,
+    "n_items": 492,
+    "n_contradictory": 0,
+    "passed": true
+   },
+   "V6_token_identity_probe": {
+    "train_nouns_val_accuracy": 1.0,
+    "heldout_accuracy": 0.5,
+    "must_succeed_on_train": true,
+    "must_fail_on_heldout": true,
+    "passed": true
+   }
+  },
+  "val_novel": {
+   "V1_bag_of_embeddings": {
+    "test_accuracy": 0.5,
+    "twin_features_identical": true,
+    "passed": true
+   },
+   "V2_ngram": {
+    "train_nouns_val_accuracy": 1.0,
+    "heldout_accuracy": 0.5,
+    "n_features": 201,
+    "V2H_bar": 0.55,
+    "V2H_passed": true
+   },
+   "V3_balance": {
+    "verb_p": 1.0,
+    "bearer_wire_p": 1.0,
+    "order_flag_p": 1.0,
+    "wire0_noun_p": 1.0,
+    "agent_noun_p_DESCRIPTIVE": 1.4400594286048086e-77,
+    "n_yes": 204,
+    "n_no": 204,
+    "classes_balanced": true,
+    "min_p": 1.0,
+    "passed": true
+   },
+   "V4_dedup": {
+    "n_distinct_circuits": 408,
+    "n_items": 408,
+    "n_contradictory": 0,
+    "passed": true
+   },
+   "V6_token_identity_probe": {
+    "train_nouns_val_accuracy": 1.0,
+    "heldout_accuracy": 0.5,
+    "must_succeed_on_train": true,
+    "must_fail_on_heldout": true,
+    "passed": true
+   }
+  }
+ },
+ "gates": {
+  "V1@test": true,
+  "V2H@test": true,
+  "V3@test": true,
+  "V4@test": true,
+  "V6@test": true,
+  "V1@val_novel": true,
+  "V2H@val_novel": true,
+  "V3@val_novel": true,
+  "V4@val_novel": true,
+  "V6@val_novel": true
+ },
+ "kill_gate_passed": true
+}

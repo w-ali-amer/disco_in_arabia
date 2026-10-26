@@ -1,0 +1,548 @@
+{
+ "experiment": "exp45a",
+ "spec": "qnlp_private_docs/28_exp45_two_qubit_referent_multihop.md (commit cb19b4f, FROZEN)",
+ "question": "does a 2-hop bridge become representable with a two-qubit register per referent?",
+ "not_an_exp43a_extension": "doc 24 SS9 froze exp43a's budget; this is a NEW certificate for a DIFFERENT model class. results_exp43a.json stands as computed and is neither recomputed nor amended.",
+ "platform": "macOS-26.5.2-arm64-arm-64bit",
+ "python": "3.12.13",
+ "torch": "2.13.0",
+ "family_dataset_sha256": "2e6650d6a2ea8e11c8eaee3a0b4d7c275c985203dbb2318675e3fb78abc4535a",
+ "family_n_items": 200,
+ "embeddings_sha256": "00c1ecffcaf05b38df082f8a3cbed1d013bddb3e39bc00adf1c2513b4ea674ac",
+ "param_counts": {
+  "arm": "A4",
+  "per_verb": 33,
+  "n_verbs": 6,
+  "readout_shared": 66,
+  "total_trained": 264,
+  "wires_per_referent": 2
+ },
+ "budget": {
+  "n_restarts": 40,
+  "optimizer": "Adam",
+  "lr": 0.02,
+  "max_epochs": 500,
+  "batch_size": 1,
+  "early_stop_train_acc": 0.99,
+  "lbfgs_polish_top": 3,
+  "lbfgs_max_iter": 300,
+  "restart_seeds": "45000 + restart_index"
+ },
+ "restarts": [
+  {
+   "restart": 8,
+   "seed": 45008,
+   "best_train_acc_adam": 0.94,
+   "best_epoch": 467,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "aborted_nonfinite": false,
+   "nonfinite_detail": null,
+   "wall_sec": 2053.5
+  },
+  {
+   "restart": 36,
+   "seed": 45036,
+   "best_train_acc_adam": 0.865,
+   "best_epoch": 356,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "aborted_nonfinite": false,
+   "nonfinite_detail": null,
+   "wall_sec": 1706.7
+  },
+  {
+   "restart": 29,
+   "seed": 45029,
+   "best_train_acc_adam": 0.86,
+   "best_epoch": 490,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "aborted_nonfinite": false,
+   "nonfinite_detail": null,
+   "wall_sec": 1548.9
+  },
+  {
+   "restart": 31,
+   "seed": 45031,
+   "best_train_acc_adam": 0.85,
+   "best_epoch": 37,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "aborted_nonfinite": false,
+   "nonfinite_detail": null,
+   "wall_sec": 1695.6
+  },
+  {
+   "restart": 37,
+   "seed": 45037,
+   "best_train_acc_adam": 0.85,
+   "best_epoch": 363,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "aborted_nonfinite": false,
+   "nonfinite_detail": null,
+   "wall_sec": 1671.9
+  },
+  {
+   "restart": 5,
+   "seed": 45005,
+   "best_train_acc_adam": 0.845,
+   "best_epoch": 77,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "aborted_nonfinite": false,
+   "nonfinite_detail": null,
+   "wall_sec": 2071.2
+  },
+  {
+   "restart": 18,
+   "seed": 45018,
+   "best_train_acc_adam": 0.84,
+   "best_epoch": 336,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "aborted_nonfinite": false,
+   "nonfinite_detail": null,
+   "wall_sec": 1670.9
+  },
+  {
+   "restart": 34,
+   "seed": 45034,
+   "best_train_acc_adam": 0.84,
+   "best_epoch": 137,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "aborted_nonfinite": false,
+   "nonfinite_detail": null,
+   "wall_sec": 1731.2
+  },
+  {
+   "restart": 0,
+   "seed": 45000,
+   "best_train_acc_adam": 0.835,
+   "best_epoch": 193,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "aborted_nonfinite": false,
+   "nonfinite_detail": null,
+   "wall_sec": 2020.5
+  },
+  {
+   "restart": 35,
+   "seed": 45035,
+   "best_train_acc_adam": 0.835,
+   "best_epoch": 198,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "aborted_nonfinite": false,
+   "nonfinite_detail": null,
+   "wall_sec": 1714.7
+  },
+  {
+   "restart": 9,
+   "seed": 45009,
+   "best_train_acc_adam": 0.83,
+   "best_epoch": 447,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "aborted_nonfinite": false,
+   "nonfinite_detail": null,
+   "wall_sec": 1881.5
+  },
+  {
+   "restart": 13,
+   "seed": 45013,
+   "best_train_acc_adam": 0.83,
+   "best_epoch": 280,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "aborted_nonfinite": false,
+   "nonfinite_detail": null,
+   "wall_sec": 1704.3
+  },
+  {
+   "restart": 33,
+   "seed": 45033,
+   "best_train_acc_adam": 0.83,
+   "best_epoch": 336,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "aborted_nonfinite": false,
+   "nonfinite_detail": null,
+   "wall_sec": 1727.2
+  },
+  {
+   "restart": 7,
+   "seed": 45007,
+   "best_train_acc_adam": 0.825,
+   "best_epoch": 116,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "aborted_nonfinite": false,
+   "nonfinite_detail": null,
+   "wall_sec": 2071.2
+  },
+  {
+   "restart": 10,
+   "seed": 45010,
+   "best_train_acc_adam": 0.825,
+   "best_epoch": 138,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "aborted_nonfinite": false,
+   "nonfinite_detail": null,
+   "wall_sec": 1888.4
+  },
+  {
+   "restart": 14,
+   "seed": 45014,
+   "best_train_acc_adam": 0.82,
+   "best_epoch": 464,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "aborted_nonfinite": false,
+   "nonfinite_detail": null,
+   "wall_sec": 1695.5
+  },
+  {
+   "restart": 16,
+   "seed": 45016,
+   "best_train_acc_adam": 0.82,
+   "best_epoch": 496,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "aborted_nonfinite": false,
+   "nonfinite_detail": null,
+   "wall_sec": 1691.5
+  },
+  {
+   "restart": 1,
+   "seed": 45001,
+   "best_train_acc_adam": 0.815,
+   "best_epoch": 351,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "aborted_nonfinite": false,
+   "nonfinite_detail": null,
+   "wall_sec": 2059.0
+  },
+  {
+   "restart": 3,
+   "seed": 45003,
+   "best_train_acc_adam": 0.815,
+   "best_epoch": 77,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "aborted_nonfinite": false,
+   "nonfinite_detail": null,
+   "wall_sec": 2055.1
+  },
+  {
+   "restart": 12,
+   "seed": 45012,
+   "best_train_acc_adam": 0.815,
+   "best_epoch": 273,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "aborted_nonfinite": false,
+   "nonfinite_detail": null,
+   "wall_sec": 1682.5
+  },
+  {
+   "restart": 39,
+   "seed": 45039,
+   "best_train_acc_adam": 0.81,
+   "best_epoch": 458,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "aborted_nonfinite": false,
+   "nonfinite_detail": null,
+   "wall_sec": 1115.8
+  },
+  {
+   "restart": 11,
+   "seed": 45011,
+   "best_train_acc_adam": 0.805,
+   "best_epoch": 107,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "aborted_nonfinite": false,
+   "nonfinite_detail": null,
+   "wall_sec": 1878.6
+  },
+  {
+   "restart": 20,
+   "seed": 45020,
+   "best_train_acc_adam": 0.805,
+   "best_epoch": 475,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "aborted_nonfinite": false,
+   "nonfinite_detail": null,
+   "wall_sec": 1675.7
+  },
+  {
+   "restart": 21,
+   "seed": 45021,
+   "best_train_acc_adam": 0.805,
+   "best_epoch": 392,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "aborted_nonfinite": false,
+   "nonfinite_detail": null,
+   "wall_sec": 1655.8
+  },
+  {
+   "restart": 30,
+   "seed": 45030,
+   "best_train_acc_adam": 0.805,
+   "best_epoch": 467,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "aborted_nonfinite": false,
+   "nonfinite_detail": null,
+   "wall_sec": 1687.0
+  },
+  {
+   "restart": 22,
+   "seed": 45022,
+   "best_train_acc_adam": 0.8,
+   "best_epoch": 432,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "aborted_nonfinite": false,
+   "nonfinite_detail": null,
+   "wall_sec": 1639.3
+  },
+  {
+   "restart": 4,
+   "seed": 45004,
+   "best_train_acc_adam": 0.795,
+   "best_epoch": 80,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "aborted_nonfinite": false,
+   "nonfinite_detail": null,
+   "wall_sec": 2098.6
+  },
+  {
+   "restart": 19,
+   "seed": 45019,
+   "best_train_acc_adam": 0.795,
+   "best_epoch": 432,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "aborted_nonfinite": false,
+   "nonfinite_detail": null,
+   "wall_sec": 1690.3
+  },
+  {
+   "restart": 32,
+   "seed": 45032,
+   "best_train_acc_adam": 0.795,
+   "best_epoch": 355,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "aborted_nonfinite": false,
+   "nonfinite_detail": null,
+   "wall_sec": 1673.4
+  },
+  {
+   "restart": 23,
+   "seed": 45023,
+   "best_train_acc_adam": 0.79,
+   "best_epoch": 238,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "aborted_nonfinite": false,
+   "nonfinite_detail": null,
+   "wall_sec": 1642.1
+  },
+  {
+   "restart": 24,
+   "seed": 45024,
+   "best_train_acc_adam": 0.79,
+   "best_epoch": 367,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "aborted_nonfinite": false,
+   "nonfinite_detail": null,
+   "wall_sec": 1451.5
+  },
+  {
+   "restart": 27,
+   "seed": 45027,
+   "best_train_acc_adam": 0.785,
+   "best_epoch": 376,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "aborted_nonfinite": false,
+   "nonfinite_detail": null,
+   "wall_sec": 1560.5
+  },
+  {
+   "restart": 38,
+   "seed": 45038,
+   "best_train_acc_adam": 0.785,
+   "best_epoch": 373,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "aborted_nonfinite": false,
+   "nonfinite_detail": null,
+   "wall_sec": 1695.1
+  },
+  {
+   "restart": 28,
+   "seed": 45028,
+   "best_train_acc_adam": 0.78,
+   "best_epoch": 490,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "aborted_nonfinite": false,
+   "nonfinite_detail": null,
+   "wall_sec": 1578.9
+  },
+  {
+   "restart": 2,
+   "seed": 45002,
+   "best_train_acc_adam": 0.775,
+   "best_epoch": 229,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "aborted_nonfinite": false,
+   "nonfinite_detail": null,
+   "wall_sec": 2038.6
+  },
+  {
+   "restart": 15,
+   "seed": 45015,
+   "best_train_acc_adam": 0.775,
+   "best_epoch": 9,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "aborted_nonfinite": false,
+   "nonfinite_detail": null,
+   "wall_sec": 1678.9
+  },
+  {
+   "restart": 26,
+   "seed": 45026,
+   "best_train_acc_adam": 0.775,
+   "best_epoch": 429,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "aborted_nonfinite": false,
+   "nonfinite_detail": null,
+   "wall_sec": 1433.3
+  },
+  {
+   "restart": 6,
+   "seed": 45006,
+   "best_train_acc_adam": 0.77,
+   "best_epoch": 225,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "aborted_nonfinite": false,
+   "nonfinite_detail": null,
+   "wall_sec": 2040.1
+  },
+  {
+   "restart": 25,
+   "seed": 45025,
+   "best_train_acc_adam": 0.77,
+   "best_epoch": 304,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "aborted_nonfinite": false,
+   "nonfinite_detail": null,
+   "wall_sec": 1450.4
+  },
+  {
+   "restart": 17,
+   "seed": 45017,
+   "best_train_acc_adam": 0.75,
+   "best_epoch": 53,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "aborted_nonfinite": false,
+   "nonfinite_detail": null,
+   "wall_sec": 1686.6
+  }
+ ],
+ "lbfgs_polish": [
+  {
+   "restart": 8,
+   "train_acc_after_lbfgs": 1.0,
+   "final_loss": 0.4023929536342621,
+   "train_acc_before": 0.94
+  },
+  {
+   "restart": 36,
+   "train_acc_after_lbfgs": 0.99,
+   "final_loss": 0.47437870502471924,
+   "train_acc_before": 0.865
+  },
+  {
+   "restart": 29,
+   "train_acc_after_lbfgs": 1.0,
+   "final_loss": 0.4813488721847534,
+   "train_acc_before": 0.86
+  }
+ ],
+ "verdicts": {
+  "bridge_representable_2q": true,
+  "bridge_unrepresentable_2q_proved": false,
+  "representability_2q_open": false,
+  "best_train_acc_overall": 1.0,
+  "target": 0.99
+ },
+ "exp43a_reference": {
+  "best_train_acc": 0.955,
+  "target": 0.99,
+  "verdict": "representability_open = true",
+  "comparison_guard": "doc 28 SS4, frozen BEFORE any number existed: a higher best-train than exp43a's 0.955 is DESCRIPTIVE ONLY -- the runs differ in optimisation landscape as well as model class, and exp43a's 0.955 is a budget-limited FLOOR, not a ceiling. representability_2q_open is NOT evidence against the class; it reproduces exp43a's own ambiguity."
+ },
+ "meta_notes": {
+  "ansatz_caveat": "A4 = Circuit4(4 wires, 3 layers) = 33 params/verb is NOT universal on SU(16) (255 params). exp43a used a provably universal KAK form for its 1-qubit certificate precisely for this reason. A failure to certify is ambiguous between 'the two-qubit register does not make the bridge representable' and 'this ansatz is too small', and must never be reported as the former alone.",
+  "comparison_guard": "doc 28 SS4, frozen BEFORE any number existed: a higher best-train than exp43a's 0.955 is DESCRIPTIVE ONLY -- the runs differ in optimisation landscape as well as model class, and exp43a's 0.955 is a budget-limited FLOOR, not a ceiling. representability_2q_open is NOT evidence against the class; it reproduces exp43a's own ambiguity."
+ },
+ "git_note": {
+  "exp42_paths": [],
+  "n_untracked": 10
+ },
+ "wall_time_sec": 2320.622955799103,
+ "r_wrapper": {
+  "registration": "qnlp_private_docs/25_exp43b_hop_split_rerun.md SSR (CLEAN-DATA RE-DECISION, commit 6d5c6a4) + doc 28 pointer",
+  "wrapped_runner": "exp45a_representability.py (unedited)",
+  "wrapped_source_sha256": {
+   "exp45a_representability.py": "b63cd52ad87719d74dcdf6ac9e44aa7864b7285ec691a6b196d8c0488597756f",
+   "exp45_model.py": "ce0b65fd59235263ceb2134b62e05cd4f06f3e36ef9cc75f1b70bdcf239293ee"
+  },
+  "guarded_copies_of": {
+   "train_restart": "133e9d3de1ede3801d4d351dfac49668fc560f13f2abd02dd13bf04aefb65f7a",
+   "lbfgs_polish": "29fc3ed7be937668656250c27bde6d0472d2588b1b85e292b341c77e75c53293"
+  },
+  "smoke": false,
+  "readout_patch": {
+   "policy": "doc 25 SSR.4: smooth |z|^2 = re^2 + im^2 in every quantum arm; isfinite asserts kept (and added where missing); a non-finite aborts that restart/run and is recorded",
+   "patched_sites": [
+    "torch_sv_sim.prob_all_zero_on",
+    "exp42_sim_adapter.prob_all_zero_on"
+   ],
+   "original_source_sha256": "e54316c7f628680b15a8ec220e0eb1c611831063bd5b4c014fe6d3939d74c654",
+   "replacement_source_sha256": "90291bf5e1bc4214ce957d4cc568d7d074427ffe499a0e0e2b97ccc3bf800fb1",
+   "forward_anchor_max_abs_delta": 1.4901161193847656e-08,
+   "subnormal_grad_finite_original_abs2": false,
+   "subnormal_grad_finite_smooth": true
+  },
+  "family_is": "family-r (stories_exp43a_familyr.json, sha 2e6650d6a2ea8e11c8eaee3a0b4d7c275c985203dbb2318675e3fb78abc4535a)",
+  "ckpt_dir": "./exp45a_r_ckpt",
+  "restarts_aborted_nonfinite": [],
+  "polish_nonfinite": [],
+  "polish_sentinel_note": "train_acc_after_lbfgs = -1.0 marks an aborted polish (sentinel, not a measurement)",
+  "verdict_alias": {
+   "bridge_representable_2q_r": true
+  }
+ }
+}

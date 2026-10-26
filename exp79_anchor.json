@@ -1,0 +1,44 @@
+{
+ "component": "exp79 drift anchor (doc 71 SS2)",
+ "committed_checkpoint": {
+  "json": "exp42r_ckpt/A2_s0.json",
+  "pt": "exp42r_ckpt/A2_s0.pt"
+ },
+ "committed_wall_time_sec": 526.7,
+ "committed_val_acc": 0.552,
+ "re_eval_results": {
+  "test_a": {
+   "accuracy": 0.54,
+   "committed_accuracy": 0.54,
+   "delta": 0.0,
+   "within_tol": true,
+   "tol": 0.0001
+  },
+  "test_b": {
+   "accuracy": 0.542,
+   "committed_accuracy": 0.542,
+   "delta": 0.0,
+   "within_tol": true,
+   "tol": 0.0001
+  },
+  "test_c": {
+   "accuracy": 0.516,
+   "committed_accuracy": 0.516,
+   "delta": 0.0,
+   "within_tol": true,
+   "tol": 0.0001
+  },
+  "test_union": {
+   "accuracy": 0.5326666666666666,
+   "committed_accuracy": 0.5326666666666666,
+   "delta": 0.0,
+   "within_tol": true,
+   "tol": 0.0001,
+   "per_item_match": true
+  }
+ },
+ "all_within_tol": true,
+ "tol": 0.0001,
+ "verdict": "PASS",
+ "when": "2026-09-04T07:36:23Z"
+}

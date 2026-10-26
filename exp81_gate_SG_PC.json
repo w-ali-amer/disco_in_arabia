@@ -1,0 +1,62 @@
+{
+ "gate": "SG-PC param-count (doc 73 §2 build addendum)",
+ "pass_assertion": "A2q2 total == A2-WIDE total (exact match by construction)",
+ "pass_result": true,
+ "designed_to_fail_assertion": "A2q2 total == A2 total (should fail; A2q2 has K_MAX extra params)",
+ "designed_to_fail_result": false,
+ "designed_to_fail_shown_failing": true,
+ "K_MAX": 12,
+ "n_verbs": 15,
+ "param_accounting": {
+  "A2": {
+   "total": 240,
+   "detail": {
+    "arm": "A2",
+    "per_verb": 14,
+    "n_verbs": 15,
+    "readout_shared": 30,
+    "total_trained": 240
+   }
+  },
+  "A2q2": {
+   "total": 252,
+   "detail": {
+    "arm": "A2q2",
+    "arm_label": "A2q2",
+    "per_verb_A2_core": 14,
+    "n_verbs": 15,
+    "readout_shared": 30,
+    "n_coupling_params": 12,
+    "K_MAX": 12,
+    "total_trained": 252,
+    "A2q2_over_A2_ratio": 1.05,
+    "note": "FLAGGED (doc 73 §2): A2q2 coupling gate family is IsingXX (sim.xx), same family as the committed symmetric core. CRY was exp79's gadget and is NOT used here. Application point: ONCE AT INTRO per referent (not per event as in exp79 C-DISCARD). Coupling is POSITIONAL (slot index 0..K_MAX-1), not per-noun, to keep the width axis pure (the A2TI confound). Secondary wires are untouched after intro: A2q2 implements A2 dynamics on a per-referent trained-mixedness initial state. The all-four-wire ladder is OUT OF SCOPE (doc 73 §2 naming clause)."
+   },
+   "extra_over_A2": 12
+  },
+  "A2-WIDE": {
+   "total": 252,
+   "detail": {
+    "arm": "A2-WIDE",
+    "arm_label": "A2-WIDE",
+    "per_verb": 14,
+    "n_verbs": 15,
+    "readout_shared": 30,
+    "n_extra_intro_angles": 12,
+    "K_MAX": 12,
+    "total_trained": 252,
+    "A2WIDE_over_A2_ratio": 1.05,
+    "note": "FLAGGED (doc 73 §2): A2-WIDE adds K_MAX=12 extra trained Ry angles, one per wire SLOT (positional, same index set as A2q2's coupling). Applied as a SECOND Ry after the frozen embedding Ry at intro time, on the PRIMARY wire only (no second qubit). This gives EXACT param match with A2q2 (both 252 total). Extra dressing layers on verb blocks were considered but would quantize at 12*n_verbs=180 extra params, massively overshooting K_MAX=12. The slot-wise intro-Ry is the natural positional analogue of A2q2's coupling and the only way to achieve exact match at this delta. Flagged as a deviation from 'extra dressing layers' if that phrase is read as verb-block dressings."
+   },
+   "extra_over_A2": 12
+  }
+ },
+ "ratios": {
+  "A2q2_over_A2": 1.05,
+  "A2WIDE_over_A2": 1.05,
+  "A2WIDE_over_A2q2": 1.0
+ },
+ "passed": true,
+ "when": "2026-09-10T21:02:59Z",
+ "artifact_sha256": "06fbb6bb4a04de9bec6f7cfc5822c9b1d88299b21d84e7592b661565f78b136c"
+}

@@ -1,0 +1,376 @@
+{
+ "purpose": "doc 82 §13 A2",
+ "sentences_sha256": "aafaf80052487470d8e203172a7201930289831cfecb95dac3686de846cf84a4",
+ "tasks": {
+  "WordOrder": {
+   "n": 120,
+   "structure_by_label": {
+    "WordOrder_Nominal": {
+     "n|n.r @ s": 40
+    },
+    "WordOrder_SVO": {
+     "n|n.r @ s @ n.l|n": 31,
+     "n|n.r @ s": 9
+    },
+    "WordOrder_VSO": {
+     "s @ n.l|n": 22,
+     "n|n.r @ s": 7,
+     "s @ n.l @ n.l|n|n": 11
+    }
+   },
+   "n_diagram_collision_opposite_label": 0,
+   "n_identical_string_opposite_label": 0,
+   "single_box_fallbacks": 0
+  },
+  "LexicalAmbiguity": {
+   "n": 210,
+   "structure_by_label": {
+    "Ambiguity_Camel": {
+     "n|n.r @ s": 8,
+     "s @ n.l|n": 4,
+     "n|n.r @ s @ n.l|n": 3
+    },
+    "Ambiguity_Conquer": {
+     "n|n.r @ s": 12,
+     "s @ n.l|n": 3
+    },
+    "Ambiguity_Eye": {
+     "n|n.r @ s": 8,
+     "s @ n.l|n": 6,
+     "s @ n.l @ n.l|n|n": 1
+    },
+    "Ambiguity_Flag": {
+     "n|n.r @ s": 7,
+     "s @ n.l @ n.l|n|n": 2,
+     "s @ n.l|n": 5,
+     "n|n.r @ s @ n.l|n": 1
+    },
+    "Ambiguity_Hit": {
+     "n|n.r @ s": 10,
+     "s @ n.l|n": 3,
+     "s @ n.l @ n.l|n|n": 2
+    },
+    "Ambiguity_King": {
+     "n|n.r @ s": 7,
+     "s @ n.l|n": 6,
+     "s @ n.l @ n.l|n|n": 1,
+     "n|n.r @ s @ n.l|n": 1
+    },
+    "Ambiguity_Knowledge": {
+     "s @ n.l|n": 3,
+     "n|n.r @ s": 7,
+     "s @ n.l @ n.l|n|n": 1,
+     "n|n.r @ s @ n.l|n": 4
+    },
+    "Ambiguity_Leg": {
+     "s @ n.l|n": 8,
+     "n|n.r @ s": 6,
+     "s @ n.l @ n.l|n|n": 1
+    },
+    "Ambiguity_Man": {
+     "s @ n.l|n": 8,
+     "n|n.r @ s": 5,
+     "n|n.r @ s @ n.l|n": 2
+    },
+    "Ambiguity_Multiply": {
+     "s @ n.l|n": 6,
+     "n|n.r @ s": 8,
+     "s @ n.l @ n.l|n|n": 1
+    },
+    "Ambiguity_Open": {
+     "s @ n.l @ n.l|n|n": 1,
+     "n|n.r @ s": 14
+    },
+    "Ambiguity_Possess": {
+     "n|n.r @ s": 14,
+     "s @ n.l @ n.l|n|n": 1
+    },
+    "Ambiguity_Sentences": {
+     "s @ n.l|n": 7,
+     "n|n.r @ s": 7,
+     "n|n.r @ s @ n.l|n": 1
+    },
+    "Ambiguity_Spring": {
+     "s @ n.l|n": 9,
+     "s @ n.l @ n.l|n|n": 2,
+     "n|n.r @ s": 4
+    }
+   },
+   "n_diagram_collision_opposite_label": 2,
+   "n_identical_string_opposite_label": 0,
+   "single_box_fallbacks": 0
+  },
+  "Morphology": {
+   "n": 230,
+   "structure_by_label": {
+    "Morph_AdjPlFem": {
+     "n|n.r @ s": 11
+    },
+    "Morph_AdjPlMasc": {
+     "n|n.r @ s": 11
+    },
+    "Morph_DualFem": {
+     "n|n.r @ s": 6,
+     "n|n.r @ s @ n.l|n": 5
+    },
+    "Morph_DualMasc": {
+     "n|n.r @ s": 5,
+     "n|n.r @ s @ n.l|n": 6
+    },
+    "Morph_Past": {
+     "n|n.r @ s": 7,
+     "s @ n.l|n": 13,
+     "s @ n.l @ n.l|n|n": 5
+    },
+    "Morph_PlBroken": {
+     "n|n.r @ s": 11
+    },
+    "Morph_PlFem": {
+     "n|n.r @ s": 11,
+     "n|n.r @ s @ n.l|n": 4
+    },
+    "Morph_PlMasc": {
+     "n|n.r @ s": 8,
+     "n|n.r @ s @ n.l|n": 7
+    },
+    "Morph_Poss1Pl": {
+     "n|n.r @ s": 11
+    },
+    "Morph_Poss1Sg": {
+     "n|n.r @ s": 11
+    },
+    "Morph_Poss2MascSg": {
+     "n|n.r @ s": 11
+    },
+    "Morph_Poss2Pl": {
+     "n|n.r @ s": 11
+    },
+    "Morph_Poss3FemSg": {
+     "n|n.r @ s": 11
+    },
+    "Morph_Poss3MascSg": {
+     "n|n.r @ s": 11
+    },
+    "Morph_Pres": {
+     "s @ n.l|n": 18,
+     "s @ n.l @ n.l|n|n": 7
+    },
+    "Morph_SgFem": {
+     "n|n.r @ s": 15
+    },
+    "Morph_SgMasc": {
+     "n|n.r @ s": 14
+    }
+   },
+   "n_diagram_collision_opposite_label": 0,
+   "n_identical_string_opposite_label": 0,
+   "single_box_fallbacks": 0
+  },
+  "WordOrderMatched": {
+   "n": 120,
+   "structure_by_label": {
+    "WordOrder_SVO": {
+     "n|n.r @ s @ n.l|n": 48,
+     "n|n.r @ s": 12
+    },
+    "WordOrder_VSO": {
+     "s @ n.l|n": 34,
+     "n|n.r @ s": 9,
+     "s @ n.l @ n.l|n|n": 17
+    }
+   },
+   "n_diagram_collision_opposite_label": 2,
+   "n_identical_string_opposite_label": 0,
+   "single_box_fallbacks": 0
+  },
+  "TenseBinary": {
+   "n": 100,
+   "structure_by_label": {
+    "Tense_Past": {
+     "s @ n.l @ n.l|n|n": 11,
+     "s @ n.l|n": 21,
+     "n|n.r @ s": 18
+    },
+    "Tense_Pres": {
+     "s @ n.l @ n.l|n|n": 21,
+     "s @ n.l|n": 27,
+     "n|n.r @ s": 2
+    }
+   },
+   "n_diagram_collision_opposite_label": 3,
+   "n_identical_string_opposite_label": 0,
+   "single_box_fallbacks": 0
+  },
+  "WordSenseDisambiguation": {
+   "n": 160,
+   "structure_by_label": {
+    "WSD_رفع_file": {
+     "n|n.r @ s": 9,
+     "n|n.r @ s @ n.l|n": 11
+    },
+    "WSD_رفع_lift": {
+     "n|n.r @ s": 9,
+     "n|n.r @ s @ n.l|n": 11
+    },
+    "WSD_ضرب_exemplify": {
+     "n|n.r @ s": 8,
+     "n|n.r @ s @ n.l|n": 12
+    },
+    "WSD_ضرب_strike": {
+     "n|n.r @ s": 13,
+     "n|n.r @ s @ n.l|n": 7
+    },
+    "WSD_فتح_conquer": {
+     "n|n.r @ s @ n.l|n": 13,
+     "n|n.r @ s": 7
+    },
+    "WSD_فتح_open": {
+     "n|n.r @ s @ n.l|n": 9,
+     "n|n.r @ s": 11
+    },
+    "WSD_قطع_cut": {
+     "n|n.r @ s": 12,
+     "n|n.r @ s @ n.l|n": 8
+    },
+    "WSD_قطع_sever": {
+     "n|n.r @ s": 10,
+     "n|n.r @ s @ n.l|n": 10
+    }
+   },
+   "n_diagram_collision_opposite_label": 0,
+   "n_identical_string_opposite_label": 0,
+   "single_box_fallbacks": 0,
+   "per_verb": {
+    "رفع": {
+     "n": 40,
+     "diagram_collision": 0,
+     "frac_diagram_collision": 0.0,
+     "identical_string_conflict": 0,
+     "structure": {
+      "n|n.r @ s": 18,
+      "n|n.r @ s @ n.l|n": 22
+     },
+     "collapse_rule_fires_ge_0.30": false
+    },
+    "ضرب": {
+     "n": 40,
+     "diagram_collision": 0,
+     "frac_diagram_collision": 0.0,
+     "identical_string_conflict": 0,
+     "structure": {
+      "n|n.r @ s": 21,
+      "n|n.r @ s @ n.l|n": 19
+     },
+     "collapse_rule_fires_ge_0.30": false
+    },
+    "فتح": {
+     "n": 40,
+     "diagram_collision": 0,
+     "frac_diagram_collision": 0.0,
+     "identical_string_conflict": 0,
+     "structure": {
+      "n|n.r @ s @ n.l|n": 22,
+      "n|n.r @ s": 18
+     },
+     "collapse_rule_fires_ge_0.30": false
+    },
+    "قطع": {
+     "n": 40,
+     "diagram_collision": 0,
+     "frac_diagram_collision": 0.0,
+     "identical_string_conflict": 0,
+     "structure": {
+      "n|n.r @ s": 22,
+      "n|n.r @ s @ n.l|n": 18
+     },
+     "collapse_rule_fires_ge_0.30": false
+    }
+   }
+  },
+  "WordSenseDisambiguation_v2": {
+   "n": 200,
+   "structure_by_label": {
+    "WSD_حمل_carry": {
+     "n|n.r @ s @ n.l|n": 19,
+     "n|n.r @ s": 6
+    },
+    "WSD_حمل_convey": {
+     "n|n.r @ s": 4,
+     "n|n.r @ s @ n.l|n": 21
+    },
+    "WSD_رفع_file": {
+     "n|n.r @ s": 17,
+     "n|n.r @ s @ n.l|n": 8
+    },
+    "WSD_رفع_lift": {
+     "n|n.r @ s": 20,
+     "n|n.r @ s @ n.l|n": 5
+    },
+    "WSD_ضرب_exemplify": {
+     "n|n.r @ s": 10,
+     "n|n.r @ s @ n.l|n": 15
+    },
+    "WSD_ضرب_strike": {
+     "n|n.r @ s": 23,
+     "n|n.r @ s @ n.l|n": 2
+    },
+    "WSD_قطع_cut": {
+     "n|n.r @ s": 25
+    },
+    "WSD_قطع_sever": {
+     "n|n.r @ s": 22,
+     "n|n.r @ s @ n.l|n": 3
+    }
+   },
+   "n_diagram_collision_opposite_label": 75,
+   "n_identical_string_opposite_label": 16,
+   "single_box_fallbacks": 0,
+   "per_verb": {
+    "حمل": {
+     "n": 50,
+     "diagram_collision": 3,
+     "frac_diagram_collision": 0.06,
+     "identical_string_conflict": 0,
+     "structure": {
+      "n|n.r @ s @ n.l|n": 40,
+      "n|n.r @ s": 10
+     },
+     "collapse_rule_fires_ge_0.30": false
+    },
+    "رفع": {
+     "n": 50,
+     "diagram_collision": 28,
+     "frac_diagram_collision": 0.56,
+     "identical_string_conflict": 16,
+     "structure": {
+      "n|n.r @ s": 37,
+      "n|n.r @ s @ n.l|n": 13
+     },
+     "collapse_rule_fires_ge_0.30": true
+    },
+    "ضرب": {
+     "n": 50,
+     "diagram_collision": 4,
+     "frac_diagram_collision": 0.08,
+     "identical_string_conflict": 0,
+     "structure": {
+      "n|n.r @ s": 33,
+      "n|n.r @ s @ n.l|n": 17
+     },
+     "collapse_rule_fires_ge_0.30": false
+    },
+    "قطع": {
+     "n": 50,
+     "diagram_collision": 40,
+     "frac_diagram_collision": 0.8,
+     "identical_string_conflict": 0,
+     "structure": {
+      "n|n.r @ s": 47,
+      "n|n.r @ s @ n.l|n": 3
+     },
+     "collapse_rule_fires_ge_0.30": true
+    }
+   }
+  }
+ }
+}

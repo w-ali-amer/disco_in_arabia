@@ -1,0 +1,62 @@
+{
+ "doc": "117 (ffd6ec1, A0 1d780a8)",
+ "versions": {
+  "python": "3.11.15",
+  "lambeq": "0.5.0",
+  "stanza": "1.10.1",
+  "camel_tools": "1.6.0",
+  "qiskit": "2.5.2",
+  "sklearn": "1.9.1",
+  "numpy": "2.4.6",
+  "torch": "2.14.1",
+  "ARABIC_POS_FUSION": "0"
+ },
+ "G_REPRO": {
+  "pass": true,
+  "diffs": {},
+  "stats": {
+   "WordOrder": {
+    "n_diagram_collision_opposite_label": 0,
+    "n_identical_string_opposite_label": 0
+   },
+   "LexicalAmbiguity": {
+    "n_diagram_collision_opposite_label": 2,
+    "n_identical_string_opposite_label": 0
+   },
+   "Morphology": {
+    "n_diagram_collision_opposite_label": 0,
+    "n_identical_string_opposite_label": 0
+   },
+   "WordOrderMatched": {
+    "n_diagram_collision_opposite_label": 2,
+    "n_identical_string_opposite_label": 0
+   },
+   "TenseBinary": {
+    "n_diagram_collision_opposite_label": 3,
+    "n_identical_string_opposite_label": 0
+   },
+   "WordSenseDisambiguation": {
+    "n_diagram_collision_opposite_label": 0,
+    "n_identical_string_opposite_label": 0,
+    "per_verb": {
+     "رفع": 0,
+     "ضرب": 0,
+     "فتح": 0,
+     "قطع": 0
+    }
+   },
+   "WordSenseDisambiguation_v2": {
+    "n_diagram_collision_opposite_label": 75,
+    "n_identical_string_opposite_label": 16,
+    "per_verb": {
+     "حمل": 3,
+     "رفع": 28,
+     "ضرب": 4,
+     "قطع": 40
+    }
+   }
+  }
+ },
+ "aravec": "dropped (no model on this machine; doc 117 A0.1)",
+ "wall_s": 70.63759899139404
+}

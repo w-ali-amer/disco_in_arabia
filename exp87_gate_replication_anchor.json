@@ -1,0 +1,116 @@
+{
+  "gate_name": "REPLICATION_ANCHOR",
+  "description": "doc 80 §5.1 amendment: tokenizer-identity anchor. sha256 pins of all instrument artifacts exp87 loads; first computation is the pin of record. The original F1-window anchor was voided as a structurally ill-posed instrument (see doc 80 §5.1).",
+  "instrument_pins": [
+    {
+      "artifact": "bpe_tok_s42/tokenizer.json",
+      "present": true,
+      "sha256": "af4d8f430459ad3bdbee7eb1d77bb3d090e5033b9a26fa38151d63e61ef22771",
+      "mtime": "2026-09-17 00:52:32"
+    },
+    {
+      "artifact": "wazn_tok_s42/tokenizer.json",
+      "present": true,
+      "sha256": "664ef880d5cb5380746693d1d106150967b34fadf47de1284b74e896819a23d5",
+      "mtime": "2026-09-17 00:52:50"
+    },
+    {
+      "artifact": "fused_tok_s42/tokenizer.json",
+      "present": true,
+      "sha256": "56daaecfb14543c90ef7dbd77667644cbd25a2efe1814e36f4791f20103ceb0b",
+      "mtime": "2026-09-17 00:53:07"
+    },
+    {
+      "artifact": "analysis_cache_s42",
+      "present": true,
+      "sha256": "b3ebaeda44d1fe3cc57ff2dccef172c8e5621fa6e92ebb5f826f1aa270b59808",
+      "mtime": "2026-09-16 23:31:05"
+    },
+    {
+      "artifact": "tmpl_skel_s42",
+      "present": true,
+      "sha256": "3f0c8f3437741122f8b3036c13f8b2a7079db7280648a1b287c12753627b3d1a",
+      "mtime": "2026-09-17 00:52:21"
+    },
+    {
+      "artifact": "bpe_tok_s43/tokenizer.json",
+      "present": true,
+      "sha256": "b169087759165485279f962cedcf013c6776052340cc0e27231518b5f24fec6b",
+      "mtime": "2026-09-17 01:56:07"
+    },
+    {
+      "artifact": "wazn_tok_s43/tokenizer.json",
+      "present": true,
+      "sha256": "52f9fab53c3d134d769fa4c3c4f8be5f4edc08083e3f785c5181f2443e3bd4cb",
+      "mtime": "2026-09-17 01:56:27"
+    },
+    {
+      "artifact": "fused_tok_s43/tokenizer.json",
+      "present": true,
+      "sha256": "ee1c46d9e7dbc97d518ab61ed4ee3fe7e1fd3a4343b1d3c0ffe9be67af9b61ee",
+      "mtime": "2026-09-17 01:56:45"
+    },
+    {
+      "artifact": "analysis_cache_s43",
+      "present": true,
+      "sha256": "94c4be764a1012f6d641c940f38d6630f4795c5cf23696276b66d7a0276c4377",
+      "mtime": "2026-09-17 00:55:45"
+    },
+    {
+      "artifact": "tmpl_skel_s43",
+      "present": true,
+      "sha256": "00272fe4593a337660861130bc7a673d8202d7c53000603571aa851b94e6063e",
+      "mtime": "2026-09-17 01:55:55"
+    },
+    {
+      "artifact": "bpe_tok_s44/tokenizer.json",
+      "present": true,
+      "sha256": "d9f520c0e48027a9068218821ba3afc9582923dde9ca4dff1e27ef4f64d5c5d4",
+      "mtime": "2026-09-17 03:01:15"
+    },
+    {
+      "artifact": "wazn_tok_s44/tokenizer.json",
+      "present": true,
+      "sha256": "11428b71af237f4fe4684a732e78fdb02470aec0358996a185b094e969ac946a",
+      "mtime": "2026-09-17 03:01:34"
+    },
+    {
+      "artifact": "fused_tok_s44/tokenizer.json",
+      "present": true,
+      "sha256": "59449b27160b23d6149260742010fc31612b92a075836b24e7309538cb1d08fb",
+      "mtime": "2026-09-17 03:01:52"
+    },
+    {
+      "artifact": "analysis_cache_s44",
+      "present": true,
+      "sha256": "71507f11b1dde308725e6b91de58f2070705ce34d28bb7628538c04ff52d910a",
+      "mtime": "2026-09-17 01:59:11"
+    },
+    {
+      "artifact": "tmpl_skel_s44",
+      "present": true,
+      "sha256": "d481331cc1001fc5befee67639d8d070ec05412ae6ebf0bab692930551b8601f",
+      "mtime": "2026-09-17 03:01:03"
+    }
+  ],
+  "gate_passes": true,
+  "dtf_inject": "append bytes to a pinned file in memory; sha must differ",
+  "dtf_tampered_sha_prefix": "8574b0cff6bd58c9",
+  "dtf_gate_fires": true,
+  "dtf_verdict": "DTF_FIRES: tampered copy correctly detected",
+  "verdict": "PASS: all instrument artifacts present and pinned",
+  "superseded_f1_window": {
+    "note": "original gate values retained for the record",
+    "deltas_bpe": [
+      -0.1974,
+      -0.1899,
+      -0.2045
+    ],
+    "deltas_wazn": [
+      0.1267,
+      0.1373,
+      0.1443
+    ],
+    "tolerance": 0.05
+  }
+}

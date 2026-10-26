@@ -1,0 +1,17 @@
+{
+ "certified_sup_F_leq": 2.6200339887498947,
+ "phi2": 2.618033988749895,
+ "max_found_F": 2.618033980096685,
+ "certified_P_leq": 0.7697753174582866,
+ "target_P": 0.7696723314583158,
+ "boxes": 84238192,
+ "iterations": 9,
+ "lipschitz": [
+  10.0,
+  6.0,
+  8.0
+ ],
+ "eps_F": 0.002,
+ "wall_sec": 181.42054319381714,
+ "self_sha256": "868d0f4bde85d590b7b4635a9435cdca4f250ce3dae69e8d4fcd18ad50f68d47"
+}

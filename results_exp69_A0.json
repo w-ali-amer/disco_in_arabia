@@ -1,0 +1,59 @@
+{
+ "component": "exp69 A0 -- doc 55 SS6.1, the BLOCKING replication anchor",
+ "spec": "qnlp_private_docs/55_exp69_reunion.md (da4b8fe, REGISTERED through SS19.7)",
+ "rule3_note": "A0 writes its OWN results file. No exp68 artefact is touched, read for writing, or overwritten (doc 55 SS4.4).",
+ "dataset": "stories_exp68_WN.json",
+ "dataset_sha256": "9a0b990088a89f5c2697da6f470891a9472fe8e3f4fc2a9d94b81911d54a6ec1",
+ "exp68_source": "results_exp68.json",
+ "exp68_FA_per_seed": [
+  0.9166666666666666,
+  0.9166666666666666,
+  0.92,
+  0.92,
+  0.92
+ ],
+ "exp68_FA_mean": 0.9186666666666666,
+ "exp69_A0_per_seed": [
+  0.9166666666666666,
+  0.9166666666666666,
+  0.92,
+  0.92,
+  0.92
+ ],
+ "exp69_A0_mean": 0.9186666666666667,
+ "exp69_A0_sd": 0.001825741858350596,
+ "per_seed_delta": [
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0
+ ],
+ "max_abs_per_seed_delta": 0.0,
+ "mean_delta_vs_exp68": 1.1102230246251565e-16,
+ "mean_delta_vs_registered_0_9187": -3.333333333321864e-05,
+ "tolerance": 0.002,
+ "bit_exact": true,
+ "per_seed_within_tolerance": true,
+ "mean_within_tolerance_of_0_9187": true,
+ "anchor_replicates_exp68": true,
+ "honest_expectation": "BIT-EXACT. Both runs are deterministic given their seeds; the 0.002 tolerance exists only to absorb a documented float/BLAS platform difference and any non-zero delta is reported with its cause identified (doc 55 SS6.1).",
+ "consequence_if_failed": "doc 55 SS9.2 row 1: THE RUN STOPS. The exp69 pipeline does not reproduce exp68 on exp68's own data -- hunt the build, interpret nothing, from any arm.",
+ "val_per_seed": [
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0
+ ],
+ "selected_epoch_per_seed": [
+  69,
+  122,
+  28,
+  21,
+  40
+ ],
+ "n_params": 120,
+ "wires": 2,
+ "wall_sec_total": 2010.2571558952332
+}

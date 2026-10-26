@@ -1,0 +1,388 @@
+{
+  "experiment": "exp84 — FUSED-VOCAB WAZN-BPE",
+  "registration": "/home/waj/qnlp_private_docs/76_exp84_fused_vocab_tokenizer.md",
+  "per_seed": [
+    {
+      "seed": 42,
+      "fertility": {
+        "heldout_lines_used": 20000,
+        "bpe": {
+          "fertility": 1.381825,
+          "comp": 3.6399
+        },
+        "wazn": {
+          "fertility": 3.049451,
+          "comp": 1.6494,
+          "ratio_over_bpe": 2.206829,
+          "bar_wazn_improves_over_bpe": false
+        },
+        "fused": {
+          "fertility": 1.824266,
+          "comp": 2.7571,
+          "ratio_over_bpe": 1.320186,
+          "bar_fertility_competitive": false,
+          "bar_def": "FUSED fertility ≤ 1.10 × BPE"
+        }
+      },
+      "gold_set_meta": {
+        "n_weak_candidates": 14411,
+        "n_strong_candidates": 27995,
+        "n_gold": 2000,
+        "n_weak_in_gold": 600,
+        "actual_weak_frac": 0.3,
+        "mismatch_drops": 9212
+      },
+      "boundary_f1": {
+        "overall": {
+          "bpe": {
+            "p": 0.2668,
+            "r": 0.1566,
+            "f1": 0.1974,
+            "n": 2000
+          },
+          "wazn": {
+            "p": 0.9006,
+            "r": 0.4261,
+            "f1": 0.5785,
+            "n": 2000
+          },
+          "fused_expanded": {
+            "p": 0.9006,
+            "r": 0.4261,
+            "f1": 0.5785,
+            "n": 2000
+          },
+          "fused_surface": {
+            "p": 0.2713,
+            "r": 0.1558,
+            "f1": 0.198,
+            "n": 2000
+          },
+          "gap_wazn_over_bpe": 0.3811,
+          "gap_fused_over_bpe": 0.3811,
+          "bar_wazn_boundaries_recovered": true,
+          "bar_boundaries_kept": true,
+          "bar_def": "FUSED expanded F1 ≥ BPE F1 + 0.10"
+        },
+        "weak_stratum": {
+          "bpe": {
+            "p": 0.2626,
+            "r": 0.1575,
+            "f1": 0.1969,
+            "n": 600
+          },
+          "wazn": {
+            "p": 0.9208,
+            "r": 0.4423,
+            "f1": 0.5975,
+            "n": 600
+          },
+          "fused_expanded": {
+            "p": 0.9208,
+            "r": 0.4423,
+            "f1": 0.5975,
+            "n": 600
+          },
+          "fused_surface": {
+            "p": 0.2656,
+            "r": 0.1562,
+            "f1": 0.1967,
+            "n": 600
+          }
+        },
+        "strong_stratum": {
+          "bpe": {
+            "p": 0.2687,
+            "r": 0.1563,
+            "f1": 0.1976,
+            "n": 1400
+          },
+          "wazn": {
+            "p": 0.8916,
+            "r": 0.419,
+            "f1": 0.5701,
+            "n": 1400
+          },
+          "fused_expanded": {
+            "p": 0.8916,
+            "r": 0.419,
+            "f1": 0.5701,
+            "n": 1400
+          },
+          "fused_surface": {
+            "p": 0.2739,
+            "r": 0.1557,
+            "f1": 0.1985,
+            "n": 1400
+          }
+        }
+      },
+      "named_outcome": "TAX_PERSISTS: boundary gap kept, but fertility still high",
+      "bars": {
+        "fertility_competitive": false,
+        "boundaries_kept": true,
+        "TAX_CUT": false
+      }
+    },
+    {
+      "seed": 43,
+      "fertility": {
+        "heldout_lines_used": 20000,
+        "bpe": {
+          "fertility": 1.379707,
+          "comp": 3.6459
+        },
+        "wazn": {
+          "fertility": 3.042843,
+          "comp": 1.6532,
+          "ratio_over_bpe": 2.205427,
+          "bar_wazn_improves_over_bpe": false
+        },
+        "fused": {
+          "fertility": 1.822217,
+          "comp": 2.7605,
+          "ratio_over_bpe": 1.320728,
+          "bar_fertility_competitive": false,
+          "bar_def": "FUSED fertility ≤ 1.10 × BPE"
+        }
+      },
+      "gold_set_meta": {
+        "n_weak_candidates": 14365,
+        "n_strong_candidates": 27853,
+        "n_gold": 2000,
+        "n_weak_in_gold": 600,
+        "actual_weak_frac": 0.3,
+        "mismatch_drops": 9181
+      },
+      "boundary_f1": {
+        "overall": {
+          "bpe": {
+            "p": 0.2574,
+            "r": 0.1505,
+            "f1": 0.1899,
+            "n": 2000
+          },
+          "wazn": {
+            "p": 0.8857,
+            "r": 0.412,
+            "f1": 0.5624,
+            "n": 2000
+          },
+          "fused_expanded": {
+            "p": 0.8857,
+            "r": 0.412,
+            "f1": 0.5624,
+            "n": 2000
+          },
+          "fused_surface": {
+            "p": 0.2609,
+            "r": 0.1481,
+            "f1": 0.1889,
+            "n": 2000
+          },
+          "gap_wazn_over_bpe": 0.3725,
+          "gap_fused_over_bpe": 0.3725,
+          "bar_wazn_boundaries_recovered": true,
+          "bar_boundaries_kept": true,
+          "bar_def": "FUSED expanded F1 ≥ BPE F1 + 0.10"
+        },
+        "weak_stratum": {
+          "bpe": {
+            "p": 0.244,
+            "r": 0.1421,
+            "f1": 0.1796,
+            "n": 600
+          },
+          "wazn": {
+            "p": 0.896,
+            "r": 0.3752,
+            "f1": 0.5289,
+            "n": 600
+          },
+          "fused_expanded": {
+            "p": 0.896,
+            "r": 0.3752,
+            "f1": 0.5289,
+            "n": 600
+          },
+          "fused_surface": {
+            "p": 0.246,
+            "r": 0.137,
+            "f1": 0.176,
+            "n": 600
+          }
+        },
+        "strong_stratum": {
+          "bpe": {
+            "p": 0.2634,
+            "r": 0.1542,
+            "f1": 0.1945,
+            "n": 1400
+          },
+          "wazn": {
+            "p": 0.8817,
+            "r": 0.4283,
+            "f1": 0.5766,
+            "n": 1400
+          },
+          "fused_expanded": {
+            "p": 0.8817,
+            "r": 0.4283,
+            "f1": 0.5766,
+            "n": 1400
+          },
+          "fused_surface": {
+            "p": 0.2674,
+            "r": 0.153,
+            "f1": 0.1946,
+            "n": 1400
+          }
+        }
+      },
+      "named_outcome": "TAX_PERSISTS: boundary gap kept, but fertility still high",
+      "bars": {
+        "fertility_competitive": false,
+        "boundaries_kept": true,
+        "TAX_CUT": false
+      }
+    },
+    {
+      "seed": 44,
+      "fertility": {
+        "heldout_lines_used": 20000,
+        "bpe": {
+          "fertility": 1.380975,
+          "comp": 3.64
+        },
+        "wazn": {
+          "fertility": 3.043933,
+          "comp": 1.6514,
+          "ratio_over_bpe": 2.204191,
+          "bar_wazn_improves_over_bpe": false
+        },
+        "fused": {
+          "fertility": 1.823715,
+          "comp": 2.7563,
+          "ratio_over_bpe": 1.320599,
+          "bar_fertility_competitive": false,
+          "bar_def": "FUSED fertility ≤ 1.10 × BPE"
+        }
+      },
+      "gold_set_meta": {
+        "n_weak_candidates": 14299,
+        "n_strong_candidates": 27838,
+        "n_gold": 2000,
+        "n_weak_in_gold": 600,
+        "actual_weak_frac": 0.3,
+        "mismatch_drops": 9159
+      },
+      "boundary_f1": {
+        "overall": {
+          "bpe": {
+            "p": 0.2712,
+            "r": 0.1641,
+            "f1": 0.2045,
+            "n": 2000
+          },
+          "wazn": {
+            "p": 0.8673,
+            "r": 0.4144,
+            "f1": 0.5609,
+            "n": 2000
+          },
+          "fused_expanded": {
+            "p": 0.8673,
+            "r": 0.4144,
+            "f1": 0.5609,
+            "n": 2000
+          },
+          "fused_surface": {
+            "p": 0.2776,
+            "r": 0.1625,
+            "f1": 0.205,
+            "n": 2000
+          },
+          "gap_wazn_over_bpe": 0.3564,
+          "gap_fused_over_bpe": 0.3564,
+          "bar_wazn_boundaries_recovered": true,
+          "bar_boundaries_kept": true,
+          "bar_def": "FUSED expanded F1 ≥ BPE F1 + 0.10"
+        },
+        "weak_stratum": {
+          "bpe": {
+            "p": 0.2617,
+            "r": 0.1476,
+            "f1": 0.1887,
+            "n": 600
+          },
+          "wazn": {
+            "p": 0.9015,
+            "r": 0.3979,
+            "f1": 0.5521,
+            "n": 600
+          },
+          "fused_expanded": {
+            "p": 0.9015,
+            "r": 0.3979,
+            "f1": 0.5521,
+            "n": 600
+          },
+          "fused_surface": {
+            "p": 0.2696,
+            "r": 0.1449,
+            "f1": 0.1885,
+            "n": 600
+          }
+        },
+        "strong_stratum": {
+          "bpe": {
+            "p": 0.2752,
+            "r": 0.1717,
+            "f1": 0.2115,
+            "n": 1400
+          },
+          "wazn": {
+            "p": 0.8533,
+            "r": 0.422,
+            "f1": 0.5647,
+            "n": 1400
+          },
+          "fused_expanded": {
+            "p": 0.8533,
+            "r": 0.422,
+            "f1": 0.5647,
+            "n": 1400
+          },
+          "fused_surface": {
+            "p": 0.2809,
+            "r": 0.1705,
+            "f1": 0.2122,
+            "n": 1400
+          }
+        }
+      },
+      "named_outcome": "TAX_PERSISTS: boundary gap kept, but fertility still high",
+      "bars": {
+        "fertility_competitive": false,
+        "boundaries_kept": true,
+        "TAX_CUT": false
+      }
+    }
+  ],
+  "aggregate": {
+    "fertility_competitive_all_seeds": false,
+    "boundaries_kept_all_seeds": true,
+    "TAX_CUT_all_seeds": false,
+    "mean_fertility_bpe": 1.380836,
+    "mean_fertility_wazn": 3.045409,
+    "mean_fertility_fused": 1.823399,
+    "mean_ratio_fused_over_bpe": 1.320504,
+    "mean_f1_bpe": 0.1973,
+    "mean_f1_wazn": 0.5673,
+    "mean_f1_fused_expanded": 0.5673,
+    "named_outcomes": [
+      "TAX_PERSISTS: boundary gap kept, but fertility still high"
+    ]
+  },
+  "elapsed_s": 10857.5
+}

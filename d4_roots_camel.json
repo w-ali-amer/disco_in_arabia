@@ -1,0 +1,3116 @@
+[
+{
+"noun": "الخواجة",
+"wazn_tag": "other",
+"root": "خ.#.ج",
+"n_analyses": 7
+},
+{
+"noun": "المصري",
+"wazn_tag": "mu_participle",
+"root": "م.ص.ر",
+"n_analyses": 24
+},
+{
+"noun": "العاشق",
+"wazn_tag": "faail",
+"root": "ع.ش.ق",
+"n_analyses": 6
+},
+{
+"noun": "العريان",
+"wazn_tag": "other",
+"root": "ع.ر.#",
+"n_analyses": 6
+},
+{
+"noun": "الاخ",
+"wazn_tag": "other",
+"root": "NTWS",
+"n_analyses": 1
+},
+{
+"noun": "الفنان",
+"wazn_tag": "faaal_or_fa33aal",
+"root": "ف.ن.ن",
+"n_analyses": 7
+},
+{
+"noun": "السفير",
+"wazn_tag": "faiil",
+"root": "س.ف.ر",
+"n_analyses": 6
+},
+{
+"noun": "السوري",
+"wazn_tag": "nisba_yaa",
+"root": "س.#.ر.#",
+"n_analyses": 15
+},
+{
+"noun": "المجنون",
+"wazn_tag": "mu_participle",
+"root": "ج.ن.ن",
+"n_analyses": 6
+},
+{
+"noun": "الانسان",
+"wazn_tag": "other",
+"root": "ن.س.#",
+"n_analyses": 1
+},
+{
+"noun": "اليمني",
+"wazn_tag": "nisba_yaa",
+"root": "#.م.ن",
+"n_analyses": 21
+},
+{
+"noun": "الرئيس",
+"wazn_tag": "faiil",
+"root": "ر.#.س",
+"n_analyses": 6
+},
+{
+"noun": "الاستاذ",
+"wazn_tag": "other",
+"root": "#.ذ.#",
+"n_analyses": 2
+},
+{
+"noun": "الراجل",
+"wazn_tag": "faail",
+"root": "ر.ج.ل",
+"n_analyses": 12
+},
+{
+"noun": "الامير",
+"wazn_tag": "faiil",
+"root": "م.#.ر",
+"n_analyses": 18
+},
+{
+"noun": "الخباز",
+"wazn_tag": "faaal_or_fa33aal",
+"root": "خ.ب.ز",
+"n_analyses": 6
+},
+{
+"noun": "الكويتي",
+"wazn_tag": "nisba_yaa",
+"root": "ك.#.ت",
+"n_analyses": 13
+},
+{
+"noun": "المعلق",
+"wazn_tag": "mu_participle",
+"root": "ع.ل.ق",
+"n_analyses": 12
+},
+{
+"noun": "المتحدث",
+"wazn_tag": "mu_participle",
+"root": "ح.د.ث",
+"n_analyses": 6
+},
+{
+"noun": "السواق",
+"wazn_tag": "faaal_or_fa33aal",
+"root": "س.#.ق",
+"n_analyses": 8
+},
+{
+"noun": "الساحر",
+"wazn_tag": "faail",
+"root": "س.ح.ر",
+"n_analyses": 15
+},
+{
+"noun": "البلجيكي",
+"wazn_tag": "nisba_yaa",
+"root": "ب.ل.ج.ك",
+"n_analyses": 12
+},
+{
+"noun": "الجزائري",
+"wazn_tag": "nisba_yaa",
+"root": "ج.ز.ر",
+"n_analyses": 12
+},
+{
+"noun": "القديس",
+"wazn_tag": "faiil",
+"root": "ق.د.س",
+"n_analyses": 6
+},
+{
+"noun": "الكوري",
+"wazn_tag": "nisba_yaa",
+"root": "ك.#.ر.#",
+"n_analyses": 15
+},
+{
+"noun": "اللواء",
+"wazn_tag": "faaal_or_fa33aal",
+"root": null,
+"n_analyses": 0
+},
+{
+"noun": "الامريكي",
+"wazn_tag": "nisba_yaa",
+"root": null,
+"n_analyses": 0
+},
+{
+"noun": "المسيحي",
+"wazn_tag": "mu_participle",
+"root": "م.س.ح",
+"n_analyses": 18
+},
+{
+"noun": "البدوي",
+"wazn_tag": "nisba_yaa",
+"root": "ب.د.#",
+"n_analyses": 22
+},
+{
+"noun": "الحبشي",
+"wazn_tag": "nisba_yaa",
+"root": "ح.ب.ش",
+"n_analyses": 14
+},
+{
+"noun": "المسئول",
+"wazn_tag": "mu_participle",
+"root": "س.#.ل",
+"n_analyses": 12
+},
+{
+"noun": "الوالد",
+"wazn_tag": "faail",
+"root": "ل.د.د",
+"n_analyses": 24
+},
+{
+"noun": "السياسي",
+"wazn_tag": "nisba_yaa",
+"root": "س.#.س",
+"n_analyses": 14
+},
+{
+"noun": "السرياني",
+"wazn_tag": "nisba_yaa",
+"root": "NTWS",
+"n_analyses": 17
+},
+{
+"noun": "الغرقان",
+"wazn_tag": "other",
+"root": "غ.ر.ق",
+"n_analyses": 6
+},
+{
+"noun": "الخول",
+"wazn_tag": "other",
+"root": "خ.#.ل",
+"n_analyses": 7
+},
+{
+"noun": "المدرب",
+"wazn_tag": "mu_participle",
+"root": "د.ر.ب",
+"n_analyses": 12
+},
+{
+"noun": "المؤيد",
+"wazn_tag": "mu_participle",
+"root": "#.#.د",
+"n_analyses": 6
+},
+{
+"noun": "المزيف",
+"wazn_tag": "mu_participle",
+"root": "ز.#.ف",
+"n_analyses": 12
+},
+{
+"noun": "الشاب",
+"wazn_tag": "other",
+"root": "ش.ب.ب",
+"n_analyses": 8
+},
+{
+"noun": "المسلم",
+"wazn_tag": "mu_participle",
+"root": "س.ل.م",
+"n_analyses": 18
+},
+{
+"noun": "السوداني",
+"wazn_tag": "nisba_yaa",
+"root": "س.#.د",
+"n_analyses": 14
+},
+{
+"noun": "الامين",
+"wazn_tag": "faiil",
+"root": "#.ن.#",
+"n_analyses": 12
+},
+{
+"noun": "الحقير",
+"wazn_tag": "faiil",
+"root": "ح.ق.ر",
+"n_analyses": 6
+},
+{
+"noun": "الفرنسي",
+"wazn_tag": "nisba_yaa",
+"root": "NTWS",
+"n_analyses": 12
+},
+{
+"noun": "المجرم",
+"wazn_tag": "mu_participle",
+"root": "ج.ر.م",
+"n_analyses": 6
+},
+{
+"noun": "القطري",
+"wazn_tag": "nisba_yaa",
+"root": "ق.ط.ر",
+"n_analyses": 32
+},
+{
+"noun": "العسكري",
+"wazn_tag": "nisba_yaa",
+"root": "ع.س.ك.ر",
+"n_analyses": 13
+},
+{
+"noun": "المستفيد",
+"wazn_tag": "mu_participle",
+"root": "ف.#.د",
+"n_analyses": 6
+},
+{
+"noun": "الطاغيه",
+"wazn_tag": "nisba_yaa",
+"root": "ط.غ.#",
+"n_analyses": 38
+},
+{
+"noun": "الدكتور",
+"wazn_tag": "other",
+"root": "NTWS",
+"n_analyses": 6
+},
+{
+"noun": "الرسول",
+"wazn_tag": "other",
+"root": "ر.س.ل",
+"n_analyses": 12
+},
+{
+"noun": "التلميذ",
+"wazn_tag": "other",
+"root": "ت.ل.م.ذ",
+"n_analyses": 6
+},
+{
+"noun": "البليد",
+"wazn_tag": "faiil",
+"root": "ب.ل.د",
+"n_analyses": 6
+},
+{
+"noun": "الثائر",
+"wazn_tag": "faail",
+"root": "ث.#.ر",
+"n_analyses": 12
+},
+{
+"noun": "المعلن",
+"wazn_tag": "mu_participle",
+"root": "ع.ل.ن",
+"n_analyses": 12
+},
+{
+"noun": "الشيخ",
+"wazn_tag": "other",
+"root": "ش.#.خ",
+"n_analyses": 7
+},
+{
+"noun": "الراشد",
+"wazn_tag": "faail",
+"root": "ر.ش.د",
+"n_analyses": 7
+},
+{
+"noun": "المشائخ",
+"wazn_tag": "other",
+"root": "ش.#.خ",
+"n_analyses": 4
+},
+{
+"noun": "المشير",
+"wazn_tag": "mu_participle",
+"root": "ش.#.ر",
+"n_analyses": 12
+},
+{
+"noun": "الاسير",
+"wazn_tag": "faiil",
+"root": "س.#.ر",
+"n_analyses": 20
+},
+{
+"noun": "المحقق",
+"wazn_tag": "mu_participle",
+"root": "ح.ق.ق",
+"n_analyses": 12
+},
+{
+"noun": "العيسوي",
+"wazn_tag": "nisba_yaa",
+"root": "NTWS",
+"n_analyses": 12
+},
+{
+"noun": "المستخدم",
+"wazn_tag": "mu_participle",
+"root": "خ.د.م",
+"n_analyses": 18
+},
+{
+"noun": "الرقيب",
+"wazn_tag": "faiil",
+"root": "ر.ق.ب",
+"n_analyses": 13
+},
+{
+"noun": "المتطوع",
+"wazn_tag": "mu_participle",
+"root": "ط.#.ع",
+"n_analyses": 6
+},
+{
+"noun": "المرء",
+"wazn_tag": "other",
+"root": "م.ر.#",
+"n_analyses": 1
+},
+{
+"noun": "الشقيق",
+"wazn_tag": "faiil",
+"root": "ش.ق.ق",
+"n_analyses": 12
+},
+{
+"noun": "الحاكم",
+"wazn_tag": "faail",
+"root": "ح.ك.م",
+"n_analyses": 14
+},
+{
+"noun": "العراقي",
+"wazn_tag": "nisba_yaa",
+"root": "ع.ر.ق",
+"n_analyses": 13
+},
+{
+"noun": "الباشا",
+"wazn_tag": "faail",
+"root": "ب.ش.ش",
+"n_analyses": 5
+},
+{
+"noun": "الصديق",
+"wazn_tag": "faiil",
+"root": "ص.د.ق",
+"n_analyses": 13
+},
+{
+"noun": "السعودي",
+"wazn_tag": "nisba_yaa",
+"root": "س.ع.د",
+"n_analyses": 13
+},
+{
+"noun": "الخليجي",
+"wazn_tag": "nisba_yaa",
+"root": "خ.ل.ج",
+"n_analyses": 17
+},
+{
+"noun": "الشاعر",
+"wazn_tag": "faail",
+"root": "ش.ع.ر",
+"n_analyses": 6
+},
+{
+"noun": "المتخلف",
+"wazn_tag": "mu_participle",
+"root": "خ.ل.ف",
+"n_analyses": 6
+},
+{
+"noun": "الاجنبي",
+"wazn_tag": "nisba_yaa",
+"root": "ج.ن.ب",
+"n_analyses": 12
+},
+{
+"noun": "الملحن",
+"wazn_tag": "mu_participle",
+"root": "ل.ح.ن",
+"n_analyses": 9
+},
+{
+"noun": "الشهيد",
+"wazn_tag": "faiil",
+"root": "ش.ه.د",
+"n_analyses": 6
+},
+{
+"noun": "الاموي",
+"wazn_tag": "nisba_yaa",
+"root": null,
+"n_analyses": 0
+},
+{
+"noun": "المولود",
+"wazn_tag": "mu_participle",
+"root": "#.ل.د",
+"n_analyses": 12
+},
+{
+"noun": "الحكيم",
+"wazn_tag": "faiil",
+"root": "ح.ك.م",
+"n_analyses": 13
+},
+{
+"noun": "الناجح",
+"wazn_tag": "faail",
+"root": "ن.ج.ح",
+"n_analyses": 6
+},
+{
+"noun": "النائب",
+"wazn_tag": "faail",
+"root": "ن.#.ب",
+"n_analyses": 6
+},
+{
+"noun": "الرائد",
+"wazn_tag": "faail",
+"root": "ر.#.د",
+"n_analyses": 13
+},
+{
+"noun": "المحافظ",
+"wazn_tag": "mu_participle",
+"root": "ح.ف.ظ",
+"n_analyses": 6
+},
+{
+"noun": "الانجليزي",
+"wazn_tag": "nisba_yaa",
+"root": null,
+"n_analyses": 0
+},
+{
+"noun": "المؤذن",
+"wazn_tag": "mu_participle",
+"root": "#.ذ.ن",
+"n_analyses": 6
+},
+{
+"noun": "القائل",
+"wazn_tag": "faail",
+"root": "ق.#.ل",
+"n_analyses": 12
+},
+{
+"noun": "الناشط",
+"wazn_tag": "faail",
+"root": "ن.ش.ط",
+"n_analyses": 12
+},
+{
+"noun": "المنتفع",
+"wazn_tag": "mu_participle",
+"root": "ن.ف.ع",
+"n_analyses": 6
+},
+{
+"noun": "الشخص",
+"wazn_tag": "other",
+"root": "ش.خ.ص",
+"n_analyses": 7
+},
+{
+"noun": "المؤمن",
+"wazn_tag": "mu_participle",
+"root": "#.م.ن",
+"n_analyses": 24
+},
+{
+"noun": "الصاحب",
+"wazn_tag": "faail",
+"root": "ص.ح.ب",
+"n_analyses": 13
+},
+{
+"noun": "الريس",
+"wazn_tag": "other",
+"root": "ر.#.س",
+"n_analyses": 6
+},
+{
+"noun": "الوزير",
+"wazn_tag": "faiil",
+"root": "#.ز.ر",
+"n_analyses": 7
+},
+{
+"noun": "النصير",
+"wazn_tag": "faiil",
+"root": "ن.ص.ر",
+"n_analyses": 8
+},
+{
+"noun": "الايراني",
+"wazn_tag": "nisba_yaa",
+"root": "ر.#.#",
+"n_analyses": 2
+},
+{
+"noun": "الاسيوي",
+"wazn_tag": "nisba_yaa",
+"root": null,
+"n_analyses": 0
+},
+{
+"noun": "المغربي",
+"wazn_tag": "mu_participle",
+"root": "غ.ر.ب",
+"n_analyses": 48
+},
+{
+"noun": "المرشد",
+"wazn_tag": "mu_participle",
+"root": "ر.ش.د",
+"n_analyses": 6
+},
+{
+"noun": "الدجال",
+"wazn_tag": "faaal_or_fa33aal",
+"root": "د.ج.ل",
+"n_analyses": 6
+},
+{
+"noun": "الزعيم",
+"wazn_tag": "faiil",
+"root": "ز.ع.م",
+"n_analyses": 6
+},
+{
+"noun": "الكوبي",
+"wazn_tag": "nisba_yaa",
+"root": "ك.#.ب",
+"n_analyses": 19
+},
+{
+"noun": "الشامي",
+"wazn_tag": "nisba_yaa",
+"root": "ش.#.م",
+"n_analyses": 24
+},
+{
+"noun": "البحريني",
+"wazn_tag": "nisba_yaa",
+"root": "NTWS",
+"n_analyses": 12
+},
+{
+"noun": "الغريب",
+"wazn_tag": "faiil",
+"root": "غ.ر.ب",
+"n_analyses": 12
+},
+{
+"noun": "العبد",
+"wazn_tag": "other",
+"root": "ع.ب.د",
+"n_analyses": 9
+},
+{
+"noun": "الظالم",
+"wazn_tag": "faail",
+"root": "ظ.ل.م",
+"n_analyses": 6
+},
+{
+"noun": "الابو",
+"wazn_tag": "other",
+"root": "NTWS",
+"n_analyses": 1
+},
+{
+"noun": "الاسرائيلي",
+"wazn_tag": "nisba_yaa",
+"root": null,
+"n_analyses": 0
+},
+{
+"noun": "الغريق",
+"wazn_tag": "faiil",
+"root": "غ.ر.ق",
+"n_analyses": 6
+},
+{
+"noun": "الفرد",
+"wazn_tag": "other",
+"root": "ف.ر.د",
+"n_analyses": 26
+},
+{
+"noun": "التونسي",
+"wazn_tag": "nisba_yaa",
+"root": "ت.#.ن.س",
+"n_analyses": 12
+},
+{
+"noun": "الهلالي",
+"wazn_tag": "nisba_yaa",
+"root": "ه.ل.ل",
+"n_analyses": 24
+},
+{
+"noun": "الخطيب",
+"wazn_tag": "faiil",
+"root": "خ.ط.ب",
+"n_analyses": 13
+},
+{
+"noun": "الفقيه",
+"wazn_tag": "faiil",
+"root": "ف.ق.ه",
+"n_analyses": 11
+},
+{
+"noun": "الليبي",
+"wazn_tag": "nisba_yaa",
+"root": null,
+"n_analyses": 0
+},
+{
+"noun": "الحاج",
+"wazn_tag": "other",
+"root": "ح.ج.ج",
+"n_analyses": 8
+},
+{
+"noun": "الراصد",
+"wazn_tag": "faail",
+"root": "ر.ص.د",
+"n_analyses": 12
+},
+{
+"noun": "العجوز",
+"wazn_tag": "other",
+"root": "ع.ج.ز",
+"n_analyses": 6
+},
+{
+"noun": "المنظم",
+"wazn_tag": "mu_participle",
+"root": "ن.ظ.م",
+"n_analyses": 18
+},
+{
+"noun": "الدراويش",
+"wazn_tag": "other",
+"root": "د.ر.#.ش",
+"n_analyses": 4
+},
+{
+"noun": "الدخيل",
+"wazn_tag": "faiil",
+"root": "د.خ.ل",
+"n_analyses": 12
+},
+{
+"noun": "الروسي",
+"wazn_tag": "nisba_yaa",
+"root": "ر.#.س",
+"n_analyses": 13
+},
+{
+"noun": "العميد",
+"wazn_tag": "faiil",
+"root": "ع.م.د",
+"n_analyses": 12
+},
+{
+"noun": "العضو",
+"wazn_tag": "other",
+"root": "ع.ض.#",
+"n_analyses": 12
+},
+{
+"noun": "الزوج",
+"wazn_tag": "other",
+"root": "ز.#.ج",
+"n_analyses": 7
+},
+{
+"noun": "الاميركي",
+"wazn_tag": "nisba_yaa",
+"root": null,
+"n_analyses": 0
+},
+{
+"noun": "الراقص",
+"wazn_tag": "faail",
+"root": "ر.ق.ص",
+"n_analyses": 7
+},
+{
+"noun": "الاعزب",
+"wazn_tag": "other",
+"root": "ع.ز.ب",
+"n_analyses": 21
+},
+{
+"noun": "الرسام",
+"wazn_tag": "faaal_or_fa33aal",
+"root": "ر.س.م",
+"n_analyses": 7
+},
+{
+"noun": "الموسيقار",
+"wazn_tag": "mu_participle",
+"root": "NTWS",
+"n_analyses": 6
+},
+{
+"noun": "القاتل",
+"wazn_tag": "faail",
+"root": "ق.ت.ل",
+"n_analyses": 13
+},
+{
+"noun": "الطيب",
+"wazn_tag": "other",
+"root": "ط.#.ب",
+"n_analyses": 14
+},
+{
+"noun": "المطوع",
+"wazn_tag": "mu_participle",
+"root": "ط.#.ع",
+"n_analyses": 7
+},
+{
+"noun": "المحامي",
+"wazn_tag": "mu_participle",
+"root": "ح.م.#",
+"n_analyses": 6
+},
+{
+"noun": "الاب",
+"wazn_tag": "other",
+"root": "NTWS",
+"n_analyses": 2
+},
+{
+"noun": "المذيع",
+"wazn_tag": "mu_participle",
+"root": "ذ.#.ع",
+"n_analyses": 6
+},
+{
+"noun": "المستشار",
+"wazn_tag": "mu_participle",
+"root": "ش.#.ر",
+"n_analyses": 6
+},
+{
+"noun": "الاوروبي",
+"wazn_tag": "nisba_yaa",
+"root": "ر.#.ب",
+"n_analyses": 6
+},
+{
+"noun": "الداعية",
+"wazn_tag": "other",
+"root": "د.ع.#",
+"n_analyses": 16
+},
+{
+"noun": "الكاذب",
+"wazn_tag": "faail",
+"root": "ك.ذ.ب",
+"n_analyses": 12
+},
+{
+"noun": "المنتظر",
+"wazn_tag": "mu_participle",
+"root": "ن.ظ.ر",
+"n_analyses": 12
+},
+{
+"noun": "الصراف",
+"wazn_tag": "faaal_or_fa33aal",
+"root": "ص.ر.ف",
+"n_analyses": 6
+},
+{
+"noun": "الكذاب",
+"wazn_tag": "faaal_or_fa33aal",
+"root": "ك.ذ.ب",
+"n_analyses": 6
+},
+{
+"noun": "الولي",
+"wazn_tag": "other",
+"root": "ل.#.#",
+"n_analyses": 50
+},
+{
+"noun": "المجهول",
+"wazn_tag": "mu_participle",
+"root": "ج.ه.ل",
+"n_analyses": 12
+},
+{
+"noun": "القاطن",
+"wazn_tag": "faail",
+"root": "ق.ط.ن",
+"n_analyses": 6
+},
+{
+"noun": "الاسباني",
+"wazn_tag": "nisba_yaa",
+"root": "س.ب.ب",
+"n_analyses": 2
+},
+{
+"noun": "العميل",
+"wazn_tag": "faiil",
+"root": "ع.م.ل",
+"n_analyses": 6
+},
+{
+"noun": "اليتيم",
+"wazn_tag": "faiil",
+"root": "#.ت.م",
+"n_analyses": 8
+},
+{
+"noun": "الوصي",
+"wazn_tag": "other",
+"root": "#.ص.#",
+"n_analyses": 7
+},
+{
+"noun": "الشحات",
+"wazn_tag": "faaal_or_fa33aal",
+"root": "ش.ح.ت",
+"n_analyses": 6
+},
+{
+"noun": "الايطالي",
+"wazn_tag": "nisba_yaa",
+"root": null,
+"n_analyses": 0
+},
+{
+"noun": "الابن",
+"wazn_tag": "other",
+"root": "ب.ن.ن",
+"n_analyses": 9
+},
+{
+"noun": "المحب",
+"wazn_tag": "other",
+"root": "ح.ب.ب",
+"n_analyses": 6
+},
+{
+"noun": "الحابل",
+"wazn_tag": "faail",
+"root": "ح.ب.ل",
+"n_analyses": 6
+},
+{
+"noun": "الراوي",
+"wazn_tag": "nisba_yaa",
+"root": "ر.#.#",
+"n_analyses": 6
+},
+{
+"noun": "المنقذ",
+"wazn_tag": "mu_participle",
+"root": "ن.ق.ذ",
+"n_analyses": 6
+},
+{
+"noun": "المبتدئ",
+"wazn_tag": "mu_participle",
+"root": "ب.د.#",
+"n_analyses": 6
+},
+{
+"noun": "المدقق",
+"wazn_tag": "mu_participle",
+"root": "د.ق.ق",
+"n_analyses": 12
+},
+{
+"noun": "الياباني",
+"wazn_tag": "nisba_yaa",
+"root": "NTWS",
+"n_analyses": 14
+},
+{
+"noun": "الراعي",
+"wazn_tag": "nisba_yaa",
+"root": "ر.ع.#",
+"n_analyses": 8
+},
+{
+"noun": "النقيب",
+"wazn_tag": "faiil",
+"root": "ن.ق.ب",
+"n_analyses": 12
+},
+{
+"noun": "البخيل",
+"wazn_tag": "faiil",
+"root": "ب.خ.ل",
+"n_analyses": 12
+},
+{
+"noun": "الالماني",
+"wazn_tag": "nisba_yaa",
+"root": "م.#.ن",
+"n_analyses": 1
+},
+{
+"noun": "المساعد",
+"wazn_tag": "mu_participle",
+"root": "س.ع.د",
+"n_analyses": 12
+},
+{
+"noun": "السائح",
+"wazn_tag": "faail",
+"root": "س.#.ح",
+"n_analyses": 6
+},
+{
+"noun": "الشيبان",
+"wazn_tag": "other",
+"root": "ش.#.ب",
+"n_analyses": 6
+},
+{
+"noun": "الثرثار",
+"wazn_tag": "other",
+"root": "ث.ر.ث.ر",
+"n_analyses": 6
+},
+{
+"noun": "الكرام",
+"wazn_tag": "faiil",
+"root": "ك.ر.م",
+"n_analyses": 23
+},
+{
+"noun": "المهاجم",
+"wazn_tag": "mu_participle",
+"root": "ه.ج.م",
+"n_analyses": 12
+},
+{
+"noun": "الست",
+"wazn_tag": "other",
+"root": "س.ت.ت",
+"n_analyses": 12
+},
+{
+"noun": "الصيدلي",
+"wazn_tag": "nisba_yaa",
+"root": "ص.#.د.ل",
+"n_analyses": 12
+},
+{
+"noun": "الكفار",
+"wazn_tag": "faaal_or_fa33aal",
+"root": "ك.ف.ر",
+"n_analyses": 30
+},
+{
+"noun": "الوارث",
+"wazn_tag": "faail",
+"root": "#.ر.ث",
+"n_analyses": 63
+},
+{
+"noun": "الشرير",
+"wazn_tag": "faiil",
+"root": "ش.ر.ر",
+"n_analyses": 13
+},
+{
+"noun": "الالباني",
+"wazn_tag": "nisba_yaa",
+"root": "ب.ن.#",
+"n_analyses": 12
+},
+{
+"noun": "البصري",
+"wazn_tag": "nisba_yaa",
+"root": "ب.ص.ر",
+"n_analyses": 14
+},
+{
+"noun": "المستورد",
+"wazn_tag": "mu_participle",
+"root": "#.ر.د",
+"n_analyses": 12
+},
+{
+"noun": "الافغاني",
+"wazn_tag": "nisba_yaa",
+"root": "NTWS",
+"n_analyses": 6
+},
+{
+"noun": "المحتاج",
+"wazn_tag": "mu_participle",
+"root": "ح.#.ج",
+"n_analyses": 6
+},
+{
+"noun": "التركي",
+"wazn_tag": "nisba_yaa",
+"root": "ت.ر.ك",
+"n_analyses": 16
+},
+{
+"noun": "العقيد",
+"wazn_tag": "faiil",
+"root": "ع.ق.د",
+"n_analyses": 6
+},
+{
+"noun": "القيادي",
+"wazn_tag": "nisba_yaa",
+"root": "ق.#.د",
+"n_analyses": 13
+},
+{
+"noun": "القيصر",
+"wazn_tag": "other",
+"root": "ق.ص.ر",
+"n_analyses": 31
+},
+{
+"noun": "الاخو",
+"wazn_tag": "other",
+"root": null,
+"n_analyses": 0
+},
+{
+"noun": "المبدع",
+"wazn_tag": "mu_participle",
+"root": "ب.د.ع",
+"n_analyses": 6
+},
+{
+"noun": "المتشدد",
+"wazn_tag": "mu_participle",
+"root": "ش.د.د",
+"n_analyses": 6
+},
+{
+"noun": "البليغ",
+"wazn_tag": "faiil",
+"root": "ب.ل.غ",
+"n_analyses": 12
+},
+{
+"noun": "المنافق",
+"wazn_tag": "mu_participle",
+"root": "ن.ف.ق",
+"n_analyses": 6
+},
+{
+"noun": "الخال",
+"wazn_tag": "other",
+"root": "خ.#.ل",
+"n_analyses": 20
+},
+{
+"noun": "الفتي",
+"wazn_tag": "other",
+"root": "ف.ت.#",
+"n_analyses": 8
+},
+{
+"noun": "الكافر",
+"wazn_tag": "faail",
+"root": "ك.ف.ر",
+"n_analyses": 6
+},
+{
+"noun": "الساعي",
+"wazn_tag": "nisba_yaa",
+"root": "س.ع.#",
+"n_analyses": 8
+},
+{
+"noun": "القاري",
+"wazn_tag": "nisba_yaa",
+"root": "ق.ر.ر",
+"n_analyses": 18
+},
+{
+"noun": "الخراط",
+"wazn_tag": "faaal_or_fa33aal",
+"root": "خ.ر.ط",
+"n_analyses": 13
+},
+{
+"noun": "الحم",
+"wazn_tag": "other",
+"root": "ح.م.#",
+"n_analyses": 8
+},
+{
+"noun": "الفذ",
+"wazn_tag": "other",
+"root": "ف.ذ.ذ",
+"n_analyses": 6
+},
+{
+"noun": "الاصلع",
+"wazn_tag": "other",
+"root": "ص.ل.ع",
+"n_analyses": 13
+},
+{
+"noun": "الحرامي",
+"wazn_tag": "nisba_yaa",
+"root": "ح.ر.م",
+"n_analyses": 8
+},
+{
+"noun": "الرفيق",
+"wazn_tag": "faiil",
+"root": "ر.ف.ق",
+"n_analyses": 7
+},
+{
+"noun": "الداعي",
+"wazn_tag": "nisba_yaa",
+"root": "د.ع.#",
+"n_analyses": 8
+},
+{
+"noun": "العابد",
+"wazn_tag": "faail",
+"root": "ع.ب.د",
+"n_analyses": 7
+},
+{
+"noun": "البائع",
+"wazn_tag": "faail",
+"root": "ب.#.ع",
+"n_analyses": 6
+},
+{
+"noun": "الاعمي",
+"wazn_tag": "other",
+"root": "ع.م.م",
+"n_analyses": 8
+},
+{
+"noun": "البار",
+"wazn_tag": "other",
+"root": "ب.ر.#",
+"n_analyses": 11
+},
+{
+"noun": "الجاني",
+"wazn_tag": "nisba_yaa",
+"root": "ج.ن.#",
+"n_analyses": 7
+},
+{
+"noun": "الخاسر",
+"wazn_tag": "faail",
+"root": "خ.س.ر",
+"n_analyses": 6
+},
+{
+"noun": "المفسر",
+"wazn_tag": "mu_participle",
+"root": "ف.س.ر",
+"n_analyses": 6
+},
+{
+"noun": "المدخن",
+"wazn_tag": "mu_participle",
+"root": "د.خ.ن",
+"n_analyses": 12
+},
+{
+"noun": "البرازيلي",
+"wazn_tag": "nisba_yaa",
+"root": "NTWS",
+"n_analyses": 13
+},
+{
+"noun": "الفارس",
+"wazn_tag": "faail",
+"root": "ف.ر.س",
+"n_analyses": 13
+},
+{
+"noun": "الارهابي",
+"wazn_tag": "nisba_yaa",
+"root": null,
+"n_analyses": 0
+},
+{
+"noun": "المادح",
+"wazn_tag": "mu_participle",
+"root": "م.د.ح",
+"n_analyses": 12
+},
+{
+"noun": "المدرس",
+"wazn_tag": "mu_participle",
+"root": "د.ر.س",
+"n_analyses": 6
+},
+{
+"noun": "المجوسي",
+"wazn_tag": "mu_participle",
+"root": "م.ج.س",
+"n_analyses": 13
+},
+{
+"noun": "القاضي",
+"wazn_tag": "nisba_yaa",
+"root": "ق.ض.#",
+"n_analyses": 2
+},
+{
+"noun": "الفاجر",
+"wazn_tag": "faail",
+"root": "#.ج.ر",
+"n_analyses": 31
+},
+{
+"noun": "المسكين",
+"wazn_tag": "mu_participle",
+"root": "س.ك.ن",
+"n_analyses": 6
+},
+{
+"noun": "الاوربي",
+"wazn_tag": "nisba_yaa",
+"root": "ر.ب.ب",
+"n_analyses": 40
+},
+{
+"noun": "المصور",
+"wazn_tag": "mu_participle",
+"root": "ص.#.ر",
+"n_analyses": 19
+},
+{
+"noun": "المحترم",
+"wazn_tag": "mu_participle",
+"root": "ح.ر.م",
+"n_analyses": 6
+},
+{
+"noun": "السنغالي",
+"wazn_tag": "nisba_yaa",
+"root": "NTWS",
+"n_analyses": 14
+},
+{
+"noun": "الملحد",
+"wazn_tag": "mu_participle",
+"root": "ل.ح.د",
+"n_analyses": 6
+},
+{
+"noun": "العشيق",
+"wazn_tag": "faiil",
+"root": "ع.ش.ق",
+"n_analyses": 6
+},
+{
+"noun": "المفتي",
+"wazn_tag": "mu_participle",
+"root": "ف.ت.#",
+"n_analyses": 7
+},
+{
+"noun": "السامع",
+"wazn_tag": "faail",
+"root": "س.م.ع",
+"n_analyses": 12
+},
+{
+"noun": "المغتاب",
+"wazn_tag": "mu_participle",
+"root": "غ.#.ب",
+"n_analyses": 6
+},
+{
+"noun": "القارئ",
+"wazn_tag": "faail",
+"root": "ق.ر.#",
+"n_analyses": 6
+},
+{
+"noun": "العم",
+"wazn_tag": "other",
+"root": "ع.م.م",
+"n_analyses": 7
+},
+{
+"noun": "المطرب",
+"wazn_tag": "mu_participle",
+"root": "ط.ر.ب",
+"n_analyses": 6
+},
+{
+"noun": "البروفسور",
+"wazn_tag": "other",
+"root": "NTWS",
+"n_analyses": 12
+},
+{
+"noun": "العشير",
+"wazn_tag": "faiil",
+"root": "ع.ش.ر",
+"n_analyses": 6
+},
+{
+"noun": "العروس",
+"wazn_tag": "other",
+"root": "ع.ر.س",
+"n_analyses": 6
+},
+{
+"noun": "الكتائبي",
+"wazn_tag": "nisba_yaa",
+"root": "ك.ت.ب",
+"n_analyses": 35
+},
+{
+"noun": "الفلسطيني",
+"wazn_tag": "nisba_yaa",
+"root": "NTWS",
+"n_analyses": 13
+},
+{
+"noun": "المقيم",
+"wazn_tag": "mu_participle",
+"root": "ق.#.م",
+"n_analyses": 6
+},
+{
+"noun": "السجان",
+"wazn_tag": "faaal_or_fa33aal",
+"root": "س.ج.ن",
+"n_analyses": 6
+},
+{
+"noun": "الفلمنكي",
+"wazn_tag": "nisba_yaa",
+"root": "NTWS",
+"n_analyses": 12
+},
+{
+"noun": "المهذب",
+"wazn_tag": "mu_participle",
+"root": "ه.ذ.ب",
+"n_analyses": 18
+},
+{
+"noun": "الصبي",
+"wazn_tag": "other",
+"root": "ص.ب.#",
+"n_analyses": 9
+},
+{
+"noun": "الهمج",
+"wazn_tag": "other",
+"root": "ه.م.ج",
+"n_analyses": 19
+},
+{
+"noun": "المقاوم",
+"wazn_tag": "mu_participle",
+"root": "ق.#.م",
+"n_analyses": 6
+},
+{
+"noun": "الحافظ",
+"wazn_tag": "faail",
+"root": "ح.ف.ظ",
+"n_analyses": 8
+},
+{
+"noun": "الرقاص",
+"wazn_tag": "faaal_or_fa33aal",
+"root": "ر.ق.ص",
+"n_analyses": 6
+},
+{
+"noun": "العانس",
+"wazn_tag": "faail",
+"root": "ع.ن.س",
+"n_analyses": 6
+},
+{
+"noun": "القبطان",
+"wazn_tag": "other",
+"root": "ق.ب.ط.ن",
+"n_analyses": 6
+},
+{
+"noun": "اللبناني",
+"wazn_tag": "nisba_yaa",
+"root": "ب.ن.#",
+"n_analyses": 2
+},
+{
+"noun": "المتسابق",
+"wazn_tag": "mu_participle",
+"root": "س.ب.ق",
+"n_analyses": 6
+},
+{
+"noun": "المتواجد",
+"wazn_tag": "mu_participle",
+"root": "#.ج.د",
+"n_analyses": 6
+},
+{
+"noun": "المكي",
+"wazn_tag": "other",
+"root": "م.ك.ك",
+"n_analyses": 13
+},
+{
+"noun": "السيناتور",
+"wazn_tag": "other",
+"root": "NTWS",
+"n_analyses": 6
+},
+{
+"noun": "النظير",
+"wazn_tag": "faiil",
+"root": "ن.ظ.ر",
+"n_analyses": 6
+},
+{
+"noun": "البريطاني",
+"wazn_tag": "nisba_yaa",
+"root": "NTWS",
+"n_analyses": 12
+},
+{
+"noun": "الجدع",
+"wazn_tag": "other",
+"root": "ج.د.ع",
+"n_analyses": 13
+},
+{
+"noun": "النكات",
+"wazn_tag": "faaal_or_fa33aal",
+"root": "ن.ك.ت",
+"n_analyses": 10
+},
+{
+"noun": "الطاغي",
+"wazn_tag": "nisba_yaa",
+"root": "ط.غ.#",
+"n_analyses": 7
+},
+{
+"noun": "الخب",
+"wazn_tag": "other",
+"root": "خ.ب.ب",
+"n_analyses": 14
+},
+{
+"noun": "المحترف",
+"wazn_tag": "mu_participle",
+"root": "ح.ر.ف",
+"n_analyses": 6
+},
+{
+"noun": "المفقود",
+"wazn_tag": "mu_participle",
+"root": "ف.ق.د",
+"n_analyses": 6
+},
+{
+"noun": "السجين",
+"wazn_tag": "faiil",
+"root": "س.ج.ن",
+"n_analyses": 7
+},
+{
+"noun": "المليك",
+"wazn_tag": "mu_participle",
+"root": "م.ل.ل",
+"n_analyses": 26
+},
+{
+"noun": "المحلل",
+"wazn_tag": "mu_participle",
+"root": "ح.ل.ل",
+"n_analyses": 12
+},
+{
+"noun": "الخبير",
+"wazn_tag": "faiil",
+"root": "خ.ب.ر",
+"n_analyses": 6
+},
+{
+"noun": "الهجان",
+"wazn_tag": "faaal_or_fa33aal",
+"root": "ه.ج.ن",
+"n_analyses": 7
+},
+{
+"noun": "الحامي",
+"wazn_tag": "nisba_yaa",
+"root": "ح.م.#",
+"n_analyses": 25
+},
+{
+"noun": "العباسي",
+"wazn_tag": "nisba_yaa",
+"root": "ع.ب.س",
+"n_analyses": 13
+},
+{
+"noun": "المعرص",
+"wazn_tag": "mu_participle",
+"root": "ع.ر.ص",
+"n_analyses": 6
+},
+{
+"noun": "المفتري",
+"wazn_tag": "mu_participle",
+"root": "ف.ر.ر",
+"n_analyses": 19
+},
+{
+"noun": "الساجد",
+"wazn_tag": "faail",
+"root": "س.ج.د",
+"n_analyses": 16
+},
+{
+"noun": "الزاني",
+"wazn_tag": "nisba_yaa",
+"root": "ز.ن.#",
+"n_analyses": 7
+},
+{
+"noun": "المامور",
+"wazn_tag": "mu_participle",
+"root": "#.م.ر",
+"n_analyses": 6
+},
+{
+"noun": "الخائن",
+"wazn_tag": "faail",
+"root": "خ.#.ن",
+"n_analyses": 6
+},
+{
+"noun": "الطيار",
+"wazn_tag": "faaal_or_fa33aal",
+"root": "ط.#.ر",
+"n_analyses": 6
+},
+{
+"noun": "الاثيوبي",
+"wazn_tag": "nisba_yaa",
+"root": null,
+"n_analyses": 0
+},
+{
+"noun": "الضيف",
+"wazn_tag": "other",
+"root": "ض.#.ف",
+"n_analyses": 7
+},
+{
+"noun": "الرومي",
+"wazn_tag": "nisba_yaa",
+"root": "ر.#.م",
+"n_analyses": 27
+},
+{
+"noun": "الكابتن",
+"wazn_tag": "other",
+"root": "NTWS",
+"n_analyses": 2
+},
+{
+"noun": "الممثل",
+"wazn_tag": "mu_participle",
+"root": "م.ث.ل",
+"n_analyses": 18
+},
+{
+"noun": "السباك",
+"wazn_tag": "faaal_or_fa33aal",
+"root": "س.ب.ك",
+"n_analyses": 10
+},
+{
+"noun": "السياح",
+"wazn_tag": "faaal_or_fa33aal",
+"root": "س.#.ح",
+"n_analyses": 12
+},
+{
+"noun": "الرابح",
+"wazn_tag": "faail",
+"root": "ر.ب.ح",
+"n_analyses": 6
+},
+{
+"noun": "المهتدي",
+"wazn_tag": "mu_participle",
+"root": "ه.د.#",
+"n_analyses": 9
+},
+{
+"noun": "الامبراطور",
+"wazn_tag": "other",
+"root": null,
+"n_analyses": 0
+},
+{
+"noun": "الصائغ",
+"wazn_tag": "faail",
+"root": "ص.#.غ",
+"n_analyses": 6
+},
+{
+"noun": "السويدي",
+"wazn_tag": "nisba_yaa",
+"root": "NTWS",
+"n_analyses": 13
+},
+{
+"noun": "المناضل",
+"wazn_tag": "mu_participle",
+"root": "ن.ض.ل",
+"n_analyses": 6
+},
+{
+"noun": "المؤنس",
+"wazn_tag": "mu_participle",
+"root": "#.ن.س",
+"n_analyses": 7
+},
+{
+"noun": "الاهتم",
+"wazn_tag": "other",
+"root": "ه.ت.م",
+"n_analyses": 6
+},
+{
+"noun": "الدعي",
+"wazn_tag": "other",
+"root": "د.ع.#",
+"n_analyses": 7
+},
+{
+"noun": "الافريقي",
+"wazn_tag": "nisba_yaa",
+"root": "ف.ر.ق",
+"n_analyses": 17
+},
+{
+"noun": "العارف",
+"wazn_tag": "faail",
+"root": "ع.ر.ف",
+"n_analyses": 13
+},
+{
+"noun": "المغلوب",
+"wazn_tag": "mu_participle",
+"root": "غ.ل.ب",
+"n_analyses": 6
+},
+{
+"noun": "الفارسي",
+"wazn_tag": "nisba_yaa",
+"root": "ف.ر.س",
+"n_analyses": 20
+},
+{
+"noun": "الجنرال",
+"wazn_tag": "other",
+"root": "NTWS",
+"n_analyses": 7
+},
+{
+"noun": "الزيات",
+"wazn_tag": "faaal_or_fa33aal",
+"root": "ز.#.ت",
+"n_analyses": 7
+},
+{
+"noun": "المشتكي",
+"wazn_tag": "mu_participle",
+"root": "ش.ك.#",
+"n_analyses": 11
+},
+{
+"noun": "الحلاق",
+"wazn_tag": "faaal_or_fa33aal",
+"root": "ح.ل.ق",
+"n_analyses": 6
+},
+{
+"noun": "الكاثوليكي",
+"wazn_tag": "nisba_yaa",
+"root": "NTWS",
+"n_analyses": 13
+},
+{
+"noun": "الشيوعي",
+"wazn_tag": "nisba_yaa",
+"root": "ش.#.ع",
+"n_analyses": 13
+},
+{
+"noun": "البياع",
+"wazn_tag": "faaal_or_fa33aal",
+"root": "ب.#.ع",
+"n_analyses": 6
+},
+{
+"noun": "الغنام",
+"wazn_tag": "faaal_or_fa33aal",
+"root": "غ.ن.م",
+"n_analyses": 7
+},
+{
+"noun": "المار",
+"wazn_tag": "other",
+"root": "م.ر.ر",
+"n_analyses": 9
+},
+{
+"noun": "الناظر",
+"wazn_tag": "faail",
+"root": "ن.ظ.ر",
+"n_analyses": 13
+},
+{
+"noun": "البربري",
+"wazn_tag": "nisba_yaa",
+"root": "ب.ر.ب.ر",
+"n_analyses": 19
+},
+{
+"noun": "الزميل",
+"wazn_tag": "faiil",
+"root": "ز.م.ل",
+"n_analyses": 6
+},
+{
+"noun": "المنشد",
+"wazn_tag": "mu_participle",
+"root": "ن.ش.د",
+"n_analyses": 6
+},
+{
+"noun": "المشبوه",
+"wazn_tag": "mu_participle",
+"root": "ش.ب.ه",
+"n_analyses": 12
+},
+{
+"noun": "البولندي",
+"wazn_tag": "nisba_yaa",
+"root": "NTWS",
+"n_analyses": 12
+},
+{
+"noun": "القصاب",
+"wazn_tag": "faaal_or_fa33aal",
+"root": "ق.ص.ب",
+"n_analyses": 18
+},
+{
+"noun": "المرتزق",
+"wazn_tag": "mu_participle",
+"root": "ر.ز.ق",
+"n_analyses": 12
+},
+{
+"noun": "الاردني",
+"wazn_tag": "nisba_yaa",
+"root": "ر.د.ن",
+"n_analyses": 7
+},
+{
+"noun": "المستهلك",
+"wazn_tag": "mu_participle",
+"root": "ه.ل.ك",
+"n_analyses": 20
+},
+{
+"noun": "اليماني",
+"wazn_tag": "nisba_yaa",
+"root": "#.م.ن",
+"n_analyses": 13
+},
+{
+"noun": "الباكستاني",
+"wazn_tag": "nisba_yaa",
+"root": "NTWS",
+"n_analyses": 13
+},
+{
+"noun": "الناطق",
+"wazn_tag": "faail",
+"root": "ن.ط.ق",
+"n_analyses": 6
+},
+{
+"noun": "الفائز",
+"wazn_tag": "faail",
+"root": "ف.#.ز",
+"n_analyses": 8
+},
+{
+"noun": "المشجع",
+"wazn_tag": "mu_participle",
+"root": "ش.ج.ع",
+"n_analyses": 12
+},
+{
+"noun": "الراكب",
+"wazn_tag": "faail",
+"root": "ر.ك.ب",
+"n_analyses": 6
+},
+{
+"noun": "المهرج",
+"wazn_tag": "mu_participle",
+"root": "ه.ر.ج",
+"n_analyses": 6
+},
+{
+"noun": "القواد",
+"wazn_tag": "faaal_or_fa33aal",
+"root": "ق.#.د",
+"n_analyses": 18
+},
+{
+"noun": "الصحابي",
+"wazn_tag": "nisba_yaa",
+"root": "ص.ح.ب",
+"n_analyses": 6
+},
+{
+"noun": "القناص",
+"wazn_tag": "faaal_or_fa33aal",
+"root": "ق.ن.ص",
+"n_analyses": 12
+},
+{
+"noun": "المولع",
+"wazn_tag": "mu_participle",
+"root": "#.ل.ع",
+"n_analyses": 6
+},
+{
+"noun": "العاهل",
+"wazn_tag": "faail",
+"root": "ع.ه.ل",
+"n_analyses": 6
+},
+{
+"noun": "السلفي",
+"wazn_tag": "nisba_yaa",
+"root": "س.ل.ف",
+"n_analyses": 14
+},
+{
+"noun": "المجدد",
+"wazn_tag": "mu_participle",
+"root": "ج.د.د",
+"n_analyses": 12
+},
+{
+"noun": "الابتر",
+"wazn_tag": "other",
+"root": "ب.ت.ر",
+"n_analyses": 13
+},
+{
+"noun": "المتعاطي",
+"wazn_tag": "mu_participle",
+"root": "ع.ط.#",
+"n_analyses": 6
+},
+{
+"noun": "الطفران",
+"wazn_tag": "other",
+"root": "ط.ف.ر",
+"n_analyses": 6
+},
+{
+"noun": "المفكر",
+"wazn_tag": "mu_participle",
+"root": "ف.ك.ر",
+"n_analyses": 6
+},
+{
+"noun": "الديوث",
+"wazn_tag": "other",
+"root": "د.#.ث",
+"n_analyses": 6
+},
+{
+"noun": "الاواب",
+"wazn_tag": "faaal_or_fa33aal",
+"root": "#.#.ب",
+"n_analyses": 12
+},
+{
+"noun": "المقصر",
+"wazn_tag": "mu_participle",
+"root": "ق.ص.ر",
+"n_analyses": 6
+},
+{
+"noun": "المنسق",
+"wazn_tag": "mu_participle",
+"root": "ن.س.ق",
+"n_analyses": 12
+},
+{
+"noun": "الانقليزي",
+"wazn_tag": "nisba_yaa",
+"root": null,
+"n_analyses": 0
+},
+{
+"noun": "الكفيل",
+"wazn_tag": "faiil",
+"root": "ك.ف.ل",
+"n_analyses": 18
+},
+{
+"noun": "الدوق",
+"wazn_tag": "other",
+"root": "NTWS",
+"n_analyses": 6
+},
+{
+"noun": "المجتهد",
+"wazn_tag": "mu_participle",
+"root": "ج.ه.د",
+"n_analyses": 6
+},
+{
+"noun": "المتهم",
+"wazn_tag": "mu_participle",
+"root": "#.ه.م",
+"n_analyses": 15
+},
+{
+"noun": "الشاهد",
+"wazn_tag": "faail",
+"root": "ش.ه.د",
+"n_analyses": 7
+},
+{
+"noun": "العطار",
+"wazn_tag": "faaal_or_fa33aal",
+"root": "ع.ط.ر",
+"n_analyses": 13
+},
+{
+"noun": "العثماني",
+"wazn_tag": "nisba_yaa",
+"root": "ع.ث.م",
+"n_analyses": 13
+},
+{
+"noun": "النحال",
+"wazn_tag": "faaal_or_fa33aal",
+"root": "ن.ح.ل",
+"n_analyses": 14
+},
+{
+"noun": "الاخرس",
+"wazn_tag": "other",
+"root": "خ.ر.س",
+"n_analyses": 13
+},
+{
+"noun": "النقاد",
+"wazn_tag": "faaal_or_fa33aal",
+"root": "ن.ق.د",
+"n_analyses": 13
+},
+{
+"noun": "الجليس",
+"wazn_tag": "faiil",
+"root": "ج.ل.س",
+"n_analyses": 6
+},
+{
+"noun": "الوالي",
+"wazn_tag": "nisba_yaa",
+"root": "#.#.ل",
+"n_analyses": 35
+},
+{
+"noun": "الاندلسي",
+"wazn_tag": "nisba_yaa",
+"root": null,
+"n_analyses": 0
+},
+{
+"noun": "المتفرج",
+"wazn_tag": "mu_participle",
+"root": "ف.ر.ج",
+"n_analyses": 6
+},
+{
+"noun": "المنغولي",
+"wazn_tag": "mu_participle",
+"root": "م.ن.غ.ل",
+"n_analyses": 12
+},
+{
+"noun": "العماني",
+"wazn_tag": "nisba_yaa",
+"root": "ع.م.ن",
+"n_analyses": 15
+},
+{
+"noun": "العمدة",
+"wazn_tag": "other",
+"root": "ع.م.د",
+"n_analyses": 25
+},
+{
+"noun": "الانيس",
+"wazn_tag": "faiil",
+"root": null,
+"n_analyses": 0
+},
+{
+"noun": "المجاهد",
+"wazn_tag": "mu_participle",
+"root": "ج.ه.د",
+"n_analyses": 6
+},
+{
+"noun": "الراهب",
+"wazn_tag": "faail",
+"root": "ر.ه.ب",
+"n_analyses": 6
+},
+{
+"noun": "المالك",
+"wazn_tag": "mu_participle",
+"root": "#.#.ل",
+"n_analyses": 22
+},
+{
+"noun": "اللورد",
+"wazn_tag": "other",
+"root": "ر.د.د",
+"n_analyses": 53
+},
+{
+"noun": "الفاعل",
+"wazn_tag": "faail",
+"root": "ف.ع.ل",
+"n_analyses": 14
+},
+{
+"noun": "القنصل",
+"wazn_tag": "other",
+"root": "ق.ن.ص.ل",
+"n_analyses": 6
+},
+{
+"noun": "الصعلوك",
+"wazn_tag": "other",
+"root": "ص.ع.ل.ك",
+"n_analyses": 6
+},
+{
+"noun": "العيل",
+"wazn_tag": "other",
+"root": "ع.#.ل",
+"n_analyses": 7
+},
+{
+"noun": "الحجار",
+"wazn_tag": "faaal_or_fa33aal",
+"root": "ح.ج.ر",
+"n_analyses": 6
+},
+{
+"noun": "المحرض",
+"wazn_tag": "mu_participle",
+"root": "ح.ر.ض",
+"n_analyses": 6
+},
+{
+"noun": "النديم",
+"wazn_tag": "faiil",
+"root": "ن.د.م",
+"n_analyses": 8
+},
+{
+"noun": "الموريتاني",
+"wazn_tag": "mu_participle",
+"root": "NTWS",
+"n_analyses": 12
+},
+{
+"noun": "السارق",
+"wazn_tag": "faail",
+"root": "س.ر.ق",
+"n_analyses": 10
+},
+{
+"noun": "الضحوك",
+"wazn_tag": "other",
+"root": "ض.ح.#",
+"n_analyses": 14
+},
+{
+"noun": "الاشقر",
+"wazn_tag": "other",
+"root": "ش.ق.ر",
+"n_analyses": 13
+},
+{
+"noun": "المسؤول",
+"wazn_tag": "mu_participle",
+"root": "س.#.ل",
+"n_analyses": 12
+},
+{
+"noun": "الشهم",
+"wazn_tag": "other",
+"root": "ش.ه.م",
+"n_analyses": 6
+},
+{
+"noun": "الكولونيل",
+"wazn_tag": "other",
+"root": "NTWS",
+"n_analyses": 6
+},
+{
+"noun": "الساقي",
+"wazn_tag": "nisba_yaa",
+"root": "س.#.ق",
+"n_analyses": 9
+},
+{
+"noun": "الصانع",
+"wazn_tag": "faail",
+"root": "ص.ن.ع",
+"n_analyses": 13
+},
+{
+"noun": "العراب",
+"wazn_tag": "faaal_or_fa33aal",
+"root": "ع.ر.ب",
+"n_analyses": 6
+},
+{
+"noun": "الملاكم",
+"wazn_tag": "mu_participle",
+"root": "م.ل.#",
+"n_analyses": 26
+},
+{
+"noun": "المتبرع",
+"wazn_tag": "mu_participle",
+"root": "ب.ر.ع",
+"n_analyses": 6
+},
+{
+"noun": "الزائر",
+"wazn_tag": "faail",
+"root": "ز.#.ر",
+"n_analyses": 12
+},
+{
+"noun": "العلام",
+"wazn_tag": "faaal_or_fa33aal",
+"root": "ع.ل.م",
+"n_analyses": 7
+},
+{
+"noun": "الطحان",
+"wazn_tag": "faaal_or_fa33aal",
+"root": "ط.ح.ن",
+"n_analyses": 12
+},
+{
+"noun": "العاقر",
+"wazn_tag": "faail",
+"root": "ع.ق.ر",
+"n_analyses": 7
+},
+{
+"noun": "البشوش",
+"wazn_tag": "other",
+"root": "ب.ش.ش",
+"n_analyses": 9
+},
+{
+"noun": "الهداف",
+"wazn_tag": "faaal_or_fa33aal",
+"root": "ه.د.ف",
+"n_analyses": 6
+},
+{
+"noun": "الحمصي",
+"wazn_tag": "nisba_yaa",
+"root": "ح.م.ص",
+"n_analyses": 9
+},
+{
+"noun": "الشب",
+"wazn_tag": "other",
+"root": "ش.ب.ب",
+"n_analyses": 14
+},
+{
+"noun": "الارعن",
+"wazn_tag": "other",
+"root": "ر.ع.ن",
+"n_analyses": 18
+},
+{
+"noun": "الخسيس",
+"wazn_tag": "faiil",
+"root": "خ.س.س",
+"n_analyses": 12
+},
+{
+"noun": "الواعظ",
+"wazn_tag": "faail",
+"root": "#.ع.ظ",
+"n_analyses": 9
+},
+{
+"noun": "الشريك",
+"wazn_tag": "faiil",
+"root": "ش.ر.#",
+"n_analyses": 14
+},
+{
+"noun": "الصهيوني",
+"wazn_tag": "nisba_yaa",
+"root": "NTWS",
+"n_analyses": 14
+},
+{
+"noun": "الفاسق",
+"wazn_tag": "faail",
+"root": "ف.س.ق",
+"n_analyses": 14
+},
+{
+"noun": "الجزار",
+"wazn_tag": "faaal_or_fa33aal",
+"root": "ج.ز.ر",
+"n_analyses": 6
+},
+{
+"noun": "الحلاج",
+"wazn_tag": "faaal_or_fa33aal",
+"root": "ح.ل.ج",
+"n_analyses": 7
+},
+{
+"noun": "المغترب",
+"wazn_tag": "mu_participle",
+"root": "غ.ر.ب",
+"n_analyses": 12
+},
+{
+"noun": "القاصر",
+"wazn_tag": "faail",
+"root": "ق.ص.ر",
+"n_analyses": 12
+},
+{
+"noun": "الارجنتيني",
+"wazn_tag": "nisba_yaa",
+"root": null,
+"n_analyses": 0
+},
+{
+"noun": "المتسبب",
+"wazn_tag": "mu_participle",
+"root": "س.ب.ب",
+"n_analyses": 6
+},
+{
+"noun": "الهولندي",
+"wazn_tag": "nisba_yaa",
+"root": "NTWS",
+"n_analyses": 12
+},
+{
+"noun": "النسيب",
+"wazn_tag": "faiil",
+"root": "ن.س.ب",
+"n_analyses": 9
+},
+{
+"noun": "التشيلي",
+"wazn_tag": "nisba_yaa",
+"root": "NTWS",
+"n_analyses": 15
+},
+{
+"noun": "الناقد",
+"wazn_tag": "faail",
+"root": "ن.ق.د",
+"n_analyses": 7
+},
+{
+"noun": "المتالق",
+"wazn_tag": "mu_participle",
+"root": "#.ل.ق",
+"n_analyses": 6
+},
+{
+"noun": "المفاوض",
+"wazn_tag": "mu_participle",
+"root": "ف.#.ض",
+"n_analyses": 6
+},
+{
+"noun": "الظهير",
+"wazn_tag": "faiil",
+"root": "ظ.ه.ر",
+"n_analyses": 6
+},
+{
+"noun": "البواب",
+"wazn_tag": "faaal_or_fa33aal",
+"root": "ب.#.ب",
+"n_analyses": 6
+},
+{
+"noun": "المراهق",
+"wazn_tag": "mu_participle",
+"root": "ر.ه.ق",
+"n_analyses": 6
+},
+{
+"noun": "المتوج",
+"wazn_tag": "mu_participle",
+"root": "ت.#.ج",
+"n_analyses": 6
+},
+{
+"noun": "المعيب",
+"wazn_tag": "mu_participle",
+"root": "ع.#.ب",
+"n_analyses": 18
+},
+{
+"noun": "الابكم",
+"wazn_tag": "other",
+"root": "ب.ك.م",
+"n_analyses": 20
+},
+{
+"noun": "الاقرع",
+"wazn_tag": "other",
+"root": "ق.ر.ع",
+"n_analyses": 33
+},
+{
+"noun": "الدبلوماسي",
+"wazn_tag": "nisba_yaa",
+"root": "NTWS",
+"n_analyses": 12
+},
+{
+"noun": "المخاطب",
+"wazn_tag": "mu_participle",
+"root": "خ.ط.ب",
+"n_analyses": 12
+},
+{
+"noun": "المستمع",
+"wazn_tag": "mu_participle",
+"root": "س.م.ع",
+"n_analyses": 6
+},
+{
+"noun": "الزبال",
+"wazn_tag": "faaal_or_fa33aal",
+"root": "ز.ب.ل",
+"n_analyses": 6
+},
+{
+"noun": "الاديب",
+"wazn_tag": "faiil",
+"root": "د.#.ب",
+"n_analyses": 1
+},
+{
+"noun": "الصبان",
+"wazn_tag": "faaal_or_fa33aal",
+"root": "ص.ب.ن",
+"n_analyses": 7
+},
+{
+"noun": "البيطار",
+"wazn_tag": "other",
+"root": "ب.ط.ر",
+"n_analyses": 6
+},
+{
+"noun": "الايوبي",
+"wazn_tag": "nisba_yaa",
+"root": null,
+"n_analyses": 0
+},
+{
+"noun": "المشرك",
+"wazn_tag": "mu_participle",
+"root": "ش.ر.ك",
+"n_analyses": 6
+},
+{
+"noun": "الانكليزي",
+"wazn_tag": "nisba_yaa",
+"root": null,
+"n_analyses": 0
+},
+{
+"noun": "الخدم",
+"wazn_tag": "other",
+"root": "خ.د.م",
+"n_analyses": 8
+},
+{
+"noun": "السياف",
+"wazn_tag": "faaal_or_fa33aal",
+"root": "س.#.ف",
+"n_analyses": 7
+},
+{
+"noun": "المياس",
+"wazn_tag": "mu_participle",
+"root": "م.#.س",
+"n_analyses": 6
+},
+{
+"noun": "الوادع",
+"wazn_tag": "faail",
+"root": "#.د.ع",
+"n_analyses": 24
+},
+{
+"noun": "الممرض",
+"wazn_tag": "mu_participle",
+"root": "م.ر.ض",
+"n_analyses": 6
+},
+{
+"noun": "الملياردير",
+"wazn_tag": "mu_participle",
+"root": "NTWS",
+"n_analyses": 6
+},
+{
+"noun": "الوهابي",
+"wazn_tag": "nisba_yaa",
+"root": "#.ه.ب",
+"n_analyses": 12
+},
+{
+"noun": "المبتدع",
+"wazn_tag": "mu_participle",
+"root": "ب.د.ع",
+"n_analyses": 6
+},
+{
+"noun": "العاذل",
+"wazn_tag": "faail",
+"root": "ع.ذ.ل",
+"n_analyses": 6
+},
+{
+"noun": "الكردستاني",
+"wazn_tag": "nisba_yaa",
+"root": "NTWS",
+"n_analyses": 13
+},
+{
+"noun": "المؤرخ",
+"wazn_tag": "mu_participle",
+"root": "#.ر.خ",
+"n_analyses": 12
+},
+{
+"noun": "الخريج",
+"wazn_tag": "faiil",
+"root": "خ.ر.ج",
+"n_analyses": 6
+},
+{
+"noun": "المنصوري",
+"wazn_tag": "mu_participle",
+"root": "ن.ص.ر",
+"n_analyses": 17
+},
+{
+"noun": "البرتغالي",
+"wazn_tag": "nisba_yaa",
+"root": "NTWS",
+"n_analyses": 13
+},
+{
+"noun": "الروماني",
+"wazn_tag": "nisba_yaa",
+"root": "ر.#.م",
+"n_analyses": 13
+},
+{
+"noun": "الباكي",
+"wazn_tag": "nisba_yaa",
+"root": "ب.ك.#",
+"n_analyses": 6
+},
+{
+"noun": "الشاكي",
+"wazn_tag": "nisba_yaa",
+"root": "ش.ك.#",
+"n_analyses": 17
+},
+{
+"noun": "الفاطمي",
+"wazn_tag": "nisba_yaa",
+"root": "ف.ط.م",
+"n_analyses": 21
+},
+{
+"noun": "الفلبيني",
+"wazn_tag": "nisba_yaa",
+"root": "NTWS",
+"n_analyses": 20
+},
+{
+"noun": "الفنزويلي",
+"wazn_tag": "nisba_yaa",
+"root": "NTWS",
+"n_analyses": 12
+},
+{
+"noun": "المهووس",
+"wazn_tag": "mu_participle",
+"root": "ه.#.س",
+"n_analyses": 6
+},
+{
+"noun": "المعيد",
+"wazn_tag": "mu_participle",
+"root": "ع.#.د",
+"n_analyses": 6
+},
+{
+"noun": "البعل",
+"wazn_tag": "other",
+"root": "ب.ع.ل",
+"n_analyses": 7
+},
+{
+"noun": "المختص",
+"wazn_tag": "mu_participle",
+"root": "خ.ص.ص",
+"n_analyses": 6
+},
+{
+"noun": "المنادي",
+"wazn_tag": "mu_participle",
+"root": "ن.د.#",
+"n_analyses": 7
+},
+{
+"noun": "التبريزي",
+"wazn_tag": "nisba_yaa",
+"root": "NTWS",
+"n_analyses": 13
+},
+{
+"noun": "البقال",
+"wazn_tag": "faaal_or_fa33aal",
+"root": "ب.ق.ل",
+"n_analyses": 6
+},
+{
+"noun": "الشاذ",
+"wazn_tag": "other",
+"root": "ش.ذ.ذ",
+"n_analyses": 6
+},
+{
+"noun": "النزيل",
+"wazn_tag": "faiil",
+"root": "ن.ز.ل",
+"n_analyses": 7
+},
+{
+"noun": "الاروبي",
+"wazn_tag": "nisba_yaa",
+"root": "ر.#.ب",
+"n_analyses": 2
+},
+{
+"noun": "الكازخستاني",
+"wazn_tag": "nisba_yaa",
+"root": "NTWS",
+"n_analyses": 12
+},
+{
+"noun": "العازف",
+"wazn_tag": "faail",
+"root": "ع.ز.ف",
+"n_analyses": 6
+},
+{
+"noun": "الغفير",
+"wazn_tag": "other",
+"root": "غ.ف.ر",
+"n_analyses": 12
+},
+{
+"noun": "المكسيكي",
+"wazn_tag": "mu_participle",
+"root": "NTWS",
+"n_analyses": 12
+},
+{
+"noun": "المخرب",
+"wazn_tag": "mu_participle",
+"root": "خ.ر.ب",
+"n_analyses": 12
+},
+{
+"noun": "القبطي",
+"wazn_tag": "nisba_yaa",
+"root": "ق.ب.ط",
+"n_analyses": 13
+},
+{
+"noun": "المتبلد",
+"wazn_tag": "mu_participle",
+"root": "ب.ل.د",
+"n_analyses": 6
+},
+{
+"noun": "المتخرج",
+"wazn_tag": "mu_participle",
+"root": "خ.ر.ج",
+"n_analyses": 6
+},
+{
+"noun": "الفاهم",
+"wazn_tag": "faail",
+"root": "ه.م.م",
+"n_analyses": 16
+},
+{
+"noun": "المحنك",
+"wazn_tag": "mu_participle",
+"root": "م.ح.ن",
+"n_analyses": 20
+},
+{
+"noun": "الماركسي",
+"wazn_tag": "mu_participle",
+"root": "NTWS",
+"n_analyses": 12
+},
+{
+"noun": "المبجل",
+"wazn_tag": "mu_participle",
+"root": "ب.ج.ل",
+"n_analyses": 6
+},
+{
+"noun": "الندمان",
+"wazn_tag": "other",
+"root": "ن.د.م",
+"n_analyses": 4
+},
+{
+"noun": "البزار",
+"wazn_tag": "faaal_or_fa33aal",
+"root": "ب.ز.ر",
+"n_analyses": 9
+},
+{
+"noun": "الخضري",
+"wazn_tag": "nisba_yaa",
+"root": "خ.ض.ر",
+"n_analyses": 8
+},
+{
+"noun": "المصمم",
+"wazn_tag": "mu_participle",
+"root": "ص.م.م",
+"n_analyses": 18
+},
+{
+"noun": "اللائم",
+"wazn_tag": "faail",
+"root": null,
+"n_analyses": 0
+},
+{
+"noun": "المستشرق",
+"wazn_tag": "mu_participle",
+"root": "ش.ر.ق",
+"n_analyses": 6
+},
+{
+"noun": "الديكتاتور",
+"wazn_tag": "other",
+"root": "NTWS",
+"n_analyses": 6
+},
+{
+"noun": "الربان",
+"wazn_tag": "faaal_or_fa33aal",
+"root": "ر.ب.ب",
+"n_analyses": 9
+},
+{
+"noun": "المعذب",
+"wazn_tag": "mu_participle",
+"root": "ع.ذ.ب",
+"n_analyses": 12
+},
+{
+"noun": "الحرار",
+"wazn_tag": "faaal_or_fa33aal",
+"root": "ح.ر.ر",
+"n_analyses": 12
+},
+{
+"noun": "المعتدي",
+"wazn_tag": "mu_participle",
+"root": "ع.د.د",
+"n_analyses": 19
+},
+{
+"noun": "الرائي",
+"wazn_tag": "nisba_yaa",
+"root": "#.#.#",
+"n_analyses": 2
+},
+{
+"noun": "الصارخ",
+"wazn_tag": "faail",
+"root": "ص.ر.خ",
+"n_analyses": 12
+},
+{
+"noun": "المحتل",
+"wazn_tag": "mu_participle",
+"root": "ح.ل.ل",
+"n_analyses": 12
+},
+{
+"noun": "الماسوني",
+"wazn_tag": "mu_participle",
+"root": "NTWS",
+"n_analyses": 15
+},
+{
+"noun": "الناصح",
+"wazn_tag": "faail",
+"root": "ن.ص.ح",
+"n_analyses": 13
+},
+{
+"noun": "المدعي",
+"wazn_tag": "mu_participle",
+"root": "د.ع.#",
+"n_analyses": 10
+},
+{
+"noun": "الغاوي",
+"wazn_tag": "nisba_yaa",
+"root": "غ.#.#",
+"n_analyses": 6
+},
+{
+"noun": "البروفيسور",
+"wazn_tag": "other",
+"root": "NTWS",
+"n_analyses": 12
+},
+{
+"noun": "العلوي",
+"wazn_tag": "nisba_yaa",
+"root": "ع.ل.#",
+"n_analyses": 19
+},
+{
+"noun": "الزنديق",
+"wazn_tag": "other",
+"root": "ز.ن.د.ق",
+"n_analyses": 6
+},
+{
+"noun": "الكربلائي",
+"wazn_tag": "nisba_yaa",
+"root": "NTWS",
+"n_analyses": 7
+},
+{
+"noun": "التشيكي",
+"wazn_tag": "nisba_yaa",
+"root": "NTWS",
+"n_analyses": 13
+},
+{
+"noun": "الدمث",
+"wazn_tag": "other",
+"root": "د.م.ث",
+"n_analyses": 8
+},
+{
+"noun": "السبئي",
+"wazn_tag": "nisba_yaa",
+"root": "س.ب.#",
+"n_analyses": 12
+},
+{
+"noun": "الغاش",
+"wazn_tag": "other",
+"root": "غ.ش.ش",
+"n_analyses": 6
+},
+{
+"noun": "اليزيدي",
+"wazn_tag": "nisba_yaa",
+"root": "ز.#.د",
+"n_analyses": 12
+},
+{
+"noun": "اليوناني",
+"wazn_tag": "nisba_yaa",
+"root": "NTWS",
+"n_analyses": 14
+},
+{
+"noun": "المحرر",
+"wazn_tag": "mu_participle",
+"root": "ح.ر.ر",
+"n_analyses": 12
+},
+{
+"noun": "المدمن",
+"wazn_tag": "mu_participle",
+"root": "د.م.ن",
+"n_analyses": 6
+},
+{
+"noun": "المراكشي",
+"wazn_tag": "mu_participle",
+"root": "NTWS",
+"n_analyses": 24
+},
+{
+"noun": "الموالي",
+"wazn_tag": "mu_participle",
+"root": "م.#.ل",
+"n_analyses": 21
+},
+{
+"noun": "الرامي",
+"wazn_tag": "nisba_yaa",
+"root": "ر.م.#",
+"n_analyses": 8
+},
+{
+"noun": "المشارك",
+"wazn_tag": "mu_participle",
+"root": "ش.#.ر",
+"n_analyses": 14
+},
+{
+"noun": "البحراني",
+"wazn_tag": "nisba_yaa",
+"root": "ب.ح.ر",
+"n_analyses": 15
+},
+{
+"noun": "القدسي",
+"wazn_tag": "nisba_yaa",
+"root": "ق.د.س",
+"n_analyses": 15
+},
+{
+"noun": "المخرف",
+"wazn_tag": "mu_participle",
+"root": "خ.ر.ف",
+"n_analyses": 6
+},
+{
+"noun": "المرتد",
+"wazn_tag": "mu_participle",
+"root": "ر.د.د",
+"n_analyses": 6
+},
+{
+"noun": "المعاون",
+"wazn_tag": "mu_participle",
+"root": "ع.#.ن",
+"n_analyses": 12
+},
+{
+"noun": "المساهم",
+"wazn_tag": "mu_participle",
+"root": "س.ه.م",
+"n_analyses": 9
+},
+{
+"noun": "العبري",
+"wazn_tag": "nisba_yaa",
+"root": "ع.ب.ر",
+"n_analyses": 14
+},
+{
+"noun": "البوسني",
+"wazn_tag": "nisba_yaa",
+"root": "NTWS",
+"n_analyses": 23
+},
+{
+"noun": "الحطاب",
+"wazn_tag": "faaal_or_fa33aal",
+"root": "ح.ط.ب",
+"n_analyses": 6
+},
+{
+"noun": "العريف",
+"wazn_tag": "faiil",
+"root": "ع.ر.ف",
+"n_analyses": 12
+},
+{
+"noun": "الضامن",
+"wazn_tag": "faail",
+"root": "ض.م.ن",
+"n_analyses": 6
+},
+{
+"noun": "المسيطر",
+"wazn_tag": "mu_participle",
+"root": "س.ط.ر",
+"n_analyses": 12
+},
+{
+"noun": "الخراص",
+"wazn_tag": "faaal_or_fa33aal",
+"root": "خ.ر.ص",
+"n_analyses": 6
+},
+{
+"noun": "السويسري",
+"wazn_tag": "nisba_yaa",
+"root": "NTWS",
+"n_analyses": 12
+},
+{
+"noun": "المعزي",
+"wazn_tag": "mu_participle",
+"root": "ع.ز.#",
+"n_analyses": 8
+},
+{
+"noun": "البوليفي",
+"wazn_tag": "nisba_yaa",
+"root": "NTWS",
+"n_analyses": 12
+},
+{
+"noun": "الصربي",
+"wazn_tag": "nisba_yaa",
+"root": "NTWS",
+"n_analyses": 14
+},
+{
+"noun": "القسيس",
+"wazn_tag": "faiil",
+"root": "ق.س.س",
+"n_analyses": 6
+},
+{
+"noun": "الكندي",
+"wazn_tag": "nisba_yaa",
+"root": "NTWS",
+"n_analyses": 26
+},
+{
+"noun": "الجاسوس",
+"wazn_tag": "other",
+"root": "ج.س.س",
+"n_analyses": 6
+},
+{
+"noun": "الكهل",
+"wazn_tag": "other",
+"root": "ك.ه.ل",
+"n_analyses": 14
+}
+]

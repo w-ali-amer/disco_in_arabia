@@ -1,0 +1,122 @@
+{
+  "experiment": "exp84 stage-2 LM",
+  "registration": "/home/waj/qnlp_private_docs/76_exp84_fused_vocab_tokenizer.md",
+  "arm": "bpe",
+  "lm_seed": 1,
+  "tok_seed": 42,
+  "model": {
+    "d_model": 128,
+    "nhead": 4,
+    "d_ff": 512,
+    "nlayers": 2,
+    "dropout": 0.1,
+    "ctx": 128
+  },
+  "training": {
+    "optimizer": "Adam",
+    "lr": 0.0003,
+    "batch": 16,
+    "steps": 1500,
+    "grad_clip": 1.0
+  },
+  "tokenizer": {
+    "vocab_size": 32000,
+    "tok_dir": "/home/waj/discocat_arabic_v2/exp84_bpe_tok_s42"
+  },
+  "split": {
+    "n_train_lines": 249879,
+    "n_heldout_lines": 27765,
+    "n_train_tokens": 9037505,
+    "n_heldout_tokens": 1023831
+  },
+  "evaluation": {
+    "total_nats": 8259642.5223,
+    "total_tokens_eval": 1023744,
+    "total_surface_chars": 3691393,
+    "bits_per_char": 3.228089,
+    "definition": "total_nats / total_surface_chars / ln(2); surface_chars = sum of word lengths in held-out (non-space)"
+  },
+  "training_log": [
+    {
+      "step": 1,
+      "loss": 27.636744,
+      "elapsed_s": 50.6
+    },
+    {
+      "step": 100,
+      "loss": 19.139818,
+      "elapsed_s": 456.9
+    },
+    {
+      "step": 200,
+      "loss": 15.723454,
+      "elapsed_s": 860.5
+    },
+    {
+      "step": 300,
+      "loss": 12.839702,
+      "elapsed_s": 1269.9
+    },
+    {
+      "step": 400,
+      "loss": 10.946307,
+      "elapsed_s": 1669.5
+    },
+    {
+      "step": 500,
+      "loss": 9.664903,
+      "elapsed_s": 2076.6
+    },
+    {
+      "step": 600,
+      "loss": 9.32865,
+      "elapsed_s": 2480.4
+    },
+    {
+      "step": 700,
+      "loss": 8.655083,
+      "elapsed_s": 2887.5
+    },
+    {
+      "step": 800,
+      "loss": 8.850453,
+      "elapsed_s": 3294.5
+    },
+    {
+      "step": 900,
+      "loss": 8.804212,
+      "elapsed_s": 3699.9
+    },
+    {
+      "step": 1000,
+      "loss": 8.642678,
+      "elapsed_s": 4103.6
+    },
+    {
+      "step": 1100,
+      "loss": 8.410665,
+      "elapsed_s": 4507.2
+    },
+    {
+      "step": 1200,
+      "loss": 8.414272,
+      "elapsed_s": 4908.6
+    },
+    {
+      "step": 1300,
+      "loss": 8.394434,
+      "elapsed_s": 5309.7
+    },
+    {
+      "step": 1400,
+      "loss": 8.483558,
+      "elapsed_s": 5711.0
+    },
+    {
+      "step": 1500,
+      "loss": 8.355304,
+      "elapsed_s": 6110.1
+    }
+  ],
+  "elapsed_s": 6916.9
+}

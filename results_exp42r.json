@@ -1,0 +1,3919 @@
+{
+ "experiment": "exp42r -- trained-block Arabic story QA, the REVIVAL (doc 65 SS6.2: the FIRST VALID RUN of the registered design; the August exp42 verdict is void and results_exp42.json is NOT modified)",
+ "spec": "qnlp_private_docs/22_phase2_trained_story_qa_design.md SS3-SS7 + 65_exp40_42_revival.md SS2 (A2-TI, init policy, hygiene) and SS7.4 (the GO)",
+ "written_by": "exp42r_aggregate.py (SOLE WRITER of this file)",
+ "diagnostics_barred_from_this_verdict": "doc 65 SS7.3 registers the T = 1 single-event block and the purity/entropy-vs-T sweep as DIAGNOSTICS and bars them from the verdict: 'Neither gates nor enters tier_q/tier_s; they sharpen the read.' results_exp42r_diagnostics.json is NOT read by this file and no number in it enters any boolean below. Enforced at run time by assert_diagnostics_are_barred().",
+ "generated_utc": "2026-09-02T23:40:20Z",
+ "platform": "macOS-26.5.2-arm64-arm-64bit",
+ "torch_version": "2.13.0",
+ "python_version": "3.12.13",
+ "provenance": {
+  "dataset": {
+   "path": "stories_exp41r.json",
+   "sha256": "2326942ffb6ccf6bca95a7ec0502c82563957fabb159b143608a9fb31f8f3113",
+   "n_items": 4000,
+   "generator_seed": 41000,
+   "pin_doc65_SS6_3": "2326942ffb6ccf6bca95a7ec0502c82563957fabb159b143608a9fb31f8f3113",
+   "pin_matches": true
+  },
+  "embeddings": {
+   "path": "exp42_noun_embeddings.json",
+   "sha256": "00c1ecffcaf05b38df082f8a3cbed1d013bddb3e39bc00adf1c2513b4ea674ac",
+   "n": 44,
+   "source": "aravec/full_uni_cbow_300_twitter.mdl + ta-marbuta normalization + PCA-2D over the 44 referent vectors + unit norm"
+  },
+  "c5_gate": {
+   "file": "results_exp40r.json",
+   "harness_calibrated": true,
+   "qualifying_seeds": [
+    0,
+    2,
+    3
+   ],
+   "verdict_rule": ">=1 of 5 seeds: 100% train AND 100% validA AND >=95% valid_comp",
+   "reproduces_august_exactly": true,
+   "august_reference_read_only": "results_exp40b.json"
+  },
+  "untouched_committed_artifacts": [
+   "exp42_run.py",
+   "results_exp42.json",
+   "results_exp40b.json",
+   "exp42_models.py",
+   "exp42_baselines.py",
+   "exp42_controls.py",
+   "exp42_compiler.py",
+   "stories_exp41.json"
+  ]
+ },
+ "readout_ambiguity_resolution": "doc 22 SS3.4 does not specify how the question's verb identity enters the two-effect readout (Duneau's task had one fixed question). The committed August resolution is INHERITED UNCHANGED, not re-decided: the question verb's OWN trained block is applied as inverse preparation on the two queried wires, then two SHARED trained Circuit-4 effects (q_pos/q_neg, 15 params each). Zero per-verb readout parameters, doc 22 SS3.3's budget preserved, C1 permutes story and question coherently, and A1's exact-chance twin guarantee preserved. Q1 bridge questions apply both verbs' blocks in reverse order. See exp42_models.py's docstring.",
+ "init_policy_doc65_SS2_4": {
+  "registered": "all trained parameters ~ N(0, 0.1^2) from per-(arm, seed) dedicated streams; recorded per run",
+  "stream_rule": "42_000_000 + 1000*ARM_INDEX[arm] + seed",
+  "flagged_deviation_A2TI": "doc 65 SS2.4 registers N(0, 0.1^2) for ALL trained parameters; A2-TI's intro angles are instead initialised AT THE FROZEN EMBEDDING ANGLE. Reason, recorded before any run: SS2.1's own defence of the arm is 'the loss is QA, embeddings only initialise'. A noise init would delete the embedding seed, so A2-TI would differ from A2 in two ways at once (intro trainable AND intro information destroyed) and trained_intro_helps would be confounded. FLAGGED DEVIATION.",
+  "flagged_interpretation_B1": "B1's dressing tensors and effect matrices keep the committed near-identity form I + N(0, 0.1^2) -- already an N(0, 0.1^2) draw, doc 65 SS2.4's distribution, taken around the structural identity rather than around zero. Only B1's uniform[0, 2pi) core angles are changed to N(0, 0.1^2). Reason, recorded before any run: B1's dressings are MATRICES, not angles; drawing them about zero makes every classical verb map a near-null contraction, and B1 is doc 22 SS1's DECISIVE baseline -- an init that cripples it would manufacture a tier_q pass. FLAGGED INTERPRETATION.",
+  "no_init_arms": "doc 65 SS2.4: the ledger's identity-vs-uniform question is NOT imported as arms and no bounded-redraw machinery is registered; none was added."
+ },
+ "config": {
+  "optimizer": "Adam (full autodiff, no SPSA -- doc 22 SS3.3 hard rule)",
+  "lr": 0.005,
+  "batch": 1,
+  "max_epochs": 30,
+  "n_seeds": 5,
+  "model_selection": "in-distribution val split ONLY; the compositional splits are scored once, after selection, on the frozen model",
+  "arms": [
+   "A1",
+   "A2",
+   "A2TI",
+   "A3",
+   "B1",
+   "B2",
+   "B2_generous",
+   "B3"
+  ]
+ },
+ "arm_status": {
+  "A1": {
+   "n_units": 5,
+   "n_expected": 5,
+   "complete": true,
+   "seeds_missing": [],
+   "seeds_failed": [],
+   "failure_reasons": [],
+   "reason": "all 5 seeds present"
+  },
+  "A2": {
+   "n_units": 5,
+   "n_expected": 5,
+   "complete": true,
+   "seeds_missing": [],
+   "seeds_failed": [],
+   "failure_reasons": [],
+   "reason": "all 5 seeds present"
+  },
+  "A2TI": {
+   "n_units": 5,
+   "n_expected": 5,
+   "complete": true,
+   "seeds_missing": [],
+   "seeds_failed": [],
+   "failure_reasons": [],
+   "reason": "all 5 seeds present"
+  },
+  "A3": {
+   "n_units": 5,
+   "n_expected": 5,
+   "complete": true,
+   "seeds_missing": [],
+   "seeds_failed": [],
+   "failure_reasons": [],
+   "reason": "all 5 seeds present"
+  },
+  "B1": {
+   "n_units": 5,
+   "n_expected": 5,
+   "complete": true,
+   "seeds_missing": [],
+   "seeds_failed": [],
+   "failure_reasons": [],
+   "reason": "all 5 seeds present"
+  },
+  "B2": {
+   "n_units": 5,
+   "n_expected": 5,
+   "complete": true,
+   "seeds_missing": [],
+   "seeds_failed": [],
+   "failure_reasons": [],
+   "reason": "all 5 seeds present"
+  },
+  "B2_generous": {
+   "n_units": 5,
+   "n_expected": 5,
+   "complete": true,
+   "seeds_missing": [],
+   "seeds_failed": [],
+   "failure_reasons": [],
+   "reason": "all 5 seeds present"
+  },
+  "B3": {
+   "n_units": 5,
+   "n_expected": 5,
+   "complete": true,
+   "seeds_missing": [],
+   "seeds_failed": [],
+   "failure_reasons": [],
+   "reason": "all 5 seeds present"
+  }
+ },
+ "per_item_alignment": {
+  "n_union_items": 1500,
+  "checked": [
+   "A1_s0",
+   "A1_s1",
+   "A1_s2",
+   "A1_s3",
+   "A1_s4",
+   "A2_s0",
+   "A2_s1",
+   "A2_s2",
+   "A2_s3",
+   "A2_s4",
+   "A2TI_s0",
+   "A2TI_s1",
+   "A2TI_s2",
+   "A2TI_s3",
+   "A2TI_s4",
+   "A3_s0",
+   "A3_s1",
+   "A3_s2",
+   "A3_s3",
+   "A3_s4",
+   "B1_s0",
+   "B1_s1",
+   "B1_s2",
+   "B1_s3",
+   "B1_s4",
+   "B2_s0",
+   "B2_s1",
+   "B2_s2",
+   "B2_s3",
+   "B2_s4",
+   "B2_generous_s0",
+   "B2_generous_s1",
+   "B2_generous_s2",
+   "B2_generous_s3",
+   "B2_generous_s4",
+   "B3_s0",
+   "B3_s1",
+   "B3_s2",
+   "B3_s3",
+   "B3_s4"
+  ],
+  "all_aligned": true,
+  "note": "every arm and seed carries the identical ordered union item-id vector, asserted before any pairing"
+ },
+ "twin_census_doc22_SS3_2": {
+  "n_swap_equivalent_pairs": 570,
+  "n_not_swap_equiv_pairs": 180,
+  "n_swap_equivalent_items": 1140,
+  "n_not_swap_equiv_items": 360,
+  "by_qtype": {
+   "Q1/swap_equivalent": 570,
+   "Q2/NOT_swap_equiv": 180
+  },
+  "swap_equivalent_union_indices": [
+   0,
+   2,
+   3,
+   4,
+   5,
+   6,
+   8,
+   9,
+   11,
+   12,
+   13,
+   14,
+   16,
+   17,
+   22,
+   23,
+   24,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   40,
+   41,
+   42,
+   44,
+   45,
+   46,
+   47,
+   48,
+   49,
+   50,
+   51,
+   52,
+   53,
+   54,
+   56,
+   57,
+   58,
+   59,
+   60,
+   61,
+   62,
+   64,
+   65,
+   66,
+   67,
+   70,
+   73,
+   74,
+   75,
+   77,
+   78,
+   79,
+   80,
+   81,
+   82,
+   83,
+   84,
+   85,
+   86,
+   87,
+   89,
+   90,
+   91,
+   92,
+   93,
+   94,
+   95,
+   96,
+   98,
+   99,
+   100,
+   102,
+   103,
+   104,
+   105,
+   106,
+   107,
+   108,
+   109,
+   112,
+   113,
+   114,
+   115,
+   116,
+   117,
+   118,
+   119,
+   122,
+   123,
+   125,
+   126,
+   127,
+   128,
+   129,
+   132,
+   133,
+   135,
+   139,
+   141,
+   144,
+   145,
+   146,
+   148,
+   149,
+   150,
+   152,
+   153,
+   155,
+   156,
+   157,
+   158,
+   159,
+   160,
+   161,
+   162,
+   163,
+   164,
+   165,
+   167,
+   168,
+   170,
+   171,
+   173,
+   174,
+   175,
+   176,
+   177,
+   178,
+   179,
+   180,
+   181,
+   182,
+   184,
+   186,
+   187,
+   188,
+   189,
+   191,
+   192,
+   193,
+   196,
+   197,
+   198,
+   199,
+   200,
+   202,
+   203,
+   204,
+   205,
+   206,
+   207,
+   208,
+   210,
+   211,
+   212,
+   213,
+   214,
+   216,
+   217,
+   218,
+   221,
+   222,
+   223,
+   224,
+   225,
+   226,
+   228,
+   229,
+   230,
+   231,
+   232,
+   233,
+   234,
+   235,
+   237,
+   239,
+   240,
+   241,
+   243,
+   244,
+   245,
+   246,
+   247,
+   249,
+   250,
+   252,
+   253,
+   254,
+   255,
+   256,
+   258,
+   259,
+   260,
+   261,
+   262,
+   263,
+   264,
+   265,
+   266,
+   267,
+   268,
+   269,
+   270,
+   271,
+   272,
+   273,
+   274,
+   275,
+   277,
+   278,
+   279,
+   281,
+   282,
+   283,
+   284,
+   285,
+   286,
+   287,
+   288,
+   290,
+   291,
+   292,
+   293,
+   294,
+   297,
+   298,
+   299,
+   300,
+   301,
+   302,
+   303,
+   304,
+   305,
+   307,
+   308,
+   309,
+   310,
+   313,
+   314,
+   315,
+   316,
+   317,
+   318,
+   325,
+   326,
+   327,
+   328,
+   329,
+   331,
+   334,
+   335,
+   336,
+   337,
+   341,
+   343,
+   344,
+   345,
+   346,
+   347,
+   350,
+   353,
+   354,
+   356,
+   358,
+   359,
+   360,
+   361,
+   362,
+   363,
+   364,
+   366,
+   367,
+   368,
+   369,
+   370,
+   371,
+   372,
+   373,
+   374,
+   377,
+   378,
+   379,
+   380,
+   381,
+   382,
+   383,
+   384,
+   388,
+   389,
+   390,
+   391,
+   392,
+   393,
+   394,
+   396,
+   397,
+   398,
+   399,
+   400,
+   401,
+   405,
+   406,
+   407,
+   408,
+   411,
+   412,
+   414,
+   415,
+   416,
+   417,
+   418,
+   419,
+   421,
+   422,
+   424,
+   426,
+   427,
+   432,
+   433,
+   434,
+   435,
+   436,
+   437,
+   439,
+   442,
+   444,
+   445,
+   446,
+   447,
+   449,
+   450,
+   452,
+   453,
+   454,
+   456,
+   457,
+   459,
+   460,
+   461,
+   462,
+   463,
+   464,
+   465,
+   466,
+   468,
+   469,
+   470,
+   471,
+   472,
+   473,
+   474,
+   475,
+   476,
+   477,
+   478,
+   479,
+   480,
+   481,
+   482,
+   483,
+   484,
+   485,
+   487,
+   488,
+   489,
+   493,
+   494,
+   495,
+   497,
+   499,
+   500,
+   501,
+   502,
+   504,
+   505,
+   506,
+   507,
+   508,
+   510,
+   514,
+   515,
+   516,
+   517,
+   518,
+   519,
+   520,
+   521,
+   523,
+   528,
+   529,
+   531,
+   532,
+   534,
+   535,
+   536,
+   537,
+   539,
+   542,
+   543,
+   544,
+   546,
+   547,
+   548,
+   549,
+   551,
+   552,
+   553,
+   554,
+   555,
+   557,
+   559,
+   560,
+   561,
+   562,
+   563,
+   564,
+   565,
+   566,
+   567,
+   568,
+   569,
+   570,
+   571,
+   572,
+   573,
+   574,
+   575,
+   578,
+   579,
+   580,
+   581,
+   582,
+   584,
+   585,
+   586,
+   587,
+   588,
+   589,
+   590,
+   592,
+   593,
+   594,
+   595,
+   596,
+   598,
+   599,
+   600,
+   601,
+   602,
+   603,
+   604,
+   606,
+   608,
+   609,
+   610,
+   611,
+   612,
+   613,
+   614,
+   615,
+   616,
+   617,
+   618,
+   619,
+   620,
+   621,
+   622,
+   624,
+   625,
+   626,
+   627,
+   629,
+   630,
+   633,
+   634,
+   635,
+   637,
+   639,
+   640,
+   641,
+   643,
+   645,
+   646,
+   647,
+   649,
+   650,
+   651,
+   654,
+   656,
+   658,
+   659,
+   661,
+   662,
+   663,
+   664,
+   665,
+   666,
+   667,
+   668,
+   669,
+   671,
+   672,
+   674,
+   675,
+   678,
+   679,
+   680,
+   682,
+   683,
+   684,
+   685,
+   686,
+   687,
+   689,
+   690,
+   691,
+   692,
+   693,
+   694,
+   695,
+   696,
+   697,
+   698,
+   700,
+   702,
+   703,
+   704,
+   705,
+   706,
+   708,
+   711,
+   712,
+   713,
+   714,
+   715,
+   716,
+   717,
+   718,
+   719,
+   720,
+   721,
+   722,
+   723,
+   724,
+   725,
+   728,
+   729,
+   730,
+   731,
+   732,
+   735,
+   736,
+   738,
+   739,
+   740,
+   743,
+   746,
+   747,
+   750,
+   751,
+   753,
+   755,
+   757,
+   758,
+   760,
+   761,
+   762,
+   763,
+   764,
+   765,
+   766,
+   769,
+   770,
+   771,
+   772,
+   773,
+   774,
+   775,
+   776,
+   777,
+   778,
+   780,
+   781,
+   782,
+   783,
+   784,
+   785,
+   787,
+   789,
+   791,
+   792,
+   793,
+   795,
+   796,
+   797,
+   798,
+   799,
+   800,
+   801,
+   802,
+   803,
+   804,
+   805,
+   806,
+   807,
+   808,
+   809,
+   810,
+   811,
+   812,
+   813,
+   815,
+   816,
+   817,
+   819,
+   820,
+   821,
+   822,
+   823,
+   824,
+   825,
+   826,
+   828,
+   829,
+   832,
+   833,
+   834,
+   837,
+   838,
+   839,
+   840,
+   841,
+   843,
+   845,
+   846,
+   847,
+   848,
+   849,
+   850,
+   851,
+   852,
+   853,
+   855,
+   856,
+   858,
+   859,
+   860,
+   862,
+   863,
+   865,
+   866,
+   867,
+   870,
+   872,
+   873,
+   874,
+   875,
+   877,
+   878,
+   879,
+   880,
+   882,
+   883,
+   884,
+   885,
+   887,
+   889,
+   890,
+   891,
+   892,
+   893,
+   894,
+   895,
+   896,
+   897,
+   899,
+   900,
+   901,
+   902,
+   903,
+   904,
+   905,
+   906,
+   908,
+   909,
+   910,
+   911,
+   912,
+   913,
+   916,
+   917,
+   918,
+   919,
+   922,
+   923,
+   924,
+   926,
+   927,
+   929,
+   930,
+   931,
+   932,
+   933,
+   935,
+   937,
+   938,
+   940,
+   941,
+   942,
+   943,
+   946,
+   947,
+   948,
+   949,
+   950,
+   951,
+   952,
+   953,
+   954,
+   955,
+   956,
+   957,
+   958,
+   959,
+   960,
+   961,
+   963,
+   965,
+   966,
+   967,
+   968,
+   969,
+   971,
+   972,
+   973,
+   975,
+   976,
+   977,
+   978,
+   979,
+   982,
+   983,
+   984,
+   986,
+   987,
+   988,
+   990,
+   991,
+   993,
+   999,
+   1000,
+   1001,
+   1002,
+   1003,
+   1004,
+   1005,
+   1007,
+   1008,
+   1009,
+   1010,
+   1011,
+   1012,
+   1013,
+   1014,
+   1015,
+   1016,
+   1017,
+   1018,
+   1019,
+   1020,
+   1021,
+   1022,
+   1023,
+   1026,
+   1028,
+   1029,
+   1030,
+   1031,
+   1032,
+   1035,
+   1038,
+   1040,
+   1041,
+   1042,
+   1043,
+   1044,
+   1045,
+   1046,
+   1048,
+   1049,
+   1050,
+   1051,
+   1052,
+   1053,
+   1054,
+   1055,
+   1056,
+   1057,
+   1058,
+   1060,
+   1061,
+   1062,
+   1063,
+   1065,
+   1066,
+   1067,
+   1068,
+   1070,
+   1071,
+   1072,
+   1073,
+   1074,
+   1075,
+   1076,
+   1077,
+   1078,
+   1081,
+   1082,
+   1084,
+   1085,
+   1086,
+   1087,
+   1088,
+   1089,
+   1090,
+   1092,
+   1093,
+   1094,
+   1095,
+   1096,
+   1098,
+   1099,
+   1100,
+   1101,
+   1103,
+   1104,
+   1105,
+   1106,
+   1107,
+   1109,
+   1110,
+   1114,
+   1115,
+   1117,
+   1120,
+   1121,
+   1122,
+   1124,
+   1125,
+   1126,
+   1127,
+   1128,
+   1129,
+   1130,
+   1131,
+   1132,
+   1133,
+   1135,
+   1137,
+   1138,
+   1139,
+   1140,
+   1141,
+   1143,
+   1144,
+   1146,
+   1147,
+   1150,
+   1151,
+   1154,
+   1155,
+   1156,
+   1157,
+   1158,
+   1159,
+   1160,
+   1162,
+   1163,
+   1164,
+   1169,
+   1172,
+   1173,
+   1174,
+   1175,
+   1176,
+   1177,
+   1178,
+   1182,
+   1183,
+   1186,
+   1187,
+   1188,
+   1190,
+   1191,
+   1192,
+   1193,
+   1194,
+   1195,
+   1196,
+   1197,
+   1198,
+   1199,
+   1201,
+   1202,
+   1204,
+   1205,
+   1206,
+   1207,
+   1208,
+   1209,
+   1211,
+   1214,
+   1215,
+   1216,
+   1217,
+   1218,
+   1219,
+   1220,
+   1222,
+   1223,
+   1224,
+   1225,
+   1226,
+   1227,
+   1228,
+   1229,
+   1230,
+   1231,
+   1232,
+   1234,
+   1235,
+   1236,
+   1237,
+   1238,
+   1239,
+   1241,
+   1242,
+   1244,
+   1246,
+   1249,
+   1250,
+   1251,
+   1252,
+   1253,
+   1255,
+   1256,
+   1257,
+   1258,
+   1259,
+   1260,
+   1261,
+   1263,
+   1264,
+   1266,
+   1268,
+   1269,
+   1270,
+   1271,
+   1273,
+   1274,
+   1276,
+   1279,
+   1280,
+   1281,
+   1283,
+   1284,
+   1285,
+   1287,
+   1288,
+   1289,
+   1290,
+   1292,
+   1293,
+   1294,
+   1295,
+   1296,
+   1297,
+   1298,
+   1300,
+   1301,
+   1302,
+   1304,
+   1305,
+   1306,
+   1307,
+   1308,
+   1309,
+   1310,
+   1311,
+   1313,
+   1314,
+   1315,
+   1316,
+   1317,
+   1318,
+   1319,
+   1322,
+   1323,
+   1324,
+   1325,
+   1326,
+   1327,
+   1328,
+   1329,
+   1331,
+   1332,
+   1334,
+   1335,
+   1337,
+   1338,
+   1339,
+   1340,
+   1341,
+   1342,
+   1343,
+   1344,
+   1345,
+   1346,
+   1347,
+   1349,
+   1350,
+   1351,
+   1352,
+   1353,
+   1355,
+   1356,
+   1357,
+   1359,
+   1360,
+   1361,
+   1362,
+   1363,
+   1366,
+   1367,
+   1369,
+   1370,
+   1372,
+   1373,
+   1375,
+   1376,
+   1377,
+   1379,
+   1381,
+   1383,
+   1386,
+   1387,
+   1388,
+   1389,
+   1390,
+   1393,
+   1394,
+   1395,
+   1396,
+   1397,
+   1398,
+   1400,
+   1401,
+   1403,
+   1404,
+   1405,
+   1406,
+   1407,
+   1408,
+   1409,
+   1411,
+   1412,
+   1413,
+   1415,
+   1416,
+   1418,
+   1419,
+   1420,
+   1421,
+   1424,
+   1425,
+   1426,
+   1428,
+   1429,
+   1430,
+   1431,
+   1432,
+   1433,
+   1434,
+   1435,
+   1436,
+   1437,
+   1438,
+   1439,
+   1440,
+   1444,
+   1445,
+   1446,
+   1447,
+   1448,
+   1451,
+   1452,
+   1453,
+   1454,
+   1455,
+   1456,
+   1457,
+   1459,
+   1460,
+   1461,
+   1462,
+   1463,
+   1464,
+   1465,
+   1466,
+   1469,
+   1470,
+   1471,
+   1472,
+   1473,
+   1475,
+   1477,
+   1478,
+   1481,
+   1482,
+   1483,
+   1484,
+   1485,
+   1486,
+   1487,
+   1489,
+   1492,
+   1495,
+   1496,
+   1497,
+   1499
+  ],
+  "a1_arithmetic_ceiling_on_union": 0.62,
+  "why": "doc 22 SS3.2's A1 identical-statevector guarantee is exact on the swap-equivalent subset and does not apply off it; the ceiling is what a SWAP-symmetric model could reach on the union WITH NO LEAK AT ALL. FLAGGED: this is a property of the exp41r Q2 pro-drop construction, discovered at build time, and it changes no registered criterion."
+ },
+ "per_arm": {
+  "A1": {
+   "status": {
+    "n_units": 5,
+    "n_expected": 5,
+    "complete": true,
+    "seeds_missing": [],
+    "seeds_failed": [],
+    "failure_reasons": [],
+    "reason": "all 5 seeds present"
+   },
+   "n_seeds": 5,
+   "param_counts": {
+    "arm": "A1",
+    "per_verb": 2,
+    "n_verbs": 15,
+    "readout_shared": 30,
+    "total_trained": 60
+   },
+   "init_policy": "every trained angle ~ N(0, 0.10^2)",
+   "init_stream_seeds": [
+    42000000,
+    42000001,
+    42000002,
+    42000003,
+    42000004
+   ],
+   "init_vector_sha256": [
+    "6acbd6eebc713f73",
+    "648289720476ac1e",
+    "9fce8dc091374b85",
+    "ceeb036e12dad18b",
+    "6319f4010f190d09"
+   ],
+   "val_acc": [
+    0.524,
+    0.52,
+    0.52,
+    0.526,
+    0.516
+   ],
+   "best_epoch": [
+    20,
+    13,
+    22,
+    13,
+    7
+   ],
+   "train_acc_at_best": [
+    0.5235,
+    0.5105,
+    0.515,
+    0.5135,
+    0.4975
+   ],
+   "final_grad_norm": [
+    0.7857418369450347,
+    0.7515606832330501,
+    0.7977234115340093,
+    0.7732728861163438,
+    0.7686464180957883
+   ],
+   "per_split": {
+    "test_a": {
+     "per_seed": [
+      0.494,
+      0.51,
+      0.512,
+      0.512,
+      0.504
+     ],
+     "mean": 0.5064,
+     "std": 0.006858571279792905,
+     "n_items": 500
+    },
+    "test_b": {
+     "per_seed": [
+      0.498,
+      0.506,
+      0.51,
+      0.486,
+      0.504
+     ],
+     "mean": 0.5008,
+     "std": 0.008352245207128448,
+     "n_items": 500
+    },
+    "test_c": {
+     "per_seed": [
+      0.508,
+      0.506,
+      0.512,
+      0.5,
+      0.51
+     ],
+     "mean": 0.5072,
+     "std": 0.004118252056394804,
+     "n_items": 500
+    },
+    "test_union": {
+     "per_seed": [
+      0.5,
+      0.5073333333333333,
+      0.5113333333333333,
+      0.49933333333333335,
+      0.506
+     ],
+     "mean": 0.5048,
+     "std": 0.004548992562461846,
+     "n_items": 1500
+    }
+   }
+  },
+  "A2": {
+   "status": {
+    "n_units": 5,
+    "n_expected": 5,
+    "complete": true,
+    "seeds_missing": [],
+    "seeds_failed": [],
+    "failure_reasons": [],
+    "reason": "all 5 seeds present"
+   },
+   "n_seeds": 5,
+   "param_counts": {
+    "arm": "A2",
+    "per_verb": 14,
+    "n_verbs": 15,
+    "readout_shared": 30,
+    "total_trained": 240
+   },
+   "init_policy": "every trained angle ~ N(0, 0.10^2)",
+   "init_stream_seeds": [
+    42001000,
+    42001001,
+    42001002,
+    42001003,
+    42001004
+   ],
+   "init_vector_sha256": [
+    "2f2a3b7ba8ca06ec",
+    "26f0638c99dd45e6",
+    "7483fff0028c448d",
+    "54c30f78c0f78a75",
+    "c047a1b22f341ca7"
+   ],
+   "val_acc": [
+    0.552,
+    0.548,
+    0.562,
+    0.554,
+    0.572
+   ],
+   "best_epoch": [
+    8,
+    10,
+    19,
+    18,
+    9
+   ],
+   "train_acc_at_best": [
+    0.57,
+    0.555,
+    0.602,
+    0.584,
+    0.568
+   ],
+   "final_grad_norm": [
+    1.7355372703149046,
+    1.565620117657832,
+    1.629397442536819,
+    1.6270553070115885,
+    1.69562833642617
+   ],
+   "per_split": {
+    "test_a": {
+     "per_seed": [
+      0.54,
+      0.51,
+      0.49,
+      0.518,
+      0.504
+     ],
+     "mean": 0.5124000000000001,
+     "std": 0.016560193235587575,
+     "n_items": 500
+    },
+    "test_b": {
+     "per_seed": [
+      0.542,
+      0.496,
+      0.52,
+      0.53,
+      0.524
+     ],
+     "mean": 0.5224,
+     "std": 0.015147276983009203,
+     "n_items": 500
+    },
+    "test_c": {
+     "per_seed": [
+      0.516,
+      0.562,
+      0.452,
+      0.51,
+      0.536
+     ],
+     "mean": 0.5152,
+     "std": 0.03645490364820624,
+     "n_items": 500
+    },
+    "test_union": {
+     "per_seed": [
+      0.5326666666666666,
+      0.5226666666666666,
+      0.48733333333333334,
+      0.5193333333333333,
+      0.5213333333333333
+     ],
+     "mean": 0.5166666666666666,
+     "std": 0.015370968306084889,
+     "n_items": 1500
+    }
+   }
+  },
+  "A2TI": {
+   "status": {
+    "n_units": 5,
+    "n_expected": 5,
+    "complete": true,
+    "seeds_missing": [],
+    "seeds_failed": [],
+    "failure_reasons": [],
+    "reason": "all 5 seeds present"
+   },
+   "n_seeds": 5,
+   "param_counts": {
+    "arm": "A2TI",
+    "per_verb": 14,
+    "n_verbs": 15,
+    "readout_shared": 30,
+    "trained_intro_angles": 44,
+    "total_trained": 284,
+    "note": "doc 65 SS2.1: A2 + one trained intro angle per noun"
+   },
+   "init_policy": "every trained angle ~ N(0, 0.10^2); intro angles = the frozen embedding angle (FLAGGED DEVIATION, see A2TI_INIT_DEVIATION)",
+   "init_stream_seeds": [
+    42002000,
+    42002001,
+    42002002,
+    42002003,
+    42002004
+   ],
+   "init_vector_sha256": [
+    "e37a765aa847e710",
+    "ca5f0fd3cdfe8d39",
+    "a783f8fee89f5d32",
+    "bd7e8aad177000c2",
+    "864e88c042333ce0"
+   ],
+   "val_acc": [
+    0.562,
+    0.534,
+    0.578,
+    0.57,
+    0.532
+   ],
+   "best_epoch": [
+    21,
+    11,
+    23,
+    22,
+    3
+   ],
+   "train_acc_at_best": [
+    0.6045,
+    0.6,
+    0.6325,
+    0.6025,
+    0.51
+   ],
+   "final_grad_norm": [
+    1.5911777806424496,
+    1.8480215164975702,
+    1.8571269421105556,
+    1.7538300887679594,
+    1.865780342722947
+   ],
+   "per_split": {
+    "test_a": {
+     "per_seed": [
+      0.536,
+      0.488,
+      0.456,
+      0.508,
+      0.484
+     ],
+     "mean": 0.4944,
+     "std": 0.02660526263730543,
+     "n_items": 500
+    },
+    "test_b": {
+     "per_seed": [
+      0.522,
+      0.508,
+      0.54,
+      0.5,
+      0.512
+     ],
+     "mean": 0.5164,
+     "std": 0.013763720427268214,
+     "n_items": 500
+    },
+    "test_c": {
+     "per_seed": [
+      0.542,
+      0.49,
+      0.518,
+      0.536,
+      0.508
+     ],
+     "mean": 0.5188,
+     "std": 0.018872201779336736,
+     "n_items": 500
+    },
+    "test_union": {
+     "per_seed": [
+      0.5333333333333333,
+      0.49533333333333335,
+      0.5046666666666667,
+      0.5146666666666667,
+      0.5013333333333333
+     ],
+     "mean": 0.5098666666666667,
+     "std": 0.013302631318652712,
+     "n_items": 1500
+    }
+   }
+  },
+  "A3": {
+   "status": {
+    "n_units": 5,
+    "n_expected": 5,
+    "complete": true,
+    "seeds_missing": [],
+    "seeds_failed": [],
+    "failure_reasons": [],
+    "reason": "all 5 seeds present"
+   },
+   "n_seeds": 5,
+   "param_counts": {
+    "arm": "A3",
+    "per_verb": 15,
+    "n_verbs": 15,
+    "readout_shared": 30,
+    "total_trained": 255
+   },
+   "init_policy": "every trained angle ~ N(0, 0.10^2)",
+   "init_stream_seeds": [
+    42003000,
+    42003001,
+    42003002,
+    42003003,
+    42003004
+   ],
+   "init_vector_sha256": [
+    "de5323ff382b401c",
+    "9f869b181ae1d8b2",
+    "693c4f6c0817ed80",
+    "a06e2b78d872d1e2",
+    "7f3de3c181c1cbfe"
+   ],
+   "val_acc": [
+    0.566,
+    0.556,
+    0.556,
+    0.528,
+    0.56
+   ],
+   "best_epoch": [
+    24,
+    29,
+    20,
+    7,
+    23
+   ],
+   "train_acc_at_best": [
+    0.5595,
+    0.6415,
+    0.5445,
+    0.521,
+    0.612
+   ],
+   "final_grad_norm": [
+    1.41209115580544,
+    1.6310393232390856,
+    1.4538498987930961,
+    1.449037904226179,
+    1.601341974477727
+   ],
+   "per_split": {
+    "test_a": {
+     "per_seed": [
+      0.496,
+      0.506,
+      0.502,
+      0.474,
+      0.498
+     ],
+     "mean": 0.4952,
+     "std": 0.011142710621747305,
+     "n_items": 500
+    },
+    "test_b": {
+     "per_seed": [
+      0.514,
+      0.484,
+      0.516,
+      0.506,
+      0.532
+     ],
+     "mean": 0.5104,
+     "std": 0.015666524822052923,
+     "n_items": 500
+    },
+    "test_c": {
+     "per_seed": [
+      0.506,
+      0.52,
+      0.536,
+      0.486,
+      0.53
+     ],
+     "mean": 0.5156000000000001,
+     "std": 0.017951044537853518,
+     "n_items": 500
+    },
+    "test_union": {
+     "per_seed": [
+      0.5053333333333333,
+      0.5033333333333333,
+      0.518,
+      0.4886666666666667,
+      0.52
+     ],
+     "mean": 0.5070666666666667,
+     "std": 0.01133411761992182,
+     "n_items": 1500
+    }
+   }
+  },
+  "B1": {
+   "status": {
+    "n_units": 5,
+    "n_expected": 5,
+    "complete": true,
+    "seeds_missing": [],
+    "seeds_failed": [],
+    "failure_reasons": [],
+    "reason": "all 5 seeds present"
+   },
+   "n_seeds": 5,
+   "param_counts": {
+    "arm": "B1",
+    "d_ref": 2,
+    "per_verb": 18,
+    "n_verbs": 15,
+    "readout_shared": 32,
+    "total_trained": 302
+   },
+   "init_policy": "core angles ~ N(0, 0.10^2); dressings and effects = I + N(0, 0.10^2)",
+   "init_stream_seeds": [
+    42004000,
+    42004001,
+    42004002,
+    42004003,
+    42004004
+   ],
+   "init_vector_sha256": [
+    "caf32037811d489c",
+    "85291788a3f9112f",
+    "1ed957adaf88bd3d",
+    "45ff4fed7c144a19",
+    "860689ef0ec3ac34"
+   ],
+   "val_acc": [
+    0.514,
+    0.538,
+    0.518,
+    0.518,
+    0.516
+   ],
+   "best_epoch": [
+    13,
+    26,
+    15,
+    3,
+    6
+   ],
+   "train_acc_at_best": [
+    0.5045,
+    0.507,
+    0.5045,
+    0.506,
+    0.5005
+   ],
+   "final_grad_norm": [
+    6.359292180684548,
+    1.3735080677665419,
+    2.1024377771977414,
+    1.4091403391719495,
+    1.6189385174438942
+   ],
+   "per_split": {
+    "test_a": {
+     "per_seed": [
+      0.504,
+      0.498,
+      0.492,
+      0.502,
+      0.508
+     ],
+     "mean": 0.5008,
+     "std": 0.005455272678794348,
+     "n_items": 500
+    },
+    "test_b": {
+     "per_seed": [
+      0.5,
+      0.498,
+      0.498,
+      0.5,
+      0.506
+     ],
+     "mean": 0.5004,
+     "std": 0.0029393876913398165,
+     "n_items": 500
+    },
+    "test_c": {
+     "per_seed": [
+      0.506,
+      0.498,
+      0.498,
+      0.496,
+      0.494
+     ],
+     "mean": 0.4984,
+     "std": 0.004079215610874232,
+     "n_items": 500
+    },
+    "test_union": {
+     "per_seed": [
+      0.5033333333333333,
+      0.498,
+      0.496,
+      0.49933333333333335,
+      0.5026666666666667
+     ],
+     "mean": 0.4998666666666667,
+     "std": 0.002777688887466621,
+     "n_items": 1500
+    }
+   }
+  },
+  "B2": {
+   "status": {
+    "n_units": 5,
+    "n_expected": 5,
+    "complete": true,
+    "seeds_missing": [],
+    "seeds_failed": [],
+    "failure_reasons": [],
+    "reason": "all 5 seeds present"
+   },
+   "n_seeds": 5,
+   "param_counts": {
+    "arm": "B2",
+    "vocab": 64,
+    "total_trained": 310
+   },
+   "init_policy": "every trained parameter ~ N(0, 0.10^2) (literal SS2.4)",
+   "init_stream_seeds": [
+    42005000,
+    42005001,
+    42005002,
+    42005003,
+    42005004
+   ],
+   "init_vector_sha256": [
+    "9dbc359074a8d5d7",
+    "bf1fc9630df22f6e",
+    "77cfd424b7b517ee",
+    "a8ed04b1119ed9fb",
+    "4d3a5b096c7fc071"
+   ],
+   "val_acc": [
+    0.5,
+    0.528,
+    0.512,
+    0.502,
+    0.502
+   ],
+   "best_epoch": [
+    1,
+    23,
+    23,
+    5,
+    10
+   ],
+   "train_acc_at_best": [
+    0.5,
+    0.501,
+    0.503,
+    0.4975,
+    0.5005
+   ],
+   "final_grad_norm": [
+    0.7102439619505317,
+    1.8260050094305056,
+    0.7292009794234479,
+    0.7127758674092213,
+    0.708564648037813
+   ],
+   "per_split": {
+    "test_a": {
+     "per_seed": [
+      0.5,
+      0.518,
+      0.492,
+      0.5,
+      0.5
+     ],
+     "mean": 0.502,
+     "std": 0.008579044235810894,
+     "n_items": 500
+    },
+    "test_b": {
+     "per_seed": [
+      0.5,
+      0.502,
+      0.506,
+      0.5,
+      0.5
+     ],
+     "mean": 0.5016,
+     "std": 0.0023323807579381226,
+     "n_items": 500
+    },
+    "test_c": {
+     "per_seed": [
+      0.5,
+      0.516,
+      0.496,
+      0.5,
+      0.5
+     ],
+     "mean": 0.5024,
+     "std": 0.006974238309665084,
+     "n_items": 500
+    },
+    "test_union": {
+     "per_seed": [
+      0.5,
+      0.512,
+      0.498,
+      0.5,
+      0.5
+     ],
+     "mean": 0.502,
+     "std": 0.005059644256269411,
+     "n_items": 1500
+    }
+   }
+  },
+  "B2_generous": {
+   "status": {
+    "n_units": 5,
+    "n_expected": 5,
+    "complete": true,
+    "seeds_missing": [],
+    "seeds_failed": [],
+    "failure_reasons": [],
+    "reason": "all 5 seeds present"
+   },
+   "n_seeds": 5,
+   "param_counts": {
+    "arm": "B2_generous",
+    "vocab": 64,
+    "total_trained": 10082
+   },
+   "init_policy": "every trained parameter ~ N(0, 0.10^2) (literal SS2.4)",
+   "init_stream_seeds": [
+    42006000,
+    42006001,
+    42006002,
+    42006003,
+    42006004
+   ],
+   "init_vector_sha256": [
+    "e80d9e49fcc612ec",
+    "e2dabdff94d0ece9",
+    "2ff5785dbca36a83",
+    "c54d352689592a6b",
+    "177df689ddd39f1d"
+   ],
+   "val_acc": [
+    0.514,
+    0.53,
+    0.528,
+    0.514,
+    0.524
+   ],
+   "best_epoch": [
+    14,
+    26,
+    9,
+    29,
+    27
+   ],
+   "train_acc_at_best": [
+    0.512,
+    0.506,
+    0.4975,
+    0.505,
+    0.501
+   ],
+   "final_grad_norm": [
+    2.15264265714611,
+    21.739163341173576,
+    15.259586640181993,
+    1.9324707521985909,
+    116.2555008574911
+   ],
+   "per_split": {
+    "test_a": {
+     "per_seed": [
+      0.502,
+      0.528,
+      0.498,
+      0.482,
+      0.5
+     ],
+     "mean": 0.502,
+     "std": 0.014805404418657412,
+     "n_items": 500
+    },
+    "test_b": {
+     "per_seed": [
+      0.494,
+      0.478,
+      0.508,
+      0.498,
+      0.502
+     ],
+     "mean": 0.496,
+     "std": 0.010119288512538823,
+     "n_items": 500
+    },
+    "test_c": {
+     "per_seed": [
+      0.49,
+      0.514,
+      0.522,
+      0.516,
+      0.498
+     ],
+     "mean": 0.508,
+     "std": 0.01200000000000001,
+     "n_items": 500
+    },
+    "test_union": {
+     "per_seed": [
+      0.49533333333333335,
+      0.5066666666666667,
+      0.5093333333333333,
+      0.49866666666666665,
+      0.5
+     ],
+     "mean": 0.502,
+     "std": 0.0051982903172314455,
+     "n_items": 1500
+    }
+   }
+  },
+  "B3": {
+   "status": {
+    "n_units": 5,
+    "n_expected": 5,
+    "complete": true,
+    "seeds_missing": [],
+    "seeds_failed": [],
+    "failure_reasons": [],
+    "reason": "all 5 seeds present"
+   },
+   "n_seeds": 5,
+   "param_counts": {
+    "arm": "B3",
+    "vocab": 64,
+    "total_trained": 290
+   },
+   "init_policy": "every trained parameter ~ N(0, 0.10^2) (literal SS2.4)",
+   "init_stream_seeds": [
+    42007000,
+    42007001,
+    42007002,
+    42007003,
+    42007004
+   ],
+   "init_vector_sha256": [
+    "3c27d4bc5a16e5e1",
+    "b12339bfda9a0f1b",
+    "c4d852f17c02c902",
+    "49ad58376873d6bd",
+    "0c190d756077edde"
+   ],
+   "val_acc": [
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5
+   ],
+   "best_epoch": [
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "train_acc_at_best": [
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5
+   ],
+   "final_grad_norm": [
+    0.7077690619528294,
+    0.7076597154140473,
+    0.7077319901585579,
+    0.706347793161869,
+    0.7079347728788853
+   ],
+   "per_split": {
+    "test_a": {
+     "per_seed": [
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5
+     ],
+     "mean": 0.5,
+     "std": 0.0,
+     "n_items": 500
+    },
+    "test_b": {
+     "per_seed": [
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5
+     ],
+     "mean": 0.5,
+     "std": 0.0,
+     "n_items": 500
+    },
+    "test_c": {
+     "per_seed": [
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5
+     ],
+     "mean": 0.5,
+     "std": 0.0,
+     "n_items": 500
+    },
+    "test_union": {
+     "per_seed": [
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5
+     ],
+     "mean": 0.5,
+     "std": 0.0,
+     "n_items": 1500
+    }
+   }
+  }
+ },
+ "gate_statistics": {
+  "A2_vs_B1": {
+   "x": "A2",
+   "y": "B1",
+   "split": "test_union",
+   "mean_acc_x": 0.5166666666666667,
+   "mean_acc_y": 0.49986666666666674,
+   "mean_paired_diff": 0.016800000000000002,
+   "one_sided_p": 0.016998300169983,
+   "n_items": 1500,
+   "alpha": 0.05,
+   "x_beats_y": true,
+   "test": "one-sided sign-flip paired permutation over per-item seed-mean correctness, 10000 resamples"
+  },
+  "A2TI_vs_A2": {
+   "x": "A2TI",
+   "y": "A2",
+   "split": "test_union",
+   "mean_acc_x": 0.5098666666666667,
+   "mean_acc_y": 0.5166666666666667,
+   "mean_paired_diff": -0.0068000000000000005,
+   "one_sided_p": 0.7973202679732027,
+   "n_items": 1500,
+   "alpha": 0.05,
+   "x_beats_y": false,
+   "test": "one-sided sign-flip paired permutation over per-item seed-mean correctness, 10000 resamples"
+  },
+  "A2TI_vs_B1": {
+   "x": "A2TI",
+   "y": "B1",
+   "split": "test_union",
+   "mean_acc_x": 0.5098666666666667,
+   "mean_acc_y": 0.49986666666666674,
+   "mean_paired_diff": 0.01,
+   "one_sided_p": 0.10258974102589741,
+   "n_items": 1500,
+   "alpha": 0.05,
+   "x_beats_y": false,
+   "test": "one-sided sign-flip paired permutation over per-item seed-mean correctness, 10000 resamples"
+  },
+  "A2_vs_A3": {
+   "x": "A2",
+   "y": "A3",
+   "split": "test_union",
+   "mean_acc_x": 0.5166666666666667,
+   "mean_acc_y": 0.5070666666666667,
+   "mean_paired_diff": 0.009600000000000001,
+   "one_sided_p": 0.11858814118588142,
+   "n_items": 1500,
+   "alpha": 0.05,
+   "x_beats_y": false,
+   "test": "one-sided sign-flip paired permutation over per-item seed-mean correctness, 10000 resamples"
+  },
+  "A3_vs_B1": {
+   "x": "A3",
+   "y": "B1",
+   "split": "test_union",
+   "mean_acc_x": 0.5070666666666667,
+   "mean_acc_y": 0.49986666666666674,
+   "mean_paired_diff": 0.007200000000000001,
+   "one_sided_p": 0.2014798520147985,
+   "n_items": 1500,
+   "alpha": 0.05,
+   "x_beats_y": false,
+   "test": "one-sided sign-flip paired permutation over per-item seed-mean correctness, 10000 resamples"
+  },
+  "A1_vs_B1": {
+   "x": "A1",
+   "y": "B1",
+   "split": "test_union",
+   "mean_acc_x": 0.5048,
+   "mean_acc_y": 0.49986666666666674,
+   "mean_paired_diff": 0.004933333333333333,
+   "one_sided_p": 0.2766723327667233,
+   "n_items": 1500,
+   "alpha": 0.05,
+   "x_beats_y": false,
+   "test": "one-sided sign-flip paired permutation over per-item seed-mean correctness, 10000 resamples"
+  },
+  "A2_vs_B2": {
+   "x": "A2",
+   "y": "B2",
+   "split": "test_union",
+   "mean_acc_x": 0.5166666666666667,
+   "mean_acc_y": 0.502,
+   "mean_paired_diff": 0.014666666666666665,
+   "one_sided_p": 0.07949205079492051,
+   "n_items": 1500,
+   "alpha": 0.05,
+   "x_beats_y": false,
+   "test": "one-sided sign-flip paired permutation over per-item seed-mean correctness, 10000 resamples"
+  },
+  "A2_vs_B2_generous": {
+   "x": "A2",
+   "y": "B2_generous",
+   "split": "test_union",
+   "mean_acc_x": 0.5166666666666667,
+   "mean_acc_y": 0.502,
+   "mean_paired_diff": 0.01466666666666667,
+   "one_sided_p": 0.0321967803219678,
+   "n_items": 1500,
+   "alpha": 0.05,
+   "x_beats_y": true,
+   "test": "one-sided sign-flip paired permutation over per-item seed-mean correctness, 10000 resamples"
+  },
+  "A2_vs_B3": {
+   "x": "A2",
+   "y": "B3",
+   "split": "test_union",
+   "mean_acc_x": 0.5166666666666667,
+   "mean_acc_y": 0.5,
+   "mean_paired_diff": 0.01666666666666665,
+   "one_sided_p": 0.0491950804919508,
+   "n_items": 1500,
+   "alpha": 0.05,
+   "x_beats_y": true,
+   "test": "one-sided sign-flip paired permutation over per-item seed-mean correctness, 10000 resamples"
+  },
+  "B1_vs_B2": {
+   "x": "B1",
+   "y": "B2",
+   "split": "test_union",
+   "mean_acc_x": 0.49986666666666674,
+   "mean_acc_y": 0.502,
+   "mean_paired_diff": -0.0021333333333333386,
+   "one_sided_p": 0.5731426857314269,
+   "n_items": 1500,
+   "alpha": 0.05,
+   "x_beats_y": false,
+   "test": "one-sided sign-flip paired permutation over per-item seed-mean correctness, 10000 resamples"
+  },
+  "B1_vs_B2_generous": {
+   "x": "B1",
+   "y": "B2_generous",
+   "split": "test_union",
+   "mean_acc_x": 0.49986666666666674,
+   "mean_acc_y": 0.502,
+   "mean_paired_diff": -0.002133333333333333,
+   "one_sided_p": 0.6238376162383762,
+   "n_items": 1500,
+   "alpha": 0.05,
+   "x_beats_y": false,
+   "test": "one-sided sign-flip paired permutation over per-item seed-mean correctness, 10000 resamples"
+  },
+  "B1_vs_B3": {
+   "x": "B1",
+   "y": "B3",
+   "split": "test_union",
+   "mean_acc_x": 0.49986666666666674,
+   "mean_acc_y": 0.5,
+   "mean_paired_diff": -0.00013333333333335134,
+   "one_sided_p": 0.5036496350364964,
+   "n_items": 1500,
+   "alpha": 0.05,
+   "x_beats_y": false,
+   "test": "one-sided sign-flip paired permutation over per-item seed-mean correctness, 10000 resamples"
+  }
+ },
+ "per_split_breakdown": {
+  "test_a": {
+   "A2_vs_B1": {
+    "x": "A2",
+    "y": "B1",
+    "split": "test_a",
+    "mean_acc_x": 0.5124,
+    "mean_acc_y": 0.5008,
+    "mean_paired_diff": 0.011600000000000003,
+    "one_sided_p": 0.19978002199780023,
+    "n_items": 500,
+    "alpha": 0.05,
+    "x_beats_y": false,
+    "test": "one-sided sign-flip paired permutation over per-item seed-mean correctness, 10000 resamples"
+   },
+   "A2TI_vs_A2": {
+    "x": "A2TI",
+    "y": "A2",
+    "split": "test_a",
+    "mean_acc_x": 0.49440000000000006,
+    "mean_acc_y": 0.5124,
+    "mean_paired_diff": -0.018,
+    "one_sided_p": 0.9028097190280971,
+    "n_items": 500,
+    "alpha": 0.05,
+    "x_beats_y": false,
+    "test": "one-sided sign-flip paired permutation over per-item seed-mean correctness, 10000 resamples"
+   }
+  },
+  "test_b": {
+   "A2_vs_B1": {
+    "x": "A2",
+    "y": "B1",
+    "split": "test_b",
+    "mean_acc_x": 0.5224,
+    "mean_acc_y": 0.5004000000000001,
+    "mean_paired_diff": 0.022,
+    "one_sided_p": 0.047995200479952004,
+    "n_items": 500,
+    "alpha": 0.05,
+    "x_beats_y": true,
+    "test": "one-sided sign-flip paired permutation over per-item seed-mean correctness, 10000 resamples"
+   },
+   "A2TI_vs_A2": {
+    "x": "A2TI",
+    "y": "A2",
+    "split": "test_b",
+    "mean_acc_x": 0.5164,
+    "mean_acc_y": 0.5224,
+    "mean_paired_diff": -0.006000000000000001,
+    "one_sided_p": 0.6668333166683331,
+    "n_items": 500,
+    "alpha": 0.05,
+    "x_beats_y": false,
+    "test": "one-sided sign-flip paired permutation over per-item seed-mean correctness, 10000 resamples"
+   }
+  },
+  "test_c": {
+   "A2_vs_B1": {
+    "x": "A2",
+    "y": "B1",
+    "split": "test_c",
+    "mean_acc_x": 0.5152,
+    "mean_acc_y": 0.4984,
+    "mean_paired_diff": 0.016800000000000002,
+    "one_sided_p": 0.1232876712328767,
+    "n_items": 500,
+    "alpha": 0.05,
+    "x_beats_y": false,
+    "test": "one-sided sign-flip paired permutation over per-item seed-mean correctness, 10000 resamples"
+   },
+   "A2TI_vs_A2": {
+    "x": "A2TI",
+    "y": "A2",
+    "split": "test_c",
+    "mean_acc_x": 0.5187999999999999,
+    "mean_acc_y": 0.5152,
+    "mean_paired_diff": 0.0035999999999999995,
+    "one_sided_p": 0.403959604039596,
+    "n_items": 500,
+    "alpha": 0.05,
+    "x_beats_y": false,
+    "test": "one-sided sign-flip paired permutation over per-item seed-mean correctness, 10000 resamples"
+   }
+  }
+ },
+ "controls": {
+  "C1": {
+   "control": "C1 trained-dial-swap (doc 22 SS6)",
+   "available": true,
+   "arm": "A2",
+   "scope_note": "C1 is run on A2, the arm doc 22 SS7's kill-gate reads (`tier_q_passed` = quantum beats B1 AND content_earned). doc 22 SS6 registers one dial-swap control, not one per arm, and doc 65 SS2.1 gives A2-TI exactly one registered boolean (`trained_intro_helps`) which does not read C1. Running C1 on further arms would widen the registered control set after the fact; it is NOT done, and this sentence is why.",
+   "shards_present": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "shards_missing": [],
+   "n_permutations": 1000,
+   "n_permutations_registered": 1000,
+   "all_permutations_present": true,
+   "perm_seed": 4242,
+   "original_seed_mean_acc": 0.5166666666666666,
+   "perm_95th_percentile": 0.5129333333333334,
+   "perm_max": 0.5196,
+   "perm_min": 0.4932,
+   "perm_mean": 0.505798,
+   "content_earned": true,
+   "criterion": "the original verb->block assignment must STRICTLY exceed the 95th percentile of the permuted seed-mean accuracies (doc 22 SS6). If the trained model's blocks are interchangeable, the content was not earned and H-Q cannot be claimed regardless of scores.",
+   "fast_path_max_abs_delta_vs_committed_forward": 0.0
+  },
+  "C2": {
+   "control": "C2 informative null (doc 22 SS6)",
+   "available": true,
+   "arm": "A2",
+   "n_seeds": 5,
+   "seeds_missing": [],
+   "train_dataset": {
+    "path": "stories_exp42r_c2_trainA.json",
+    "sha256": "71993d2eddd90cfe980aedb00996e8a1f11b671d3209b5a153084bac292c50da",
+    "verbset_A": [
+     "حمل",
+     "درس",
+     "سأل",
+     "شرح",
+     "ضرب",
+     "فهم",
+     "كتب",
+     "نظف"
+    ]
+   },
+   "eval_dataset": {
+    "path": "stories_exp42r_c2_evalB.json",
+    "sha256": "dcef8d95ff8b1787b2ad44b1c72f4051753e8e262dc13c359e7fb696a2c92dc7",
+    "verbset_B": [
+     "رسم",
+     "رفع",
+     "ساعد",
+     "عالج",
+     "فتح",
+     "قطع",
+     "كسر"
+    ],
+    "n_test_items": 1500
+   },
+   "verb_bijection": {
+    "رسم": "درس",
+    "رفع": "حمل",
+    "ساعد": "سأل",
+    "عالج": "ضرب",
+    "فتح": "شرح",
+    "قطع": "فهم",
+    "كسر": "كتب"
+   },
+   "per_seed_disjoint_accuracy": [
+    0.522,
+    0.526,
+    0.508,
+    0.5373333333333333,
+    0.496
+   ],
+   "per_seed_trainA_val_accuracy": [
+    0.592,
+    0.594,
+    0.564,
+    0.59,
+    0.568
+   ],
+   "mean_disjoint_accuracy": 0.5178666666666667,
+   "bar": 0.55,
+   "c2_passed": true,
+   "criterion": "blocks trained on the verbset-A inventory, evaluated on verbset-B stories through the fixed kind-matched bijection, must sit at <= chance + 5 pp (0.55). Above it, block content is generic frame machinery rather than verb-specific."
+  },
+  "C3": {
+   "control": "C3 order-invariance (doc 22 SS6)",
+   "arms_missing": [],
+   "single_item": {
+    "control": "C3 order-invariance",
+    "item_id": "test_a_p01349_b",
+    "n_sentences_rerendered": 18,
+    "A2_seed0": {
+     "max_abs_value_delta": 0.0,
+     "machine_precision_identical": true
+    },
+    "A2TI_seed0": {
+     "max_abs_value_delta": 0.0,
+     "machine_precision_identical": true
+    },
+    "B1_seed0": {
+     "max_abs_value_delta": 0.0,
+     "machine_precision_identical": true
+    },
+    "B2": {
+     "input_tokens_differ": true,
+     "prediction_changed": false
+    }
+   },
+   "population": {
+    "A2_seed0": {
+     "n_items": 200,
+     "max_abs_value_delta": 0.0,
+     "machine_precision_identical": true
+    },
+    "A2TI_seed0": {
+     "n_items": 200,
+     "max_abs_value_delta": 0.0,
+     "machine_precision_identical": true
+    },
+    "B1_seed0": {
+     "n_items": 200,
+     "max_abs_value_delta": 0.0,
+     "machine_precision_identical": true
+    }
+   },
+   "population_note": "the structured arms never see the surface -- they consume the generator's GOLD events -- so SVO<->VSO re-rendering must leave the compiled circuit and hence the readout values EXACTLY unchanged. This is an identity, and it is asserted at machine precision over 200 items rather than on one probe.",
+   "B2_behavioral_delta": {
+    "control": "C3 B2 behavioral delta",
+    "n_items": 200,
+    "prediction_flip_fraction": 0.0
+   },
+   "available": true,
+   "structured_arms_machine_precision_identical": true,
+   "B2_prediction_flip_fraction": 0.0,
+   "c3_order_invariant": true,
+   "criterion": "SVO<->VSO re-rendering must change the structured arms' compiled circuit NOT AT ALL (exact statevector identity -- they consume gold events and never see the surface) while B2's input, and measurably its behaviour, does change. Both facts are recorded; the identity is the criterion."
+  },
+  "C4": {
+   "control": "C4 sentence-scramble (doc 22 SS6)",
+   "criterion": "shuffling event order must destroy accuracy on the generator-labelled order-dependent items (mean scrambled accuracy <= 0.55). NOTE, stated plainly: on an arm that is already AT CHANCE unscrambled, this control is vacuous -- it can only be informative for an arm that was above chance to begin with, and the unscrambled accuracy is reported beside it so a reader can see which case applies.",
+   "per_arm": {
+    "A2": {
+     "per_seed": [
+      {
+       "control": "C4 sentence-scramble",
+       "n_order_dependent_items": 360,
+       "accuracy_original": 0.6194444444444445,
+       "accuracy_scrambled": 0.5305555555555556,
+       "destroyed": true,
+       "seed": 0
+      },
+      {
+       "control": "C4 sentence-scramble",
+       "n_order_dependent_items": 360,
+       "accuracy_original": 0.5694444444444444,
+       "accuracy_scrambled": 0.49722222222222223,
+       "destroyed": true,
+       "seed": 1
+      },
+      {
+       "control": "C4 sentence-scramble",
+       "n_order_dependent_items": 360,
+       "accuracy_original": 0.4861111111111111,
+       "accuracy_scrambled": 0.5222222222222223,
+       "destroyed": true,
+       "seed": 2
+      },
+      {
+       "control": "C4 sentence-scramble",
+       "n_order_dependent_items": 360,
+       "accuracy_original": 0.5361111111111111,
+       "accuracy_scrambled": 0.5055555555555555,
+       "destroyed": true,
+       "seed": 3
+      },
+      {
+       "control": "C4 sentence-scramble",
+       "n_order_dependent_items": 360,
+       "accuracy_original": 0.5888888888888889,
+       "accuracy_scrambled": 0.5527777777777778,
+       "destroyed": false,
+       "seed": 4
+      }
+     ],
+     "mean_accuracy_original": 0.5599999999999999,
+     "mean_accuracy_scrambled": 0.5216666666666667,
+     "n_order_dependent_items": 360
+    },
+    "A2TI": {
+     "per_seed": [
+      {
+       "control": "C4 sentence-scramble",
+       "n_order_dependent_items": 360,
+       "accuracy_original": 0.55,
+       "accuracy_scrambled": 0.5027777777777778,
+       "destroyed": true,
+       "seed": 0
+      },
+      {
+       "control": "C4 sentence-scramble",
+       "n_order_dependent_items": 360,
+       "accuracy_original": 0.4888888888888889,
+       "accuracy_scrambled": 0.5222222222222223,
+       "destroyed": true,
+       "seed": 1
+      },
+      {
+       "control": "C4 sentence-scramble",
+       "n_order_dependent_items": 360,
+       "accuracy_original": 0.5722222222222222,
+       "accuracy_scrambled": 0.55,
+       "destroyed": true,
+       "seed": 2
+      },
+      {
+       "control": "C4 sentence-scramble",
+       "n_order_dependent_items": 360,
+       "accuracy_original": 0.5444444444444444,
+       "accuracy_scrambled": 0.5305555555555556,
+       "destroyed": true,
+       "seed": 3
+      },
+      {
+       "control": "C4 sentence-scramble",
+       "n_order_dependent_items": 360,
+       "accuracy_original": 0.49444444444444446,
+       "accuracy_scrambled": 0.5333333333333333,
+       "destroyed": true,
+       "seed": 4
+      }
+     ],
+     "mean_accuracy_original": 0.53,
+     "mean_accuracy_scrambled": 0.5277777777777778,
+     "n_order_dependent_items": 360
+    },
+    "A3": {
+     "per_seed": [
+      {
+       "control": "C4 sentence-scramble",
+       "n_order_dependent_items": 360,
+       "accuracy_original": 0.5277777777777778,
+       "accuracy_scrambled": 0.5194444444444445,
+       "destroyed": true,
+       "seed": 0
+      },
+      {
+       "control": "C4 sentence-scramble",
+       "n_order_dependent_items": 360,
+       "accuracy_original": 0.5055555555555555,
+       "accuracy_scrambled": 0.5361111111111111,
+       "destroyed": true,
+       "seed": 1
+      },
+      {
+       "control": "C4 sentence-scramble",
+       "n_order_dependent_items": 360,
+       "accuracy_original": 0.5472222222222223,
+       "accuracy_scrambled": 0.46111111111111114,
+       "destroyed": true,
+       "seed": 2
+      },
+      {
+       "control": "C4 sentence-scramble",
+       "n_order_dependent_items": 360,
+       "accuracy_original": 0.5,
+       "accuracy_scrambled": 0.5083333333333333,
+       "destroyed": true,
+       "seed": 3
+      },
+      {
+       "control": "C4 sentence-scramble",
+       "n_order_dependent_items": 360,
+       "accuracy_original": 0.5194444444444445,
+       "accuracy_scrambled": 0.5694444444444444,
+       "destroyed": false,
+       "seed": 4
+      }
+     ],
+     "mean_accuracy_original": 0.52,
+     "mean_accuracy_scrambled": 0.518888888888889,
+     "n_order_dependent_items": 360
+    },
+    "B1": {
+     "per_seed": [
+      {
+       "control": "C4 sentence-scramble",
+       "n_order_dependent_items": 360,
+       "accuracy_original": 0.5111111111111111,
+       "accuracy_scrambled": 0.5027777777777778,
+       "destroyed": true,
+       "seed": 0
+      },
+      {
+       "control": "C4 sentence-scramble",
+       "n_order_dependent_items": 360,
+       "accuracy_original": 0.5,
+       "accuracy_scrambled": 0.48055555555555557,
+       "destroyed": true,
+       "seed": 1
+      },
+      {
+       "control": "C4 sentence-scramble",
+       "n_order_dependent_items": 360,
+       "accuracy_original": 0.49166666666666664,
+       "accuracy_scrambled": 0.5138888888888888,
+       "destroyed": true,
+       "seed": 2
+      },
+      {
+       "control": "C4 sentence-scramble",
+       "n_order_dependent_items": 360,
+       "accuracy_original": 0.49166666666666664,
+       "accuracy_scrambled": 0.5055555555555555,
+       "destroyed": true,
+       "seed": 3
+      },
+      {
+       "control": "C4 sentence-scramble",
+       "n_order_dependent_items": 360,
+       "accuracy_original": 0.5,
+       "accuracy_scrambled": 0.5138888888888888,
+       "destroyed": true,
+       "seed": 4
+      }
+     ],
+     "mean_accuracy_original": 0.4988888888888889,
+     "mean_accuracy_scrambled": 0.5033333333333333,
+     "n_order_dependent_items": 360
+    }
+   },
+   "arms_missing": [],
+   "available": true,
+   "bar": 0.55,
+   "c4_destroyed_A2": true
+  },
+  "C5": {
+   "file": "results_exp40r.json",
+   "harness_calibrated": true,
+   "qualifying_seeds": [
+    0,
+    2,
+    3
+   ],
+   "verdict_rule": ">=1 of 5 seeds: 100% train AND 100% validA AND >=95% valid_comp",
+   "reproduces_august_exactly": true,
+   "august_reference_read_only": "results_exp40b.json"
+  }
+ },
+ "verdicts": {
+  "a1_at_chance": true,
+  "a1_at_chance_on_swap_equivalent_items": true,
+  "content_earned": true,
+  "tier_q_passed": true,
+  "tier_s_passed": false,
+  "trained_intro_helps": false,
+  "c2_passed": true,
+  "c3_order_invariant": true,
+  "c4_destroyed_A2": true,
+  "a2_approx_a3": true
+ },
+ "verdict_reasons": {
+  "a1_at_chance": "A1 (exchange-symmetric core, no dressing) seed-mean UNION accuracy = 0.5048 against the chance + 0.02 bar = 0.5200. doc 22 SS3.2: 'if A1 scores above chance, the generator or readout leaks, and the run is invalidated'.\nREAD THIS WITH THE TWIN CENSUS. SS3.2's guarantee rests on [U_A1, SWAP] = 0 making a swap twin compile to the IDENTICAL statevector. That is exact for the 570 Q1/Q0 twin pairs and does NOT hold for the 180 Q2 pairs, whose pro-dropped subject is RE-RESOLVED by the flip and therefore lands on a different wire pair -- a difference a SWAP-symmetric model may legitimately see. A1's arithmetic ceiling on the union is 0.6200 with no leak whatsoever. On the swap-equivalent subset alone A1 scores 0.5000, where the bar is exact.\nA1 sits at chance on the union: the negative control holds on the registered reading and the other verdicts are readable.",
+  "a1_at_chance_on_swap_equivalent_items": "A1 on the 1140 union items whose twins differ by within-event argument exchange ALONE, where doc 22 SS3.2's identical-statevector argument is exact: 0.5000 against the 0.5200 bar.",
+  "content_earned": "C1 on A2: original verb->block assignment scores 0.5167; the 1000 sampled permutations have 95th percentile 0.5129 (max 0.5196, mean 0.5058). Pass requires STRICT exceedance. Content is earned by the specific trained blocks.",
+  "tier_q_passed": "doc 22 SS7: tier_q = (A2 beats B1 on the union compositional set, one-sided paired permutation p < 0.05) AND content_earned. A2 0.5167 vs B1 0.4999, paired diff +0.0168 over 1500 items, p = 0.0170; content_earned = True. => PASS.",
+  "tier_s_passed": "doc 22 SS1 H-S: BOTH structured models must beat ALL THREE unstructured baselines on the same items. A2_vs_B2 p=0.0795 (+0.0147); A2_vs_B2_generous p=0.0322 (+0.0147); A2_vs_B3 p=0.0492 (+0.0167); B1_vs_B2 p=0.5731 (-0.0021); B1_vs_B2_generous p=0.6238 (-0.0021); B1_vs_B3 p=0.5036 (-0.0001). => FAIL. H-S alone supports only 'compositional structure matters' -- the existing paper's claim, NOT a quantum one -- and classical then wins on cost (doc 22 SS1).",
+  "trained_intro_helps": "doc 65 SS2.1: A2-TI beats A2 on the union compositional set, one-sided paired permutation p < 0.05. A2-TI 0.5099 vs A2 0.5167, paired diff -0.0068 over 1500 items, p = 0.7973. => FAIL -- training the noun introduction does not help at this design point. This is the ledger's trained-ENCODING lever probe; A2-TI amends doc 22 SS3.1's seed-only rule knowingly -- the loss is QA and the embeddings only initialise, so nothing is solved against them. THE THIRD OUTCOME IS REGISTERED: if A2-TI did not complete the field is null, never false.",
+  "c2_passed": "blocks trained on the verbset-A inventory, evaluated on verbset-B stories through the fixed kind-matched bijection, must sit at <= chance + 5 pp (0.55). Above it, block content is generic frame machinery rather than verb-specific.",
+  "c3_order_invariant": "SVO<->VSO re-rendering must change the structured arms' compiled circuit NOT AT ALL (exact statevector identity -- they consume gold events and never see the surface) while B2's input, and measurably its behaviour, does change. Both facts are recorded; the identity is the criterion.",
+  "c4_destroyed_A2": "shuffling event order must destroy accuracy on the generator-labelled order-dependent items (mean scrambled accuracy <= 0.55). NOTE, stated plainly: on an arm that is already AT CHANCE unscrambled, this control is vacuous -- it can only be informative for an arm that was above chance to begin with, and the unscrambled accuracy is reported beside it so a reader can see which case applies.",
+  "a2_approx_a3": "doc 22 SS3.2 / doc 65 SS2.7, the carve-out preserved VERBATIM and sendable to the Pasqal/Reem thread on EITHER gate branch: A2 0.5167 vs A3 0.5071 (gap -0.0096, bar 0.02). If A2 ~= A3, thematic-role encoding is dressing-cheap and the analog-compilable symmetric family plus local detuning suffices; A3's exchange-asymmetric CRX-cascade family is fine on trapped ions but not under a global Rydberg drive."
+ },
+ "twice_evaluation": {
+  "method": "models rebuilt from exp42r_ckpt/*.pt and re-scored by a code path that does not reuse the runner's recorded numbers",
+  "per_unit": [
+   {
+    "arm": "A1",
+    "seed": 0,
+    "splits": {
+     "test_a": {
+      "recomputed": 0.494,
+      "recorded": 0.494,
+      "abs_delta": 0.0
+     },
+     "test_b": {
+      "recomputed": 0.498,
+      "recorded": 0.498,
+      "abs_delta": 0.0
+     },
+     "test_c": {
+      "recomputed": 0.508,
+      "recorded": 0.508,
+      "abs_delta": 0.0
+     },
+     "test_union": {
+      "recomputed": 0.5,
+      "recorded": 0.5,
+      "abs_delta": 0.0
+     }
+    }
+   },
+   {
+    "arm": "A1",
+    "seed": 1,
+    "splits": {
+     "test_a": {
+      "recomputed": 0.51,
+      "recorded": 0.51,
+      "abs_delta": 0.0
+     },
+     "test_b": {
+      "recomputed": 0.506,
+      "recorded": 0.506,
+      "abs_delta": 0.0
+     },
+     "test_c": {
+      "recomputed": 0.506,
+      "recorded": 0.506,
+      "abs_delta": 0.0
+     },
+     "test_union": {
+      "recomputed": 0.5073333333333333,
+      "recorded": 0.5073333333333333,
+      "abs_delta": 0.0
+     }
+    }
+   },
+   {
+    "arm": "A1",
+    "seed": 2,
+    "splits": {
+     "test_a": {
+      "recomputed": 0.512,
+      "recorded": 0.512,
+      "abs_delta": 0.0
+     },
+     "test_b": {
+      "recomputed": 0.51,
+      "recorded": 0.51,
+      "abs_delta": 0.0
+     },
+     "test_c": {
+      "recomputed": 0.512,
+      "recorded": 0.512,
+      "abs_delta": 0.0
+     },
+     "test_union": {
+      "recomputed": 0.5113333333333333,
+      "recorded": 0.5113333333333333,
+      "abs_delta": 0.0
+     }
+    }
+   },
+   {
+    "arm": "A1",
+    "seed": 3,
+    "splits": {
+     "test_a": {
+      "recomputed": 0.512,
+      "recorded": 0.512,
+      "abs_delta": 0.0
+     },
+     "test_b": {
+      "recomputed": 0.486,
+      "recorded": 0.486,
+      "abs_delta": 0.0
+     },
+     "test_c": {
+      "recomputed": 0.5,
+      "recorded": 0.5,
+      "abs_delta": 0.0
+     },
+     "test_union": {
+      "recomputed": 0.49933333333333335,
+      "recorded": 0.49933333333333335,
+      "abs_delta": 0.0
+     }
+    }
+   },
+   {
+    "arm": "A1",
+    "seed": 4,
+    "splits": {
+     "test_a": {
+      "recomputed": 0.504,
+      "recorded": 0.504,
+      "abs_delta": 0.0
+     },
+     "test_b": {
+      "recomputed": 0.504,
+      "recorded": 0.504,
+      "abs_delta": 0.0
+     },
+     "test_c": {
+      "recomputed": 0.51,
+      "recorded": 0.51,
+      "abs_delta": 0.0
+     },
+     "test_union": {
+      "recomputed": 0.506,
+      "recorded": 0.506,
+      "abs_delta": 0.0
+     }
+    }
+   },
+   {
+    "arm": "A2",
+    "seed": 0,
+    "splits": {
+     "test_a": {
+      "recomputed": 0.54,
+      "recorded": 0.54,
+      "abs_delta": 0.0
+     },
+     "test_b": {
+      "recomputed": 0.542,
+      "recorded": 0.542,
+      "abs_delta": 0.0
+     },
+     "test_c": {
+      "recomputed": 0.516,
+      "recorded": 0.516,
+      "abs_delta": 0.0
+     },
+     "test_union": {
+      "recomputed": 0.5326666666666666,
+      "recorded": 0.5326666666666666,
+      "abs_delta": 0.0
+     }
+    }
+   },
+   {
+    "arm": "A2",
+    "seed": 1,
+    "splits": {
+     "test_a": {
+      "recomputed": 0.51,
+      "recorded": 0.51,
+      "abs_delta": 0.0
+     },
+     "test_b": {
+      "recomputed": 0.496,
+      "recorded": 0.496,
+      "abs_delta": 0.0
+     },
+     "test_c": {
+      "recomputed": 0.562,
+      "recorded": 0.562,
+      "abs_delta": 0.0
+     },
+     "test_union": {
+      "recomputed": 0.5226666666666666,
+      "recorded": 0.5226666666666666,
+      "abs_delta": 0.0
+     }
+    }
+   },
+   {
+    "arm": "A2",
+    "seed": 2,
+    "splits": {
+     "test_a": {
+      "recomputed": 0.49,
+      "recorded": 0.49,
+      "abs_delta": 0.0
+     },
+     "test_b": {
+      "recomputed": 0.52,
+      "recorded": 0.52,
+      "abs_delta": 0.0
+     },
+     "test_c": {
+      "recomputed": 0.452,
+      "recorded": 0.452,
+      "abs_delta": 0.0
+     },
+     "test_union": {
+      "recomputed": 0.48733333333333334,
+      "recorded": 0.48733333333333334,
+      "abs_delta": 0.0
+     }
+    }
+   },
+   {
+    "arm": "A2",
+    "seed": 3,
+    "splits": {
+     "test_a": {
+      "recomputed": 0.518,
+      "recorded": 0.518,
+      "abs_delta": 0.0
+     },
+     "test_b": {
+      "recomputed": 0.53,
+      "recorded": 0.53,
+      "abs_delta": 0.0
+     },
+     "test_c": {
+      "recomputed": 0.51,
+      "recorded": 0.51,
+      "abs_delta": 0.0
+     },
+     "test_union": {
+      "recomputed": 0.5193333333333333,
+      "recorded": 0.5193333333333333,
+      "abs_delta": 0.0
+     }
+    }
+   },
+   {
+    "arm": "A2",
+    "seed": 4,
+    "splits": {
+     "test_a": {
+      "recomputed": 0.504,
+      "recorded": 0.504,
+      "abs_delta": 0.0
+     },
+     "test_b": {
+      "recomputed": 0.524,
+      "recorded": 0.524,
+      "abs_delta": 0.0
+     },
+     "test_c": {
+      "recomputed": 0.536,
+      "recorded": 0.536,
+      "abs_delta": 0.0
+     },
+     "test_union": {
+      "recomputed": 0.5213333333333333,
+      "recorded": 0.5213333333333333,
+      "abs_delta": 0.0
+     }
+    }
+   },
+   {
+    "arm": "A2TI",
+    "seed": 0,
+    "splits": {
+     "test_a": {
+      "recomputed": 0.536,
+      "recorded": 0.536,
+      "abs_delta": 0.0
+     },
+     "test_b": {
+      "recomputed": 0.522,
+      "recorded": 0.522,
+      "abs_delta": 0.0
+     },
+     "test_c": {
+      "recomputed": 0.542,
+      "recorded": 0.542,
+      "abs_delta": 0.0
+     },
+     "test_union": {
+      "recomputed": 0.5333333333333333,
+      "recorded": 0.5333333333333333,
+      "abs_delta": 0.0
+     }
+    }
+   },
+   {
+    "arm": "A2TI",
+    "seed": 1,
+    "splits": {
+     "test_a": {
+      "recomputed": 0.488,
+      "recorded": 0.488,
+      "abs_delta": 0.0
+     },
+     "test_b": {
+      "recomputed": 0.508,
+      "recorded": 0.508,
+      "abs_delta": 0.0
+     },
+     "test_c": {
+      "recomputed": 0.49,
+      "recorded": 0.49,
+      "abs_delta": 0.0
+     },
+     "test_union": {
+      "recomputed": 0.49533333333333335,
+      "recorded": 0.49533333333333335,
+      "abs_delta": 0.0
+     }
+    }
+   },
+   {
+    "arm": "A2TI",
+    "seed": 2,
+    "splits": {
+     "test_a": {
+      "recomputed": 0.456,
+      "recorded": 0.456,
+      "abs_delta": 0.0
+     },
+     "test_b": {
+      "recomputed": 0.54,
+      "recorded": 0.54,
+      "abs_delta": 0.0
+     },
+     "test_c": {
+      "recomputed": 0.518,
+      "recorded": 0.518,
+      "abs_delta": 0.0
+     },
+     "test_union": {
+      "recomputed": 0.5046666666666667,
+      "recorded": 0.5046666666666667,
+      "abs_delta": 0.0
+     }
+    }
+   },
+   {
+    "arm": "A2TI",
+    "seed": 3,
+    "splits": {
+     "test_a": {
+      "recomputed": 0.508,
+      "recorded": 0.508,
+      "abs_delta": 0.0
+     },
+     "test_b": {
+      "recomputed": 0.5,
+      "recorded": 0.5,
+      "abs_delta": 0.0
+     },
+     "test_c": {
+      "recomputed": 0.536,
+      "recorded": 0.536,
+      "abs_delta": 0.0
+     },
+     "test_union": {
+      "recomputed": 0.5146666666666667,
+      "recorded": 0.5146666666666667,
+      "abs_delta": 0.0
+     }
+    }
+   },
+   {
+    "arm": "A2TI",
+    "seed": 4,
+    "splits": {
+     "test_a": {
+      "recomputed": 0.484,
+      "recorded": 0.484,
+      "abs_delta": 0.0
+     },
+     "test_b": {
+      "recomputed": 0.512,
+      "recorded": 0.512,
+      "abs_delta": 0.0
+     },
+     "test_c": {
+      "recomputed": 0.508,
+      "recorded": 0.508,
+      "abs_delta": 0.0
+     },
+     "test_union": {
+      "recomputed": 0.5013333333333333,
+      "recorded": 0.5013333333333333,
+      "abs_delta": 0.0
+     }
+    }
+   },
+   {
+    "arm": "A3",
+    "seed": 0,
+    "splits": {
+     "test_a": {
+      "recomputed": 0.496,
+      "recorded": 0.496,
+      "abs_delta": 0.0
+     },
+     "test_b": {
+      "recomputed": 0.514,
+      "recorded": 0.514,
+      "abs_delta": 0.0
+     },
+     "test_c": {
+      "recomputed": 0.506,
+      "recorded": 0.506,
+      "abs_delta": 0.0
+     },
+     "test_union": {
+      "recomputed": 0.5053333333333333,
+      "recorded": 0.5053333333333333,
+      "abs_delta": 0.0
+     }
+    }
+   },
+   {
+    "arm": "A3",
+    "seed": 1,
+    "splits": {
+     "test_a": {
+      "recomputed": 0.506,
+      "recorded": 0.506,
+      "abs_delta": 0.0
+     },
+     "test_b": {
+      "recomputed": 0.484,
+      "recorded": 0.484,
+      "abs_delta": 0.0
+     },
+     "test_c": {
+      "recomputed": 0.52,
+      "recorded": 0.52,
+      "abs_delta": 0.0
+     },
+     "test_union": {
+      "recomputed": 0.5033333333333333,
+      "recorded": 0.5033333333333333,
+      "abs_delta": 0.0
+     }
+    }
+   },
+   {
+    "arm": "A3",
+    "seed": 2,
+    "splits": {
+     "test_a": {
+      "recomputed": 0.502,
+      "recorded": 0.502,
+      "abs_delta": 0.0
+     },
+     "test_b": {
+      "recomputed": 0.516,
+      "recorded": 0.516,
+      "abs_delta": 0.0
+     },
+     "test_c": {
+      "recomputed": 0.536,
+      "recorded": 0.536,
+      "abs_delta": 0.0
+     },
+     "test_union": {
+      "recomputed": 0.518,
+      "recorded": 0.518,
+      "abs_delta": 0.0
+     }
+    }
+   },
+   {
+    "arm": "A3",
+    "seed": 3,
+    "splits": {
+     "test_a": {
+      "recomputed": 0.474,
+      "recorded": 0.474,
+      "abs_delta": 0.0
+     },
+     "test_b": {
+      "recomputed": 0.506,
+      "recorded": 0.506,
+      "abs_delta": 0.0
+     },
+     "test_c": {
+      "recomputed": 0.486,
+      "recorded": 0.486,
+      "abs_delta": 0.0
+     },
+     "test_union": {
+      "recomputed": 0.4886666666666667,
+      "recorded": 0.4886666666666667,
+      "abs_delta": 0.0
+     }
+    }
+   },
+   {
+    "arm": "A3",
+    "seed": 4,
+    "splits": {
+     "test_a": {
+      "recomputed": 0.498,
+      "recorded": 0.498,
+      "abs_delta": 0.0
+     },
+     "test_b": {
+      "recomputed": 0.532,
+      "recorded": 0.532,
+      "abs_delta": 0.0
+     },
+     "test_c": {
+      "recomputed": 0.53,
+      "recorded": 0.53,
+      "abs_delta": 0.0
+     },
+     "test_union": {
+      "recomputed": 0.52,
+      "recorded": 0.52,
+      "abs_delta": 0.0
+     }
+    }
+   },
+   {
+    "arm": "B1",
+    "seed": 0,
+    "splits": {
+     "test_a": {
+      "recomputed": 0.504,
+      "recorded": 0.504,
+      "abs_delta": 0.0
+     },
+     "test_b": {
+      "recomputed": 0.5,
+      "recorded": 0.5,
+      "abs_delta": 0.0
+     },
+     "test_c": {
+      "recomputed": 0.506,
+      "recorded": 0.506,
+      "abs_delta": 0.0
+     },
+     "test_union": {
+      "recomputed": 0.5033333333333333,
+      "recorded": 0.5033333333333333,
+      "abs_delta": 0.0
+     }
+    }
+   },
+   {
+    "arm": "B1",
+    "seed": 1,
+    "splits": {
+     "test_a": {
+      "recomputed": 0.498,
+      "recorded": 0.498,
+      "abs_delta": 0.0
+     },
+     "test_b": {
+      "recomputed": 0.498,
+      "recorded": 0.498,
+      "abs_delta": 0.0
+     },
+     "test_c": {
+      "recomputed": 0.498,
+      "recorded": 0.498,
+      "abs_delta": 0.0
+     },
+     "test_union": {
+      "recomputed": 0.498,
+      "recorded": 0.498,
+      "abs_delta": 0.0
+     }
+    }
+   },
+   {
+    "arm": "B1",
+    "seed": 2,
+    "splits": {
+     "test_a": {
+      "recomputed": 0.492,
+      "recorded": 0.492,
+      "abs_delta": 0.0
+     },
+     "test_b": {
+      "recomputed": 0.498,
+      "recorded": 0.498,
+      "abs_delta": 0.0
+     },
+     "test_c": {
+      "recomputed": 0.498,
+      "recorded": 0.498,
+      "abs_delta": 0.0
+     },
+     "test_union": {
+      "recomputed": 0.496,
+      "recorded": 0.496,
+      "abs_delta": 0.0
+     }
+    }
+   },
+   {
+    "arm": "B1",
+    "seed": 3,
+    "splits": {
+     "test_a": {
+      "recomputed": 0.502,
+      "recorded": 0.502,
+      "abs_delta": 0.0
+     },
+     "test_b": {
+      "recomputed": 0.5,
+      "recorded": 0.5,
+      "abs_delta": 0.0
+     },
+     "test_c": {
+      "recomputed": 0.496,
+      "recorded": 0.496,
+      "abs_delta": 0.0
+     },
+     "test_union": {
+      "recomputed": 0.49933333333333335,
+      "recorded": 0.49933333333333335,
+      "abs_delta": 0.0
+     }
+    }
+   },
+   {
+    "arm": "B1",
+    "seed": 4,
+    "splits": {
+     "test_a": {
+      "recomputed": 0.508,
+      "recorded": 0.508,
+      "abs_delta": 0.0
+     },
+     "test_b": {
+      "recomputed": 0.506,
+      "recorded": 0.506,
+      "abs_delta": 0.0
+     },
+     "test_c": {
+      "recomputed": 0.494,
+      "recorded": 0.494,
+      "abs_delta": 0.0
+     },
+     "test_union": {
+      "recomputed": 0.5026666666666667,
+      "recorded": 0.5026666666666667,
+      "abs_delta": 0.0
+     }
+    }
+   },
+   {
+    "arm": "B2",
+    "seed": 0,
+    "splits": {
+     "test_a": {
+      "recomputed": 0.5,
+      "recorded": 0.5,
+      "abs_delta": 0.0
+     },
+     "test_b": {
+      "recomputed": 0.5,
+      "recorded": 0.5,
+      "abs_delta": 0.0
+     },
+     "test_c": {
+      "recomputed": 0.5,
+      "recorded": 0.5,
+      "abs_delta": 0.0
+     },
+     "test_union": {
+      "recomputed": 0.5,
+      "recorded": 0.5,
+      "abs_delta": 0.0
+     }
+    }
+   },
+   {
+    "arm": "B2",
+    "seed": 1,
+    "splits": {
+     "test_a": {
+      "recomputed": 0.518,
+      "recorded": 0.518,
+      "abs_delta": 0.0
+     },
+     "test_b": {
+      "recomputed": 0.502,
+      "recorded": 0.502,
+      "abs_delta": 0.0
+     },
+     "test_c": {
+      "recomputed": 0.516,
+      "recorded": 0.516,
+      "abs_delta": 0.0
+     },
+     "test_union": {
+      "recomputed": 0.512,
+      "recorded": 0.512,
+      "abs_delta": 0.0
+     }
+    }
+   },
+   {
+    "arm": "B2",
+    "seed": 2,
+    "splits": {
+     "test_a": {
+      "recomputed": 0.492,
+      "recorded": 0.492,
+      "abs_delta": 0.0
+     },
+     "test_b": {
+      "recomputed": 0.506,
+      "recorded": 0.506,
+      "abs_delta": 0.0
+     },
+     "test_c": {
+      "recomputed": 0.496,
+      "recorded": 0.496,
+      "abs_delta": 0.0
+     },
+     "test_union": {
+      "recomputed": 0.498,
+      "recorded": 0.498,
+      "abs_delta": 0.0
+     }
+    }
+   },
+   {
+    "arm": "B2",
+    "seed": 3,
+    "splits": {
+     "test_a": {
+      "recomputed": 0.5,
+      "recorded": 0.5,
+      "abs_delta": 0.0
+     },
+     "test_b": {
+      "recomputed": 0.5,
+      "recorded": 0.5,
+      "abs_delta": 0.0
+     },
+     "test_c": {
+      "recomputed": 0.5,
+      "recorded": 0.5,
+      "abs_delta": 0.0
+     },
+     "test_union": {
+      "recomputed": 0.5,
+      "recorded": 0.5,
+      "abs_delta": 0.0
+     }
+    }
+   },
+   {
+    "arm": "B2",
+    "seed": 4,
+    "splits": {
+     "test_a": {
+      "recomputed": 0.5,
+      "recorded": 0.5,
+      "abs_delta": 0.0
+     },
+     "test_b": {
+      "recomputed": 0.5,
+      "recorded": 0.5,
+      "abs_delta": 0.0
+     },
+     "test_c": {
+      "recomputed": 0.5,
+      "recorded": 0.5,
+      "abs_delta": 0.0
+     },
+     "test_union": {
+      "recomputed": 0.5,
+      "recorded": 0.5,
+      "abs_delta": 0.0
+     }
+    }
+   },
+   {
+    "arm": "B2_generous",
+    "seed": 0,
+    "splits": {
+     "test_a": {
+      "recomputed": 0.502,
+      "recorded": 0.502,
+      "abs_delta": 0.0
+     },
+     "test_b": {
+      "recomputed": 0.494,
+      "recorded": 0.494,
+      "abs_delta": 0.0
+     },
+     "test_c": {
+      "recomputed": 0.49,
+      "recorded": 0.49,
+      "abs_delta": 0.0
+     },
+     "test_union": {
+      "recomputed": 0.49533333333333335,
+      "recorded": 0.49533333333333335,
+      "abs_delta": 0.0
+     }
+    }
+   },
+   {
+    "arm": "B2_generous",
+    "seed": 1,
+    "splits": {
+     "test_a": {
+      "recomputed": 0.528,
+      "recorded": 0.528,
+      "abs_delta": 0.0
+     },
+     "test_b": {
+      "recomputed": 0.478,
+      "recorded": 0.478,
+      "abs_delta": 0.0
+     },
+     "test_c": {
+      "recomputed": 0.514,
+      "recorded": 0.514,
+      "abs_delta": 0.0
+     },
+     "test_union": {
+      "recomputed": 0.5066666666666667,
+      "recorded": 0.5066666666666667,
+      "abs_delta": 0.0
+     }
+    }
+   },
+   {
+    "arm": "B2_generous",
+    "seed": 2,
+    "splits": {
+     "test_a": {
+      "recomputed": 0.498,
+      "recorded": 0.498,
+      "abs_delta": 0.0
+     },
+     "test_b": {
+      "recomputed": 0.508,
+      "recorded": 0.508,
+      "abs_delta": 0.0
+     },
+     "test_c": {
+      "recomputed": 0.522,
+      "recorded": 0.522,
+      "abs_delta": 0.0
+     },
+     "test_union": {
+      "recomputed": 0.5093333333333333,
+      "recorded": 0.5093333333333333,
+      "abs_delta": 0.0
+     }
+    }
+   },
+   {
+    "arm": "B2_generous",
+    "seed": 3,
+    "splits": {
+     "test_a": {
+      "recomputed": 0.482,
+      "recorded": 0.482,
+      "abs_delta": 0.0
+     },
+     "test_b": {
+      "recomputed": 0.498,
+      "recorded": 0.498,
+      "abs_delta": 0.0
+     },
+     "test_c": {
+      "recomputed": 0.516,
+      "recorded": 0.516,
+      "abs_delta": 0.0
+     },
+     "test_union": {
+      "recomputed": 0.49866666666666665,
+      "recorded": 0.49866666666666665,
+      "abs_delta": 0.0
+     }
+    }
+   },
+   {
+    "arm": "B2_generous",
+    "seed": 4,
+    "splits": {
+     "test_a": {
+      "recomputed": 0.5,
+      "recorded": 0.5,
+      "abs_delta": 0.0
+     },
+     "test_b": {
+      "recomputed": 0.502,
+      "recorded": 0.502,
+      "abs_delta": 0.0
+     },
+     "test_c": {
+      "recomputed": 0.498,
+      "recorded": 0.498,
+      "abs_delta": 0.0
+     },
+     "test_union": {
+      "recomputed": 0.5,
+      "recorded": 0.5,
+      "abs_delta": 0.0
+     }
+    }
+   },
+   {
+    "arm": "B3",
+    "seed": 0,
+    "splits": {
+     "test_a": {
+      "recomputed": 0.5,
+      "recorded": 0.5,
+      "abs_delta": 0.0
+     },
+     "test_b": {
+      "recomputed": 0.5,
+      "recorded": 0.5,
+      "abs_delta": 0.0
+     },
+     "test_c": {
+      "recomputed": 0.5,
+      "recorded": 0.5,
+      "abs_delta": 0.0
+     },
+     "test_union": {
+      "recomputed": 0.5,
+      "recorded": 0.5,
+      "abs_delta": 0.0
+     }
+    }
+   },
+   {
+    "arm": "B3",
+    "seed": 1,
+    "splits": {
+     "test_a": {
+      "recomputed": 0.5,
+      "recorded": 0.5,
+      "abs_delta": 0.0
+     },
+     "test_b": {
+      "recomputed": 0.5,
+      "recorded": 0.5,
+      "abs_delta": 0.0
+     },
+     "test_c": {
+      "recomputed": 0.5,
+      "recorded": 0.5,
+      "abs_delta": 0.0
+     },
+     "test_union": {
+      "recomputed": 0.5,
+      "recorded": 0.5,
+      "abs_delta": 0.0
+     }
+    }
+   },
+   {
+    "arm": "B3",
+    "seed": 2,
+    "splits": {
+     "test_a": {
+      "recomputed": 0.5,
+      "recorded": 0.5,
+      "abs_delta": 0.0
+     },
+     "test_b": {
+      "recomputed": 0.5,
+      "recorded": 0.5,
+      "abs_delta": 0.0
+     },
+     "test_c": {
+      "recomputed": 0.5,
+      "recorded": 0.5,
+      "abs_delta": 0.0
+     },
+     "test_union": {
+      "recomputed": 0.5,
+      "recorded": 0.5,
+      "abs_delta": 0.0
+     }
+    }
+   },
+   {
+    "arm": "B3",
+    "seed": 3,
+    "splits": {
+     "test_a": {
+      "recomputed": 0.5,
+      "recorded": 0.5,
+      "abs_delta": 0.0
+     },
+     "test_b": {
+      "recomputed": 0.5,
+      "recorded": 0.5,
+      "abs_delta": 0.0
+     },
+     "test_c": {
+      "recomputed": 0.5,
+      "recorded": 0.5,
+      "abs_delta": 0.0
+     },
+     "test_union": {
+      "recomputed": 0.5,
+      "recorded": 0.5,
+      "abs_delta": 0.0
+     }
+    }
+   },
+   {
+    "arm": "B3",
+    "seed": 4,
+    "splits": {
+     "test_a": {
+      "recomputed": 0.5,
+      "recorded": 0.5,
+      "abs_delta": 0.0
+     },
+     "test_b": {
+      "recomputed": 0.5,
+      "recorded": 0.5,
+      "abs_delta": 0.0
+     },
+     "test_c": {
+      "recomputed": 0.5,
+      "recorded": 0.5,
+      "abs_delta": 0.0
+     },
+     "test_union": {
+      "recomputed": 0.5,
+      "recorded": 0.5,
+      "abs_delta": 0.0
+     }
+    }
+   }
+  ],
+  "max_abs_accuracy_delta": 0.0,
+  "mismatches": [],
+  "agrees": true,
+  "reading": "agrees=true means the runner's table and an independent re-scoring of the same checkpoints produce identical accuracies; agrees=false is a REPORTED FAILURE, not a silent choice between them",
+  "twice_evaluated": true
+ },
+ "kill_gate_doc22_SS7": "On the union compositional-generalization test set (>= 50 items, >= 500 preferred): tier_q_passed = (quantum beats B1, one-sided paired permutation p < 0.05) AND content_earned (C1). If tier_q_passed = false: THIS LINE STOPS. The result -- whatever it is -- feeds the Phase 3 controls paper. No re-runs with tweaked ansaetze hunting for a pass; one pre-registered ablation set is the whole search space. If only tier_s_passed: the claim shrinks to 'structure matters', stated with classical winning on cost.",
+ "expectation_on_record_doc65_SS7_4": "tier_q / tier_s were EXPECTED to close negative before any number existed; doc 22 SS8 priced this branch ('the strongest section of the controls paper') and a valid interpreted negative IS the deliverable.",
+ "confirm_draw_owed_doc65_SS2_2": "A fired tier_q_passed and/or trained_intro_helps is confirmed on a FRESH generator draw at seed 41000 + 1000 = 42000: the winning quantum arm AND B1, retrained, 5 seeds, paired on the same confirm items, with B1-ON-THE-CONFIRM-DRAW as the reference. Not optional; roughly doubles the decisive stage's compute. Owed = True.",
+ "wall_time_sec": 116.2
+}

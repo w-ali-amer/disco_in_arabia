@@ -1,0 +1,89 @@
+{
+ "component": "exp72 confirm draw -- doc 58 SS16.2's RETRAINED DONOR and its selection",
+ "spec": "qnlp_private_docs/58_exp72_rescue_rung.md (REGISTERED 2026-08-27, orchestrator rulings 1-6 in the status header, SS18 post-registration note on I2)",
+ "spec_commit_line": "0fc70b2 doc 58 SS19: exp72 reports -- identity-init partial rescue of I1 (floors clean, mechanism partially restored); directional call missed honestly; I2 resists all four; confirm ordered; reopening consequence registered",
+ "why_retrained": "doc 58 SS16.2, registered because it is easy to get wrong: the committed donor R1-W_s0 was trained on the FIRST draw's train split. Carrying it into a fresh-draw confirm would initialise the confirm run from a model fitted to A DIFFERENT DRAW'S ITEMS. The T = 1 donor arm is therefore re-run at the committed T = 1 recipe on the confirm draw's own T = 1 items and re-selected by the same val rule and the same tie-break.",
+ "donor_arm": "A0-W-T1",
+ "recipe": "committed T = 1: 150 epochs, Adam, lr 0.02, batch 8, best-val selection",
+ "selection": {
+  "val_per_seed": [
+   0.9545454545454546,
+   0.9545454545454546,
+   0.9621212121212122,
+   0.9545454545454546,
+   0.9696969696969697
+  ],
+  "max_val": 0.9696969696969697,
+  "tied_seeds": [
+   4
+  ],
+  "selected_seed": 4,
+  "tie_break": "lowest seed index among the val maxima (doc 58 SS6.4.1, orchestrator ruling 3)",
+  "selection_is_on_val_never_heldout": true
+ },
+ "selected_ckpt": "exp72_confirm_ckpt/C_I1_donor_s4.pt",
+ "selected_ckpt_sha256": "6d66416f4661aac5ecf75a919a4ae60336d483ffab931548dfd7ad0fc5bed52e",
+ "selected_val": 0.9696969696969697,
+ "selected_heldout_reported_not_used": 0.97,
+ "per_seed_heldout": [
+  0.97,
+  0.9733333333333334,
+  0.96,
+  0.9666666666666667,
+  0.97
+ ],
+ "first_draw_donor": {
+  "ckpt": "exp69_ckpt/R1-W_s0.pt",
+  "seed": 0,
+  "val": 0.9545454545454546,
+  "note": "NOT USED on this draw (SS16.2)"
+ },
+ "codepath_parity_on_the_fresh_draw": {
+  "reference": "results_exp70_confirm.json :: arms['A0-W-T1']",
+  "exp70_confirm_per_seed": [
+   0.97,
+   0.9733333333333334,
+   0.96,
+   0.9666666666666667,
+   0.97
+  ],
+  "exp72_confirm_per_seed": [
+   0.97,
+   0.9733333333333334,
+   0.96,
+   0.9666666666666667,
+   0.97
+  ],
+  "per_seed_delta": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "max_abs_per_seed_delta": 0.0,
+  "bit_exact": true,
+  "ckpt_sha_matches": [
+   false,
+   false,
+   false,
+   false,
+   false
+  ],
+  "all_ckpt_shas_match": false,
+  "note": "doc 58 SS5.1's |delta| <= 0.002 gate is INAPPLICABLE on a fresh draw -- it compares against measurements on the FIRST draw's items. This is the check that IS available and it is stronger in kind: exp70's confirm draw already ran this arm on THESE items at the committed recipe and the same five seeds, so exp72's re-run must reproduce it BIT-EXACTLY, checkpoint shas included."
+ },
+ "platform": "macOS-26.5.2-arm64-arm-64bit",
+ "torch": "2.13.0",
+ "git_note": {
+  "repo_head": "a763ea3 D4 audit session prepared: 50-noun random sample (registered seed 4900) for the user's sample-audit gate; veto applies to the full 600",
+  "exp72_paths": [
+   "?? exp72_ckpt/",
+   "?? exp72_confirm_ckpt/",
+   "?? exp72_confirm_run.py",
+   "?? results_exp72_confirm_smoke_validation.json"
+  ],
+  "n_untracked": 253,
+  "rule3_note": "exp72 writes ONLY exp72_ckpt/ and results_exp72* (through fresh_results_path). No exp68 / exp69 / exp70 artefact is modified; the donor checkpoints are READ-ONLY and sha-asserted before use."
+ }
+}

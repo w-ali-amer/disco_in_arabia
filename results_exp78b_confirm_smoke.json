@@ -1,0 +1,60 @@
+{
+ "experiment": "exp78b-confirm smoke (doc 70 §3.6 self-emitting gate)",
+ "spec": "doc 69 §7 / doc 70 §2.2, ordered 2026-09-04",
+ "platform": "macOS-26.5.2-arm64-arm-64bit",
+ "python": "3.12.13",
+ "torch": "2.13.0",
+ "driver_sha256": "1855227a29113c2cff45ecb435a78f2f1387c12dfc3ce526aad0a26e916536d1",
+ "rule_doc70_S6": "Every PASS/FAIL gate writes its own hash-pinned artifact (inputs, seeds, statistic, threshold, boolean) INCLUDING one designed-to-fail assertion shown failing; gate set is live iff Gate 3 fires.",
+ "gate0_sha_and_freshness": {
+  "path": "stories_exp78a_confirm_n3_T2.json",
+  "sha256": "a7fabb683da829bfb471d30f4994c41e868697e545d4a5cde195ce49cd02a366",
+  "registered_confirm_sha": "a7fabb683da829bfb471d30f4994c41e868697e545d4a5cde195ce49cd02a366",
+  "first_draw_sha": "eb46f4e65a8f46c8a6fc0e0013d9dfdabc43200475b9c06b4c1488c5e2c41072",
+  "sha_matches_confirm": true,
+  "freshness": "CONFIRMED (sha differs from first draw)",
+  "generator_seed_confirm": 77000,
+  "generator_seed_first_draw": 76000,
+  "seed_delta_verified": true,
+  "seed_convention": "confirm = first_draw + 1000, registered convention doc 69 §4 item 4 / doc 70 §2.2"
+ },
+ "gate1_vsuite": {
+  "source": "results_exp78a_WN_validation.json",
+  "kill_gate_passed": true,
+  "n3_T2_sha_in_vsuite": "a7fabb683da829bfb471d30f4994c41e868697e545d4a5cde195ce49cd02a366",
+  "matches_confirm_sha": true,
+  "generator_seed": 77000
+ },
+ "gate2_probe": {
+  "tiny_epochs": 2,
+  "arms": {
+   "n3_T2": {
+    "val_acc": 0.48484848484848486,
+    "n_params": 180,
+    "sec_per_epoch": 10.1
+   },
+   "S-shuffle-n3_T2": {
+    "val_acc": 0.5454545454545454,
+    "n_params": 180,
+    "sec_per_epoch": 8.7
+   }
+  },
+  "n_params_assertion": "180 (ScaledStoryModel n=3, Lv=2*3-1=5)"
+ },
+ "gate3_designed_to_fail": {
+  "description": "S-shuffle-n3_T2 at seed=99 (scrambled labels, 2 epochs) must NOT clear the registered exp78b floor bar 0.5678. If scr_clears=True the gate set is not live.",
+  "arm": "S-shuffle-n3_T2",
+  "seed": 99,
+  "rng_base_floor": 9000000,
+  "effective_rng_seed": 9000099,
+  "tiny_epochs": 2,
+  "floor_bar_reference": 0.5678269,
+  "bar_source": "exp78b first-draw: floor_mean(0.4793)+2*floor_sd(0.0442)=0.5678; from results_exp78b.json; cited as smoke reference only -- confirm floor bar re-derived from confirm checkpoints",
+  "scrambled_arm_test_acc": 0.53,
+  "scrambled_arm_clears_floor": false,
+  "assertion_fires": true,
+  "design_rationale": "A floor arm after 2 epochs of training cannot clear a bar calibrated on 150-epoch performance; showing this False proves the gate is live."
+ },
+ "assertions_passed": true,
+ "wall_time_sec": 54.7
+}

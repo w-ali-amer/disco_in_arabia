@@ -1,0 +1,860 @@
+{
+ "experiment": "exp73 smoke / validity assertions (doc 61 SS7, SS9.3)",
+ "spec": "qnlp_private_docs/61_exp73_amplitude.md (REGISTERED 2026-08-28, orchestrator rulings 1-5 in the status header, BINDING over the body)",
+ "orchestrator_rulings": {
+  "1_verb_block": "MONOLITHIC Circuit4(2q, 3); 408 (A3) / 552 (A4) params; the brickwork is NOTED, NOT RUN",
+  "2_compute": "A4 is a CONDITIONAL SECOND STAGE; stage 1 is A3-only",
+  "3_batch_hoist": "DECLINED -- no shared committed code is touched",
+  "4_directional_call": "amplitude_hurts_T1 = TRUE (bar <= 0.9220)",
+  "5_tier_iii_grid": "C in {1e-4,1e-3,1e-2,1e-1,1,1e1,1e2}, FROZEN"
+ },
+ "platform": "macOS-26.5.2-arm64-arm-64bit",
+ "python": "3.12.13",
+ "torch": "2.13.0",
+ "numpy": "2.5.1",
+ "dataset": {
+  "path": "stories_exp69_QA.json",
+  "sha256": "2b85822b544571969fd40cab12b03a4ac256b08aee914d2b9643b856a6308c96",
+  "registered_sha_doc61_SS7_3": "2b85822b544571969fd40cab12b03a4ac256b08aee914d2b9643b856a6308c96",
+  "matches_exp69_results": true,
+  "vsuite_source": "results_exp69_WN_validation.json",
+  "vsuite_kill_gate_passed": true,
+  "vsuite_status": "INHERITED from exp69 on the strength of byte identity (doc 61 SS7.1)",
+  "no_datagen_doc61_SS17_1": "exp73 generates NO Arabic. The dataset is exp69's, byte-identical and sha-pinned, already V-suite-cleared; the noun inventory is the committed 44 and the category is the committed `nonoccupational` (doc 54 SS5.2, user-confirmed 2026-08-23). WHAT IS NEW IS ONLY WHICH PRINCIPAL COMPONENTS OF THE SAME VECTORS ARE READ, so doc 50 SS5.2's native-speaker gate does not reopen. Stated explicitly because 'nothing changed' is exactly the claim that should be checked."
+ },
+ "instrument_provenance": {
+  "instrument": "instrument_amplitude_bounds.py",
+  "instrument_sha256": "5e0c08a12a238930fdab093d598df7d1ef3ab0336daf84cc095f5f15f9b0a483",
+  "diagnostic": "diagnostic_amplitude_bounds.json",
+  "diagnostic_declares_sha256": "5e0c08a12a238930fdab093d598df7d1ef3ab0336daf84cc095f5f15f9b0a483",
+  "selftest_all_passed": true,
+  "anchors_reproduced_by_the_instrument": [
+   {
+    "anchor": "doc47_SS13_tertiary_pair",
+    "expected": 0.8526315789473684,
+    "expected_fraction": "81/95",
+    "got": 0.8526315789473684,
+    "got_fraction": "81/95",
+    "reproduced": true,
+    "source": "doc 47 SS13 (published 0.8526); diagnostic_sb_bounds.json membership_reconstruction.tertiary.recomputed_pair_level"
+   },
+   {
+    "anchor": "exp68_F1_raw_per_twin",
+    "expected": 0.7625,
+    "expected_fraction": "122/160",
+    "got": 0.7625,
+    "got_fraction": "122/160",
+    "reproduced": true,
+    "source": "diagnostic_sb_bounds.json target_selection.table.nonoccupational.F1.per_twin (= results_exp68.json bounds_context_only_doc54_SS12.per_twin_bounds.F1)"
+   },
+   {
+    "anchor": "exp68_FA_per_twin",
+    "expected": 0.925,
+    "expected_fraction": "148/160",
+    "got": 0.925,
+    "got_fraction": "148/160",
+    "reproduced": true,
+    "source": "diagnostic_sb_bounds.json target_selection.table.nonoccupational.FA.per_twin (= results_exp68.json bounds_context_only_doc54_SS12.per_twin_bounds.FA)"
+   },
+   {
+    "anchor": "exp69_F2_raw_per_twin",
+    "expected": 1.0,
+    "expected_fraction": "160/160",
+    "got": 1.0,
+    "got_fraction": "160/160",
+    "reproduced": true,
+    "source": "exp69_predictions.json :: grade1_bounds.R-W (= diagnostic_sb_bounds.json target_selection.table.nonoccupational.F2.per_twin)"
+   }
+  ],
+  "note": "doc 61 SS2: the search, the exact R^3 enumeration, the sign-flip invariant, the twin-mode seeding and the null discipline are the COMMITTED ones, CALLED and not copied. exp73 calls `_pc_scores`, `amp_vector`, `amp_features` and `check_pca_convention` from this module rather than re-deriving any formula."
+ },
+ "features": {
+  "runtime_source": "instrument_sb_bounds.load_raw(fit_on='all44') for PC1/PC2; exp42_compiler.load_embeddings() for FA",
+  "bitmatch_vs_independent_recomputation": 0.0,
+  "bitmatch_is_exact": true,
+  "norm_divisors": [
+   8.669494516224397,
+   10.160404144924657
+  ],
+  "norm_divisors_vs_diagnostic_max_abs": 0.0,
+  "sign_pin_applied": [
+   -1,
+   1
+  ],
+  "FA_runtime_vs_atan2_PC2_PC1_max_rad": 3.9968028886505635e-15,
+  "unit_raw_pca_vs_frozen_vec2_max_abs": 3.7192471324942744e-15,
+  "theta0_range": [
+   0.0,
+   2.6107051108774497
+  ],
+  "theta1_range": [
+   0.3740152586339388,
+   6.283185307179586
+  ],
+  "nondegeneracy": {
+   "raw_radius_mean": 0.8627844740072387,
+   "raw_radius_sd": 0.25124808926972175,
+   "raw_radius_min": 0.4025918566208062,
+   "raw_radius_max": 1.2524146040715955,
+   "frozen2d_radius_sd": 8.34676118839486e-17,
+   "pearson_p1_p2": 0.5842698525485021,
+   "poly_fit_of_p2_on_p1": {
+    "deg1_max_resid": 0.9931869488068175,
+    "deg3_max_resid": 1.0176632745957925,
+    "deg5_max_resid": 0.980393118085943
+   },
+   "verdict": "p2 is NOT a function of p1 on this inventory: a degree-5 polynomial leaves a max residual of 0.980 on a feature whose range is [-1, 1], and the radius has sd 0.251 where the frozen2d family has sd 8.3e-17 (it is exactly unit by construction). doc 54 SS3.1's degeneracy -- the one that made the frozen2d version of this experiment a reparameterisation -- does not hold on the raw family, so exp68 is width-as-INFORMATION."
+  },
+  "instrument_FA_note": "doc 54 SS6.2 writes FA as atan2(PC2, PC1) -- the UNNORMALISED components, i.e. the existing exp42 map -- and that is what this runtime uses, asserted above to 4.0e-15 rad. instrument_sb_bounds.features() computes FA as atan2(p2, p1) on its NORMALISED coords, which on the raw family is a different angle (max difference 7.9e-02 rad). The BOUND is unaffected and the two agree exactly at 148/160: the normalisation is a positive-diagonal linear map of the plane, which preserves the cyclic order of the referents, and a d = 3 single-angle bound depends only on that order. diagnostic_sb_bounds.json carries both computations and they match -- raw FA per-twin 163/190 equals frozen2d FA per-twin 163/190 for tertiary, and the non-occupational target reads 148/160 under the raw-family FA (target_selection.table) and 148/160 under the frozen2d FA, which IS the exp42 map (membership_reconstruction). A TRAINED CIRCUIT is not invariant to the rescaling even though the bound is -- the same reasoning doc 54 SS3.2 gives for pinning the PC signs -- so the doc's literal formula governs the runtime."
+ },
+ "amplitude_features": {
+  "per_rung": {
+   "A3": {
+    "qubits_per_referent": 3,
+    "d_truncated": 8,
+    "d_per_referent_feature": 36,
+    "d_joint": 1296,
+    "free_real_coordinates_per_referent": 7,
+    "variance_captured_cumulative": 0.5023156828677283,
+    "variance_discarded_by_truncation": 0.4976843171322717,
+    "max_abs_norm_error": 1.1102230246251565e-16,
+    "radius_min": 6.331986686477582,
+    "radius_median": 11.547576295564813,
+    "radius_max": 27.816516177536815
+   },
+   "A4": {
+    "qubits_per_referent": 4,
+    "d_truncated": 16,
+    "d_per_referent_feature": 136,
+    "d_joint": 18496,
+    "free_real_coordinates_per_referent": 15,
+    "variance_captured_cumulative": 0.7194569620056807,
+    "variance_discarded_by_truncation": 0.28054303799431934,
+    "max_abs_norm_error": 1.1102230246251565e-16,
+    "radius_min": 8.198355467922934,
+    "radius_median": 15.327191019833112,
+    "radius_max": 29.32739186705482
+   }
+  },
+  "map_doc61_SS3_1": "(a) PCA over the RAW 300-dim AraVec vectors of the FULL 44-noun inventory, mean-centred, numpy.linalg.svd -- load_raw's convention; (b) z_k(r) = the k-th principal SCORE, UNRESCALED; (c) SIGN PIN: PC1/PC2 pinned to the frozen vec2 plane as load_raw does, PC3..PCd by sign(Vt[k, argmax_j |Vt[k,j]|]) = +1, ties -> lowest j; (d) TRUNCATE to d = 2^q then zero-pad to 2^q (vacuous here); (e) NORMALISE per noun.",
+  "pca_convention_check": {
+   "max_abs_error_vs_load_raw_normalised_coords": 0.0,
+   "reproduces_load_raw_exactly": true,
+   "norm_divisors_recomputed": [
+    8.669494516224397,
+    10.160404144924657
+   ],
+   "norm_divisors_committed": [
+    8.669494516224397,
+    10.160404144924657
+   ],
+   "divisors_match": true,
+   "reading": "the amplitude ladder and every committed bound stand on the same PCA, the same sign pin and the same inventory; only the number of components differs"
+  },
+  "sign_pin_pc3_onwards": {
+   "rule": "sign( Vt[k, argmax_j |Vt[k,j]| ] ) = +1, ties -> lowest j",
+   "why": "intrinsic to the axis: it depends on the loading vector alone, not on row order or inventory order. Bounds are invariant to it (asserted, SS`check_sign_invariance`); a trained circuit is not, which is why it is pinned.",
+   "applied": [
+    {
+     "pc": 3,
+     "argmax_loading_index": 97,
+     "loading": 0.17488111799997724,
+     "sign": 1.0
+    },
+    {
+     "pc": 4,
+     "argmax_loading_index": 271,
+     "loading": -0.19047225637739573,
+     "sign": -1.0
+    },
+    {
+     "pc": 5,
+     "argmax_loading_index": 136,
+     "loading": -0.18275325406160503,
+     "sign": -1.0
+    },
+    {
+     "pc": 6,
+     "argmax_loading_index": 167,
+     "loading": 0.16995250497636777,
+     "sign": 1.0
+    },
+    {
+     "pc": 7,
+     "argmax_loading_index": 104,
+     "loading": 0.1720369261902152,
+     "sign": 1.0
+    },
+    {
+     "pc": 8,
+     "argmax_loading_index": 217,
+     "loading": 0.1801303911899642,
+     "sign": 1.0
+    },
+    {
+     "pc": 9,
+     "argmax_loading_index": 57,
+     "loading": -0.20387286007404037,
+     "sign": -1.0
+    },
+    {
+     "pc": 10,
+     "argmax_loading_index": 52,
+     "loading": 0.2328985297065043,
+     "sign": 1.0
+    },
+    {
+     "pc": 11,
+     "argmax_loading_index": 275,
+     "loading": -0.16565809450526806,
+     "sign": -1.0
+    },
+    {
+     "pc": 12,
+     "argmax_loading_index": 293,
+     "loading": -0.1719718618934469,
+     "sign": -1.0
+    },
+    {
+     "pc": 13,
+     "argmax_loading_index": 248,
+     "loading": -0.16287959409436834,
+     "sign": -1.0
+    },
+    {
+     "pc": 14,
+     "argmax_loading_index": 96,
+     "loading": -0.17933863806397576,
+     "sign": -1.0
+    },
+    {
+     "pc": 15,
+     "argmax_loading_index": 167,
+     "loading": 0.20463230447222905,
+     "sign": 1.0
+    },
+    {
+     "pc": 16,
+     "argmax_loading_index": 245,
+     "loading": -0.1560669247924468,
+     "sign": -1.0
+    }
+   ]
+  },
+  "var_explained_per_pc": [
+   0.12685513291325928,
+   0.08050060927190729,
+   0.06765674889989376,
+   0.05567354978630193,
+   0.05098951263093674,
+   0.043620785895241494,
+   0.04118832439137727,
+   0.03583101907881057,
+   0.03347548063418222,
+   0.03188435897220406,
+   0.02871585188687237,
+   0.026947924591325337,
+   0.025105720956369936,
+   0.024096085803686648,
+   0.023679257167638575,
+   0.02323659912567314
+  ],
+  "var_cumulative": [
+   0.12685513291325928,
+   0.20735574218516656,
+   0.2750124910850603,
+   0.3306860408713622,
+   0.381675553502299,
+   0.42529633939754047,
+   0.46648466378891773,
+   0.5023156828677283,
+   0.5357911635019106,
+   0.5676755224741147,
+   0.5963913743609871,
+   0.6233392989523124,
+   0.6484450199086824,
+   0.672541105712369,
+   0.6962203628800075,
+   0.7194569620056807
+  ],
+  "information_cost_doc61_SS3_3": "THE AMPLITUDE MAP IS LOSSY TWICE, and doc 61 SS1.3 refuses to call it a strict enrichment of F2. (a) TRUNCATION discards 1 - cumvar(d) of the AraVec variance: 0.4977 at A3, 0.2805 at A4. (b) UNIT-l2 NORMALISATION discards the RADIUS, exactly one real number per referent -- the same quantity FA discarded relative to F2, and it is a genuinely varying one (6.33-27.82 at A3, 8.20-29.33 at A4 over the 24 nouns). Per-referent FREE COORDINATES: FA 1, F2/P-eps 2, A3 7, A4 15.",
+  "why_the_sign_pin_is_safe_doc61_SS3_2": "bounds are invariant to every sign choice (a per-component flip is the special case A = diag(+-1) of the reparameterisation lemma, asserted at d = 2 on the exact path and reported at d = 4, 8, 16). A TRAINED CIRCUIT IS NOT invariant, which is the whole reason the convention is pinned rather than left to numpy."
+ },
+ "committed_imports_doc61_SS7_5": {
+  "arms": {
+   "F2-T1": {
+    "source": "results_exp69.json",
+    "source_arm": "R1-W",
+    "measured": 0.982,
+    "doc61_SS5_2": 0.982,
+    "sd": 0.00605530070819498
+   },
+   "F2-T2": {
+    "source": "results_exp69.json",
+    "source_arm": "R2-W",
+    "measured": 0.7293333333333334,
+    "doc61_SS5_2": 0.7293,
+    "sd": 0.03139355914125629
+   },
+   "P-eps-T1": {
+    "source": "results_exp70.json",
+    "source_arm": "P-eps-T1",
+    "measured": 0.966,
+    "doc61_SS5_2": 0.966,
+    "sd": 0.012780193008453839
+   },
+   "P-eps-T2": {
+    "source": "results_exp70.json",
+    "source_arm": "P-eps-T2",
+    "measured": 0.834,
+    "doc61_SS5_2": 0.834,
+    "sd": 0.015881505666095464
+   }
+  },
+  "floors": {
+   "F2-T1": {
+    "source": "results_exp69.json",
+    "source_arm": "R1-W",
+    "measured_mean": 0.5073333333333333,
+    "measured_sd": 0.029287843515318386,
+    "doc61_SS15_2": [
+     0.5073,
+     0.0293
+    ]
+   },
+   "F2-T2": {
+    "source": "results_exp69.json",
+    "source_arm": "R2-W",
+    "measured_mean": 0.502,
+    "measured_sd": 0.028343135559308414,
+    "doc61_SS15_2": [
+     0.502,
+     0.0283
+    ]
+   },
+   "P-eps-T1": {
+    "source": "results_exp70.json",
+    "source_arm": "P-eps-T1",
+    "measured_mean": 0.518,
+    "measured_sd": 0.04450967435413465,
+    "doc61_SS15_2": [
+     0.518,
+     0.0445
+    ]
+   },
+   "P-eps-T2": {
+    "source": "results_exp70.json",
+    "source_arm": "P-eps-T2",
+    "measured_mean": 0.5093333333333333,
+    "measured_sd": 0.03585464482539963,
+    "doc61_SS15_2": [
+     0.5093,
+     0.0359
+    ]
+   }
+  },
+  "best_committed_2qubit_register": {
+   "T1": 0.982,
+   "T2": 0.834
+  },
+  "helps_bar": {
+   "T1": 1.042,
+   "T2": 0.8939999999999999
+  },
+  "hurts_bar": {
+   "T1": 0.9219999999999999,
+   "T2": 0.774
+  },
+  "not_re_run_doc61_SS5_2": "exp73 runs NO F2 arm, NO P-eps arm and NO classical comparator for them. The dataset is byte-identical, the features are the same deterministic constants, the splits and fit seed are the same, and the fits are deterministic. doc 47 SS14 is the standing reason: 'registered as a computation, not an arm -- training a classical model to rediscover a bound we derived would be theatre.'",
+  "amplitude_helps_T1_is_inert_doc61_SS10_3": "its bar is 1.0420 and held-out accuracy is bounded by 1, so the T = 1 cell is ONE-SIDED BY CONSTRUCTION: only `amplitude_hurts_T1` can fire. The boolean is computed and stored for completeness and NO READING DEPENDS ON IT."
+ },
+ "block_reduction": {
+  "per_q": {
+   "q=1": {
+    "committed_block": "exp42_models.QuantumStoryModel('A3') -- Circuit4(2,3), 15 params",
+    "max_abs_theta_diff": 0.0,
+    "max_abs_matrix_diff": 0.0,
+    "bit_identical": true,
+    "params_per_block": 15
+   },
+   "q=2": {
+    "committed_block": "exp45_model.TwoQubitReferentModel('A4') -- Circuit4(4,3), 33 params",
+    "max_abs_theta_diff": 0.0,
+    "max_abs_matrix_diff": 0.0,
+    "bit_identical": true,
+    "params_per_block": 33
+   }
+  },
+  "ruling_1_claim": "the MONOLITHIC `Circuit4(2q, 3)` reproduces the committed block at BOTH q = 1 AND q = 2, where the brickwork reproduces it only at q = 1. Both are asserted here on the SAME PARAMETER DRAW, including the readout pair, because the claim is free to check and is the whole warrant for ruling 1 over doc 61 SS6.1's registered brickwork.",
+  "brickwork_status": "NOTED, NOT RUN (doc 61 SS14 item 4 as amended by ruling 1). It is not implemented in this file, so no exp73 number can silently come from it."
+ },
+ "parameter_budget": {
+  "per_rung": {
+   "A3": {
+    "n_trainable_params": 408,
+    "registered_doc61_ruling1": 408,
+    "params_per_block_Circuit4_2q_3": 51,
+    "n_blocks": 8,
+    "n_verbs": 6,
+    "wires": 6,
+    "intro_trainable_params": 0,
+    "intro_rng_draws": 0,
+    "n_buffers": 0
+   },
+   "A4": {
+    "n_trainable_params": 552,
+    "registered_doc61_ruling1": 552,
+    "params_per_block_Circuit4_2q_3": 69,
+    "n_blocks": 8,
+    "n_verbs": 6,
+    "wires": 8,
+    "intro_trainable_params": 0,
+    "intro_rng_draws": 0,
+    "n_buffers": 0
+   }
+  },
+  "ruling_1_note": "ORCHESTRATOR RULING 1 SUPERSEDES doc 61 SS7.2 item 6's registered 1800 / 3360: the verb block is the MONOLITHIC `Circuit4(2q, 3)`, so the counts are 408 (A3) and 552 (A4) -- 8 blocks (6 verbs + q_pos + q_neg) x 3 layers x (3 * 2q - 1) parameters. The brickwork moves to NOTED-NOT-RUN and is not implemented in this file.",
+  "coefficient_budget_doc61_SS6_5": "408 trainable parameters against 528 training items at A3 -- milder than the brickwork's 1800 but still the larger ansatz against the committed register's 264. The held-out split is the instrument that detects the exposure and the val-minus-held-out gap is reported PER SEED (doc 61 SS10.6, SS19 row 2). Comparison points: exp69 F2 gap 0.0353, FA 0.0813.",
+  "no_learned_intro_doc61_SS5_1_3": "THE AMPLITUDE STATE PREPARATION IS DATA-VALUED WITH ZERO TRAINABLE PARAMETERS -- the same standing as the committed RY / CRY intros. 'Intro init unchanged' is VACUOUS BY CONSTRUCTION, and doc 61 SS5.1.3 says so twice rather than letting it pass as an assertion. A trained (variational) intro is NOTED, NOT RUN (SS14 item 6) and would void the bounds' applicability entirely."
+ },
+ "intro_state_assertions": {
+  "per_rung": {
+   "A3": {
+    "max_abs_diff_vs_psi_x_runtime": 6.026212417964416e-08,
+    "max_abs_diff_vs_psi_x_float64": 1.6653345369377348e-16,
+    "runtime_vs_float64_max_abs": 6.026212423515531e-08,
+    "per_register_intro_purity_max_abs_dev_from_1": 2.220446049250313e-16,
+    "per_wire_intro_purity_max_abs_dev_vs_inventory": 9.992007221626409e-16,
+    "n_uniformly_controlled_ry": 7,
+    "inventory_min_wire_purity": {
+     "min": 0.5036236600917965,
+     "median": 0.6659976209076359,
+     "max": 0.9692908876766158
+    }
+   },
+   "A4": {
+    "max_abs_diff_vs_psi_x_runtime": 8.656645866800261e-08,
+    "max_abs_diff_vs_psi_x_float64": 1.6653345369377348e-16,
+    "runtime_vs_float64_max_abs": 8.656645861249146e-08,
+    "per_register_intro_purity_max_abs_dev_from_1": 6.661338147750939e-16,
+    "per_wire_intro_purity_max_abs_dev_vs_inventory": 9.992007221626409e-16,
+    "n_uniformly_controlled_ry": 15,
+    "inventory_min_wire_purity": {
+     "min": 0.5046420763766328,
+     "median": 0.5298787368774049,
+     "max": 0.792413555553374
+    }
+   }
+  },
+  "thresholds": {
+   "amplitude_by_amplitude_float64": 1e-12,
+   "runtime_platform_floor": 1e-06,
+   "purity_float64": 1e-09
+  },
+  "preparation_doc61_SS6_6": "the intro is a FIXED, DATA-VALUED, ZERO-PARAMETER unitary and its only requirement is that it produce |psi(x)> exactly. It is built as a Moettoenen-style cascade of 2^q - 1 UNIFORMLY CONTROLLED RY rotations, one level per wire, with the SIGNS carried by the last level's rotations -- so it is visibly A CIRCUIT and not a single opaque gate, and it cannot become a silent second architecture. NO EXP73 VERDICT DEPENDS ON WHICH PREPARATION CIRCUIT IS USED, AND NONE MAY.",
+  "precision_note": "the simulator is complex64 END TO END (torch_sv_sim.CDTYPE, unchanged since exp40 and LEFT ALONE here because the drift anchor's bit-exactness depends on it), so the runtime agreement floor is ~1.2e-07 and doc 61's 1e-9 / 1e-12 thresholds are BELOW the simulator's resolution. Loosening a registered threshold to make a gate pass would be changing a gate after seeing the platform, so the build does the other thing: the intro is recomputed in complex128 from the model's OWN data through the SAME gate sequence, held to the runtime state at float32 tolerance so it is provably the same circuit, and doc 61's thresholds are asserted against it AS WRITTEN. Both numbers are reported. exp70's precision split, verbatim.",
+  "sign_blindness_note_doc61_SS7_2_1": "THE FAILING DIRECTION IS THE POINT: the outer-square feature v(x) is invariant under x -> -x, so a sign error on any amplitude would be INVISIBLE TO THE BOUND and FATAL TO THE CIRCUIT. The assertion is on the STATE, amplitude by amplitude, and `check_failing_directions` demonstrates that flipping one amplitude's sign fires it."
+ },
+ "closure_doc61_SS7_4": {
+  "applicable": false,
+  "why_not": "doc 61 SS7.4: doc 56 SS7.1's closure gates test whether a compiled intro spans a claimed TRIGONOMETRIC basis. The amplitude intro has NO ANGLE PARAMETERISATION AT ALL -- x is a point on a sphere, not a function of angles -- so closure in any trigonometric basis is UNDEFINED, not merely uninformative. A gate that cannot fail is not a gate (doc 49 SS8, orchestrator ruling 6 of doc 56). Validity for the amplitude arms is asserted by SS7.2 items 1-4 instead, which are STRICTLY STRONGER: they pin the STATE itself rather than the span it lies in.",
+  "the_exact_relation_that_IS_asserted_doc61_SS2_2": {
+   "matrix_L": [
+    [
+     1.0,
+     0.0,
+     1.0
+    ],
+    [
+     1.0,
+     0.0,
+     -1.0
+    ],
+    [
+     0.0,
+     2.0,
+     0.0
+    ]
+   ],
+   "det_L": 4.0,
+   "max_abs_error_over_grid": 2.220446049250313e-16,
+   "grid": "721 points, phi in [-pi, pi]",
+   "identity": "L v(phi) = u(2 phi), v = (x0^2, x0 x1, x1^2)",
+   "verified": true
+  },
+  "reading": "at q = 1 the amplitude feature v(phi) = (x0^2, x0 x1, x1^2) is carried to the committed single-angle feature u(2 phi) by a FIXED INVERTIBLE L -- the amplitude map is the single-angle map AT DOUBLE FREQUENCY, not at the same frequency. doc 61 SS2.2 records that `amplitude == u(phi)` FAILS on 28 of 30 random inventories, so the committed inventory's agreement is A COINCIDENCE AND EXPLICITLY NOT A FINDING; and A3/A4's 36- and 136-dimensional feature spaces have no angle analogue at all.",
+  "separation_check_from_the_instrument": {
+   "amplitude_differs_from_u_phi": "28/30",
+   "doubling_is_not_inert": true,
+   "identity_amplitude_equals_u_2phi_held": "30/30",
+   "identity_holds_everywhere": true,
+   "mode": "pair (EXACT R^3 arrangement enumeration on every row)",
+   "n_inventories": 30,
+   "reading": "the doubled-angle identity is a THEOREM and holds on every inventory; the same-angle agreement is an INVENTORY-SPECIFIC COINCIDENCE and fails on most random inventories. Amplitude encoding of a unit 2-vector is therefore NOT a reparameterisation of the committed angle encoding -- it is the same feature space at double frequency, which reorders the inventory around the circle.",
+   "seed": 0
+  }
+ },
+ "angle_independence": {
+  "amplitude_max_abs_diff_under_angle_perturbation": 0.0,
+  "anchor_max_abs_diff_under_the_same_perturbation": 0.18767808377742767,
+  "note": "the amplitude arms carry NO angle parameterisation at all (doc 61 SS7.4). `exp42_compiler.compile_story` requires an angle per referent to build the intro spec, so the amplitude arms are compiled with an identically-zero angle dict. THE VALUE IS NEVER READ: `AmplitudeModel.apply_intro` keys on the referent NAME carried in the same intro tuple. Asserted at smoke -- perturbing the angle dict must leave every amplitude forward pass BIT-IDENTICAL.",
+  "failing_direction": "the same perturbation MOVES the anchor by 1.877e-01, so the zero result above is a property of the amplitude encoding and not of a dead test"
+ },
+ "word_order": {
+  "derivations_differ": true,
+  "n_event_renderings_checked": 8,
+  "swap_present_in_VSO_only": true,
+  "denotation_max_abs_diff_SVO_vs_VSO": 0.0,
+  "drop_swap_changes_state_max_abs": 1.033652663230896,
+  "swap_free_VSO_equals_role_reversed_max_abs": 0.0,
+  "archived_source": "archive/01_parser_pipeline/arabic_dep_reader.py:130-138 (the two verb boxes), :167-180 (_vso and its Swap)",
+  "verdict": "SS7.3 DISCHARGED as DERIVATION-DIFFERS / DENOTATION-EQUAL, and the reconciliation is stated rather than buried. The compiled derivations differ -- the VSO reduction carries `Swap(N.l, N)` and the SVO reduction does not -- so the compiler genuinely consults the surface, which is the null-instrument failure SS7.3 exists to catch. The DENOTATIONS are equal (max diff 0.0e+00), which is not a defect but doc 55 SS16.1-Q2's USER-CONFIRMED premise that the two orders are truth-conditionally identical, and which is REQUIRED by SS4.7 ('the same six blocks, reused'), by SS5's 12/72 conditioning-group arithmetic (no surface-order factor) and by SS6.1 (A0 must reproduce exp68 bit-exactly on a dataset that already contains both orders). The Swap is LOAD-BEARING and that is measured, not argued: dropping it moves the state by 1.034 and yields EXACTLY the role-reversed circuit (diff 0.0e+00) -- without the Swap, the VSO clause would say the object did it. CONSEQUENCE FOR THE CLAIM, carried: the circuit is invariant to the alternation by construction, so doc 55 SS6.9's per-surface-order accuracy is a DATA-COMPOSITION statistic and is not evidence about word-order processing. ORCHESTRATOR REVIEW ITEM."
+ },
+ "copy_verification": {
+  "max_abs_diff": {
+   "A3-T2-uniform": 0.0,
+   "A4-T2-uniform": 0.0,
+   "A0-W-T2": 0.0
+  },
+  "exact_zero": true,
+  "note": "with event (3 - q) suppressed and the query fixed to the surviving event, every T = 2 arm reproduces its T = 1 pipeline bit-for-bit. For the AMPLITUDE arms this carries the extra weight that the state preparation sits in the INTRO and nowhere else -- doc 61 SS14 item 5 declines re-uploading the amplitude vector at depth, and this is where that decision is machine-checked."
+ },
+ "trace_parity": {
+  "max_abs_diff_vs_story_values": {
+   "A3-T1-uniform": 0.0,
+   "A3-T2-uniform": 0.0,
+   "A0-W-T2": 0.0
+  },
+  "exact_zero": true,
+  "purity_range_per_arm": {
+   "A3-T1-uniform": [
+    0.3273817002773285,
+    1.0000003576278687
+   ],
+   "A3-T2-uniform": [
+    0.2574102282524109,
+    1.0000001192092896
+   ],
+   "A0-W-T2": [
+    0.3830023407936096,
+    1.0000005960464478
+   ]
+  },
+  "stages": [
+   "after_intro",
+   "after_event1",
+   "after_event2 (T=2)",
+   "at_readout"
+  ],
+  "quantities": [
+   "per-wire Tr rho^2",
+   "per-register Tr rho_reg^2"
+  ],
+  "note": "doc 61 SS9.3 -- TWO TRACES, NOT ONE. (1) the committed per-WIRE trace, read against SS9.2's PRE-COMPUTED INVENTORY as its baseline and NOT against 1: the amplitude registers are strongly and DATA-DETERMINEDLY entangled within themselves (A3 median wire purity 0.666, A4 0.530) and NO NOUN IS WITHIN 0.05 OF A PRODUCT STATE at A3 or A4 -- the mechanism is the ENCODING, not a gate. (2) the per-REGISTER trace, new here, which is 1.0 at intro by construction and below 1 after the first verb block IFF the block has actually correlated the two referents. DESCRIPTIVE; NO CRITERION READS THEM, and doc 61 SS9.5 forbids promoting them onto one after results exist (the exp44 no-promotion clause).",
+  "registered_question_doc61_SS9_4": "does the readout restore the per-REGISTER purity to its INTRO value on correct q = 2 items and fail to on q = 1 items -- the q-asymmetry undo signature (doc 55 SS20.5), transposed from wires to registers? Descriptive, no boolean, no criterion."
+ },
+ "identity_init": {
+  "per_rung": {
+   "A3": {
+    "verb_block_identity_at_zero_max_abs": 0.0,
+    "identity_tolerance": 1e-09,
+    "realised_init_sd": 0.10238754004240036,
+    "sigma": 0.1,
+    "sd_window": [
+     0.08,
+     0.12
+    ],
+    "readout_untouched": true,
+    "readout_q_pos_distance_from_identity": 1.192724347114563,
+    "readout_q_neg_distance_from_identity": 1.309207797050476,
+    "readout_separation_matrix_fro": 11.27824878692627,
+    "readout_separation_theta_l2": 18.07772445678711,
+    "identity_rng_stream": "torch.Generator().manual_seed(7200000 + seed)",
+    "note": "doc 58 SS6.2.2: the readout init is UNCHANGED and the noise is drawn from a DEDICATED stream, so every committed draw the readout consumes is bit-identical to the committed recipe's.",
+    "scheme": "identity",
+    "recipe": "verb blocks ~ N(0, 0.1^2); READOUT (q_pos, q_neg) UNCHANGED at Uniform[0, 2pi) -- doc 58 SS6.2 verbatim, doc 61 SS5.1.1 / SS5.1.2",
+    "readout_exclusion_reason": "doc 58 SS6.2.2 / doc 61 SS5.1.2: two readout blocks at identity would be IDENTICAL, v_yes == v_no for every item, the model would output exactly 0.5 everywhere, and the readout would be a NULL INSTRUMENT at initialisation. The argument holds verbatim at 6 and 8 wires.",
+    "imported_from": "exp72_run.apply_identity_init (doc 58 SS6.2)",
+    "n_blocks_reinitialised": 6
+   },
+   "A4": {
+    "verb_block_identity_at_zero_max_abs": 0.0,
+    "identity_tolerance": 1e-09,
+    "realised_init_sd": 0.1041671484708786,
+    "sigma": 0.1,
+    "sd_window": [
+     0.08,
+     0.12
+    ],
+    "readout_untouched": true,
+    "readout_q_pos_distance_from_identity": 1.0908020734786987,
+    "readout_q_neg_distance_from_identity": 1.0581943988800049,
+    "readout_separation_matrix_fro": 22.634214401245117,
+    "readout_separation_theta_l2": 22.40721321105957,
+    "identity_rng_stream": "torch.Generator().manual_seed(7200000 + seed)",
+    "note": "doc 58 SS6.2.2: the readout init is UNCHANGED and the noise is drawn from a DEDICATED stream, so every committed draw the readout consumes is bit-identical to the committed recipe's.",
+    "scheme": "identity",
+    "recipe": "verb blocks ~ N(0, 0.1^2); READOUT (q_pos, q_neg) UNCHANGED at Uniform[0, 2pi) -- doc 58 SS6.2 verbatim, doc 61 SS5.1.1 / SS5.1.2",
+    "readout_exclusion_reason": "doc 58 SS6.2.2 / doc 61 SS5.1.2: two readout blocks at identity would be IDENTICAL, v_yes == v_no for every item, the model would output exactly 0.5 everywhere, and the readout would be a NULL INSTRUMENT at initialisation. The argument holds verbatim at 6 and 8 wires.",
+    "imported_from": "exp72_run.apply_identity_init (doc 58 SS6.2)",
+    "n_blocks_reinitialised": 6
+   }
+  },
+  "both_inits_are_arms_doc61_SS5_1_1": "doc 59 SS2's ruling, and the reason is recorded rather than inherited silently: doc 58 SS19.1 measured rescue_partial(I1, R-identity) = TRUE (0.7293 -> 0.8860 on the product register at T = 2) and doc 58 SS19.6 registered the consequence that 'the ledger's trainability walls become partly an initialisation-policy artifact'. UNTIL THAT CONFIRM DRAW RETURNS, NEITHER INIT IS THE PROGRAMME'S COMMITTED POLICY, and registering only one would be choosing a policy on an unconfirmed single draw. doc 61 SS11.3 registers NO DIRECTION on the init arms for the same reason."
+ },
+ "shuffle": {
+  "per_seed": [
+   {
+    "seed": 0,
+    "n_items": 1920,
+    "twins_still_opposite": true,
+    "casts_unchanged": true,
+    "query_index_unchanged": true,
+    "yes_fraction": 0.5,
+    "true_bearer_rule_accuracy": 0.471875
+   },
+   {
+    "seed": 1,
+    "n_items": 1920,
+    "twins_still_opposite": true,
+    "casts_unchanged": true,
+    "query_index_unchanged": true,
+    "yes_fraction": 0.5,
+    "true_bearer_rule_accuracy": 0.5072916666666667
+   },
+   {
+    "seed": 2,
+    "n_items": 1920,
+    "twins_still_opposite": true,
+    "casts_unchanged": true,
+    "query_index_unchanged": true,
+    "yes_fraction": 0.5,
+    "true_bearer_rule_accuracy": 0.5125
+   },
+   {
+    "seed": 3,
+    "n_items": 1920,
+    "twins_still_opposite": true,
+    "casts_unchanged": true,
+    "query_index_unchanged": true,
+    "yes_fraction": 0.5,
+    "true_bearer_rule_accuracy": 0.5020833333333333
+   },
+   {
+    "seed": 4,
+    "n_items": 1920,
+    "twins_still_opposite": true,
+    "casts_unchanged": true,
+    "query_index_unchanged": true,
+    "yes_fraction": 0.5,
+    "true_bearer_rule_accuracy": 0.478125
+   }
+  ],
+  "mean_true_bearer_rule_accuracy": 0.49437499999999995,
+  "floored_arms": [
+   "A3-T1-uniform",
+   "A3-T1-identity",
+   "A3-T2-uniform",
+   "A3-T2-identity"
+  ],
+  "note": "doc 61 SS15.1: THE FLOOR IS PROCEDURE-MATCHED AND THE INIT IS PART OF THE PROCEDURE -- a floor measured under one optimisation procedure does not bound what another can achieve on severed labels, so the two inits are two procedures and EACH CELL GETS ITS OWN FLOOR. Bearer designation is reassigned PER PAIR and independently of the features, so twins stay on opposite labels and V1 stays exactly 0.500. THE DRIFT ANCHOR CARRIES NO FRESH FLOOR (SS5.3.1): it is pinned to within 0.002 of a measurement that cleared its own matched floor by 8.02 floor-SD units. IF THE ANCHOR FAILS ITS GATE, THAT ARGUMENT IS VOID ALONG WITH THE RUN."
+ },
+ "failing_directions": {
+  "checks": {
+   "sign_flip_fires": {
+    "max_abs_state_deviation": 0.9802314947821409,
+    "outer_square_global_sign_blindness": 0.0,
+    "reading": "x -> -x leaves v(x) EXACTLY invariant (doc 61 SS1.2: the readout cannot distinguish a referent from its antipode), so a sign error is INVISIBLE to the bound. The state assertion sees it, and here it is shown to fire."
+   },
+   "unnormalised_rejected_message": "doc 61 SS7.2 item 1: ||x||_2 = 1.500000000000000 != 1 for 'الرجل' -- the amplitude map is not normalised",
+   "unnormalised_rejected": true,
+   "wire_order_slip_fires": {
+    "max_abs_state_deviation": 0.7854086712528717
+   },
+   "block_reduction_check_fires": {
+    "max_abs_matrix_diff_after_perturbation": 0.020238088443875313
+   },
+   "param_count_check_fires": {
+    "layers_2_param_count": 272,
+    "registered_3_layer_count": 408
+   },
+   "identity_readout_message": "doc 58 SS6.2.2's NULL-INSTRUMENT CHECK FAILED: q_pos is near-identity at init (max |q_pos - I| = 0.000e+00). Two readout blocks at identity are IDENTICAL, v_yes == v_no everywhere, and the readout is ",
+   "identity_readout_rejected": true,
+   "identity_readout_is_degenerate": {
+    "v_yes": 0.08817633986473083,
+    "v_no": 0.08817633986473083,
+    "abs_v_yes_minus_v_no": 0.0,
+    "softmax_p_yes": 0.5,
+    "reading": "doc 61 SS5.1.2, MEASURED at 6 wires rather than argued: with both readout blocks at identity the two effects are THE SAME OPERATOR, so v_yes == v_no EXACTLY for every item and the softmax over log v is exactly 0.5 -- a NULL INSTRUMENT at initialisation in doc 53 SS5's exact sense. This is why sigma is applied to the VERB blocks only."
+   },
+   "sigma_0.1_readout_distance_from_identity_at_6wires": 0.5068960189819336,
+   "wrong_sigma_rejected": true
+  },
+  "rule": "doc 48 SS10.6 / doc 49 SS8: an arm that does not implement what it is named for is a null instrument, and a gate that cannot fail is not a gate. Every SS7.2 assertion above is shown to FIRE on a deliberately broken input before any training is launched."
+ },
+ "probe": {
+  "epochs": 2,
+  "per_arm": {
+   "A0-W-T2": {
+    "val_acc": 0.6439393939393939,
+    "heldout_test_acc": 0.55,
+    "wall_sec": 11.647080898284912,
+    "n_params": 264,
+    "wires": 4,
+    "T": 2,
+    "init": "uniform",
+    "sec_per_epoch": 5.823540449142456
+   },
+   "A3-T1-uniform": {
+    "val_acc": 0.9015151515151515,
+    "heldout_test_acc": 0.8566666666666667,
+    "wall_sec": 24.99511408805847,
+    "n_params": 408,
+    "wires": 6,
+    "T": 1,
+    "init": "uniform",
+    "sec_per_epoch": 12.497557044029236
+   },
+   "A3-T1-identity": {
+    "val_acc": 0.8409090909090909,
+    "heldout_test_acc": 0.78,
+    "wall_sec": 25.018165111541748,
+    "n_params": 408,
+    "wires": 6,
+    "T": 1,
+    "init": "identity",
+    "sec_per_epoch": 12.509082555770874
+   },
+   "A3-T2-uniform": {
+    "val_acc": 0.5757575757575758,
+    "heldout_test_acc": 0.5966666666666667,
+    "wall_sec": 29.72404980659485,
+    "n_params": 408,
+    "wires": 6,
+    "T": 2,
+    "init": "uniform",
+    "sec_per_epoch": 14.862024903297424
+   },
+   "A3-T2-identity": {
+    "val_acc": 0.6515151515151515,
+    "heldout_test_acc": 0.62,
+    "wall_sec": 33.3807008266449,
+    "n_params": 408,
+    "wires": 6,
+    "T": 2,
+    "init": "identity",
+    "sec_per_epoch": 16.69035041332245
+   },
+   "S-shuffle-A3-T1-uniform": {
+    "val_acc": 0.5151515151515151,
+    "heldout_test_acc": 0.46,
+    "wall_sec": 25.000099897384644,
+    "n_params": 408,
+    "wires": 6,
+    "T": 1,
+    "init": "uniform",
+    "sec_per_epoch": 12.500049948692322
+   },
+   "S-shuffle-A3-T1-identity": {
+    "val_acc": 0.5833333333333334,
+    "heldout_test_acc": 0.5333333333333333,
+    "wall_sec": 22.35742211341858,
+    "n_params": 408,
+    "wires": 6,
+    "T": 1,
+    "init": "identity",
+    "sec_per_epoch": 11.17871105670929
+   },
+   "S-shuffle-A3-T2-uniform": {
+    "val_acc": 0.48484848484848486,
+    "heldout_test_acc": 0.4866666666666667,
+    "wall_sec": 33.31471395492554,
+    "n_params": 408,
+    "wires": 6,
+    "T": 2,
+    "init": "uniform",
+    "sec_per_epoch": 16.65735697746277
+   },
+   "S-shuffle-A3-T2-identity": {
+    "val_acc": 0.5454545454545454,
+    "heldout_test_acc": 0.48,
+    "wall_sec": 33.31866979598999,
+    "n_params": 408,
+    "wires": 6,
+    "T": 2,
+    "init": "identity",
+    "sec_per_epoch": 16.659334897994995
+   }
+  }
+ },
+ "projected_wall_time": {
+  "per_arm": {
+   "A0-W-T2": {
+    "projected_sec_per_run": 873.5310673713684,
+    "runs": 5,
+    "projected_sec_total": 4367.655336856842
+   },
+   "A3-T1-uniform": {
+    "projected_sec_per_run": 1874.6335566043854,
+    "runs": 5,
+    "projected_sec_total": 9373.167783021927
+   },
+   "A3-T1-identity": {
+    "projected_sec_per_run": 1876.362383365631,
+    "runs": 5,
+    "projected_sec_total": 9381.811916828156
+   },
+   "A3-T2-uniform": {
+    "projected_sec_per_run": 2229.3037354946136,
+    "runs": 5,
+    "projected_sec_total": 11146.518677473068
+   },
+   "A3-T2-identity": {
+    "projected_sec_per_run": 2503.5525619983673,
+    "runs": 5,
+    "projected_sec_total": 12517.762809991837
+   },
+   "S-shuffle-A3-T1-uniform": {
+    "projected_sec_per_run": 1875.0074923038483,
+    "runs": 5,
+    "projected_sec_total": 9375.037461519241
+   },
+   "S-shuffle-A3-T1-identity": {
+    "projected_sec_per_run": 1676.8066585063934,
+    "runs": 5,
+    "projected_sec_total": 8384.033292531967
+   },
+   "S-shuffle-A3-T2-uniform": {
+    "projected_sec_per_run": 2498.6035466194153,
+    "runs": 5,
+    "projected_sec_total": 12493.017733097076
+   },
+   "S-shuffle-A3-T2-identity": {
+    "projected_sec_per_run": 2498.9002346992493,
+    "runs": 5,
+    "projected_sec_total": 12494.501173496246
+   }
+  },
+  "stage1_runs": 45,
+  "stage1_serial_sec": 89533.50618481636,
+  "stage1_serial_hours": 24.87041838467121,
+  "stage1_hours_on_5_workers": 4.974083676934242,
+  "basis": "linear extrapolation of the 2-epoch probe to MAX_EPOCHS = 150, measured on this machine at the registered depths. doc 61 SS16.2 priced the BRICKWORK; ruling 1's monolithic block is ~2.5x cheaper at A3, and this is the measured number rather than the doc's."
+ },
+ "parameter_budget_identity": {
+  "per_arm": {
+   "A0-W-T2": 264,
+   "A3-T1-uniform": 408,
+   "A3-T1-identity": 408,
+   "A3-T2-uniform": 408,
+   "A3-T2-identity": 408,
+   "S-shuffle-A3-T1-uniform": 408,
+   "S-shuffle-A3-T1-identity": 408,
+   "S-shuffle-A3-T2-uniform": 408,
+   "S-shuffle-A3-T2-identity": 408
+  },
+  "note": "doc 61 SS6.4 under ruling 1: all four A3 cells carry EXACTLY 408 trainable parameters (8 blocks x 51), so T and init are the only things that vary across them. The drift anchor carries the COMMITTED 264 because it IS the committed model."
+ },
+ "assertions_passed": true,
+ "wall_time_sec": 240.61542201042175
+}

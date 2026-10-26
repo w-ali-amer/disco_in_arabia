@@ -1,0 +1,204 @@
+{
+ "purpose": "doc 82 I6 / doc 70 B2: seed-level recompute of pre-doc-59 item-level verdicts",
+ "note": "registered booleans stand as computed (Rule 3); this file records what the doc-70 primary test gives. Components that also gate a boolean (e.g. content_earned) are NOT recomputed here.",
+ "source_sha256": {
+  "results_exp43b_phase2.json": "5438d2dc31054849e699e7039d3a6717aa5f0fb2e006ce52da02042fac33a251",
+  "results_exp44.json": "f7dbc2f0912f60711371a43caa0a0ac9819b6c97217a3472a20676fcb9704ccc",
+  "results_exp48.json": "dc8cbdbb05059ad2f3e3d26c8fb67d033a879ba1ee57d8190bfb8e504ea6ded8",
+  "results_exp55.json": "79155e187c2cfd158bcbe5c8a8308ff575579b9acc3d9325b403b83031ca4f99"
+ },
+ "contrasts": {
+  "exp43b tier_q (A2 vs B1)": {
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "diffs": [
+    0.29999999999999993,
+    0.23333333333333328,
+    0.2566666666666667,
+    0.31333333333333335,
+    0.21000000000000008
+   ],
+   "mean_diff": 0.26266666666666666,
+   "t": 13.447020658473024,
+   "df": 4,
+   "p_one_sided_paired_t": 8.846519587617211e-05,
+   "p_one_sided_exact_seed_flip": 0.03125,
+   "n_positive": 5,
+   "significant_0.05_paired_t": true,
+   "registered_boolean": true
+  },
+  "exp43b tier_q_prime (A3 vs B1)": {
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "diffs": [
+    0.31666666666666665,
+    0.2433333333333333,
+    0.24,
+    0.2766666666666666,
+    -0.12
+   ],
+   "mean_diff": 0.1913333333333333,
+   "t": 2.420282558603084,
+   "df": 4,
+   "p_one_sided_paired_t": 0.036370410990599664,
+   "p_one_sided_exact_seed_flip": 0.0625,
+   "n_positive": 4,
+   "significant_0.05_paired_t": true,
+   "registered_boolean": false
+  },
+  "exp44 tier_q_B4 (A2 vs B4)": {
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "diffs": [
+    0.13,
+    0.06999999999999995,
+    -0.023333333333333317,
+    0.15333333333333332,
+    0.10666666666666669
+   ],
+   "mean_diff": 0.08733333333333333,
+   "t": 2.8262047153126546,
+   "df": 4,
+   "p_one_sided_paired_t": 0.023763860734526566,
+   "p_one_sided_exact_seed_flip": 0.0625,
+   "n_positive": 4,
+   "significant_0.05_paired_t": true,
+   "registered_boolean": true
+  },
+  "exp44 tier_q_B5 (A2 vs B5)": {
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "diffs": [
+    0.033333333333333326,
+    0.039999999999999925,
+    -0.013333333333333308,
+    0.09333333333333338,
+    -0.04999999999999993
+   ],
+   "mean_diff": 0.020666666666666677,
+   "t": 0.8449658635411127,
+   "df": 4,
+   "p_one_sided_paired_t": 0.22285404726929275,
+   "p_one_sided_exact_seed_flip": 0.25,
+   "n_positive": 3,
+   "significant_0.05_paired_t": false,
+   "registered_boolean": false
+  },
+  "exp48 tier_m (A4 vs B5)": {
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "diffs": [
+    0.14333333333333342,
+    0.1266666666666666,
+    0.08333333333333337,
+    0.1266666666666667,
+    0.11666666666666659
+   ],
+   "mean_diff": 0.11933333333333333,
+   "t": 11.973311111422651,
+   "df": 4,
+   "p_one_sided_paired_t": 0.0001394226742396537,
+   "p_one_sided_exact_seed_flip": 0.03125,
+   "n_positive": 5,
+   "significant_0.05_paired_t": true,
+   "registered_boolean": false
+  },
+  "exp55 random_encoding_fails (E1 vs E0)": {
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "diffs": [
+    0.25,
+    0.2666666666666667,
+    0.22000000000000008,
+    0.15333333333333332,
+    0.29
+   ],
+   "mean_diff": 0.23600000000000002,
+   "t": 9.998643705390618,
+   "df": 4,
+   "p_one_sided_paired_t": 0.0002811494137994512,
+   "p_one_sided_exact_seed_flip": 0.03125,
+   "n_positive": 5,
+   "significant_0.05_paired_t": true,
+   "registered_boolean": true
+  },
+  "exp55 richness_helps (E2 vs E1)": {
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "diffs": [
+    -0.053333333333333344,
+    -0.030000000000000027,
+    -0.0033333333333334103,
+    0.039999999999999925,
+    -0.10999999999999999
+   ],
+   "mean_diff": -0.031333333333333366,
+   "t": -1.2510003082195593,
+   "df": 4,
+   "p_one_sided_paired_t": 0.8604445760999437,
+   "p_one_sided_exact_seed_flip": 0.875,
+   "n_positive": 1,
+   "significant_0.05_paired_t": false,
+   "registered_boolean": false
+  },
+  "exp55 encoding_is_semantic (E1 vs EPw)": {
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "diffs": [
+    0.050000000000000044,
+    -0.039999999999999925,
+    -0.016666666666666607,
+    -0.06333333333333335,
+    0.036666666666666625
+   ],
+   "mean_diff": -0.006666666666666643,
+   "t": -0.3057089202578705,
+   "df": 4,
+   "p_one_sided_paired_t": 0.6124621635732033,
+   "p_one_sided_exact_seed_flip": 0.65625,
+   "n_positive": 2,
+   "significant_0.05_paired_t": false,
+   "registered_boolean": false
+  }
+ }
+}

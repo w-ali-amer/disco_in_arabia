@@ -1,0 +1,655 @@
+{
+ "component": "exp76 entanglement certificate (doc 63 SS9)",
+ "spec": "qnlp_private_docs/63_exp76_scaling.md (REGISTERED 2026-08-29, orchestrator rulings in the status header, BINDING over the body)",
+ "status": "PHASE 1 DELIVERABLE",
+ "platform": "macOS-26.5.2-arm64-arm-64bit",
+ "python": "3.12.13",
+ "numpy": "2.5.1",
+ "eps": 1e-06,
+ "stages": [
+  "after_intro",
+  "after_event1",
+  "after_last_event",
+  "at_readout"
+ ],
+ "per_cell": {
+  "n2_T2": {
+   "n": 2,
+   "T": 2,
+   "axis": "grid",
+   "inventory": "I519",
+   "category": "faail_camel",
+   "n_seeds": 5,
+   "S_max": 0.9981760390636334,
+   "R_max": 2,
+   "S_page": 1,
+   "filling_fraction": 0.9981760390636334,
+   "argmax": {
+    "S": 0.9981760390636334,
+    "stage": "after_event1",
+    "cut": 0,
+    "item": "test_p00381_a"
+   },
+   "stages": {
+    "after_intro": {
+     "S_max": 1.0570372323883192e-14,
+     "S_mean": 1.477379569191569e-15,
+     "S_p95": 7.98072171791505e-15,
+     "R_max": 1
+    },
+    "after_event1": {
+     "S_max": 0.9981760390636334,
+     "S_mean": 0.477380591616547,
+     "S_p95": 0.8900495565304787,
+     "R_max": 2
+    },
+    "after_last_event": {
+     "S_max": 0.9971471168516844,
+     "S_mean": 0.4869087172777711,
+     "S_p95": 0.9003716752262747,
+     "R_max": 2
+    },
+    "at_readout": {
+     "S_max": 0.9981760294009061,
+     "S_mean": 0.47584900706741473,
+     "S_p95": 0.8940326919233993,
+     "R_max": 2
+    }
+   },
+   "S_max_at_init": 0.9972386460357044,
+   "mps_feasible_at_chi64": true
+  },
+  "n3_T2": {
+   "n": 3,
+   "T": 2,
+   "axis": "grid",
+   "inventory": "I519",
+   "category": "faail_camel",
+   "n_seeds": 5,
+   "S_max": 0.9990506018431456,
+   "R_max": 2,
+   "S_page": 1,
+   "filling_fraction": 0.9990506018431456,
+   "argmax": {
+    "S": 0.9990506018431456,
+    "stage": "after_last_event",
+    "cut": 0,
+    "item": "test_p00356_b"
+   },
+   "stages": {
+    "after_intro": {
+     "S_max": 3.5964189952383304e-14,
+     "S_mean": 5.668776741937306e-15,
+     "S_p95": 2.336738025000175e-14,
+     "R_max": 1
+    },
+    "after_event1": {
+     "S_max": 0.9952770118951366,
+     "S_mean": 0.45760878173478686,
+     "S_p95": 0.8788656730453827,
+     "R_max": 2
+    },
+    "after_last_event": {
+     "S_max": 0.9990506018431456,
+     "S_mean": 0.656123332502333,
+     "S_p95": 0.9515711148406597,
+     "R_max": 2
+    },
+    "at_readout": {
+     "S_max": 0.9944315768295411,
+     "S_mean": 0.6109605301139401,
+     "S_p95": 0.9494747129231136,
+     "R_max": 2
+    }
+   },
+   "S_max_at_init": 0.999074466342994,
+   "mps_feasible_at_chi64": true
+  },
+  "n2_T4": {
+   "n": 2,
+   "T": 4,
+   "axis": "grid",
+   "inventory": "I519",
+   "category": "faail_camel",
+   "n_seeds": 5,
+   "S_max": 0.9913780540882668,
+   "R_max": 2,
+   "S_page": 1,
+   "filling_fraction": 0.9913780540882668,
+   "argmax": {
+    "S": 0.9913780540882668,
+    "stage": "after_last_event",
+    "cut": 0,
+    "item": "test_p00330_b"
+   },
+   "stages": {
+    "after_intro": {
+     "S_max": 2.1592747968945755e-14,
+     "S_mean": 1.7610666552321411e-15,
+     "S_p95": 7.760813436313495e-15,
+     "R_max": 1
+    },
+    "after_event1": {
+     "S_max": 0.9804651952195137,
+     "S_mean": 0.4159202097748326,
+     "S_p95": 0.8742783028996568,
+     "R_max": 2
+    },
+    "after_last_event": {
+     "S_max": 0.9913780540882668,
+     "S_mean": 0.4807184962543117,
+     "S_p95": 0.8973673716228573,
+     "R_max": 2
+    },
+    "at_readout": {
+     "S_max": 0.9911334261207805,
+     "S_mean": 0.4843912880226487,
+     "S_p95": 0.9001729495296973,
+     "R_max": 2
+    }
+   },
+   "S_max_at_init": 0.9947332630073629,
+   "mps_feasible_at_chi64": true
+  },
+  "n4_T4": {
+   "n": 4,
+   "T": 4,
+   "axis": "grid",
+   "inventory": "I519",
+   "category": "faail_camel",
+   "n_seeds": 5,
+   "S_max": 1.869382153082253,
+   "R_max": 4,
+   "S_page": 2,
+   "filling_fraction": 0.9346910765411265,
+   "argmax": {
+    "S": 1.869382153082253,
+    "stage": "after_last_event",
+    "cut": 1,
+    "item": "test_p00365_b"
+   },
+   "stages": {
+    "after_intro": {
+     "S_max": 7.303050842527738e-14,
+     "S_mean": 1.050373926543342e-14,
+     "S_p95": 3.30215791940084e-14,
+     "R_max": 1
+    },
+    "after_event1": {
+     "S_max": 0.9944423274808194,
+     "S_mean": 0.4571277925554913,
+     "S_p95": 0.8712514590698254,
+     "R_max": 2
+    },
+    "after_last_event": {
+     "S_max": 1.869382153082253,
+     "S_mean": 0.9412027139811421,
+     "S_p95": 1.3986490901709943,
+     "R_max": 4
+    },
+    "at_readout": {
+     "S_max": 1.7706690768240525,
+     "S_mean": 0.9572280294269561,
+     "S_p95": 1.4105657218848155,
+     "R_max": 4
+    }
+   },
+   "S_max_at_init": 1.8313463593977897,
+   "mps_feasible_at_chi64": true
+  },
+  "n5_T4": {
+   "n": 5,
+   "T": 4,
+   "axis": "grid",
+   "inventory": "I519",
+   "category": "faail_camel",
+   "n_seeds": 5,
+   "S_max": 1.8896280526912428,
+   "R_max": 4,
+   "S_page": 2,
+   "filling_fraction": 0.9448140263456214,
+   "argmax": {
+    "S": 1.8896280526912428,
+    "stage": "after_last_event",
+    "cut": 2,
+    "item": "test_p00404_a"
+   },
+   "stages": {
+    "after_intro": {
+     "S_max": 1.0083153773688174e-13,
+     "S_mean": 2.3420176917262598e-14,
+     "S_p95": 6.664006855431054e-14,
+     "R_max": 1
+    },
+    "after_event1": {
+     "S_max": 0.9975738241015562,
+     "S_mean": 0.46620528482613766,
+     "S_p95": 0.8970081619825567,
+     "R_max": 2
+    },
+    "after_last_event": {
+     "S_max": 1.8896280526912428,
+     "S_mean": 1.1034417803867227,
+     "S_p95": 1.6205719510277834,
+     "R_max": 4
+    },
+    "at_readout": {
+     "S_max": 1.8615540788098326,
+     "S_mean": 1.1129673377629272,
+     "S_p95": 1.602824723745109,
+     "R_max": 4
+    }
+   },
+   "S_max_at_init": 1.858181261032095,
+   "mps_feasible_at_chi64": true
+  },
+  "n2_T6": {
+   "n": 2,
+   "T": 6,
+   "axis": "grid",
+   "inventory": "I519",
+   "category": "faail_camel",
+   "n_seeds": 5,
+   "S_max": 0.9980746297614196,
+   "R_max": 2,
+   "S_page": 1,
+   "filling_fraction": 0.9980746297614196,
+   "argmax": {
+    "S": 0.9980746297614196,
+    "stage": "after_last_event",
+    "cut": 0,
+    "item": "test_p00468_a"
+   },
+   "stages": {
+    "after_intro": {
+     "S_max": 2.889445680242444e-14,
+     "S_mean": 1.4547980471128533e-15,
+     "S_p95": 6.7289312961883314e-15,
+     "R_max": 1
+    },
+    "after_event1": {
+     "S_max": 0.9951431857616746,
+     "S_mean": 0.3989014355576785,
+     "S_p95": 0.8182032542939794,
+     "R_max": 2
+    },
+    "after_last_event": {
+     "S_max": 0.9980746297614196,
+     "S_mean": 0.4737004337070164,
+     "S_p95": 0.8941943626331976,
+     "R_max": 2
+    },
+    "at_readout": {
+     "S_max": 0.9881152553194572,
+     "S_mean": 0.48433850850201754,
+     "S_p95": 0.8993515980934272,
+     "R_max": 2
+    }
+   },
+   "S_max_at_init": 0.9990408759760017,
+   "mps_feasible_at_chi64": true
+  },
+  "n4_T6": {
+   "n": 4,
+   "T": 6,
+   "axis": "grid",
+   "inventory": "I519",
+   "category": "faail_camel",
+   "n_seeds": 5,
+   "S_max": 1.8278282874870926,
+   "R_max": 4,
+   "S_page": 2,
+   "filling_fraction": 0.9139141437435463,
+   "argmax": {
+    "S": 1.8278282874870926,
+    "stage": "after_last_event",
+    "cut": 1,
+    "item": "test_p00454_b"
+   },
+   "stages": {
+    "after_intro": {
+     "S_max": 1.1601643636707112e-13,
+     "S_mean": 1.2153516385362798e-14,
+     "S_p95": 3.660126511150684e-14,
+     "R_max": 1
+    },
+    "after_event1": {
+     "S_max": 0.9902662155024464,
+     "S_mean": 0.4710263580171527,
+     "S_p95": 0.9005934166617104,
+     "R_max": 2
+    },
+    "after_last_event": {
+     "S_max": 1.8278282874870926,
+     "S_mean": 1.05455514132203,
+     "S_p95": 1.4957485337072445,
+     "R_max": 4
+    },
+    "at_readout": {
+     "S_max": 1.7909398770568103,
+     "S_mean": 1.057091876881978,
+     "S_p95": 1.4742495172121821,
+     "R_max": 4
+    }
+   },
+   "S_max_at_init": 1.8222552048506475,
+   "mps_feasible_at_chi64": true
+  },
+  "n7_T6": {
+   "n": 7,
+   "T": 6,
+   "axis": "grid",
+   "inventory": "I519",
+   "category": "faail_camel",
+   "n_seeds": 5,
+   "S_max": 2.577255804840565,
+   "R_max": 8,
+   "S_page": 3,
+   "filling_fraction": 0.8590852682801883,
+   "argmax": {
+    "S": 2.577255804840565,
+    "stage": "after_last_event",
+    "cut": 3,
+    "item": "test_p00428_b"
+   },
+   "stages": {
+    "after_intro": {
+     "S_max": 1.456772952981177e-13,
+     "S_mean": 4.47633933347326e-14,
+     "S_p95": 9.398624047312055e-14,
+     "R_max": 1
+    },
+    "after_event1": {
+     "S_max": 0.987732353688326,
+     "S_mean": 0.4158318824541071,
+     "S_p95": 0.868807613301055,
+     "R_max": 2
+    },
+    "after_last_event": {
+     "S_max": 2.577255804840565,
+     "S_mean": 1.4725297593629614,
+     "S_p95": 2.0487384281128143,
+     "R_max": 8
+    },
+    "at_readout": {
+     "S_max": 2.577255762855516,
+     "S_mean": 1.5042252094329622,
+     "S_p95": 2.037880876620179,
+     "R_max": 8
+    }
+   },
+   "S_max_at_init": 2.5644089960579075,
+   "mps_feasible_at_chi64": true
+  },
+  "band32_n2_T2": {
+   "n": 2,
+   "T": 2,
+   "axis": "grade3",
+   "inventory": "I519",
+   "category": "band_32arc",
+   "n_seeds": 5,
+   "S_max": 0.9996090670302678,
+   "R_max": 2,
+   "S_page": 1,
+   "filling_fraction": 0.9996090670302678,
+   "argmax": {
+    "S": 0.9996090670302678,
+    "stage": "after_last_event",
+    "cut": 0,
+    "item": "test_p00397_a"
+   },
+   "stages": {
+    "after_intro": {
+     "S_max": 2.206890209624892e-14,
+     "S_mean": 1.7031771877279705e-15,
+     "S_p95": 9.214035147544437e-15,
+     "R_max": 1
+    },
+    "after_event1": {
+     "S_max": 0.989120654833571,
+     "S_mean": 0.49135315474337526,
+     "S_p95": 0.8846993537925212,
+     "R_max": 2
+    },
+    "after_last_event": {
+     "S_max": 0.9996090670302678,
+     "S_mean": 0.47492989470932184,
+     "S_p95": 0.8973280461099782,
+     "R_max": 2
+    },
+    "at_readout": {
+     "S_max": 0.9928203675963275,
+     "S_mean": 0.4792888306872972,
+     "S_p95": 0.8889376578205631,
+     "R_max": 2
+    }
+   },
+   "S_max_at_init": 0.9972971230410692,
+   "mps_feasible_at_chi64": true
+  },
+  "I24_n2_T2": {
+   "n": 2,
+   "T": 2,
+   "axis": "inventory",
+   "inventory": "I24",
+   "category": "faail_camel",
+   "n_seeds": 5,
+   "S_max": 0.9989023539989443,
+   "R_max": 2,
+   "S_page": 1,
+   "filling_fraction": 0.9989023539989443,
+   "argmax": {
+    "S": 0.9989023539989443,
+    "stage": "after_last_event",
+    "cut": 0,
+    "item": "test_p00362_a"
+   },
+   "stages": {
+    "after_intro": {
+     "S_max": 1.7806495573674628e-14,
+     "S_mean": 2.5158092741570306e-15,
+     "S_p95": 1.0161832905673043e-14,
+     "R_max": 1
+    },
+    "after_event1": {
+     "S_max": 0.9975996379933185,
+     "S_mean": 0.4228660095715885,
+     "S_p95": 0.8632667235642323,
+     "R_max": 2
+    },
+    "after_last_event": {
+     "S_max": 0.9989023539989443,
+     "S_mean": 0.4802976680158005,
+     "S_p95": 0.8895948254517213,
+     "R_max": 2
+    },
+    "at_readout": {
+     "S_max": 0.9973868087584454,
+     "S_mean": 0.4597932140690525,
+     "S_p95": 0.8888192949450607,
+     "R_max": 2
+    }
+   },
+   "S_max_at_init": 0.9975059856922045,
+   "mps_feasible_at_chi64": true
+  },
+  "I24_n4_T4": {
+   "n": 4,
+   "T": 4,
+   "axis": "inventory",
+   "inventory": "I24",
+   "category": "faail_camel",
+   "n_seeds": 5,
+   "S_max": 1.8595632298873057,
+   "R_max": 4,
+   "S_page": 2,
+   "filling_fraction": 0.9297816149436529,
+   "argmax": {
+    "S": 1.8595632298873057,
+    "stage": "after_last_event",
+    "cut": 1,
+    "item": "test_p00360_a"
+   },
+   "stages": {
+    "after_intro": {
+     "S_max": 7.793213813117092e-14,
+     "S_mean": 1.316581273117513e-14,
+     "S_p95": 3.646707531943188e-14,
+     "R_max": 1
+    },
+    "after_event1": {
+     "S_max": 0.991016753389787,
+     "S_mean": 0.49837962883585457,
+     "S_p95": 0.8750168211368177,
+     "R_max": 2
+    },
+    "after_last_event": {
+     "S_max": 1.8595632298873057,
+     "S_mean": 0.9669632977713329,
+     "S_p95": 1.4233305348144918,
+     "R_max": 4
+    },
+    "at_readout": {
+     "S_max": 1.7659406481898405,
+     "S_mean": 0.9753908254532451,
+     "S_p95": 1.393679441955999,
+     "R_max": 4
+    }
+   },
+   "S_max_at_init": 1.9011307017150505,
+   "mps_feasible_at_chi64": true
+  }
+ },
+ "growth_doc63_SS9_3_1": {
+  "n_values": [
+   2,
+   3,
+   4,
+   5,
+   7
+  ],
+  "S_max_by_n": [
+   0.9981760390636334,
+   0.9990506018431456,
+   1.869382153082253,
+   1.8896280526912428,
+   2.577255804840565
+  ],
+  "S_page_by_n": [
+   1,
+   1,
+   2,
+   2,
+   3
+  ],
+  "filling_fraction_by_n": [
+   0.9981760390636334,
+   0.9990506018431456,
+   0.9346910765411265,
+   0.9448140263456214,
+   0.8590852682801883
+  ],
+  "pooled": {
+   "slope_a": 0.33508744979313226,
+   "intercept_b": 0.2593312411730129,
+   "max_resid": 0.26970111273671105
+  },
+  "stratified_by_T": {
+   "T4": {
+    "n_values": [
+     2,
+     4,
+     5
+    ],
+    "S_max": [
+     0.9913780540882668,
+     1.869382153082253,
+     1.8896280526912428
+    ],
+    "slope_a": 0.31935743524327787,
+    "intercept_b": 0.41248549072856816,
+    "max_resid": 0.1794669213805733
+   },
+   "T6": {
+    "n_values": [
+     2,
+     4,
+     7
+    ],
+    "S_max": [
+     0.9980746297614196,
+     1.8278282874870926,
+     2.577255804840565
+    ],
+    "slope_a": 0.31062357218177594,
+    "intercept_b": 0.4550174279086632,
+    "max_resid": 0.13031657085132564
+   }
+  },
+  "stratified_slope_disagreement": 0.008733863061501923,
+  "stratified_disagreement_bar": 0.05,
+  "strata_disagree": false,
+  "maximal_achievable_slope_over_this_grid": 0.41891891891891897,
+  "bar_as_fraction_of_maximal": 0.2387096774193548,
+  "chi_hat_context_only": {
+   "W16": 49.204911989129634,
+   "W24": 315.48553220595494,
+   "W48": 83155.77456518033
+  },
+  "init_versus_trained": {
+   "per_cell": {
+    "n2_T2": {
+     "S_max_at_init": 0.9972386460357044,
+     "S_max_trained": 0.9981760390636334
+    },
+    "n3_T2": {
+     "S_max_at_init": 0.999074466342994,
+     "S_max_trained": 0.9990506018431456
+    },
+    "n2_T4": {
+     "S_max_at_init": 0.9947332630073629,
+     "S_max_trained": 0.9913780540882668
+    },
+    "n4_T4": {
+     "S_max_at_init": 1.8313463593977897,
+     "S_max_trained": 1.869382153082253
+    },
+    "n5_T4": {
+     "S_max_at_init": 1.858181261032095,
+     "S_max_trained": 1.8896280526912428
+    },
+    "n2_T6": {
+     "S_max_at_init": 0.9990408759760017,
+     "S_max_trained": 0.9980746297614196
+    },
+    "n4_T6": {
+     "S_max_at_init": 1.8222552048506475,
+     "S_max_trained": 1.8278282874870926
+    },
+    "n7_T6": {
+     "S_max_at_init": 2.5644089960579075,
+     "S_max_trained": 2.577255804840565
+    }
+   },
+   "trained_at_least_init_everywhere": false,
+   "reading": "doc 63 SS9.4 row 4: S_max small at init and large after training means TRAINING IS WHAT MAKES THE STATE HARD, and any MPS plan must budget for the trained regime, never the initial one."
+  }
+ },
+ "verdicts": {
+  "entanglement_area_law_like": false,
+  "entanglement_area_law_like_reason": "pooled least-squares slope a = 0.3351 bits per wire over n_active in [2, 3, 4, 5, 7], against the registered bar a <= 0.10 (doc 63 SS9.3.1, named before the numbers existed). The two stratified slopes agree to 0.0087, inside the 0.05 bar.",
+  "mps_feasible_at_chi64": true,
+  "mps_feasible_at_chi64_is_INERT": "doc 63 SS9.3: TRUE BY ARITHMETIC at every phase-1 cell (8 <= 64 always). Computed and stored for completeness and REGISTERED AS INERT -- the fourth use of doc 58 SS9.5's precedent, and the FIRST time this programme has caught an inert boolean at DESIGN TIME instead of after the compute. NO READING DEPENDS ON IT."
+ },
+ "disposition_doc63_SS9_4": {
+  "observed": "a = 0.3351, strata agree",
+  "row": "a approaching 0.5, f(n) -> 1 -- VOLUME LAW: the states fill their entanglement capacity and MPS buys nothing at any width. A FINDING, and it retires the phase-B plan on evidence rather than on effort; doc 59 SS2's MPS assignment is amended IN WRITING"
+ },
+ "scoping_doc63_SS9_6": [
+  "CIRCUIT-LEVEL entropy of the evolving state. arXiv:2307.06937 distinguishes it from the model's coefficient-MPS entropy and they differ; SS9.2 measures the STATE and no function-level claim is made.",
+  "THE INFERENCE RUNS ONE WAY ONLY. arXiv:2607.08396 exhibits high-entropy circuits that are nonetheless efficiently MPS-simulable, so a low R_1e-6 soundly certifies FEASIBILITY -- the only direction SS9.3 uses -- and a high one certifies nothing about hardness.",
+  "TRAINABILITY AND MPS-FEASIBILITY ARE NOT INDEPENDENT CLAIMS. arXiv:2312.09121 (Nature Communications 16, 7907, 2025) argues that provable absence of barren plateaus points toward classical simulability, so `gap_stable_in_n` TRUE together with `entanglement_area_law_like` TRUE is ONE FINDING WEARING TWO NAMES, not two corroborating results, and NO WRITE-UP MAY PRESENT THEM AS MUTUAL SUPPORT. It costs this programme nothing it had: SS16 forbids any advantage reading regardless.",
+  "SS23 item 5: the certificate measures the states THESE circuits produce and nothing more. If phase B changes the encoding -- which is the entire point of phase B -- the certificate does not transfer, so it justifies phase B's INFRASTRUCTURE only for the encodings phase 1 ran."
+ ],
+ "not_a_criterion_doc63_SS9_7": "no accuracy boolean reads this, no accuracy boolean feeds it, and neither may be promoted onto the other (the exp44 no-promotion clause). SS12.10: read LAST, gating nothing in SS18.4's chain."
+}

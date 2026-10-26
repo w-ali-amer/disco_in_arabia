@@ -1,0 +1,106 @@
+{
+ "gate": "GATE_DATAGEN",
+ "spec": "qnlp_private_docs/77_exp85_identity_T3.md (FROZEN 2026-09-17)",
+ "passed": true,
+ "dataset": "stories_exp85_QA.json",
+ "dataset_sha256": "9566a4a5bc305f66c0a9fb8e7e467ec3f22b9d0e3de298cbf7458104c1554b00",
+ "slot_assignment": {
+  "V1": [
+   "سأل",
+   "عالج"
+  ],
+  "V2": [
+   "حمل",
+   "ضرب"
+  ],
+  "V3": [
+   "رفع",
+   "ساعد"
+  ],
+  "all_verbs": [
+   "حمل",
+   "رفع",
+   "سأل",
+   "ساعد",
+   "ضرب",
+   "عالج"
+  ]
+ },
+ "slot_sizes": {
+  "V1": 2,
+  "V2": 2,
+  "V3": 2
+ },
+ "slot_pairwise_disjoint": true,
+ "slot_union_equals_inventory": true,
+ "n_t3_items_checked": 960,
+ "n_t3_slot_violations": 0,
+ "all_t3_events_in_correct_slot": true,
+ "label_balance": {
+  "T1_train": {
+   "balanced": true,
+   "n_yes": 264,
+   "n_no": 264
+  },
+  "T1_val": {
+   "balanced": true,
+   "n_yes": 66,
+   "n_no": 66
+  },
+  "T1_test": {
+   "balanced": true,
+   "n_yes": 150,
+   "n_no": 150
+  },
+  "T2_train": {
+   "balanced": true,
+   "n_yes": 264,
+   "n_no": 264
+  },
+  "T2_val": {
+   "balanced": true,
+   "n_yes": 66,
+   "n_no": 66
+  },
+  "T2_test": {
+   "balanced": true,
+   "n_yes": 150,
+   "n_no": 150
+  },
+  "T3_train": {
+   "balanced": true,
+   "n_yes": 264,
+   "n_no": 264
+  },
+  "T3_val": {
+   "balanced": true,
+   "n_yes": 66,
+   "n_no": 66
+  },
+  "T3_test": {
+   "balanced": true,
+   "n_yes": 150,
+   "n_no": 150
+  }
+ },
+ "all_splits_balanced": true,
+ "dtf_overlapping_slot": "OK: designed-to-fail fired: dtf_overlap: overlapping slots detected: V1∩V2={'سأل'}",
+ "n_items_total": 2880,
+ "split_counts": {
+  "1": {
+   "train": 528,
+   "val": 132,
+   "test": 300
+  },
+  "2": {
+   "train": 528,
+   "val": 132,
+   "test": 300
+  },
+  "3": {
+   "train": 528,
+   "val": 132,
+   "test": 300
+  }
+ }
+}

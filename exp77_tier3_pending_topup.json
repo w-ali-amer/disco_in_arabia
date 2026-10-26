@@ -1,0 +1,101 @@
+{
+ "meta": {
+  "purpose": "exp77 §2 tier-3 pending: words where gemma3:12b rejected, awaiting haiku cross-check",
+  "acceptance_rule": "admitted iff AraVec-attested AND at least one model accepts; these words have gemma=False/None, require haiku tiebreaker",
+  "n_disagreements": 7,
+  "note": "DO NOT run haiku yourself; leave this file for the orchestrator"
+ },
+ "words": [
+  {
+   "word": "التواب",
+   "root": "ت.#.ب",
+   "column": "fa33aal",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": false,
+   "tier3_pending": true,
+   "gemma_reason": "The word \"التواب\" isn't a standard Arabic term; it doesn't fit the expected meaning for a fa33aal noun from that root.",
+   "gemma_raw": "{\"accept\": false, \"reason\": \"The word \\\"التواب\\\" isn't a standard Arabic term; it doesn't fit the expected meaning for a fa33aal noun from that root.\"}"
+  },
+  {
+   "word": "الحقيق",
+   "root": "ح.ق.ق",
+   "column": "faiil",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": false,
+   "tier3_pending": true,
+   "gemma_reason": "While ح.ق.ق is a valid root, 'الحقيق' isn't a standard فَعِيل form; the correct form would be 'حَقِيق'.",
+   "gemma_raw": "{\"accept\": false, \"reason\": \"While ح.ق.ق is a valid root, 'الحقيق' isn't a standard فَعِيل form; the correct form would be 'حَقِيق'.\"}"
+  },
+  {
+   "word": "الخوان",
+   "root": "خ.#.ن",
+   "column": "fa33aal",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": false,
+   "tier3_pending": true,
+   "gemma_reason": "The word \"الخوان\" is not a recognized Modern Standard Arabic term with that root and pattern.",
+   "gemma_raw": "{\"accept\": false, \"reason\": \"The word \\\"الخوان\\\" is not a recognized Modern Standard Arabic term with that root and pattern.\"}"
+  },
+  {
+   "word": "المزور",
+   "root": "ز.#.ر",
+   "column": "mu1",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": false,
+   "tier3_pending": true,
+   "gemma_reason": "The word \"المزور\" does not exist in MSA; its root and pattern are incorrect.",
+   "gemma_raw": "{\"accept\": false, \"reason\": \"The word \\\"المزور\\\" does not exist in MSA; its root and pattern are incorrect.\"}"
+  },
+  {
+   "word": "الغال",
+   "root": "غ.ل.ل",
+   "column": "faail",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": false,
+   "tier3_pending": true,
+   "gemma_reason": "While غ.ل.ل exists, \"الغال\" (al-ghaall) isn't a standard active participle; it's primarily a dialectal term.",
+   "gemma_raw": "{\"accept\": false, \"reason\": \"While غ.ل.ل exists, \\\"الغال\\\" (al-ghaall) isn't a standard active participle; it's primarily a dialectal term.\"}"
+  },
+  {
+   "word": "القار",
+   "root": "ق.ر.ر",
+   "column": "faail",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": false,
+   "tier3_pending": true,
+   "gemma_reason": "While related to the root ق.ر.ر, 'القار' primarily denotes a container and isn't an active participle.",
+   "gemma_raw": "{\"accept\": false, \"reason\": \"While related to the root ق.ر.ر, 'القار' primarily denotes a container and isn't an active participle.\"}"
+  },
+  {
+   "word": "الماد",
+   "root": "م.د.د",
+   "column": "faail",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": false,
+   "tier3_pending": true,
+   "gemma_reason": "While rooted in م.د.د, 'الماد' isn't a standard active participle; it's rare and potentially dialectal.",
+   "gemma_raw": "{\"accept\": false, \"reason\": \"While rooted in م.د.د, 'الماد' isn't a standard active participle; it's rare and potentially dialectal.\"}"
+  }
+ ]
+}

@@ -1,0 +1,32 @@
+{
+ "0": {
+  "attempts": 1,
+  "eff_seed": 0,
+  "combined_sd": 0.0865,
+  "bit_identical_to_preamendment": true
+ },
+ "1": {
+  "attempts": 1,
+  "eff_seed": 1,
+  "combined_sd": 0.1039,
+  "bit_identical_to_preamendment": true
+ },
+ "2": {
+  "attempts": 1,
+  "eff_seed": 2,
+  "combined_sd": 0.1057,
+  "bit_identical_to_preamendment": true
+ },
+ "3": {
+  "attempts": 2,
+  "eff_seed": 100003,
+  "combined_sd": 0.1142,
+  "bit_identical_to_preamendment": false
+ },
+ "4": {
+  "attempts": 1,
+  "eff_seed": 4,
+  "combined_sd": 0.0903,
+  "bit_identical_to_preamendment": true
+ }
+}

@@ -1,0 +1,118 @@
+{
+ "experiment": "exp46 rung validation (doc 29 SS3 leak gate)",
+ "design_doc": "qnlp_private_docs/29_exp46_wazn_stage_b.md (commits 1ac3819 criteria + e9c69d0 sign-off, FROZEN)",
+ "rung": "W1",
+ "dataset_sha256": "db2f27e510601492968a068ad57e24d0dd77bf64d2bd634982daf8f6bdf45325",
+ "sign_off": {
+  "date": "2026-08-13",
+  "reviewer": "native-speaker reviewer (project owner)",
+  "verdict": "all twelve verbs approved, no substitutions",
+  "criteria": "(i) unambiguously of the stated wazn; (ii) transitive with a DIRECT human object, no preposition"
+ },
+ "wazn_groups": {
+  "I": [
+   "ضرب",
+   "سأل",
+   "شكر",
+   "خدم"
+  ],
+  "II": [
+   "علّم",
+   "كلّم",
+   "ودّع",
+   "ذكّر"
+  ],
+  "III": [
+   "ساعد",
+   "قابل",
+   "عالج",
+   "راسل"
+  ]
+ },
+ "n_train": 1200,
+ "n_val": 300,
+ "n_test": 300,
+ "note_n_test": "rung size fixed by doc 29 SS3 (300 < the doc-22 main-dataset 500 minimum; CI bounds recorded at n=300)",
+ "oov_note": "V1/V5 build vocabulary from this dataset's surface tokens and train their own embeddings, so the Form II and Form III surface forms introduced here carry no pretrained-embedding OOV exposure.",
+ "V1_bag_of_embeddings": {
+  "test_accuracy": 0.5,
+  "ci95": [
+   0.4434196736194167,
+   0.5565803263805833
+  ],
+  "n_test": 300,
+  "train_accuracy": 0.5,
+  "best_val_accuracy": 0.5,
+  "per_split_accuracy": {
+   "test_a": 0.55,
+   "test_b": 0.48,
+   "test_c": 0.47
+  },
+  "passed": true,
+  "per_split_note": "single rung test split round-robined over test_a/b/c; thirds are arbitrary partitions"
+ },
+ "V2_ngram_logistic": {
+  "test_accuracy": 0.55,
+  "ci95": [
+   0.4937032860639274,
+   0.6062967139360728
+  ],
+  "n_test": 300,
+  "selected_C": 0.1,
+  "best_val_accuracy": 0.5,
+  "n_features": 1207,
+  "per_split_accuracy": {
+   "test_a": 0.54,
+   "test_b": 0.58,
+   "test_c": 0.53
+  },
+  "passed": true,
+  "per_split_note": "single rung test split round-robined over test_a/b/c; thirds are arbitrary partitions"
+ },
+ "V3_balance_audit": {
+  "n_yes": 900,
+  "n_no": 900,
+  "classes_balanced_50_50": true,
+  "min_p": 1.0,
+  "n_tests": 41,
+  "verb_min_p": 1.0,
+  "referent_min_p": 1.0,
+  "template_min_p": 1.0,
+  "pro_drop_min_p": 1.0,
+  "passed": true
+ },
+ "V4_dedup": {
+  "n_verbatim_duplicates": 0,
+  "n_near_dup_groups": 0,
+  "near_dup_groups_sample": [],
+  "passed": true
+ },
+ "V5_single_sentence_oracle": {
+  "mode": "na_by_design",
+  "note": "W1 is one-hop by construction: every item IS single-sentence-answerable, so the oracle SHOULD succeed. V5 is recorded, not gated -- identical treatment to L1 (doc 23 V-suite 'for the record').",
+  "full_test": {
+   "test_accuracy_best_sentence": 0.5,
+   "ci95_best_sentence": [
+    0.4434196736194167,
+    0.5565803263805833
+   ],
+   "test_accuracy_max_yes": 0.5,
+   "ci95_max_yes": [
+    0.4434196736194167,
+    0.5565803263805833
+   ],
+   "n_test": 300,
+   "sentence_level_val_accuracy": 0.5,
+   "passed": true
+  },
+  "gated": false,
+  "passed": null
+ },
+ "v1_passed": true,
+ "v2_passed": true,
+ "v3_passed": true,
+ "v4_passed": true,
+ "all_passed_v1_to_v4": true,
+ "leak_gate_passed": true,
+ "consequence_if_failed": "doc 29 SS6: exp46 is VOID and reported as void with the failing check named; no clustering number is quoted anywhere."
+}

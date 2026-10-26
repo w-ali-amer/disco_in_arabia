@@ -1,0 +1,305 @@
+{
+ "purpose": "doc 59 SS8.2 sample-audit session for the user — 50 random candidates (seed 4900, registered) from the 600; audit rule: flag any noun that is NOT a human-denoting noun; the full 600 list is in candidate_human_nouns.json and any noun there may be vetoed",
+ "sample": [
+  {
+   "noun": "المادح",
+   "wazn_tag": "mu_participle",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "مادِح"
+  },
+  {
+   "noun": "الصائغ",
+   "wazn_tag": "faail",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "صائِغ"
+  },
+  {
+   "noun": "الفلبيني",
+   "wazn_tag": "nisba_yaa",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "فِيلِيبِّينِيّ"
+  },
+  {
+   "noun": "اليوناني",
+   "wazn_tag": "nisba_yaa",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "يُونانِيّ"
+  },
+  {
+   "noun": "التقني",
+   "wazn_tag": "nisba_yaa",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "تَقْنِيّ"
+  },
+  {
+   "noun": "الفني",
+   "wazn_tag": "other",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "فَنِّيّ"
+  },
+  {
+   "noun": "المستشار",
+   "wazn_tag": "mu_participle",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "مُسْتَشار"
+  },
+  {
+   "noun": "الاحمد",
+   "wazn_tag": "other",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "أَحْمَد"
+  },
+  {
+   "noun": "الكذاب",
+   "wazn_tag": "faaal_or_fa33aal",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "كَذّاب"
+  },
+  {
+   "noun": "المساهم",
+   "wazn_tag": "mu_participle",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "مُساهِم"
+  },
+  {
+   "noun": "الناصر",
+   "wazn_tag": "faail",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "ناصِر"
+  },
+  {
+   "noun": "الياباني",
+   "wazn_tag": "nisba_yaa",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "يابانِيّ"
+  },
+  {
+   "noun": "الخباز",
+   "wazn_tag": "faaal_or_fa33aal",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "خَبّاز"
+  },
+  {
+   "noun": "الوزير",
+   "wazn_tag": "faiil",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "وَزِير"
+  },
+  {
+   "noun": "الصاحب",
+   "wazn_tag": "faail",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "صاحِب"
+  },
+  {
+   "noun": "الصانع",
+   "wazn_tag": "faail",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "صانِع"
+  },
+  {
+   "noun": "المجهول",
+   "wazn_tag": "mu_participle",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "مَجْهُول"
+  },
+  {
+   "noun": "اليمني",
+   "wazn_tag": "nisba_yaa",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "يَمَنِيّ"
+  },
+  {
+   "noun": "النزيل",
+   "wazn_tag": "faiil",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "نَزِيل"
+  },
+  {
+   "noun": "البعل",
+   "wazn_tag": "other",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "بَعْل"
+  },
+  {
+   "noun": "النقيب",
+   "wazn_tag": "faiil",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "نَقِيب"
+  },
+  {
+   "noun": "الامريكي",
+   "wazn_tag": "nisba_yaa",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "أَمْرِيكِيّ"
+  },
+  {
+   "noun": "المحب",
+   "wazn_tag": "other",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "مُحِبّ"
+  },
+  {
+   "noun": "الرائد",
+   "wazn_tag": "faail",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "رائِد"
+  },
+  {
+   "noun": "القاني",
+   "wazn_tag": "faail",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "قانِئ"
+  },
+  {
+   "noun": "الرسام",
+   "wazn_tag": "faaal_or_fa33aal",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "رَسّام"
+  },
+  {
+   "noun": "العماني",
+   "wazn_tag": "nisba_yaa",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "عُمانِيّ"
+  },
+  {
+   "noun": "الحادي",
+   "wazn_tag": "nisba_yaa",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "حادِي"
+  },
+  {
+   "noun": "السمان",
+   "wazn_tag": "faaal_or_fa33aal",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "سَمّان"
+  },
+  {
+   "noun": "العقيد",
+   "wazn_tag": "faiil",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "عَقِيد"
+  },
+  {
+   "noun": "السلفي",
+   "wazn_tag": "nisba_yaa",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "سَلَفِيّ"
+  },
+  {
+   "noun": "الفقيه",
+   "wazn_tag": "faiil",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "فَقِيه"
+  },
+  {
+   "noun": "الاقتصادي",
+   "wazn_tag": "nisba_yaa",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "ٱِقْتِصادِيّ"
+  },
+  {
+   "noun": "المقاوم",
+   "wazn_tag": "mu_participle",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "مُقاوِم"
+  },
+  {
+   "noun": "الغنام",
+   "wazn_tag": "faaal_or_fa33aal",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "غَنّام"
+  },
+  {
+   "noun": "المرتزق",
+   "wazn_tag": "mu_participle",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "مُرْتَزَق"
+  },
+  {
+   "noun": "الصهيوني",
+   "wazn_tag": "nisba_yaa",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "صَهْيُونِيّ"
+  },
+  {
+   "noun": "الملاكم",
+   "wazn_tag": "mu_participle",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "مُلاكِم"
+  },
+  {
+   "noun": "الكويتي",
+   "wazn_tag": "nisba_yaa",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "كُوَيْتِيّ"
+  },
+  {
+   "noun": "البرازيلي",
+   "wazn_tag": "nisba_yaa",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "بَرازِيلِيّ"
+  },
+  {
+   "noun": "المهاجم",
+   "wazn_tag": "mu_participle",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "مُهاجِم"
+  },
+  {
+   "noun": "المساعد",
+   "wazn_tag": "mu_participle",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "مُساعِد"
+  },
+  {
+   "noun": "المحامي",
+   "wazn_tag": "mu_participle",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "مُحامِي"
+  },
+  {
+   "noun": "الخب",
+   "wazn_tag": "other",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "خَبّ"
+  },
+  {
+   "noun": "السياح",
+   "wazn_tag": "faaal_or_fa33aal",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "سَيّاح"
+  },
+  {
+   "noun": "الشامي",
+   "wazn_tag": "nisba_yaa",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "شامِيّ"
+  },
+  {
+   "noun": "التميمي",
+   "wazn_tag": "nisba_yaa",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "تَمِيمِيّ"
+  },
+  {
+   "noun": "الوالد",
+   "wazn_tag": "faail",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "والِد"
+  },
+  {
+   "noun": "المهووس",
+   "wazn_tag": "mu_participle",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "مَهْوُوس"
+  },
+  {
+   "noun": "الحمود",
+   "wazn_tag": "other",
+   "tier": "camel_rat_r_unanimous",
+   "lemma": "حَمُود"
+  }
+ ]
+}

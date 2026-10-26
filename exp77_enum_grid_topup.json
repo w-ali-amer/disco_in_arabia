@@ -1,0 +1,2489 @@
+{
+ "meta": {
+  "purpose": "exp77 §5 top-up enumeration: weak/geminate roots at >=2 columns, excluding roots already in exp77_enum_grid.json (>=3 col pool)",
+  "amendment_ref": "67_exp77_inventory_protocol.md §5",
+  "route": "Same AraVec-vocabulary scan as exp77_inventory_enum_wsl.py; selection changed: weak/geminate roots >=2 cols, sound roots excluded. AraVec attestation = True for all words by construction.",
+  "script": "exp77_inventory_enum_topup_wsl.py (new, never edits the committed script)",
+  "camel_tools_version": "1.5.6",
+  "python_version": "3.10.13",
+  "aravec_model": "/home/waj/discocat_arabic_v2/aravec/full_uni_cbow_300_twitter.mdl",
+  "scan_cap": 300000,
+  "al_form_tokens_scanned": 29830,
+  "tokens_with_al_det_noun_adj": 16574,
+  "tokens_without_al_det_noun_adj": 13256,
+  "total_noun_adj_analyses_templatic": 82708,
+  "existing_grid_roots_excluded": [
+   "ب.#.ت",
+   "ب.ت.ر",
+   "ب.ر.د",
+   "ب.ر.ق",
+   "ب.ك.#",
+   "ب.ل.غ",
+   "ج.ب.ر",
+   "ج.د.د",
+   "ج.ر.ح",
+   "ج.ل.د",
+   "ج.م.ع",
+   "ج.م.ل",
+   "ح.د.د",
+   "ح.ر.ر",
+   "ح.ر.ق",
+   "ح.ز.ن",
+   "ح.ف.ظ",
+   "ح.ك.م",
+   "ح.م.ل",
+   "خ.#.ف",
+   "خ.ز.ن",
+   "خ.ط.ر",
+   "خ.ل.ص",
+   "خ.ل.ق",
+   "خ.م.ر",
+   "د.#.ر",
+   "د.#.ن",
+   "د.ر.س",
+   "د.ف.ع",
+   "د.ق.ق",
+   "د.ل.ل",
+   "ر.ح.ل",
+   "ر.ش.د",
+   "ر.ص.د",
+   "ر.ف.ع",
+   "ز.ر.ع",
+   "س.#.ر",
+   "س.ت.ر",
+   "س.ج.ن",
+   "س.ر.ر",
+   "س.ع.د",
+   "س.ك.ن",
+   "س.ل.ب",
+   "س.ل.ل",
+   "س.ل.م",
+   "س.م.ع",
+   "ش.ر.ب",
+   "ش.ر.ع",
+   "ش.ر.ف",
+   "ش.غ.ل",
+   "ش.ه.د",
+   "ص.ر.خ",
+   "ص.ل.ح",
+   "ص.ن.ع",
+   "ض.ح.ك",
+   "ض.ر.ب",
+   "ط.#.ر",
+   "ط.ب.خ",
+   "ظ.ل.م",
+   "ظ.ه.ر",
+   "ع.#.ب",
+   "ع.#.د",
+   "ع.ب.د",
+   "ع.ب.ر",
+   "ع.ر.ض",
+   "ع.ر.ف",
+   "ع.ش.ق",
+   "ع.ق.د",
+   "ع.ل.ق",
+   "ع.ل.م",
+   "ع.م.ل",
+   "غ.#.ب",
+   "غ.د.ر",
+   "غ.ر.ر",
+   "غ.ش.ش",
+   "غ.ف.ر",
+   "غ.ل.ب",
+   "ف.ت.ح",
+   "ف.ت.ن",
+   "ف.ر.ق",
+   "ف.ع.ل",
+   "ف.ق.د",
+   "ف.ل.ح",
+   "ف.ه.م",
+   "ق.#.م",
+   "ق.ب.ل",
+   "ق.ت.ل",
+   "ق.د.ر",
+   "ق.د.م",
+   "ق.ر.ب",
+   "ق.ص.د",
+   "ق.ص.ر",
+   "ق.ط.ع",
+   "ق.ع.د",
+   "ق.ه.ر",
+   "ك.س.ر",
+   "م.د.ح",
+   "م.ر.د",
+   "م.ل.ح",
+   "م.ل.ك",
+   "ن.ت.ج",
+   "ن.ش.د",
+   "ن.ص.ر",
+   "ن.ظ.ر",
+   "ن.ع.م",
+   "ن.ق.ل",
+   "ه.م.م"
+  ],
+  "existing_grid_root_count": 107,
+  "selection_gate": {
+   "weak_or_geminate": true,
+   "min_columns_for_weak": 2,
+   "min_columns_for_sound": "N/A -- sound roots excluded from top-up",
+   "exclude_already_in_main_grid": true
+  },
+  "exclusion_accounting": {
+   "excl_sound_any": 716,
+   "excl_sound_2col_subcnt": 171,
+   "excl_weak_only_1col": 244,
+   "excl_weak_already_in_grid": 21,
+   "note": "Every exclusion counted per §1 protocol"
+  }
+ },
+ "distribution": {
+  "full_scan_roots_by_column_count": {
+   "1": 706,
+   "2": 246,
+   "3": 83,
+   "4": 22,
+   "5": 2
+  },
+  "topup_roots_admitted": 75,
+  "topup_words_total": 152,
+  "topup_weak_or_geminate_pct": 1.0,
+  "combined_existing_plus_topup": {
+   "total_roots": 182,
+   "weak_or_geminate_roots": 96,
+   "weak_or_geminate_pct": 0.5275,
+   "quota_50pct_met": true
+  },
+  "single_surface_roots": 3,
+  "single_surface_note": "roots where all column words are the same single token; flagged, not excluded; see single_surface_root_flags"
+ },
+ "top50_unmatched_patterns": [
+  {
+   "pattern": "ال1َ2ْ3",
+   "count": 2356
+  },
+  {
+   "pattern": "ال1ا2ِ3َة",
+   "count": 1448
+  },
+  {
+   "pattern": "ال1َ2َ3",
+   "count": 1321
+  },
+  {
+   "pattern": "ال1ُ2ُو3",
+   "count": 1268
+  },
+  {
+   "pattern": "ال1َ2ِي3َة",
+   "count": 1172
+  },
+  {
+   "pattern": "التَ1ْ2ِي3",
+   "count": 1120
+  },
+  {
+   "pattern": "ال1ِ2ا3",
+   "count": 1000
+  },
+  {
+   "pattern": "الأَ1ْ2ا3",
+   "count": 980
+  },
+  {
+   "pattern": "ال1َ2ْ3َة",
+   "count": 944
+  },
+  {
+   "pattern": "ال1َ2",
+   "count": 720
+  },
+  {
+   "pattern": "ال1ُ2ْ3",
+   "count": 692
+  },
+  {
+   "pattern": "ال1ُ2ْ3َة",
+   "count": 656
+  },
+  {
+   "pattern": "المُ1َ2َّ3",
+   "count": 636
+  },
+  {
+   "pattern": "المَ1ا2ِ3",
+   "count": 632
+  },
+  {
+   "pattern": "المَ1ْ2ُو3َة",
+   "count": 628
+  },
+  {
+   "pattern": "ال1ِ2ْ3",
+   "count": 624
+  },
+  {
+   "pattern": "ال1َ2ا3",
+   "count": 572
+  },
+  {
+   "pattern": "الإِ1ْ2ا3",
+   "count": 568
+  },
+  {
+   "pattern": "ال1َ2ا3َة",
+   "count": 560
+  },
+  {
+   "pattern": "ال1َ2ّا3َة",
+   "count": 556
+  },
+  {
+   "pattern": "التَ1َ2ُّ3",
+   "count": 512
+  },
+  {
+   "pattern": "الٱِ1ْتِ2ا3",
+   "count": 484
+  },
+  {
+   "pattern": "الأَ1ْ2َ3",
+   "count": 473
+  },
+  {
+   "pattern": "المُ1َ2َّ3َة",
+   "count": 468
+  },
+  {
+   "pattern": "المُ1ا2َ3َة",
+   "count": 448
+  },
+  {
+   "pattern": "ال1َ2ْ3ِيَّة",
+   "count": 432
+  },
+  {
+   "pattern": "ال1َ2َ3ات",
+   "count": 432
+  },
+  {
+   "pattern": "ال1َ2ِ3",
+   "count": 428
+  },
+  {
+   "pattern": "ال1ِ2ْ3َة",
+   "count": 380
+  },
+  {
+   "pattern": "ال1ا2ِيَة",
+   "count": 380
+  },
+  {
+   "pattern": "ال1َوْ3",
+   "count": 372
+  },
+  {
+   "pattern": "المَ1ْ2َ3",
+   "count": 368
+  },
+  {
+   "pattern": "ال1َوا2ِ3",
+   "count": 364
+  },
+  {
+   "pattern": "ال1َ2ائِ3",
+   "count": 356
+  },
+  {
+   "pattern": "ال1ُ2َ3",
+   "count": 348
+  },
+  {
+   "pattern": "ال1ا2ِ3َيْن",
+   "count": 344
+  },
+  {
+   "pattern": "ال1َ2ُو3",
+   "count": 340
+  },
+  {
+   "pattern": "ال1َ2ْ3ِي",
+   "count": 336
+  },
+  {
+   "pattern": "ال1َيْ3",
+   "count": 328
+  },
+  {
+   "pattern": "ال1َ2َ3َة",
+   "count": 324
+  },
+  {
+   "pattern": "ال1َ2َّة",
+   "count": 316
+  },
+  {
+   "pattern": "ال1َ2َ3ِيَّة",
+   "count": 316
+  },
+  {
+   "pattern": "ال1َ2ِ3َة",
+   "count": 304
+  },
+  {
+   "pattern": "ال1ُ2ا3",
+   "count": 300
+  },
+  {
+   "pattern": "ال1ِ2ا3َة",
+   "count": 292
+  },
+  {
+   "pattern": "ال1ُ2ّا3",
+   "count": 292
+  },
+  {
+   "pattern": "المُ1ا2ِ3",
+   "count": 292
+  },
+  {
+   "pattern": "ال1ائِ3َة",
+   "count": 292
+  },
+  {
+   "pattern": "المُ1َ2ِّ3َة",
+   "count": 288
+  },
+  {
+   "pattern": "ال1َ2َ3ِي",
+   "count": 284
+  }
+ ],
+ "grid": [
+  {
+   "word": "الواثق",
+   "root": "#.ث.ق",
+   "column": "faail",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الوثيق",
+   "root": "#.ث.ق",
+   "column": "faiil",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الواحد",
+   "root": "#.ح.د",
+   "column": "faail",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الوحيد",
+   "root": "#.ح.د",
+   "column": "faiil",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الوادع",
+   "root": "#.د.ع",
+   "column": "faail",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الوديع",
+   "root": "#.د.ع",
+   "column": "faiil",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الوارث",
+   "root": "#.ر.ث",
+   "column": "faail",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الوريث",
+   "root": "#.ر.ث",
+   "column": "faiil",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الوارد",
+   "root": "#.ر.د",
+   "column": "faail",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الوريد",
+   "root": "#.ر.د",
+   "column": "faiil",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الواسع",
+   "root": "#.س.ع",
+   "column": "faail",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الوسيع",
+   "root": "#.س.ع",
+   "column": "faiil",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الواعد",
+   "root": "#.ع.د",
+   "column": "faail",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الوعيد",
+   "root": "#.ع.د",
+   "column": "faiil",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الوافر",
+   "root": "#.ف.ر",
+   "column": "faail",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الوفير",
+   "root": "#.ف.ر",
+   "column": "faiil",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الوالد",
+   "root": "#.ل.د",
+   "column": "faail",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الوليد",
+   "root": "#.ل.د",
+   "column": "faiil",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "البائد",
+   "root": "ب.#.د",
+   "column": "faail",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المبيد",
+   "root": "ب.#.د",
+   "column": "mu2",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "البياع",
+   "root": "ب.#.ع",
+   "column": "fa33aal",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "البائع",
+   "root": "ب.#.ع",
+   "column": "faail",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "البائن",
+   "root": "ب.#.ن",
+   "column": "faail",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المبين",
+   "root": "ب.#.ن",
+   "column": "mu2",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "التواب",
+   "root": "ت.#.ب",
+   "column": "fa33aal",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "التائب",
+   "root": "ت.#.ب",
+   "column": "faail",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الثائر",
+   "root": "ث.#.ر",
+   "column": "faail",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المثير",
+   "root": "ث.#.ر",
+   "column": "mu2",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المجود",
+   "root": "ج.#.د",
+   "column": "mu1",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المجيد",
+   "root": "ج.#.د",
+   "column": "mu2",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الجنين",
+   "root": "ج.ن.ن",
+   "column": "faiil",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المجنون",
+   "root": "ج.ن.ن",
+   "column": "maf3uul",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الحائط",
+   "root": "ح.#.ط",
+   "column": "faail",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المحيط",
+   "root": "ح.#.ط",
+   "column": "mu2",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المحول",
+   "root": "ح.#.ل",
+   "column": "mu1",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المحيل",
+   "root": "ح.#.ل",
+   "column": "mu2",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الحبيب",
+   "root": "ح.ب.ب",
+   "column": "faiil",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المحبوب",
+   "root": "ح.ب.ب",
+   "column": "maf3uul",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الحاج",
+   "root": "ح.ج.ج",
+   "column": "faail",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الحجيج",
+   "root": "ح.ج.ج",
+   "column": "faiil",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الحساس",
+   "root": "ح.س.س",
+   "column": "fa33aal",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المحسوس",
+   "root": "ح.س.س",
+   "column": "maf3uul",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الحشاش",
+   "root": "ح.ش.ش",
+   "column": "fa33aal",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الحشيش",
+   "root": "ح.ش.ش",
+   "column": "faiil",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الحظيظ",
+   "root": "ح.ظ.ظ",
+   "column": "faiil",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المحظوظ",
+   "root": "ح.ظ.ظ",
+   "column": "maf3uul",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الحقيق",
+   "root": "ح.ق.ق",
+   "column": "faiil",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المحقق",
+   "root": "ح.ق.ق",
+   "column": "mu1",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الحمام",
+   "root": "ح.م.م",
+   "column": "fa33aal",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المحموم",
+   "root": "ح.م.م",
+   "column": "maf3uul",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الخوان",
+   "root": "خ.#.ن",
+   "column": "fa33aal",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الخائن",
+   "root": "خ.#.ن",
+   "column": "faail",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الخاص",
+   "root": "خ.ص.ص",
+   "column": "faail",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المخصوص",
+   "root": "خ.ص.ص",
+   "column": "maf3uul",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الدباب",
+   "root": "د.ب.ب",
+   "column": "fa33aal",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الدبيب",
+   "root": "د.ب.ب",
+   "column": "faiil",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الرائج",
+   "root": "ر.#.ج",
+   "column": "faail",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المروج",
+   "root": "ر.#.ج",
+   "column": "mu1",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الرياح",
+   "root": "ر.#.ح",
+   "column": "fa33aal",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المريح",
+   "root": "ر.#.ح",
+   "column": "mu2",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الرائد",
+   "root": "ر.#.د",
+   "column": "faail",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المريد",
+   "root": "ر.#.د",
+   "column": "mu2",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الرائع",
+   "root": "ر.#.ع",
+   "column": "faail",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المريع",
+   "root": "ر.#.ع",
+   "column": "mu2",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الراضي",
+   "root": "ر.ض.#",
+   "column": "faail",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المرضي",
+   "root": "ر.ض.#",
+   "column": "mu2",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الرقيق",
+   "root": "ر.ق.ق",
+   "column": "faiil",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المرقوق",
+   "root": "ر.ق.ق",
+   "column": "maf3uul",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الزائد",
+   "root": "ز.#.د",
+   "column": "faail",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المزيد",
+   "root": "ز.#.د",
+   "column": "maf3uul",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الزائر",
+   "root": "ز.#.ر",
+   "column": "faail",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المزور",
+   "root": "ز.#.ر",
+   "column": "mu1",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "السياح",
+   "root": "س.#.ح",
+   "column": "fa33aal",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "السواح",
+   "root": "س.#.ح",
+   "column": "fa33aal",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "السائح",
+   "root": "س.#.ح",
+   "column": "faail",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "السواق",
+   "root": "س.#.ق",
+   "column": "fa33aal",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "السائق",
+   "root": "س.#.ق",
+   "column": "faail",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "السائل",
+   "root": "س.#.ل",
+   "column": "faail",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المسيل",
+   "root": "س.#.ل",
+   "column": "maf3uul",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "السباب",
+   "root": "س.ب.ب",
+   "column": "fa33aal",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المسبب",
+   "root": "س.ب.ب",
+   "column": "mu1",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الساد",
+   "root": "س.د.د",
+   "column": "faail",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "السديد",
+   "root": "س.د.د",
+   "column": "faiil",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "السام",
+   "root": "س.م.م",
+   "column": "faail",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المسموم",
+   "root": "س.م.م",
+   "column": "maf3uul",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الشاق",
+   "root": "ش.ق.ق",
+   "column": "faail",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الشقيق",
+   "root": "ش.ق.ق",
+   "column": "faiil",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الشلال",
+   "root": "ش.ل.ل",
+   "column": "fa33aal",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المشلول",
+   "root": "ش.ل.ل",
+   "column": "maf3uul",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الشمام",
+   "root": "ش.م.م",
+   "column": "fa33aal",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المشموم",
+   "root": "ش.م.م",
+   "column": "maf3uul",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المصير",
+   "root": "ص.#.ر",
+   "column": "maf3uul",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المصور",
+   "root": "ص.#.ر",
+   "column": "mu1",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الصواف",
+   "root": "ص.#.ف",
+   "column": "fa33aal",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المصيف",
+   "root": "ص.#.ف",
+   "column": "maf3uul",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الصافي",
+   "root": "ص.ف.#",
+   "column": "faail",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المصفي",
+   "root": "ص.ف.#",
+   "column": "mu1",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الصميم",
+   "root": "ص.م.م",
+   "column": "faiil",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المصمم",
+   "root": "ص.م.م",
+   "column": "mu1",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المطوع",
+   "root": "ط.#.ع",
+   "column": "mu1",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المطيع",
+   "root": "ط.#.ع",
+   "column": "mu2",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الطواف",
+   "root": "ط.#.ف",
+   "column": "fa33aal",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الطائف",
+   "root": "ط.#.ف",
+   "column": "faail",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الظليل",
+   "root": "ظ.ل.ل",
+   "column": "faiil",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المظلل",
+   "root": "ظ.ل.ل",
+   "column": "mu1",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "العائق",
+   "root": "ع.#.ق",
+   "column": "faail",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المعوق",
+   "root": "ع.#.ق",
+   "column": "mu1",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "العوام",
+   "root": "ع.#.م",
+   "column": "fa33aal",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "العائم",
+   "root": "ع.#.م",
+   "column": "faail",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المعين",
+   "root": "ع.#.ن",
+   "column": "maf3uul",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المعين",
+   "root": "ع.#.ن",
+   "column": "mu2",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "العداد",
+   "root": "ع.د.د",
+   "column": "fa33aal",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "العديد",
+   "root": "ع.د.د",
+   "column": "faiil",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "العاق",
+   "root": "ع.ق.ق",
+   "column": "faail",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "العقيق",
+   "root": "ع.ق.ق",
+   "column": "faiil",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "العام",
+   "root": "ع.م.م",
+   "column": "faail",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "العميم",
+   "root": "ع.م.م",
+   "column": "faiil",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الغال",
+   "root": "غ.ل.ل",
+   "column": "faail",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الغليل",
+   "root": "غ.ل.ل",
+   "column": "faiil",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الفياض",
+   "root": "ف.#.ض",
+   "column": "fa33aal",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الفائض",
+   "root": "ف.#.ض",
+   "column": "faail",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الفرار",
+   "root": "ف.ر.ر",
+   "column": "fa33aal",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الفار",
+   "root": "ف.ر.ر",
+   "column": "faail",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "القواد",
+   "root": "ق.#.د",
+   "column": "fa33aal",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "القائد",
+   "root": "ق.#.د",
+   "column": "faail",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "القار",
+   "root": "ق.ر.ر",
+   "column": "faail",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المقرر",
+   "root": "ق.ر.ر",
+   "column": "mu1",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الكائن",
+   "root": "ك.#.ن",
+   "column": "faail",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المكون",
+   "root": "ك.#.ن",
+   "column": "mu1",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "اللاهي",
+   "root": "ل.ه.#",
+   "column": "faail",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الملهي",
+   "root": "ل.ه.#",
+   "column": "mu2",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الموال",
+   "root": "م.#.ل",
+   "column": "fa33aal",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المائل",
+   "root": "م.#.ل",
+   "column": "faail",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الماد",
+   "root": "م.د.د",
+   "column": "faail",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المديد",
+   "root": "م.د.د",
+   "column": "faiil",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المار",
+   "root": "م.ر.ر",
+   "column": "faail",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المرير",
+   "root": "م.ر.ر",
+   "column": "faiil",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الماس",
+   "root": "م.س.س",
+   "column": "faail",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المسيس",
+   "root": "م.س.س",
+   "column": "faiil",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "النائم",
+   "root": "ن.#.م",
+   "column": "faail",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المنوم",
+   "root": "ن.#.م",
+   "column": "mu1",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الناجي",
+   "root": "ن.ج.#",
+   "column": "faail",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المنجي",
+   "root": "ن.ج.#",
+   "column": "mu1",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المهيب",
+   "root": "ه.#.ب",
+   "column": "maf3uul",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المهيب",
+   "root": "ه.#.ب",
+   "column": "mu2",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المهين",
+   "root": "ه.#.ن",
+   "column": "maf3uul",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المهين",
+   "root": "ه.#.ن",
+   "column": "mu2",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الهادي",
+   "root": "ه.د.#",
+   "column": "faail",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الهادئ",
+   "root": "ه.د.#",
+   "column": "faail",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المهدي",
+   "root": "ه.د.#",
+   "column": "mu2",
+   "weak": true,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "الهزاز",
+   "root": "ه.ز.ز",
+   "column": "fa33aal",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  },
+  {
+   "word": "المهزوز",
+   "root": "ه.ز.ز",
+   "column": "maf3uul",
+   "weak": false,
+   "geminate": true,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": null,
+   "tier3_pending": false
+  }
+ ],
+ "root_metadata": {
+  "#.ث.ق": {
+   "weak": true,
+   "geminate": false,
+   "weak_or_geminate": true
+  },
+  "#.ح.د": {
+   "weak": true,
+   "geminate": false,
+   "weak_or_geminate": true
+  },
+  "#.د.ع": {
+   "weak": true,
+   "geminate": false,
+   "weak_or_geminate": true
+  },
+  "#.ر.ث": {
+   "weak": true,
+   "geminate": false,
+   "weak_or_geminate": true
+  },
+  "#.ر.د": {
+   "weak": true,
+   "geminate": false,
+   "weak_or_geminate": true
+  },
+  "#.س.ع": {
+   "weak": true,
+   "geminate": false,
+   "weak_or_geminate": true
+  },
+  "#.ع.د": {
+   "weak": true,
+   "geminate": false,
+   "weak_or_geminate": true
+  },
+  "#.ف.ر": {
+   "weak": true,
+   "geminate": false,
+   "weak_or_geminate": true
+  },
+  "#.ل.د": {
+   "weak": true,
+   "geminate": false,
+   "weak_or_geminate": true
+  },
+  "ب.#.د": {
+   "weak": true,
+   "geminate": false,
+   "weak_or_geminate": true
+  },
+  "ب.#.ع": {
+   "weak": true,
+   "geminate": false,
+   "weak_or_geminate": true
+  },
+  "ب.#.ن": {
+   "weak": true,
+   "geminate": false,
+   "weak_or_geminate": true
+  },
+  "ت.#.ب": {
+   "weak": true,
+   "geminate": false,
+   "weak_or_geminate": true
+  },
+  "ث.#.ر": {
+   "weak": true,
+   "geminate": false,
+   "weak_or_geminate": true
+  },
+  "ج.#.د": {
+   "weak": true,
+   "geminate": false,
+   "weak_or_geminate": true
+  },
+  "ج.ن.ن": {
+   "weak": false,
+   "geminate": true,
+   "weak_or_geminate": true
+  },
+  "ح.#.ط": {
+   "weak": true,
+   "geminate": false,
+   "weak_or_geminate": true
+  },
+  "ح.#.ل": {
+   "weak": true,
+   "geminate": false,
+   "weak_or_geminate": true
+  },
+  "ح.ب.ب": {
+   "weak": false,
+   "geminate": true,
+   "weak_or_geminate": true
+  },
+  "ح.ج.ج": {
+   "weak": false,
+   "geminate": true,
+   "weak_or_geminate": true
+  },
+  "ح.س.س": {
+   "weak": false,
+   "geminate": true,
+   "weak_or_geminate": true
+  },
+  "ح.ش.ش": {
+   "weak": false,
+   "geminate": true,
+   "weak_or_geminate": true
+  },
+  "ح.ظ.ظ": {
+   "weak": false,
+   "geminate": true,
+   "weak_or_geminate": true
+  },
+  "ح.ق.ق": {
+   "weak": false,
+   "geminate": true,
+   "weak_or_geminate": true
+  },
+  "ح.م.م": {
+   "weak": false,
+   "geminate": true,
+   "weak_or_geminate": true
+  },
+  "خ.#.ن": {
+   "weak": true,
+   "geminate": false,
+   "weak_or_geminate": true
+  },
+  "خ.ص.ص": {
+   "weak": false,
+   "geminate": true,
+   "weak_or_geminate": true
+  },
+  "د.ب.ب": {
+   "weak": false,
+   "geminate": true,
+   "weak_or_geminate": true
+  },
+  "ر.#.ج": {
+   "weak": true,
+   "geminate": false,
+   "weak_or_geminate": true
+  },
+  "ر.#.ح": {
+   "weak": true,
+   "geminate": false,
+   "weak_or_geminate": true
+  },
+  "ر.#.د": {
+   "weak": true,
+   "geminate": false,
+   "weak_or_geminate": true
+  },
+  "ر.#.ع": {
+   "weak": true,
+   "geminate": false,
+   "weak_or_geminate": true
+  },
+  "ر.ض.#": {
+   "weak": true,
+   "geminate": false,
+   "weak_or_geminate": true
+  },
+  "ر.ق.ق": {
+   "weak": false,
+   "geminate": true,
+   "weak_or_geminate": true
+  },
+  "ز.#.د": {
+   "weak": true,
+   "geminate": false,
+   "weak_or_geminate": true
+  },
+  "ز.#.ر": {
+   "weak": true,
+   "geminate": false,
+   "weak_or_geminate": true
+  },
+  "س.#.ح": {
+   "weak": true,
+   "geminate": false,
+   "weak_or_geminate": true
+  },
+  "س.#.ق": {
+   "weak": true,
+   "geminate": false,
+   "weak_or_geminate": true
+  },
+  "س.#.ل": {
+   "weak": true,
+   "geminate": false,
+   "weak_or_geminate": true
+  },
+  "س.ب.ب": {
+   "weak": false,
+   "geminate": true,
+   "weak_or_geminate": true
+  },
+  "س.د.د": {
+   "weak": false,
+   "geminate": true,
+   "weak_or_geminate": true
+  },
+  "س.م.م": {
+   "weak": false,
+   "geminate": true,
+   "weak_or_geminate": true
+  },
+  "ش.ق.ق": {
+   "weak": false,
+   "geminate": true,
+   "weak_or_geminate": true
+  },
+  "ش.ل.ل": {
+   "weak": false,
+   "geminate": true,
+   "weak_or_geminate": true
+  },
+  "ش.م.م": {
+   "weak": false,
+   "geminate": true,
+   "weak_or_geminate": true
+  },
+  "ص.#.ر": {
+   "weak": true,
+   "geminate": false,
+   "weak_or_geminate": true
+  },
+  "ص.#.ف": {
+   "weak": true,
+   "geminate": false,
+   "weak_or_geminate": true
+  },
+  "ص.ف.#": {
+   "weak": true,
+   "geminate": false,
+   "weak_or_geminate": true
+  },
+  "ص.م.م": {
+   "weak": false,
+   "geminate": true,
+   "weak_or_geminate": true
+  },
+  "ط.#.ع": {
+   "weak": true,
+   "geminate": false,
+   "weak_or_geminate": true
+  },
+  "ط.#.ف": {
+   "weak": true,
+   "geminate": false,
+   "weak_or_geminate": true
+  },
+  "ظ.ل.ل": {
+   "weak": false,
+   "geminate": true,
+   "weak_or_geminate": true
+  },
+  "ع.#.ق": {
+   "weak": true,
+   "geminate": false,
+   "weak_or_geminate": true
+  },
+  "ع.#.م": {
+   "weak": true,
+   "geminate": false,
+   "weak_or_geminate": true
+  },
+  "ع.#.ن": {
+   "weak": true,
+   "geminate": false,
+   "weak_or_geminate": true
+  },
+  "ع.د.د": {
+   "weak": false,
+   "geminate": true,
+   "weak_or_geminate": true
+  },
+  "ع.ق.ق": {
+   "weak": false,
+   "geminate": true,
+   "weak_or_geminate": true
+  },
+  "ع.م.م": {
+   "weak": false,
+   "geminate": true,
+   "weak_or_geminate": true
+  },
+  "غ.ل.ل": {
+   "weak": false,
+   "geminate": true,
+   "weak_or_geminate": true
+  },
+  "ف.#.ض": {
+   "weak": true,
+   "geminate": false,
+   "weak_or_geminate": true
+  },
+  "ف.ر.ر": {
+   "weak": false,
+   "geminate": true,
+   "weak_or_geminate": true
+  },
+  "ق.#.د": {
+   "weak": true,
+   "geminate": false,
+   "weak_or_geminate": true
+  },
+  "ق.ر.ر": {
+   "weak": false,
+   "geminate": true,
+   "weak_or_geminate": true
+  },
+  "ك.#.ن": {
+   "weak": true,
+   "geminate": false,
+   "weak_or_geminate": true
+  },
+  "ل.ه.#": {
+   "weak": true,
+   "geminate": false,
+   "weak_or_geminate": true
+  },
+  "م.#.ل": {
+   "weak": true,
+   "geminate": false,
+   "weak_or_geminate": true
+  },
+  "م.د.د": {
+   "weak": false,
+   "geminate": true,
+   "weak_or_geminate": true
+  },
+  "م.ر.ر": {
+   "weak": false,
+   "geminate": true,
+   "weak_or_geminate": true
+  },
+  "م.س.س": {
+   "weak": false,
+   "geminate": true,
+   "weak_or_geminate": true
+  },
+  "ن.#.م": {
+   "weak": true,
+   "geminate": false,
+   "weak_or_geminate": true
+  },
+  "ن.ج.#": {
+   "weak": true,
+   "geminate": false,
+   "weak_or_geminate": true
+  },
+  "ه.#.ب": {
+   "weak": true,
+   "geminate": false,
+   "weak_or_geminate": true
+  },
+  "ه.#.ن": {
+   "weak": true,
+   "geminate": false,
+   "weak_or_geminate": true
+  },
+  "ه.د.#": {
+   "weak": true,
+   "geminate": false,
+   "weak_or_geminate": true
+  },
+  "ه.ز.ز": {
+   "weak": false,
+   "geminate": true,
+   "weak_or_geminate": true
+  }
+ },
+ "single_surface_root_flags": {
+  "#.ث.ق": false,
+  "#.ح.د": false,
+  "#.د.ع": false,
+  "#.ر.ث": false,
+  "#.ر.د": false,
+  "#.س.ع": false,
+  "#.ع.د": false,
+  "#.ف.ر": false,
+  "#.ل.د": false,
+  "ب.#.د": false,
+  "ب.#.ع": false,
+  "ب.#.ن": false,
+  "ت.#.ب": false,
+  "ث.#.ر": false,
+  "ج.#.د": false,
+  "ج.ن.ن": false,
+  "ح.#.ط": false,
+  "ح.#.ل": false,
+  "ح.ب.ب": false,
+  "ح.ج.ج": false,
+  "ح.س.س": false,
+  "ح.ش.ش": false,
+  "ح.ظ.ظ": false,
+  "ح.ق.ق": false,
+  "ح.م.م": false,
+  "خ.#.ن": false,
+  "خ.ص.ص": false,
+  "د.ب.ب": false,
+  "ر.#.ج": false,
+  "ر.#.ح": false,
+  "ر.#.د": false,
+  "ر.#.ع": false,
+  "ر.ض.#": false,
+  "ر.ق.ق": false,
+  "ز.#.د": false,
+  "ز.#.ر": false,
+  "س.#.ح": false,
+  "س.#.ق": false,
+  "س.#.ل": false,
+  "س.ب.ب": false,
+  "س.د.د": false,
+  "س.م.م": false,
+  "ش.ق.ق": false,
+  "ش.ل.ل": false,
+  "ش.م.م": false,
+  "ص.#.ر": false,
+  "ص.#.ف": false,
+  "ص.ف.#": false,
+  "ص.م.م": false,
+  "ط.#.ع": false,
+  "ط.#.ف": false,
+  "ظ.ل.ل": false,
+  "ع.#.ق": false,
+  "ع.#.م": false,
+  "ع.#.ن": true,
+  "ع.د.د": false,
+  "ع.ق.ق": false,
+  "ع.م.م": false,
+  "غ.ل.ل": false,
+  "ف.#.ض": false,
+  "ف.ر.ر": false,
+  "ق.#.د": false,
+  "ق.ر.ر": false,
+  "ك.#.ن": false,
+  "ل.ه.#": false,
+  "م.#.ل": false,
+  "م.د.د": false,
+  "م.ر.ر": false,
+  "م.س.س": false,
+  "ن.#.م": false,
+  "ن.ج.#": false,
+  "ه.#.ب": true,
+  "ه.#.ن": true,
+  "ه.د.#": false,
+  "ه.ز.ز": false
+ }
+}

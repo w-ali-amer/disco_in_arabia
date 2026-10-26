@@ -1,0 +1,4076 @@
+{
+  "component": "exp73_amplitude_bounds",
+  "purpose": "grade-1 reachable-accuracy bounds, size-matched nulls, encoding-cost accounting and register-purity inventory for exp73's TRUNCATED AMPLITUDE ladder, computed BEFORE any exp73_*.py exists (doc 55 SS19.2's ordering rule, inherited; Rule 4)",
+  "spec": "qnlp_private_docs/61_exp73_amplitude_DRAFT.md",
+  "generated_utc": "2026-08-27T17:35:47Z",
+  "script_sha256": "5e0c08a12a238930fdab093d598df7d1ef3ab0336daf84cc095f5f15f9b0a483",
+  "python": "3.12.13",
+  "numpy": "2.5.1",
+  "provenance": {
+    "instrument_sb_bounds_sha256": "a616d1243d5dd589675eb89c6a6341ea6448ea8c716ba14af4139f3fae1d9507",
+    "capacity_check_sha256": "1e5f38d91d8795d67aad8a436bb9d0417d78934f0273307e4a2d0b9503d15ba9",
+    "instrument_entangled_bounds_sha256": "788cc413bc12f1aa09aeadf942bc4a4ab8b2b06dd0dbc2e1b46c20f3e0733a50",
+    "raw_family": {
+      "file": "aravec_raw_vectors_44.json",
+      "file_sha256": "4e919966b3d359a9c1af397904113ad4d1dad3a6f6f9d2560fb17523843ba35a",
+      "declared_vectors_sha256": "699450d3d292f789d368920c33febf49ee4fe4ceff63501308b6da5759d6ce11",
+      "source": "aravec/full_uni_cbow_300_twitter.mdl",
+      "convention": "ta-marbuta U+0629 -> U+0647, as exp42_make_embeddings.py",
+      "raw_dim": 300,
+      "pca_fit_on": "all44",
+      "pca_fit_n": 44,
+      "n_components_taken": 16,
+      "var_explained_per_pc": [
+        0.12685513291325928,
+        0.08050060927190729,
+        0.06765674889989376,
+        0.05567354978630193,
+        0.05098951263093674,
+        0.043620785895241494,
+        0.04118832439137727,
+        0.03583101907881057,
+        0.03347548063418222,
+        0.03188435897220406,
+        0.02871585188687237,
+        0.026947924591325337,
+        0.025105720956369936,
+        0.024096085803686648,
+        0.023679257167638575,
+        0.02323659912567314
+      ],
+      "var_explained_cumulative": [
+        0.12685513291325928,
+        0.20735574218516656,
+        0.2750124910850603,
+        0.3306860408713622,
+        0.381675553502299,
+        0.42529633939754047,
+        0.46648466378891773,
+        0.5023156828677283,
+        0.5357911635019106,
+        0.5676755224741147,
+        0.5963913743609871,
+        0.6233392989523124,
+        0.6484450199086824,
+        0.672541105712369,
+        0.6962203628800075,
+        0.7194569620056807
+      ],
+      "sign_pin_pc1_pc2": {
+        "applied": [
+          -1.0,
+          1.0
+        ],
+        "rule": "pinned to the frozen vec2 plane, exactly as instrument_sb_bounds.load_raw does",
+        "max_abs_coord_diff_after_pin": 3.7192471324942744e-15
+      },
+      "sign_pin_pc3_onwards": {
+        "rule": "sign( Vt[k, argmax_j |Vt[k,j]| ] ) = +1, ties -> lowest j",
+        "why": "intrinsic to the axis: it depends on the loading vector alone, not on row order or inventory order. Bounds are invariant to it (asserted, SS`check_sign_invariance`); a trained circuit is not, which is why it is pinned.",
+        "applied": [
+          {
+            "pc": 3,
+            "argmax_loading_index": 97,
+            "loading": 0.17488111799997724,
+            "sign": 1.0
+          },
+          {
+            "pc": 4,
+            "argmax_loading_index": 271,
+            "loading": -0.19047225637739573,
+            "sign": -1.0
+          },
+          {
+            "pc": 5,
+            "argmax_loading_index": 136,
+            "loading": -0.18275325406160503,
+            "sign": -1.0
+          },
+          {
+            "pc": 6,
+            "argmax_loading_index": 167,
+            "loading": 0.16995250497636777,
+            "sign": 1.0
+          },
+          {
+            "pc": 7,
+            "argmax_loading_index": 104,
+            "loading": 0.1720369261902152,
+            "sign": 1.0
+          },
+          {
+            "pc": 8,
+            "argmax_loading_index": 217,
+            "loading": 0.1801303911899642,
+            "sign": 1.0
+          },
+          {
+            "pc": 9,
+            "argmax_loading_index": 57,
+            "loading": -0.20387286007404037,
+            "sign": -1.0
+          },
+          {
+            "pc": 10,
+            "argmax_loading_index": 52,
+            "loading": 0.2328985297065043,
+            "sign": 1.0
+          },
+          {
+            "pc": 11,
+            "argmax_loading_index": 275,
+            "loading": -0.16565809450526806,
+            "sign": -1.0
+          },
+          {
+            "pc": 12,
+            "argmax_loading_index": 293,
+            "loading": -0.1719718618934469,
+            "sign": -1.0
+          },
+          {
+            "pc": 13,
+            "argmax_loading_index": 248,
+            "loading": -0.16287959409436834,
+            "sign": -1.0
+          },
+          {
+            "pc": 14,
+            "argmax_loading_index": 96,
+            "loading": -0.17933863806397576,
+            "sign": -1.0
+          },
+          {
+            "pc": 15,
+            "argmax_loading_index": 167,
+            "loading": 0.20463230447222905,
+            "sign": 1.0
+          },
+          {
+            "pc": 16,
+            "argmax_loading_index": 245,
+            "loading": -0.1560669247924468,
+            "sign": -1.0
+          }
+        ]
+      },
+      "leakage_note": "PCA is fit over the FULL 44-noun inventory, matching exp42_make_embeddings.py and load_raw. NOT leakage in this setting: the held-out split is over unseen PAIRINGS, not unseen nouns (load_raw's own note)."
+    },
+    "budget": {
+      "restarts": 48,
+      "steps": 500,
+      "ls_starts": 6,
+      "seed": 0
+    },
+    "null_draws": 200,
+    "null_seed": 68000,
+    "extends": "instrument_entangled_bounds.py's general joint-map machinery to AMPLITUDE encodings. The only new object is the per-referent feature (the outer square of the normalised truncated vector); the row builder, the twin seeding, the search, the sign-flip invariant and the null discipline are the committed ones, called and not copied."
+  },
+  "category": {
+    "key": "nonoccupational",
+    "gloss": "non-occupational state",
+    "members": [
+      "الرجل",
+      "الولد",
+      "المسافر",
+      "المريض"
+    ],
+    "source": "instrument_sb_bounds.CATEGORIES -- doc 54 SS5.2, user-confirmed 2026-08-23; imported, never re-typed"
+  },
+  "selftest": {
+    "anchors": [
+      {
+        "anchor": "doc47_SS13_tertiary_pair",
+        "expected": 0.8526315789473684,
+        "expected_fraction": "81/95",
+        "got": 0.8526315789473684,
+        "got_fraction": "81/95",
+        "reproduced": true,
+        "source": "doc 47 SS13 (published 0.8526); diagnostic_sb_bounds.json membership_reconstruction.tertiary.recomputed_pair_level"
+      },
+      {
+        "anchor": "exp68_F1_raw_per_twin",
+        "expected": 0.7625,
+        "expected_fraction": "122/160",
+        "got": 0.7625,
+        "got_fraction": "122/160",
+        "reproduced": true,
+        "source": "diagnostic_sb_bounds.json target_selection.table.nonoccupational.F1.per_twin (= results_exp68.json bounds_context_only_doc54_SS12.per_twin_bounds.F1)"
+      },
+      {
+        "anchor": "exp68_FA_per_twin",
+        "expected": 0.925,
+        "expected_fraction": "148/160",
+        "got": 0.925,
+        "got_fraction": "148/160",
+        "reproduced": true,
+        "source": "diagnostic_sb_bounds.json target_selection.table.nonoccupational.FA.per_twin (= results_exp68.json bounds_context_only_doc54_SS12.per_twin_bounds.FA)"
+      },
+      {
+        "anchor": "exp69_F2_raw_per_twin",
+        "expected": 1.0,
+        "expected_fraction": "160/160",
+        "got": 1.0,
+        "got_fraction": "160/160",
+        "reproduced": true,
+        "source": "exp69_predictions.json :: grade1_bounds.R-W (= diagnostic_sb_bounds.json target_selection.table.nonoccupational.F2.per_twin)"
+      }
+    ],
+    "checks": {
+      "pca_convention": {
+        "max_abs_error_vs_load_raw_normalised_coords": 0.0,
+        "reproduces_load_raw_exactly": true,
+        "norm_divisors_recomputed": [
+          8.669494516224397,
+          10.160404144924657
+        ],
+        "norm_divisors_committed": [
+          8.669494516224397,
+          10.160404144924657
+        ],
+        "divisors_match": true,
+        "reading": "the amplitude ladder and every committed bound stand on the same PCA, the same sign pin and the same inventory; only the number of components differs"
+      },
+      "A1_linear_form": {
+        "matrix_L": [
+          [
+            1.0,
+            0.0,
+            1.0
+          ],
+          [
+            1.0,
+            0.0,
+            -1.0
+          ],
+          [
+            0.0,
+            2.0,
+            0.0
+          ]
+        ],
+        "det_L": 4.0,
+        "max_abs_error_over_grid": 2.220446049250313e-16,
+        "grid": "721 points, phi in [-pi, pi]",
+        "identity": "L v(phi) = u(2 phi), v = (x0^2, x0 x1, x1^2)",
+        "verified": true
+      },
+      "A1_doubled_angle_raw": {
+        "space": "raw",
+        "modes": {
+          "pair": {
+            "amplitude_1qubit": {
+              "bound": 0.925,
+              "fraction": "74/80",
+              "exact": true
+            },
+            "single_angle_at_2phi": {
+              "bound": 0.925,
+              "fraction": "74/80",
+              "exact": true
+            },
+            "single_angle_at_phi": {
+              "bound": 0.925,
+              "fraction": "74/80",
+              "exact": true
+            },
+            "doubled_angle_identity_holds": true,
+            "differs_from_same_angle": false
+          },
+          "twin": {
+            "amplitude_1qubit": {
+              "bound": 0.925,
+              "fraction": "148/160",
+              "exact": false
+            },
+            "single_angle_at_2phi": {
+              "bound": 0.925,
+              "fraction": "148/160",
+              "exact": false
+            },
+            "single_angle_at_phi": {
+              "bound": 0.925,
+              "fraction": "148/160",
+              "exact": false
+            },
+            "doubled_angle_identity_holds": true,
+            "differs_from_same_angle": false
+          }
+        },
+        "all_identities_hold": true,
+        "reading": "the 1-qubit amplitude bound EQUALS the committed single-angle bound at DOUBLED angle, exactly, in both modes -- that is the right check and it is asserted. Whether it also equals the same-angle bound is a separate, purely empirical matter and is reported, never asserted: angle doubling is a bijective relabelling of the inventory but not a linear map of the features, so the two need not agree, and 'amplitude encoding is not a reparameterisation of the angle encoding' is a measurement here rather than an assumption."
+      },
+      "A1_doubled_angle_instr": {
+        "space": "instr",
+        "modes": {
+          "pair": {
+            "amplitude_1qubit": {
+              "bound": 0.925,
+              "fraction": "74/80",
+              "exact": true
+            },
+            "single_angle_at_2phi": {
+              "bound": 0.925,
+              "fraction": "74/80",
+              "exact": true
+            },
+            "single_angle_at_phi": {
+              "bound": 0.925,
+              "fraction": "74/80",
+              "exact": true
+            },
+            "doubled_angle_identity_holds": true,
+            "differs_from_same_angle": false
+          },
+          "twin": {
+            "amplitude_1qubit": {
+              "bound": 0.925,
+              "fraction": "148/160",
+              "exact": false
+            },
+            "single_angle_at_2phi": {
+              "bound": 0.925,
+              "fraction": "148/160",
+              "exact": false
+            },
+            "single_angle_at_phi": {
+              "bound": 0.925,
+              "fraction": "148/160",
+              "exact": false
+            },
+            "doubled_angle_identity_holds": true,
+            "differs_from_same_angle": false
+          }
+        },
+        "all_identities_hold": true,
+        "reading": "the 1-qubit amplitude bound EQUALS the committed single-angle bound at DOUBLED angle, exactly, in both modes -- that is the right check and it is asserted. Whether it also equals the same-angle bound is a separate, purely empirical matter and is reported, never asserted: angle doubling is a bijective relabelling of the inventory but not a linear map of the features, so the two need not agree, and 'amplitude encoding is not a reparameterisation of the angle encoding' is a measurement here rather than an assumption."
+      },
+      "reparameterisation_invariance": {
+        "trials": [
+          {
+            "trial": 0,
+            "cond_A": 10.335544314577747,
+            "base": {
+              "pair": 74,
+              "twin": 148
+            },
+            "reparameterised": {
+              "pair": 74,
+              "twin": 148
+            },
+            "pair_identical_ASSERTED": true,
+            "twin_identical_REPORTED_NOT_ASSERTED": true
+          },
+          {
+            "trial": 1,
+            "cond_A": 8.734808225400855,
+            "base": {
+              "pair": 74,
+              "twin": 148
+            },
+            "reparameterised": {
+              "pair": 74,
+              "twin": 150
+            },
+            "pair_identical_ASSERTED": true,
+            "twin_identical_REPORTED_NOT_ASSERTED": false
+          },
+          {
+            "trial": 2,
+            "cond_A": 7.379402405185747,
+            "base": {
+              "pair": 74,
+              "twin": 148
+            },
+            "reparameterised": {
+              "pair": 74,
+              "twin": 148
+            },
+            "pair_identical_ASSERTED": true,
+            "twin_identical_REPORTED_NOT_ASSERTED": true
+          },
+          {
+            "trial": 3,
+            "cond_A": 7.424549632437188,
+            "base": {
+              "pair": 74,
+              "twin": 148
+            },
+            "reparameterised": {
+              "pair": 74,
+              "twin": 148
+            },
+            "pair_identical_ASSERTED": true,
+            "twin_identical_REPORTED_NOT_ASSERTED": true
+          },
+          {
+            "trial": 4,
+            "cond_A": 13.423803352489086,
+            "base": {
+              "pair": 74,
+              "twin": 148
+            },
+            "reparameterised": {
+              "pair": 74,
+              "twin": 148
+            },
+            "pair_identical_ASSERTED": true,
+            "twin_identical_REPORTED_NOT_ASSERTED": true
+          },
+          {
+            "trial": 5,
+            "cond_A": 15.958909157813737,
+            "base": {
+              "pair": 74,
+              "twin": 148
+            },
+            "reparameterised": {
+              "pair": 74,
+              "twin": 148
+            },
+            "pair_identical_ASSERTED": true,
+            "twin_identical_REPORTED_NOT_ASSERTED": true
+          }
+        ],
+        "cond_max": 50.0,
+        "all_identical": true,
+        "twin_agreement_rate_reported_only": 0.8333333333333334,
+        "claim": "MAX-FS over Phi = vec(v_a v_p^T) is invariant under v -> A v for invertible A, because W -> (A (x) A)^{-T} W is a bijection of the readout space. ASSERTED on the exact pair-mode path; the twin-mode search is a heuristic and its coordinate-dependence is reported, not asserted away."
+      },
+      "sign_invariance": {
+        "d2": {
+          "trials": [
+            {
+              "signs": [
+                1,
+                1
+              ],
+              "base": {
+                "pair": 74,
+                "twin": 148
+              },
+              "flipped": {
+                "pair": 74,
+                "twin": 148
+              },
+              "pair_identical": true,
+              "twin_identical": true
+            },
+            {
+              "signs": [
+                -1,
+                1
+              ],
+              "base": {
+                "pair": 74,
+                "twin": 148
+              },
+              "flipped": {
+                "pair": 74,
+                "twin": 148
+              },
+              "pair_identical": true,
+              "twin_identical": true
+            },
+            {
+              "signs": [
+                -1,
+                1
+              ],
+              "base": {
+                "pair": 74,
+                "twin": 148
+              },
+              "flipped": {
+                "pair": 74,
+                "twin": 148
+              },
+              "pair_identical": true,
+              "twin_identical": true
+            },
+            {
+              "signs": [
+                1,
+                -1
+              ],
+              "base": {
+                "pair": 74,
+                "twin": 148
+              },
+              "flipped": {
+                "pair": 74,
+                "twin": 148
+              },
+              "pair_identical": true,
+              "twin_identical": true
+            }
+          ],
+          "pair_all_identical": true,
+          "twin_all_identical": true,
+          "pair_path_is_exact": true,
+          "asserted": true,
+          "note": "ASSERTED (the pair count is the exact optimum)"
+        },
+        "d4": {
+          "trials": [
+            {
+              "signs": [
+                1,
+                -1,
+                -1,
+                -1
+              ],
+              "base": {
+                "pair": 80,
+                "twin": 160
+              },
+              "flipped": {
+                "pair": 80,
+                "twin": 160
+              },
+              "pair_identical": true,
+              "twin_identical": true
+            },
+            {
+              "signs": [
+                1,
+                -1,
+                -1,
+                -1
+              ],
+              "base": {
+                "pair": 80,
+                "twin": 160
+              },
+              "flipped": {
+                "pair": 80,
+                "twin": 160
+              },
+              "pair_identical": true,
+              "twin_identical": true
+            },
+            {
+              "signs": [
+                -1,
+                -1,
+                -1,
+                1
+              ],
+              "base": {
+                "pair": 80,
+                "twin": 160
+              },
+              "flipped": {
+                "pair": 80,
+                "twin": 160
+              },
+              "pair_identical": true,
+              "twin_identical": true
+            },
+            {
+              "signs": [
+                -1,
+                1,
+                1,
+                -1
+              ],
+              "base": {
+                "pair": 80,
+                "twin": 160
+              },
+              "flipped": {
+                "pair": 80,
+                "twin": 160
+              },
+              "pair_identical": true,
+              "twin_identical": true
+            }
+          ],
+          "pair_all_identical": true,
+          "twin_all_identical": true,
+          "pair_path_is_exact": false,
+          "asserted": false,
+          "note": "REPORTED ONLY (the pair count is a budgeted search output; the OPTIMUM is invariant, the heuristic need not be)"
+        },
+        "d8": {
+          "trials": [
+            {
+              "signs": [
+                -1,
+                -1,
+                -1,
+                1,
+                -1,
+                1,
+                1,
+                1
+              ],
+              "base": {
+                "pair": 80,
+                "twin": 160
+              },
+              "flipped": {
+                "pair": 80,
+                "twin": 160
+              },
+              "pair_identical": true,
+              "twin_identical": true
+            },
+            {
+              "signs": [
+                -1,
+                -1,
+                1,
+                -1,
+                1,
+                1,
+                1,
+                -1
+              ],
+              "base": {
+                "pair": 80,
+                "twin": 160
+              },
+              "flipped": {
+                "pair": 80,
+                "twin": 160
+              },
+              "pair_identical": true,
+              "twin_identical": true
+            },
+            {
+              "signs": [
+                1,
+                1,
+                1,
+                -1,
+                -1,
+                1,
+                -1,
+                -1
+              ],
+              "base": {
+                "pair": 80,
+                "twin": 160
+              },
+              "flipped": {
+                "pair": 80,
+                "twin": 160
+              },
+              "pair_identical": true,
+              "twin_identical": true
+            },
+            {
+              "signs": [
+                -1,
+                1,
+                -1,
+                1,
+                -1,
+                -1,
+                1,
+                1
+              ],
+              "base": {
+                "pair": 80,
+                "twin": 160
+              },
+              "flipped": {
+                "pair": 80,
+                "twin": 160
+              },
+              "pair_identical": true,
+              "twin_identical": true
+            }
+          ],
+          "pair_all_identical": true,
+          "twin_all_identical": true,
+          "pair_path_is_exact": true,
+          "asserted": true,
+          "note": "ASSERTED (the pair count is the exact optimum)"
+        },
+        "d16": {
+          "trials": [
+            {
+              "signs": [
+                1,
+                1,
+                -1,
+                -1,
+                1,
+                1,
+                1,
+                -1,
+                -1,
+                1,
+                -1,
+                -1,
+                1,
+                -1,
+                1,
+                -1
+              ],
+              "base": {
+                "pair": 80,
+                "twin": 160
+              },
+              "flipped": {
+                "pair": 80,
+                "twin": 160
+              },
+              "pair_identical": true,
+              "twin_identical": true
+            },
+            {
+              "signs": [
+                -1,
+                1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                1,
+                1,
+                -1,
+                -1,
+                1,
+                1,
+                -1,
+                -1,
+                -1
+              ],
+              "base": {
+                "pair": 80,
+                "twin": 160
+              },
+              "flipped": {
+                "pair": 80,
+                "twin": 160
+              },
+              "pair_identical": true,
+              "twin_identical": true
+            },
+            {
+              "signs": [
+                -1,
+                1,
+                1,
+                1,
+                -1,
+                1,
+                1,
+                -1,
+                1,
+                -1,
+                -1,
+                1,
+                1,
+                -1,
+                1,
+                1
+              ],
+              "base": {
+                "pair": 80,
+                "twin": 160
+              },
+              "flipped": {
+                "pair": 80,
+                "twin": 160
+              },
+              "pair_identical": true,
+              "twin_identical": true
+            },
+            {
+              "signs": [
+                -1,
+                -1,
+                1,
+                1,
+                1,
+                -1,
+                -1,
+                1,
+                -1,
+                1,
+                1,
+                -1,
+                -1,
+                1,
+                -1,
+                1
+              ],
+              "base": {
+                "pair": 80,
+                "twin": 160
+              },
+              "flipped": {
+                "pair": 80,
+                "twin": 160
+              },
+              "pair_identical": true,
+              "twin_identical": true
+            }
+          ],
+          "pair_all_identical": true,
+          "twin_all_identical": true,
+          "pair_path_is_exact": true,
+          "asserted": true,
+          "note": "ASSERTED (the pair count is the exact optimum)"
+        },
+        "all_identical": true
+      },
+      "A1_separation": {
+        "n_inventories": 30,
+        "seed": 0,
+        "mode": "pair (EXACT R^3 arrangement enumeration on every row)",
+        "identity_amplitude_equals_u_2phi_held": "30/30",
+        "identity_holds_everywhere": true,
+        "amplitude_differs_from_u_phi": "28/30",
+        "doubling_is_not_inert": true,
+        "trials": [
+          {
+            "trial": 0,
+            "amplitude": 70,
+            "u_2phi": 70,
+            "u_phi": 68,
+            "n_casts": 80
+          },
+          {
+            "trial": 1,
+            "amplitude": 54,
+            "u_2phi": 54,
+            "u_phi": 70,
+            "n_casts": 80
+          },
+          {
+            "trial": 2,
+            "amplitude": 67,
+            "u_2phi": 67,
+            "u_phi": 59,
+            "n_casts": 80
+          },
+          {
+            "trial": 3,
+            "amplitude": 64,
+            "u_2phi": 64,
+            "u_phi": 56,
+            "n_casts": 80
+          },
+          {
+            "trial": 4,
+            "amplitude": 63,
+            "u_2phi": 63,
+            "u_phi": 57,
+            "n_casts": 80
+          },
+          {
+            "trial": 5,
+            "amplitude": 68,
+            "u_2phi": 68,
+            "u_phi": 68,
+            "n_casts": 80
+          },
+          {
+            "trial": 6,
+            "amplitude": 69,
+            "u_2phi": 69,
+            "u_phi": 59,
+            "n_casts": 80
+          },
+          {
+            "trial": 7,
+            "amplitude": 59,
+            "u_2phi": 59,
+            "u_phi": 63,
+            "n_casts": 80
+          },
+          {
+            "trial": 8,
+            "amplitude": 58,
+            "u_2phi": 58,
+            "u_phi": 67,
+            "n_casts": 80
+          },
+          {
+            "trial": 9,
+            "amplitude": 65,
+            "u_2phi": 65,
+            "u_phi": 74,
+            "n_casts": 80
+          },
+          {
+            "trial": 10,
+            "amplitude": 57,
+            "u_2phi": 57,
+            "u_phi": 57,
+            "n_casts": 80
+          },
+          {
+            "trial": 11,
+            "amplitude": 72,
+            "u_2phi": 72,
+            "u_phi": 64,
+            "n_casts": 80
+          },
+          {
+            "trial": 12,
+            "amplitude": 72,
+            "u_2phi": 72,
+            "u_phi": 59,
+            "n_casts": 80
+          },
+          {
+            "trial": 13,
+            "amplitude": 73,
+            "u_2phi": 73,
+            "u_phi": 65,
+            "n_casts": 80
+          },
+          {
+            "trial": 14,
+            "amplitude": 71,
+            "u_2phi": 71,
+            "u_phi": 77,
+            "n_casts": 80
+          },
+          {
+            "trial": 15,
+            "amplitude": 63,
+            "u_2phi": 63,
+            "u_phi": 65,
+            "n_casts": 80
+          },
+          {
+            "trial": 16,
+            "amplitude": 56,
+            "u_2phi": 56,
+            "u_phi": 70,
+            "n_casts": 80
+          },
+          {
+            "trial": 17,
+            "amplitude": 59,
+            "u_2phi": 59,
+            "u_phi": 66,
+            "n_casts": 80
+          },
+          {
+            "trial": 18,
+            "amplitude": 74,
+            "u_2phi": 74,
+            "u_phi": 67,
+            "n_casts": 80
+          },
+          {
+            "trial": 19,
+            "amplitude": 64,
+            "u_2phi": 64,
+            "u_phi": 63,
+            "n_casts": 80
+          },
+          {
+            "trial": 20,
+            "amplitude": 65,
+            "u_2phi": 65,
+            "u_phi": 80,
+            "n_casts": 80
+          },
+          {
+            "trial": 21,
+            "amplitude": 57,
+            "u_2phi": 57,
+            "u_phi": 68,
+            "n_casts": 80
+          },
+          {
+            "trial": 22,
+            "amplitude": 66,
+            "u_2phi": 66,
+            "u_phi": 56,
+            "n_casts": 80
+          },
+          {
+            "trial": 23,
+            "amplitude": 60,
+            "u_2phi": 60,
+            "u_phi": 65,
+            "n_casts": 80
+          },
+          {
+            "trial": 24,
+            "amplitude": 59,
+            "u_2phi": 59,
+            "u_phi": 70,
+            "n_casts": 80
+          },
+          {
+            "trial": 25,
+            "amplitude": 64,
+            "u_2phi": 64,
+            "u_phi": 62,
+            "n_casts": 80
+          },
+          {
+            "trial": 26,
+            "amplitude": 63,
+            "u_2phi": 63,
+            "u_phi": 73,
+            "n_casts": 80
+          },
+          {
+            "trial": 27,
+            "amplitude": 74,
+            "u_2phi": 74,
+            "u_phi": 62,
+            "n_casts": 80
+          },
+          {
+            "trial": 28,
+            "amplitude": 64,
+            "u_2phi": 64,
+            "u_phi": 57,
+            "n_casts": 80
+          },
+          {
+            "trial": 29,
+            "amplitude": 58,
+            "u_2phi": 58,
+            "u_phi": 66,
+            "n_casts": 80
+          }
+        ],
+        "reading": "the doubled-angle identity is a THEOREM and holds on every inventory; the same-angle agreement is an INVENTORY-SPECIFIC COINCIDENCE and fails on most random inventories. Amplitude encoding of a unit 2-vector is therefore NOT a reparameterisation of the committed angle encoding -- it is the same feature space at double frequency, which reorders the inventory around the circle."
+      },
+      "A1_committed_inventory_all_categories": {
+        "per_category": {
+          "tertiary": {
+            "amplitude": "81/95",
+            "u_2phi": "81/95",
+            "u_phi": "81/95",
+            "identity_holds": true,
+            "differs_from_same_angle": false
+          },
+          "uniformed": {
+            "amplitude": "70/80",
+            "u_2phi": "70/80",
+            "u_phi": "70/80",
+            "identity_holds": true,
+            "differs_from_same_angle": false
+          },
+          "manual": {
+            "amplitude": "80/95",
+            "u_2phi": "80/95",
+            "u_phi": "80/95",
+            "identity_holds": true,
+            "differs_from_same_angle": false
+          },
+          "nonoccupational": {
+            "amplitude": "74/80",
+            "u_2phi": "74/80",
+            "u_phi": "74/80",
+            "identity_holds": true,
+            "differs_from_same_angle": false
+          }
+        },
+        "reading": "on THIS inventory the same-angle value coincides with the amplitude value in every category. Reported as a coincidence and NOT as a finding: `A1_separation` shows it fails on most random inventories, so nothing follows from it about the amplitude rungs A3/A4, whose feature spaces are not 3-dimensional and have no angle analogue at all."
+      },
+      "saturation_certificate": {
+        "per_rung": {
+          "A1": {
+            "d_joint": 9,
+            "n_twin_rows": 160,
+            "d_joint_ge_n_rows": false,
+            "certificate_fired": false,
+            "rank": null,
+            "min_margin": null,
+            "failing_direction_ok": true
+          },
+          "A2": {
+            "d_joint": 100,
+            "n_twin_rows": 160,
+            "d_joint_ge_n_rows": false,
+            "certificate_fired": false,
+            "rank": null,
+            "min_margin": null,
+            "failing_direction_ok": true
+          },
+          "A3": {
+            "d_joint": 1296,
+            "n_twin_rows": 160,
+            "d_joint_ge_n_rows": true,
+            "certificate_fired": true,
+            "rank": 160,
+            "min_margin": 0.189720441993997,
+            "failing_direction_ok": true
+          },
+          "A4": {
+            "d_joint": 18496,
+            "n_twin_rows": 160,
+            "d_joint_ge_n_rows": true,
+            "certificate_fired": true,
+            "rank": 160,
+            "min_margin": 0.16238771512228933,
+            "failing_direction_ok": true
+          }
+        },
+        "both_directions_asserted": true,
+        "note": "the certificate must NOT fire at A1 (d_joint 9 < 160 rows) and A2 (100 < 160); if it did, the rank test would be meaningless. That failing direction is asserted, not assumed."
+      },
+      "invariants": {
+        "A1": {
+          "pair": 0.925,
+          "twin": 0.925,
+          "d_joint": 9,
+          "d_per_referent": 3,
+          "max_at_or_above_chance": true,
+          "twin_ge_pair": true,
+          "sign_flip_sums_to_n": true,
+          "swap_perm_max_abs_error": 0.0,
+          "swap_perm_verified": true
+        },
+        "A2": {
+          "pair": 1.0,
+          "twin": 1.0,
+          "d_joint": 100,
+          "d_per_referent": 10,
+          "max_at_or_above_chance": true,
+          "twin_ge_pair": true,
+          "sign_flip_sums_to_n": true,
+          "swap_perm_max_abs_error": 0.0,
+          "swap_perm_verified": true
+        },
+        "A3": {
+          "pair": 1.0,
+          "twin": 1.0,
+          "d_joint": 1296,
+          "d_per_referent": 36,
+          "max_at_or_above_chance": true,
+          "twin_ge_pair": true,
+          "sign_flip_sums_to_n": true,
+          "swap_perm_max_abs_error": 0.0,
+          "swap_perm_verified": true
+        },
+        "A4": {
+          "pair": 1.0,
+          "twin": 1.0,
+          "d_joint": 18496,
+          "d_per_referent": 136,
+          "max_at_or_above_chance": true,
+          "twin_ge_pair": true,
+          "sign_flip_sums_to_n": true,
+          "swap_perm_max_abs_error": 0.0,
+          "swap_perm_verified": true
+        }
+      },
+      "quadratic_form_identity": {
+        "max_abs_error": 4.440892098500626e-16,
+        "verified": true,
+        "identity": "x^T M x = <W, v(x)> with v the triu outer square and W = triu(M) with the off-diagonals doubled -- SS1, checked on random symmetric M at d = 2, 4, 8, 16"
+      }
+    },
+    "all_passed": true
+  },
+  "derivation": {
+    "measurement_is_a_quadratic_form": {
+      "statement": "p(x) = <psi(x)|O|psi(x)> = x^T M x, M = M^T real",
+      "per_referent_feature": "v(x) = (x_i x_j)_{i <= j}, triu-ordered",
+      "d_per_referent": "d(d+1)/2",
+      "joint_feature": "vec(v(x_a) v(x_p)^T), a PRODUCT map",
+      "d_joint": "[d(d+1)/2]^2",
+      "classical_comparator_implied": "a QUADRATIC (kernel) model on the raw features: linear in the degree-2 monomials of x, equivalently the kernel (x_a . x_a')^2 (x_p . x_p')^2 on the two-referent decision. This is EVEN MORE IMMEDIATE than the angle maps' matched comparator -- it is the same object in another basis (doc 52 SS1's prohibition applies at its strongest).",
+      "general_W_qualifier": "W ranges over the whole coordinate space; the physically realisable M are a subset. The committed modules make the same identification and this one inherits it verbatim, which is what makes these numbers comparable with theirs."
+    },
+    "encoding_map": {
+      "formula": "x(r) = z_{1:d}(r) / ||z_{1:d}(r)||_2, z = the sign-pinned raw PCA scores, zero-padded to 2^q (vacuous when d = 2^q)",
+      "information_cost_vs_eps_map": "the eps-map is injective and affine and destroys NO information -- its cost is angular RESOLUTION, forced by the concurrence dead zones. The amplitude map is lossy TWICE: truncation discards 1 - cumvar(d) of the variance, and unit-l2 normalisation discards the radius, exactly one real number per referent -- the same number FA discarded relative to F2. Per-referent free coordinates: FA 1, F2/P-eps 2, amplitude d - 1."
+    },
+    "A1_relation": {
+      "matrix_L": [
+        [
+          1.0,
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          2.0,
+          0.0
+        ]
+      ],
+      "det_L": 4.0,
+      "max_abs_error_over_grid": 2.220446049250313e-16,
+      "grid": "721 points, phi in [-pi, pi]",
+      "identity": "L v(phi) = u(2 phi), v = (x0^2, x0 x1, x1^2)",
+      "verified": true
+    }
+  },
+  "encoding_cost": {
+    "A1": {
+      "qubits_per_referent": 1,
+      "d_truncated": 2,
+      "d_per_referent_feature": 3,
+      "d_joint": 9,
+      "free_real_coordinates_per_referent": 1,
+      "variance_captured_by_PC1..PC2": 0.20735574218516656,
+      "variance_discarded_by_truncation": 0.7926442578148334,
+      "radius_destroyed_by_normalisation": {
+        "min": 3.6419608233134277,
+        "median": 7.767512846567905,
+        "max": 11.818584443590053,
+        "mean": 7.897899236390401,
+        "note": "||z_{1:d}(r)||_2, exactly the one real number per referent that unit-l2 normalisation discards -- the same quantity FA discarded relative to F2"
+      },
+      "definition": "SELFTEST rung -- 1 qubit, d = 2. Not an exp73 arm."
+    },
+    "A2": {
+      "qubits_per_referent": 2,
+      "d_truncated": 4,
+      "d_per_referent_feature": 10,
+      "d_joint": 100,
+      "free_real_coordinates_per_referent": 3,
+      "variance_captured_by_PC1..PC4": 0.3306860408713622,
+      "variance_discarded_by_truncation": 0.6693139591286378,
+      "radius_destroyed_by_normalisation": {
+        "min": 3.7645071016934244,
+        "median": 9.190901483975153,
+        "max": 26.47538462535147,
+        "mean": 9.848744902784231,
+        "note": "||z_{1:d}(r)||_2, exactly the one real number per referent that unit-l2 normalisation discards -- the same quantity FA discarded relative to F2"
+      },
+      "definition": "SENSITIVITY rung -- 2 qubits, d = 4. NOTED, NOT RUN: the 2-qubit-per-referent slot of the width ladder is already occupied by the committed ANGLE registers F2 and P-eps, and adding a third 2-qubit arm buys a comparison exp73 does not ask. Its bound is reported so the ladder is continuous and so the saturation onset (SS4) is visible."
+    },
+    "A3": {
+      "qubits_per_referent": 3,
+      "d_truncated": 8,
+      "d_per_referent_feature": 36,
+      "d_joint": 1296,
+      "free_real_coordinates_per_referent": 7,
+      "variance_captured_by_PC1..PC8": 0.5023156828677283,
+      "variance_discarded_by_truncation": 0.4976843171322717,
+      "radius_destroyed_by_normalisation": {
+        "min": 6.331986686477582,
+        "median": 11.547576295564813,
+        "max": 27.816516177536815,
+        "mean": 12.42807660892777,
+        "note": "||z_{1:d}(r)||_2, exactly the one real number per referent that unit-l2 normalisation discards -- the same quantity FA discarded relative to F2"
+      },
+      "definition": "exp73 ARM -- 3 qubits, d = 8 = PC1..PC8."
+    },
+    "A4": {
+      "qubits_per_referent": 4,
+      "d_truncated": 16,
+      "d_per_referent_feature": 136,
+      "d_joint": 18496,
+      "free_real_coordinates_per_referent": 15,
+      "variance_captured_by_PC1..PC16": 0.7194569620056807,
+      "variance_discarded_by_truncation": 0.28054303799431934,
+      "radius_destroyed_by_normalisation": {
+        "min": 8.198355467922934,
+        "median": 15.327191019833112,
+        "max": 29.32739186705482,
+        "mean": 15.777467438305493,
+        "note": "||z_{1:d}(r)||_2, exactly the one real number per referent that unit-l2 normalisation discards -- the same quantity FA discarded relative to F2"
+      },
+      "definition": "exp73 ARM -- 4 qubits, d = 16 = PC1..PC16."
+    }
+  },
+  "grade1_bounds": {
+    "A1": {
+      "pair": {
+        "map": "A1",
+        "mode": "pair",
+        "d_joint": 9,
+        "d_per_referent": 3,
+        "feature_kind": "product",
+        "n_casts": 80,
+        "n_rows": 80,
+        "count": 74,
+        "bound": 0.925,
+        "fraction": "74/80",
+        "population": "casts (both twins won together)",
+        "method": "EXACT (R^3 arrangement enumeration, doc 47 SS16 fix)",
+        "exact": true,
+        "sign_flip_check": {
+          "n_rows": 80,
+          "satisfied_c": 74,
+          "satisfied_minus_c": 6,
+          "boundary_rows": 0,
+          "sums_to_n": true
+        },
+        "saturated": false,
+        "n_bearers": 4,
+        "n_nonbearers": 20,
+        "swap_perm_max_abs_error": 0.0,
+        "null": {
+          "draws": 200,
+          "size_matched_B": 4,
+          "mean": 0.8220000000000001,
+          "sd": 0.07354364922757466,
+          "min": 0.6625,
+          "max": 0.975,
+          "percentile_of_category": 89.5,
+          "n_draws_saturated": 0,
+          "below_null": false,
+          "identical_search_budget": true,
+          "seed": 68000
+        },
+        "definition": "SELFTEST rung -- 1 qubit, d = 2. Not an exp73 arm.",
+        "qubits_per_referent": 1,
+        "d_truncated": 2
+      },
+      "twin": {
+        "map": "A1",
+        "mode": "twin",
+        "d_joint": 9,
+        "d_per_referent": 3,
+        "feature_kind": "product",
+        "n_casts": 80,
+        "n_rows": 160,
+        "count": 148,
+        "bound": 0.925,
+        "fraction": "148/160",
+        "population": "twins (a cast may score 0, 1/2 or 1)",
+        "method": "CONSTRUCTIVE LOWER BOUND (48 restarts x 500 steps + 6 LS-drop starts) -- NOT a maximum",
+        "exact": false,
+        "sign_flip_check": {
+          "n_rows": 160,
+          "satisfied_c": 148,
+          "satisfied_minus_c": 12,
+          "boundary_rows": 0,
+          "sums_to_n": true
+        },
+        "saturated": false,
+        "n_bearers": 4,
+        "n_nonbearers": 20,
+        "swap_perm_max_abs_error": 0.0,
+        "null": {
+          "draws": 200,
+          "size_matched_B": 4,
+          "mean": 0.8246562499999999,
+          "sd": 0.07303808910932162,
+          "min": 0.6625,
+          "max": 0.98125,
+          "percentile_of_category": 89.0,
+          "n_draws_saturated": 0,
+          "below_null": false,
+          "identical_search_budget": true,
+          "seed": 68000
+        },
+        "definition": "SELFTEST rung -- 1 qubit, d = 2. Not an exp73 arm.",
+        "qubits_per_referent": 1,
+        "d_truncated": 2
+      }
+    },
+    "A2": {
+      "pair": {
+        "map": "A2",
+        "mode": "pair",
+        "d_joint": 100,
+        "d_per_referent": 10,
+        "feature_kind": "product",
+        "n_casts": 80,
+        "n_rows": 80,
+        "count": 80,
+        "bound": 1.0,
+        "fraction": "80/80",
+        "population": "casts (both twins won together)",
+        "method": "CONSTRUCTIVE LOWER BOUND (48 restarts x 500 steps + 6 LS-drop starts) -- NOT a maximum",
+        "exact": false,
+        "sign_flip_check": {
+          "n_rows": 80,
+          "satisfied_c": 80,
+          "satisfied_minus_c": 0,
+          "boundary_rows": 0,
+          "sums_to_n": true
+        },
+        "saturated": false,
+        "n_bearers": 4,
+        "n_nonbearers": 20,
+        "swap_perm_max_abs_error": 0.0,
+        "null": {
+          "draws": 200,
+          "size_matched_B": 4,
+          "mean": 0.9715625,
+          "sd": 0.029360261725552877,
+          "min": 0.85,
+          "max": 1.0,
+          "percentile_of_category": 67.5,
+          "n_draws_saturated": 0,
+          "below_null": false,
+          "identical_search_budget": true,
+          "seed": 68000
+        },
+        "definition": "SENSITIVITY rung -- 2 qubits, d = 4. NOTED, NOT RUN: the 2-qubit-per-referent slot of the width ladder is already occupied by the committed ANGLE registers F2 and P-eps, and adding a third 2-qubit arm buys a comparison exp73 does not ask. Its bound is reported so the ladder is continuous and so the saturation onset (SS4) is visible.",
+        "qubits_per_referent": 2,
+        "d_truncated": 4
+      },
+      "twin": {
+        "map": "A2",
+        "mode": "twin",
+        "d_joint": 100,
+        "d_per_referent": 10,
+        "feature_kind": "product",
+        "n_casts": 80,
+        "n_rows": 160,
+        "count": 160,
+        "bound": 1.0,
+        "fraction": "160/160",
+        "population": "twins (a cast may score 0, 1/2 or 1)",
+        "method": "CONSTRUCTIVE LOWER BOUND (48 restarts x 500 steps + 6 LS-drop starts) -- NOT a maximum",
+        "exact": false,
+        "sign_flip_check": {
+          "n_rows": 160,
+          "satisfied_c": 160,
+          "satisfied_minus_c": 0,
+          "boundary_rows": 0,
+          "sums_to_n": true
+        },
+        "saturated": false,
+        "n_bearers": 4,
+        "n_nonbearers": 20,
+        "swap_perm_max_abs_error": 0.0,
+        "null": {
+          "draws": 200,
+          "size_matched_B": 4,
+          "mean": 0.9724062500000001,
+          "sd": 0.028905640951752975,
+          "min": 0.85,
+          "max": 1.0,
+          "percentile_of_category": 67.0,
+          "n_draws_saturated": 0,
+          "below_null": false,
+          "identical_search_budget": true,
+          "seed": 68000
+        },
+        "definition": "SENSITIVITY rung -- 2 qubits, d = 4. NOTED, NOT RUN: the 2-qubit-per-referent slot of the width ladder is already occupied by the committed ANGLE registers F2 and P-eps, and adding a third 2-qubit arm buys a comparison exp73 does not ask. Its bound is reported so the ladder is continuous and so the saturation onset (SS4) is visible.",
+        "qubits_per_referent": 2,
+        "d_truncated": 4
+      }
+    },
+    "A3": {
+      "pair": {
+        "map": "A3",
+        "mode": "pair",
+        "d_joint": 1296,
+        "d_per_referent": 36,
+        "feature_kind": "product",
+        "n_casts": 80,
+        "n_rows": 80,
+        "count": 80,
+        "bound": 1.0,
+        "fraction": "80/80",
+        "population": "casts (both twins won together)",
+        "method": "EXACT (saturation certificate: rank(G) = n_rows, so W = G^+ 1 satisfies every row strictly and n_rows is also the trivial ceiling -- a PROOF, not a search)",
+        "exact": true,
+        "saturated": true,
+        "saturation": {
+          "rank": 80,
+          "n_rows": 80,
+          "d_joint": 1296,
+          "min_margin": 0.2802909073526354
+        },
+        "sign_flip_check": {
+          "n_rows": 80,
+          "satisfied_c": 80,
+          "satisfied_minus_c": 0,
+          "boundary_rows": 0,
+          "sums_to_n": true
+        },
+        "n_bearers": 4,
+        "n_nonbearers": 20,
+        "swap_perm_max_abs_error": 0.0,
+        "null": {
+          "draws": 200,
+          "size_matched_B": 4,
+          "mean": 1.0,
+          "sd": 0.0,
+          "min": 1.0,
+          "max": 1.0,
+          "percentile_of_category": 0.0,
+          "n_draws_saturated": 200,
+          "below_null": false,
+          "identical_search_budget": true,
+          "seed": 68000,
+          "degenerate_note": "EVERY draw saturates and so does the category: the null is a point mass at 1.0000 and the percentile statistic has no content. Reported rather than suppressed -- a percentile of 0.0 here means 'nothing is below anything', NOT 'the category is at the bottom of its null'."
+        },
+        "definition": "exp73 ARM -- 3 qubits, d = 8 = PC1..PC8.",
+        "qubits_per_referent": 3,
+        "d_truncated": 8
+      },
+      "twin": {
+        "map": "A3",
+        "mode": "twin",
+        "d_joint": 1296,
+        "d_per_referent": 36,
+        "feature_kind": "product",
+        "n_casts": 80,
+        "n_rows": 160,
+        "count": 160,
+        "bound": 1.0,
+        "fraction": "160/160",
+        "population": "twins (a cast may score 0, 1/2 or 1)",
+        "method": "EXACT (saturation certificate: rank(G) = n_rows, so W = G^+ 1 satisfies every row strictly and n_rows is also the trivial ceiling -- a PROOF, not a search)",
+        "exact": true,
+        "saturated": true,
+        "saturation": {
+          "rank": 160,
+          "n_rows": 160,
+          "d_joint": 1296,
+          "min_margin": 0.189720441993997
+        },
+        "sign_flip_check": {
+          "n_rows": 160,
+          "satisfied_c": 160,
+          "satisfied_minus_c": 0,
+          "boundary_rows": 0,
+          "sums_to_n": true
+        },
+        "n_bearers": 4,
+        "n_nonbearers": 20,
+        "swap_perm_max_abs_error": 0.0,
+        "null": {
+          "draws": 200,
+          "size_matched_B": 4,
+          "mean": 1.0,
+          "sd": 0.0,
+          "min": 1.0,
+          "max": 1.0,
+          "percentile_of_category": 0.0,
+          "n_draws_saturated": 200,
+          "below_null": false,
+          "identical_search_budget": true,
+          "seed": 68000,
+          "degenerate_note": "EVERY draw saturates and so does the category: the null is a point mass at 1.0000 and the percentile statistic has no content. Reported rather than suppressed -- a percentile of 0.0 here means 'nothing is below anything', NOT 'the category is at the bottom of its null'."
+        },
+        "definition": "exp73 ARM -- 3 qubits, d = 8 = PC1..PC8.",
+        "qubits_per_referent": 3,
+        "d_truncated": 8
+      }
+    },
+    "A4": {
+      "pair": {
+        "map": "A4",
+        "mode": "pair",
+        "d_joint": 18496,
+        "d_per_referent": 136,
+        "feature_kind": "product",
+        "n_casts": 80,
+        "n_rows": 80,
+        "count": 80,
+        "bound": 1.0,
+        "fraction": "80/80",
+        "population": "casts (both twins won together)",
+        "method": "EXACT (saturation certificate: rank(G) = n_rows, so W = G^+ 1 satisfies every row strictly and n_rows is also the trivial ceiling -- a PROOF, not a search)",
+        "exact": true,
+        "saturated": true,
+        "saturation": {
+          "rank": 80,
+          "n_rows": 80,
+          "d_joint": 18496,
+          "min_margin": 0.23162265166825716
+        },
+        "sign_flip_check": {
+          "n_rows": 80,
+          "satisfied_c": 80,
+          "satisfied_minus_c": 0,
+          "boundary_rows": 0,
+          "sums_to_n": true
+        },
+        "n_bearers": 4,
+        "n_nonbearers": 20,
+        "swap_perm_max_abs_error": 0.0,
+        "null": {
+          "draws": 200,
+          "size_matched_B": 4,
+          "mean": 1.0,
+          "sd": 0.0,
+          "min": 1.0,
+          "max": 1.0,
+          "percentile_of_category": 0.0,
+          "n_draws_saturated": 200,
+          "below_null": false,
+          "identical_search_budget": true,
+          "seed": 68000,
+          "degenerate_note": "EVERY draw saturates and so does the category: the null is a point mass at 1.0000 and the percentile statistic has no content. Reported rather than suppressed -- a percentile of 0.0 here means 'nothing is below anything', NOT 'the category is at the bottom of its null'."
+        },
+        "definition": "exp73 ARM -- 4 qubits, d = 16 = PC1..PC16.",
+        "qubits_per_referent": 4,
+        "d_truncated": 16
+      },
+      "twin": {
+        "map": "A4",
+        "mode": "twin",
+        "d_joint": 18496,
+        "d_per_referent": 136,
+        "feature_kind": "product",
+        "n_casts": 80,
+        "n_rows": 160,
+        "count": 160,
+        "bound": 1.0,
+        "fraction": "160/160",
+        "population": "twins (a cast may score 0, 1/2 or 1)",
+        "method": "EXACT (saturation certificate: rank(G) = n_rows, so W = G^+ 1 satisfies every row strictly and n_rows is also the trivial ceiling -- a PROOF, not a search)",
+        "exact": true,
+        "saturated": true,
+        "saturation": {
+          "rank": 160,
+          "n_rows": 160,
+          "d_joint": 18496,
+          "min_margin": 0.16238771512228933
+        },
+        "sign_flip_check": {
+          "n_rows": 160,
+          "satisfied_c": 160,
+          "satisfied_minus_c": 0,
+          "boundary_rows": 0,
+          "sums_to_n": true
+        },
+        "n_bearers": 4,
+        "n_nonbearers": 20,
+        "swap_perm_max_abs_error": 0.0,
+        "null": {
+          "draws": 200,
+          "size_matched_B": 4,
+          "mean": 1.0,
+          "sd": 0.0,
+          "min": 1.0,
+          "max": 1.0,
+          "percentile_of_category": 0.0,
+          "n_draws_saturated": 200,
+          "below_null": false,
+          "identical_search_budget": true,
+          "seed": 68000,
+          "degenerate_note": "EVERY draw saturates and so does the category: the null is a point mass at 1.0000 and the percentile statistic has no content. Reported rather than suppressed -- a percentile of 0.0 here means 'nothing is below anything', NOT 'the category is at the bottom of its null'."
+        },
+        "definition": "exp73 ARM -- 4 qubits, d = 16 = PC1..PC16.",
+        "qubits_per_referent": 4,
+        "d_truncated": 16
+      }
+    }
+  },
+  "register_purity_inventory": {
+    "A1": {
+      "qubits_per_referent": 1,
+      "d_truncated": 2,
+      "per_register_purity_at_intro": 1.0,
+      "per_register_purity_note": "EXACTLY 1 for both referents: the two registers are introduced as a PRODUCT of two pure states and no cross-referent entangler exists at intro. doc 56's concurrence question DOES NOT ARISE at this rung; the exp73 assertion is on this quantity, to 1e-9.",
+      "min_wire_purity_over_the_inventory": {
+        "min": 0.9999999999999996,
+        "median": 1.0,
+        "max": 1.0000000000000007
+      },
+      "balanced_bipartition_purity_over_the_inventory": {
+        "min": 1.0,
+        "median": 1.0,
+        "max": 1.0
+      },
+      "n_nouns_within_0.01_of_a_product_state": 24,
+      "n_nouns_within_0.05_of_a_product_state": 24,
+      "per_noun": {
+        "الطالب": {
+          "per_wire_purity": [
+            0.9999999999999998
+          ],
+          "min_wire_purity": 0.9999999999999998,
+          "balanced_bipartition_purity": 1.0
+        },
+        "الرجل": {
+          "per_wire_purity": [
+            1.0
+          ],
+          "min_wire_purity": 1.0,
+          "balanced_bipartition_purity": 1.0
+        },
+        "الولد": {
+          "per_wire_purity": [
+            0.9999999999999996
+          ],
+          "min_wire_purity": 0.9999999999999996,
+          "balanced_bipartition_purity": 1.0
+        },
+        "المدير": {
+          "per_wire_purity": [
+            1.0
+          ],
+          "min_wire_purity": 1.0,
+          "balanced_bipartition_purity": 1.0
+        },
+        "المعلم": {
+          "per_wire_purity": [
+            1.0
+          ],
+          "min_wire_purity": 1.0,
+          "balanced_bipartition_purity": 1.0
+        },
+        "الطبيب": {
+          "per_wire_purity": [
+            0.9999999999999998
+          ],
+          "min_wire_purity": 0.9999999999999998,
+          "balanced_bipartition_purity": 1.0
+        },
+        "العامل": {
+          "per_wire_purity": [
+            1.0
+          ],
+          "min_wire_purity": 1.0,
+          "balanced_bipartition_purity": 1.0
+        },
+        "المهندس": {
+          "per_wire_purity": [
+            1.0000000000000004
+          ],
+          "min_wire_purity": 1.0000000000000004,
+          "balanced_bipartition_purity": 1.0
+        },
+        "الشرطي": {
+          "per_wire_purity": [
+            1.0000000000000002
+          ],
+          "min_wire_purity": 1.0000000000000002,
+          "balanced_bipartition_purity": 1.0
+        },
+        "الكاتب": {
+          "per_wire_purity": [
+            1.0000000000000002
+          ],
+          "min_wire_purity": 1.0000000000000002,
+          "balanced_bipartition_purity": 1.0
+        },
+        "الطباخ": {
+          "per_wire_purity": [
+            1.0
+          ],
+          "min_wire_purity": 1.0,
+          "balanced_bipartition_purity": 1.0
+        },
+        "الجندي": {
+          "per_wire_purity": [
+            1.0000000000000007
+          ],
+          "min_wire_purity": 1.0000000000000007,
+          "balanced_bipartition_purity": 1.0
+        },
+        "الفلاح": {
+          "per_wire_purity": [
+            1.0
+          ],
+          "min_wire_purity": 1.0,
+          "balanced_bipartition_purity": 1.0
+        },
+        "الحارس": {
+          "per_wire_purity": [
+            1.0000000000000002
+          ],
+          "min_wire_purity": 1.0000000000000002,
+          "balanced_bipartition_purity": 1.0
+        },
+        "اللاعب": {
+          "per_wire_purity": [
+            1.0000000000000002
+          ],
+          "min_wire_purity": 1.0000000000000002,
+          "balanced_bipartition_purity": 1.0
+        },
+        "الموظف": {
+          "per_wire_purity": [
+            1.0000000000000002
+          ],
+          "min_wire_purity": 1.0000000000000002,
+          "balanced_bipartition_purity": 1.0
+        },
+        "الصحفي": {
+          "per_wire_purity": [
+            0.9999999999999998
+          ],
+          "min_wire_purity": 0.9999999999999998,
+          "balanced_bipartition_purity": 1.0
+        },
+        "السائق": {
+          "per_wire_purity": [
+            0.9999999999999997
+          ],
+          "min_wire_purity": 0.9999999999999997,
+          "balanced_bipartition_purity": 1.0
+        },
+        "المسافر": {
+          "per_wire_purity": [
+            1.0000000000000002
+          ],
+          "min_wire_purity": 1.0000000000000002,
+          "balanced_bipartition_purity": 1.0
+        },
+        "الضابط": {
+          "per_wire_purity": [
+            1.0000000000000002
+          ],
+          "min_wire_purity": 1.0000000000000002,
+          "balanced_bipartition_purity": 1.0
+        },
+        "الباحث": {
+          "per_wire_purity": [
+            1.0000000000000002
+          ],
+          "min_wire_purity": 1.0000000000000002,
+          "balanced_bipartition_purity": 1.0
+        },
+        "القائد": {
+          "per_wire_purity": [
+            1.0
+          ],
+          "min_wire_purity": 1.0,
+          "balanced_bipartition_purity": 1.0
+        },
+        "الصياد": {
+          "per_wire_purity": [
+            1.0000000000000002
+          ],
+          "min_wire_purity": 1.0000000000000002,
+          "balanced_bipartition_purity": 1.0
+        },
+        "المريض": {
+          "per_wire_purity": [
+            1.0000000000000004
+          ],
+          "min_wire_purity": 1.0000000000000004,
+          "balanced_bipartition_purity": 1.0
+        }
+      },
+      "reading": "intro per-WIRE purity is below 1 by CONSTRUCTION -- a generic unit vector in R^{2^q} is not a product of q single-qubit states -- and it is a DATA-DETERMINED constant of the encoding, not a circuit effect. The committed per-wire trace (doc 55 SS18.3) must therefore be read against THIS inventory as its baseline, and the exp73 instrumentation records the per-REGISTER trace alongside it."
+    },
+    "A2": {
+      "qubits_per_referent": 2,
+      "d_truncated": 4,
+      "per_register_purity_at_intro": 1.0,
+      "per_register_purity_note": "EXACTLY 1 for both referents: the two registers are introduced as a PRODUCT of two pure states and no cross-referent entangler exists at intro. doc 56's concurrence question DOES NOT ARISE at this rung; the exp73 assertion is on this quantity, to 1e-9.",
+      "min_wire_purity_over_the_inventory": {
+        "min": 0.5347961690916188,
+        "median": 0.9044343007018066,
+        "max": 0.9970559186516701
+      },
+      "balanced_bipartition_purity_over_the_inventory": {
+        "min": 0.5347961690916188,
+        "median": 0.9044343007018067,
+        "max": 0.9970559186516701
+      },
+      "n_nouns_within_0.01_of_a_product_state": 3,
+      "n_nouns_within_0.05_of_a_product_state": 8,
+      "per_noun": {
+        "الطالب": {
+          "per_wire_purity": [
+            0.98304650616895,
+            0.98304650616895
+          ],
+          "min_wire_purity": 0.98304650616895,
+          "balanced_bipartition_purity": 0.98304650616895
+        },
+        "الرجل": {
+          "per_wire_purity": [
+            0.9539045582013783,
+            0.9539045582013782
+          ],
+          "min_wire_purity": 0.9539045582013782,
+          "balanced_bipartition_purity": 0.9539045582013783
+        },
+        "الولد": {
+          "per_wire_purity": [
+            0.9938167807033416,
+            0.9938167807033416
+          ],
+          "min_wire_purity": 0.9938167807033416,
+          "balanced_bipartition_purity": 0.9938167807033416
+        },
+        "المدير": {
+          "per_wire_purity": [
+            0.8771600631287594,
+            0.8771600631287595
+          ],
+          "min_wire_purity": 0.8771600631287594,
+          "balanced_bipartition_purity": 0.8771600631287594
+        },
+        "المعلم": {
+          "per_wire_purity": [
+            0.9791763683987917,
+            0.9791763683987917
+          ],
+          "min_wire_purity": 0.9791763683987917,
+          "balanced_bipartition_purity": 0.9791763683987917
+        },
+        "الطبيب": {
+          "per_wire_purity": [
+            0.7954389269159172,
+            0.7954389269159174
+          ],
+          "min_wire_purity": 0.7954389269159172,
+          "balanced_bipartition_purity": 0.7954389269159172
+        },
+        "العامل": {
+          "per_wire_purity": [
+            0.7904782953748081,
+            0.7904782953748081
+          ],
+          "min_wire_purity": 0.7904782953748081,
+          "balanced_bipartition_purity": 0.7904782953748081
+        },
+        "المهندس": {
+          "per_wire_purity": [
+            0.8713847403273673,
+            0.8713847403273675
+          ],
+          "min_wire_purity": 0.8713847403273673,
+          "balanced_bipartition_purity": 0.8713847403273673
+        },
+        "الشرطي": {
+          "per_wire_purity": [
+            0.9158620959700357,
+            0.9158620959700358
+          ],
+          "min_wire_purity": 0.9158620959700357,
+          "balanced_bipartition_purity": 0.9158620959700357
+        },
+        "الكاتب": {
+          "per_wire_purity": [
+            0.9040254841077318,
+            0.9040254841077318
+          ],
+          "min_wire_purity": 0.9040254841077318,
+          "balanced_bipartition_purity": 0.9040254841077318
+        },
+        "الطباخ": {
+          "per_wire_purity": [
+            0.9870972336387921,
+            0.987097233638792
+          ],
+          "min_wire_purity": 0.987097233638792,
+          "balanced_bipartition_purity": 0.9870972336387921
+        },
+        "الجندي": {
+          "per_wire_purity": [
+            0.9110728795891376,
+            0.9110728795891376
+          ],
+          "min_wire_purity": 0.9110728795891376,
+          "balanced_bipartition_purity": 0.9110728795891376
+        },
+        "الفلاح": {
+          "per_wire_purity": [
+            0.9235521782665309,
+            0.9235521782665309
+          ],
+          "min_wire_purity": 0.9235521782665309,
+          "balanced_bipartition_purity": 0.9235521782665309
+        },
+        "الحارس": {
+          "per_wire_purity": [
+            0.703412162609272,
+            0.703412162609272
+          ],
+          "min_wire_purity": 0.703412162609272,
+          "balanced_bipartition_purity": 0.703412162609272
+        },
+        "اللاعب": {
+          "per_wire_purity": [
+            0.9538230716856193,
+            0.9538230716856195
+          ],
+          "min_wire_purity": 0.9538230716856193,
+          "balanced_bipartition_purity": 0.9538230716856193
+        },
+        "الموظف": {
+          "per_wire_purity": [
+            0.5407236997259875,
+            0.5407236997259874
+          ],
+          "min_wire_purity": 0.5407236997259874,
+          "balanced_bipartition_purity": 0.5407236997259875
+        },
+        "الصحفي": {
+          "per_wire_purity": [
+            0.8455676292054366,
+            0.8455676292054366
+          ],
+          "min_wire_purity": 0.8455676292054366,
+          "balanced_bipartition_purity": 0.8455676292054366
+        },
+        "السائق": {
+          "per_wire_purity": [
+            0.8722491127427285,
+            0.8722491127427285
+          ],
+          "min_wire_purity": 0.8722491127427285,
+          "balanced_bipartition_purity": 0.8722491127427285
+        },
+        "المسافر": {
+          "per_wire_purity": [
+            0.5347961690916188,
+            0.5347961690916188
+          ],
+          "min_wire_purity": 0.5347961690916188,
+          "balanced_bipartition_purity": 0.5347961690916188
+        },
+        "الضابط": {
+          "per_wire_purity": [
+            0.7503024466456545,
+            0.7503024466456545
+          ],
+          "min_wire_purity": 0.7503024466456545,
+          "balanced_bipartition_purity": 0.7503024466456545
+        },
+        "الباحث": {
+          "per_wire_purity": [
+            0.9970559186516701,
+            0.9970559186516704
+          ],
+          "min_wire_purity": 0.9970559186516701,
+          "balanced_bipartition_purity": 0.9970559186516701
+        },
+        "القائد": {
+          "per_wire_purity": [
+            0.9048431172958816,
+            0.9048431172958815
+          ],
+          "min_wire_purity": 0.9048431172958815,
+          "balanced_bipartition_purity": 0.9048431172958816
+        },
+        "الصياد": {
+          "per_wire_purity": [
+            0.9951211688045083,
+            0.9951211688045083
+          ],
+          "min_wire_purity": 0.9951211688045083,
+          "balanced_bipartition_purity": 0.9951211688045083
+        },
+        "المريض": {
+          "per_wire_purity": [
+            0.7884091142579277,
+            0.7884091142579279
+          ],
+          "min_wire_purity": 0.7884091142579277,
+          "balanced_bipartition_purity": 0.7884091142579277
+        }
+      },
+      "reading": "intro per-WIRE purity is below 1 by CONSTRUCTION -- a generic unit vector in R^{2^q} is not a product of q single-qubit states -- and it is a DATA-DETERMINED constant of the encoding, not a circuit effect. The committed per-wire trace (doc 55 SS18.3) must therefore be read against THIS inventory as its baseline, and the exp73 instrumentation records the per-REGISTER trace alongside it."
+    },
+    "A3": {
+      "qubits_per_referent": 3,
+      "d_truncated": 8,
+      "per_register_purity_at_intro": 1.0,
+      "per_register_purity_note": "EXACTLY 1 for both referents: the two registers are introduced as a PRODUCT of two pure states and no cross-referent entangler exists at intro. doc 56's concurrence question DOES NOT ARISE at this rung; the exp73 assertion is on this quantity, to 1e-9.",
+      "min_wire_purity_over_the_inventory": {
+        "min": 0.5036236600917965,
+        "median": 0.6659976209076359,
+        "max": 0.9692908876766158
+      },
+      "balanced_bipartition_purity_over_the_inventory": {
+        "min": 0.5372639056987885,
+        "median": 0.7586808655454081,
+        "max": 0.969890424913747
+      },
+      "n_nouns_within_0.01_of_a_product_state": 0,
+      "n_nouns_within_0.05_of_a_product_state": 1,
+      "per_noun": {
+        "الطالب": {
+          "per_wire_purity": [
+            0.6124094297866416,
+            0.6156759095556462,
+            0.9554141135518612
+          ],
+          "min_wire_purity": 0.6124094297866416,
+          "balanced_bipartition_purity": 0.6124094297866416
+        },
+        "الرجل": {
+          "per_wire_purity": [
+            0.7690513080505655,
+            0.8577176010995334,
+            0.7838875530513802
+          ],
+          "min_wire_purity": 0.7690513080505655,
+          "balanced_bipartition_purity": 0.7690513080505655
+        },
+        "الولد": {
+          "per_wire_purity": [
+            0.7280245927294657,
+            0.7863409402510049,
+            0.8640633017814418
+          ],
+          "min_wire_purity": 0.7280245927294657,
+          "balanced_bipartition_purity": 0.7280245927294657
+        },
+        "المدير": {
+          "per_wire_purity": [
+            0.5739774446213863,
+            0.7093222167978107,
+            0.6043246670668806
+          ],
+          "min_wire_purity": 0.5739774446213863,
+          "balanced_bipartition_purity": 0.5739774446213863
+        },
+        "المعلم": {
+          "per_wire_purity": [
+            0.7963001858155213,
+            0.8358153893710047,
+            0.9067311946029113
+          ],
+          "min_wire_purity": 0.7963001858155213,
+          "balanced_bipartition_purity": 0.7963001858155213
+        },
+        "الطبيب": {
+          "per_wire_purity": [
+            0.6506453974666428,
+            0.6149597418032778,
+            0.625723298327276
+          ],
+          "min_wire_purity": 0.6149597418032778,
+          "balanced_bipartition_purity": 0.6506453974666428
+        },
+        "العامل": {
+          "per_wire_purity": [
+            0.6227752611101269,
+            0.5548164226301994,
+            0.5036236600917965
+          ],
+          "min_wire_purity": 0.5036236600917965,
+          "balanced_bipartition_purity": 0.6227752611101269
+        },
+        "المهندس": {
+          "per_wire_purity": [
+            0.6014238277555162,
+            0.5631921695836197,
+            0.5967586013296077
+          ],
+          "min_wire_purity": 0.5631921695836197,
+          "balanced_bipartition_purity": 0.6014238277555162
+        },
+        "الشرطي": {
+          "per_wire_purity": [
+            0.8549133638439447,
+            0.8019929306798337,
+            0.7522448884621362
+          ],
+          "min_wire_purity": 0.7522448884621362,
+          "balanced_bipartition_purity": 0.8549133638439447
+        },
+        "الكاتب": {
+          "per_wire_purity": [
+            0.7899887773158992,
+            0.7252007554056289,
+            0.7344301832208668
+          ],
+          "min_wire_purity": 0.7252007554056289,
+          "balanced_bipartition_purity": 0.7899887773158992
+        },
+        "الطباخ": {
+          "per_wire_purity": [
+            0.545651741237907,
+            0.5066844016886888,
+            0.7044871826811078
+          ],
+          "min_wire_purity": 0.5066844016886888,
+          "balanced_bipartition_purity": 0.545651741237907
+        },
+        "الجندي": {
+          "per_wire_purity": [
+            0.9480898601072675,
+            0.836590973371345,
+            0.8274849872194185
+          ],
+          "min_wire_purity": 0.8274849872194185,
+          "balanced_bipartition_purity": 0.9480898601072675
+        },
+        "الفلاح": {
+          "per_wire_purity": [
+            0.8431576116445743,
+            0.7787307488479596,
+            0.8319835821172274
+          ],
+          "min_wire_purity": 0.7787307488479596,
+          "balanced_bipartition_purity": 0.8431576116445743
+        },
+        "الحارس": {
+          "per_wire_purity": [
+            0.5372639056987885,
+            0.7345856240649888,
+            0.5763967082541885
+          ],
+          "min_wire_purity": 0.5372639056987885,
+          "balanced_bipartition_purity": 0.5372639056987885
+        },
+        "اللاعب": {
+          "per_wire_purity": [
+            0.8825445117534221,
+            0.8812272623257014,
+            0.9185664844690498
+          ],
+          "min_wire_purity": 0.8812272623257014,
+          "balanced_bipartition_purity": 0.8825445117534221
+        },
+        "الموظف": {
+          "per_wire_purity": [
+            0.6685193138867193,
+            0.5418822047446699,
+            0.5166691877852485
+          ],
+          "min_wire_purity": 0.5166691877852485,
+          "balanced_bipartition_purity": 0.6685193138867193
+        },
+        "الصحفي": {
+          "per_wire_purity": [
+            0.9103363341898285,
+            0.8408881494946234,
+            0.7911839777932419
+          ],
+          "min_wire_purity": 0.7911839777932419,
+          "balanced_bipartition_purity": 0.9103363341898285
+        },
+        "السائق": {
+          "per_wire_purity": [
+            0.6990663053103611,
+            0.8174753653748261,
+            0.7059315330101107
+          ],
+          "min_wire_purity": 0.6990663053103611,
+          "balanced_bipartition_purity": 0.6990663053103611
+        },
+        "المسافر": {
+          "per_wire_purity": [
+            0.7483104230402507,
+            0.5475487064970812,
+            0.5545467047942853
+          ],
+          "min_wire_purity": 0.5475487064970812,
+          "balanced_bipartition_purity": 0.7483104230402507
+        },
+        "الضابط": {
+          "per_wire_purity": [
+            0.865648443442738,
+            0.6329289365049107,
+            0.6550956097019355
+          ],
+          "min_wire_purity": 0.6329289365049107,
+          "balanced_bipartition_purity": 0.865648443442738
+        },
+        "الباحث": {
+          "per_wire_purity": [
+            0.969890424913747,
+            0.9692908876766158,
+            0.9758150569734455
+          ],
+          "min_wire_purity": 0.9692908876766158,
+          "balanced_bipartition_purity": 0.969890424913747
+        },
+        "القائد": {
+          "per_wire_purity": [
+            0.8843028758648102,
+            0.8479420101899879,
+            0.900495410820848
+          ],
+          "min_wire_purity": 0.8479420101899879,
+          "balanced_bipartition_purity": 0.8843028758648102
+        },
+        "الصياد": {
+          "per_wire_purity": [
+            0.5911463905142607,
+            0.8142186470674105,
+            0.696201576820924
+          ],
+          "min_wire_purity": 0.5911463905142607,
+          "balanced_bipartition_purity": 0.5911463905142607
+        },
+        "المريض": {
+          "per_wire_purity": [
+            0.7776576613627733,
+            0.6781648230914352,
+            0.5911420483196597
+          ],
+          "min_wire_purity": 0.5911420483196597,
+          "balanced_bipartition_purity": 0.7776576613627733
+        }
+      },
+      "reading": "intro per-WIRE purity is below 1 by CONSTRUCTION -- a generic unit vector in R^{2^q} is not a product of q single-qubit states -- and it is a DATA-DETERMINED constant of the encoding, not a circuit effect. The committed per-wire trace (doc 55 SS18.3) must therefore be read against THIS inventory as its baseline, and the exp73 instrumentation records the per-REGISTER trace alongside it."
+    },
+    "A4": {
+      "qubits_per_referent": 4,
+      "d_truncated": 16,
+      "per_register_purity_at_intro": 1.0,
+      "per_register_purity_note": "EXACTLY 1 for both referents: the two registers are introduced as a PRODUCT of two pure states and no cross-referent entangler exists at intro. doc 56's concurrence question DOES NOT ARISE at this rung; the exp73 assertion is on this quantity, to 1e-9.",
+      "min_wire_purity_over_the_inventory": {
+        "min": 0.5046420763766328,
+        "median": 0.5298787368774049,
+        "max": 0.792413555553374
+      },
+      "balanced_bipartition_purity_over_the_inventory": {
+        "min": 0.3632389023625694,
+        "median": 0.5112991042252517,
+        "max": 0.8758981554116942
+      },
+      "n_nouns_within_0.01_of_a_product_state": 0,
+      "n_nouns_within_0.05_of_a_product_state": 0,
+      "per_noun": {
+        "الطالب": {
+          "per_wire_purity": [
+            0.542541177862235,
+            0.6639293284990404,
+            0.5248279329810682,
+            0.5219452211629969
+          ],
+          "min_wire_purity": 0.5219452211629969,
+          "balanced_bipartition_purity": 0.3995226203916611
+        },
+        "الرجل": {
+          "per_wire_purity": [
+            0.836390920972027,
+            0.7414528719891302,
+            0.837129063104002,
+            0.8029852353112734
+          ],
+          "min_wire_purity": 0.7414528719891302,
+          "balanced_bipartition_purity": 0.7396699049123088
+        },
+        "الولد": {
+          "per_wire_purity": [
+            0.6158194525668358,
+            0.5385630058226081,
+            0.6217028933921972,
+            0.669495853157338
+          ],
+          "min_wire_purity": 0.5385630058226081,
+          "balanced_bipartition_purity": 0.5108113512215834
+        },
+        "المدير": {
+          "per_wire_purity": [
+            0.7469509349382264,
+            0.5971946264943393,
+            0.7355915177090543,
+            0.6677929379201033
+          ],
+          "min_wire_purity": 0.5971946264943393,
+          "balanced_bipartition_purity": 0.5788944477236564
+        },
+        "المعلم": {
+          "per_wire_purity": [
+            0.5089688873270586,
+            0.7398209934315176,
+            0.5067735897052668,
+            0.6135839709659405
+          ],
+          "min_wire_purity": 0.5067735897052668,
+          "balanced_bipartition_purity": 0.4265638181851976
+        },
+        "الطبيب": {
+          "per_wire_purity": [
+            0.5417922674824777,
+            0.6523166621477613,
+            0.5325679557491345,
+            0.5076638003683354
+          ],
+          "min_wire_purity": 0.5076638003683354,
+          "balanced_bipartition_purity": 0.44798945636842824
+        },
+        "العامل": {
+          "per_wire_purity": [
+            0.7801915141921751,
+            0.5948718800750159,
+            0.5420063812989383,
+            0.5172247169275419
+          ],
+          "min_wire_purity": 0.5172247169275419,
+          "balanced_bipartition_purity": 0.5050585405048635
+        },
+        "المهندس": {
+          "per_wire_purity": [
+            0.6584706575927706,
+            0.5181535679837505,
+            0.59885115987851,
+            0.5142350029170203
+          ],
+          "min_wire_purity": 0.5142350029170203,
+          "balanced_bipartition_purity": 0.43868048637461404
+        },
+        "الشرطي": {
+          "per_wire_purity": [
+            0.868769679765473,
+            0.8290951320382404,
+            0.7253002659826839,
+            0.6724948517987454
+          ],
+          "min_wire_purity": 0.6724948517987454,
+          "balanced_bipartition_purity": 0.751258033684934
+        },
+        "الكاتب": {
+          "per_wire_purity": [
+            0.6281795376207302,
+            0.5916740098017893,
+            0.6695102041715493,
+            0.6244591160781926
+          ],
+          "min_wire_purity": 0.5916740098017893,
+          "balanced_bipartition_purity": 0.5503267056032195
+        },
+        "الطباخ": {
+          "per_wire_purity": [
+            0.6024824422150548,
+            0.6012862501856429,
+            0.5247117932440208,
+            0.5684286891272277
+          ],
+          "min_wire_purity": 0.5247117932440208,
+          "balanced_bipartition_purity": 0.38541129280738906
+        },
+        "الجندي": {
+          "per_wire_purity": [
+            0.9372483551176568,
+            0.913210187145782,
+            0.792413555553374,
+            0.8467912685826491
+          ],
+          "min_wire_purity": 0.792413555553374,
+          "balanced_bipartition_purity": 0.8758981554116942
+        },
+        "الفلاح": {
+          "per_wire_purity": [
+            0.8258813458369154,
+            0.8365511801760059,
+            0.6781813324138619,
+            0.8243518543860083
+          ],
+          "min_wire_purity": 0.6781813324138619,
+          "balanced_bipartition_purity": 0.715372565128343
+        },
+        "الحارس": {
+          "per_wire_purity": [
+            0.6073437327993407,
+            0.5046420763766328,
+            0.7612873598446072,
+            0.5525183507563296
+          ],
+          "min_wire_purity": 0.5046420763766328,
+          "balanced_bipartition_purity": 0.47681128977481324
+        },
+        "اللاعب": {
+          "per_wire_purity": [
+            0.5758601873590046,
+            0.5776590962061496,
+            0.745564444743643,
+            0.7156641460655719
+          ],
+          "min_wire_purity": 0.5758601873590046,
+          "balanced_bipartition_purity": 0.5684095545238166
+        },
+        "الموظف": {
+          "per_wire_purity": [
+            0.6599803997885036,
+            0.592185881131399,
+            0.5580635312442798,
+            0.5198636841894027
+          ],
+          "min_wire_purity": 0.5198636841894027,
+          "balanced_bipartition_purity": 0.5092997562654329
+        },
+        "الصحفي": {
+          "per_wire_purity": [
+            0.6640175124313135,
+            0.706973930307875,
+            0.7279226708504631,
+            0.612078772843272
+          ],
+          "min_wire_purity": 0.612078772843272,
+          "balanced_bipartition_purity": 0.6242237539084194
+        },
+        "السائق": {
+          "per_wire_purity": [
+            0.5366026264660697,
+            0.7115714953968938,
+            0.5127604829773884,
+            0.5756199763966768
+          ],
+          "min_wire_purity": 0.5127604829773884,
+          "balanced_bipartition_purity": 0.43085111039886637
+        },
+        "المسافر": {
+          "per_wire_purity": [
+            0.6495069762725834,
+            0.5133332850716715,
+            0.6528334661059859,
+            0.5065462737447414
+          ],
+          "min_wire_purity": 0.5065462737447414,
+          "balanced_bipartition_purity": 0.3632389023625694
+        },
+        "الضابط": {
+          "per_wire_purity": [
+            0.9205223866520976,
+            0.8541619888527632,
+            0.6390685966146705,
+            0.6591904174998127
+          ],
+          "min_wire_purity": 0.6390685966146705,
+          "balanced_bipartition_purity": 0.8228220732331931
+        },
+        "الباحث": {
+          "per_wire_purity": [
+            0.534221186682008,
+            0.7722204882651849,
+            0.7363234383729935,
+            0.5888848197498564
+          ],
+          "min_wire_purity": 0.534221186682008,
+          "balanced_bipartition_purity": 0.5117868572289201
+        },
+        "القائد": {
+          "per_wire_purity": [
+            0.5391963388080036,
+            0.6982321001892606,
+            0.678039007281137,
+            0.5246660312616465
+          ],
+          "min_wire_purity": 0.5246660312616465,
+          "balanced_bipartition_purity": 0.42749571116629825
+        },
+        "الصياد": {
+          "per_wire_purity": [
+            0.6796993230367863,
+            0.6863402906964065,
+            0.8617882947127578,
+            0.7614709422418636
+          ],
+          "min_wire_purity": 0.6796993230367863,
+          "balanced_bipartition_purity": 0.6762370395906584
+        },
+        "المريض": {
+          "per_wire_purity": [
+            0.5932339021714216,
+            0.8068891352738408,
+            0.5376785932802342,
+            0.525536287072802
+          ],
+          "min_wire_purity": 0.525536287072802,
+          "balanced_bipartition_purity": 0.5168614181191182
+        }
+      },
+      "reading": "intro per-WIRE purity is below 1 by CONSTRUCTION -- a generic unit vector in R^{2^q} is not a product of q single-qubit states -- and it is a DATA-DETERMINED constant of the encoding, not a circuit effect. The committed per-wire trace (doc 55 SS18.3) must therefore be read against THIS inventory as its baseline, and the exp73 instrumentation records the per-REGISTER trace alongside it."
+    }
+  },
+  "witnesses_doc55_SS19_3": {
+    "A1": {
+      "d": 9,
+      "n_twins": 160,
+      "n_positive_margin": 148,
+      "certifies_the_bound_count": true,
+      "exported": true,
+      "W": [
+        0.0,
+        -0.3672717438355917,
+        -0.4055858859446044,
+        0.3672717438355917,
+        0.0,
+        -0.44789681323100966,
+        0.4055858859446044,
+        0.44789681323100966,
+        0.0
+      ],
+      "W_sha256": "4c7ba510cd6a224d99498de42edeb6e14e6a433d20e8c943e83d7189a0527c91",
+      "convention": "doc 55 SS19.3, re-pinned for exp73's maps: the witness of record is THIS committed computation's output, exported at bound-computation time, BEFORE any exp73 run. For the SATURATED rungs the witness is the exact certificate's W = G^+ 1 (SS4) and not a search output. A4's W has 18496 entries and is carried by sha256 only; it is reproducible from this script and the pinned inputs."
+    },
+    "A2": {
+      "d": 100,
+      "n_twins": 160,
+      "n_positive_margin": 160,
+      "certifies_the_bound_count": true,
+      "exported": true,
+      "W": [
+        0.0,
+        0.20871091798605296,
+        0.07098142716869027,
+        0.14439046753200016,
+        -0.19228998964136088,
+        -0.09844994046073817,
+        0.034968290256925,
+        0.02405002039297845,
+        -0.0766898443257496,
+        -0.04688247743901046,
+        -0.20871091798605296,
+        0.0,
+        -0.19380334225406984,
+        -0.04769743477549054,
+        -0.2322620197931828,
+        0.04454433930695993,
+        0.054900459406849955,
+        -0.10274309265488288,
+        0.04722669561914167,
+        -0.0851678261895641,
+        -0.07098142716869027,
+        0.19380334225406984,
+        0.0,
+        0.014865778978593367,
+        -0.014040715770712576,
+        0.018450052094397415,
+        -0.1330138080947647,
+        -0.113466367387323,
+        -0.0034928576231513533,
+        0.028558933166839166,
+        -0.14439046753200016,
+        0.04769743477549054,
+        -0.014865778978593367,
+        0.0,
+        -0.12570612062118003,
+        -0.03366435545989443,
+        -0.0164609576905144,
+        0.0022509202931784065,
+        0.09596172392681551,
+        0.10663404919551436,
+        0.19228998964136088,
+        0.2322620197931828,
+        0.014040715770712576,
+        0.12570612062118003,
+        0.0,
+        -0.01014658618345405,
+        0.012794815311427222,
+        0.05398498506730184,
+        0.1812614338351222,
+        0.13771890782008514,
+        0.09844994046073817,
+        -0.04454433930695993,
+        -0.018450052094397415,
+        0.03366435545989443,
+        0.01014658618345405,
+        0.0,
+        0.036526257294447174,
+        0.14277185690329422,
+        -0.0943234095713723,
+        -0.0675352215293595,
+        -0.034968290256925,
+        -0.054900459406849955,
+        0.1330138080947647,
+        0.0164609576905144,
+        -0.012794815311427222,
+        -0.036526257294447174,
+        0.0,
+        0.13077416046696505,
+        0.009233764224662664,
+        -0.11801718328346104,
+        -0.02405002039297845,
+        0.10274309265488288,
+        0.113466367387323,
+        -0.0022509202931784065,
+        -0.05398498506730184,
+        -0.14277185690329422,
+        -0.13077416046696505,
+        0.0,
+        -0.07556578498344013,
+        0.15885013483704977,
+        0.0766898443257496,
+        -0.04722669561914167,
+        0.0034928576231513533,
+        -0.09596172392681551,
+        -0.1812614338351222,
+        0.0943234095713723,
+        -0.009233764224662664,
+        0.07556578498344013,
+        0.0,
+        0.18166832832576382,
+        0.04688247743901046,
+        0.0851678261895641,
+        -0.028558933166839166,
+        -0.10663404919551436,
+        -0.13771890782008514,
+        0.0675352215293595,
+        0.11801718328346104,
+        -0.15885013483704977,
+        -0.18166832832576382,
+        0.0
+      ],
+      "W_sha256": "356006cf274e40a60fc21d5582c91d55f6d0859fdfa901731b06508498d587cf",
+      "convention": "doc 55 SS19.3, re-pinned for exp73's maps: the witness of record is THIS committed computation's output, exported at bound-computation time, BEFORE any exp73 run. For the SATURATED rungs the witness is the exact certificate's W = G^+ 1 (SS4) and not a search output. A4's W has 18496 entries and is carried by sha256 only; it is reproducible from this script and the pinned inputs."
+    },
+    "A3": {
+      "d": 1296,
+      "n_twins": 160,
+      "n_positive_margin": 160,
+      "certifies_the_bound_count": true,
+      "exported": true,
+      "W": [
+        -1.0531600147189903e-16,
+        0.07558238852295901,
+        0.038374760092436754,
+        0.04506554074126375,
+        -0.07070937383824866,
+        0.009856141786320763,
+        -0.009870898673125395,
+        -0.002298761552028407,
+        -0.09352093289454434,
+        -0.06311229391710066,
+        -0.027240408282081286,
+        0.12307770882166712,
+        -0.04486320754933521,
+        -0.033663888900024024,
+        0.03383962680148569,
+        -0.003754818606629727,
+        -0.005344392866257181,
+        0.04275667477600988,
+        0.008558642300408101,
+        -0.07355345907833018,
+        -0.006770592255469881,
+        0.03341107710829883,
+        0.028569672688043637,
+        0.0027278372508034794,
+        -0.011749849791387004,
+        -0.017857356025204163,
+        -0.0754109818390928,
+        0.04564902548662566,
+        -0.01469861526879213,
+        -0.05428535968070107,
+        -0.004931677352860951,
+        0.04717283246946182,
+        0.0058978762568975334,
+        -0.07649021140274384,
+        -0.02531169250723535,
+        -0.02803041654917874,
+        -0.07558238852295954,
+        -3.3964410474687434e-16,
+        -0.027379177871863412,
+        -0.04202312389155891,
+        -0.010926481192774727,
+        0.016237433729152557,
+        0.017597336420559953,
+        -0.0077434503196451435,
+        -0.0810043605494562,
+        0.020007026469596022,
+        0.00934032488869386,
+        -0.005257913736592395,
+        0.007224224869355158,
+        -0.02516777037788568,
+        -5.924218295820108e-05,
+        -0.050562116696637176,
+        -0.02310353916958405,
+        -0.020707246424841536,
+        -0.017119024570459475,
+        0.027131454824415945,
+        -0.000662107670011739,
+        -0.07460434584738772,
+        -0.009146459630128024,
+        -0.005205581127495425,
+        -0.004323082225397746,
+        0.005535075369701547,
+        -0.06375025699925466,
+        -0.011569008793682294,
+        0.01961689364267466,
+        0.04898425252128917,
+        -0.015499588749158601,
+        -0.05535251895722603,
+        0.015144094386096815,
+        -0.05545915787165669,
+        0.022092927040412578,
+        -0.012599145337769752,
+        -0.038374760092436726,
+        0.027379177871863773,
+        -3.245872076614388e-17,
+        -0.009075716469055696,
+        -0.027915136920509287,
+        0.009391778301771223,
+        0.02719872714083718,
+        0.003382168892853741,
+        -0.06803702754231848,
+        -0.0036289706672571146,
+        0.004656333714777127,
+        0.03376262429897417,
+        -0.00987623804902864,
+        -0.03346995652528642,
+        0.008386059940506735,
+        -0.01652827051403838,
+        -0.008155397548470132,
+        0.004274353482946873,
+        -0.004251321985962587,
+        -0.0009208476952484316,
+        -0.004954947497122436,
+        -0.020468029378044136,
+        -0.0008354507837189844,
+        0.0012971521707742584,
+        -0.004899537255089122,
+        -0.006328183237925726,
+        -0.04485733400051969,
+        0.0027620723412559536,
+        0.032830583483383316,
+        0.014897178426585833,
+        -0.006008055852497935,
+        -0.0200197335711354,
+        0.009838464448451751,
+        -0.03244194603552364,
+        0.0001765355775791644,
+        -0.02187811970218958,
+        -0.045065540741263795,
+        0.0420231238915586,
+        0.009075716469055521,
+        1.4480950202386116e-17,
+        -0.04218305545213101,
+        0.010350504182611615,
+        0.022321569149905386,
+        0.0004283540052832884,
+        -0.09151961164030456,
+        -0.01784071571351792,
+        -0.002935323440547941,
+        0.059069743351614766,
+        -0.017495613180597037,
+        -0.04231595957304487,
+        0.014949076252278632,
+        -0.022929063770599466,
+        -0.01207848106177371,
+        0.012111809276684638,
+        -0.00493737531567128,
+        -0.018197644881137752,
+        -0.00623501514535633,
+        -0.021659876328235694,
+        0.005584328145427682,
+        0.00045386664246285677,
+        -0.00964069333819095,
+        -0.009932006543298219,
+        -0.06622788040560645,
+        0.012808075799009394,
+        0.026255871721726807,
+        0.004616385931153643,
+        -0.010521544061660124,
+        -0.010577967369995587,
+        0.011824867184553665,
+        -0.05470016758459103,
+        -0.003965091825211076,
+        -0.029028392077516587,
+        0.07070937383824791,
+        0.01092648119277484,
+        0.027915136920508878,
+        0.04218305545213107,
+        -9.346795130631039e-17,
+        -0.01192405760398916,
+        -0.010787560721840988,
+        0.010195871093270675,
+        0.06076913235142847,
+        -0.02599530659513404,
+        -0.010807912551436894,
+        0.02025362738438437,
+        -0.01273549143929434,
+        0.015449828196165557,
+        0.002656453513412887,
+        0.0465404392362976,
+        0.020844927066803107,
+        0.025503729410908067,
+        0.018005032620765648,
+        -0.032588260782193325,
+        -0.0008559354660931145,
+        0.07560920705853545,
+        0.011526777593270645,
+        0.006146540870710659,
+        0.0028074725509696446,
+        -0.007112508266874275,
+        0.051288573236938355,
+        0.014175575956381116,
+        -0.011325309610562552,
+        -0.04775666480152847,
+        0.01654241516506798,
+        0.05288735344543695,
+        -0.013428776656654652,
+        0.042070832689262316,
+        -0.02412451348615178,
+        0.008859339576783202,
+        -0.009856141786321083,
+        -0.016237433729152755,
+        -0.009391778301771224,
+        -0.010350504182611738,
+        0.011924057603989425,
+        -3.093657543237034e-17,
+        -0.01181743083376486,
+        -0.0068190780699443915,
+        0.006733527695843834,
+        0.009147217741576535,
+        -0.00018164592470297595,
+        -0.021065787407177853,
+        0.009006482500140278,
+        0.0097330965445208,
+        -0.004462156290241861,
+        -0.01208211400245258,
+        -0.0052839344469693085,
+        -0.010987182405281577,
+        -0.005376422173687116,
+        0.009573504409228056,
+        0.002774294699435599,
+        -0.020606003484940995,
+        -0.002610933908209799,
+        -0.0035705436728483042,
+        0.00013619601390755742,
+        0.005630963507082994,
+        -0.0018196402495312682,
+        -0.005041353819255099,
+        -0.015038320917251826,
+        0.009342848354244974,
+        -0.004643004035491349,
+        -0.00867974447173986,
+        0.0005387968018686142,
+        -0.005463750989201353,
+        0.008803527060615168,
+        0.0068551419713782456,
+        0.009870898673124528,
+        -0.017597336420559478,
+        -0.027198727140837223,
+        -0.02232156914990554,
+        0.010787560721840703,
+        0.011817430833764865,
+        1.1453115160069019e-16,
+        0.0029148735808198116,
+        0.010571010734695145,
+        0.01593585167738296,
+        0.006302043917949765,
+        -0.028311925488072872,
+        0.004951562179924959,
+        0.015191779918202992,
+        -0.00716272688971259,
+        -0.0046082755971504005,
+        -0.0008304440961017238,
+        -0.011526991617698176,
+        0.0030967765978718673,
+        0.02294615573603264,
+        0.0029927870926952783,
+        -8.781497914938853e-06,
+        -0.00463935766655088,
+        0.0007159921886873353,
+        0.00886808898298956,
+        0.010813576040414084,
+        0.012551442410309907,
+        -0.013007740359293953,
+        0.00042760011253123833,
+        0.020405563049901973,
+        0.011820930763323616,
+        -0.02331215837840901,
+        -0.00177207214520802,
+        0.0016082989911776794,
+        0.010993059702593814,
+        0.020216611986738936,
+        0.0022987615520280867,
+        0.00774345031964555,
+        -0.0033821688928536635,
+        -0.00042835400528318837,
+        -0.010195871093271264,
+        0.006819078069944381,
+        -0.002914873580819846,
+        9.774641386610628e-17,
+        -0.016600337417838538,
+        -0.007161774394310574,
+        -0.003913844814155078,
+        0.013284572261048878,
+        -0.006588308763625232,
+        -0.0017859881239392019,
+        0.0034647538099303902,
+        -0.005051294681560609,
+        -0.00257012791167493,
+        0.0037467160732364713,
+        0.002411360215123046,
+        -0.0065640280716222155,
+        -0.00023148459671671096,
+        0.004364484665761846,
+        0.004283262955497384,
+        0.00031049472427790645,
+        0.00021447272995818526,
+        0.0010100091707355514,
+        -0.012391959552103005,
+        0.00389995105796298,
+        -0.0035965407050979814,
+        -0.0018088659311146762,
+        0.003120779967312226,
+        -0.0007483470427772323,
+        0.0005733364218807006,
+        -0.018103480764995027,
+        -0.0001579641478070884,
+        0.0026660778772650395,
+        0.09352093289454372,
+        0.08100436054945642,
+        0.06803702754231848,
+        0.09151961164030467,
+        -0.060769132351428265,
+        -0.006733527695843724,
+        -0.010571010734695562,
+        0.01660033741783829,
+        -8.820215123271543e-17,
+        -0.08374402228755276,
+        -0.03218331108740153,
+        0.13030342676201023,
+        -0.05504087142480776,
+        -0.012332924897895142,
+        0.031439247357786096,
+        0.06354207383276532,
+        0.02587423876057496,
+        0.07013561148136678,
+        0.0328087809562901,
+        -0.09895130787935083,
+        -0.008186023340067242,
+        0.13281893828824942,
+        0.036411343511995216,
+        0.012503108459911722,
+        -0.0040601169067257005,
+        -0.025563730842298595,
+        0.008633313754226178,
+        0.05396900065726161,
+        -0.012643345513845527,
+        -0.10399213994736618,
+        0.02071745080655783,
+        0.1043913296589774,
+        -0.012362093540674277,
+        0.0002503012734297973,
+        -0.05374297206246077,
+        -0.014477559668974625,
+        0.0631122939171003,
+        -0.02000702646959639,
+        0.0036289706672571805,
+        0.017840715713517873,
+        0.025995306595133865,
+        -0.009147217741576534,
+        -0.015935851677382463,
+        0.007161774394311136,
+        0.08374402228755262,
+        1.551765459187512e-16,
+        -0.002254313814981589,
+        -0.02693331153614229,
+        0.0040574457701341975,
+        0.0351239055539729,
+        -0.008151979132582157,
+        0.03645163724511569,
+        0.01751661549799414,
+        0.004632250070399529,
+        0.013086392913875209,
+        -0.0012590452727524707,
+        0.003720318855927013,
+        0.05212418286695859,
+        0.0016286541068409152,
+        0.003791754332077412,
+        0.00999353530993303,
+        0.004292918289170843,
+        0.06666181589920654,
+        -0.0024027285710310656,
+        -0.019239151667461638,
+        -0.02301400252299667,
+        0.01729060262436694,
+        0.02899477929915953,
+        -0.013678298856762605,
+        0.05356605052298951,
+        -0.007995416308950698,
+        0.02480344591796044,
+        0.027240408282080873,
+        -0.009340324888693694,
+        -0.00465633371477709,
+        0.002935323440547982,
+        0.010807912551436483,
+        0.0001816459247031925,
+        -0.006302043917949976,
+        0.003913844814155213,
+        0.032183311087401224,
+        0.0022543138149817045,
+        -1.395437019502662e-16,
+        -0.01309510454677489,
+        0.0011113240061268032,
+        0.017494398454336372,
+        -0.003488017200220267,
+        0.013233572860597478,
+        0.006527056176274371,
+        0.00041084573561414595,
+        0.006352849387743609,
+        0.003367440178839802,
+        0.002225503832485974,
+        0.021973385880512886,
+        0.0003502146308670919,
+        0.0020804516205244466,
+        0.006632807325190905,
+        0.004088747594761568,
+        0.027093200670061685,
+        -0.0025059584931765243,
+        -0.008342613152522443,
+        -0.005935658354081718,
+        0.009840451265458459,
+        0.007439545332497498,
+        -0.005472721689720312,
+        0.019120004543529474,
+        -0.0010807815660353348,
+        0.014181870522488819,
+        -0.12307770882166656,
+        0.0052579137365919735,
+        -0.03376262429897404,
+        -0.059069743351614815,
+        -0.020253627384384312,
+        0.021065787407177773,
+        0.028311925488072844,
+        -0.01328457226104854,
+        -0.1303034267620106,
+        0.026933311536142507,
+        0.013095104546775368,
+        1.7377140242863339e-16,
+        0.010280483025694582,
+        -0.04521422320538196,
+        0.0019419317590148365,
+        -0.07789848080364667,
+        -0.03598893577532042,
+        -0.029192474554764442,
+        -0.028371192792366724,
+        0.035739078340818235,
+        -0.002119452175589857,
+        -0.11841319548399826,
+        -0.013305029535795784,
+        -0.008550422931370899,
+        -0.010097567078199598,
+        0.004872648190600905,
+        -0.10403659898471979,
+        -0.014354363129466249,
+        0.03174528172425418,
+        0.07093875402854932,
+        -0.028772425629764266,
+        -0.07990534792837743,
+        0.024497116155893884,
+        -0.08660978344628376,
+        0.031114903544275818,
+        -0.027174831104384584,
+        0.04486320754933493,
+        -0.007224224869354919,
+        0.009876238049028848,
+        0.017495613180597225,
+        0.012735491439294325,
+        -0.00900648250014031,
+        -0.004951562179925099,
+        0.006588308763625146,
+        0.0550408714248078,
+        -0.004057445770134235,
+        -0.001111324006126969,
+        -0.010280483025694669,
+        3.027835042317097e-17,
+        0.016054012387121664,
+        -0.004120998246386181,
+        0.03040392013573129,
+        0.014441245137918206,
+        0.007681994701428177,
+        0.009975100855328378,
+        -0.006016612845158161,
+        0.000630177233066958,
+        0.04173248338092779,
+        0.0016269263549550878,
+        0.003399555892744526,
+        0.004214742965699142,
+        -0.001214509618619019,
+        0.04600313324267672,
+        0.00027491806165342545,
+        -0.004064048115543912,
+        -0.019797347534619727,
+        0.011566909350218112,
+        0.02362667774509752,
+        -0.009413659423092111,
+        0.04111668368690901,
+        -0.010059641855675571,
+        0.010647335497110357,
+        0.03366388890002493,
+        0.025167770377885226,
+        0.0334699565252864,
+        0.04231595957304495,
+        -0.01544982819616526,
+        -0.009733096544520866,
+        -0.015191779918202855,
+        0.0017859881239397338,
+        0.012332924897895111,
+        -0.03512390555397294,
+        -0.017494398454336067,
+        0.04521422320538222,
+        -0.016054012387121633,
+        3.291125045996845e-17,
+        0.010295846387387671,
+        0.021943739650837395,
+        0.008267543630579459,
+        0.026318331916404383,
+        0.009208031756493533,
+        -0.04439039687461807,
+        -0.0018803228878567066,
+        0.04401639461870942,
+        0.015423804725239883,
+        0.002480807586954869,
+        -0.004540434134719919,
+        -0.009837897844473786,
+        0.006258683185678998,
+        0.02330628681649774,
+        -0.0196949873553699,
+        -0.04679442144087163,
+        0.0016497369286086671,
+        0.05078992828239355,
+        -0.005899873387311523,
+        0.001258957534395811,
+        -0.02111981591110037,
+        -0.0055819124248798375,
+        -0.033839626801486014,
+        5.92421829580668e-05,
+        -0.008386059940506714,
+        -0.01494907625227879,
+        -0.002656453513413379,
+        0.004462156290242174,
+        0.007162726889712596,
+        -0.003464753809930315,
+        -0.031439247357785784,
+        0.008151979132582261,
+        0.003488017200220277,
+        -0.0019419317590145127,
+        0.004120998246386064,
+        -0.010295846387387234,
+        -9.346795130631039e-17,
+        -0.02061998284319693,
+        -0.009689184888341727,
+        -0.008242003915011457,
+        -0.008304510703664163,
+        0.010182402622522069,
+        -5.0855131668439986e-05,
+        -0.03305567566965465,
+        -0.003970968240752769,
+        -0.002258538595424744,
+        -0.002226131297903841,
+        0.0015801694541057272,
+        -0.0254426054922501,
+        -0.003939310737884908,
+        0.006905298533412507,
+        0.018461070193059665,
+        -0.008620537328884048,
+        -0.019673660810152215,
+        0.006495546777066929,
+        -0.02073139387086446,
+        0.008345059019298986,
+        -0.007148636393062379,
+        0.003754818606629527,
+        0.0505621166966372,
+        0.016528270514038473,
+        0.022929063770599386,
+        -0.046540439236297644,
+        0.012082114002452696,
+        0.004608275597150154,
+        0.005051294681560784,
+        -0.06354207383276611,
+        -0.03645163724511556,
+        -0.013233572860597504,
+        0.0778984808036471,
+        -0.030403920135731524,
+        -0.021943739650837357,
+        0.02061998284319759,
+        -1.3740768465967098e-16,
+        -0.0019877760289768887,
+        0.02754761654132764,
+        0.008828401713247957,
+        -0.03936694925749141,
+        -0.004596432197633743,
+        0.02849083949407798,
+        0.016414613886063308,
+        0.004479995243157526,
+        -0.0027989705728496636,
+        -0.009421180473300077,
+        -0.04377155027611264,
+        0.025117892545601726,
+        0.002872227485442782,
+        -0.027266356309754557,
+        0.003759504778929426,
+        0.02182658274787705,
+        0.0038202761320198743,
+        -0.045914106186085164,
+        -0.015043068337008367,
+        -0.014255475328094645,
+        0.005344392866257558,
+        0.023103539169583916,
+        0.008155397548470208,
+        0.012078481061773666,
+        -0.020844927066802812,
+        0.005283934446969278,
+        0.0008304440961017357,
+        0.002570127911675054,
+        -0.02587423876057503,
+        -0.017516615497994086,
+        -0.006527056176274371,
+        0.03598893577532027,
+        -0.014441245137918212,
+        -0.008267543630579556,
+        0.009689184888341982,
+        0.0019877760289767465,
+        -4.434790999480748e-17,
+        0.013405341283823383,
+        0.004927279233711685,
+        -0.019046939875602086,
+        -0.0019300770906536826,
+        0.01647634717211393,
+        0.007998192952337384,
+        0.0023233500828719767,
+        -0.0007322380060655081,
+        -0.004270309808437603,
+        -0.017465359794309254,
+        0.012107955408393076,
+        -0.00034002317708964536,
+        -0.014717659321345753,
+        0.0026294482856976963,
+        0.012321421567294231,
+        0.0011182040080952179,
+        -0.019181973910867997,
+        -0.007564802626519183,
+        -0.005467298848970567,
+        -0.04275667477601002,
+        0.02070724642484165,
+        -0.004274353482946822,
+        -0.01211180927668454,
+        -0.02550372941090823,
+        0.010987182405281525,
+        0.0115269916176984,
+        -0.0037467160732365017,
+        -0.07013561148136685,
+        -0.004632250070399386,
+        -0.0004108457356140281,
+        0.029192474554764463,
+        -0.007681994701428164,
+        -0.0263183319164044,
+        0.008242003915011276,
+        -0.027547616541327504,
+        -0.013405341283823301,
+        -1.104583843562691e-17,
+        -0.00719146778412609,
+        -0.0031341129695925353,
+        -0.002928245885654722,
+        -0.03215103191620388,
+        0.0014948145307812114,
+        -0.0018694219248273536,
+        -0.006228695140904281,
+        -0.0027115906014504214,
+        -0.05424113143801443,
+        0.004378857559535249,
+        0.013317880318153683,
+        0.014789886345368113,
+        -0.009630015347610533,
+        -0.02033493781356839,
+        0.010085734019012247,
+        -0.047926062125459974,
+        0.004828813119154932,
+        -0.0163960387314726,
+        -0.008558642300408278,
+        0.01711902457045949,
+        0.004251321985962693,
+        0.004937375315671268,
+        -0.01800503262076567,
+        0.005376422173687135,
+        -0.003096776597871999,
+        -0.0024113602151230613,
+        -0.03280878095629013,
+        -0.013086392913875209,
+        -0.006352849387743649,
+        0.028371192792366787,
+        -0.009975100855328399,
+        -0.00920803175649344,
+        0.008304510703664211,
+        -0.008828401713247969,
+        -0.004927279233711702,
+        0.00719146778412609,
+        -1.0284765768740139e-19,
+        -0.014666048448323593,
+        -0.001231522331900005,
+        -0.0017536139577697953,
+        0.006319212964206323,
+        -0.0002981587094723402,
+        -0.003017712729954432,
+        -0.002598385178295277,
+        -0.027022559184991506,
+        0.00983583178745231,
+        -0.0048309743213432515,
+        -0.007220689361433261,
+        -0.002840715432783155,
+        0.004392923257531186,
+        0.0031768280416168693,
+        -0.028205266339006958,
+        -0.002394932648103652,
+        -0.006346283318883627,
+        0.07355345907833022,
+        -0.027131454824415875,
+        0.0009208476952487216,
+        0.018197644881137665,
+        0.03258826078219321,
+        -0.009573504409228183,
+        -0.022946155736032033,
+        0.0065640280716230915,
+        0.09895130787935119,
+        0.001259045272752782,
+        -0.0033674401788399014,
+        -0.03573907834081838,
+        0.006016612845158369,
+        0.04439039687461803,
+        -0.01018240262252237,
+        0.03936694925749147,
+        0.019046939875602097,
+        0.0031341129695927807,
+        0.014666048448323622,
+        1.2020834230503474e-16,
+        0.005209814093119821,
+        0.0576052968851107,
+        0.0019574523960374317,
+        0.003625790433841171,
+        0.012039805772720511,
+        0.006896137677886771,
+        0.07717819935082902,
+        -0.0035976049226056047,
+        -0.027790597429099572,
+        -0.025347690246311106,
+        0.02009003481162445,
+        0.031963358879977456,
+        -0.01609391677211778,
+        0.05930058159640894,
+        -0.007056554131332355,
+        0.03214952651498454,
+        0.0067705922554703235,
+        0.000662107670011554,
+        0.004954947497122468,
+        0.006235015145356195,
+        0.0008559354660934713,
+        -0.002774294699435577,
+        -0.0029927870926954,
+        0.00023148459671645642,
+        0.008186023340067194,
+        -0.00372031885592721,
+        -0.0022255038324859684,
+        0.002119452175589714,
+        -0.0006301772330670028,
+        0.0018803228878565776,
+        5.0855131668653255e-05,
+        0.004596432197633621,
+        0.0019300770906536266,
+        0.002928245885654669,
+        0.0012315223319000028,
+        -0.005209814093120084,
+        6.14926145312973e-17,
+        0.006781093499981393,
+        0.001647394175571554,
+        0.0001945041557116948,
+        -0.0005625559229697121,
+        -0.0010792403116788854,
+        0.00540336492190881,
+        0.002265827311814644,
+        -0.003596694276110099,
+        -0.006627756104479455,
+        0.00037318850715348874,
+        0.007944272801207374,
+        -0.001594180977745755,
+        0.004433158856337738,
+        -0.003024135862371544,
+        0.0003709390107935715,
+        -0.0334110771082988,
+        0.07460434584738752,
+        0.020468029378044244,
+        0.02165987632823568,
+        -0.07560920705853523,
+        0.0206060034849409,
+        8.781497914959915e-06,
+        -0.0043644846657617305,
+        -0.132818938288249,
+        -0.05212418286695845,
+        -0.02197338588051289,
+        0.11841319548399792,
+        -0.041732483380927665,
+        -0.04401639461870935,
+        0.03305567566965456,
+        -0.02849083949407799,
+        -0.0164763471721139,
+        0.03215103191620391,
+        0.0017536139577697969,
+        -0.057605296885110506,
+        -0.006781093499981429,
+        4.4101075616357716e-17,
+        0.02387960189943291,
+        0.0008941682616503912,
+        -0.011877796068099484,
+        -0.013383279121262671,
+        -0.10425975510462929,
+        0.03830281460348366,
+        -0.00373355375991566,
+        -0.027673627027164898,
+        -0.009222476537993803,
+        0.016866059195577734,
+        0.012835722244955348,
+        -0.10401343481522439,
+        -0.013293120153406017,
+        -0.030410524997462485,
+        -0.028569672688043463,
+        0.009146459630127935,
+        0.0008354507837189215,
+        -0.005584328145427688,
+        -0.01152677759327055,
+        0.0026109339082096635,
+        0.004639357666550983,
+        -0.004283262955497289,
+        -0.036411343511994966,
+        -0.0016286541068409217,
+        -0.00035021463086690494,
+        0.013305029535795638,
+        -0.00162692635495497,
+        -0.01542380472523989,
+        0.003970968240752718,
+        -0.016414613886063262,
+        -0.00799819295233742,
+        -0.001494814530781243,
+        -0.006319212964206284,
+        -0.0019574523960373324,
+        -0.0016473941755716522,
+        -0.023879601899432928,
+        -1.90885252667817e-17,
+        -0.0021554271496000634,
+        -0.005331810205492095,
+        -0.002437729611561133,
+        -0.030646466585781126,
+        0.0024485492864797097,
+        0.005439639281009422,
+        0.007772971333248008,
+        -0.009166854798550747,
+        -0.00990778992302425,
+        0.005970026303969915,
+        -0.02456226488985489,
+        0.0029628925682483234,
+        -0.011902604897936337,
+        -0.0027278372508034044,
+        0.005205581127495256,
+        -0.001297152170774174,
+        -0.0004538666424628406,
+        -0.00614654087071044,
+        0.003570543672848287,
+        -0.0007159921886872865,
+        -0.00031049472427794033,
+        -0.012503108459911571,
+        -0.003791754332077404,
+        -0.0020804516205244826,
+        0.008550422931370701,
+        -0.003399555892744492,
+        -0.002480807586954948,
+        0.0022585385954247365,
+        -0.004479995243157552,
+        -0.002323350082871987,
+        0.001869421924827361,
+        0.00029815870947232304,
+        -0.00362579043384122,
+        -0.00019450415571165382,
+        -0.0008941682616503886,
+        0.002155427149600009,
+        7.4050313534929e-18,
+        -0.00034847385876036487,
+        0.00021404862206198243,
+        -0.009653922531386413,
+        0.002446685064341656,
+        -0.0013767456716234515,
+        -0.0002717037287501733,
+        0.00023096176811949847,
+        -0.0009062680958904402,
+        0.0010731527545810376,
+        -0.011769015916430604,
+        0.00011711233510016341,
+        -0.0002500249059590742,
+        0.011749849791387074,
+        0.004323082225397605,
+        0.004899537255089143,
+        0.009640693338190903,
+        -0.002807472550969601,
+        -0.00013619601390751497,
+        -0.008868088982989774,
+        -0.00021447272995799238,
+        0.004060116906725642,
+        -0.009993535309932994,
+        -0.006632807325190901,
+        0.010097567078199698,
+        -0.0042147429656991964,
+        0.004540434134720127,
+        0.002226131297904125,
+        0.002798970572849624,
+        0.0007322380060654028,
+        0.006228695140904313,
+        0.0030177127299544347,
+        -0.012039805772720631,
+        0.0005625559229696896,
+        0.011877796068099444,
+        0.005331810205492103,
+        0.00034847385876029955,
+        5.9240250827943204e-18,
+        -7.787610926164012e-05,
+        0.0014184304027691026,
+        0.006191212840865569,
+        -0.011816313170550437,
+        -0.01210830955872067,
+        0.0020269438258144496,
+        0.013076284193996294,
+        -0.0021691807407219093,
+        -0.004995967407076569,
+        -0.0038830959794727148,
+        0.0036877762643912396,
+        0.017857356025204305,
+        -0.005535075369701609,
+        0.006328183237925541,
+        0.009932006543298212,
+        0.007112508266874389,
+        -0.005630963507083002,
+        -0.010813576040414132,
+        -0.001010009170735712,
+        0.025563730842298554,
+        -0.004292918289170913,
+        -0.004088747594761518,
+        -0.004872648190600964,
+        0.0012145096186189977,
+        0.009837897844473763,
+        -0.0015801694541055609,
+        0.009421180473299998,
+        0.0042703098084376015,
+        0.002711590601450346,
+        0.002598385178295288,
+        -0.006896137677886767,
+        0.0010792403116789272,
+        0.013383279121262692,
+        0.0024377296115610874,
+        -0.00021404862206194408,
+        7.787610926168282e-05,
+        -5.8623164881818795e-18,
+        0.016629811877414177,
+        0.0024143958768208184,
+        -0.012604977760759537,
+        -0.012185451898584096,
+        0.0018217697480083657,
+        0.014579113492928918,
+        -0.004299942839239694,
+        0.012374781991254146,
+        -0.0037603583483394707,
+        0.005504819921112679,
+        0.07541098183909353,
+        0.06375025699925563,
+        0.04485733400051948,
+        0.06622788040560636,
+        -0.051288573236938494,
+        0.0018196402495315842,
+        -0.012551442410309645,
+        0.012391959552102455,
+        -0.008633313754226242,
+        -0.06666181589920665,
+        -0.0270932006700622,
+        0.10403659898471965,
+        -0.04600313324267685,
+        -0.006258683185679304,
+        0.025442605492249658,
+        0.04377155027611244,
+        0.017465359794309694,
+        0.054241131438014345,
+        0.02702255918499142,
+        -0.07717819935082883,
+        -0.005403364921908464,
+        0.10425975510462972,
+        0.0306464665857812,
+        0.009653922531386812,
+        -0.0014184304027692106,
+        -0.016629811877414157,
+        1.1321470158229145e-16,
+        0.04250047011563228,
+        -0.015368454352543495,
+        -0.07851939721087534,
+        0.019747885900986962,
+        0.0767271342003751,
+        -0.009474417225806029,
+        -0.013410959995124606,
+        -0.039465758073584156,
+        -0.0048434961443356555,
+        -0.04564902548662552,
+        0.011569008793681907,
+        -0.0027620723412558946,
+        -0.012808075799009368,
+        -0.014175575956381003,
+        0.0050413538192549704,
+        0.013007740359294162,
+        -0.003899951057962593,
+        -0.053969000657261054,
+        0.0024027285710310816,
+        0.0025059584931766427,
+        0.014354363129466075,
+        -0.000274918061653228,
+        -0.02330628681649774,
+        0.003939310737884592,
+        -0.025117892545601466,
+        -0.012107955408393099,
+        -0.004378857559535229,
+        -0.009835831787452258,
+        0.0035976049226054125,
+        -0.0022658273118147175,
+        -0.03830281460348374,
+        -0.0024485492864797496,
+        -0.0024466850643417707,
+        -0.006191212840865555,
+        -0.0024143958768207694,
+        -0.0425004701156322,
+        -1.4086015196866494e-16,
+        0.014651896125599015,
+        0.01796724952178486,
+        -0.012528382925058954,
+        -0.020557694933444882,
+        0.009394751881832789,
+        -0.03293190497521758,
+        0.006138935878062438,
+        -0.01693768170877191,
+        0.014698615268792715,
+        -0.01961689364267406,
+        -0.03283058348338337,
+        -0.0262558717217268,
+        0.011325309610562011,
+        0.015038320917251812,
+        -0.0004276001125307486,
+        0.0035965407050979944,
+        0.012643345513845336,
+        0.019239151667462068,
+        0.00834261315252197,
+        -0.03174528172425421,
+        0.0040640481155438885,
+        0.019694987355369797,
+        -0.006905298533413144,
+        -0.0028722274854429295,
+        0.00034002317708979016,
+        -0.013317880318153447,
+        0.004830974321343164,
+        0.02779059742910024,
+        0.003596694276110029,
+        0.003733553759915744,
+        -0.005439639281009254,
+        0.0013767456716235183,
+        0.011816313170550144,
+        0.012604977760759454,
+        0.01536845435254381,
+        -0.014651896125598935,
+        4.475930062555708e-16,
+        0.022418841160666485,
+        0.015247176199134922,
+        -0.026969740558285566,
+        -0.0021075515448075,
+        0.0034592679798163706,
+        0.012717512562039178,
+        0.024165352827861714,
+        0.054285359680700716,
+        -0.04898425252128868,
+        -0.014897178426585873,
+        -0.0046163859311534675,
+        0.04775666480152811,
+        -0.009342848354245054,
+        -0.02040556304990201,
+        0.0018088659311147933,
+        0.10399213994736574,
+        0.023014002522997044,
+        0.005935658354081783,
+        -0.07093875402854906,
+        0.019797347534619595,
+        0.04679442144087189,
+        -0.01846107019305949,
+        0.027266356309754446,
+        0.014717659321345769,
+        -0.014789886345367995,
+        0.0072206893614332555,
+        0.025347690246311894,
+        0.006627756104479175,
+        0.027673627027165044,
+        -0.007772971333247901,
+        0.000271703728750156,
+        0.012108309558720701,
+        0.012185451898583928,
+        0.07851939721087481,
+        -0.01796724952178444,
+        -0.02241884116066644,
+        -6.582250091993689e-18,
+        0.01565696209719439,
+        0.00548237633789493,
+        -0.013802718513390235,
+        0.06467711171398245,
+        0.0055755332882647,
+        0.035186674524706064,
+        0.004931677352860817,
+        0.015499588749158704,
+        0.00600805585249801,
+        0.010521544061660186,
+        -0.01654241516506807,
+        0.0046430040354913105,
+        -0.011820930763323485,
+        -0.003120779967312105,
+        -0.020717450806557534,
+        -0.01729060262436684,
+        -0.009840451265458515,
+        0.028772425629764172,
+        -0.011566909350217994,
+        -0.001649736928608617,
+        0.008620537328883682,
+        -0.003759504778929395,
+        -0.0026294482856976096,
+        0.009630015347610557,
+        0.002840715432783155,
+        -0.02009003481162424,
+        -0.00037318850715354734,
+        0.00922247653799391,
+        0.009166854798550837,
+        -0.00023096176811947592,
+        -0.0020269438258144427,
+        -0.0018217697480083757,
+        -0.019747885900986962,
+        0.012528382925058971,
+        -0.015247176199134793,
+        -0.0156569620971942,
+        4.5417525634756455e-17,
+        0.01321419872564407,
+        0.000495393918257197,
+        -0.025513142344222216,
+        -0.004480107373398569,
+        -0.000938706829626766,
+        -0.04717283246946175,
+        0.05535251895722587,
+        0.02001973357113532,
+        0.010577967369995705,
+        -0.05288735344543691,
+        0.008679744471739833,
+        0.023312158378408745,
+        0.0007483470427772638,
+        -0.10439132965897732,
+        -0.02899477929915974,
+        -0.0074395453324975006,
+        0.07990534792837736,
+        -0.023626677745097465,
+        -0.05078992828239347,
+        0.01967366081015239,
+        -0.0218265827478772,
+        -0.012321421567294393,
+        0.02033493781356839,
+        -0.004392923257531158,
+        -0.03196335887997771,
+        -0.007944272801207413,
+        -0.016866059195577817,
+        0.009907789923024306,
+        0.0009062680958903464,
+        -0.013076284193996294,
+        -0.014579113492928869,
+        -0.07672713420037526,
+        0.0205576949334449,
+        0.026969740558285195,
+        -0.005482376337894982,
+        -0.013214198725644059,
+        8.293635115912048e-17,
+        0.012702995453385008,
+        -0.0630463787975129,
+        -0.010008434403803973,
+        -0.03694262961275747,
+        -0.005897876256897305,
+        -0.015144094386096941,
+        -0.009838464448451755,
+        -0.011824867184553837,
+        0.013428776656654881,
+        -0.0005387968018685878,
+        0.0017720721452080558,
+        -0.0005733364218808367,
+        0.012362093540674059,
+        0.013678298856762609,
+        0.005472721689720448,
+        -0.024497116155893877,
+        0.009413659423092007,
+        0.005899873387311377,
+        -0.006495546777066615,
+        -0.0038202761320197906,
+        -0.0011182040080952237,
+        -0.010085734019012275,
+        -0.0031768280416168823,
+        0.016093916772117627,
+        0.0015941809777458465,
+        -0.012835722244955423,
+        -0.005970026303970097,
+        -0.0010731527545810092,
+        0.0021691807407218946,
+        0.004299942839239701,
+        0.009474417225806366,
+        -0.009394751881832907,
+        0.0021075515448075355,
+        0.013802718513390046,
+        -0.0004953939182572993,
+        -0.012702995453385121,
+        8.811987310656552e-17,
+        0.00962866410386961,
+        0.006868594567524154,
+        0.00514961937749217,
+        0.07649021140274413,
+        0.055459157871656804,
+        0.032441946035523736,
+        0.05470016758459087,
+        -0.04207083268926214,
+        0.005463750989201492,
+        -0.0016082989911775608,
+        0.018103480764995208,
+        -0.0002503012734299605,
+        -0.05356605052298945,
+        -0.019120004543529957,
+        0.08660978344628359,
+        -0.04111668368690907,
+        -0.0012589575343961322,
+        0.020731393870864416,
+        0.04591410618608474,
+        0.019181973910868046,
+        0.047926062125460196,
+        0.028205266339006854,
+        -0.05930058159640888,
+        -0.004433158856337745,
+        0.10401343481522465,
+        0.02456226488985498,
+        0.011769015916430732,
+        0.00499596740707623,
+        -0.012374781991254132,
+        0.013410959995125309,
+        0.0329319049752176,
+        -0.0034592679798159387,
+        -0.06467711171398244,
+        0.025513142344222386,
+        0.06304637879751246,
+        -0.009628664103869483,
+        1.4480950202386116e-17,
+        -0.03432319346834765,
+        0.0013910755075568404,
+        0.025311692507235087,
+        -0.022092927040412453,
+        -0.00017653557757906795,
+        0.003965091825211092,
+        0.02412451348615157,
+        -0.008803527060615095,
+        -0.010993059702593599,
+        0.0001579641478072918,
+        0.05374297206246152,
+        0.007995416308950743,
+        0.0010807815660351932,
+        -0.031114903544275974,
+        0.010059641855675738,
+        0.021119815911100535,
+        -0.00834505901929964,
+        0.015043068337008688,
+        0.007564802626519385,
+        -0.004828813119154983,
+        0.0023949326481036886,
+        0.007056554131332228,
+        0.0030241358623716665,
+        0.013293120153406099,
+        -0.0029628925682482587,
+        -0.0001171123351001496,
+        0.0038830959794728184,
+        0.0037603583483396077,
+        0.03946575807358411,
+        -0.006138935878062714,
+        -0.012717512562039148,
+        -0.0055755332882643045,
+        0.004480107373398497,
+        0.01000843440380406,
+        -0.0068685945675241115,
+        0.034323193468347876,
+        -2.4847994097276174e-16,
+        0.013367812985025691,
+        0.02803041654917823,
+        0.0125991453377699,
+        0.021878119702189617,
+        0.02902839207751672,
+        -0.008859339576783051,
+        -0.006855141971378334,
+        -0.020216611986738704,
+        -0.00266607787726501,
+        0.014477559668974932,
+        -0.024803445917960663,
+        -0.014181870522488822,
+        0.027174831104384317,
+        -0.01064733549711019,
+        0.005581912424879539,
+        0.0071486363930621235,
+        0.014255475328094515,
+        0.00546729884897059,
+        0.016396038731472554,
+        0.0063462833188836784,
+        -0.03214952651498451,
+        -0.0003709390107935683,
+        0.030410524997462586,
+        0.011902604897936373,
+        0.00025002490595913736,
+        -0.0036877762643912682,
+        -0.005504819921112716,
+        0.004843496144335753,
+        0.016937681708771923,
+        -0.024165352827861374,
+        -0.035186674524706016,
+        0.0009387068296268516,
+        0.036942629612757585,
+        -0.005149619377492339,
+        -0.001391075507556714,
+        -0.013367812985025672,
+        3.8012494281263555e-17
+      ],
+      "W_sha256": "929f3ffb4a5545761f9eb206ac0abe4ed9ff3545fe867c1c00ca62bc928a5fb8",
+      "convention": "doc 55 SS19.3, re-pinned for exp73's maps: the witness of record is THIS committed computation's output, exported at bound-computation time, BEFORE any exp73 run. For the SATURATED rungs the witness is the exact certificate's W = G^+ 1 (SS4) and not a search output. A4's W has 18496 entries and is carried by sha256 only; it is reproducible from this script and the pinned inputs."
+    },
+    "A4": {
+      "d": 18496,
+      "n_twins": 160,
+      "n_positive_margin": 160,
+      "certifies_the_bound_count": true,
+      "exported": false,
+      "W": null,
+      "W_sha256": "102b4a8f72506d5493853c796da390b7ef8cc599db704137d971f88d42a4a7d3",
+      "convention": "doc 55 SS19.3, re-pinned for exp73's maps: the witness of record is THIS committed computation's output, exported at bound-computation time, BEFORE any exp73 run. For the SATURATED rungs the witness is the exact certificate's W = G^+ 1 (SS4) and not a search output. A4's W has 18496 entries and is carried by sha256 only; it is reproducible from this script and the pinned inputs."
+    }
+  },
+  "bound_of_record_note": {
+    "A1/A2": "no committed bound exists for either; A1 is the selftest rung and A2 is a sensitivity row, NOTED NOT RUN.",
+    "A3/A4": "EXACT 1.0000 by the saturation certificate (SS4) if the certificate fired -- read `method` on each row, never the number alone (doc 47 SS18.5).",
+    "binding_rule": "doc 55 SS6 / SS12: NO exp73 criterion reads against any number in this file. doc 54 SS17.7 is the standing reason, and SS4's saturation makes it mechanical rather than merely prudent."
+  },
+  "grade3_under_conversion_flag": {
+    "flag": "under-conversion predicted for a BELOW-NULL category (doc 55 SS19.2 grade 3, made prospective)",
+    "percentile_vs_size_matched_null": {
+      "A1": 89.0,
+      "A2": 67.0,
+      "A3": 0.0,
+      "A4": 0.0
+    },
+    "below_null": {
+      "A1": false,
+      "A2": false,
+      "A3": false,
+      "A4": false
+    },
+    "null_mean": {
+      "A1": 0.8246562499999999,
+      "A2": 0.9724062500000001,
+      "A3": 1.0,
+      "A4": 1.0
+    },
+    "null_sd": {
+      "A1": 0.07303808910932162,
+      "A2": 0.028905640951752975,
+      "A3": 0.0,
+      "A4": 0.0
+    },
+    "any_arm_below_null": false,
+    "testable_this_run": false,
+    "verdict": "UNTESTABLE THIS RUN -- no exp73 rung has a below-null category. Computed before freezing and recorded rather than quietly dropped, exactly as doc 55 SS19.2 did for exp69 and doc 56 for exp70."
+  },
+  "saturation_finding": {
+    "saturated_rungs": [
+      "A3",
+      "A4"
+    ],
+    "statement": "at every rung whose joint coordinate space is at least as large as the number of MAX-FS rows, the rows are of full rank and the optimum is EXACTLY the row count. The bound is 1.0000 by PROOF, and so is every size-matched null draw's.",
+    "consequence_registered_as_a_result": "the grade-1 instrument DISCRIMINATES NOTHING at the amplitude rung -- not A3 from A4, not the category from its null, and not amplitude from the committed 2-qubit angle registers whose bounds are already 1.0000 (doc 58 SS11). Every exp73 criterion is therefore measurement-vs-measurement, and the standard bound-referenced bug-hunt gate is STRUCTURALLY INERT here in doc 58 SS9.5's exact sense: bound + 0.06 > 1 and no achievable accuracy can trigger it.",
+    "what_it_does_NOT_say": "it does NOT say the amplitude encoding is expressive in any useful sense. Saturation is a statement about a 1296- or 18496-dimensional linear model on 160 constraints; it is the SAME degeneracy that makes the tier-(ii) classical comparator vacuous at these widths, and the doc registers a capacity-matched comparator tier for exactly that reason.",
+    "comparator_dimension_warning": {
+      "A1": {
+        "d_joint": 9,
+        "n_train_plus_val_items_exp69_dataset": 660,
+        "unregularised_linear_fit_is_vacuous": false
+      },
+      "A2": {
+        "d_joint": 100,
+        "n_train_plus_val_items_exp69_dataset": 660,
+        "unregularised_linear_fit_is_vacuous": false
+      },
+      "A3": {
+        "d_joint": 1296,
+        "n_train_plus_val_items_exp69_dataset": 660,
+        "unregularised_linear_fit_is_vacuous": true
+      },
+      "A4": {
+        "d_joint": 18496,
+        "n_train_plus_val_items_exp69_dataset": 660,
+        "unregularised_linear_fit_is_vacuous": true
+      }
+    }
+  },
+  "wall_sec": 286.1806437969208
+}

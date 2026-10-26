@@ -1,0 +1,102 @@
+{
+ "component": "exp72 stage-2 procedure-matched floors (doc 58 SS14)",
+ "spec": "qnlp_private_docs/58_exp72_rescue_rung.md (REGISTERED 2026-08-27, orchestrator rulings 1-6 in the status header, SS18 post-registration note on I2)",
+ "spec_commit_line": "f432b1f doc 56 SS18.3: confirm draw discharges the rider, headline stands (both draws -0.19); doc 58 SS18: I2 stands, gap reproduced, binds knife-edge noted",
+ "platform": "macOS-26.5.2-arm64-arm-64bit",
+ "torch": "2.13.0",
+ "floors": {
+  "I1|R-identity": {
+   "mean": 0.4913333333333334,
+   "sd": 0.047527769660366884,
+   "per_seed": [
+    0.55,
+    0.43666666666666665,
+    0.45,
+    0.5,
+    0.52
+   ],
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_seeds": 5,
+   "val_per_seed": [
+    0.6212121212121212,
+    0.5984848484848485,
+    0.5833333333333334,
+    0.6363636363636364,
+    0.6287878787878788
+   ],
+   "train_per_seed": [
+    0.4981060606060606,
+    0.5303030303030303,
+    0.5662878787878788,
+    0.5946969696969697,
+    0.6609848484848485
+   ],
+   "selected_epoch_per_seed": [
+    129,
+    104,
+    99,
+    139,
+    23
+   ],
+   "selected_stage_per_seed": [
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "val_minus_heldout_per_seed": [
+    0.07121212121212117,
+    0.16181818181818186,
+    0.13333333333333336,
+    0.13636363636363635,
+    0.10878787878787877
+   ],
+   "mean_val_minus_heldout": 0.12230303030303029,
+   "max_epochs": 150,
+   "n_params": 264,
+   "wires": 4,
+   "n_test": 300,
+   "wall_sec_total": 7332.973573446274,
+   "ckpt_sha256": [
+    "d5692b28235eb7947c2747065b5863b3482e410761bf3ac148a59cf241c3e8b9",
+    "0d01494c3721266a06618ff495b7f7b01bf90c2a5199cca79b75604a2e42d2f1",
+    "c1cbd91452d3ca1036e35da55400948baa1791230061ec8441b60250568dfd22",
+    "4ba26ff285b1c5f959d06a92030dd7692d6414831c24c14de7fd300bf0dc1ab5",
+    "b59f93cd86e8c7a0d79c1d2c0a3adb628201540756cffc2db8b06875591bd8a2"
+   ],
+   "procedure_matched": true,
+   "rescue_procedure": "R-identity"
+  }
+ },
+ "triggered_cells": [
+  "I1|R-identity"
+ ],
+ "triggered_but_unfloored": [],
+ "severed_donors": {},
+ "protocol": {
+  "rule": "a warm start injects information through the INITIALISATION, so THE DONOR'S LABELS ARE SEVERED TOO: the T = 1 donor arm is retrained on the shuffled bearer designation at the committed T = 1 recipe (150 epochs), its checkpoint is selected on the SHUFFLED val accuracy, and the shuffled T = 2 run is warm-started from it.",
+  "seed_linkage": "REGISTERED: floor seed k's shuffle RNG seed drives BOTH the T = 1 donor's per-pair reassignment AND the T = 2 run's -- one seed, two item sets.",
+  "BUILD_LEVEL_OPERATIONALISATION_FLAGGED_FOR_THE_ORCHESTRATOR": "doc 58 SS14.4 registers BOTH a five-seed donor retraining AND seed linkage, and the two only close under one reading: the T = 2 floor run at seed k is warm-started from THE DONOR TRAINED AT SEED k UNDER SHUFFLE SEED k. That reading is the only one consistent with SS15.3's count of 5 donor runs per cell AND with the committed per-seed S-shuffle construction; under it, step 2's 'select the donor on the SHUFFLED val accuracy' is the WITHIN-RUN checkpoint selection (the content that matters: no true label reaches the initialisation) and the cross-seed lowest-index tie-break is inert. A cross-seed donor selection would either break the linkage or cost 25 donor runs per cell, neither of which is registered. THIS IS A BUILD-LEVEL RESOLUTION OF A REGISTERED AMBIGUITY AND IS REPORTED RATHER THAN BURIED."
+ },
+ "rule3_note": "written SEPARATELY from results_exp72.json because stage 2 may run later than stage 1 and Rule 3 forbids overwriting (doc 58 SS15.5).",
+ "git_note": {
+  "repo_head": "cc027c7 exp70 CONFIRM DRAW (seed+1000, all arms, fresh floors): THE HEADLINE STANDS -- entanglement_hurts_T2 TRUE on both draws (-0.1873/-0.1887); 13/14 booleans agree; the one flip is the binds_N-in_T2 knife-edge (0.6467->0.6647 across the 0.65 bar) while the instance's gap to its 1.0 comparator persists (0.335); per-arm deltas <=0.03",
+  "exp72_paths": [
+   "?? exp72_aggregate.py",
+   "?? exp72_ckpt/",
+   "?? exp72_run.py",
+   "?? results_exp72.json",
+   "?? results_exp72_anchors.json",
+   "?? results_exp72_smoke_validation.json"
+  ],
+  "n_untracked": 253,
+  "rule3_note": "exp72 writes ONLY exp72_ckpt/ and results_exp72* (through fresh_results_path). No exp68 / exp69 / exp70 artefact is modified; the donor checkpoints are READ-ONLY and sha-asserted before use."
+ }
+}

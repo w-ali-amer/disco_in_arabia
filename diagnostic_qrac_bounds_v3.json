@@ -1,0 +1,23 @@
+{
+ "doc": "94 pre-registration bound calculator v3",
+ "results": {
+  "compositional_qubit_n2": 0.8535537719726562,
+  "compositional_rebit_n2": 0.8535535931587219,
+  "compositional_rebit_n2_imag_max": 0.0,
+  "compositional_qubit_n3": 0.7696726322174072,
+  "compositional_rebit_n3": 0.7696724534034729,
+  "compositional_rebit_n3_imag_max": 0.0,
+  "reference_v1": {
+   "classical_1bit_max_n2": 0.75,
+   "classical_1bit_max_n3": 0.75,
+   "qubit_analytic_n2": 0.8535533905932737,
+   "qubit_numeric_n2": 0.8535534143447876,
+   "rebit_numeric_n2": 0.8535534143447876,
+   "qubit_analytic_n3": 0.7886751345948129,
+   "qubit_numeric_n3": 0.7886752486228943,
+   "rebit_numeric_n3": 0.7696723937988281
+  },
+  "analytic_rebit_n3_lit_agent": 0.7696723314583158
+ },
+ "self_sha256": "eb76d2adfedff550ade3ba7a3b1c0ef65a8c90ccfab57774edd0e9f258d646e2"
+}

@@ -1,0 +1,18 @@
+{
+ "gate": "GATE_BIT_IDENTITY_SMOKE",
+ "passed": true,
+ "arm": "A3-T2-identity",
+ "seed": 82000,
+ "heldout_test_acc_reproduced": 0.6866666666666666,
+ "results_exp82_recorded": 0.6866666666666666,
+ "exact_match": true,
+ "diff": 0.0,
+ "dtf_leg": {
+  "description": "compare exp86 heldout against wrong reference 0.5; the check must trip (te != wrong_ref)",
+  "wrong_reference": 0.5,
+  "check_trips": true,
+  "passed": true
+ },
+ "smoke_ckpt": "exp86_ckpt/A3-T2-identity_s82000.json",
+ "control_doc78_SS0": "after training, heldout_test_acc must EXACTLY equal results_exp82.json per_seed value; any mismatch invalidates the whole run (doc 70 style)"
+}

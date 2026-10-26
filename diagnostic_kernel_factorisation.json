@@ -1,0 +1,50 @@
+{
+ "check": "kernel_factorisation",
+ "claim": "doc 52 SS1.1: <psi(theta)|psi(theta')> = prod_i cos((theta_i-theta'_i)/2) for per-wire RY product encodings; classical O(n)",
+ "simulator": "torch_sv_sim (complex64), the simulator of record for exp42-exp68",
+ "seed": 5201,
+ "rows": [
+  {
+   "n_qubits": 1,
+   "pairs": 200,
+   "max_abs_deviation_sim_c64": 1.6019348114681975e-07,
+   "max_abs_deviation_float64": 2.220446049250313e-16
+  },
+  {
+   "n_qubits": 2,
+   "pairs": 200,
+   "max_abs_deviation_sim_c64": 2.079534144883155e-07,
+   "max_abs_deviation_float64": 3.3306690738754696e-16
+  },
+  {
+   "n_qubits": 3,
+   "pairs": 200,
+   "max_abs_deviation_sim_c64": 1.6943519373646687e-07,
+   "max_abs_deviation_float64": 2.220446049250313e-16
+  },
+  {
+   "n_qubits": 5,
+   "pairs": 200,
+   "max_abs_deviation_sim_c64": 1.370536141798162e-07,
+   "max_abs_deviation_float64": 2.7755575615628914e-16
+  },
+  {
+   "n_qubits": 8,
+   "pairs": 200,
+   "max_abs_deviation_sim_c64": 7.229256532292894e-08,
+   "max_abs_deviation_float64": 1.3877787807814457e-16
+  },
+  {
+   "n_qubits": 12,
+   "pairs": 200,
+   "max_abs_deviation_sim_c64": 5.164832504733763e-08,
+   "max_abs_deviation_float64": 3.469446951953614e-17
+  }
+ ],
+ "max_abs_deviation_sim_c64_overall": 2.079534144883155e-07,
+ "max_abs_deviation_float64_overall": 3.3306690738754696e-16,
+ "precision_note": "complex64 statevectors bound the check near 1e-6; doc 52's 3.3e-16 was float64 algebra on the closed form. Both verify the same identity; this file is the committed producer of record.",
+ "platform": "macOS-26.5.2-arm64-arm-64bit",
+ "torch": "2.13.0",
+ "script_sha256": "98713dd5f79d4c51921d6d4aba22edc5525af6aa85823d9f1b4d51244a2cabfa"
+}

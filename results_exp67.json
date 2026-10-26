@@ -1,0 +1,187 @@
+{
+ "experiment": "exp67",
+ "spec": "qnlp_private_docs/53_exp67_readout_arity.md (126f72b, FROZEN)",
+ "platform": "macOS-26.5.2-arm64-arm-64bit",
+ "torch": "2.13.0",
+ "dataset_sha256": "ae94ab9c31d62778e1c916aa44566a0ec3c8f74b09f4bf3839bab5f331c87b8c",
+ "cells": [
+  {
+   "cell": "M2",
+   "R2": {
+    "mean": 0.7913333333333333,
+    "sd": 0.02352303835250312,
+    "per_seed": [
+     0.7666666666666667,
+     0.7733333333333333,
+     0.7933333333333333,
+     0.7966666666666666,
+     0.8266666666666667
+    ],
+    "distinct_outcomes": [
+     2,
+     2,
+     2,
+     2,
+     2
+    ],
+    "arity_used": true
+   },
+   "R4": {
+    "mean": 0.7713333333333333,
+    "sd": 0.04787715762471938,
+    "per_seed": [
+     0.7066666666666667,
+     0.7433333333333333,
+     0.7733333333333333,
+     0.81,
+     0.8233333333333334
+    ],
+    "distinct_outcomes": [
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "arity_used": true
+   },
+   "R8": {
+    "mean": 0.7386666666666667,
+    "sd": 0.023404652908722623,
+    "per_seed": [
+     0.7,
+     0.7366666666666667,
+     0.7433333333333333,
+     0.7533333333333333,
+     0.76
+    ],
+    "distinct_outcomes": [
+     8,
+     8,
+     7,
+     6,
+     7
+    ],
+    "arity_used": true
+   },
+   "S-shuffle": {
+    "mean": 0.506,
+    "sd": 0.03507135583350037,
+    "per_seed": [
+     0.45,
+     0.5,
+     0.51,
+     0.53,
+     0.54
+    ],
+    "distinct_outcomes": [
+     2,
+     2,
+     2,
+     2,
+     2
+    ],
+    "arity_used": true
+   },
+   "R8_minus_R2": -0.05266666666666664,
+   "R4_minus_R2": -0.020000000000000018
+  },
+  {
+   "cell": "M3",
+   "R2": {
+    "mean": 0.6613333333333333,
+    "sd": 0.022435091560618483,
+    "per_seed": [
+     0.6233333333333333,
+     0.66,
+     0.67,
+     0.6733333333333333,
+     0.68
+    ],
+    "distinct_outcomes": [
+     2,
+     2,
+     2,
+     2,
+     2
+    ],
+    "arity_used": true
+   },
+   "R4": {
+    "mean": 0.7366666666666667,
+    "sd": 0.020548046676563257,
+    "per_seed": [
+     0.7066666666666667,
+     0.7266666666666667,
+     0.7433333333333333,
+     0.7466666666666667,
+     0.76
+    ],
+    "distinct_outcomes": [
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "arity_used": true
+   },
+   "R8": {
+    "mean": 0.6973333333333332,
+    "sd": 0.041925860489413685,
+    "per_seed": [
+     0.6433333333333333,
+     0.6766666666666666,
+     0.7,
+     0.71,
+     0.7566666666666667
+    ],
+    "distinct_outcomes": [
+     7,
+     7,
+     8,
+     7,
+     8
+    ],
+    "arity_used": true
+   },
+   "S-shuffle": {
+    "mean": 0.4846666666666667,
+    "sd": 0.017888543819998326,
+    "per_seed": [
+     0.47,
+     0.47,
+     0.4766666666666667,
+     0.49666666666666665,
+     0.51
+    ],
+    "distinct_outcomes": [
+     2,
+     2,
+     2,
+     2,
+     2
+    ],
+    "arity_used": true
+   },
+   "R8_minus_R2": 0.03599999999999992,
+   "R4_minus_R2": 0.07533333333333336
+  }
+ ],
+ "verdicts": {
+  "arity_lifts": false,
+  "arity_saturates": false,
+  "validity_all_arms_used_arity": true
+ },
+ "meta_notes": {
+  "headline": "arity_lifts = FALSE. M2: R8-R2 = -0.0527 (arity HURTS). M3: R8-R2 = +0.0360 (below the 0.06 bar). The Davenport-Schinzel decision-complexity budget (2 -> 6 -> 10 arcs) does NOT convert into trained accuracy -- doc 53 SS4 pre-registered this branch as a real result.",
+  "descriptive_not_promoted": "At M3, R4 - R2 = +0.0754, which WOULD clear the 0.06 bar. The registered criterion is R8-R2 and it FAILED. Per the exp44 lesson, a variant is never promoted onto a criterion it was not registered against. Recorded as descriptive only.",
+  "non_monotonic": "R4 > R8 at BOTH cells (M2 0.7713 vs 0.7387; M3 0.7367 vs 0.6973). More outcomes eventually HURT -- mirroring the K-lever, where K=2 was representationally available but not exploitable, and the VQC literature's report that deeper circuits reduce performance.",
+  "validity": "All arms genuinely used their arity (R4: 4/4 outcomes; R8: 6-8), and outcome probabilities stayed 3-term (~2e-07) while class scores did not (1.3e-02, 3.3e-02). These are admissible results, not null instruments.",
+  "scope": "One dataset, two cells, simulation, constructed categories. Classical comparator pre-registered as a tie (doc 53 SS4.1); no quantum reading is licensed and doc 52 SS1 already closed the advantage question."
+ },
+ "git_note": {
+  "exp42_paths": [],
+  "n_untracked": 243
+ }
+}

@@ -1,0 +1,304 @@
+{
+  "meta": {
+    "experiment": "exp87",
+    "registration": "80_exp87_arabic_wug_test.md",
+    "aggregate_script": "exp87_aggregate.py",
+    "timestamp": "2026-09-18T00:07:24",
+    "n_seeds": 3,
+    "seeds": [
+      42,
+      43,
+      44
+    ]
+  },
+  "science_booleans": {
+    "morphology_is_lexicon_bound": true,
+    "productive_headroom_exists": true,
+    "valid": true
+  },
+  "named_outcome": "LEXICON_BOUND_WITH_HEADROOM: morphology memorized AND productive segmenter is buildable",
+  "anchor_voided": false,
+  "gates": {
+    "nonce_validity": {
+      "passes": true,
+      "verdict": "PASS: all 30 nonce roots cleared all screens; DTF injection caught"
+    },
+    "gold_determinism": {
+      "passes": true,
+      "verdict": "PASS: all 360 forms deterministically mapped; DTF injection caught"
+    },
+    "replication_anchor": {
+      "passes": true,
+      "verdict": "PASS: all instrument artifacts present and pinned",
+      "anchor_voided": false
+    }
+  },
+  "per_seed": [
+    {
+      "seed": 42,
+      "bpe_real_f1": 0.0,
+      "wazn_real_f1": 0.7052,
+      "fused_real_f1": 0.665,
+      "skel_real_f1": 0.875,
+      "bpe_nonce_f1": 0.0043,
+      "wazn_nonce_f1": 0.0,
+      "fused_nonce_f1": 0.013,
+      "skel_nonce_f1": 0.8,
+      "real_gap_wazn_over_bpe": 0.7052,
+      "real_gap_fused_over_bpe": 0.665,
+      "nonce_gap_wazn_over_bpe": -0.0043,
+      "nonce_gap_fused_over_bpe": 0.0087,
+      "skel_headroom_over_bpe": 0.7957,
+      "seed_lexicon_bound_wazn": true,
+      "seed_lexicon_bound_fused": true,
+      "seed_productive_headroom": true,
+      "anchor_delta_bpe": -0.1974,
+      "anchor_delta_wazn": 0.1267,
+      "fertility": {
+        "bpe_nonce": 2.5611,
+        "bpe_real": 1.6667,
+        "wazn_nonce": 2.5111,
+        "wazn_real": 3.4389,
+        "fused_nonce": 3.4167,
+        "fused_real": 3.0778
+      },
+      "analyzer_behavior": {
+        "wazn_nonce": {
+          "fallback": 180
+        },
+        "wazn_real": {
+          "analyzed": 128,
+          "fallback": 52
+        },
+        "fused_nonce": {
+          "fallback": 180
+        },
+        "fused_real": {
+          "fused_analyzed": 31,
+          "analyzed": 97,
+          "fallback": 52
+        },
+        "skel_nonce": {
+          "matched": 120,
+          "unmatched": 60
+        },
+        "skel_real": {
+          "matched": 140,
+          "unmatched": 40
+        }
+      }
+    },
+    {
+      "seed": 43,
+      "bpe_real_f1": 0.0,
+      "wazn_real_f1": 0.6997,
+      "fused_real_f1": 0.6499,
+      "skel_real_f1": 0.875,
+      "bpe_nonce_f1": 0.0043,
+      "wazn_nonce_f1": 0.0044,
+      "fused_nonce_f1": 0.0162,
+      "skel_nonce_f1": 0.8,
+      "real_gap_wazn_over_bpe": 0.6997,
+      "real_gap_fused_over_bpe": 0.6499,
+      "nonce_gap_wazn_over_bpe": 0.0001,
+      "nonce_gap_fused_over_bpe": 0.0119,
+      "skel_headroom_over_bpe": 0.7957,
+      "seed_lexicon_bound_wazn": true,
+      "seed_lexicon_bound_fused": true,
+      "seed_productive_headroom": true,
+      "anchor_delta_bpe": -0.1899,
+      "anchor_delta_wazn": 0.1373,
+      "fertility": {
+        "bpe_nonce": 2.5722,
+        "bpe_real": 1.6778,
+        "wazn_nonce": 2.5333,
+        "wazn_real": 3.4278,
+        "fused_nonce": 3.4389,
+        "fused_real": 3.1
+      },
+      "analyzer_behavior": {
+        "wazn_nonce": {
+          "fallback": 180
+        },
+        "wazn_real": {
+          "analyzed": 127,
+          "fallback": 53
+        },
+        "fused_nonce": {
+          "fallback": 180
+        },
+        "fused_real": {
+          "fused_analyzed": 31,
+          "analyzed": 96,
+          "fallback": 53
+        },
+        "skel_nonce": {
+          "matched": 120,
+          "unmatched": 60
+        },
+        "skel_real": {
+          "matched": 140,
+          "unmatched": 40
+        }
+      }
+    },
+    {
+      "seed": 44,
+      "bpe_real_f1": 0.0,
+      "wazn_real_f1": 0.7052,
+      "fused_real_f1": 0.6616,
+      "skel_real_f1": 0.875,
+      "bpe_nonce_f1": 0.0043,
+      "wazn_nonce_f1": 0.0,
+      "fused_nonce_f1": 0.0225,
+      "skel_nonce_f1": 0.8,
+      "real_gap_wazn_over_bpe": 0.7052,
+      "real_gap_fused_over_bpe": 0.6616,
+      "nonce_gap_wazn_over_bpe": -0.0043,
+      "nonce_gap_fused_over_bpe": 0.0182,
+      "skel_headroom_over_bpe": 0.7957,
+      "seed_lexicon_bound_wazn": true,
+      "seed_lexicon_bound_fused": true,
+      "seed_productive_headroom": true,
+      "anchor_delta_bpe": -0.2045,
+      "anchor_delta_wazn": 0.1443,
+      "fertility": {
+        "bpe_nonce": 2.5611,
+        "bpe_real": 1.6611,
+        "wazn_nonce": 2.5222,
+        "wazn_real": 3.4389,
+        "fused_nonce": 3.45,
+        "fused_real": 3.1056
+      },
+      "analyzer_behavior": {
+        "wazn_nonce": {
+          "fallback": 180
+        },
+        "wazn_real": {
+          "analyzed": 128,
+          "fallback": 52
+        },
+        "fused_nonce": {
+          "fallback": 180
+        },
+        "fused_real": {
+          "fused_analyzed": 31,
+          "analyzed": 97,
+          "fallback": 52
+        },
+        "skel_nonce": {
+          "matched": 120,
+          "unmatched": 60
+        },
+        "skel_real": {
+          "matched": 140,
+          "unmatched": 40
+        }
+      }
+    }
+  ],
+  "f1_table": [
+    {
+      "seed": 42,
+      "condition": "real",
+      "f1_bpe": 0.0,
+      "p_bpe": 0.0,
+      "r_bpe": 0.0,
+      "f1_wazn": 0.7052,
+      "p_wazn": 0.6995,
+      "r_wazn": 0.7111,
+      "f1_fused": 0.665,
+      "p_fused": 0.6161,
+      "r_fused": 0.7222,
+      "f1_skel": 0.875,
+      "p_skel": 1.0,
+      "r_skel": 0.7778
+    },
+    {
+      "seed": 42,
+      "condition": "nonce",
+      "f1_bpe": 0.0043,
+      "p_bpe": 0.0036,
+      "r_bpe": 0.0056,
+      "f1_wazn": 0.0,
+      "p_wazn": 0.0,
+      "r_wazn": 0.0,
+      "f1_fused": 0.013,
+      "p_fused": 0.0092,
+      "r_fused": 0.0222,
+      "f1_skel": 0.8,
+      "p_skel": 1.0,
+      "r_skel": 0.6667
+    },
+    {
+      "seed": 43,
+      "condition": "real",
+      "f1_bpe": 0.0,
+      "p_bpe": 0.0,
+      "r_bpe": 0.0,
+      "f1_wazn": 0.6997,
+      "p_wazn": 0.694,
+      "r_wazn": 0.7056,
+      "f1_fused": 0.6499,
+      "p_fused": 0.5945,
+      "r_fused": 0.7167,
+      "f1_skel": 0.875,
+      "p_skel": 1.0,
+      "r_skel": 0.7778
+    },
+    {
+      "seed": 43,
+      "condition": "nonce",
+      "f1_bpe": 0.0043,
+      "p_bpe": 0.0035,
+      "r_bpe": 0.0056,
+      "f1_wazn": 0.0044,
+      "p_wazn": 0.0036,
+      "r_wazn": 0.0056,
+      "f1_fused": 0.0162,
+      "p_fused": 0.0114,
+      "r_fused": 0.0278,
+      "f1_skel": 0.8,
+      "p_skel": 1.0,
+      "r_skel": 0.6667
+    },
+    {
+      "seed": 44,
+      "condition": "real",
+      "f1_bpe": 0.0,
+      "p_bpe": 0.0,
+      "r_bpe": 0.0,
+      "f1_wazn": 0.7052,
+      "p_wazn": 0.6995,
+      "r_wazn": 0.7111,
+      "f1_fused": 0.6616,
+      "p_fused": 0.6065,
+      "r_fused": 0.7278,
+      "f1_skel": 0.875,
+      "p_skel": 1.0,
+      "r_skel": 0.7778
+    },
+    {
+      "seed": 44,
+      "condition": "nonce",
+      "f1_bpe": 0.0043,
+      "p_bpe": 0.0036,
+      "r_bpe": 0.0056,
+      "f1_wazn": 0.0,
+      "p_wazn": 0.0,
+      "r_wazn": 0.0,
+      "f1_fused": 0.0225,
+      "p_fused": 0.0159,
+      "r_fused": 0.0389,
+      "f1_skel": 0.8,
+      "p_skel": 1.0,
+      "r_skel": 0.6667
+    }
+  ],
+  "interpretation_notes": {
+    "all_3_seeds_rule": "Both booleans use all-3-seeds criterion (symmetric). Per-seed values are in per_seed[*].seed_lexicon_bound_* for alternative reading.",
+    "mu1_mu2_collision": "mu1 and mu2 produce identical undiacritized surface forms for the same root. SKELETON arm marks them as ambiguous → unmatched → predicted boundary {}. This limits SKELETON nonce F1 ceiling to ~0.80 (120/180 uniquely matched).",
+    "anchor_context": "Real-control forms are all definite ال+stem forms (gold={2}). exp84 gold was multi-boundary corpus words. Anchor failure likely reflects distribution difference, not tokenizer drift.",
+    "fused_arm": "FUSED arm uses predict_boundaries_fused_expanded (exp84 path exactly). Fallback for unanalyzable words uses fused_tok (own tokenizer), not bpe_tok."
+  }
+}

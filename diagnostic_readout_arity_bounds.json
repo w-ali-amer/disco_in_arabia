@@ -1,0 +1,3594 @@
+{
+  "instrument": "readout_arity_bounds.py",
+  "script_sha256": "eddb30c5bbee06a1954e95e0b22d95bce89f9f867a0b0f531ff5e2dc8b27c15b",
+  "generated_for": "paper draft-blocker B2: doc 50 Part C (SSC2 found-arc table, SSC3 M-ary category ceilings) had NO committed producer. This file is that producer.",
+  "not_a_results_file": "named diagnostic_*, not results_*, deliberately: it is an instrument output, not an experiment result. No pre-registered criterion is read against it.",
+  "generated_utc": "2026-08-24T19:28:21Z",
+  "wall_sec": 3450.18022108078,
+  "environment": {
+    "python": "3.12.13",
+    "numpy": "2.5.1",
+    "platform": "macOS-26.5.2-arm64-arm-64bit"
+  },
+  "provenance": {
+    "angle_map": "FA on the frozen 2D AraVec plane: phi = atan2(PC2, PC1), exp42_noun_embeddings.json -- doc 47 SS13's setting",
+    "frozen_embeddings_sha256": "a23a489e843780c2d10cd633e87f98ba65205abd2a4067991803cf895a1a0e3c",
+    "instrument_sb_bounds_sha256": "a616d1243d5dd589675eb89c6a6341ea6448ea8c716ba14af4139f3fae1d9507",
+    "inventory": {
+      "n_humans": 24,
+      "humans": [
+        "الطالب",
+        "الرجل",
+        "الولد",
+        "المدير",
+        "المعلم",
+        "الطبيب",
+        "العامل",
+        "المهندس",
+        "الشرطي",
+        "الكاتب",
+        "الطباخ",
+        "الجندي",
+        "الفلاح",
+        "الحارس",
+        "اللاعب",
+        "الموظف",
+        "الصحفي",
+        "السائق",
+        "المسافر",
+        "الضابط",
+        "الباحث",
+        "القائد",
+        "الصياد",
+        "المريض"
+      ]
+    },
+    "membership_closure": "doc 47 SS13's four category membership lists, as carried in instrument_sb_bounds.CATEGORIES, were CONFIRMED by the user 2026-08-23; doc 54 SS5.2 is the record of closure and supersedes the BLOCKING native-speaker flag that instrument_sb_bounds.py still prints.",
+    "family": {
+      "family": "frozen2d",
+      "file": "exp42_noun_embeddings.json",
+      "file_sha256": "a23a489e843780c2d10cd633e87f98ba65205abd2a4067991803cf895a1a0e3c",
+      "declared_embeddings_sha256": "00c1ecffcaf05b38df082f8a3cbed1d013bddb3e39bc00adf1c2513b4ea674ac",
+      "source": "aravec/full_uni_cbow_300_twitter.mdl + ta-marbuta normalization + PCA-2D over the 44 referent vectors + unit norm",
+      "normalisation": "NONE -- the stored vec2 are already unit-norm and inside [-1,1]",
+      "all_unit_norm": true,
+      "pc1_equals_cos_angle": true,
+      "features_deterministically_dependent": true,
+      "degeneracy_note": "unit norm in 2D => PC1 = cos(phi) and PC2 = sin(phi) EXACTLY, so PC1 and PC2 are a deterministic reparameterisation of ONE number. A 2-feature register on this family adds FUNCTION-CLASS RICHNESS, not information (products of trig in cos phi and sin phi are not band-limited in phi -- Jacobi-Anger), which is why doc 52 SS2.2 found random labellings reaching 0.89-0.97 in the 2-feature space."
+    }
+  },
+  "formalisation": {
+    "why_stated": "doc 50 SSC2/SSC3 under-specify the readout model; these are THIS FILE's choices, stated so the numbers are falsifiable rather than merely reproduced.",
+    "decision_rule": "class(x) = (argmax_m p_m(x)) mod 2  (doc 53 SS3.1, FIXED)",
+    "orientation": "relabelling outcome m -> m+1 (mod M) is a relabelling of the same M effects and flips parity for even M, so both orientations are legal and the winner is recorded",
+    "simplex_vacuity_lemma": "p_m = 1/M + eps (f_m - fbar) has sum 1 identically, is nonnegative for eps <= 1/(M max|f_m - fbar|), and preserves argmax. So the set of argmax patterns reachable from M NONNEG SUM-ONE elements of the span equals the set reachable from M ARBITRARY elements. The search is therefore unconstrained, and every witness is converted back to a legal probability configuration, emitted and numerically verified.",
+    "part_A_span": "p_m(theta) = <V_m, (1, cos theta, sin theta)>, V_m in R^3",
+    "part_B_span": "p_m(theta_a, theta_p) = <V_m, u_K(theta_a) (x) u_K(theta_p)>, V_m in R^{(2K+1)^2}. Each p_m is 3-term in EACH angle at K=1 -- the property exp67's smoke test asserts (doc 53 SS5 direction 1).",
+    "part_B_denominator": {
+      "choice": "PER-TWIN, 2|B||N| (doc 47 SS17's population)",
+      "why_forced": "doc 50 SSC3 does not state a denominator, but its own arithmetic does: 0.9105 = 173/190, 0.9000 = 171/190, 0.9688 = 155/160. 173, 171, 155 are ODD, and a pair-level count over casts is an integer out of |B||N| (95, 80) with no half-credit. Every one of SSC3's twelve M-ary cells is an integer over 2|B||N| and none is expressible over casts.",
+      "binary_column_is_different": "doc 50 SSC3's binary column is doc 47 SS13's PAIR-LEVEL exact ceiling (both twins of a cast won together, antisymmetric form, denominator = casts). SSC3 therefore carries a pair-level column into a per-twin table -- doc 47 SS18.5's class exactly. The direction is safe (per-twin >= pair-level always), so SSC3's binary column is a CONSERVATIVE anchor, not a wrong one. This file reports both columns separately."
+    },
+    "nulls_not_computed": "doc 47 SS16.1 binds CATEGORY-VS-NULL comparisons. No such comparison is made here -- every claim is within one category, across M, on one fixed inventory -- so size-matched nulls are not computed. Stated, not left to be noticed."
+  },
+  "binary_anchor_selftest": {
+    "rule": "BLOCKING. The pair-level exact ceiling must reproduce doc 47 SS13's four published values before any M-ary number is written. Expected values are hand-typed above, capacity_check.ANCHORS style.",
+    "per_category": {
+      "tertiary": {
+        "recomputed": 0.8526315789473684,
+        "fraction": "81/95",
+        "expected": 0.8526315789473684,
+        "expected_fraction": "81/95",
+        "exact": true,
+        "method": "EXACT (R^3 arrangement enumeration, doc 47 SS16 fix)",
+        "matches": true
+      },
+      "uniformed": {
+        "recomputed": 0.875,
+        "fraction": "70/80",
+        "expected": 0.875,
+        "expected_fraction": "70/80",
+        "exact": true,
+        "method": "EXACT (R^3 arrangement enumeration, doc 47 SS16 fix)",
+        "matches": true
+      },
+      "manual": {
+        "recomputed": 0.8421052631578947,
+        "fraction": "80/95",
+        "expected": 0.8421052631578947,
+        "expected_fraction": "80/95",
+        "exact": true,
+        "method": "EXACT (R^3 arrangement enumeration, doc 47 SS16 fix)",
+        "matches": true
+      },
+      "nonoccupational": {
+        "recomputed": 0.925,
+        "fraction": "74/80",
+        "expected": 0.925,
+        "expected_fraction": "74/80",
+        "exact": true,
+        "method": "EXACT (R^3 arrangement enumeration, doc 47 SS16 fix)",
+        "matches": true
+      }
+    },
+    "all_pass": true
+  },
+  "part_A_found_arcs": {
+    "question": "how many decision arcs can the hard argmax over M outcomes carve on the circle at K=1, under alternating grouping",
+    "columns": {
+      "best_found_arcs": "SEARCH-DERIVED LOWER BOUND (and the construction)",
+      "ds_bound_2M_minus_1": "doc 50 SSC2's analytic column: order-2 Davenport-Schinzel envelope",
+      "exact_maximum_2M_minus_2": "NEW, proved here: DS gives <= 2M-2 index changes after cutting the circle at an interior point, and a closed curve forces an EVEN number of class changes, which removes the odd value 2M-1; the parallel- gradient construction attains 2M-2. So 2M-2 is a MAXIMUM, not a best-found -- this closes doc 50 SSC2's 'never the achievable maximum' caveat."
+    },
+    "exact_counting": "breakpoints are the closed-form roots of a + b cos t + c sin t = 0 for every pair; class is read at the midpoint of consecutive breakpoints. A grid can only MISS arcs, so the grid is used to drive the search and never to report a number.",
+    "search_budget": {
+      "restarts": 512,
+      "hill_climb_iters": 400,
+      "grid_points_for_driver": 2048,
+      "seed_base": 50000,
+      "seeds_per_M": "seed_base + M",
+      "exact_certification_of_top_k": 64
+    },
+    "table": {
+      "2": {
+        "M": 2,
+        "grouping": "alternating i mod 2",
+        "grp": [
+          0,
+          1
+        ],
+        "best_found_arcs": 2,
+        "arcs_from_analytic_construction": 2,
+        "arcs_from_random_search": 2,
+        "grid_driver_best": 2,
+        "index_changes_of_construction": 2,
+        "ds_bound_2M_minus_1": 3,
+        "exact_maximum_2M_minus_2": 2,
+        "attains_exact_maximum": true,
+        "search_never_beat_the_proven_maximum": true,
+        "doc50_C2_published": 2,
+        "reconciliation": "MATCH",
+        "witness_V_rows_1_cos_sin": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ]
+        ],
+        "legal_probability_coefficients": {
+          "note": "SIMPLEX-VACUITY conversion of the witness: p_m = 1/M + eps (f_m - fbar), coefficients in (1, cos, sin)",
+          "eps": 0.5658032638058332,
+          "p_m_coefficients": [
+            [
+              0.5,
+              -0.2829016319029166,
+              0.0
+            ],
+            [
+              0.5,
+              0.2829016319029166,
+              0.0
+            ]
+          ],
+          "sums_to_one_max_abs_error": 0.0,
+          "min_probability_over_20000_thetas": 0.21709836809708338,
+          "nonnegative": true
+        }
+      },
+      "3": {
+        "M": 3,
+        "grouping": "alternating i mod 2",
+        "grp": [
+          0,
+          1,
+          0
+        ],
+        "best_found_arcs": 4,
+        "arcs_from_analytic_construction": 4,
+        "arcs_from_random_search": 4,
+        "grid_driver_best": 4,
+        "index_changes_of_construction": 4,
+        "ds_bound_2M_minus_1": 5,
+        "exact_maximum_2M_minus_2": 4,
+        "attains_exact_maximum": true,
+        "search_never_beat_the_proven_maximum": true,
+        "doc50_C2_published": 4,
+        "reconciliation": "MATCH",
+        "witness_V_rows_1_cos_sin": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.33333333333333337,
+            1.0,
+            0.0
+          ],
+          [
+            1.1102230246251565e-16,
+            2.0,
+            0.0
+          ]
+        ],
+        "legal_probability_coefficients": {
+          "note": "SIMPLEX-VACUITY conversion of the witness: p_m = 1/M + eps (f_m - fbar), coefficients in (1, cos, sin)",
+          "eps": 0.1874475536406215,
+          "p_m_coefficients": [
+            [
+              0.31250582737326427,
+              -0.1874475536406215,
+              0.0
+            ],
+            [
+              0.3749883452534714,
+              0.0,
+              0.0
+            ],
+            [
+              0.31250582737326427,
+              0.1874475536406215,
+              0.0
+            ]
+          ],
+          "sums_to_one_max_abs_error": 1.1102230246251565e-16,
+          "min_probability_over_20000_thetas": 0.12505827373264278,
+          "nonnegative": true
+        }
+      },
+      "4": {
+        "M": 4,
+        "grouping": "alternating i mod 2",
+        "grp": [
+          0,
+          1,
+          0,
+          1
+        ],
+        "best_found_arcs": 6,
+        "arcs_from_analytic_construction": 6,
+        "arcs_from_random_search": 6,
+        "grid_driver_best": 6,
+        "index_changes_of_construction": 6,
+        "ds_bound_2M_minus_1": 7,
+        "exact_maximum_2M_minus_2": 6,
+        "attains_exact_maximum": true,
+        "search_never_beat_the_proven_maximum": true,
+        "doc50_C2_published": 6,
+        "reconciliation": "MATCH",
+        "witness_V_rows_1_cos_sin": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.5,
+            1.0,
+            0.0
+          ],
+          [
+            0.5,
+            2.0,
+            0.0
+          ],
+          [
+            0.0,
+            3.0,
+            0.0
+          ]
+        ],
+        "legal_probability_coefficients": {
+          "note": "SIMPLEX-VACUITY conversion of the witness: p_m = 1/M + eps (f_m - fbar), coefficients in (1, cos, sin)",
+          "eps": 0.09301748358374491,
+          "p_m_coefficients": [
+            [
+              0.22674562910406376,
+              -0.13952622537561737,
+              0.0
+            ],
+            [
+              0.27325437089593624,
+              -0.046508741791872456,
+              0.0
+            ],
+            [
+              0.27325437089593624,
+              0.046508741791872456,
+              0.0
+            ],
+            [
+              0.22674562910406376,
+              0.13952622537561737,
+              0.0
+            ]
+          ],
+          "sums_to_one_max_abs_error": 0.0,
+          "min_probability_over_20000_thetas": 0.08721940372844639,
+          "nonnegative": true
+        }
+      },
+      "6": {
+        "M": 6,
+        "grouping": "alternating i mod 2",
+        "grp": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        "best_found_arcs": 10,
+        "arcs_from_analytic_construction": 10,
+        "arcs_from_random_search": 10,
+        "grid_driver_best": 10,
+        "index_changes_of_construction": 10,
+        "ds_bound_2M_minus_1": 11,
+        "exact_maximum_2M_minus_2": 10,
+        "attains_exact_maximum": true,
+        "search_never_beat_the_proven_maximum": true,
+        "doc50_C2_published": 8,
+        "reconciliation": "OVER -- doc 50 SSC2's value is confirmed as an UNDERESTIMATE",
+        "witness_V_rows_1_cos_sin": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.6666666666666667,
+            1.0,
+            0.0
+          ],
+          [
+            1.0,
+            2.0,
+            0.0
+          ],
+          [
+            1.0,
+            3.0,
+            0.0
+          ],
+          [
+            0.6666666666666667,
+            4.0,
+            0.0
+          ],
+          [
+            0.0,
+            5.0,
+            0.0
+          ]
+        ],
+        "legal_probability_coefficients": {
+          "note": "SIMPLEX-VACUITY conversion of the witness: p_m = 1/M + eps (f_m - fbar), coefficients in (1, cos, sin)",
+          "eps": 0.03682198831580678,
+          "p_m_coefficients": [
+            [
+              0.14621000649121843,
+              -0.09205497078951697,
+              0.0
+            ],
+            [
+              0.1707579987017563,
+              -0.055232982473710175,
+              0.0
+            ],
+            [
+              0.18303199480702523,
+              -0.01841099415790339,
+              0.0
+            ],
+            [
+              0.18303199480702523,
+              0.01841099415790339,
+              0.0
+            ],
+            [
+              0.1707579987017563,
+              0.055232982473710175,
+              0.0
+            ],
+            [
+              0.14621000649121843,
+              0.09205497078951697,
+              0.0
+            ]
+          ],
+          "sums_to_one_max_abs_error": 0.0,
+          "min_probability_over_20000_thetas": 0.054155035701701465,
+          "nonnegative": true
+        }
+      },
+      "8": {
+        "M": 8,
+        "grouping": "alternating i mod 2",
+        "grp": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        "best_found_arcs": 14,
+        "arcs_from_analytic_construction": 14,
+        "arcs_from_random_search": 10,
+        "grid_driver_best": 10,
+        "index_changes_of_construction": 14,
+        "ds_bound_2M_minus_1": 15,
+        "exact_maximum_2M_minus_2": 14,
+        "attains_exact_maximum": true,
+        "search_never_beat_the_proven_maximum": true,
+        "doc50_C2_published": 10,
+        "reconciliation": "OVER -- doc 50 SSC2's value is confirmed as an UNDERESTIMATE",
+        "witness_V_rows_1_cos_sin": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.75,
+            1.0,
+            0.0
+          ],
+          [
+            1.25,
+            2.0,
+            0.0
+          ],
+          [
+            1.5,
+            3.0,
+            0.0
+          ],
+          [
+            1.5,
+            4.0,
+            0.0
+          ],
+          [
+            1.25,
+            5.0,
+            0.0
+          ],
+          [
+            0.75,
+            6.0,
+            0.0
+          ],
+          [
+            0.0,
+            7.0,
+            0.0
+          ]
+        ],
+        "legal_probability_coefficients": {
+          "note": "SIMPLEX-VACUITY conversion of the witness: p_m = 1/M + eps (f_m - fbar), coefficients in (1, cos, sin)",
+          "eps": 0.01960392117639214,
+          "p_m_coefficients": [
+            [
+              0.10784656897065688,
+              -0.06861372411737249,
+              0.0
+            ],
+            [
+              0.12254950985295099,
+              -0.049009802940980354,
+              0.0
+            ],
+            [
+              0.13235147044114706,
+              -0.02940588176458821,
+              0.0
+            ],
+            [
+              0.13725245073524509,
+              -0.00980196058819607,
+              0.0
+            ],
+            [
+              0.13725245073524509,
+              0.00980196058819607,
+              0.0
+            ],
+            [
+              0.13235147044114706,
+              0.02940588176458821,
+              0.0
+            ],
+            [
+              0.12254950985295099,
+              0.049009802940980354,
+              0.0
+            ],
+            [
+              0.10784656897065688,
+              0.06861372411737249,
+              0.0
+            ]
+          ],
+          "sums_to_one_max_abs_error": 0.0,
+          "min_probability_over_20000_thetas": 0.03923284485328439,
+          "nonnegative": true
+        }
+      }
+    },
+    "downstream_note": "doc 53 SS1 quotes SSC2's 2 -> 6 -> 10 for M = 2, 4, 8 as MOTIVATION. M=8's 10 is superseded here by 14. No exp67 criterion is read against it (doc 53 SS4 is measurement-vs-measurement inside exp67), so no exp67 verdict moves -- the same bounded correction doc 53 SS7.2 recorded for its baseline quotation."
+  },
+  "part_B_category_ceilings": {
+    "question": "what accuracy is reachable on the SB rung for doc 47 SS13's four real AraVec categories when only the READOUT changes",
+    "encoding": "UNCHANGED -- frozen single-angle map, K=1 unless stated",
+    "search_budget": {
+      "standard": {
+        "anneal_restarts": 256,
+        "anneal_steps": 1200,
+        "hinge_restarts": 512,
+        "hinge_steps": 1200,
+        "hop_restarts": 256,
+        "hop_steps": 960,
+        "polish": 1200,
+        "hops": 2,
+        "margin_ladder": [
+          0.02,
+          0.05,
+          0.15,
+          0.4
+        ]
+      },
+      "extended_monotonicity_escape": {
+        "anneal_restarts": 512,
+        "anneal_steps": 2400,
+        "hinge_restarts": 1024,
+        "hinge_steps": 2400,
+        "hop_restarts": 512,
+        "hop_steps": 1920,
+        "polish": 2400,
+        "hops": 2,
+        "margin_ladder": [
+          0.02,
+          0.05,
+          0.15,
+          0.4
+        ]
+      },
+      "stages": "annealed logsumexp surrogate (doc 53 SS3.2) -> latent multiclass hinge over a 4-margin ladder -> hard-count polish -> 2 basin hops",
+      "seed_base": 50000,
+      "seeds_per_cell": "seed_base + 13*M, derived deterministically per stage",
+      "identical_across_categories_and_M": true,
+      "structured_seeds_per_cell": "nested witness of the previous M with dead outcomes, both index orientations, plus 24 random single-wire arc readouts"
+    },
+    "monotonicity": {
+      "how": "STRUCTURAL. M=2 is seeded with the pair-level antisymmetric witness; each M is seeded with the best witness of the previous M plus DEAD outcomes (large negative constant component, which can never win an argmax). So pair-level <= M=2 <= M=4 <= M=8 <= M=12 holds by construction.",
+      "why_it_matters": "doc 50 SSC3 carries an asterisk on uniformed / M=4 (0.8375 < its own binary 0.8750) and calls it optimiser failure. Nested seeding makes that failure mode unreachable.",
+      "all_cells_monotone": true
+    },
+    "table": {
+      "tertiary": {
+        "gloss": "tertiary-educated profession",
+        "members": [
+          "الطبيب",
+          "المهندس",
+          "المعلم",
+          "الباحث",
+          "الصحفي"
+        ],
+        "size": 5,
+        "arcs": 8,
+        "n_casts": 95,
+        "n_twins": 190,
+        "binary_pair_level": {
+          "value": 0.8526315789473684,
+          "fraction": "81/95",
+          "population": "CASTS (both twins won together, antisymmetric form)",
+          "method": "EXACT (R^3 arrangement enumeration, doc 47 SS16 fix)",
+          "exact": true,
+          "doc47_s13_published": 0.8526315789473684,
+          "reproduces_doc47_s13": true
+        },
+        "M_ary_per_twin": {
+          "2": {
+            "M": 2,
+            "grouping": "alternating i mod 2",
+            "value": 0.8789473684210526,
+            "fraction": "167/190",
+            "count": 167,
+            "denominator": 190,
+            "population": "ALL ordered twins over the 24 frozen human nouns (2|B||N|); no train/test split -- this IS the noun-level bound of doc 47 SS18.1 over the whole inventory",
+            "orientation": "shift-by-one",
+            "agent_only_arc_readout": {
+              "value": 0.7947368421052632,
+              "fraction": "151/190",
+              "note": "best AGENT-ONLY readout p_m(theta_a, theta_p) = <w_m, u(theta_a)> -- the direct realisation of doc 50 SSC2's arc picture, and a strict SUBSET of the joint readout class. Reported because the gap between it and the joint value is exactly what the joint readout buys over a per-referent arc classifier.",
+              "arc_budget_at_this_M": 2,
+              "category_arcs": 8,
+              "budget_suffices": false
+            },
+            "method": "CONSTRUCTIVE LOWER BOUND (nested-seeded three-stage search: annealed logsumexp surrogate, latent multiclass hinge over a 4-margin ladder, hard-count polish, plus basin hops)",
+            "exact": false,
+            "stage_log": [
+              {
+                "stage": "anneal",
+                "count": 163
+              },
+              {
+                "stage": "anneal+polish",
+                "count": 167
+              },
+              {
+                "stage": "hinge(m=0.02)",
+                "count": 167
+              },
+              {
+                "stage": "hinge(m=0.02)+polish",
+                "count": 167
+              },
+              {
+                "stage": "hinge(m=0.05)",
+                "count": 167
+              },
+              {
+                "stage": "hinge(m=0.05)+polish",
+                "count": 167
+              },
+              {
+                "stage": "hinge(m=0.15)",
+                "count": 166
+              },
+              {
+                "stage": "hinge(m=0.15)+polish",
+                "count": 167
+              },
+              {
+                "stage": "hinge(m=0.40)",
+                "count": 164
+              },
+              {
+                "stage": "hinge(m=0.40)+polish",
+                "count": 167
+              },
+              {
+                "stage": "hop0",
+                "count": 167
+              },
+              {
+                "stage": "hop0+polish",
+                "count": 167
+              },
+              {
+                "stage": "hop1",
+                "count": 167
+              },
+              {
+                "stage": "hop1+polish",
+                "count": 167
+              }
+            ],
+            "strict_margin_certification": {
+              "argmax_count": 167,
+              "strictly_won_count": 167,
+              "counts_agree": true,
+              "min_margin_over_won_twins": 0.004472695621809741,
+              "n_ties_within_TOL": 0,
+              "tolerance": 1e-12,
+              "note": "a counted-correct twin must beat every wrong-class outcome STRICTLY; an exact tie would be an argmax tie-break banked as a win, which is doc 47 SS16's defect class"
+            },
+            "budget_extended_for_monotonicity": false,
+            "doc50_C3_published": 0.8526,
+            "doc50_C3_asterisk": false,
+            "reconciliation": "doc 50 SSC3's binary column is doc 47 SS13's PAIR-LEVEL value (0.8526); this cell is the PER-TWIN argmax-2 value. Different populations, not a discrepancy -- per-twin >= pair-level always.",
+            "at_or_above_pair_level_binary": true,
+            "monotone_vs_previous_M": true,
+            "witness_V": [
+              [
+                0.4068789667927867,
+                0.6727437568111599,
+                0.18899032907236385,
+                -0.09532830268258168,
+                1.0784574860683382,
+                -0.4544740844036818,
+                0.3294069443815587,
+                0.836330081747612,
+                -0.14088979599184953
+              ],
+              [
+                0.036724132977372315,
+                -0.24893428213277285,
+                -1.0925263031414532,
+                0.3678894128978296,
+                0.014178339353801766,
+                -0.0444388525230881,
+                -0.07395081962792355,
+                -1.1758159565589863,
+                1.859538641070099
+              ]
+            ],
+            "legal_probability_check": {
+              "eps": 0.09292715220416758,
+              "sums_to_one_max_abs_error": 2.7755575615628914e-17,
+              "min_probability_over_all_twins": 0.3287149180275076,
+              "nonnegative": true
+            }
+          },
+          "4": {
+            "M": 4,
+            "grouping": "alternating i mod 2",
+            "value": 0.9263157894736842,
+            "fraction": "176/190",
+            "count": 176,
+            "denominator": 190,
+            "population": "ALL ordered twins over the 24 frozen human nouns (2|B||N|); no train/test split -- this IS the noun-level bound of doc 47 SS18.1 over the whole inventory",
+            "orientation": "identity",
+            "agent_only_arc_readout": {
+              "value": 0.8947368421052632,
+              "fraction": "170/190",
+              "note": "best AGENT-ONLY readout p_m(theta_a, theta_p) = <w_m, u(theta_a)> -- the direct realisation of doc 50 SSC2's arc picture, and a strict SUBSET of the joint readout class. Reported because the gap between it and the joint value is exactly what the joint readout buys over a per-referent arc classifier.",
+              "arc_budget_at_this_M": 6,
+              "category_arcs": 8,
+              "budget_suffices": false
+            },
+            "method": "CONSTRUCTIVE LOWER BOUND (nested-seeded three-stage search: annealed logsumexp surrogate, latent multiclass hinge over a 4-margin ladder, hard-count polish, plus basin hops)",
+            "exact": false,
+            "stage_log": [
+              {
+                "stage": "anneal",
+                "count": 170
+              },
+              {
+                "stage": "anneal+polish",
+                "count": 174
+              },
+              {
+                "stage": "hinge(m=0.02)",
+                "count": 176
+              },
+              {
+                "stage": "hinge(m=0.02)+polish",
+                "count": 176
+              },
+              {
+                "stage": "hinge(m=0.05)",
+                "count": 176
+              },
+              {
+                "stage": "hinge(m=0.05)+polish",
+                "count": 176
+              },
+              {
+                "stage": "hinge(m=0.15)",
+                "count": 170
+              },
+              {
+                "stage": "hinge(m=0.15)+polish",
+                "count": 176
+              },
+              {
+                "stage": "hinge(m=0.40)",
+                "count": 170
+              },
+              {
+                "stage": "hinge(m=0.40)+polish",
+                "count": 175
+              },
+              {
+                "stage": "hop0",
+                "count": 176
+              },
+              {
+                "stage": "hop0+polish",
+                "count": 176
+              },
+              {
+                "stage": "hop1",
+                "count": 175
+              },
+              {
+                "stage": "hop1+polish",
+                "count": 176
+              }
+            ],
+            "strict_margin_certification": {
+              "argmax_count": 176,
+              "strictly_won_count": 176,
+              "counts_agree": true,
+              "min_margin_over_won_twins": 0.0002567351328499508,
+              "n_ties_within_TOL": 0,
+              "tolerance": 1e-12,
+              "note": "a counted-correct twin must beat every wrong-class outcome STRICTLY; an exact tie would be an argmax tie-break banked as a win, which is doc 47 SS16's defect class"
+            },
+            "budget_extended_for_monotonicity": false,
+            "doc50_C3_published": 0.9053,
+            "doc50_C3_asterisk": false,
+            "reconciliation": "OVER by +0.0210 -- doc 50 SSC3's cell is confirmed as an UNDERESTIMATE (both are constructive lower bounds; a higher one supersedes)",
+            "at_or_above_pair_level_binary": true,
+            "monotone_vs_previous_M": true,
+            "witness_V": [
+              [
+                0.10587030909890918,
+                0.06196277854514026,
+                -0.05830260736461229,
+                0.02455682877434985,
+                -0.23706810587863453,
+                0.02594517238171316,
+                -0.04190983005271475,
+                -0.4100229651430491,
+                -0.16026644788210823
+              ],
+              [
+                -0.0580466492905727,
+                -0.002619434983084369,
+                -0.019184470250023455,
+                -0.13937545191285483,
+                -0.30475816579735876,
+                -0.2543400844338609,
+                0.05055416129486841,
+                -0.02678695838542826,
+                0.02206201347054521
+              ],
+              [
+                -0.27945530141612607,
+                0.1695034679638382,
+                0.10328483045907769,
+                -0.026795507904644383,
+                0.2612982465323922,
+                -0.06209656831569568,
+                -0.13944649166857445,
+                -0.215209225493489,
+                -0.08626124752041577
+              ],
+              [
+                -0.292273986052342,
+                -0.04131561002668324,
+                -0.18765713403627665,
+                -0.09691161021975961,
+                0.011247513265422442,
+                -0.1316791232147517,
+                0.11162995318732928,
+                -0.18016312114008112,
+                -0.2938503216033079
+              ]
+            ],
+            "legal_probability_check": {
+              "eps": 0.1879701309612907,
+              "sums_to_one_max_abs_error": 1.3877787807814457e-17,
+              "min_probability_over_all_twins": 0.1661468244072675,
+              "nonnegative": true
+            }
+          },
+          "8": {
+            "M": 8,
+            "grouping": "alternating i mod 2",
+            "value": 0.9736842105263158,
+            "fraction": "185/190",
+            "count": 185,
+            "denominator": 190,
+            "population": "ALL ordered twins over the 24 frozen human nouns (2|B||N|); no train/test split -- this IS the noun-level bound of doc 47 SS18.1 over the whole inventory",
+            "orientation": "identity",
+            "agent_only_arc_readout": {
+              "value": 0.9736842105263158,
+              "fraction": "185/190",
+              "note": "best AGENT-ONLY readout p_m(theta_a, theta_p) = <w_m, u(theta_a)> -- the direct realisation of doc 50 SSC2's arc picture, and a strict SUBSET of the joint readout class. Reported because the gap between it and the joint value is exactly what the joint readout buys over a per-referent arc classifier.",
+              "arc_budget_at_this_M": 14,
+              "category_arcs": 8,
+              "budget_suffices": true
+            },
+            "method": "CONSTRUCTIVE LOWER BOUND (nested-seeded three-stage search: annealed logsumexp surrogate, latent multiclass hinge over a 4-margin ladder, hard-count polish, plus basin hops)",
+            "exact": false,
+            "stage_log": [
+              {
+                "stage": "anneal",
+                "count": 185
+              },
+              {
+                "stage": "anneal+polish",
+                "count": 185
+              },
+              {
+                "stage": "hinge(m=0.02)",
+                "count": 185
+              },
+              {
+                "stage": "hinge(m=0.02)+polish",
+                "count": 185
+              },
+              {
+                "stage": "hinge(m=0.05)",
+                "count": 185
+              },
+              {
+                "stage": "hinge(m=0.05)+polish",
+                "count": 185
+              },
+              {
+                "stage": "hinge(m=0.15)",
+                "count": 185
+              },
+              {
+                "stage": "hinge(m=0.15)+polish",
+                "count": 185
+              },
+              {
+                "stage": "hinge(m=0.40)",
+                "count": 185
+              },
+              {
+                "stage": "hinge(m=0.40)+polish",
+                "count": 185
+              },
+              {
+                "stage": "hop0",
+                "count": 185
+              },
+              {
+                "stage": "hop0+polish",
+                "count": 185
+              },
+              {
+                "stage": "hop1",
+                "count": 185
+              },
+              {
+                "stage": "hop1+polish",
+                "count": 185
+              }
+            ],
+            "strict_margin_certification": {
+              "argmax_count": 185,
+              "strictly_won_count": 185,
+              "counts_agree": true,
+              "min_margin_over_won_twins": 9.451466632758032e-05,
+              "n_ties_within_TOL": 0,
+              "tolerance": 1e-12,
+              "note": "a counted-correct twin must beat every wrong-class outcome STRICTLY; an exact tie would be an argmax tie-break banked as a win, which is doc 47 SS16's defect class"
+            },
+            "budget_extended_for_monotonicity": false,
+            "doc50_C3_published": 0.9105,
+            "doc50_C3_asterisk": false,
+            "reconciliation": "OVER by +0.0632 -- doc 50 SSC3's cell is confirmed as an UNDERESTIMATE (both are constructive lower bounds; a higher one supersedes)",
+            "at_or_above_pair_level_binary": true,
+            "monotone_vs_previous_M": true,
+            "witness_V": [
+              [
+                -0.06034389251336289,
+                -0.0,
+                -0.0,
+                -0.07283184686948364,
+                -0.0,
+                -0.0,
+                -0.2644737689411013,
+                -0.0,
+                -0.0
+              ],
+              [
+                0.021967923050386414,
+                0.0,
+                0.0,
+                -0.03540200552448964,
+                -0.0,
+                -0.0,
+                -0.05328043071618482,
+                -0.0,
+                -0.0
+              ],
+              [
+                -0.09554265582725031,
+                -0.0,
+                -0.0,
+                -0.15106260544795416,
+                -0.0,
+                -0.0,
+                -0.0428801590689165,
+                -0.0,
+                -0.0
+              ],
+              [
+                0.056629692488437126,
+                0.0,
+                0.0,
+                0.08260818994973636,
+                0.0,
+                0.0,
+                -0.2951419244956207,
+                -0.0,
+                -0.0
+              ],
+              [
+                0.10619348484360498,
+                0.0,
+                0.0,
+                0.3753181835834165,
+                0.0,
+                0.0,
+                0.7685486499727046,
+                0.0,
+                0.0
+              ],
+              [
+                0.045045687993464756,
+                0.0,
+                0.0,
+                -0.005854886938551336,
+                -0.0,
+                -0.0,
+                -0.019444362384875426,
+                -0.0,
+                -0.0
+              ],
+              [
+                -0.09635427649572921,
+                -0.0,
+                -0.0,
+                -0.15786183062363524,
+                -0.0,
+                -0.0,
+                -0.04047839141342902,
+                -0.0,
+                -0.0
+              ],
+              [
+                0.022404036191194424,
+                0.0,
+                0.0,
+                -0.034913198957454844,
+                -0.0,
+                -0.0,
+                -0.05284961326289789,
+                -0.0,
+                -0.0
+              ]
+            ],
+            "legal_probability_check": {
+              "eps": 0.047377986473389186,
+              "sums_to_one_max_abs_error": 4.336808689942018e-18,
+              "min_probability_over_all_twins": 0.0908427293337221,
+              "nonnegative": true
+            }
+          },
+          "12": {
+            "M": 12,
+            "grouping": "alternating i mod 2",
+            "value": 0.9736842105263158,
+            "fraction": "185/190",
+            "count": 185,
+            "denominator": 190,
+            "population": "ALL ordered twins over the 24 frozen human nouns (2|B||N|); no train/test split -- this IS the noun-level bound of doc 47 SS18.1 over the whole inventory",
+            "orientation": "identity",
+            "agent_only_arc_readout": {
+              "value": 0.9736842105263158,
+              "fraction": "185/190",
+              "note": "best AGENT-ONLY readout p_m(theta_a, theta_p) = <w_m, u(theta_a)> -- the direct realisation of doc 50 SSC2's arc picture, and a strict SUBSET of the joint readout class. Reported because the gap between it and the joint value is exactly what the joint readout buys over a per-referent arc classifier.",
+              "arc_budget_at_this_M": 22,
+              "category_arcs": 8,
+              "budget_suffices": true
+            },
+            "method": "CONSTRUCTIVE LOWER BOUND (nested-seeded three-stage search: annealed logsumexp surrogate, latent multiclass hinge over a 4-margin ladder, hard-count polish, plus basin hops)",
+            "exact": false,
+            "stage_log": [
+              {
+                "stage": "anneal",
+                "count": 185
+              },
+              {
+                "stage": "anneal+polish",
+                "count": 185
+              },
+              {
+                "stage": "hinge(m=0.02)",
+                "count": 185
+              },
+              {
+                "stage": "hinge(m=0.02)+polish",
+                "count": 185
+              },
+              {
+                "stage": "hinge(m=0.05)",
+                "count": 185
+              },
+              {
+                "stage": "hinge(m=0.05)+polish",
+                "count": 185
+              },
+              {
+                "stage": "hinge(m=0.15)",
+                "count": 185
+              },
+              {
+                "stage": "hinge(m=0.15)+polish",
+                "count": 185
+              },
+              {
+                "stage": "hinge(m=0.40)",
+                "count": 185
+              },
+              {
+                "stage": "hinge(m=0.40)+polish",
+                "count": 185
+              },
+              {
+                "stage": "hop0",
+                "count": 185
+              },
+              {
+                "stage": "hop0+polish",
+                "count": 185
+              },
+              {
+                "stage": "hop1",
+                "count": 185
+              },
+              {
+                "stage": "hop1+polish",
+                "count": 185
+              }
+            ],
+            "strict_margin_certification": {
+              "argmax_count": 185,
+              "strictly_won_count": 185,
+              "counts_agree": true,
+              "min_margin_over_won_twins": 5.344108315432153e-07,
+              "n_ties_within_TOL": 0,
+              "tolerance": 1e-12,
+              "note": "a counted-correct twin must beat every wrong-class outcome STRICTLY; an exact tie would be an argmax tie-break banked as a win, which is doc 47 SS16's defect class"
+            },
+            "budget_extended_for_monotonicity": false,
+            "doc50_C3_published": 0.9053,
+            "doc50_C3_asterisk": false,
+            "reconciliation": "OVER by +0.0684 -- doc 50 SSC3's cell is confirmed as an UNDERESTIMATE (both are constructive lower bounds; a higher one supersedes)",
+            "at_or_above_pair_level_binary": true,
+            "monotone_vs_previous_M": true,
+            "witness_V": [
+              [
+                -0.0003412002711288619,
+                -0.0,
+                -0.0,
+                -0.00041181045609844593,
+                -0.0,
+                -0.0,
+                -0.0014954043882600514,
+                -0.0,
+                -0.0
+              ],
+              [
+                0.00012421242629102823,
+                0.0,
+                0.0,
+                -0.00020017226897960634,
+                -0.0,
+                -0.0,
+                -0.0003012615966429258,
+                -0.0,
+                -0.0
+              ],
+              [
+                -0.0005402233550878474,
+                -0.0,
+                -0.0,
+                -0.0008541477818133851,
+                -0.0,
+                -0.0,
+                -0.00024245571989117416,
+                -0.0,
+                -0.0
+              ],
+              [
+                0.00032019920535818983,
+                0.0,
+                0.0,
+                0.0004670884763039261,
+                0.0,
+                0.0,
+                -0.0016688102219640493,
+                -0.0,
+                -0.0
+              ],
+              [
+                0.0006004459492355918,
+                0.0,
+                0.0,
+                0.0021221479202704007,
+                0.0,
+                0.0,
+                0.004345576608077413,
+                0.0,
+                0.0
+              ],
+              [
+                0.0002547001911279217,
+                0.0,
+                0.0,
+                -3.3105073730869584e-05,
+                -0.0,
+                -0.0,
+                -0.0001099435492362077,
+                -0.0,
+                -0.0
+              ],
+              [
+                -0.0005448124722396365,
+                -0.0,
+                -0.0,
+                -0.0008925923928052072,
+                -0.0,
+                -0.0,
+                -0.00022887549261201104,
+                -0.0,
+                -0.0
+              ],
+              [
+                0.00012667832492117712,
+                0.0,
+                0.0,
+                -0.0001974084278308951,
+                -0.0,
+                -0.0,
+                -0.0002988256412256315,
+                -0.0,
+                -0.0
+              ],
+              [
+                -0.49999200726207926,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                -0.49999200726207926,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                -0.49999200726207926,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                -0.49999200726207926,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "legal_probability_check": {
+              "eps": 0.08166797216809386,
+              "sums_to_one_max_abs_error": 3.844022354363798e-20,
+              "min_probability_over_all_twins": 0.05611111111107712,
+              "nonnegative": true
+            }
+          }
+        }
+      },
+      "uniformed": {
+        "gloss": "uniformed / disciplined service",
+        "members": [
+          "الشرطي",
+          "الجندي",
+          "الضابط",
+          "الحارس"
+        ],
+        "size": 4,
+        "arcs": 6,
+        "n_casts": 80,
+        "n_twins": 160,
+        "binary_pair_level": {
+          "value": 0.875,
+          "fraction": "70/80",
+          "population": "CASTS (both twins won together, antisymmetric form)",
+          "method": "EXACT (R^3 arrangement enumeration, doc 47 SS16 fix)",
+          "exact": true,
+          "doc47_s13_published": 0.875,
+          "reproduces_doc47_s13": true
+        },
+        "M_ary_per_twin": {
+          "2": {
+            "M": 2,
+            "grouping": "alternating i mod 2",
+            "value": 0.875,
+            "fraction": "140/160",
+            "count": 140,
+            "denominator": 160,
+            "population": "ALL ordered twins over the 24 frozen human nouns (2|B||N|); no train/test split -- this IS the noun-level bound of doc 47 SS18.1 over the whole inventory",
+            "orientation": "shift-by-one",
+            "agent_only_arc_readout": {
+              "value": 0.85,
+              "fraction": "136/160",
+              "note": "best AGENT-ONLY readout p_m(theta_a, theta_p) = <w_m, u(theta_a)> -- the direct realisation of doc 50 SSC2's arc picture, and a strict SUBSET of the joint readout class. Reported because the gap between it and the joint value is exactly what the joint readout buys over a per-referent arc classifier.",
+              "arc_budget_at_this_M": 2,
+              "category_arcs": 6,
+              "budget_suffices": false
+            },
+            "method": "CONSTRUCTIVE LOWER BOUND (nested-seeded three-stage search: annealed logsumexp surrogate, latent multiclass hinge over a 4-margin ladder, hard-count polish, plus basin hops)",
+            "exact": false,
+            "stage_log": [
+              {
+                "stage": "anneal",
+                "count": 140
+              },
+              {
+                "stage": "anneal+polish",
+                "count": 140
+              },
+              {
+                "stage": "hinge(m=0.02)",
+                "count": 140
+              },
+              {
+                "stage": "hinge(m=0.02)+polish",
+                "count": 140
+              },
+              {
+                "stage": "hinge(m=0.05)",
+                "count": 140
+              },
+              {
+                "stage": "hinge(m=0.05)+polish",
+                "count": 140
+              },
+              {
+                "stage": "hinge(m=0.15)",
+                "count": 140
+              },
+              {
+                "stage": "hinge(m=0.15)+polish",
+                "count": 140
+              },
+              {
+                "stage": "hinge(m=0.40)",
+                "count": 140
+              },
+              {
+                "stage": "hinge(m=0.40)+polish",
+                "count": 140
+              },
+              {
+                "stage": "hop0",
+                "count": 140
+              },
+              {
+                "stage": "hop0+polish",
+                "count": 140
+              },
+              {
+                "stage": "hop1",
+                "count": 140
+              },
+              {
+                "stage": "hop1+polish",
+                "count": 140
+              }
+            ],
+            "strict_margin_certification": {
+              "argmax_count": 140,
+              "strictly_won_count": 140,
+              "counts_agree": true,
+              "min_margin_over_won_twins": 1.6992665014383643e-09,
+              "n_ties_within_TOL": 0,
+              "tolerance": 1e-12,
+              "note": "a counted-correct twin must beat every wrong-class outcome STRICTLY; an exact tie would be an argmax tie-break banked as a win, which is doc 47 SS16's defect class"
+            },
+            "budget_extended_for_monotonicity": false,
+            "doc50_C3_published": 0.875,
+            "doc50_C3_asterisk": false,
+            "reconciliation": "doc 50 SSC3's binary column is doc 47 SS13's PAIR-LEVEL value (0.8750); this cell is the PER-TWIN argmax-2 value. Different populations, not a discrepancy -- per-twin >= pair-level always.",
+            "at_or_above_pair_level_binary": true,
+            "monotone_vs_previous_M": true,
+            "witness_V": [
+              [
+                0.0,
+                0.06290977694423149,
+                -0.3479114610324377,
+                -0.06290977694423149,
+                0.0,
+                -0.3535533555873875,
+                0.3479114610324377,
+                0.3535533555873875,
+                0.0
+              ],
+              [
+                -0.0,
+                -0.06290977694423149,
+                0.3479114610324377,
+                0.06290977694423149,
+                -0.0,
+                0.3535533555873875,
+                -0.3479114610324377,
+                -0.3535533555873875,
+                -0.0
+              ]
+            ],
+            "legal_probability_check": {
+              "eps": 0.23098821518760554,
+              "sums_to_one_max_abs_error": 0.0,
+              "min_probability_over_all_twins": 0.4549615014463679,
+              "nonnegative": true
+            }
+          },
+          "4": {
+            "M": 4,
+            "grouping": "alternating i mod 2",
+            "value": 0.975,
+            "fraction": "156/160",
+            "count": 156,
+            "denominator": 160,
+            "population": "ALL ordered twins over the 24 frozen human nouns (2|B||N|); no train/test split -- this IS the noun-level bound of doc 47 SS18.1 over the whole inventory",
+            "orientation": "identity",
+            "agent_only_arc_readout": {
+              "value": 0.975,
+              "fraction": "156/160",
+              "note": "best AGENT-ONLY readout p_m(theta_a, theta_p) = <w_m, u(theta_a)> -- the direct realisation of doc 50 SSC2's arc picture, and a strict SUBSET of the joint readout class. Reported because the gap between it and the joint value is exactly what the joint readout buys over a per-referent arc classifier.",
+              "arc_budget_at_this_M": 6,
+              "category_arcs": 6,
+              "budget_suffices": true
+            },
+            "method": "CONSTRUCTIVE LOWER BOUND (nested-seeded three-stage search: annealed logsumexp surrogate, latent multiclass hinge over a 4-margin ladder, hard-count polish, plus basin hops)",
+            "exact": false,
+            "stage_log": [
+              {
+                "stage": "anneal",
+                "count": 156
+              },
+              {
+                "stage": "anneal+polish",
+                "count": 156
+              },
+              {
+                "stage": "hinge(m=0.02)",
+                "count": 156
+              },
+              {
+                "stage": "hinge(m=0.02)+polish",
+                "count": 156
+              },
+              {
+                "stage": "hinge(m=0.05)",
+                "count": 156
+              },
+              {
+                "stage": "hinge(m=0.05)+polish",
+                "count": 156
+              },
+              {
+                "stage": "hinge(m=0.15)",
+                "count": 156
+              },
+              {
+                "stage": "hinge(m=0.15)+polish",
+                "count": 156
+              },
+              {
+                "stage": "hinge(m=0.40)",
+                "count": 156
+              },
+              {
+                "stage": "hinge(m=0.40)+polish",
+                "count": 156
+              },
+              {
+                "stage": "hop0",
+                "count": 156
+              },
+              {
+                "stage": "hop0+polish",
+                "count": 156
+              },
+              {
+                "stage": "hop1",
+                "count": 156
+              },
+              {
+                "stage": "hop1+polish",
+                "count": 156
+              }
+            ],
+            "strict_margin_certification": {
+              "argmax_count": 156,
+              "strictly_won_count": 156,
+              "counts_agree": true,
+              "min_margin_over_won_twins": 1.9992082443576198e-05,
+              "n_ties_within_TOL": 0,
+              "tolerance": 1e-12,
+              "note": "a counted-correct twin must beat every wrong-class outcome STRICTLY; an exact tie would be an argmax tie-break banked as a win, which is doc 47 SS16's defect class"
+            },
+            "budget_extended_for_monotonicity": false,
+            "doc50_C3_published": 0.8375,
+            "doc50_C3_asterisk": true,
+            "reconciliation": "OVER by +0.1375 -- doc 50 SSC3's cell is confirmed as an UNDERESTIMATE (both are constructive lower bounds; a higher one supersedes)",
+            "at_or_above_pair_level_binary": true,
+            "monotone_vs_previous_M": true,
+            "witness_V": [
+              [
+                -0.2352137480711293,
+                -0.0,
+                -0.0,
+                -0.21289604865196848,
+                -0.0,
+                -0.0,
+                0.013525363108368441,
+                0.0,
+                0.0
+              ],
+              [
+                -0.5321138401703313,
+                -0.0,
+                -0.0,
+                -0.5155311812102997,
+                -0.0,
+                -0.0,
+                0.021187952986331093,
+                0.0,
+                0.0
+              ],
+              [
+                -0.29224456489199874,
+                -0.0,
+                -0.0,
+                0.19876405592922503,
+                0.0,
+                0.0,
+                0.39329902139740286,
+                0.0,
+                0.0
+              ],
+              [
+                -0.15424148423351447,
+                -0.0,
+                -0.0,
+                0.12321714640775448,
+                0.0,
+                0.0,
+                0.1767181546670015,
+                0.0,
+                0.0
+              ]
+            ],
+            "legal_probability_check": {
+              "eps": 0.16652326467830347,
+              "sums_to_one_max_abs_error": 1.3877787807814457e-17,
+              "min_probability_over_all_twins": 0.1876618940898181,
+              "nonnegative": true
+            }
+          },
+          "8": {
+            "M": 8,
+            "grouping": "alternating i mod 2",
+            "value": 0.975,
+            "fraction": "156/160",
+            "count": 156,
+            "denominator": 160,
+            "population": "ALL ordered twins over the 24 frozen human nouns (2|B||N|); no train/test split -- this IS the noun-level bound of doc 47 SS18.1 over the whole inventory",
+            "orientation": "identity",
+            "agent_only_arc_readout": {
+              "value": 0.975,
+              "fraction": "156/160",
+              "note": "best AGENT-ONLY readout p_m(theta_a, theta_p) = <w_m, u(theta_a)> -- the direct realisation of doc 50 SSC2's arc picture, and a strict SUBSET of the joint readout class. Reported because the gap between it and the joint value is exactly what the joint readout buys over a per-referent arc classifier.",
+              "arc_budget_at_this_M": 14,
+              "category_arcs": 6,
+              "budget_suffices": true
+            },
+            "method": "CONSTRUCTIVE LOWER BOUND (nested-seeded three-stage search: annealed logsumexp surrogate, latent multiclass hinge over a 4-margin ladder, hard-count polish, plus basin hops)",
+            "exact": false,
+            "stage_log": [
+              {
+                "stage": "anneal",
+                "count": 156
+              },
+              {
+                "stage": "anneal+polish",
+                "count": 156
+              },
+              {
+                "stage": "hinge(m=0.02)",
+                "count": 156
+              },
+              {
+                "stage": "hinge(m=0.02)+polish",
+                "count": 156
+              },
+              {
+                "stage": "hinge(m=0.05)",
+                "count": 156
+              },
+              {
+                "stage": "hinge(m=0.05)+polish",
+                "count": 156
+              },
+              {
+                "stage": "hinge(m=0.15)",
+                "count": 156
+              },
+              {
+                "stage": "hinge(m=0.15)+polish",
+                "count": 156
+              },
+              {
+                "stage": "hinge(m=0.40)",
+                "count": 156
+              },
+              {
+                "stage": "hinge(m=0.40)+polish",
+                "count": 156
+              },
+              {
+                "stage": "hop0",
+                "count": 156
+              },
+              {
+                "stage": "hop0+polish",
+                "count": 156
+              },
+              {
+                "stage": "hop1",
+                "count": 156
+              },
+              {
+                "stage": "hop1+polish",
+                "count": 156
+              }
+            ],
+            "strict_margin_certification": {
+              "argmax_count": 156,
+              "strictly_won_count": 156,
+              "counts_agree": true,
+              "min_margin_over_won_twins": 1.3048414610969134e-07,
+              "n_ties_within_TOL": 0,
+              "tolerance": 1e-12,
+              "note": "a counted-correct twin must beat every wrong-class outcome STRICTLY; an exact tie would be an argmax tie-break banked as a win, which is doc 47 SS16's defect class"
+            },
+            "budget_extended_for_monotonicity": false,
+            "doc50_C3_published": 0.9125,
+            "doc50_C3_asterisk": false,
+            "reconciliation": "OVER by +0.0625 -- doc 50 SSC3's cell is confirmed as an UNDERESTIMATE (both are constructive lower bounds; a higher one supersedes)",
+            "at_or_above_pair_level_binary": true,
+            "monotone_vs_previous_M": true,
+            "witness_V": [
+              [
+                -0.0015351910015781087,
+                -0.0,
+                -0.0,
+                -0.0013895280392504997,
+                -0.0,
+                -0.0,
+                8.827721979399203e-05,
+                0.0,
+                0.0
+              ],
+              [
+                -0.003472995885417517,
+                -0.0,
+                -0.0,
+                -0.003364764334215924,
+                -0.0,
+                -0.0,
+                0.0001382893433450118,
+                0.0,
+                0.0
+              ],
+              [
+                -0.0019074192302170737,
+                -0.0,
+                -0.0,
+                0.0012972914746779119,
+                0.0,
+                0.0,
+                0.0025669805593003915,
+                0.0,
+                0.0
+              ],
+              [
+                -0.0010067019492148782,
+                -0.0,
+                -0.0,
+                0.0008042125766735115,
+                0.0,
+                0.0,
+                0.0011534024821467004,
+                0.0,
+                0.0
+              ],
+              [
+                -0.49998935013600815,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                -0.49998935013600815,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                -0.49998935013600815,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                -0.49998935013600815,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "legal_probability_check": {
+              "eps": 0.16334528150073807,
+              "sums_to_one_max_abs_error": 5.421010862427522e-20,
+              "min_probability_over_all_twins": 0.08422925756178104,
+              "nonnegative": true
+            }
+          },
+          "12": {
+            "M": 12,
+            "grouping": "alternating i mod 2",
+            "value": 0.975,
+            "fraction": "156/160",
+            "count": 156,
+            "denominator": 160,
+            "population": "ALL ordered twins over the 24 frozen human nouns (2|B||N|); no train/test split -- this IS the noun-level bound of doc 47 SS18.1 over the whole inventory",
+            "orientation": "identity",
+            "agent_only_arc_readout": {
+              "value": 0.975,
+              "fraction": "156/160",
+              "note": "best AGENT-ONLY readout p_m(theta_a, theta_p) = <w_m, u(theta_a)> -- the direct realisation of doc 50 SSC2's arc picture, and a strict SUBSET of the joint readout class. Reported because the gap between it and the joint value is exactly what the joint readout buys over a per-referent arc classifier.",
+              "arc_budget_at_this_M": 22,
+              "category_arcs": 6,
+              "budget_suffices": true
+            },
+            "method": "CONSTRUCTIVE LOWER BOUND (nested-seeded three-stage search: annealed logsumexp surrogate, latent multiclass hinge over a 4-margin ladder, hard-count polish, plus basin hops)",
+            "exact": false,
+            "stage_log": [
+              {
+                "stage": "anneal",
+                "count": 156
+              },
+              {
+                "stage": "anneal+polish",
+                "count": 156
+              },
+              {
+                "stage": "hinge(m=0.02)",
+                "count": 156
+              },
+              {
+                "stage": "hinge(m=0.02)+polish",
+                "count": 156
+              },
+              {
+                "stage": "hinge(m=0.05)",
+                "count": 156
+              },
+              {
+                "stage": "hinge(m=0.05)+polish",
+                "count": 156
+              },
+              {
+                "stage": "hinge(m=0.15)",
+                "count": 156
+              },
+              {
+                "stage": "hinge(m=0.15)+polish",
+                "count": 156
+              },
+              {
+                "stage": "hinge(m=0.40)",
+                "count": 156
+              },
+              {
+                "stage": "hinge(m=0.40)+polish",
+                "count": 156
+              },
+              {
+                "stage": "hop0",
+                "count": 156
+              },
+              {
+                "stage": "hop0+polish",
+                "count": 156
+              },
+              {
+                "stage": "hop1",
+                "count": 156
+              },
+              {
+                "stage": "hop1+polish",
+                "count": 156
+              }
+            ],
+            "strict_margin_certification": {
+              "argmax_count": 156,
+              "strictly_won_count": 156,
+              "counts_agree": true,
+              "min_margin_over_won_twins": 8.698811528591381e-10,
+              "n_ties_within_TOL": 0,
+              "tolerance": 1e-12,
+              "note": "a counted-correct twin must beat every wrong-class outcome STRICTLY; an exact tie would be an argmax tie-break banked as a win, which is doc 47 SS16's defect class"
+            },
+            "budget_extended_for_monotonicity": false,
+            "doc50_C3_published": 0.95,
+            "doc50_C3_asterisk": false,
+            "reconciliation": "OVER by +0.0250 -- doc 50 SSC3's cell is confirmed as an UNDERESTIMATE (both are constructive lower bounds; a higher one supersedes)",
+            "at_or_above_pair_level_binary": true,
+            "monotone_vs_previous_M": true,
+            "witness_V": [
+              [
+                -1.0234451909515575e-05,
+                -0.0,
+                -0.0,
+                -9.263380178762179e-06,
+                -0.0,
+                -0.0,
+                5.885058991087243e-07,
+                0.0,
+                0.0
+              ],
+              [
+                -2.3152955778605503e-05,
+                -0.0,
+                -0.0,
+                -2.2431423015108116e-05,
+                -0.0,
+                -0.0,
+                9.21915014228281e-07,
+                0.0,
+                0.0
+              ],
+              [
+                -1.2715935908219062e-05,
+                -0.0,
+                -0.0,
+                8.648479046950765e-06,
+                0.0,
+                0.0,
+                1.7112944942886693e-05,
+                0.0,
+                0.0
+              ],
+              [
+                -6.711244839153035e-06,
+                -0.0,
+                -0.0,
+                5.361336102499226e-06,
+                0.0,
+                0.0,
+                7.689233602666935e-06,
+                0.0,
+                0.0
+              ],
+              [
+                -0.003333211928663436,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                -0.003333211928663436,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                -0.003333211928663436,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                -0.003333211928663436,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                -0.4999888891014786,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                -0.4999888891014786,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                -0.4999888891014786,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                -0.4999888891014786,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "legal_probability_check": {
+              "eps": 0.081942701912175,
+              "sums_to_one_max_abs_error": 8.470329472543003e-22,
+              "min_probability_over_all_twins": 0.05611089473361781,
+              "nonnegative": true
+            }
+          }
+        }
+      },
+      "manual": {
+        "gloss": "manual / skilled trade",
+        "members": [
+          "العامل",
+          "الطباخ",
+          "الفلاح",
+          "السائق",
+          "الصياد"
+        ],
+        "size": 5,
+        "arcs": 8,
+        "n_casts": 95,
+        "n_twins": 190,
+        "binary_pair_level": {
+          "value": 0.8421052631578947,
+          "fraction": "80/95",
+          "population": "CASTS (both twins won together, antisymmetric form)",
+          "method": "EXACT (R^3 arrangement enumeration, doc 47 SS16 fix)",
+          "exact": true,
+          "doc47_s13_published": 0.8421052631578947,
+          "reproduces_doc47_s13": true
+        },
+        "M_ary_per_twin": {
+          "2": {
+            "M": 2,
+            "grouping": "alternating i mod 2",
+            "value": 0.8578947368421053,
+            "fraction": "163/190",
+            "count": 163,
+            "denominator": 190,
+            "population": "ALL ordered twins over the 24 frozen human nouns (2|B||N|); no train/test split -- this IS the noun-level bound of doc 47 SS18.1 over the whole inventory",
+            "orientation": "shift-by-one",
+            "agent_only_arc_readout": {
+              "value": 0.8157894736842105,
+              "fraction": "155/190",
+              "note": "best AGENT-ONLY readout p_m(theta_a, theta_p) = <w_m, u(theta_a)> -- the direct realisation of doc 50 SSC2's arc picture, and a strict SUBSET of the joint readout class. Reported because the gap between it and the joint value is exactly what the joint readout buys over a per-referent arc classifier.",
+              "arc_budget_at_this_M": 2,
+              "category_arcs": 8,
+              "budget_suffices": false
+            },
+            "method": "CONSTRUCTIVE LOWER BOUND (nested-seeded three-stage search: annealed logsumexp surrogate, latent multiclass hinge over a 4-margin ladder, hard-count polish, plus basin hops)",
+            "exact": false,
+            "stage_log": [
+              {
+                "stage": "anneal",
+                "count": 160
+              },
+              {
+                "stage": "anneal+polish",
+                "count": 160
+              },
+              {
+                "stage": "hinge(m=0.02)",
+                "count": 160
+              },
+              {
+                "stage": "hinge(m=0.02)+polish",
+                "count": 160
+              },
+              {
+                "stage": "hinge(m=0.05)",
+                "count": 160
+              },
+              {
+                "stage": "hinge(m=0.05)+polish",
+                "count": 160
+              },
+              {
+                "stage": "hinge(m=0.15)",
+                "count": 160
+              },
+              {
+                "stage": "hinge(m=0.15)+polish",
+                "count": 160
+              },
+              {
+                "stage": "hinge(m=0.40)",
+                "count": 160
+              },
+              {
+                "stage": "hinge(m=0.40)+polish",
+                "count": 163
+              },
+              {
+                "stage": "hop0",
+                "count": 160
+              },
+              {
+                "stage": "hop0+polish",
+                "count": 162
+              },
+              {
+                "stage": "hop1",
+                "count": 160
+              },
+              {
+                "stage": "hop1+polish",
+                "count": 160
+              }
+            ],
+            "strict_margin_certification": {
+              "argmax_count": 163,
+              "strictly_won_count": 163,
+              "counts_agree": true,
+              "min_margin_over_won_twins": 0.00010188747070792245,
+              "n_ties_within_TOL": 0,
+              "tolerance": 1e-12,
+              "note": "a counted-correct twin must beat every wrong-class outcome STRICTLY; an exact tie would be an argmax tie-break banked as a win, which is doc 47 SS16's defect class"
+            },
+            "budget_extended_for_monotonicity": false,
+            "doc50_C3_published": 0.8421,
+            "doc50_C3_asterisk": false,
+            "reconciliation": "doc 50 SSC3's binary column is doc 47 SS13's PAIR-LEVEL value (0.8421); this cell is the PER-TWIN argmax-2 value. Different populations, not a discrepancy -- per-twin >= pair-level always.",
+            "at_or_above_pair_level_binary": true,
+            "monotone_vs_previous_M": true,
+            "witness_V": [
+              [
+                -0.025318310619563487,
+                0.397596563738655,
+                -0.11033592584066135,
+                -0.46325021462691757,
+                0.01280997418398862,
+                0.19659296840096271,
+                0.01791981482331388,
+                -0.27660862580467777,
+                0.027856878035603515
+              ],
+              [
+                0.04674355212916687,
+                -0.45096995584716604,
+                0.053368067072028305,
+                0.46060403885909657,
+                -0.00470285800640514,
+                -0.21547093213894264,
+                -0.07063759750997455,
+                0.24166748554708342,
+                0.028176928556615348
+              ]
+            ],
+            "legal_probability_check": {
+              "eps": 0.2280360306750434,
+              "sums_to_one_max_abs_error": 4.336808689942018e-19,
+              "min_probability_over_all_twins": 0.41009690555843814,
+              "nonnegative": true
+            }
+          },
+          "4": {
+            "M": 4,
+            "grouping": "alternating i mod 2",
+            "value": 0.8947368421052632,
+            "fraction": "170/190",
+            "count": 170,
+            "denominator": 190,
+            "population": "ALL ordered twins over the 24 frozen human nouns (2|B||N|); no train/test split -- this IS the noun-level bound of doc 47 SS18.1 over the whole inventory",
+            "orientation": "identity",
+            "agent_only_arc_readout": {
+              "value": 0.8947368421052632,
+              "fraction": "170/190",
+              "note": "best AGENT-ONLY readout p_m(theta_a, theta_p) = <w_m, u(theta_a)> -- the direct realisation of doc 50 SSC2's arc picture, and a strict SUBSET of the joint readout class. Reported because the gap between it and the joint value is exactly what the joint readout buys over a per-referent arc classifier.",
+              "arc_budget_at_this_M": 6,
+              "category_arcs": 8,
+              "budget_suffices": false
+            },
+            "method": "CONSTRUCTIVE LOWER BOUND (nested-seeded three-stage search: annealed logsumexp surrogate, latent multiclass hinge over a 4-margin ladder, hard-count polish, plus basin hops)",
+            "exact": false,
+            "stage_log": [
+              {
+                "stage": "anneal",
+                "count": 170
+              },
+              {
+                "stage": "anneal+polish",
+                "count": 170
+              },
+              {
+                "stage": "hinge(m=0.02)",
+                "count": 170
+              },
+              {
+                "stage": "hinge(m=0.02)+polish",
+                "count": 170
+              },
+              {
+                "stage": "hinge(m=0.05)",
+                "count": 170
+              },
+              {
+                "stage": "hinge(m=0.05)+polish",
+                "count": 170
+              },
+              {
+                "stage": "hinge(m=0.15)",
+                "count": 170
+              },
+              {
+                "stage": "hinge(m=0.15)+polish",
+                "count": 170
+              },
+              {
+                "stage": "hinge(m=0.40)",
+                "count": 170
+              },
+              {
+                "stage": "hinge(m=0.40)+polish",
+                "count": 170
+              },
+              {
+                "stage": "hop0",
+                "count": 170
+              },
+              {
+                "stage": "hop0+polish",
+                "count": 170
+              },
+              {
+                "stage": "hop1",
+                "count": 170
+              },
+              {
+                "stage": "hop1+polish",
+                "count": 170
+              }
+            ],
+            "strict_margin_certification": {
+              "argmax_count": 170,
+              "strictly_won_count": 170,
+              "counts_agree": true,
+              "min_margin_over_won_twins": 3.125471561082893e-05,
+              "n_ties_within_TOL": 0,
+              "tolerance": 1e-12,
+              "note": "a counted-correct twin must beat every wrong-class outcome STRICTLY; an exact tie would be an argmax tie-break banked as a win, which is doc 47 SS16's defect class"
+            },
+            "budget_extended_for_monotonicity": false,
+            "doc50_C3_published": 0.8421,
+            "doc50_C3_asterisk": false,
+            "reconciliation": "OVER by +0.0526 -- doc 50 SSC3's cell is confirmed as an UNDERESTIMATE (both are constructive lower bounds; a higher one supersedes)",
+            "at_or_above_pair_level_binary": true,
+            "monotone_vs_previous_M": true,
+            "witness_V": [
+              [
+                0.21369144119056135,
+                0.0,
+                0.0,
+                0.41642669364664586,
+                0.0,
+                0.0,
+                -0.21478024659959796,
+                -0.0,
+                -0.0
+              ],
+              [
+                -0.4982307634024472,
+                -0.0,
+                -0.0,
+                -0.3007712900241297,
+                -0.0,
+                -0.0,
+                -0.22299929730155532,
+                -0.0,
+                -0.0
+              ],
+              [
+                0.024626877294900935,
+                0.0,
+                0.0,
+                0.48173886120190595,
+                0.0,
+                0.0,
+                0.15003215100626516,
+                0.0,
+                0.0
+              ],
+              [
+                -0.0034181690136470054,
+                -0.0,
+                -0.0,
+                0.28200034637397625,
+                0.0,
+                0.0,
+                0.10790706326865267,
+                0.0,
+                0.0
+              ]
+            ],
+            "legal_probability_check": {
+              "eps": 0.11670106135056708,
+              "sums_to_one_max_abs_error": 6.938893903907228e-18,
+              "min_probability_over_all_twins": 0.19338788747712302,
+              "nonnegative": true
+            }
+          },
+          "8": {
+            "M": 8,
+            "grouping": "alternating i mod 2",
+            "value": 0.9263157894736842,
+            "fraction": "176/190",
+            "count": 176,
+            "denominator": 190,
+            "population": "ALL ordered twins over the 24 frozen human nouns (2|B||N|); no train/test split -- this IS the noun-level bound of doc 47 SS18.1 over the whole inventory",
+            "orientation": "identity",
+            "agent_only_arc_readout": {
+              "value": 0.8947368421052632,
+              "fraction": "170/190",
+              "note": "best AGENT-ONLY readout p_m(theta_a, theta_p) = <w_m, u(theta_a)> -- the direct realisation of doc 50 SSC2's arc picture, and a strict SUBSET of the joint readout class. Reported because the gap between it and the joint value is exactly what the joint readout buys over a per-referent arc classifier.",
+              "arc_budget_at_this_M": 14,
+              "category_arcs": 8,
+              "budget_suffices": true
+            },
+            "method": "CONSTRUCTIVE LOWER BOUND (nested-seeded three-stage search: annealed logsumexp surrogate, latent multiclass hinge over a 4-margin ladder, hard-count polish, plus basin hops)",
+            "exact": false,
+            "stage_log": [
+              {
+                "stage": "anneal",
+                "count": 175
+              },
+              {
+                "stage": "anneal+polish",
+                "count": 176
+              },
+              {
+                "stage": "hinge(m=0.02)",
+                "count": 174
+              },
+              {
+                "stage": "hinge(m=0.02)+polish",
+                "count": 174
+              },
+              {
+                "stage": "hinge(m=0.05)",
+                "count": 170
+              },
+              {
+                "stage": "hinge(m=0.05)+polish",
+                "count": 170
+              },
+              {
+                "stage": "hinge(m=0.15)",
+                "count": 170
+              },
+              {
+                "stage": "hinge(m=0.15)+polish",
+                "count": 170
+              },
+              {
+                "stage": "hinge(m=0.40)",
+                "count": 170
+              },
+              {
+                "stage": "hinge(m=0.40)+polish",
+                "count": 170
+              },
+              {
+                "stage": "hop0",
+                "count": 170
+              },
+              {
+                "stage": "hop0+polish",
+                "count": 170
+              },
+              {
+                "stage": "hop1",
+                "count": 170
+              },
+              {
+                "stage": "hop1+polish",
+                "count": 170
+              }
+            ],
+            "strict_margin_certification": {
+              "argmax_count": 176,
+              "strictly_won_count": 176,
+              "counts_agree": true,
+              "min_margin_over_won_twins": 6.552371467927198e-05,
+              "n_ties_within_TOL": 0,
+              "tolerance": 1e-12,
+              "note": "a counted-correct twin must beat every wrong-class outcome STRICTLY; an exact tie would be an argmax tie-break banked as a win, which is doc 47 SS16's defect class"
+            },
+            "budget_extended_for_monotonicity": false,
+            "doc50_C3_published": 0.8842,
+            "doc50_C3_asterisk": false,
+            "reconciliation": "OVER by +0.0421 -- doc 50 SSC3's cell is confirmed as an UNDERESTIMATE (both are constructive lower bounds; a higher one supersedes)",
+            "at_or_above_pair_level_binary": true,
+            "monotone_vs_previous_M": true,
+            "witness_V": [
+              [
+                -0.009998660089685212,
+                -0.12655052033767444,
+                0.017872742685248286,
+                0.4935180918198117,
+                -0.29002080234543687,
+                0.18704710451102569,
+                0.16328294617466582,
+                -0.22680890082658217,
+                0.08305957584214119
+              ],
+              [
+                0.029046834239360504,
+                0.022510144601093535,
+                -0.10436027548732804,
+                -0.12862045439596537,
+                0.08031099338249738,
+                0.10604738634443933,
+                -0.0022406527682261785,
+                -0.03467938992315979,
+                -0.020752599392027206
+              ],
+              [
+                -0.0637687496211092,
+                -0.1399758854410712,
+                -0.08062894766713222,
+                0.007248542988999256,
+                0.16859170733309498,
+                0.08023547468406247,
+                -0.06857248140626762,
+                -0.04485141879109453,
+                -0.09157854164233335
+              ],
+              [
+                0.01929446931119096,
+                0.29254178920916535,
+                0.08315979490763686,
+                -0.15396915350062523,
+                -0.13140355848872456,
+                -0.141205390346199,
+                0.03576001377939001,
+                0.10518563353957884,
+                0.044672396249894955
+              ],
+              [
+                -0.05608506399362416,
+                -0.07581357707063598,
+                0.15866875425386787,
+                0.08372787208396121,
+                0.054464125246818505,
+                -0.15159013257293755,
+                -0.06660672913874077,
+                0.11772844414699575,
+                0.09753585564226165
+              ],
+              [
+                0.024799458177919696,
+                0.09215161894042292,
+                -0.007706093927126437,
+                -0.14171043357098714,
+                -0.009192803758451608,
+                -0.05300913951572073,
+                0.03237053147484064,
+                0.010218334049445369,
+                0.01276418267410342
+              ],
+              [
+                0.007857854521341816,
+                -0.10650021743065864,
+                0.043084795284910334,
+                0.014137503379991003,
+                0.07582196589922754,
+                -0.024596129098617157,
+                -0.08807685825183051,
+                -0.0003192735578632375,
+                -0.020204629735950202
+              ],
+              [
+                0.03925112934414585,
+                0.05307644424588285,
+                -0.08379398392890908,
+                -0.17748273475623724,
+                0.05670328583147581,
+                -0.014079820449822585,
+                -0.01989486941949952,
+                0.04831966822449294,
+                -0.09510264493509847
+              ]
+            ],
+            "legal_probability_check": {
+              "eps": 0.05990888524231586,
+              "sums_to_one_max_abs_error": 4.336808689942018e-18,
+              "min_probability_over_all_twins": 0.07559747886533517,
+              "nonnegative": true
+            }
+          },
+          "12": {
+            "M": 12,
+            "grouping": "alternating i mod 2",
+            "value": 0.9736842105263158,
+            "fraction": "185/190",
+            "count": 185,
+            "denominator": 190,
+            "population": "ALL ordered twins over the 24 frozen human nouns (2|B||N|); no train/test split -- this IS the noun-level bound of doc 47 SS18.1 over the whole inventory",
+            "orientation": "identity",
+            "agent_only_arc_readout": {
+              "value": 0.9736842105263158,
+              "fraction": "185/190",
+              "note": "best AGENT-ONLY readout p_m(theta_a, theta_p) = <w_m, u(theta_a)> -- the direct realisation of doc 50 SSC2's arc picture, and a strict SUBSET of the joint readout class. Reported because the gap between it and the joint value is exactly what the joint readout buys over a per-referent arc classifier.",
+              "arc_budget_at_this_M": 22,
+              "category_arcs": 8,
+              "budget_suffices": true
+            },
+            "method": "CONSTRUCTIVE LOWER BOUND (nested-seeded three-stage search: annealed logsumexp surrogate, latent multiclass hinge over a 4-margin ladder, hard-count polish, plus basin hops)",
+            "exact": false,
+            "stage_log": [
+              {
+                "stage": "anneal",
+                "count": 185
+              },
+              {
+                "stage": "anneal+polish",
+                "count": 185
+              },
+              {
+                "stage": "hinge(m=0.02)",
+                "count": 185
+              },
+              {
+                "stage": "hinge(m=0.02)+polish",
+                "count": 185
+              },
+              {
+                "stage": "hinge(m=0.05)",
+                "count": 185
+              },
+              {
+                "stage": "hinge(m=0.05)+polish",
+                "count": 185
+              },
+              {
+                "stage": "hinge(m=0.15)",
+                "count": 185
+              },
+              {
+                "stage": "hinge(m=0.15)+polish",
+                "count": 185
+              },
+              {
+                "stage": "hinge(m=0.40)",
+                "count": 185
+              },
+              {
+                "stage": "hinge(m=0.40)+polish",
+                "count": 185
+              },
+              {
+                "stage": "hop0",
+                "count": 185
+              },
+              {
+                "stage": "hop0+polish",
+                "count": 185
+              },
+              {
+                "stage": "hop1",
+                "count": 185
+              },
+              {
+                "stage": "hop1+polish",
+                "count": 185
+              }
+            ],
+            "strict_margin_certification": {
+              "argmax_count": 185,
+              "strictly_won_count": 185,
+              "counts_agree": true,
+              "min_margin_over_won_twins": 0.0001361578153804069,
+              "n_ties_within_TOL": 0,
+              "tolerance": 1e-12,
+              "note": "a counted-correct twin must beat every wrong-class outcome STRICTLY; an exact tie would be an argmax tie-break banked as a win, which is doc 47 SS16's defect class"
+            },
+            "budget_extended_for_monotonicity": false,
+            "doc50_C3_published": 0.9,
+            "doc50_C3_asterisk": false,
+            "reconciliation": "OVER by +0.0737 -- doc 50 SSC3's cell is confirmed as an UNDERESTIMATE (both are constructive lower bounds; a higher one supersedes)",
+            "at_or_above_pair_level_binary": true,
+            "monotone_vs_previous_M": true,
+            "witness_V": [
+              [
+                -0.07621922593620897,
+                -0.0,
+                -0.0,
+                -0.11382624071668183,
+                -0.0,
+                -0.0,
+                0.07683410947502148,
+                0.0,
+                0.0
+              ],
+              [
+                0.02368723737883226,
+                0.0,
+                0.0,
+                -0.04894017175882172,
+                -0.0,
+                -0.0,
+                -0.0023609249813502926,
+                -0.0,
+                -0.0
+              ],
+              [
+                0.13001632715416658,
+                0.0,
+                0.0,
+                0.13371837862084032,
+                0.0,
+                0.0,
+                -0.5837393779599006,
+                -0.0,
+                -0.0
+              ],
+              [
+                0.024372059758843465,
+                0.0,
+                0.0,
+                -0.048970625623035086,
+                -0.0,
+                -0.0,
+                -0.0033191098210024537,
+                -0.0,
+                -0.0
+              ],
+              [
+                -0.010440718951689803,
+                -0.0,
+                -0.0,
+                -0.055358789982001215,
+                -0.0,
+                -0.0,
+                0.032381850150291026,
+                0.0,
+                0.0
+              ],
+              [
+                0.02391546260381196,
+                0.0,
+                0.0,
+                -0.04895211288871397,
+                -0.0,
+                -0.0,
+                -0.0026796874999242986,
+                -0.0,
+                -0.0
+              ],
+              [
+                0.05886103402433541,
+                0.0,
+                0.0,
+                0.6131110487648311,
+                0.0,
+                0.0,
+                0.3048342311382522,
+                0.0,
+                0.0
+              ],
+              [
+                0.02365437614839557,
+                0.0,
+                0.0,
+                -0.04893841863276011,
+                -0.0,
+                -0.0,
+                -0.002315137065758443,
+                -0.0,
+                -0.0
+              ],
+              [
+                -0.16901826064172554,
+                -0.0,
+                -0.0,
+                -0.24667089763656602,
+                -0.0,
+                -0.0,
+                0.04551752213246151,
+                0.0,
+                0.0
+              ],
+              [
+                0.02245232280496388,
+                0.0,
+                0.0,
+                -0.048860900142487715,
+                -0.0,
+                -0.0,
+                -0.0006392315235688403,
+                -0.0,
+                -0.0
+              ],
+              [
+                -0.04095647612380485,
+                -0.0,
+                -0.0,
+                -0.07481617586837351,
+                -0.0,
+                -0.0,
+                0.05531604003097046,
+                0.0,
+                0.0
+              ],
+              [
+                -0.010324130322276186,
+                -0.0,
+                -0.0,
+                -0.011495084906583464,
+                -0.0,
+                -0.0,
+                0.08016970184265199,
+                0.0,
+                0.0
+              ]
+            ],
+            "legal_probability_check": {
+              "eps": 0.03961115485681126,
+              "sums_to_one_max_abs_error": 1.1102230246251565e-16,
+              "min_probability_over_all_twins": 0.05854581639894792,
+              "nonnegative": true
+            }
+          }
+        }
+      },
+      "nonoccupational": {
+        "gloss": "non-occupational state",
+        "members": [
+          "الرجل",
+          "الولد",
+          "المسافر",
+          "المريض"
+        ],
+        "size": 4,
+        "arcs": 4,
+        "n_casts": 80,
+        "n_twins": 160,
+        "binary_pair_level": {
+          "value": 0.925,
+          "fraction": "74/80",
+          "population": "CASTS (both twins won together, antisymmetric form)",
+          "method": "EXACT (R^3 arrangement enumeration, doc 47 SS16 fix)",
+          "exact": true,
+          "doc47_s13_published": 0.925,
+          "reproduces_doc47_s13": true
+        },
+        "M_ary_per_twin": {
+          "2": {
+            "M": 2,
+            "grouping": "alternating i mod 2",
+            "value": 0.9625,
+            "fraction": "154/160",
+            "count": 154,
+            "denominator": 160,
+            "population": "ALL ordered twins over the 24 frozen human nouns (2|B||N|); no train/test split -- this IS the noun-level bound of doc 47 SS18.1 over the whole inventory",
+            "orientation": "identity",
+            "agent_only_arc_readout": {
+              "value": 0.925,
+              "fraction": "148/160",
+              "note": "best AGENT-ONLY readout p_m(theta_a, theta_p) = <w_m, u(theta_a)> -- the direct realisation of doc 50 SSC2's arc picture, and a strict SUBSET of the joint readout class. Reported because the gap between it and the joint value is exactly what the joint readout buys over a per-referent arc classifier.",
+              "arc_budget_at_this_M": 2,
+              "category_arcs": 4,
+              "budget_suffices": false
+            },
+            "method": "CONSTRUCTIVE LOWER BOUND (nested-seeded three-stage search: annealed logsumexp surrogate, latent multiclass hinge over a 4-margin ladder, hard-count polish, plus basin hops)",
+            "exact": false,
+            "stage_log": [
+              {
+                "stage": "anneal",
+                "count": 149
+              },
+              {
+                "stage": "anneal+polish",
+                "count": 154
+              },
+              {
+                "stage": "hinge(m=0.02)",
+                "count": 152
+              },
+              {
+                "stage": "hinge(m=0.02)+polish",
+                "count": 152
+              },
+              {
+                "stage": "hinge(m=0.05)",
+                "count": 152
+              },
+              {
+                "stage": "hinge(m=0.05)+polish",
+                "count": 154
+              },
+              {
+                "stage": "hinge(m=0.15)",
+                "count": 152
+              },
+              {
+                "stage": "hinge(m=0.15)+polish",
+                "count": 152
+              },
+              {
+                "stage": "hinge(m=0.40)",
+                "count": 150
+              },
+              {
+                "stage": "hinge(m=0.40)+polish",
+                "count": 154
+              },
+              {
+                "stage": "hop0",
+                "count": 151
+              },
+              {
+                "stage": "hop0+polish",
+                "count": 154
+              },
+              {
+                "stage": "hop1",
+                "count": 152
+              },
+              {
+                "stage": "hop1+polish",
+                "count": 152
+              }
+            ],
+            "strict_margin_certification": {
+              "argmax_count": 154,
+              "strictly_won_count": 154,
+              "counts_agree": true,
+              "min_margin_over_won_twins": 0.00019863079456231003,
+              "n_ties_within_TOL": 0,
+              "tolerance": 1e-12,
+              "note": "a counted-correct twin must beat every wrong-class outcome STRICTLY; an exact tie would be an argmax tie-break banked as a win, which is doc 47 SS16's defect class"
+            },
+            "budget_extended_for_monotonicity": false,
+            "doc50_C3_published": 0.925,
+            "doc50_C3_asterisk": false,
+            "reconciliation": "doc 50 SSC3's binary column is doc 47 SS13's PAIR-LEVEL value (0.9250); this cell is the PER-TWIN argmax-2 value. Different populations, not a discrepancy -- per-twin >= pair-level always.",
+            "at_or_above_pair_level_binary": true,
+            "monotone_vs_previous_M": true,
+            "witness_V": [
+              [
+                0.18997647918348098,
+                0.14556381591230205,
+                1.319108075371902,
+                -0.03759848645080427,
+                -1.7092395286517656,
+                -0.5886560170515854,
+                0.016689686996075235,
+                -0.0529883155685227,
+                -0.8363063110942776
+              ],
+              [
+                1.0615409364931456,
+                1.1923152638998662,
+                0.7772251622744355,
+                -0.4367123068714059,
+                -0.41962553622777615,
+                1.2328243715397922,
+                -0.18068617329975967,
+                -0.2020685266188847,
+                -0.32334088394212024
+              ]
+            ],
+            "legal_probability_check": {
+              "eps": 0.11838971895364983,
+              "sums_to_one_max_abs_error": 2.7755575615628914e-17,
+              "min_probability_over_all_twins": 0.37319410028117705,
+              "nonnegative": true
+            }
+          },
+          "4": {
+            "M": 4,
+            "grouping": "alternating i mod 2",
+            "value": 1.0,
+            "fraction": "160/160",
+            "count": 160,
+            "denominator": 160,
+            "population": "ALL ordered twins over the 24 frozen human nouns (2|B||N|); no train/test split -- this IS the noun-level bound of doc 47 SS18.1 over the whole inventory",
+            "orientation": "identity",
+            "agent_only_arc_readout": {
+              "value": 1.0,
+              "fraction": "160/160",
+              "note": "best AGENT-ONLY readout p_m(theta_a, theta_p) = <w_m, u(theta_a)> -- the direct realisation of doc 50 SSC2's arc picture, and a strict SUBSET of the joint readout class. Reported because the gap between it and the joint value is exactly what the joint readout buys over a per-referent arc classifier.",
+              "arc_budget_at_this_M": 6,
+              "category_arcs": 4,
+              "budget_suffices": true
+            },
+            "method": "CONSTRUCTIVE LOWER BOUND (nested-seeded three-stage search: annealed logsumexp surrogate, latent multiclass hinge over a 4-margin ladder, hard-count polish, plus basin hops)",
+            "exact": false,
+            "stage_log": [
+              {
+                "stage": "anneal",
+                "count": 160
+              },
+              {
+                "stage": "anneal+polish",
+                "count": 160
+              },
+              {
+                "stage": "hinge(m=0.02)",
+                "count": 160
+              },
+              {
+                "stage": "hinge(m=0.02)+polish",
+                "count": 160
+              },
+              {
+                "stage": "hinge(m=0.05)",
+                "count": 160
+              },
+              {
+                "stage": "hinge(m=0.05)+polish",
+                "count": 160
+              },
+              {
+                "stage": "hinge(m=0.15)",
+                "count": 160
+              },
+              {
+                "stage": "hinge(m=0.15)+polish",
+                "count": 160
+              },
+              {
+                "stage": "hinge(m=0.40)",
+                "count": 160
+              },
+              {
+                "stage": "hinge(m=0.40)+polish",
+                "count": 160
+              },
+              {
+                "stage": "hop0",
+                "count": 160
+              },
+              {
+                "stage": "hop0+polish",
+                "count": 160
+              },
+              {
+                "stage": "hop1",
+                "count": 160
+              },
+              {
+                "stage": "hop1+polish",
+                "count": 160
+              }
+            ],
+            "strict_margin_certification": {
+              "argmax_count": 160,
+              "strictly_won_count": 160,
+              "counts_agree": true,
+              "min_margin_over_won_twins": 0.00010443229774138515,
+              "n_ties_within_TOL": 0,
+              "tolerance": 1e-12,
+              "note": "a counted-correct twin must beat every wrong-class outcome STRICTLY; an exact tie would be an argmax tie-break banked as a win, which is doc 47 SS16's defect class"
+            },
+            "budget_extended_for_monotonicity": false,
+            "doc50_C3_published": 1.0,
+            "doc50_C3_asterisk": false,
+            "reconciliation": "MATCH (|delta| < 5e-5)",
+            "at_or_above_pair_level_binary": true,
+            "monotone_vs_previous_M": true,
+            "witness_V": [
+              [
+                -0.0961097894116311,
+                -0.0,
+                -0.0,
+                0.09438138556826359,
+                0.0,
+                0.0,
+                0.2665029859415567,
+                0.0,
+                0.0
+              ],
+              [
+                -0.06674363565184765,
+                -0.0,
+                -0.0,
+                -0.06113579136930767,
+                -0.0,
+                -0.0,
+                0.06861750572068695,
+                0.0,
+                0.0
+              ],
+              [
+                0.13222207491991592,
+                0.0,
+                0.0,
+                -0.4496341943290836,
+                -0.0,
+                -0.0,
+                -0.6407443314537026,
+                -0.0,
+                -0.0
+              ],
+              [
+                0.030631351277938576,
+                0.0,
+                0.0,
+                0.4163885983978725,
+                0.0,
+                0.0,
+                0.3056238411691622,
+                0.0,
+                0.0
+              ]
+            ],
+            "legal_probability_check": {
+              "eps": 0.10287343897862457,
+              "sums_to_one_max_abs_error": 6.938893903907228e-18,
+              "min_probability_over_all_twins": 0.20003800731703855,
+              "nonnegative": true
+            }
+          },
+          "8": {
+            "M": 8,
+            "grouping": "alternating i mod 2",
+            "value": 1.0,
+            "fraction": "160/160",
+            "count": 160,
+            "denominator": 160,
+            "population": "ALL ordered twins over the 24 frozen human nouns (2|B||N|); no train/test split -- this IS the noun-level bound of doc 47 SS18.1 over the whole inventory",
+            "orientation": "identity",
+            "agent_only_arc_readout": {
+              "value": 1.0,
+              "fraction": "160/160",
+              "note": "best AGENT-ONLY readout p_m(theta_a, theta_p) = <w_m, u(theta_a)> -- the direct realisation of doc 50 SSC2's arc picture, and a strict SUBSET of the joint readout class. Reported because the gap between it and the joint value is exactly what the joint readout buys over a per-referent arc classifier.",
+              "arc_budget_at_this_M": 14,
+              "category_arcs": 4,
+              "budget_suffices": true
+            },
+            "method": "CONSTRUCTIVE LOWER BOUND (nested-seeded three-stage search: annealed logsumexp surrogate, latent multiclass hinge over a 4-margin ladder, hard-count polish, plus basin hops)",
+            "exact": false,
+            "stage_log": [
+              {
+                "stage": "anneal",
+                "count": 160
+              },
+              {
+                "stage": "anneal+polish",
+                "count": 160
+              },
+              {
+                "stage": "hinge(m=0.02)",
+                "count": 160
+              },
+              {
+                "stage": "hinge(m=0.02)+polish",
+                "count": 160
+              },
+              {
+                "stage": "hinge(m=0.05)",
+                "count": 160
+              },
+              {
+                "stage": "hinge(m=0.05)+polish",
+                "count": 160
+              },
+              {
+                "stage": "hinge(m=0.15)",
+                "count": 160
+              },
+              {
+                "stage": "hinge(m=0.15)+polish",
+                "count": 160
+              },
+              {
+                "stage": "hinge(m=0.40)",
+                "count": 160
+              },
+              {
+                "stage": "hinge(m=0.40)+polish",
+                "count": 160
+              },
+              {
+                "stage": "hop0",
+                "count": 160
+              },
+              {
+                "stage": "hop0+polish",
+                "count": 160
+              },
+              {
+                "stage": "hop1",
+                "count": 160
+              },
+              {
+                "stage": "hop1+polish",
+                "count": 160
+              }
+            ],
+            "strict_margin_certification": {
+              "argmax_count": 160,
+              "strictly_won_count": 160,
+              "counts_agree": true,
+              "min_margin_over_won_twins": 6.364816025571085e-07,
+              "n_ties_within_TOL": 0,
+              "tolerance": 1e-12,
+              "note": "a counted-correct twin must beat every wrong-class outcome STRICTLY; an exact tie would be an argmax tie-break banked as a win, which is doc 47 SS16's defect class"
+            },
+            "budget_extended_for_monotonicity": false,
+            "doc50_C3_published": 1.0,
+            "doc50_C3_asterisk": false,
+            "reconciliation": "MATCH (|delta| < 5e-5)",
+            "at_or_above_pair_level_binary": true,
+            "monotone_vs_previous_M": true,
+            "witness_V": [
+              [
+                -0.0005857585642482987,
+                -0.0,
+                -0.0,
+                0.000575224493162199,
+                0.0,
+                0.0,
+                0.0016242508423821285,
+                0.0,
+                0.0
+              ],
+              [
+                -0.00040678120752813275,
+                -0.0,
+                -0.0,
+                -0.0003726031822137715,
+                -0.0,
+                -0.0,
+                0.0004182018489407372,
+                0.0,
+                0.0
+              ],
+              [
+                0.000805851445946962,
+                0.0,
+                0.0,
+                -0.0027403772468912613,
+                -0.0,
+                -0.0,
+                -0.003905132681490777,
+                -0.0,
+                -0.0
+              ],
+              [
+                0.00018668833274312845,
+                0.0,
+                0.0,
+                0.00253775592538529,
+                0.0,
+                0.0,
+                0.001862679998564574,
+                0.0,
+                0.0
+              ],
+              [
+                -0.4999907136278392,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                -0.4999907136278392,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                -0.4999907136278392,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                -0.4999907136278392,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "legal_probability_check": {
+              "eps": 0.16278210221925765,
+              "sums_to_one_max_abs_error": 2.220446049250313e-16,
+              "min_probability_over_all_twins": 0.0843052302723616,
+              "nonnegative": true
+            }
+          },
+          "12": {
+            "M": 12,
+            "grouping": "alternating i mod 2",
+            "value": 1.0,
+            "fraction": "160/160",
+            "count": 160,
+            "denominator": 160,
+            "population": "ALL ordered twins over the 24 frozen human nouns (2|B||N|); no train/test split -- this IS the noun-level bound of doc 47 SS18.1 over the whole inventory",
+            "orientation": "identity",
+            "agent_only_arc_readout": {
+              "value": 1.0,
+              "fraction": "160/160",
+              "note": "best AGENT-ONLY readout p_m(theta_a, theta_p) = <w_m, u(theta_a)> -- the direct realisation of doc 50 SSC2's arc picture, and a strict SUBSET of the joint readout class. Reported because the gap between it and the joint value is exactly what the joint readout buys over a per-referent arc classifier.",
+              "arc_budget_at_this_M": 22,
+              "category_arcs": 4,
+              "budget_suffices": true
+            },
+            "method": "CONSTRUCTIVE LOWER BOUND (nested-seeded three-stage search: annealed logsumexp surrogate, latent multiclass hinge over a 4-margin ladder, hard-count polish, plus basin hops)",
+            "exact": false,
+            "stage_log": [
+              {
+                "stage": "anneal",
+                "count": 160
+              },
+              {
+                "stage": "anneal+polish",
+                "count": 160
+              },
+              {
+                "stage": "hinge(m=0.02)",
+                "count": 160
+              },
+              {
+                "stage": "hinge(m=0.02)+polish",
+                "count": 160
+              },
+              {
+                "stage": "hinge(m=0.05)",
+                "count": 160
+              },
+              {
+                "stage": "hinge(m=0.05)+polish",
+                "count": 160
+              },
+              {
+                "stage": "hinge(m=0.15)",
+                "count": 160
+              },
+              {
+                "stage": "hinge(m=0.15)+polish",
+                "count": 160
+              },
+              {
+                "stage": "hinge(m=0.40)",
+                "count": 160
+              },
+              {
+                "stage": "hinge(m=0.40)+polish",
+                "count": 160
+              },
+              {
+                "stage": "hop0",
+                "count": 160
+              },
+              {
+                "stage": "hop0+polish",
+                "count": 160
+              },
+              {
+                "stage": "hop1",
+                "count": 160
+              },
+              {
+                "stage": "hop1+polish",
+                "count": 160
+              }
+            ],
+            "strict_margin_certification": {
+              "argmax_count": 160,
+              "strictly_won_count": 160,
+              "counts_agree": true,
+              "min_margin_over_won_twins": 4.243142661053211e-09,
+              "n_ties_within_TOL": 0,
+              "tolerance": 1e-12,
+              "note": "a counted-correct twin must beat every wrong-class outcome STRICTLY; an exact tie would be an argmax tie-break banked as a win, which is doc 47 SS16's defect class"
+            },
+            "budget_extended_for_monotonicity": false,
+            "doc50_C3_published": 1.0,
+            "doc50_C3_asterisk": false,
+            "reconciliation": "MATCH (|delta| < 5e-5)",
+            "at_or_above_pair_level_binary": true,
+            "monotone_vs_previous_M": true,
+            "witness_V": [
+              [
+                -3.904994493248309e-06,
+                -0.0,
+                -0.0,
+                3.834768478481466e-06,
+                0.0,
+                0.0,
+                1.0828165360750097e-05,
+                0.0,
+                0.0
+              ],
+              [
+                -2.7118312429503147e-06,
+                -0.0,
+                -0.0,
+                -2.483981393560649e-06,
+                -0.0,
+                -0.0,
+                2.7879676318101445e-06,
+                0.0,
+                0.0
+              ],
+              [
+                5.372256849265884e-06,
+                0.0,
+                0.0,
+                -1.8268888773766516e-05,
+                -0.0,
+                -0.0,
+                -2.6033800523591365e-05,
+                -0.0,
+                -0.0
+              ],
+              [
+                1.2445689330230596e-06,
+                0.0,
+                0.0,
+                1.6918101618463203e-05,
+                0.0,
+                0.0,
+                1.2417667587007977e-05,
+                0.0,
+                0.0
+              ],
+              [
+                -0.0033332179887076655,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                -0.0033332179887076655,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                -0.0033332179887076655,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                -0.0033332179887076655,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                -0.4999888891216775,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                -0.4999888891216775,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                -0.4999888891216775,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                -0.4999888891216775,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "legal_probability_check": {
+              "eps": 0.0819416168245573,
+              "sums_to_one_max_abs_error": 1.6616693035295043e-22,
+              "min_probability_over_all_twins": 0.05611111111111048,
+              "nonnegative": true
+            }
+          }
+        }
+      }
+    },
+    "k2_cross_term": {
+      "category": "uniformed",
+      "gloss": "uniformed / disciplined service",
+      "M": 8,
+      "K": 2,
+      "d_per_referent": 5,
+      "d_joint": 25,
+      "basis": "u_2(t) = (1, cos t, sin t, cos 2t, sin 2t); joint = u (x) u",
+      "not_the_width_register": "K=2 here is FREQUENCY (re-uploading). It is NOT capacity_check.referent_vector's list form, which Kroneckers two INDEPENDENT angles and is exp68's WIDTH register. Same word, different lever.",
+      "value": 0.98125,
+      "fraction": "157/160",
+      "count": 157,
+      "denominator": 160,
+      "orientation": "identity",
+      "k1_value_same_cell": 0.975,
+      "doc50_C3_published": 0.9688,
+      "reconciliation": "OVER by +0.0124 -- doc 50 SSC3's K=2 cell confirmed as an UNDERESTIMATE",
+      "method": "CONSTRUCTIVE LOWER BOUND (same three-stage search at the EXTENDED budget, seeded with the K=1 witness lifted into the K=2 span -- so K=2 >= K=1 is structural too)",
+      "exact": false,
+      "stage_log": [
+        {
+          "stage": "anneal",
+          "count": 156
+        },
+        {
+          "stage": "anneal+polish",
+          "count": 156
+        },
+        {
+          "stage": "hinge(m=0.02)",
+          "count": 157
+        },
+        {
+          "stage": "hinge(m=0.02)+polish",
+          "count": 157
+        },
+        {
+          "stage": "hinge(m=0.05)",
+          "count": 156
+        },
+        {
+          "stage": "hinge(m=0.05)+polish",
+          "count": 156
+        },
+        {
+          "stage": "hinge(m=0.15)",
+          "count": 156
+        },
+        {
+          "stage": "hinge(m=0.15)+polish",
+          "count": 156
+        },
+        {
+          "stage": "hinge(m=0.40)",
+          "count": 156
+        },
+        {
+          "stage": "hinge(m=0.40)+polish",
+          "count": 156
+        },
+        {
+          "stage": "hop0",
+          "count": 156
+        },
+        {
+          "stage": "hop0+polish",
+          "count": 156
+        },
+        {
+          "stage": "hop1",
+          "count": 156
+        },
+        {
+          "stage": "hop1+polish",
+          "count": 156
+        }
+      ],
+      "strict_margin_certification": {
+        "argmax_count": 157,
+        "strictly_won_count": 157,
+        "counts_agree": true,
+        "min_margin_over_won_twins": 0.0005205302006417445,
+        "n_ties_within_TOL": 0,
+        "tolerance": 1e-12,
+        "note": "a counted-correct twin must beat every wrong-class outcome STRICTLY; an exact tie would be an argmax tie-break banked as a win, which is doc 47 SS16's defect class"
+      },
+      "k2_at_least_k1": true
+    }
+  },
+  "supersedes_committed_per_twin_bounds": {
+    "why_this_block_exists": "the M=2 cell of Part B is the SAME optimisation problem as the committed per-twin general-C bound: argmax over two outcomes is sign(<C, phi>) with C = V_0 - V_1 unrestricted. So a better M=2 cell is a better value for a quantity two committed files already carry. doc 47 SS18.2: constructive bounds move with search effort and the stronger one supersedes -- but it must be SAID, not left to be found.",
+    "sources": [
+      "diagnostic_sb_bounds.json :: membership_reconstruction.<cat>.recomputed_per_twin (and target_selection.table.<cat>.FA.per_twin)",
+      "capacity_check.py :: ANCHORS['exp68_FA_per_twin'] = 0.9250 (148/160), the nonoccupational FA per-twin anchor"
+    ],
+    "note_on_the_anchors": "no committed selftest breaks. capacity_check's anchors pin what THAT budgeted search deterministically returns, and that is unchanged. What changes is the BOUND: the committed files now carry weaker lower bounds for the same quantity.",
+    "note_on_the_families": "instrument_sb_bounds verifies the raw-PCA angle IS the frozen angle (plane agreement ~2e-15), so the frozen2d FA and raw FA per-twin bounds are the same quantity and both are superseded together.",
+    "per_category": {
+      "tertiary": {
+        "committed": "163/190",
+        "committed_value": 0.8578947368421053,
+        "this_file_M2": "167/190",
+        "this_file_value": 0.8789473684210526,
+        "supersedes": true,
+        "never_below": true
+      },
+      "uniformed": {
+        "committed": "140/160",
+        "committed_value": 0.875,
+        "this_file_M2": "140/160",
+        "this_file_value": 0.875,
+        "supersedes": false,
+        "never_below": true
+      },
+      "manual": {
+        "committed": "160/190",
+        "committed_value": 0.8421052631578947,
+        "this_file_M2": "163/190",
+        "this_file_value": 0.8578947368421053,
+        "supersedes": true,
+        "never_below": true
+      },
+      "nonoccupational": {
+        "committed": "148/160",
+        "committed_value": 0.925,
+        "this_file_M2": "154/160",
+        "this_file_value": 0.9625,
+        "supersedes": true,
+        "never_below": true
+      }
+    },
+    "any_superseded": true,
+    "none_below_committed": true
+  },
+  "design_rule": {
+    "statement": "a category whose membership carves A arcs on the angle circle needs argmax over M >= A/2 + 1 outcomes before a per-referent arc classifier can express it at all, since the achievable maximum arc budget is EXACTLY 2M-2",
+    "relation_to_doc50_S4": "doc 50 SS4 states the K-side rule K >= ceil(arcs/2). This is its M-side twin, and the two levers are independent (doc 50 SSC6).",
+    "per_category": {
+      "tertiary": {
+        "arcs": 8,
+        "min_M_for_arc_budget": 5
+      },
+      "uniformed": {
+        "arcs": 6,
+        "min_M_for_arc_budget": 4
+      },
+      "manual": {
+        "arcs": 8,
+        "min_M_for_arc_budget": 5
+      },
+      "nonoccupational": {
+        "arcs": 4,
+        "min_M_for_arc_budget": 3
+      }
+    },
+    "caveat": "arc budget is NECESSARY, not sufficient: the SB decision is joint in (agent, patient), and arc POSITIONS are further constrained by the span. Reaching the budget does not by itself deliver 1.0000, and the measured table is what decides."
+  },
+  "scope": "One inventory (24 frozen AraVec human nouns), one task family (SB), simulation, training-free. These are REPRESENTATIONAL bounds: they say what a readout CAN express, never what an optimiser will find. exp67 measured the second question and answered it NEGATIVELY for the circuit (arity_lifts FALSE) while the classical comparator on the identical features DID convert the budget (doc 53 SS7.1.3). Nothing here revisits that."
+}

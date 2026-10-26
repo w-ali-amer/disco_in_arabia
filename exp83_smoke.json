@@ -1,0 +1,66 @@
+{
+ "gate": "GATE_SMOKE",
+ "spec": "qnlp_private_docs/75_exp83_cost_shaping.md (REGISTERED 2026-09-16)",
+ "passed": true,
+ "assertions_passed": true,
+ "seed": 83000,
+ "n_smoke_epochs": 5,
+ "max_epochs_production": 150,
+ "dataset_sha256": "2b85822b544571969fd40cab12b03a4ac256b08aee914d2b9643b856a6308c96",
+ "arms": {
+  "A0_CE": {
+   "train_acc": 0.7064393939393939,
+   "val_acc": 0.6590909090909091,
+   "gate_met": false,
+   "wall_sec": 71.1007149219513,
+   "n_train": 528,
+   "n_val": 132,
+   "n_test": 300,
+   "redraw_attempts_used": 1
+  },
+  "A1_SMOOTH": {
+   "train_acc": 0.7916666666666666,
+   "val_acc": 0.7196969696969697,
+   "gate_met": false,
+   "wall_sec": 84.25659584999084,
+   "n_train": 528,
+   "n_val": 132,
+   "n_test": 300,
+   "redraw_attempts_used": 1
+  },
+  "A2_MARGIN": {
+   "train_acc": 0.7992424242424242,
+   "val_acc": 0.7045454545454546,
+   "gate_met": false,
+   "wall_sec": 93.19263291358948,
+   "n_train": 528,
+   "n_val": 132,
+   "n_test": 300,
+   "redraw_attempts_used": 1
+  },
+  "A3_FOCAL": {
+   "train_acc": 0.7064393939393939,
+   "val_acc": 0.6363636363636364,
+   "gate_met": false,
+   "wall_sec": 92.6340081691742,
+   "n_train": 528,
+   "n_val": 132,
+   "n_test": 300,
+   "redraw_attempts_used": 1
+  },
+  "FLOOR": {
+   "train_acc": 0.6079545454545454,
+   "val_acc": 0.5227272727272727,
+   "gate_met": false,
+   "wall_sec": 87.31396102905273,
+   "n_train": 528,
+   "n_val": 132,
+   "n_test": 300,
+   "redraw_attempts_used": 1
+  }
+ },
+ "dtf_nan_finite_check": "OK: designed-to-fail fired: dtf_nan: nan is not finite",
+ "est_per_unit_sec": 2570.9874773025513,
+ "est_per_unit_min": 42.849791288375854,
+ "note": "smoke gate: 5 epochs all 5 arms, finite gradients asserted, identity init bounded-redraw verified"
+}

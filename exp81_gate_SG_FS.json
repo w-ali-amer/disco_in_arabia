@@ -1,0 +1,35 @@
+{
+ "gate": "SG-FS fixed-scramble floor (doc 66 SS12.2, doc 70 B3)",
+ "scramble_seed": 81999,
+ "scramble_sha256": "a2a5c3005e97f28d85c7ad5046af2a98835a2027e785a2fb8691e213bb7c2078",
+ "n_eval_items": 100,
+ "scrambled_accuracy": 0.53,
+ "real_accuracy": 0.49,
+ "binomial_sd": 0.05,
+ "within_2sd_of_chance": true,
+ "floor_admissible": true,
+ "pass_criterion": "scrambled_acc within 2 binomial SD of 0.5",
+ "designed_to_fail_assertion": "scrambled_acc >= 0.70 (should fail)",
+ "designed_to_fail_result": false,
+ "designed_to_fail_shown_failing": true,
+ "passed": true,
+ "inputs": {
+  "n_train_items": 40,
+  "train_epochs": 5,
+  "arm": "A2q2",
+  "init_spec": {
+   "spec": "exp81 init: N(0,0.10^2), sd-window [0.08,0.12] (doc 62 §24.3)",
+   "arm": "A2q2",
+   "seed": 0,
+   "accepted_stream": 81000000,
+   "accepted_sd": 0.099207,
+   "attempts": 1,
+   "refused_sds": [],
+   "stream_rule": "81_000_000 + 1000*EXP81_ARM_INDEX['A2q2'] + seed + 100_000*attempt",
+   "n_params": 252,
+   "init_vector_sha256": "e49a36f7c5b97e6d438293dec008d76fdef6549086aebe594de45c7a59979984"
+  }
+ },
+ "when": "2026-09-10T21:02:59Z",
+ "artifact_sha256": "d74cf3fc3f36645165e8dcae5093ab71a7e4b3552aee4c8dda7bf42f035fce5b"
+}

@@ -1,0 +1,186 @@
+{
+ "experiment": "exp62-D (fresh-draw replication)",
+ "spec": "qnlp_private_docs/48_exp62_selection_optimisation_width.md (a88b515, FROZEN incl. SS11)",
+ "platform": "macOS-26.5.2-arm64-arm-64bit",
+ "torch": "2.13.0",
+ "dataset_sha256": "e860f59e44da935d3983f6c8359ad027faf434ffc04055566d4be93cd166ef48",
+ "seed": 63000,
+ "cells": [
+  {
+   "cell": "M1",
+   "bound_K1": 1.0,
+   "bound_K2": 1.0,
+   "floor_mean": 0.5,
+   "floor_sd": 0.03146626555623587,
+   "S1": {
+    "K": 1,
+    "mean": 1.0,
+    "sd": 0.0,
+    "bound": 1.0,
+    "delta": 0.0,
+    "ratio": 1.0,
+    "saturates_absolute": true,
+    "saturates_ratio": true,
+    "above_floor_sd": 15.890033061165463
+   },
+   "W-work": {
+    "K": 1,
+    "mean": 0.996875,
+    "sd": 0.006987712429686843,
+    "bound": 1.0,
+    "delta": -0.0031250000000000444,
+    "ratio": 0.996875,
+    "saturates_absolute": true,
+    "saturates_ratio": true,
+    "above_floor_sd": 15.790720354533176
+   },
+   "S2": {
+    "K": 2,
+    "mean": 0.9854166666666666,
+    "sd": 0.02128418410594015,
+    "bound": 1.0,
+    "delta": -0.014583333333333393,
+    "ratio": 0.9854166666666666,
+    "saturates_absolute": true,
+    "saturates_ratio": true,
+    "above_floor_sd": 15.426573763548134
+   },
+   "W-wide": {
+    "K": 2,
+    "mean": 1.0,
+    "sd": 0.0,
+    "bound": 1.0,
+    "delta": 0.0,
+    "ratio": 1.0,
+    "saturates_absolute": true,
+    "saturates_ratio": true,
+    "above_floor_sd": 15.890033061165463
+   },
+   "W-wide_minus_S2": 0.014583333333333393,
+   "W-work_minus_S1": -0.0031250000000000444
+  },
+  {
+   "cell": "M2",
+   "bound_K1": 0.75,
+   "bound_K2": 1.0,
+   "floor_mean": 0.5083333333333333,
+   "floor_sd": 0.022881127746342485,
+   "S1": {
+    "K": 1,
+    "mean": 0.7604166666666667,
+    "sd": 0.032316858453101206,
+    "bound": 0.75,
+    "delta": 0.01041666666666674,
+    "ratio": 1.013888888888889,
+    "saturates_absolute": true,
+    "saturates_ratio": true,
+    "above_floor_sd": 11.017085177264857
+   },
+   "W-work": {
+    "K": 1,
+    "mean": 0.715625,
+    "sd": 0.010800229871524845,
+    "bound": 0.75,
+    "delta": -0.034375000000000044,
+    "ratio": 0.9541666666666666,
+    "saturates_absolute": true,
+    "saturates_ratio": true,
+    "above_floor_sd": 9.059503926759113
+   },
+   "S2": {
+    "K": 2,
+    "mean": 0.7229166666666667,
+    "sd": 0.018191926246430182,
+    "bound": 1.0,
+    "delta": -0.27708333333333335,
+    "ratio": 0.7229166666666667,
+    "saturates_absolute": false,
+    "saturates_ratio": false,
+    "above_floor_sd": 9.378179944283305
+   },
+   "W-wide": {
+    "K": 2,
+    "mean": 0.8552083333333332,
+    "sd": 0.05920113432659507,
+    "bound": 1.0,
+    "delta": -0.14479166666666676,
+    "ratio": 0.8552083333333332,
+    "saturates_absolute": false,
+    "saturates_ratio": false,
+    "above_floor_sd": 15.159873405079319
+   },
+   "W-wide_minus_S2": 0.13229166666666659,
+   "W-work_minus_S1": -0.044791666666666785
+  },
+  {
+   "cell": "M3",
+   "bound_K1": 0.6875,
+   "bound_K2": 0.9375,
+   "floor_mean": 0.5,
+   "floor_sd": 0.018414239093399672,
+   "S1": {
+    "K": 1,
+    "mean": 0.68125,
+    "sd": 0.058161017813098466,
+    "bound": 0.6875,
+    "delta": -0.006249999999999978,
+    "ratio": 0.990909090909091,
+    "saturates_absolute": true,
+    "saturates_ratio": true,
+    "above_floor_sd": 9.842926394116745
+   },
+   "W-work": {
+    "K": 1,
+    "mean": 0.690625,
+    "sd": 0.04160151155774138,
+    "bound": 0.6875,
+    "delta": 0.0031250000000000444,
+    "ratio": 1.0045454545454546,
+    "saturates_absolute": true,
+    "saturates_ratio": true,
+    "above_floor_sd": 10.35204327657106
+   },
+   "S2": {
+    "K": 2,
+    "mean": 0.603125,
+    "sd": 0.010018429198787178,
+    "bound": 0.9375,
+    "delta": -0.334375,
+    "ratio": 0.6433333333333333,
+    "saturates_absolute": false,
+    "saturates_ratio": false,
+    "above_floor_sd": 5.600285706997458
+   },
+   "W-wide": {
+    "K": 2,
+    "mean": 0.7041666666666666,
+    "sd": 0.06864338323902748,
+    "bound": 0.9375,
+    "delta": -0.2333333333333334,
+    "ratio": 0.7511111111111111,
+    "saturates_absolute": false,
+    "saturates_ratio": false,
+    "above_floor_sd": 11.087434329005063
+   },
+   "W-wide_minus_S2": 0.10104166666666659,
+   "W-work_minus_S1": 0.009375000000000022
+  }
+ ],
+ "verdicts": {
+  "k2_shortfall_replicates": true,
+  "framings_disagree_on": [],
+  "framings_agree": true,
+  "width_beats_depth_replicates": true
+ },
+ "meta_notes": {
+  "headline": "k2_shortfall_replicates = TRUE. At M2/M3 both K=1 arms saturate under BOTH framings and both K=2 arms miss under BOTH framings, all clearing their floors by >=2 SD. This is the FIRST finding in this line to survive replication -- four earlier walls did not.",
+  "confound_resolved": "doc 48 SS11.1 warned the criterion might manufacture K-dependence, since saturating a 1.00 bound demands >=0.94 while saturating 0.75 demands >=0.69. M1 answers it: there the K=2 bound is 1.0000 and S2 reaches 0.9854, W-wide 1.0000 -- K=2 arms DO saturate a 1.0 bound when the task allows. The M2/M3 shortfall is therefore not an artifact of bound level. The two framings also agree on all 12 rows.",
+  "disambiguator_not_offered": "doc 48 SS11.3's free disambiguator (a cell with K=1 bound ~0.85-0.95 and K=2 bound 1.00) did NOT occur on this draw: K=1 bounds were 0.7500 (M2) and 0.6875 (M3). Recorded as not-offered.",
+  "width_vs_depth": "W-wide - S2 = +0.132 (M2), +0.101 (M3), replicating C's +0.175/+0.118. STILL parameter-confounded (33 vs 15 params/verb, doc 48 SS10.3): at K=2 nothing saturates, so width-vs-capacity remains OPEN and this run was not designed to close it. W-work - S1 = -0.045 (M2), +0.009 (M3): workspace adds nothing.",
+  "scope": "Two draws now, one task family, constructed categories, simulation. No classical comparator."
+ },
+ "git_note": {
+  "exp42_paths": [],
+  "n_untracked": 240
+ }
+}

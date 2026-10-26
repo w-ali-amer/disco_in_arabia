@@ -1,0 +1,110 @@
+{
+ "stage": "exp40r C5 mini-Duneau calibration (doc 22 SS9, Mac re-run)",
+ "spec": "doc 22 SS9 (frozen); target Duneau et al. arXiv:2409.08777",
+ "torch_version": "2.13.0",
+ "python_version": "3.12.13",
+ "provenance": {
+  "ported_unmodified": [
+   "torch_sv_sim.py",
+   "duneau_task_gen.py",
+   "exp40_mini_duneau.py"
+  ],
+  "rebuilt": [
+   "exp40r_c5.py (driver only)",
+   "exp40r_trainer.py",
+   "exp40r_smoke.py"
+  ],
+  "august_reference": "results_exp40b.json (NOT modified)",
+  "august_torch": "2.7.1+cu126",
+  "this_torch": "2.13.0"
+ },
+ "dataset": {
+  "path": "duneau_mini_data_b.json",
+  "seed": 40,
+  "sha256": "f22eeea3cc9f14a084bffd05043fda226c274fafcd36f66cac696773bdb0fde3",
+  "august_wsl_sha256": "f22eeea3cc9f14a084bffd05043fda226c274fafcd36f66cac696773bdb0fde3",
+  "sha_matches_august_wsl": true,
+  "sizes": {
+   "train": 406,
+   "validA": 98,
+   "valid_comp": 304
+  }
+ },
+ "config": {
+  "optimizer": "Adam (full autodiff, no SPSA)",
+  "lr": 0.005,
+  "batch_size": 1,
+  "max_epochs": 30,
+  "n_seeds": 5,
+  "ansatz_follows_layers": 6,
+  "ansatz_effect_layers": 3,
+  "ansatz_note": "Sim-et-al Circuit 4. follows acts on 3 wires (follower, followee, fresh ancilla traced at readout) with SIX layers; question effects on 2 wires with THREE layers. doc 22 SS9 says '3 layers'; the 6-layer follows block is an August deviation carried forward (see module docstring). results_exp40b.json's own config.ansatz string is STALE and does not record it.",
+  "model_selection": "best validA accuracy only (never valid_comp)",
+  "dtype": "torch.complex64"
+ },
+ "per_seed": [
+  {
+   "seed": 0,
+   "train_acc": 1.0,
+   "validA_acc": 1.0,
+   "comp_acc": 1.0,
+   "best_epoch": 11,
+   "epochs_run": 11,
+   "mean_grad_norm_last_epoch": 0.4316697461940083
+  },
+  {
+   "seed": 1,
+   "train_acc": 0.7118226600985221,
+   "validA_acc": 0.7142857142857143,
+   "comp_acc": 0.555921052631579,
+   "best_epoch": 12,
+   "epochs_run": 30,
+   "mean_grad_norm_last_epoch": 1.1124752854234212
+  },
+  {
+   "seed": 2,
+   "train_acc": 1.0,
+   "validA_acc": 1.0,
+   "comp_acc": 1.0,
+   "best_epoch": 5,
+   "epochs_run": 5,
+   "mean_grad_norm_last_epoch": 0.9869003810879158
+  },
+  {
+   "seed": 3,
+   "train_acc": 1.0,
+   "validA_acc": 1.0,
+   "comp_acc": 1.0,
+   "best_epoch": 9,
+   "epochs_run": 9,
+   "mean_grad_norm_last_epoch": 0.7841641715938804
+  },
+  {
+   "seed": 4,
+   "train_acc": 0.8399014778325123,
+   "validA_acc": 0.8367346938775511,
+   "comp_acc": 0.7894736842105263,
+   "best_epoch": 30,
+   "epochs_run": 30,
+   "mean_grad_norm_last_epoch": 1.318148457441319
+  }
+ ],
+ "smoke_s4": {
+  "name": "S4_wrong_order_compile",
+  "kind": "designed_to_fail",
+  "bar": "scrambled accuracy < 0.80",
+  "seed_used": 0,
+  "n_items": 304,
+  "observed_true_order_acc": 1.0,
+  "observed_scrambled_acc": 0.631578947368421,
+  "ground_truth_unchanged_ceiling": 0.631578947368421,
+  "accuracy_drop": 0.368421052631579,
+  "passed": true,
+  "refit_note": "model independently refit with exp40r_trainer at the same seed/config because exp40_mini_duneau.train_seed does not expose its checkpoint and is not modified",
+  "refit_final_clean_train_acc": 1.0,
+  "refit_epochs_run": 12
+ },
+ "harness_calibrated": true,
+ "verdict_rule": ">=1 of 5 seeds: 100% train AND 100% validA AND >=95% valid_comp",
+ "wall_time_sec": 424.4
+}

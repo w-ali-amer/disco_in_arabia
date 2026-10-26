@@ -1,0 +1,153 @@
+{
+ "experiment": "exp68 smoke / validity assertions (doc 54 SS6.4.1, SS6.5)",
+ "spec": "qnlp_private_docs/54_exp68_width_lever.md (1025d21, FROZEN)",
+ "dataset": "stories_exp68_WN.json",
+ "dataset_sha256": "9a0b990088a89f5c2697da6f470891a9472fe8e3f4fc2a9d94b81911d54a6ec1",
+ "platform": "macOS-26.5.2-arm64-arm-64bit",
+ "python": "3.12.13",
+ "torch": "2.13.0",
+ "numpy": "2.5.1",
+ "features": {
+  "runtime_source": "instrument_sb_bounds.load_raw(fit_on='all44') for PC1/PC2; exp42_compiler.load_embeddings() for FA",
+  "bitmatch_vs_independent_recomputation": 0.0,
+  "bitmatch_is_exact": true,
+  "norm_divisors": [
+   8.669494516224397,
+   10.160404144924657
+  ],
+  "norm_divisors_vs_diagnostic_max_abs": 0.0,
+  "sign_pin_applied": [
+   -1,
+   1
+  ],
+  "FA_runtime_vs_atan2_PC2_PC1_max_rad": 3.9968028886505635e-15,
+  "unit_raw_pca_vs_frozen_vec2_max_abs": 3.7192471324942744e-15,
+  "theta0_range": [
+   0.0,
+   2.6107051108774497
+  ],
+  "theta1_range": [
+   0.3740152586339388,
+   6.283185307179586
+  ],
+  "nondegeneracy": {
+   "raw_radius_mean": 0.8627844740072387,
+   "raw_radius_sd": 0.25124808926972175,
+   "raw_radius_min": 0.4025918566208062,
+   "raw_radius_max": 1.2524146040715955,
+   "frozen2d_radius_sd": 8.34676118839486e-17,
+   "pearson_p1_p2": 0.5842698525485021,
+   "poly_fit_of_p2_on_p1": {
+    "deg1_max_resid": 0.9931869488068175,
+    "deg3_max_resid": 1.0176632745957925,
+    "deg5_max_resid": 0.980393118085943
+   },
+   "verdict": "p2 is NOT a function of p1 on this inventory: a degree-5 polynomial leaves a max residual of 0.980 on a feature whose range is [-1, 1], and the radius has sd 0.251 where the frozen2d family has sd 8.3e-17 (it is exactly unit by construction). doc 54 SS3.1's degeneracy -- the one that made the frozen2d version of this experiment a reparameterisation -- does not hold on the raw family, so exp68 is width-as-INFORMATION."
+  },
+  "instrument_FA_note": "doc 54 SS6.2 writes FA as atan2(PC2, PC1) -- the UNNORMALISED components, i.e. the existing exp42 map -- and that is what this runtime uses, asserted above to 4.0e-15 rad. instrument_sb_bounds.features() computes FA as atan2(p2, p1) on its NORMALISED coords, which on the raw family is a different angle (max difference 7.9e-02 rad). The BOUND is unaffected and the two agree exactly at 148/160: the normalisation is a positive-diagonal linear map of the plane, which preserves the cyclic order of the referents, and a d = 3 single-angle bound depends only on that order. diagnostic_sb_bounds.json carries both computations and they match -- raw FA per-twin 163/190 equals frozen2d FA per-twin 163/190 for tertiary, and the non-occupational target reads 148/160 under the raw-family FA (target_selection.table) and 148/160 under the frozen2d FA, which IS the exp42 map (membership_reconstruction). A TRAINED CIRCUIT is not invariant to the rescaling even though the bound is -- the same reasoning doc 54 SS3.2 gives for pinning the PC signs -- so the doc's literal formula governs the runtime."
+ },
+ "circuit": {
+  "copy_verification_max_abs_diff": 0.0,
+  "copy_verification_exact_zero": true,
+  "copy_verification_note": "doc 54 SS6.4.1: F2Model(wide=False) vs exp45_model.TwoQubitReferentModel('A4') at the same seed, on 4 compiled test stories. Bit-for-bit is only possible because theta1 is DATA and no generator is consumed after super().__init__.",
+  "F1_resid_3term": 1.9597482003863576e-07,
+  "FA_resid_3term": 1.9597482003863576e-07,
+  "F2_resid_3term_theta0_only": 0.12993456218586463,
+  "F2_resid_9dim_product_basis": 6.860170953526534e-08,
+  "F2_output_change_under_theta1_perturbation": 0.021589914336800575,
+  "grid": "12 x 12 over (theta0, theta1) in [0, 2pi), 3 test stories",
+  "verdict": "F1 and FA close at 3 terms (2.0e-07, 2.0e-07): a single RY, nothing else changed. F2 does NOT close in the 3-term basis of theta0 alone (0.130, four orders above the bar) and DOES close in the 9-dim product basis (6.9e-08). The second qubit is genuinely wired and genuinely carries a second feature, so the arm is not a null instrument. The 9-dim closure also confirms the identity the comparator relies on: the circuit is linear in u(theta0) (x) u(theta1) per referent, which is exactly doc 54 SS12's F2 feature map."
+ },
+ "shuffle": {
+  "per_seed": [
+   {
+    "seed": 0,
+    "n_items": 960,
+    "twins_still_opposite": true,
+    "casts_unchanged": true,
+    "yes_fraction": 0.5,
+    "true_bearer_rule_accuracy": 0.48541666666666666
+   },
+   {
+    "seed": 1,
+    "n_items": 960,
+    "twins_still_opposite": true,
+    "casts_unchanged": true,
+    "yes_fraction": 0.5,
+    "true_bearer_rule_accuracy": 0.5145833333333333
+   },
+   {
+    "seed": 2,
+    "n_items": 960,
+    "twins_still_opposite": true,
+    "casts_unchanged": true,
+    "yes_fraction": 0.5,
+    "true_bearer_rule_accuracy": 0.5270833333333333
+   },
+   {
+    "seed": 3,
+    "n_items": 960,
+    "twins_still_opposite": true,
+    "casts_unchanged": true,
+    "yes_fraction": 0.5,
+    "true_bearer_rule_accuracy": 0.53125
+   },
+   {
+    "seed": 4,
+    "n_items": 960,
+    "twins_still_opposite": true,
+    "casts_unchanged": true,
+    "yes_fraction": 0.5,
+    "true_bearer_rule_accuracy": 0.5229166666666667
+   }
+  ],
+  "mean_true_bearer_rule_accuracy": 0.5162500000000001,
+  "note": "doc 46 SS10.2's floor, per PAIR: the bearer designation used for ANSWERS is reassigned independently of the features, so the geometry every arm sees is bit-identical to its matched arm and only the feature <-> label correlation is removed. Twins stay on opposite labels, so V1 stays exactly 0.500 and V3 stays intact. The TRUE bearer rule collapses to chance on the shuffled labels, which is the severance, measured rather than asserted. Each of the three floor arms uses the SAME relabelling at a given seed, so the floors differ only by architecture -- which is the point of matching them (doc 54 SS7)."
+ },
+ "two_epoch_probe": {
+  "F1": {
+   "val_acc": 0.7196969696969697,
+   "heldout_test_acc": 0.59,
+   "wall_sec": 3.361273765563965,
+   "n_params": 120,
+   "wires": 2
+  },
+  "F2": {
+   "val_acc": 0.9090909090909091,
+   "heldout_test_acc": 0.8566666666666667,
+   "wall_sec": 8.555739164352417,
+   "n_params": 264,
+   "wires": 4
+  },
+  "FA": {
+   "val_acc": 0.9393939393939394,
+   "heldout_test_acc": 0.8833333333333333,
+   "wall_sec": 3.672590970993042,
+   "n_params": 120,
+   "wires": 2
+  },
+  "S-shuffle-F1": {
+   "val_acc": 0.4393939393939394,
+   "heldout_test_acc": 0.55,
+   "wall_sec": 3.302858829498291,
+   "n_params": 120,
+   "wires": 2
+  },
+  "S-shuffle-F2": {
+   "val_acc": 0.5303030303030303,
+   "heldout_test_acc": 0.4633333333333333,
+   "wall_sec": 8.555099964141846,
+   "n_params": 264,
+   "wires": 4
+  },
+  "S-shuffle-FA": {
+   "val_acc": 0.4318181818181818,
+   "heldout_test_acc": 0.5266666666666666,
+   "wall_sec": 3.640348196029663,
+   "n_params": 120,
+   "wires": 2
+  }
+ },
+ "assertions_passed": true,
+ "wall_time_sec": 32.62209677696228
+}

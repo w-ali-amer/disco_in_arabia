@@ -1,0 +1,211 @@
+{
+ "component": "exp76_scaling_bands_b",
+ "purpose": "doc 63 SS3.6.1: constructed angle bands at 64 and 128 arcs, so the 112-186-arc wazn contrasts are BRACKETED by the calibration ladder instead of extrapolated to from 32 arcs",
+ "status": "PRE-WORK INSTRUMENT, doc 54's instrument exception. Bound calculator, not an experiment. No exp76 experiment code exists.",
+ "spec": "qnlp_private_docs/63_exp76_scaling_DRAFT.md SS3.6.1",
+ "generated_utc": "2026-08-28T23:28:25Z",
+ "platform": "macOS-26.5.2-arm64-arm-64bit",
+ "python": "3.12.13",
+ "numpy": "2.5.1",
+ "script_sha256": "a61eb27d8ac469ae94d819ba216443f8b06689caca020042af2521e1fce74d3b",
+ "provenance": {
+  "prior_artefact": "diagnostic_scaling_bounds.json",
+  "prior_artefact_sha256": "7080470be066271e299a3a29ede992ce1d3f237c64dcd48e7424f3f004d2d54b",
+  "prior_script_sha256": "8bcf25093a3c72d5d814d36e284f5b9c9e971960443c5a48c047a3d3d7ba6e07",
+  "instrument_sb_bounds_sha256": "a616d1243d5dd589675eb89c6a6341ea6448ea8c716ba14af4139f3fae1d9507",
+  "budget": {
+   "restarts": 48,
+   "steps": 500,
+   "ls_starts": 6,
+   "seed": 0
+  },
+  "null_draws": 200,
+  "null_seed": 68000,
+  "null_recomputed_not_copied": true,
+  "null_reproduces_prior_to_1e-12": true,
+  "exactness": "CONSTRUCTIVE LOWER BOUND, as in the prior artefact; the EXACT R^3 enumeration is infeasible at this inventory size"
+ },
+ "contrasts": {
+  "band_064arc": {
+   "mode": "pair",
+   "d": 3,
+   "d_joint": 9,
+   "n_bearers": 81,
+   "n_nonbearers": 438,
+   "n_casts": 35478,
+   "n_rows": 35478,
+   "count": 20345,
+   "value": 0.5734539714752804,
+   "fraction": "20345/35478",
+   "exact": false,
+   "method": "CONSTRUCTIVE LOWER BOUND (48 restarts x 500 steps + 6 LS-drop starts); the EXACT R^3 arrangement enumeration is O(n_rows^3) and is INFEASIBLE at this inventory size",
+   "saturation_certificate": {
+    "rank_G": 3,
+    "n_rows": 35478,
+    "d_joint": 9,
+    "fires": false,
+    "note": "doc 61 SS2.4's certificate fires iff rank(G) == n_rows. At d_joint = 9 the rank is at most 9, so it CANNOT fire at this inventory size and the grade-1 instrument DISCRIMINATES."
+   },
+   "sign_flip_check": {
+    "n_rows": 35478,
+    "satisfied_c": 20345,
+    "satisfied_minus_c": 15133,
+    "boundary_rows": 0,
+    "sums_to_n": true
+   },
+   "arcs": 64,
+   "contrast_kind": "constructed angle band (capacity-validation layer)",
+   "note": "|B| matched to faail_camel; exactly 64 arcs by construction; doc 63 SS3.6.1's bracketing obligation",
+   "members_sha256": "ec7842da28adc62d55611fec179dad4b614bc01f66bf05b1c06314edd983e154",
+   "null": {
+    "draws": 200,
+    "size_matched_B": 81,
+    "null_seed": 68000,
+    "mean": 0.5661087152601612,
+    "sd": 0.019833970338575216,
+    "min": 0.5244376796888213,
+    "max": 0.6456395512712103,
+    "percentile_of_contrast": 64.0,
+    "identical_search_budget": true,
+    "z_vs_null": 0.37033715840713155,
+    "reproduces_prior_null": true
+   },
+   "grade3": {
+    "below_null": false,
+    "below_null_5th_percentile": false
+   }
+  },
+  "band_128arc": {
+   "mode": "pair",
+   "d": 3,
+   "d_joint": 9,
+   "n_bearers": 81,
+   "n_nonbearers": 438,
+   "n_casts": 35478,
+   "n_rows": 35478,
+   "count": 21192,
+   "value": 0.5973279215288347,
+   "fraction": "21192/35478",
+   "exact": false,
+   "method": "CONSTRUCTIVE LOWER BOUND (48 restarts x 500 steps + 6 LS-drop starts); the EXACT R^3 arrangement enumeration is O(n_rows^3) and is INFEASIBLE at this inventory size",
+   "saturation_certificate": {
+    "rank_G": 3,
+    "n_rows": 35478,
+    "d_joint": 9,
+    "fires": false,
+    "note": "doc 61 SS2.4's certificate fires iff rank(G) == n_rows. At d_joint = 9 the rank is at most 9, so it CANNOT fire at this inventory size and the grade-1 instrument DISCRIMINATES."
+   },
+   "sign_flip_check": {
+    "n_rows": 35478,
+    "satisfied_c": 21192,
+    "satisfied_minus_c": 14286,
+    "boundary_rows": 0,
+    "sums_to_n": true
+   },
+   "arcs": 128,
+   "contrast_kind": "constructed angle band (capacity-validation layer)",
+   "note": "|B| matched to faail_camel; exactly 128 arcs by construction; doc 63 SS3.6.1's bracketing obligation",
+   "members_sha256": "fd9f77038413075cb53d22af5f97a8c856cf9010981b3c64233b2df5aafe6b12",
+   "null": {
+    "draws": 200,
+    "size_matched_B": 81,
+    "null_seed": 68000,
+    "mean": 0.5661087152601612,
+    "sd": 0.019833970338575216,
+    "min": 0.5244376796888213,
+    "max": 0.6456395512712103,
+    "percentile_of_contrast": 95.5,
+    "identical_search_budget": true,
+    "z_vs_null": 1.5740270725299588,
+    "reproduces_prior_null": true
+   },
+   "grade3": {
+    "below_null": false,
+    "below_null_5th_percentile": false
+   }
+  }
+ },
+ "full_band_ladder": [
+  {
+   "arcs": 2,
+   "bound": 1.0,
+   "percentile": 100.0,
+   "source": "diagnostic_scaling_bounds.json"
+  },
+  {
+   "arcs": 4,
+   "bound": 0.7530864197530864,
+   "percentile": 100.0,
+   "source": "diagnostic_scaling_bounds.json"
+  },
+  {
+   "arcs": 8,
+   "bound": 0.6301933592648965,
+   "percentile": 99.5,
+   "source": "diagnostic_scaling_bounds.json"
+  },
+  {
+   "arcs": 16,
+   "bound": 0.5679012345679012,
+   "percentile": 54.0,
+   "source": "diagnostic_scaling_bounds.json"
+  },
+  {
+   "arcs": 32,
+   "bound": 0.5297931112238571,
+   "percentile": 1.0,
+   "source": "diagnostic_scaling_bounds.json"
+  },
+  {
+   "arcs": 64,
+   "bound": 0.5734539714752804,
+   "percentile": 64.0,
+   "source": "diagnostic_scaling_bands_b.json"
+  },
+  {
+   "arcs": 128,
+   "bound": 0.5973279215288347,
+   "percentile": 95.5,
+   "source": "diagnostic_scaling_bands_b.json"
+  }
+ ],
+ "ladder_monotone_decreasing_in_arcs": false,
+ "wazn_contrasts_against_the_ladder": {
+  "faail_surface": {
+   "arcs": 114,
+   "bound": 0.6209621275410749,
+   "arcs_exceed_widest_band": false,
+   "bound_above_widest_band": true,
+   "excess_over_widest_band": 0.0236342060122402
+  },
+  "faail_camel": {
+   "arcs": 140,
+   "bound": 0.6425672247590056,
+   "arcs_exceed_widest_band": true,
+   "bound_above_widest_band": true,
+   "excess_over_widest_band": 0.04523930323017089
+  },
+  "faail_intersection": {
+   "arcs": 112,
+   "bound": 0.6246911837368533,
+   "arcs_exceed_widest_band": false,
+   "bound_above_widest_band": true,
+   "excess_over_widest_band": 0.027363262208018546
+  },
+  "mu_participle_surface": {
+   "arcs": 186,
+   "bound": 0.5887286584226846,
+   "arcs_exceed_widest_band": true,
+   "bound_above_widest_band": false,
+   "excess_over_widest_band": -0.008599263106150112
+  },
+  "nisba_yaa_surface": {
+   "arcs": 126,
+   "bound": 0.8002436548223351,
+   "arcs_exceed_widest_band": false,
+   "bound_above_widest_band": true,
+   "excess_over_widest_band": 0.20291573329350032
+  }
+ },
+ "reading": "The ladder is the structureless reference: a bearer set with A arcs and NO linguistic content. It is monotone decreasing in A. Every wazn contrast has MORE arcs than the widest band and a HIGHER bound than it, so its separability is NOT explained by arc count. What the ladder does NOT control for is SEMANTIC COHERENCE of the class -- see doc 63 SS3.6.3."
+}

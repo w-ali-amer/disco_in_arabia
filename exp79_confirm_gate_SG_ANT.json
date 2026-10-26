@@ -1,0 +1,15 @@
+{
+ "gate": "SG-ANT ancilla-never-traced (doc 71 SS5, doc 70 SS3.6)",
+ "pass_assertion": "zero-coupling NOT-traced == A2 (max |delta| < 1e-5)",
+ "pass_result": true,
+ "designed_to_fail_assertion": "random_coupling NOT-traced == A2 (max |delta| < 1e-5)",
+ "designed_to_fail_result": false,
+ "designed_to_fail_shown_failing": true,
+ "max_delta_zero_coupling_not_traced_vs_A2": 1.4901161193847656e-08,
+ "max_delta_random_coupling_not_traced_vs_A2": 0.00721682608127594,
+ "pass_tol": 1e-05,
+ "n_items": 20,
+ "passed": true,
+ "when": "2026-09-09T20:06:32Z",
+ "artifact_sha256": "7a1eb3d0f21fe8c688f4439d0f44efa7f8d98b4c1b7816e43cfd17a2ebe02d64"
+}

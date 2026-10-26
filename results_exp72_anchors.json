@@ -1,0 +1,147 @@
+{
+ "component": "exp72 anchors -- doc 58 SS5.1, BLOCKING, READ FIRST",
+ "spec": "qnlp_private_docs/58_exp72_rescue_rung.md (REGISTERED 2026-08-27, orchestrator rulings 1-6 in the status header, SS18 post-registration note on I2)",
+ "spec_commit_line": "f432b1f doc 56 SS18.3: confirm draw discharges the rider, headline stands (both draws -0.19); doc 58 SS18: I2 stands, gap reproduced, binds knife-edge noted",
+ "platform": "macOS-26.5.2-arm64-arm-64bit",
+ "python": "3.12.13",
+ "torch": "2.13.0",
+ "numpy": "2.5.1",
+ "dataset": "stories_exp69_QA.json",
+ "dataset_sha256": "2b85822b544571969fd40cab12b03a4ac256b08aee914d2b9643b856a6308c96",
+ "tolerance": 0.002,
+ "per_instance": {
+  "I1": {
+   "instance_arm": "A0-W-T2",
+   "committed_arm": "R2-W",
+   "committed_source": "results_exp69.json :: arms['R2-W'] / floors['R2-W']",
+   "committed_per_seed": [
+    0.7166666666666667,
+    0.77,
+    0.7466666666666667,
+    0.7266666666666667,
+    0.6866666666666666
+   ],
+   "committed_mean": 0.7293333333333334,
+   "exp72_per_seed": [
+    0.7166666666666667,
+    0.77,
+    0.7466666666666667,
+    0.7266666666666667,
+    0.6866666666666666
+   ],
+   "exp72_mean": 0.7293333333333333,
+   "exp72_sd": 0.03139355914125629,
+   "per_seed_delta": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "max_abs_per_seed_delta": 0.0,
+   "mean_delta_vs_committed": -1.1102230246251565e-16,
+   "mean_delta_vs_doc58": 3.333333333332966e-05,
+   "bit_exact": true,
+   "per_seed_within_tolerance": true,
+   "mean_within_tolerance": true,
+   "replicates": true,
+   "val_per_seed": [
+    0.7348484848484849,
+    0.7196969696969697,
+    0.7878787878787878,
+    0.7348484848484849,
+    0.7272727272727273
+   ],
+   "selected_epoch_per_seed": [
+    134,
+    124,
+    139,
+    17,
+    144
+   ],
+   "wall_sec_total": 5925.044400930405,
+   "ckpt_sha256": [
+    "8ab2a1a2d06eafa1159a9b0a3869b7f0ac8f09bf2ac49d740f391f96236300c7",
+    "0f38514a8d5738e69d198a8440b7f68cf60041ee4b37a366f2272d42f7f6b16a",
+    "2ba06fca2b6696d860fa125e44d4d53f556cfd8040a9c0aacfbe8958fa800f0f",
+    "414caf3f8425addfef556a853194716c64141fcdd04de336324657c630bbbf4f",
+    "e770dcfa378af9c584c1e5f291d1a23bb1900bcd67403a863ef01d381ec111ff"
+   ]
+  },
+  "I2": {
+   "instance_arm": "N-in-T2",
+   "committed_arm": "N-in-T2",
+   "committed_source": "results_exp70.json :: arms['N-in-T2'] / floors['N-in-T2']",
+   "committed_per_seed": [
+    0.65,
+    0.6233333333333333,
+    0.61,
+    0.6233333333333333,
+    0.7266666666666667
+   ],
+   "committed_mean": 0.6466666666666666,
+   "exp72_per_seed": [
+    0.65,
+    0.6233333333333333,
+    0.61,
+    0.6233333333333333,
+    0.7266666666666667
+   ],
+   "exp72_mean": 0.6466666666666667,
+   "exp72_sd": 0.04702245326555297,
+   "per_seed_delta": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "max_abs_per_seed_delta": 0.0,
+   "mean_delta_vs_committed": 1.1102230246251565e-16,
+   "mean_delta_vs_doc58": -3.333333333332966e-05,
+   "bit_exact": true,
+   "per_seed_within_tolerance": true,
+   "mean_within_tolerance": true,
+   "replicates": true,
+   "val_per_seed": [
+    0.7272727272727273,
+    0.7121212121212122,
+    0.7803030303030303,
+    0.6818181818181818,
+    0.7272727272727273
+   ],
+   "selected_epoch_per_seed": [
+    74,
+    113,
+    109,
+    144,
+    121
+   ],
+   "wall_sec_total": 6937.9305918216705,
+   "ckpt_sha256": [
+    "500c25bb9146971db11214d06e5fdba302c631c4afaa44265f35f808ac92b395",
+    "dec051756f14d745186b8ebc4772db24aa6773e282a5483b25497b874c70846a",
+    "18165bc0b7e52ca3b41062faaab1d0d099010a3e6736a683d0fd94e338b5518a",
+    "59215913045dcd2cb665585577a6f003ed55ed9d13e1b36dce380dbbdb5971d2",
+    "7b6137e4aeab835c0cecaf8ba72f1ae113e1e2fe4ab7e4d775bb109bb84476c2"
+   ]
+  }
+ },
+ "all_bit_exact": true,
+ "anchors_replicate_committed": true,
+ "codepath_assertion_doc58_SS7_3": "the unrescued anchors ran through exp72_run.train() -- THE SAME ENTRY POINT the rescue arms use, with the rescue options off -- not a separate legacy path. Otherwise SS5's bit-exactness would prove nothing about the rescue arms' pipeline.",
+ "honest_expectation": "BIT-EXACT, 10/10 seeds. Both runs are deterministic given their seeds; the 0.002 tolerance exists only to absorb a documented float/BLAS platform difference and ANY non-zero delta is reported with its cause identified (doc 58 SS5.1). This is the gate's THIRD enforced use; both previous uses returned bit-exact.",
+ "consequence_if_failed": "doc 58 SS10 row 1: THE RUN STOPS. The exp72 pipeline has drifted from the exp69/exp70 pipeline, every 'rescue' number would be a comparison against a moving baseline, SS5.2's floor-omission argument is VOID, and NOTHING ELSE IN THE RUN IS READ. Hunt the build; interpret nothing.",
+ "floors_omission_argument_doc58_SS5_2": "the anchors carry NO fresh floor. A gate that pins an arm to within 0.002 of a measurement that cleared its own matched floor by 8.02 SD (I1) and by a cleared doc 56 SS6.2 gate (I2) is TRANSITIVELY STRONGER than re-measuring the floor. IF EITHER ANCHOR FAILS, THIS ARGUMENT IS VOID ALONG WITH THE RUN.",
+ "git_note": {
+  "repo_head": "cc027c7 exp70 CONFIRM DRAW (seed+1000, all arms, fresh floors): THE HEADLINE STANDS -- entanglement_hurts_T2 TRUE on both draws (-0.1873/-0.1887); 13/14 booleans agree; the one flip is the binds_N-in_T2 knife-edge (0.6467->0.6647 across the 0.65 bar) while the instance's gap to its 1.0 comparator persists (0.335); per-arm deltas <=0.03",
+  "exp72_paths": [
+   "?? exp72_aggregate.py",
+   "?? exp72_ckpt/",
+   "?? exp72_run.py",
+   "?? results_exp72_smoke_validation.json"
+  ],
+  "n_untracked": 251,
+  "rule3_note": "exp72 writes ONLY exp72_ckpt/ and results_exp72* (through fresh_results_path). No exp68 / exp69 / exp70 artefact is modified; the donor checkpoints are READ-ONLY and sha-asserted before use."
+ }
+}

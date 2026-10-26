@@ -1,0 +1,68 @@
+{
+ "derived_from": "measured 3-epoch times (doc 73 §3: derived, not guessed). Build agent task 1.",
+ "n_items_measured": 50,
+ "n_timed_epochs": 3,
+ "k_distribution_timing_slice": [
+  [
+   4,
+   3
+  ],
+  [
+   5,
+   10
+  ],
+  [
+   6,
+   17
+  ],
+  [
+   7,
+   12
+  ],
+  [
+   8,
+   8
+  ]
+ ],
+ "A2_committed_reference": {
+  "wall_time_sec_30epochs_full": 526.7,
+  "n_train_items": 2000,
+  "sec_per_item_per_epoch": 0.00878
+ },
+ "arms": {
+  "A2q2": {
+   "n_items_measured": 50,
+   "n_timed_epochs": 3,
+   "wall_sec_total": 2.53,
+   "sec_per_item_per_epoch": 0.01689
+  },
+  "A2-WIDE": {
+   "n_items_measured": 50,
+   "n_timed_epochs": 3,
+   "wall_sec_total": 1.45,
+   "sec_per_item_per_epoch": 0.00969
+  }
+ },
+ "estimates": {
+  "A2q2": {
+   "sec_per_item_per_epoch_measured": 0.01689,
+   "ratio_vs_A2_baseline": 1.92,
+   "estimated_sec_per_seed": 1013.0,
+   "estimated_hours_per_seed": 0.28,
+   "n_seeds": 5,
+   "estimated_total_wall_hours_5workers": 0.28
+  },
+  "A2-WIDE": {
+   "sec_per_item_per_epoch_measured": 0.00969,
+   "ratio_vs_A2_baseline": 1.1,
+   "estimated_sec_per_seed": 581.0,
+   "estimated_hours_per_seed": 0.16,
+   "n_seeds": 5,
+   "estimated_total_wall_hours_5workers": 0.16
+  }
+ },
+ "n_trainable_units_total": 15,
+ "note": "A2q2 at 2K wires has 2^(2K) state vs A2's 2^K -- ratio expected 16x at K=4, 256x at K=8. A2-WIDE uses K wires (same as A2), overhead from extra intro Ry only.",
+ "machine_load_note": "exp82 workers may be running; ratio vs A2 baseline is load-robust; absolute times may be contention-affected.",
+ "when": "2026-09-10T04:23:55Z"
+}

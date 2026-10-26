@@ -1,0 +1,206 @@
+{
+ "experiment": "exp46 Stage B -- doc 29 SS5 secondary descriptives",
+ "status": "DESCRIPTIVE ONLY. Cannot and does not change wazn_clusters / wazn_clustering_ruled_out / wazn_stage_b_inconclusive, which stand as computed in the primary results file.",
+ "primary_results_file": "results_exp46_stage_b.json",
+ "primary_verdicts": {
+  "exp46_void": false,
+  "random_block_null_calibrated": true,
+  "wazn_clusters": true,
+  "wazn_clustering_ruled_out": false,
+  "wazn_stage_b_inconclusive": false,
+  "p": 0.041385281385281386,
+  "delta_observed": 0.0013558201058201074
+ },
+ "primary_statistic": {
+  "delta_observed": 0.0013558201058201074,
+  "p": 0.041385281385281386,
+  "n_partitions": 5775,
+  "null_median": -8.267195767196894e-06,
+  "null_max": 0.002465277777777772,
+  "null_min": -0.002372685185185185
+ },
+ "root_overlap": {
+  "mean_distance_by_shared_radical_count": {
+   "0": {
+    "n_pairs": 31,
+    "mean_distance": 0.001589861751152071
+   },
+   "1": {
+    "n_pairs": 30,
+    "mean_distance": 0.0019682539682539676
+   },
+   "2": {
+    "n_pairs": 5,
+    "mean_distance": 0.000952380952380954
+   },
+   "3": {
+    "n_pairs": 0,
+    "mean_distance": null
+   }
+  },
+  "pairs_with_2plus_shared_radicals": [
+   {
+    "pair": [
+     "ذكّر",
+     "شكر"
+    ],
+    "roots": [
+     "ذ.ك.ر",
+     "ش.ك.ر"
+    ],
+    "shared_radicals": 2,
+    "same_pattern": false,
+    "distance": -0.00023809523809522956
+   },
+   {
+    "pair": [
+     "راسل",
+     "سأل"
+    ],
+    "roots": [
+     "ر.س.ل",
+     "س.أ.ل"
+    ],
+    "shared_radicals": 2,
+    "same_pattern": false,
+    "distance": 0.008095238095238091
+   },
+   {
+    "pair": [
+     "ساعد",
+     "ودّع"
+    ],
+    "roots": [
+     "س.ع.د",
+     "و.د.ع"
+    ],
+    "shared_radicals": 2,
+    "same_pattern": false,
+    "distance": 0.00023809523809524474
+   },
+   {
+    "pair": [
+     "عالج",
+     "علّم"
+    ],
+    "roots": [
+     "ع.ل.ج",
+     "ع.ل.م"
+    ],
+    "shared_radicals": 2,
+    "same_pattern": false,
+    "distance": -0.0026190476190476116
+   },
+   {
+    "pair": [
+     "علّم",
+     "كلّم"
+    ],
+    "roots": [
+     "ع.ل.م",
+     "ك.ل.م"
+    ],
+    "shared_radicals": 2,
+    "same_pattern": true,
+    "distance": -0.0007142857142857246
+   }
+  ],
+  "robustness_excluding_those_pairs": {
+   "delta": 0.00133594346829641,
+   "p": 0.047792207792207796,
+   "n_pairs_dropped": 5,
+   "note": "recomputes the primary statistic with every >=2-shared-radical pair removed. DESCRIPTIVE: it shows whether root similarity rather than wazn carries the signal. It does not replace the registered criterion."
+  }
+ },
+ "cartan_coordinates": {
+  "self_test": {
+   "identity": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "cnot": [
+    0.785398,
+    0.0,
+    0.0
+   ],
+   "swap": [
+    0.785398,
+    0.785398,
+    0.785398
+   ],
+   "identity_ok": true,
+   "cnot_ok": true,
+   "swap_ok": true,
+   "self_test_passed": true
+  },
+  "n_checkpoints": 8,
+  "per_verb_mean": {
+   "خدم": [
+    0.81959275,
+    0.074136875,
+    0.016299624999999998
+   ],
+   "ذكّر": [
+    0.9467616249999999,
+    0.117678625,
+    0.021704124999999998
+   ],
+   "راسل": [
+    0.674497125,
+    0.060115749999999996,
+    0.00629525
+   ],
+   "سأل": [
+    1.031603125,
+    0.080349,
+    0.007474125
+   ],
+   "ساعد": [
+    0.845214125,
+    0.0833225,
+    0.01204675
+   ],
+   "شكر": [
+    0.87942375,
+    0.072117625,
+    0.031884625
+   ],
+   "ضرب": [
+    0.69932025,
+    0.076403,
+    0.010121875
+   ],
+   "عالج": [
+    0.752686,
+    0.101245125,
+    0.012186625
+   ],
+   "علّم": [
+    0.9593385,
+    0.134296,
+    0.0059352499999999996
+   ],
+   "قابل": [
+    0.807313625,
+    0.101073,
+    0.017416625
+   ],
+   "كلّم": [
+    1.0285425000000001,
+    0.1072925,
+    0.022768625
+   ],
+   "ودّع": [
+    0.82582125,
+    0.10157325,
+    0.023010875
+   ]
+  },
+  "note": "Weyl-chamber canonicalisation is fiddly (doc 26 SS3); reported for interpretation only and carrying no criterion."
+ },
+ "git_note": {
+  "exp42_paths": [],
+  "n_untracked": 154
+ }
+}

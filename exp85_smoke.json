@@ -1,0 +1,52 @@
+{
+ "gate": "GATE_SMOKE",
+ "spec": "qnlp_private_docs/77_exp85_identity_T3.md (FROZEN 2026-09-17)",
+ "passed": true,
+ "assertions_passed": true,
+ "seed": 85000,
+ "n_smoke_epochs": 5,
+ "max_epochs_production": 150,
+ "T": 3,
+ "dataset_sha256": "9566a4a5bc305f66c0a9fb8e7e467ec3f22b9d0e3de298cbf7458104c1554b00",
+ "arms": {
+  "A3-T3-identity": {
+   "train_acc": 0.6174242424242424,
+   "val_acc": 0.5833333333333334,
+   "gate_met": false,
+   "wall_sec": 84.84017491340637,
+   "n_train": 528,
+   "n_val": 132,
+   "n_test": 300,
+   "max_startup_drift": 7.748689654363261e-07,
+   "redraw_attempts_used": 1
+  },
+  "A3-T3-uniform": {
+   "train_acc": 0.6439393939393939,
+   "val_acc": 0.5909090909090909,
+   "gate_met": false,
+   "wall_sec": 84.94185209274292,
+   "n_train": 528,
+   "n_val": 132,
+   "n_test": 300,
+   "max_startup_drift": 5.964096772004268e-07,
+   "redraw_attempts_used": null
+  },
+  "FLOOR": {
+   "train_acc": 0.5606060606060606,
+   "val_acc": 0.5833333333333334,
+   "gate_met": false,
+   "wall_sec": 84.74946093559265,
+   "n_train": 528,
+   "n_val": 132,
+   "n_test": 300,
+   "max_startup_drift": 7.748689654363261e-07,
+   "redraw_attempts_used": 1
+  }
+ },
+ "dtf_nan_finite_check": "OK: designed-to-fail fired: dtf_nan: nan is not finite",
+ "est_per_unit_sec": 2545.3148794174194,
+ "est_per_unit_min": 42.42191465695699,
+ "est_wall_clock_5workers_min": 381.7972319126129,
+ "n_total_units": 45,
+ "note": "smoke gate: 5 epochs all 3 arms at T=3; finite gradients asserted; QR-unitarization + drift check verified"
+}

@@ -1,0 +1,138 @@
+{
+ "experiment": "exp78b-confirm (doc 69 §7 / doc 70 §2.2)",
+ "spec": "doc 69 §7 ordered 2026-09-04; verdict rules per doc 70 §3",
+ "driver_sha256": "1855227a29113c2cff45ecb435a78f2f1387c12dfc3ce526aad0a26e916536d1",
+ "confirm_dataset_sha": "a7fabb683da829bfb471d30f4994c41e868697e545d4a5cde195ce49cd02a366",
+ "first_draw_sha": "eb46f4e65a8f46c8a6fc0e0013d9dfdabc43200475b9c06b4c1488c5e2c41072",
+ "generator_seed_confirm": 77000,
+ "generator_seed_first_draw": 76000,
+ "seed_delta_verified": true,
+ "vsuite_source": "results_exp78a_WN_validation.json",
+ "vsuite_kill_gate_passed": true,
+ "bar_provenance": {
+  "original_bar": 0.65,
+  "original_bar_source": "doc 54 SS7; calibrated on a different task family",
+  "reachable_ceiling_doc63_SS12_4_1": 0.6426,
+  "ceiling_below_bar": true,
+  "substitution_rule": "doc 63 §12.9.3 floor-clearance substituted for 0.65",
+  "substitution_trigger": "doc 70 B1: 0.65 bar measured above this family's ceiling; the leg is miscalibrated and was mis-imported (doc 69 §4.1)",
+  "active_rule": "arm_mean >= floor_mean + 2*floor_sd  (no 0.65 leg)",
+  "chance_level": 0.5,
+  "N_test": 300,
+  "binom_sd_N300": 0.02886751345948129,
+  "floor_admissibility_band": [
+   0.4422649730810374,
+   0.5577350269189626
+  ]
+ },
+ "dataset_provenance": {
+  "confirm_dataset": "stories_exp78a_confirm_n3_T2.json",
+  "confirm_sha256": "a7fabb683da829bfb471d30f4994c41e868697e545d4a5cde195ce49cd02a366",
+  "first_draw_dataset": "stories_exp76_n3_T2.json",
+  "first_draw_sha256": "eb46f4e65a8f46c8a6fc0e0013d9dfdabc43200475b9c06b4c1488c5e2c41072",
+  "generator": "exp76_datagen.py (committed, unmodified)",
+  "confirm_seed_convention": "confirm seed = first_draw seed + 1000 (76000 -> 77000), registered in doc 69 §4 item 4",
+  "vsuite": "results_exp78a_WN_validation.json",
+  "vsuite_generator_seed": 77000,
+  "draw_type": "re-draw (doc 70 §3 N5: new sample from same generator, not a reproduction of the first draw)"
+ },
+ "confirm_arm": "n3_T2",
+ "confirm_arm_per_seed": [
+  0.53,
+  0.5366666666666666,
+  0.57,
+  0.5366666666666666,
+  0.56
+ ],
+ "confirm_arm_mean": 0.5466666666666666,
+ "confirm_arm_sd": 0.017320508075688773,
+ "confirm_arm_ckpt_shas": [
+  "dbc43f0a34a5b6915a7b5086808b058fc7ef769e0387c65e1a4184450cd691e9",
+  "4a6082de8b4212a0a59f20916a26972fec60d9f94850ce6e776e582321827b96",
+  "0ca576c3dfc211f8e0dbb12dd726d42d23e402b20dd4e4cd2dadab2b79f59a8f",
+  "93a665bfa1ccfd8ac190b8f74d697b6be7474325c1562e9fe320f2792a755f55",
+  "e9de916ea63caab8e6e8548594f9db672490f474e71ba432d9ab0a840d92b2a2"
+ ],
+ "confirm_floor_arm": "S-shuffle-n3_T2",
+ "confirm_floor_per_seed": [
+  0.49333333333333335,
+  0.5533333333333333,
+  0.52,
+  0.44333333333333336,
+  0.5133333333333333
+ ],
+ "confirm_floor_mean": 0.5046666666666667,
+ "confirm_floor_sd": 0.040524341107811016,
+ "confirm_floor_ckpt_shas": [
+  "86d0bc8919eb403d41d5e228108905eeb3183c6f2094a4d656bb33087f79e6f5",
+  "63ccfe3f264670d3fccc4339d25923a2a28d6db896ea4b8ca20e07735946ad80",
+  "5028fd04b7c04acbc51c219809cce825d5fbcd63b54d86d3ef008498582ee2e0",
+  "f1f22eed90e079325cf475447318e5ef27668bf19258a78abae329f185aae6f4",
+  "bfb2009e399ac1d53bb6b09c07c23a837e74e98f6a7bf6be995110913085f029"
+ ],
+ "floor_admissibility": {
+  "floor_mean": 0.5046666666666667,
+  "chance": 0.5,
+  "deviation_from_chance": 0.004666666666666708,
+  "binom_sd_at_N300": 0.02886751345948129,
+  "admissibility_half_width_2sd": 0.05773502691896258,
+  "admissibility_band": [
+   0.4422649730810374,
+   0.5577350269189626
+  ],
+  "floor_admissible": true,
+  "reading": "ABSOLUTE READING VALID -- floor within 2 binomial SD of chance",
+  "note": "doc 63 DELTA_BAR=0.06 precedent; N=300 convention anchor"
+ },
+ "floor_clearance": {
+  "floor_mean": 0.5046666666666667,
+  "floor_sd": 0.040524341107811016,
+  "floor_bar": 0.5857153488822887,
+  "arm_mean": 0.5466666666666666,
+  "clears_floor": false,
+  "floor_admissible": true,
+  "reading_conditional": "arm_mean=0.5467 vs floor_bar=0.5857 -> DOES NOT CLEAR"
+ },
+ "ttest_companion": {
+  "method": "scipy.stats.ttest_rel (paired, arm vs floor, same seed index)",
+  "note": "doc 70 §3.7 + B2: seed-level paired t is the primary significance leg; it does NOT gate the boolean n3_T2_confirm_clears_floor (floor-clearance alone does).",
+  "per_seed_diffs": [
+   0.03666666666666668,
+   -0.01666666666666672,
+   0.04999999999999993,
+   0.09333333333333327,
+   0.046666666666666745
+  ],
+  "t_statistic": 2.387151537358186,
+  "p_two_sided": 0.07540074377124799,
+  "p_one_sided_greater": 0.037700371885623994,
+  "df": 4,
+  "plugin_2sd_bar": 0.5857153488822887,
+  "arm_mean": 0.5466666666666666,
+  "floor_mean": 0.5046666666666667,
+  "mean_diff": 0.041999999999999926
+ },
+ "first_draw_descriptive": {
+  "note": "doc 70 §3.2: confirm verdict on confirm draw alone; pooled estimates reported descriptive only",
+  "first_draw_arm_mean": 0.5753333,
+  "first_draw_floor_bar": 0.5678269,
+  "first_draw_clears_floor": true,
+  "confirm_arm_mean": 0.5466666666666666,
+  "confirm_floor_bar": 0.5857153488822887,
+  "pooled_arm_mean_descriptive": 0.5609999833333333
+ },
+ "designed_to_fail": {
+  "description": "The 0.65 bar (doc 54 SS7) fails its own applicability check for this family: reachable ceiling (0.6426) < 0.65.  This assertion always fires for this family and proves the gate distinguishes applicable from inapplicable bars.",
+  "bar": 0.65,
+  "reachable_ceiling_doc63_SS12_4_1": 0.6426,
+  "ceiling_below_bar": true,
+  "bar_applicable": false,
+  "assertion_fires": true,
+  "consequence": "doc 70 B1 kill of this bar is confirmed.  floor-clearance (doc 63 §12.9.3) is the sole valid reading."
+ },
+ "n3_T2_confirm_clears_floor": false,
+ "verdict": "NEGATIVE -- confirm draw does not clear floor (arm_mean=0.5467, floor_bar=0.5857, admissible=True)",
+ "verdict_rule": "doc 70 §3.2 (confirm draw alone) + doc 63 §12.9.3 (floor-clearance substituted for 0.65 per B1)",
+ "n_seeds": 5,
+ "ckpt_dir": "exp78b_confirm_ckpt"
+}

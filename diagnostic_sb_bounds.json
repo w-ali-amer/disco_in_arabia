@@ -1,0 +1,1176 @@
+{
+  "instrument": "instrument_sb_bounds.py",
+  "script_sha256": "501696a05a5770dedd8218340a938c6181d119e53c6471f50f62dbf2aa389532",
+  "generated_for": "doc 54 / exp68 registration -- CONTEXT ONLY. doc 52 SS2.2: on a 24-noun inventory a 9-dim-per-referent bound measures interpolation, so NO criterion in doc 54 is read against any number in this file.",
+  "not_a_results_file": "named diagnostic_*, not results_*, deliberately: it is an instrument output, not an experiment result",
+  "families": {
+    "frozen2d": {
+      "family": "frozen2d",
+      "file": "exp42_noun_embeddings.json",
+      "file_sha256": "a23a489e843780c2d10cd633e87f98ba65205abd2a4067991803cf895a1a0e3c",
+      "declared_embeddings_sha256": "00c1ecffcaf05b38df082f8a3cbed1d013bddb3e39bc00adf1c2513b4ea674ac",
+      "source": "aravec/full_uni_cbow_300_twitter.mdl + ta-marbuta normalization + PCA-2D over the 44 referent vectors + unit norm",
+      "normalisation": "NONE -- the stored vec2 are already unit-norm and inside [-1,1]",
+      "all_unit_norm": true,
+      "pc1_equals_cos_angle": true,
+      "features_deterministically_dependent": true,
+      "degeneracy_note": "unit norm in 2D => PC1 = cos(phi) and PC2 = sin(phi) EXACTLY, so PC1 and PC2 are a deterministic reparameterisation of ONE number. A 2-feature register on this family adds FUNCTION-CLASS RICHNESS, not information (products of trig in cos phi and sin phi are not band-limited in phi -- Jacobi-Anger), which is why doc 52 SS2.2 found random labellings reaching 0.89-0.97 in the 2-feature space."
+    },
+    "raw": {
+      "family": "raw",
+      "file": "aravec_raw_vectors_44.json",
+      "file_sha256": "4e919966b3d359a9c1af397904113ad4d1dad3a6f6f9d2560fb17523843ba35a",
+      "declared_vectors_sha256": "699450d3d292f789d368920c33febf49ee4fe4ceff63501308b6da5759d6ce11",
+      "declared_sha_verified_with_repo_canonical_sha256": true,
+      "source": "aravec/full_uni_cbow_300_twitter.mdl",
+      "convention": "ta-marbuta U+0629 -> U+0647, as exp42_make_embeddings.py",
+      "raw_dim": 300,
+      "pca_fit_on": "all44",
+      "pca_fit_n": 44,
+      "var_explained_pc1": 0.12685513291325928,
+      "var_explained_pc2": 0.08050060927190729,
+      "var_explained_pc1_plus_pc2": 0.20735574218516656,
+      "sign_pin": "REGISTERED: PC signs pinned to the frozen vec2 plane. Bounds are invariant to PC sign; a trained circuit is not.",
+      "normalisation": "REGISTERED: p_k(r) = PC_k(r) / max_{r' in HUMANS} |PC_k(r')| for k = 1, 2. Divisors: PC1 8.669495, PC2 10.160404",
+      "norm_divisors": [
+        8.669494516224397,
+        10.160404144924657
+      ],
+      "plane_agreement_with_frozen2d": {
+        "unit_raw_pca_vs_frozen_vec2_max_abs_coord_diff": 3.7192471324942744e-15,
+        "sign_pin_applied": [
+          -1,
+          1
+        ],
+        "max_angular_difference_rad_after_pin": 3.9968028886505635e-15,
+        "verdict": "the frozen 2D embeddings ARE the unit-normalised raw PCA plane; FA's angle and the raw-PCA angle are the SAME quantity"
+      },
+      "radial_coordinate": {
+        "min": 3.6419608233134277,
+        "max": 11.818584443590053,
+        "mean": 7.897899236390401,
+        "note": "this is exactly the information unit-normalisation destroyed. F2-raw = (PC1, PC2) = (rho cos phi, rho sin phi) carries angle AND radius; FA carries angle only. That is why exp68 on this family is width-as-INFORMATION, not width-as-reparameterisation."
+      },
+      "features_deterministically_dependent": false,
+      "pc1_pc2_pearson_r": 0.5842698525485022
+    }
+  },
+  "inventory": {
+    "n_humans": 24,
+    "humans": [
+      {
+        "noun": "الطالب",
+        "gloss": "student"
+      },
+      {
+        "noun": "الرجل",
+        "gloss": "man"
+      },
+      {
+        "noun": "الولد",
+        "gloss": "boy"
+      },
+      {
+        "noun": "المدير",
+        "gloss": "manager"
+      },
+      {
+        "noun": "المعلم",
+        "gloss": "teacher"
+      },
+      {
+        "noun": "الطبيب",
+        "gloss": "doctor"
+      },
+      {
+        "noun": "العامل",
+        "gloss": "worker"
+      },
+      {
+        "noun": "المهندس",
+        "gloss": "engineer"
+      },
+      {
+        "noun": "الشرطي",
+        "gloss": "policeman"
+      },
+      {
+        "noun": "الكاتب",
+        "gloss": "writer/clerk"
+      },
+      {
+        "noun": "الطباخ",
+        "gloss": "cook"
+      },
+      {
+        "noun": "الجندي",
+        "gloss": "soldier"
+      },
+      {
+        "noun": "الفلاح",
+        "gloss": "farmer"
+      },
+      {
+        "noun": "الحارس",
+        "gloss": "guard"
+      },
+      {
+        "noun": "اللاعب",
+        "gloss": "player"
+      },
+      {
+        "noun": "الموظف",
+        "gloss": "employee"
+      },
+      {
+        "noun": "الصحفي",
+        "gloss": "journalist"
+      },
+      {
+        "noun": "السائق",
+        "gloss": "driver"
+      },
+      {
+        "noun": "المسافر",
+        "gloss": "traveller"
+      },
+      {
+        "noun": "الضابط",
+        "gloss": "officer"
+      },
+      {
+        "noun": "الباحث",
+        "gloss": "researcher"
+      },
+      {
+        "noun": "القائد",
+        "gloss": "leader/commander"
+      },
+      {
+        "noun": "الصياد",
+        "gloss": "fisherman/hunter"
+      },
+      {
+        "noun": "المريض",
+        "gloss": "patient"
+      }
+    ]
+  },
+  "membership_provenance": {
+    "status": "PROVISIONAL -- RECONSTRUCTED, NOT FOUND",
+    "searched": [
+      "repo *.py / *.json / *.log: no 'tertiary' hit outside docs",
+      "git log --all: no committed doc 47 SS13 category script",
+      "qnlp_private_docs 46-53: no explicit member list"
+    ],
+    "method": "semantic judgment over the 24 frozen human nouns",
+    "corroboration": "all four doc 47 SS13 categories reproduce |B|, the arc count and the published K=1 ceiling; the target additionally reproduces SS13's null mean and percentile",
+    "all_four_reproduce": true,
+    "native_speaker_gate": "doc 47 SS13.4 closed the gate for the memberships IT HELD. Because no list was recovered, the gate is BLOCKING here until the orchestrator confirms these lists against the SS13 session record."
+  },
+  "membership_reconstruction": {
+    "tertiary": {
+      "gloss": "tertiary-educated profession",
+      "members": [
+        {
+          "noun": "الطبيب",
+          "gloss": "doctor"
+        },
+        {
+          "noun": "المهندس",
+          "gloss": "engineer"
+        },
+        {
+          "noun": "المعلم",
+          "gloss": "teacher"
+        },
+        {
+          "noun": "الباحث",
+          "gloss": "researcher"
+        },
+        {
+          "noun": "الصحفي",
+          "gloss": "journalist"
+        }
+      ],
+      "size": 5,
+      "doc47_s13_published": {
+        "size": 5,
+        "arcs": 8,
+        "k1_ceiling": 0.8526,
+        "null_mean": 0.7953,
+        "null_sd": 0.0678,
+        "percentile": 78.2
+      },
+      "recomputed_arcs": 8,
+      "recomputed_pair_level": 0.8526315789473684,
+      "fraction": "81/95",
+      "recomputed_null_mean": 0.7937894736842105,
+      "recomputed_null_sd": 0.062352173485202285,
+      "recomputed_percentile": 79.0,
+      "recomputed_per_twin": 0.8578947368421053,
+      "per_twin_fraction": "163/190",
+      "size_matches": true,
+      "arcs_match": true,
+      "ceiling_matches": true,
+      "null_mean_within_1sd_of_doc47": true
+    },
+    "uniformed": {
+      "gloss": "uniformed / disciplined service",
+      "members": [
+        {
+          "noun": "الشرطي",
+          "gloss": "policeman"
+        },
+        {
+          "noun": "الجندي",
+          "gloss": "soldier"
+        },
+        {
+          "noun": "الضابط",
+          "gloss": "officer"
+        },
+        {
+          "noun": "الحارس",
+          "gloss": "guard"
+        }
+      ],
+      "size": 4,
+      "doc47_s13_published": {
+        "size": 4,
+        "arcs": 6,
+        "k1_ceiling": 0.875,
+        "null_mean": 0.8155,
+        "null_sd": 0.0688,
+        "percentile": 76.2
+      },
+      "recomputed_arcs": 6,
+      "recomputed_pair_level": 0.875,
+      "fraction": "70/80",
+      "recomputed_null_mean": 0.8221250000000001,
+      "recomputed_null_sd": 0.07348458543451417,
+      "recomputed_percentile": 73.0,
+      "recomputed_per_twin": 0.875,
+      "per_twin_fraction": "140/160",
+      "size_matches": true,
+      "arcs_match": true,
+      "ceiling_matches": true,
+      "null_mean_within_1sd_of_doc47": true
+    },
+    "manual": {
+      "gloss": "manual / skilled trade",
+      "members": [
+        {
+          "noun": "العامل",
+          "gloss": "worker"
+        },
+        {
+          "noun": "الطباخ",
+          "gloss": "cook"
+        },
+        {
+          "noun": "الفلاح",
+          "gloss": "farmer"
+        },
+        {
+          "noun": "السائق",
+          "gloss": "driver"
+        },
+        {
+          "noun": "الصياد",
+          "gloss": "fisherman/hunter"
+        }
+      ],
+      "size": 5,
+      "doc47_s13_published": {
+        "size": 5,
+        "arcs": 8,
+        "k1_ceiling": 0.8421,
+        "null_mean": 0.7902,
+        "null_sd": 0.0656,
+        "percentile": 77.2
+      },
+      "recomputed_arcs": 8,
+      "recomputed_pair_level": 0.8421052631578947,
+      "fraction": "80/95",
+      "recomputed_null_mean": 0.7937894736842105,
+      "recomputed_null_sd": 0.062352173485202285,
+      "recomputed_percentile": 74.0,
+      "recomputed_per_twin": 0.8421052631578947,
+      "per_twin_fraction": "160/190",
+      "size_matches": true,
+      "arcs_match": true,
+      "ceiling_matches": true,
+      "null_mean_within_1sd_of_doc47": true
+    },
+    "nonoccupational": {
+      "gloss": "non-occupational state",
+      "members": [
+        {
+          "noun": "الرجل",
+          "gloss": "man"
+        },
+        {
+          "noun": "الولد",
+          "gloss": "boy"
+        },
+        {
+          "noun": "المسافر",
+          "gloss": "traveller"
+        },
+        {
+          "noun": "المريض",
+          "gloss": "patient"
+        }
+      ],
+      "size": 4,
+      "doc47_s13_published": {
+        "size": 4,
+        "arcs": 4,
+        "k1_ceiling": 0.925,
+        "null_mean": 0.8066,
+        "null_sd": 0.0709,
+        "percentile": 93.0
+      },
+      "recomputed_arcs": 4,
+      "recomputed_pair_level": 0.925,
+      "fraction": "74/80",
+      "recomputed_null_mean": 0.8221250000000001,
+      "recomputed_null_sd": 0.07348458543451417,
+      "recomputed_percentile": 89.5,
+      "recomputed_per_twin": 0.925,
+      "per_twin_fraction": "148/160",
+      "size_matches": true,
+      "arcs_match": true,
+      "ceiling_matches": true,
+      "null_mean_within_1sd_of_doc47": true
+    }
+  },
+  "target_category": {
+    "key": "tertiary",
+    "gloss": "tertiary-educated profession",
+    "members": [
+      "الطبيب",
+      "المهندس",
+      "المعلم",
+      "الباحث",
+      "الصحفي"
+    ],
+    "size": 5,
+    "n_nonbearers": 19
+  },
+  "bound_definitions": {
+    "pair_level": "doc 47 SS3.2: both twins of a cast won together => x^T A y > 0 on the ANTISYMMETRIC part. Denominator = casts.",
+    "per_twin": "doc 47 SS17: twins are SEPARATE constraints on a GENERAL C; a cast may score 0, 1/2 or 1. Denominator = twins.",
+    "exactness": "pair level at d = 3 is EXACT (R^3 arrangement enumeration with doc 47 SS16's adjacent-cell perturbation and a strict satisfaction tolerance). Every other number here is a CONSTRUCTIVE LOWER BOUND from a budgeted search."
+  },
+  "registered_scaling": {
+    "name": "full",
+    "formula": "theta = (p + 1) * pi        -> [0, 2pi)",
+    "chosen": "a priori, by the stated principle (give a single RY the full circle), NOT by the resulting numbers; the full sweep is reported below"
+  },
+  "feature_maps": {
+    "frozen2d": {
+      "FA": {
+        "definition": "FA: phi = atan2(p2, p1); u = (1, cos phi, sin phi). d = 3. The EXISTING single-angle map (exp42 intro_convention, angle = atan2(y, x)); scaling-free.",
+        "d": 3,
+        "scaling": null,
+        "pair": {
+          "mode": "pair",
+          "d": 3,
+          "n_rows": 95,
+          "count": 81,
+          "value": 0.8526315789473684,
+          "fraction": "81/95",
+          "method": "EXACT (R^3 arrangement enumeration, doc 47 SS16 fix)",
+          "exact": true,
+          "sign_flip_check": {
+            "n_rows": 95,
+            "satisfied_c": 80,
+            "satisfied_minus_c": 15,
+            "boundary_rows": 0,
+            "sums_to_n": true
+          },
+          "null": {
+            "draws": 200,
+            "size_matched_B": 5,
+            "mean": 0.7937894736842105,
+            "sd": 0.062352173485202285,
+            "min": 0.6736842105263158,
+            "max": 0.9894736842105263,
+            "percentile_of_category": 79.0,
+            "identical_search_budget": true
+          }
+        },
+        "twin": {
+          "mode": "twin",
+          "d": 3,
+          "n_rows": 190,
+          "count": 163,
+          "value": 0.8578947368421053,
+          "fraction": "163/190",
+          "method": "CONSTRUCTIVE LOWER BOUND (48 restarts x 500 steps + 6 LS-drop starts)",
+          "exact": false,
+          "sign_flip_check": {
+            "n_rows": 190,
+            "satisfied_c": 163,
+            "satisfied_minus_c": 27,
+            "boundary_rows": 0,
+            "sums_to_n": true
+          },
+          "null": {
+            "draws": 200,
+            "size_matched_B": 5,
+            "mean": 0.7947368421052632,
+            "sd": 0.06237949308983921,
+            "min": 0.6736842105263158,
+            "max": 0.9894736842105263,
+            "percentile_of_category": 84.5,
+            "identical_search_budget": true
+          }
+        }
+      },
+      "F1": {
+        "definition": "F1: PC1 only, p = p1; theta = (p + 1) * pi        -> [0, 2pi); u = (1, cos theta, sin theta). d = 3.",
+        "d": 3,
+        "scaling": "theta = (p + 1) * pi        -> [0, 2pi)",
+        "pair": {
+          "mode": "pair",
+          "d": 3,
+          "n_rows": 95,
+          "count": 69,
+          "value": 0.7263157894736842,
+          "fraction": "69/95",
+          "method": "EXACT (R^3 arrangement enumeration, doc 47 SS16 fix)",
+          "exact": true,
+          "sign_flip_check": {
+            "n_rows": 95,
+            "satisfied_c": 66,
+            "satisfied_minus_c": 29,
+            "boundary_rows": 0,
+            "sums_to_n": true
+          },
+          "null": {
+            "draws": 200,
+            "size_matched_B": 5,
+            "mean": 0.7901578947368421,
+            "sd": 0.06308801123596164,
+            "min": 0.6631578947368421,
+            "max": 0.9578947368421052,
+            "percentile_of_category": 14.499999999999998,
+            "identical_search_budget": true
+          }
+        },
+        "twin": {
+          "mode": "twin",
+          "d": 3,
+          "n_rows": 190,
+          "count": 138,
+          "value": 0.7263157894736842,
+          "fraction": "138/190",
+          "method": "CONSTRUCTIVE LOWER BOUND (48 restarts x 500 steps + 6 LS-drop starts)",
+          "exact": false,
+          "sign_flip_check": {
+            "n_rows": 190,
+            "satisfied_c": 138,
+            "satisfied_minus_c": 52,
+            "boundary_rows": 0,
+            "sums_to_n": true
+          },
+          "null": {
+            "draws": 200,
+            "size_matched_B": 5,
+            "mean": 0.7911315789473684,
+            "sd": 0.0645866290187417,
+            "min": 0.6421052631578947,
+            "max": 0.9631578947368421,
+            "percentile_of_category": 15.0,
+            "identical_search_budget": true
+          }
+        }
+      },
+      "F2": {
+        "definition": "F2: two-qubit register, theta0 = SCALE(PC1) on qubit 0, theta1 = SCALE(PC2) on qubit 1, both by theta = (p + 1) * pi        -> [0, 2pi); u = vec(u(theta0) (x) u(theta1)). d = 9.",
+        "d": 9,
+        "scaling": "theta = (p + 1) * pi        -> [0, 2pi)",
+        "pair": {
+          "mode": "pair",
+          "d": 9,
+          "n_rows": 95,
+          "count": 87,
+          "value": 0.9157894736842105,
+          "fraction": "87/95",
+          "method": "CONSTRUCTIVE LOWER BOUND (48 restarts x 500 steps + 6 LS-drop starts)",
+          "exact": false,
+          "sign_flip_check": {
+            "n_rows": 95,
+            "satisfied_c": 87,
+            "satisfied_minus_c": 8,
+            "boundary_rows": 0,
+            "sums_to_n": true
+          },
+          "null": {
+            "draws": 200,
+            "size_matched_B": 5,
+            "mean": 0.9264210526315789,
+            "sd": 0.03672274464670596,
+            "min": 0.8210526315789474,
+            "max": 1.0,
+            "percentile_of_category": 31.5,
+            "identical_search_budget": true
+          }
+        },
+        "twin": {
+          "mode": "twin",
+          "d": 9,
+          "n_rows": 190,
+          "count": 174,
+          "value": 0.9157894736842105,
+          "fraction": "174/190",
+          "method": "CONSTRUCTIVE LOWER BOUND (48 restarts x 500 steps + 6 LS-drop starts)",
+          "exact": false,
+          "sign_flip_check": {
+            "n_rows": 190,
+            "satisfied_c": 174,
+            "satisfied_minus_c": 16,
+            "boundary_rows": 0,
+            "sums_to_n": true
+          },
+          "null": {
+            "draws": 200,
+            "size_matched_B": 5,
+            "mean": 0.9284736842105263,
+            "sd": 0.03664772844560383,
+            "min": 0.8210526315789474,
+            "max": 1.0,
+            "percentile_of_category": 29.5,
+            "identical_search_budget": true
+          }
+        }
+      }
+    },
+    "raw": {
+      "FA": {
+        "definition": "FA: phi = atan2(p2, p1); u = (1, cos phi, sin phi). d = 3. The EXISTING single-angle map (exp42 intro_convention, angle = atan2(y, x)); scaling-free.",
+        "d": 3,
+        "scaling": null,
+        "pair": {
+          "mode": "pair",
+          "d": 3,
+          "n_rows": 95,
+          "count": 81,
+          "value": 0.8526315789473684,
+          "fraction": "81/95",
+          "method": "EXACT (R^3 arrangement enumeration, doc 47 SS16 fix)",
+          "exact": true,
+          "sign_flip_check": {
+            "n_rows": 95,
+            "satisfied_c": 80,
+            "satisfied_minus_c": 15,
+            "boundary_rows": 0,
+            "sums_to_n": true
+          },
+          "null": {
+            "draws": 200,
+            "size_matched_B": 5,
+            "mean": 0.7937894736842105,
+            "sd": 0.062352173485202285,
+            "min": 0.6736842105263158,
+            "max": 0.9894736842105263,
+            "percentile_of_category": 79.0,
+            "identical_search_budget": true
+          }
+        },
+        "twin": {
+          "mode": "twin",
+          "d": 3,
+          "n_rows": 190,
+          "count": 163,
+          "value": 0.8578947368421053,
+          "fraction": "163/190",
+          "method": "CONSTRUCTIVE LOWER BOUND (48 restarts x 500 steps + 6 LS-drop starts)",
+          "exact": false,
+          "sign_flip_check": {
+            "n_rows": 190,
+            "satisfied_c": 163,
+            "satisfied_minus_c": 27,
+            "boundary_rows": 0,
+            "sums_to_n": true
+          },
+          "null": {
+            "draws": 200,
+            "size_matched_B": 5,
+            "mean": 0.7945526315789473,
+            "sd": 0.0621724619527394,
+            "min": 0.6736842105263158,
+            "max": 0.9894736842105263,
+            "percentile_of_category": 85.5,
+            "identical_search_budget": true
+          }
+        }
+      },
+      "F1": {
+        "definition": "F1: PC1 only, p = p1; theta = (p + 1) * pi        -> [0, 2pi); u = (1, cos theta, sin theta). d = 3.",
+        "d": 3,
+        "scaling": "theta = (p + 1) * pi        -> [0, 2pi)",
+        "pair": {
+          "mode": "pair",
+          "d": 3,
+          "n_rows": 95,
+          "count": 77,
+          "value": 0.8105263157894737,
+          "fraction": "77/95",
+          "method": "EXACT (R^3 arrangement enumeration, doc 47 SS16 fix)",
+          "exact": true,
+          "sign_flip_check": {
+            "n_rows": 95,
+            "satisfied_c": 73,
+            "satisfied_minus_c": 22,
+            "boundary_rows": 0,
+            "sums_to_n": true
+          },
+          "null": {
+            "draws": 200,
+            "size_matched_B": 5,
+            "mean": 0.7863157894736841,
+            "sd": 0.06475972743210841,
+            "min": 0.6526315789473685,
+            "max": 0.968421052631579,
+            "percentile_of_category": 64.5,
+            "identical_search_budget": true
+          }
+        },
+        "twin": {
+          "mode": "twin",
+          "d": 3,
+          "n_rows": 190,
+          "count": 154,
+          "value": 0.8105263157894737,
+          "fraction": "154/190",
+          "method": "CONSTRUCTIVE LOWER BOUND (48 restarts x 500 steps + 6 LS-drop starts)",
+          "exact": false,
+          "sign_flip_check": {
+            "n_rows": 190,
+            "satisfied_c": 154,
+            "satisfied_minus_c": 36,
+            "boundary_rows": 0,
+            "sums_to_n": true
+          },
+          "null": {
+            "draws": 200,
+            "size_matched_B": 5,
+            "mean": 0.7874473684210527,
+            "sd": 0.06509563243363048,
+            "min": 0.6526315789473685,
+            "max": 0.968421052631579,
+            "percentile_of_category": 63.5,
+            "identical_search_budget": true
+          }
+        }
+      },
+      "F2": {
+        "definition": "F2: two-qubit register, theta0 = SCALE(PC1) on qubit 0, theta1 = SCALE(PC2) on qubit 1, both by theta = (p + 1) * pi        -> [0, 2pi); u = vec(u(theta0) (x) u(theta1)). d = 9.",
+        "d": 9,
+        "scaling": "theta = (p + 1) * pi        -> [0, 2pi)",
+        "pair": {
+          "mode": "pair",
+          "d": 9,
+          "n_rows": 95,
+          "count": 86,
+          "value": 0.9052631578947369,
+          "fraction": "86/95",
+          "method": "CONSTRUCTIVE LOWER BOUND (48 restarts x 500 steps + 6 LS-drop starts)",
+          "exact": false,
+          "sign_flip_check": {
+            "n_rows": 95,
+            "satisfied_c": 86,
+            "satisfied_minus_c": 9,
+            "boundary_rows": 0,
+            "sums_to_n": true
+          },
+          "null": {
+            "draws": 200,
+            "size_matched_B": 5,
+            "mean": 0.9343684210526316,
+            "sd": 0.038944830757159855,
+            "min": 0.8210526315789474,
+            "max": 1.0,
+            "percentile_of_category": 20.0,
+            "identical_search_budget": true
+          }
+        },
+        "twin": {
+          "mode": "twin",
+          "d": 9,
+          "n_rows": 190,
+          "count": 172,
+          "value": 0.9052631578947369,
+          "fraction": "172/190",
+          "method": "CONSTRUCTIVE LOWER BOUND (48 restarts x 500 steps + 6 LS-drop starts)",
+          "exact": false,
+          "sign_flip_check": {
+            "n_rows": 190,
+            "satisfied_c": 172,
+            "satisfied_minus_c": 18,
+            "boundary_rows": 0,
+            "sums_to_n": true
+          },
+          "null": {
+            "draws": 200,
+            "size_matched_B": 5,
+            "mean": 0.9352894736842106,
+            "sd": 0.03863221059609997,
+            "min": 0.8210526315789474,
+            "max": 1.0,
+            "percentile_of_category": 18.5,
+            "identical_search_budget": true
+          }
+        }
+      }
+    }
+  },
+  "target_selection": {
+    "rule": "the registered prediction structure needs F1 near its null and F2 well above it; the choice is made from doc 47 SS13's FOUR categories only, and is reported, never silent",
+    "table": {
+      "tertiary": {
+        "gloss": "tertiary-educated profession",
+        "size": 5,
+        "F1": {
+          "per_twin": 0.8105263157894737,
+          "fraction": "154/190",
+          "null_mean": 0.7874473684210527,
+          "null_sd": 0.06509563243363048,
+          "percentile": 63.5
+        },
+        "F2": {
+          "per_twin": 0.9052631578947369,
+          "fraction": "172/190",
+          "null_mean": 0.9352894736842106,
+          "null_sd": 0.03863221059609997,
+          "percentile": 18.5
+        },
+        "FA": {
+          "per_twin": 0.8578947368421053,
+          "fraction": "163/190",
+          "null_mean": 0.7945526315789473,
+          "null_sd": 0.0621724619527394,
+          "percentile": 85.5
+        },
+        "F2_minus_F1": 0.09473684210526323,
+        "F2_minus_FA": 0.047368421052631615,
+        "F1_above_its_null": 0.023078947368420977
+      },
+      "uniformed": {
+        "gloss": "uniformed / disciplined service",
+        "size": 4,
+        "F1": {
+          "per_twin": 0.775,
+          "fraction": "124/160",
+          "null_mean": 0.81303125,
+          "null_sd": 0.07229952327829586,
+          "percentile": 28.000000000000004
+        },
+        "F2": {
+          "per_twin": 0.925,
+          "fraction": "148/160",
+          "null_mean": 0.9509375,
+          "null_sd": 0.04004526921726732,
+          "percentile": 22.0
+        },
+        "FA": {
+          "per_twin": 0.875,
+          "fraction": "140/160",
+          "null_mean": 0.82284375,
+          "null_sd": 0.07345187566448289,
+          "percentile": 73.0
+        },
+        "F2_minus_F1": 0.15000000000000002,
+        "F2_minus_FA": 0.050000000000000044,
+        "F1_above_its_null": -0.03803124999999996
+      },
+      "manual": {
+        "gloss": "manual / skilled trade",
+        "size": 5,
+        "F1": {
+          "per_twin": 0.9578947368421052,
+          "fraction": "182/190",
+          "null_mean": 0.7874473684210527,
+          "null_sd": 0.06509563243363048,
+          "percentile": 99.0
+        },
+        "F2": {
+          "per_twin": 1.0,
+          "fraction": "190/190",
+          "null_mean": 0.9352894736842106,
+          "null_sd": 0.03863221059609997,
+          "percentile": 92.5
+        },
+        "FA": {
+          "per_twin": 0.8421052631578947,
+          "fraction": "160/190",
+          "null_mean": 0.7945526315789473,
+          "null_sd": 0.0621724619527394,
+          "percentile": 74.0
+        },
+        "F2_minus_F1": 0.04210526315789476,
+        "F2_minus_FA": 0.1578947368421053,
+        "F1_above_its_null": 0.17044736842105257
+      },
+      "nonoccupational": {
+        "gloss": "non-occupational state",
+        "size": 4,
+        "F1": {
+          "per_twin": 0.7625,
+          "fraction": "122/160",
+          "null_mean": 0.81303125,
+          "null_sd": 0.07229952327829586,
+          "percentile": 23.5
+        },
+        "F2": {
+          "per_twin": 1.0,
+          "fraction": "160/160",
+          "null_mean": 0.9509375,
+          "null_sd": 0.04004526921726732,
+          "percentile": 85.5
+        },
+        "FA": {
+          "per_twin": 0.925,
+          "fraction": "148/160",
+          "null_mean": 0.82284375,
+          "null_sd": 0.07345187566448289,
+          "percentile": 89.0
+        },
+        "F2_minus_F1": 0.23750000000000004,
+        "F2_minus_FA": 0.07499999999999996,
+        "F1_above_its_null": -0.05053125000000003
+      }
+    },
+    "largest_F2_minus_F1": "nonoccupational",
+    "registered_target": "tertiary",
+    "flag_for_orchestrator": "largest F2-F1 separation is 'nonoccupational', not the registered target 'tertiary' -- orchestrator decides"
+  },
+  "scaling_sensitivity": {
+    "full": {
+      "formula": "theta = (p + 1) * pi        -> [0, 2pi)",
+      "frozen2d": {
+        "F1": {
+          "pair_level": 0.7263157894736842,
+          "pair_fraction": "69/95",
+          "per_twin": 0.7263157894736842,
+          "twin_fraction": "138/190",
+          "per_twin_complement": 0.27368421052631575,
+          "pair_level_complement": 0.27368421052631575
+        },
+        "F2": {
+          "pair_level": 0.9157894736842105,
+          "pair_fraction": "87/95",
+          "per_twin": 0.9157894736842105,
+          "twin_fraction": "174/190",
+          "per_twin_complement": 0.08421052631578951,
+          "pair_level_complement": 0.08421052631578951
+        }
+      },
+      "raw": {
+        "F1": {
+          "pair_level": 0.8105263157894737,
+          "pair_fraction": "77/95",
+          "per_twin": 0.8105263157894737,
+          "twin_fraction": "154/190",
+          "per_twin_complement": 0.18947368421052635,
+          "pair_level_complement": 0.18947368421052635
+        },
+        "F2": {
+          "pair_level": 0.9052631578947369,
+          "pair_fraction": "86/95",
+          "per_twin": 0.9052631578947369,
+          "twin_fraction": "172/190",
+          "per_twin_complement": 0.09473684210526312,
+          "pair_level_complement": 0.09473684210526312
+        }
+      }
+    },
+    "half": {
+      "formula": "theta = (p + 1) * pi / 2    -> [0, pi]",
+      "frozen2d": {
+        "F1": {
+          "pair_level": 0.7263157894736842,
+          "pair_fraction": "69/95",
+          "per_twin": 0.7263157894736842,
+          "twin_fraction": "138/190",
+          "per_twin_complement": 0.27368421052631575,
+          "pair_level_complement": 0.27368421052631575
+        },
+        "F2": {
+          "pair_level": 0.9157894736842105,
+          "pair_fraction": "87/95",
+          "per_twin": 0.9157894736842105,
+          "twin_fraction": "174/190",
+          "per_twin_complement": 0.08421052631578951,
+          "pair_level_complement": 0.08421052631578951
+        }
+      },
+      "raw": {
+        "F1": {
+          "pair_level": 0.8105263157894737,
+          "pair_fraction": "77/95",
+          "per_twin": 0.8105263157894737,
+          "twin_fraction": "154/190",
+          "per_twin_complement": 0.18947368421052635,
+          "pair_level_complement": 0.18947368421052635
+        },
+        "F2": {
+          "pair_level": 0.9157894736842105,
+          "pair_fraction": "87/95",
+          "per_twin": 0.9157894736842105,
+          "twin_fraction": "174/190",
+          "per_twin_complement": 0.08421052631578951,
+          "pair_level_complement": 0.08421052631578951
+        }
+      }
+    },
+    "halfpi": {
+      "formula": "theta = p * pi / 2          -> [-pi/2, pi/2]",
+      "frozen2d": {
+        "F1": {
+          "pair_level": 0.7263157894736842,
+          "pair_fraction": "69/95",
+          "per_twin": 0.7263157894736842,
+          "twin_fraction": "138/190",
+          "per_twin_complement": 0.27368421052631575,
+          "pair_level_complement": 0.27368421052631575
+        },
+        "F2": {
+          "pair_level": 0.9157894736842105,
+          "pair_fraction": "87/95",
+          "per_twin": 0.9157894736842105,
+          "twin_fraction": "174/190",
+          "per_twin_complement": 0.08421052631578951,
+          "pair_level_complement": 0.08421052631578951
+        }
+      },
+      "raw": {
+        "F1": {
+          "pair_level": 0.8105263157894737,
+          "pair_fraction": "77/95",
+          "per_twin": 0.8105263157894737,
+          "twin_fraction": "154/190",
+          "per_twin_complement": 0.18947368421052635,
+          "pair_level_complement": 0.18947368421052635
+        },
+        "F2": {
+          "pair_level": 0.9157894736842105,
+          "pair_fraction": "87/95",
+          "per_twin": 0.9157894736842105,
+          "twin_fraction": "174/190",
+          "per_twin_complement": 0.08421052631578951,
+          "pair_level_complement": 0.08421052631578951
+        }
+      }
+    },
+    "pi": {
+      "formula": "theta = p * pi              -> [-pi, pi]",
+      "frozen2d": {
+        "F1": {
+          "pair_level": 0.7263157894736842,
+          "pair_fraction": "69/95",
+          "per_twin": 0.7263157894736842,
+          "twin_fraction": "138/190",
+          "per_twin_complement": 0.27368421052631575,
+          "pair_level_complement": 0.27368421052631575
+        },
+        "F2": {
+          "pair_level": 0.9157894736842105,
+          "pair_fraction": "87/95",
+          "per_twin": 0.9157894736842105,
+          "twin_fraction": "174/190",
+          "per_twin_complement": 0.08421052631578951,
+          "pair_level_complement": 0.08421052631578951
+        }
+      },
+      "raw": {
+        "F1": {
+          "pair_level": 0.8105263157894737,
+          "pair_fraction": "77/95",
+          "per_twin": 0.8105263157894737,
+          "twin_fraction": "154/190",
+          "per_twin_complement": 0.18947368421052635,
+          "pair_level_complement": 0.18947368421052635
+        },
+        "F2": {
+          "pair_level": 0.9052631578947369,
+          "pair_fraction": "86/95",
+          "per_twin": 0.9052631578947369,
+          "twin_fraction": "172/190",
+          "per_twin_complement": 0.09473684210526312,
+          "pair_level_complement": 0.09473684210526312
+        }
+      }
+    },
+    "picent": {
+      "formula": "theta = pi + p              -> [pi-1, pi+1]",
+      "frozen2d": {
+        "F1": {
+          "pair_level": 0.7263157894736842,
+          "pair_fraction": "69/95",
+          "per_twin": 0.7263157894736842,
+          "twin_fraction": "138/190",
+          "per_twin_complement": 0.27368421052631575,
+          "pair_level_complement": 0.27368421052631575
+        },
+        "F2": {
+          "pair_level": 0.9157894736842105,
+          "pair_fraction": "87/95",
+          "per_twin": 0.9315789473684211,
+          "twin_fraction": "177/190",
+          "per_twin_complement": 0.06842105263157894,
+          "pair_level_complement": 0.08421052631578951
+        }
+      },
+      "raw": {
+        "F1": {
+          "pair_level": 0.8105263157894737,
+          "pair_fraction": "77/95",
+          "per_twin": 0.8105263157894737,
+          "twin_fraction": "154/190",
+          "per_twin_complement": 0.18947368421052635,
+          "pair_level_complement": 0.18947368421052635
+        },
+        "F2": {
+          "pair_level": 0.9157894736842105,
+          "pair_fraction": "87/95",
+          "per_twin": 0.9157894736842105,
+          "twin_fraction": "174/190",
+          "per_twin_complement": 0.08421052631578951,
+          "pair_level_complement": 0.08421052631578951
+        }
+      }
+    },
+    "unit": {
+      "formula": "theta = p                   -> [-1, 1]",
+      "frozen2d": {
+        "F1": {
+          "pair_level": 0.7263157894736842,
+          "pair_fraction": "69/95",
+          "per_twin": 0.7263157894736842,
+          "twin_fraction": "138/190",
+          "per_twin_complement": 0.27368421052631575,
+          "pair_level_complement": 0.27368421052631575
+        },
+        "F2": {
+          "pair_level": 0.9157894736842105,
+          "pair_fraction": "87/95",
+          "per_twin": 0.9315789473684211,
+          "twin_fraction": "177/190",
+          "per_twin_complement": 0.06842105263157894,
+          "pair_level_complement": 0.08421052631578951
+        }
+      },
+      "raw": {
+        "F1": {
+          "pair_level": 0.8105263157894737,
+          "pair_fraction": "77/95",
+          "per_twin": 0.8105263157894737,
+          "twin_fraction": "154/190",
+          "per_twin_complement": 0.18947368421052635,
+          "pair_level_complement": 0.18947368421052635
+        },
+        "F2": {
+          "pair_level": 0.9157894736842105,
+          "pair_fraction": "87/95",
+          "per_twin": 0.9157894736842105,
+          "twin_fraction": "174/190",
+          "per_twin_complement": 0.08421052631578951,
+          "pair_level_complement": 0.08421052631578951
+        }
+      }
+    }
+  },
+  "reconciliation": {
+    "FA_reproduces_doc47_s13": {
+      "recomputed_pair_level": 0.8526315789473684,
+      "recomputed_pair_level_fraction": "81/95",
+      "doc47_s13_published": 0.8526,
+      "recomputed_null_mean": 0.7937894736842105,
+      "doc47_s13_null_mean": 0.7953,
+      "recomputed_percentile": 79.0,
+      "doc47_s13_percentile": 78.2,
+      "verdict": "REPRODUCED at pair level",
+      "note": "doc 47 SS17's per-twin correction raises the SAME category to 163/190 = 0.8579. That is the SS17 correction applied to SS13, not a discrepancy: SS13 was computed with the SS3.2 pair-level instrument."
+    },
+    "F1_below_chance_0p4842": {
+      "doc52_published": 0.4842,
+      "recomputed_frozen2d_pair_level": 0.7263157894736842,
+      "recomputed_frozen2d_per_twin": 0.7263157894736842,
+      "complement_of_per_twin": 0.27368421052631575,
+      "complement_of_pair_level": 0.27368421052631575,
+      "scalings_whose_complement_hits_0p4842": [],
+      "arithmetic": "0.4842 = 92/190 exactly, and 190 - 92 = 98 gives 98/190 = 0.515789. doc 52's `sem manual` 1-feature value 0.6789 = 129/190 has an ODD numerator, which is impossible in the PAIR-LEVEL system (its counts are even out of 190) -- so doc 52's '1-feature' column was computed with the PER-TWIN general-C instrument.",
+      "mechanism": "MAX-FS is sign-symmetric: satisfied(-C) = n - satisfied(C), so max_C satisfied/n >= 0.5 ALWAYS (asserted in selftest). 0.4842 is therefore NOT a maximum -- it is the complement orientation of a C achieving 0.5158. doc 52's search reported the count for the orientation it happened to hold, without evaluating -C.",
+      "honest_restatement": "F1 on the frozen2d family sits AT or NEAR CHANCE, not below it. The registered prediction's WORDING changes ('at floor', never 'below chance'); its CONTENT does not."
+    },
+    "F2_vs_FA_on_frozen2d": {
+      "F2_pair_level": 0.9157894736842105,
+      "FA_pair_level": 0.8526315789473684,
+      "F2_per_twin": 0.9157894736842105,
+      "FA_per_twin": 0.8578947368421053,
+      "pair_level_equal": false,
+      "per_twin_equal": false,
+      "doc52_two_feature": 0.8526,
+      "doc52_two_feature_equals_doc47_single_angle": true,
+      "doc52_two_feature_null_mean": 0.9685,
+      "recomputed_two_feature_null_mean_per_twin": 0.9284736842105263
+    }
+  },
+  "sign_flip_selftest": {
+    "frozen2d": {
+      "FA": {
+        "pair": 0.8526315789473684,
+        "twin": 0.8578947368421053,
+        "boundary_rows_pair": 0
+      },
+      "F1": {
+        "pair": 0.7263157894736842,
+        "twin": 0.7263157894736842,
+        "boundary_rows_pair": 0
+      },
+      "F2": {
+        "pair": 0.9052631578947369,
+        "twin": 0.9105263157894737,
+        "boundary_rows_pair": 0
+      },
+      "exact_ge_search": {
+        "exact": 81,
+        "search": 80
+      }
+    },
+    "raw": {
+      "FA": {
+        "pair": 0.8526315789473684,
+        "twin": 0.8578947368421053,
+        "boundary_rows_pair": 0
+      },
+      "F1": {
+        "pair": 0.8105263157894737,
+        "twin": 0.8105263157894737,
+        "boundary_rows_pair": 0
+      },
+      "F2": {
+        "pair": 0.9052631578947369,
+        "twin": 0.9052631578947369,
+        "boundary_rows_pair": 0
+      },
+      "exact_ge_search": {
+        "exact": 81,
+        "search": 80
+      }
+    }
+  },
+  "search_budget": {
+    "restarts": 48,
+    "steps": 500,
+    "ls_drop_starts": 6,
+    "null_draws": 200,
+    "seed": 68000,
+    "identical_for_category_and_null": true
+  }
+}

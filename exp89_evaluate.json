@@ -1,0 +1,162 @@
+{
+  "experiment": "exp89 — THE ALLOCATION CELL",
+  "arms": {
+    "bpe": "BPE-32k (anchor, exp84 lineage)",
+    "fused": "FUSED-F8000 (anchor, exp84 lineage)",
+    "opt": "FUSED-BACKOFF-OPT (F=24000)",
+    "noback": "FUSED-NOBACKOFF (F=16000)"
+  },
+  "per_seed": [
+    {
+      "seed": 42,
+      "n_heldout": 27765,
+      "gold_meta": {
+        "n_weak_candidates": 14411,
+        "n_strong_candidates": 27995,
+        "n_gold": 2000,
+        "n_weak_in_gold": 600,
+        "actual_weak_frac": 0.3,
+        "mismatch_drops": 9212
+      },
+      "fertility": {
+        "bpe": 1.381825,
+        "fused": 1.824266,
+        "opt": 1.721156,
+        "noback": 1.524573
+      },
+      "vocab_sizes": {
+        "bpe": 32000,
+        "fused": 32000,
+        "opt": 32000,
+        "noback": 32000
+      },
+      "boundary_f1": {
+        "bpe": {
+          "p": 0.2668,
+          "r": 0.1566,
+          "f1": 0.1974,
+          "n": 2000
+        },
+        "fused": {
+          "p": 0.9006,
+          "r": 0.4261,
+          "f1": 0.5785,
+          "n": 2000
+        },
+        "opt": {
+          "p": 0.9006,
+          "r": 0.4261,
+          "f1": 0.5785,
+          "n": 2000
+        },
+        "noback": {
+          "p": 0.5522,
+          "r": 0.4488,
+          "f1": 0.4952,
+          "n": 2000
+        }
+      }
+    },
+    {
+      "seed": 43,
+      "n_heldout": 27765,
+      "gold_meta": {
+        "n_weak_candidates": 14365,
+        "n_strong_candidates": 27853,
+        "n_gold": 2000,
+        "n_weak_in_gold": 600,
+        "actual_weak_frac": 0.3,
+        "mismatch_drops": 9181
+      },
+      "fertility": {
+        "bpe": 1.379707,
+        "fused": 1.822217,
+        "opt": 1.719415,
+        "noback": 1.524362
+      },
+      "vocab_sizes": {
+        "bpe": 32000,
+        "fused": 32000,
+        "opt": 32000,
+        "noback": 32000
+      },
+      "boundary_f1": {
+        "bpe": {
+          "p": 0.2574,
+          "r": 0.1505,
+          "f1": 0.1899,
+          "n": 2000
+        },
+        "fused": {
+          "p": 0.8857,
+          "r": 0.412,
+          "f1": 0.5624,
+          "n": 2000
+        },
+        "opt": {
+          "p": 0.8857,
+          "r": 0.412,
+          "f1": 0.5624,
+          "n": 2000
+        },
+        "noback": {
+          "p": 0.5512,
+          "r": 0.4305,
+          "f1": 0.4834,
+          "n": 2000
+        }
+      }
+    },
+    {
+      "seed": 44,
+      "n_heldout": 27765,
+      "gold_meta": {
+        "n_weak_candidates": 14299,
+        "n_strong_candidates": 27838,
+        "n_gold": 2000,
+        "n_weak_in_gold": 600,
+        "actual_weak_frac": 0.3,
+        "mismatch_drops": 9159
+      },
+      "fertility": {
+        "bpe": 1.380975,
+        "fused": 1.823715,
+        "opt": 1.724522,
+        "noback": 1.521635
+      },
+      "vocab_sizes": {
+        "bpe": 32000,
+        "fused": 32000,
+        "opt": 32000,
+        "noback": 32000
+      },
+      "boundary_f1": {
+        "bpe": {
+          "p": 0.2712,
+          "r": 0.1641,
+          "f1": 0.2045,
+          "n": 2000
+        },
+        "fused": {
+          "p": 0.8673,
+          "r": 0.4144,
+          "f1": 0.5609,
+          "n": 2000
+        },
+        "opt": {
+          "p": 0.8673,
+          "r": 0.4144,
+          "f1": 0.5609,
+          "n": 2000
+        },
+        "noback": {
+          "p": 0.5333,
+          "r": 0.4376,
+          "f1": 0.4808,
+          "n": 2000
+        }
+      }
+    }
+  ],
+  "elapsed_s": 48.4
+}

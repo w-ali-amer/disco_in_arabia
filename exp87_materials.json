@@ -1,0 +1,4726 @@
+{
+  "meta": {
+    "experiment": "exp87",
+    "registration": "80_exp87_arabic_wug_test.md",
+    "nonce_seed": 87999,
+    "control_seed": 87998,
+    "inventory_sha_meta": "a9e9de9ead17cfee6524bf8f44259bb3f3c36b8238e35400b2df7499b21da319",
+    "inventory_sha_file": "7e0c874080f2bfcefcf2c8e14f015709e29db06c00f4649ad37ce62000805af1",
+    "n_nonce_forms": 180,
+    "n_real_forms": 180,
+    "n_total_forms": 360,
+    "forced_deviation": true,
+    "forced_deviation_note": "Real-control mu1/mu2 columns have fewer than 30 admitted entries; drew all available and redistributed deficit to large columns.",
+    "timestamp": "2026-09-17T23:54:47"
+  },
+  "nonce_screening": {
+    "n_draws": 36,
+    "n_accepted": 30,
+    "n_rejected": 6,
+    "reason_counts": {
+      "aravec_attested": 6,
+      "in_camel": 1
+    },
+    "dtf_ktb_reasons": [
+      "in_camel",
+      "aravec_attested"
+    ],
+    "dtf_gate_fires": true
+  },
+  "real_control_distribution": {
+    "faail": 35,
+    "faiil": 35,
+    "fa33aal": 35,
+    "maf3uul": 35,
+    "mu1": 23,
+    "mu2": 17,
+    "total": 180,
+    "forced_deviation": true
+  },
+  "nonce_roots": [
+    {
+      "root": "خ.م.ظ",
+      "r1": "خ",
+      "r2": "م",
+      "r3": "ظ"
+    },
+    {
+      "root": "ظ.ض.س",
+      "r1": "ظ",
+      "r2": "ض",
+      "r3": "س"
+    },
+    {
+      "root": "ع.د.ض",
+      "r1": "ع",
+      "r2": "د",
+      "r3": "ض"
+    },
+    {
+      "root": "ت.خ.ظ",
+      "r1": "ت",
+      "r2": "خ",
+      "r3": "ظ"
+    },
+    {
+      "root": "ط.ع.ص",
+      "r1": "ط",
+      "r2": "ع",
+      "r3": "ص"
+    },
+    {
+      "root": "ذ.ط.ث",
+      "r1": "ذ",
+      "r2": "ط",
+      "r3": "ث"
+    },
+    {
+      "root": "ص.ض.ت",
+      "r1": "ص",
+      "r2": "ض",
+      "r3": "ت"
+    },
+    {
+      "root": "ت.ط.ك",
+      "r1": "ت",
+      "r2": "ط",
+      "r3": "ك"
+    },
+    {
+      "root": "ت.ث.ط",
+      "r1": "ت",
+      "r2": "ث",
+      "r3": "ط"
+    },
+    {
+      "root": "ج.ث.ظ",
+      "r1": "ج",
+      "r2": "ث",
+      "r3": "ظ"
+    },
+    {
+      "root": "ض.ن.ع",
+      "r1": "ض",
+      "r2": "ن",
+      "r3": "ع"
+    },
+    {
+      "root": "ع.ر.خ",
+      "r1": "ع",
+      "r2": "ر",
+      "r3": "خ"
+    },
+    {
+      "root": "ج.ث.ذ",
+      "r1": "ج",
+      "r2": "ث",
+      "r3": "ذ"
+    },
+    {
+      "root": "ض.ز.ه",
+      "r1": "ض",
+      "r2": "ز",
+      "r3": "ه"
+    },
+    {
+      "root": "ص.ن.ب",
+      "r1": "ص",
+      "r2": "ن",
+      "r3": "ب"
+    },
+    {
+      "root": "ن.ع.ذ",
+      "r1": "ن",
+      "r2": "ع",
+      "r3": "ذ"
+    },
+    {
+      "root": "ق.ك.ل",
+      "r1": "ق",
+      "r2": "ك",
+      "r3": "ل"
+    },
+    {
+      "root": "ص.ع.ظ",
+      "r1": "ص",
+      "r2": "ع",
+      "r3": "ظ"
+    },
+    {
+      "root": "ز.ف.ش",
+      "r1": "ز",
+      "r2": "ف",
+      "r3": "ش"
+    },
+    {
+      "root": "ظ.ث.ت",
+      "r1": "ظ",
+      "r2": "ث",
+      "r3": "ت"
+    },
+    {
+      "root": "ض.ص.ب",
+      "r1": "ض",
+      "r2": "ص",
+      "r3": "ب"
+    },
+    {
+      "root": "ل.ف.م",
+      "r1": "ل",
+      "r2": "ف",
+      "r3": "م"
+    },
+    {
+      "root": "ه.ط.ك",
+      "r1": "ه",
+      "r2": "ط",
+      "r3": "ك"
+    },
+    {
+      "root": "ج.ش.س",
+      "r1": "ج",
+      "r2": "ش",
+      "r3": "س"
+    },
+    {
+      "root": "ت.ل.خ",
+      "r1": "ت",
+      "r2": "ل",
+      "r3": "خ"
+    },
+    {
+      "root": "ف.م.ه",
+      "r1": "ف",
+      "r2": "م",
+      "r3": "ه"
+    },
+    {
+      "root": "ث.خ.ز",
+      "r1": "ث",
+      "r2": "خ",
+      "r3": "ز"
+    },
+    {
+      "root": "ظ.ل.ص",
+      "r1": "ظ",
+      "r2": "ل",
+      "r3": "ص"
+    },
+    {
+      "root": "ب.ق.ث",
+      "r1": "ب",
+      "r2": "ق",
+      "r3": "ث"
+    },
+    {
+      "root": "ز.ف.ق",
+      "r1": "ز",
+      "r2": "ف",
+      "r3": "ق"
+    }
+  ],
+  "nonce_forms": [
+    {
+      "form_id": "nonce_0_faail",
+      "type": "nonce",
+      "surface": "الخامظ",
+      "root": "خ.م.ظ",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_0_faiil",
+      "type": "nonce",
+      "surface": "الخميظ",
+      "root": "خ.م.ظ",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_0_fa33aal",
+      "type": "nonce",
+      "surface": "الخماظ",
+      "root": "خ.م.ظ",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_0_maf3uul",
+      "type": "nonce",
+      "surface": "المخموظ",
+      "root": "خ.م.ظ",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_0_mu1",
+      "type": "nonce",
+      "surface": "المخمظ",
+      "root": "خ.م.ظ",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_0_mu2",
+      "type": "nonce",
+      "surface": "المخمظ",
+      "root": "خ.م.ظ",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_1_faail",
+      "type": "nonce",
+      "surface": "الظاضس",
+      "root": "ظ.ض.س",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_1_faiil",
+      "type": "nonce",
+      "surface": "الظضيس",
+      "root": "ظ.ض.س",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_1_fa33aal",
+      "type": "nonce",
+      "surface": "الظضاس",
+      "root": "ظ.ض.س",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_1_maf3uul",
+      "type": "nonce",
+      "surface": "المظضوس",
+      "root": "ظ.ض.س",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_1_mu1",
+      "type": "nonce",
+      "surface": "المظضس",
+      "root": "ظ.ض.س",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_1_mu2",
+      "type": "nonce",
+      "surface": "المظضس",
+      "root": "ظ.ض.س",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_2_faail",
+      "type": "nonce",
+      "surface": "العادض",
+      "root": "ع.د.ض",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_2_faiil",
+      "type": "nonce",
+      "surface": "العديض",
+      "root": "ع.د.ض",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_2_fa33aal",
+      "type": "nonce",
+      "surface": "العداض",
+      "root": "ع.د.ض",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_2_maf3uul",
+      "type": "nonce",
+      "surface": "المعدوض",
+      "root": "ع.د.ض",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_2_mu1",
+      "type": "nonce",
+      "surface": "المعدض",
+      "root": "ع.د.ض",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_2_mu2",
+      "type": "nonce",
+      "surface": "المعدض",
+      "root": "ع.د.ض",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_3_faail",
+      "type": "nonce",
+      "surface": "التاخظ",
+      "root": "ت.خ.ظ",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_3_faiil",
+      "type": "nonce",
+      "surface": "التخيظ",
+      "root": "ت.خ.ظ",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_3_fa33aal",
+      "type": "nonce",
+      "surface": "التخاظ",
+      "root": "ت.خ.ظ",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_3_maf3uul",
+      "type": "nonce",
+      "surface": "المتخوظ",
+      "root": "ت.خ.ظ",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_3_mu1",
+      "type": "nonce",
+      "surface": "المتخظ",
+      "root": "ت.خ.ظ",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_3_mu2",
+      "type": "nonce",
+      "surface": "المتخظ",
+      "root": "ت.خ.ظ",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_4_faail",
+      "type": "nonce",
+      "surface": "الطاعص",
+      "root": "ط.ع.ص",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_4_faiil",
+      "type": "nonce",
+      "surface": "الطعيص",
+      "root": "ط.ع.ص",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_4_fa33aal",
+      "type": "nonce",
+      "surface": "الطعاص",
+      "root": "ط.ع.ص",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_4_maf3uul",
+      "type": "nonce",
+      "surface": "المطعوص",
+      "root": "ط.ع.ص",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_4_mu1",
+      "type": "nonce",
+      "surface": "المطعص",
+      "root": "ط.ع.ص",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_4_mu2",
+      "type": "nonce",
+      "surface": "المطعص",
+      "root": "ط.ع.ص",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_5_faail",
+      "type": "nonce",
+      "surface": "الذاطث",
+      "root": "ذ.ط.ث",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_5_faiil",
+      "type": "nonce",
+      "surface": "الذطيث",
+      "root": "ذ.ط.ث",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_5_fa33aal",
+      "type": "nonce",
+      "surface": "الذطاث",
+      "root": "ذ.ط.ث",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_5_maf3uul",
+      "type": "nonce",
+      "surface": "المذطوث",
+      "root": "ذ.ط.ث",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_5_mu1",
+      "type": "nonce",
+      "surface": "المذطث",
+      "root": "ذ.ط.ث",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_5_mu2",
+      "type": "nonce",
+      "surface": "المذطث",
+      "root": "ذ.ط.ث",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_6_faail",
+      "type": "nonce",
+      "surface": "الصاضت",
+      "root": "ص.ض.ت",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_6_faiil",
+      "type": "nonce",
+      "surface": "الصضيت",
+      "root": "ص.ض.ت",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_6_fa33aal",
+      "type": "nonce",
+      "surface": "الصضات",
+      "root": "ص.ض.ت",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_6_maf3uul",
+      "type": "nonce",
+      "surface": "المصضوت",
+      "root": "ص.ض.ت",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_6_mu1",
+      "type": "nonce",
+      "surface": "المصضت",
+      "root": "ص.ض.ت",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_6_mu2",
+      "type": "nonce",
+      "surface": "المصضت",
+      "root": "ص.ض.ت",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_7_faail",
+      "type": "nonce",
+      "surface": "التاطك",
+      "root": "ت.ط.ك",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_7_faiil",
+      "type": "nonce",
+      "surface": "التطيك",
+      "root": "ت.ط.ك",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_7_fa33aal",
+      "type": "nonce",
+      "surface": "التطاك",
+      "root": "ت.ط.ك",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_7_maf3uul",
+      "type": "nonce",
+      "surface": "المتطوك",
+      "root": "ت.ط.ك",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_7_mu1",
+      "type": "nonce",
+      "surface": "المتطك",
+      "root": "ت.ط.ك",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_7_mu2",
+      "type": "nonce",
+      "surface": "المتطك",
+      "root": "ت.ط.ك",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_8_faail",
+      "type": "nonce",
+      "surface": "التاثط",
+      "root": "ت.ث.ط",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_8_faiil",
+      "type": "nonce",
+      "surface": "التثيط",
+      "root": "ت.ث.ط",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_8_fa33aal",
+      "type": "nonce",
+      "surface": "التثاط",
+      "root": "ت.ث.ط",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_8_maf3uul",
+      "type": "nonce",
+      "surface": "المتثوط",
+      "root": "ت.ث.ط",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_8_mu1",
+      "type": "nonce",
+      "surface": "المتثط",
+      "root": "ت.ث.ط",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_8_mu2",
+      "type": "nonce",
+      "surface": "المتثط",
+      "root": "ت.ث.ط",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_9_faail",
+      "type": "nonce",
+      "surface": "الجاثظ",
+      "root": "ج.ث.ظ",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_9_faiil",
+      "type": "nonce",
+      "surface": "الجثيظ",
+      "root": "ج.ث.ظ",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_9_fa33aal",
+      "type": "nonce",
+      "surface": "الجثاظ",
+      "root": "ج.ث.ظ",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_9_maf3uul",
+      "type": "nonce",
+      "surface": "المجثوظ",
+      "root": "ج.ث.ظ",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_9_mu1",
+      "type": "nonce",
+      "surface": "المجثظ",
+      "root": "ج.ث.ظ",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_9_mu2",
+      "type": "nonce",
+      "surface": "المجثظ",
+      "root": "ج.ث.ظ",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_10_faail",
+      "type": "nonce",
+      "surface": "الضانع",
+      "root": "ض.ن.ع",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_10_faiil",
+      "type": "nonce",
+      "surface": "الضنيع",
+      "root": "ض.ن.ع",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_10_fa33aal",
+      "type": "nonce",
+      "surface": "الضناع",
+      "root": "ض.ن.ع",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_10_maf3uul",
+      "type": "nonce",
+      "surface": "المضنوع",
+      "root": "ض.ن.ع",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_10_mu1",
+      "type": "nonce",
+      "surface": "المضنع",
+      "root": "ض.ن.ع",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_10_mu2",
+      "type": "nonce",
+      "surface": "المضنع",
+      "root": "ض.ن.ع",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_11_faail",
+      "type": "nonce",
+      "surface": "العارخ",
+      "root": "ع.ر.خ",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_11_faiil",
+      "type": "nonce",
+      "surface": "العريخ",
+      "root": "ع.ر.خ",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_11_fa33aal",
+      "type": "nonce",
+      "surface": "العراخ",
+      "root": "ع.ر.خ",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_11_maf3uul",
+      "type": "nonce",
+      "surface": "المعروخ",
+      "root": "ع.ر.خ",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_11_mu1",
+      "type": "nonce",
+      "surface": "المعرخ",
+      "root": "ع.ر.خ",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_11_mu2",
+      "type": "nonce",
+      "surface": "المعرخ",
+      "root": "ع.ر.خ",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_12_faail",
+      "type": "nonce",
+      "surface": "الجاثذ",
+      "root": "ج.ث.ذ",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_12_faiil",
+      "type": "nonce",
+      "surface": "الجثيذ",
+      "root": "ج.ث.ذ",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_12_fa33aal",
+      "type": "nonce",
+      "surface": "الجثاذ",
+      "root": "ج.ث.ذ",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_12_maf3uul",
+      "type": "nonce",
+      "surface": "المجثوذ",
+      "root": "ج.ث.ذ",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_12_mu1",
+      "type": "nonce",
+      "surface": "المجثذ",
+      "root": "ج.ث.ذ",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_12_mu2",
+      "type": "nonce",
+      "surface": "المجثذ",
+      "root": "ج.ث.ذ",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_13_faail",
+      "type": "nonce",
+      "surface": "الضازه",
+      "root": "ض.ز.ه",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_13_faiil",
+      "type": "nonce",
+      "surface": "الضزيه",
+      "root": "ض.ز.ه",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_13_fa33aal",
+      "type": "nonce",
+      "surface": "الضزاه",
+      "root": "ض.ز.ه",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_13_maf3uul",
+      "type": "nonce",
+      "surface": "المضزوه",
+      "root": "ض.ز.ه",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_13_mu1",
+      "type": "nonce",
+      "surface": "المضزه",
+      "root": "ض.ز.ه",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_13_mu2",
+      "type": "nonce",
+      "surface": "المضزه",
+      "root": "ض.ز.ه",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_14_faail",
+      "type": "nonce",
+      "surface": "الصانب",
+      "root": "ص.ن.ب",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_14_faiil",
+      "type": "nonce",
+      "surface": "الصنيب",
+      "root": "ص.ن.ب",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_14_fa33aal",
+      "type": "nonce",
+      "surface": "الصناب",
+      "root": "ص.ن.ب",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_14_maf3uul",
+      "type": "nonce",
+      "surface": "المصنوب",
+      "root": "ص.ن.ب",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_14_mu1",
+      "type": "nonce",
+      "surface": "المصنب",
+      "root": "ص.ن.ب",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_14_mu2",
+      "type": "nonce",
+      "surface": "المصنب",
+      "root": "ص.ن.ب",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_15_faail",
+      "type": "nonce",
+      "surface": "الناعذ",
+      "root": "ن.ع.ذ",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_15_faiil",
+      "type": "nonce",
+      "surface": "النعيذ",
+      "root": "ن.ع.ذ",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_15_fa33aal",
+      "type": "nonce",
+      "surface": "النعاذ",
+      "root": "ن.ع.ذ",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_15_maf3uul",
+      "type": "nonce",
+      "surface": "المنعوذ",
+      "root": "ن.ع.ذ",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_15_mu1",
+      "type": "nonce",
+      "surface": "المنعذ",
+      "root": "ن.ع.ذ",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_15_mu2",
+      "type": "nonce",
+      "surface": "المنعذ",
+      "root": "ن.ع.ذ",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_16_faail",
+      "type": "nonce",
+      "surface": "القاكل",
+      "root": "ق.ك.ل",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_16_faiil",
+      "type": "nonce",
+      "surface": "القكيل",
+      "root": "ق.ك.ل",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_16_fa33aal",
+      "type": "nonce",
+      "surface": "القكال",
+      "root": "ق.ك.ل",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_16_maf3uul",
+      "type": "nonce",
+      "surface": "المقكول",
+      "root": "ق.ك.ل",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_16_mu1",
+      "type": "nonce",
+      "surface": "المقكل",
+      "root": "ق.ك.ل",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_16_mu2",
+      "type": "nonce",
+      "surface": "المقكل",
+      "root": "ق.ك.ل",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_17_faail",
+      "type": "nonce",
+      "surface": "الصاعظ",
+      "root": "ص.ع.ظ",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_17_faiil",
+      "type": "nonce",
+      "surface": "الصعيظ",
+      "root": "ص.ع.ظ",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_17_fa33aal",
+      "type": "nonce",
+      "surface": "الصعاظ",
+      "root": "ص.ع.ظ",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_17_maf3uul",
+      "type": "nonce",
+      "surface": "المصعوظ",
+      "root": "ص.ع.ظ",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_17_mu1",
+      "type": "nonce",
+      "surface": "المصعظ",
+      "root": "ص.ع.ظ",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_17_mu2",
+      "type": "nonce",
+      "surface": "المصعظ",
+      "root": "ص.ع.ظ",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_18_faail",
+      "type": "nonce",
+      "surface": "الزافش",
+      "root": "ز.ف.ش",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_18_faiil",
+      "type": "nonce",
+      "surface": "الزفيش",
+      "root": "ز.ف.ش",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_18_fa33aal",
+      "type": "nonce",
+      "surface": "الزفاش",
+      "root": "ز.ف.ش",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_18_maf3uul",
+      "type": "nonce",
+      "surface": "المزفوش",
+      "root": "ز.ف.ش",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_18_mu1",
+      "type": "nonce",
+      "surface": "المزفش",
+      "root": "ز.ف.ش",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_18_mu2",
+      "type": "nonce",
+      "surface": "المزفش",
+      "root": "ز.ف.ش",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_19_faail",
+      "type": "nonce",
+      "surface": "الظاثت",
+      "root": "ظ.ث.ت",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_19_faiil",
+      "type": "nonce",
+      "surface": "الظثيت",
+      "root": "ظ.ث.ت",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_19_fa33aal",
+      "type": "nonce",
+      "surface": "الظثات",
+      "root": "ظ.ث.ت",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_19_maf3uul",
+      "type": "nonce",
+      "surface": "المظثوت",
+      "root": "ظ.ث.ت",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_19_mu1",
+      "type": "nonce",
+      "surface": "المظثت",
+      "root": "ظ.ث.ت",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_19_mu2",
+      "type": "nonce",
+      "surface": "المظثت",
+      "root": "ظ.ث.ت",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_20_faail",
+      "type": "nonce",
+      "surface": "الضاصب",
+      "root": "ض.ص.ب",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_20_faiil",
+      "type": "nonce",
+      "surface": "الضصيب",
+      "root": "ض.ص.ب",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_20_fa33aal",
+      "type": "nonce",
+      "surface": "الضصاب",
+      "root": "ض.ص.ب",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_20_maf3uul",
+      "type": "nonce",
+      "surface": "المضصوب",
+      "root": "ض.ص.ب",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_20_mu1",
+      "type": "nonce",
+      "surface": "المضصب",
+      "root": "ض.ص.ب",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_20_mu2",
+      "type": "nonce",
+      "surface": "المضصب",
+      "root": "ض.ص.ب",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_21_faail",
+      "type": "nonce",
+      "surface": "اللافم",
+      "root": "ل.ف.م",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_21_faiil",
+      "type": "nonce",
+      "surface": "اللفيم",
+      "root": "ل.ف.م",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_21_fa33aal",
+      "type": "nonce",
+      "surface": "اللفام",
+      "root": "ل.ف.م",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_21_maf3uul",
+      "type": "nonce",
+      "surface": "الملفوم",
+      "root": "ل.ف.م",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_21_mu1",
+      "type": "nonce",
+      "surface": "الملفم",
+      "root": "ل.ف.م",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_21_mu2",
+      "type": "nonce",
+      "surface": "الملفم",
+      "root": "ل.ف.م",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_22_faail",
+      "type": "nonce",
+      "surface": "الهاطك",
+      "root": "ه.ط.ك",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_22_faiil",
+      "type": "nonce",
+      "surface": "الهطيك",
+      "root": "ه.ط.ك",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_22_fa33aal",
+      "type": "nonce",
+      "surface": "الهطاك",
+      "root": "ه.ط.ك",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_22_maf3uul",
+      "type": "nonce",
+      "surface": "المهطوك",
+      "root": "ه.ط.ك",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_22_mu1",
+      "type": "nonce",
+      "surface": "المهطك",
+      "root": "ه.ط.ك",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_22_mu2",
+      "type": "nonce",
+      "surface": "المهطك",
+      "root": "ه.ط.ك",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_23_faail",
+      "type": "nonce",
+      "surface": "الجاشس",
+      "root": "ج.ش.س",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_23_faiil",
+      "type": "nonce",
+      "surface": "الجشيس",
+      "root": "ج.ش.س",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_23_fa33aal",
+      "type": "nonce",
+      "surface": "الجشاس",
+      "root": "ج.ش.س",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_23_maf3uul",
+      "type": "nonce",
+      "surface": "المجشوس",
+      "root": "ج.ش.س",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_23_mu1",
+      "type": "nonce",
+      "surface": "المجشس",
+      "root": "ج.ش.س",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_23_mu2",
+      "type": "nonce",
+      "surface": "المجشس",
+      "root": "ج.ش.س",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_24_faail",
+      "type": "nonce",
+      "surface": "التالخ",
+      "root": "ت.ل.خ",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_24_faiil",
+      "type": "nonce",
+      "surface": "التليخ",
+      "root": "ت.ل.خ",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_24_fa33aal",
+      "type": "nonce",
+      "surface": "التلاخ",
+      "root": "ت.ل.خ",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_24_maf3uul",
+      "type": "nonce",
+      "surface": "المتلوخ",
+      "root": "ت.ل.خ",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_24_mu1",
+      "type": "nonce",
+      "surface": "المتلخ",
+      "root": "ت.ل.خ",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_24_mu2",
+      "type": "nonce",
+      "surface": "المتلخ",
+      "root": "ت.ل.خ",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_25_faail",
+      "type": "nonce",
+      "surface": "الفامه",
+      "root": "ف.م.ه",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_25_faiil",
+      "type": "nonce",
+      "surface": "الفميه",
+      "root": "ف.م.ه",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_25_fa33aal",
+      "type": "nonce",
+      "surface": "الفماه",
+      "root": "ف.م.ه",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_25_maf3uul",
+      "type": "nonce",
+      "surface": "المفموه",
+      "root": "ف.م.ه",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_25_mu1",
+      "type": "nonce",
+      "surface": "المفمه",
+      "root": "ف.م.ه",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_25_mu2",
+      "type": "nonce",
+      "surface": "المفمه",
+      "root": "ف.م.ه",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_26_faail",
+      "type": "nonce",
+      "surface": "الثاخز",
+      "root": "ث.خ.ز",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_26_faiil",
+      "type": "nonce",
+      "surface": "الثخيز",
+      "root": "ث.خ.ز",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_26_fa33aal",
+      "type": "nonce",
+      "surface": "الثخاز",
+      "root": "ث.خ.ز",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_26_maf3uul",
+      "type": "nonce",
+      "surface": "المثخوز",
+      "root": "ث.خ.ز",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_26_mu1",
+      "type": "nonce",
+      "surface": "المثخز",
+      "root": "ث.خ.ز",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_26_mu2",
+      "type": "nonce",
+      "surface": "المثخز",
+      "root": "ث.خ.ز",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_27_faail",
+      "type": "nonce",
+      "surface": "الظالص",
+      "root": "ظ.ل.ص",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_27_faiil",
+      "type": "nonce",
+      "surface": "الظليص",
+      "root": "ظ.ل.ص",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_27_fa33aal",
+      "type": "nonce",
+      "surface": "الظلاص",
+      "root": "ظ.ل.ص",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_27_maf3uul",
+      "type": "nonce",
+      "surface": "المظلوص",
+      "root": "ظ.ل.ص",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_27_mu1",
+      "type": "nonce",
+      "surface": "المظلص",
+      "root": "ظ.ل.ص",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_27_mu2",
+      "type": "nonce",
+      "surface": "المظلص",
+      "root": "ظ.ل.ص",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_28_faail",
+      "type": "nonce",
+      "surface": "الباقث",
+      "root": "ب.ق.ث",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_28_faiil",
+      "type": "nonce",
+      "surface": "البقيث",
+      "root": "ب.ق.ث",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_28_fa33aal",
+      "type": "nonce",
+      "surface": "البقاث",
+      "root": "ب.ق.ث",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_28_maf3uul",
+      "type": "nonce",
+      "surface": "المبقوث",
+      "root": "ب.ق.ث",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_28_mu1",
+      "type": "nonce",
+      "surface": "المبقث",
+      "root": "ب.ق.ث",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_28_mu2",
+      "type": "nonce",
+      "surface": "المبقث",
+      "root": "ب.ق.ث",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_29_faail",
+      "type": "nonce",
+      "surface": "الزافق",
+      "root": "ز.ف.ق",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_29_faiil",
+      "type": "nonce",
+      "surface": "الزفيق",
+      "root": "ز.ف.ق",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_29_fa33aal",
+      "type": "nonce",
+      "surface": "الزفاق",
+      "root": "ز.ف.ق",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_29_maf3uul",
+      "type": "nonce",
+      "surface": "المزفوق",
+      "root": "ز.ف.ق",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": false
+    },
+    {
+      "form_id": "nonce_29_mu1",
+      "type": "nonce",
+      "surface": "المزفق",
+      "root": "ز.ف.ق",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    },
+    {
+      "form_id": "nonce_29_mu2",
+      "type": "nonce",
+      "surface": "المزفق",
+      "root": "ز.ف.ق",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction",
+      "surface_shared_with_mu_sibling": true
+    }
+  ],
+  "real_forms": [
+    {
+      "form_id": "real_0",
+      "type": "real",
+      "surface": "الحافظ",
+      "root": "ح.ف.ظ",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الحافظ"
+    },
+    {
+      "form_id": "real_1",
+      "type": "real",
+      "surface": "الشاهد",
+      "root": "ش.ه.د",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الشاهد"
+    },
+    {
+      "form_id": "real_2",
+      "type": "real",
+      "surface": "البالغ",
+      "root": "ب.ل.غ",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "البالغ"
+    },
+    {
+      "form_id": "real_3",
+      "type": "real",
+      "surface": "العابد",
+      "root": "ع.ب.د",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "العابد"
+    },
+    {
+      "form_id": "real_4",
+      "type": "real",
+      "surface": "العارض",
+      "root": "ع.ر.ض",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "العارض"
+    },
+    {
+      "form_id": "real_5",
+      "type": "real",
+      "surface": "الراشد",
+      "root": "ر.ش.د",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الراشد"
+    },
+    {
+      "form_id": "real_6",
+      "type": "real",
+      "surface": "البارق",
+      "root": "ب.ر.ق",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "البارق"
+    },
+    {
+      "form_id": "real_7",
+      "type": "real",
+      "surface": "الحامل",
+      "root": "ح.م.ل",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الحامل"
+    },
+    {
+      "form_id": "real_8",
+      "type": "real",
+      "surface": "الشاغل",
+      "root": "ش.غ.ل",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الشاغل"
+    },
+    {
+      "form_id": "real_9",
+      "type": "real",
+      "surface": "الناعم",
+      "root": "ن.ع.م",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الناعم"
+    },
+    {
+      "form_id": "real_10",
+      "type": "real",
+      "surface": "الخاطر",
+      "root": "خ.ط.ر",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الخاطر"
+    },
+    {
+      "form_id": "real_11",
+      "type": "real",
+      "surface": "الفالح",
+      "root": "ف.ل.ح",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الفالح"
+    },
+    {
+      "form_id": "real_12",
+      "type": "real",
+      "surface": "القاتل",
+      "root": "ق.ت.ل",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "القاتل"
+    },
+    {
+      "form_id": "real_13",
+      "type": "real",
+      "surface": "الفارق",
+      "root": "ف.ر.ق",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الفارق"
+    },
+    {
+      "form_id": "real_14",
+      "type": "real",
+      "surface": "القادر",
+      "root": "ق.د.ر",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "القادر"
+    },
+    {
+      "form_id": "real_15",
+      "type": "real",
+      "surface": "المالك",
+      "root": "م.ل.ك",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "المالك"
+    },
+    {
+      "form_id": "real_16",
+      "type": "real",
+      "surface": "العالم",
+      "root": "ع.ل.م",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "العالم"
+    },
+    {
+      "form_id": "real_17",
+      "type": "real",
+      "surface": "السامع",
+      "root": "س.م.ع",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "السامع"
+    },
+    {
+      "form_id": "real_18",
+      "type": "real",
+      "surface": "المارد",
+      "root": "م.ر.د",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "المارد"
+    },
+    {
+      "form_id": "real_19",
+      "type": "real",
+      "surface": "العارف",
+      "root": "ع.ر.ف",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "العارف"
+    },
+    {
+      "form_id": "real_20",
+      "type": "real",
+      "surface": "القاعد",
+      "root": "ق.ع.د",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "القاعد"
+    },
+    {
+      "form_id": "real_21",
+      "type": "real",
+      "surface": "الساعد",
+      "root": "س.ع.د",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الساعد"
+    },
+    {
+      "form_id": "real_22",
+      "type": "real",
+      "surface": "الفاتن",
+      "root": "ف.ت.ن",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الفاتن"
+    },
+    {
+      "form_id": "real_23",
+      "type": "real",
+      "surface": "الجابر",
+      "root": "ج.ب.ر",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الجابر"
+    },
+    {
+      "form_id": "real_24",
+      "type": "real",
+      "surface": "الصانع",
+      "root": "ص.ن.ع",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الصانع"
+    },
+    {
+      "form_id": "real_25",
+      "type": "real",
+      "surface": "العابر",
+      "root": "ع.ب.ر",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "العابر"
+    },
+    {
+      "form_id": "real_26",
+      "type": "real",
+      "surface": "الفاتح",
+      "root": "ف.ت.ح",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الفاتح"
+    },
+    {
+      "form_id": "real_27",
+      "type": "real",
+      "surface": "الخالص",
+      "root": "خ.ل.ص",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الخالص"
+    },
+    {
+      "form_id": "real_28",
+      "type": "real",
+      "surface": "القارب",
+      "root": "ق.ر.ب",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "القارب"
+    },
+    {
+      "form_id": "real_29",
+      "type": "real",
+      "surface": "القادم",
+      "root": "ق.د.م",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "القادم"
+    },
+    {
+      "form_id": "real_30",
+      "type": "real",
+      "surface": "الرافع",
+      "root": "ر.ف.ع",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الرافع"
+    },
+    {
+      "form_id": "real_31",
+      "type": "real",
+      "surface": "الزارع",
+      "root": "ز.ر.ع",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الزارع"
+    },
+    {
+      "form_id": "real_32",
+      "type": "real",
+      "surface": "الراصد",
+      "root": "ر.ص.د",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الراصد"
+    },
+    {
+      "form_id": "real_33",
+      "type": "real",
+      "surface": "الظالم",
+      "root": "ظ.ل.م",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الظالم"
+    },
+    {
+      "form_id": "real_34",
+      "type": "real",
+      "surface": "الشارب",
+      "root": "ش.ر.ب",
+      "column": "faail",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الشارب"
+    },
+    {
+      "form_id": "real_35",
+      "type": "real",
+      "surface": "الرصيد",
+      "root": "ر.ص.د",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الرصيد"
+    },
+    {
+      "form_id": "real_36",
+      "type": "real",
+      "surface": "العريض",
+      "root": "ع.ر.ض",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "العريض"
+    },
+    {
+      "form_id": "real_37",
+      "type": "real",
+      "surface": "القصيد",
+      "root": "ق.ص.د",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "القصيد"
+    },
+    {
+      "form_id": "real_38",
+      "type": "real",
+      "surface": "النظير",
+      "root": "ن.ظ.ر",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "النظير"
+    },
+    {
+      "form_id": "real_39",
+      "type": "real",
+      "surface": "العبير",
+      "root": "ع.ب.ر",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "العبير"
+    },
+    {
+      "form_id": "real_40",
+      "type": "real",
+      "surface": "الغفير",
+      "root": "غ.ف.ر",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الغفير"
+    },
+    {
+      "form_id": "real_41",
+      "type": "real",
+      "surface": "القدير",
+      "root": "ق.د.ر",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "القدير"
+    },
+    {
+      "form_id": "real_42",
+      "type": "real",
+      "surface": "الفهيم",
+      "root": "ف.ه.م",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الفهيم"
+    },
+    {
+      "form_id": "real_43",
+      "type": "real",
+      "surface": "السجين",
+      "root": "س.ج.ن",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "السجين"
+    },
+    {
+      "form_id": "real_44",
+      "type": "real",
+      "surface": "المريد",
+      "root": "م.ر.د",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "المريد"
+    },
+    {
+      "form_id": "real_45",
+      "type": "real",
+      "surface": "المليك",
+      "root": "م.ل.ك",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "المليك"
+    },
+    {
+      "form_id": "real_46",
+      "type": "real",
+      "surface": "العريف",
+      "root": "ع.ر.ف",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "العريف"
+    },
+    {
+      "form_id": "real_47",
+      "type": "real",
+      "surface": "السليم",
+      "root": "س.ل.م",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "السليم"
+    },
+    {
+      "form_id": "real_48",
+      "type": "real",
+      "surface": "الحريق",
+      "root": "ح.ر.ق",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الحريق"
+    },
+    {
+      "form_id": "real_49",
+      "type": "real",
+      "surface": "الغدير",
+      "root": "غ.د.ر",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الغدير"
+    },
+    {
+      "form_id": "real_50",
+      "type": "real",
+      "surface": "الجميع",
+      "root": "ج.م.ع",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الجميع"
+    },
+    {
+      "form_id": "real_51",
+      "type": "real",
+      "surface": "الجريح",
+      "root": "ج.ر.ح",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الجريح"
+    },
+    {
+      "form_id": "real_52",
+      "type": "real",
+      "surface": "القتيل",
+      "root": "ق.ت.ل",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "القتيل"
+    },
+    {
+      "form_id": "real_53",
+      "type": "real",
+      "surface": "الدريس",
+      "root": "د.ر.س",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الدريس"
+    },
+    {
+      "form_id": "real_54",
+      "type": "real",
+      "surface": "العليم",
+      "root": "ع.ل.م",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "العليم"
+    },
+    {
+      "form_id": "real_55",
+      "type": "real",
+      "surface": "المديح",
+      "root": "م.د.ح",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "المديح"
+    },
+    {
+      "form_id": "real_56",
+      "type": "real",
+      "surface": "الطبيخ",
+      "root": "ط.ب.خ",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الطبيخ"
+    },
+    {
+      "form_id": "real_57",
+      "type": "real",
+      "surface": "الخمير",
+      "root": "خ.م.ر",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الخمير"
+    },
+    {
+      "form_id": "real_58",
+      "type": "real",
+      "surface": "الكسير",
+      "root": "ك.س.ر",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الكسير"
+    },
+    {
+      "form_id": "real_59",
+      "type": "real",
+      "surface": "القديم",
+      "root": "ق.د.م",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "القديم"
+    },
+    {
+      "form_id": "real_60",
+      "type": "real",
+      "surface": "العقيد",
+      "root": "ع.ق.د",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "العقيد"
+    },
+    {
+      "form_id": "real_61",
+      "type": "real",
+      "surface": "العبيد",
+      "root": "ع.ب.د",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "العبيد"
+    },
+    {
+      "form_id": "real_62",
+      "type": "real",
+      "surface": "القصير",
+      "root": "ق.ص.ر",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "القصير"
+    },
+    {
+      "form_id": "real_63",
+      "type": "real",
+      "surface": "الرحيل",
+      "root": "ر.ح.ل",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الرحيل"
+    },
+    {
+      "form_id": "real_64",
+      "type": "real",
+      "surface": "العشيق",
+      "root": "ع.ش.ق",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "العشيق"
+    },
+    {
+      "form_id": "real_65",
+      "type": "real",
+      "surface": "الحكيم",
+      "root": "ح.ك.م",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الحكيم"
+    },
+    {
+      "form_id": "real_66",
+      "type": "real",
+      "surface": "الرشيد",
+      "root": "ر.ش.د",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الرشيد"
+    },
+    {
+      "form_id": "real_67",
+      "type": "real",
+      "surface": "الحميل",
+      "root": "ح.م.ل",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الحميل"
+    },
+    {
+      "form_id": "real_68",
+      "type": "real",
+      "surface": "الجميل",
+      "root": "ج.م.ل",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الجميل"
+    },
+    {
+      "form_id": "real_69",
+      "type": "real",
+      "surface": "القريب",
+      "root": "ق.ر.ب",
+      "column": "faiil",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "القريب"
+    },
+    {
+      "form_id": "real_70",
+      "type": "real",
+      "surface": "الفعال",
+      "root": "ف.ع.ل",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الفعال"
+    },
+    {
+      "form_id": "real_71",
+      "type": "real",
+      "surface": "الخزان",
+      "root": "خ.ز.ن",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الخزان"
+    },
+    {
+      "form_id": "real_72",
+      "type": "real",
+      "surface": "الخلاق",
+      "root": "خ.ل.ق",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الخلاق"
+    },
+    {
+      "form_id": "real_73",
+      "type": "real",
+      "surface": "الظلام",
+      "root": "ظ.ل.م",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الظلام"
+    },
+    {
+      "form_id": "real_74",
+      "type": "real",
+      "surface": "البتار",
+      "root": "ب.ت.ر",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "البتار"
+    },
+    {
+      "form_id": "real_75",
+      "type": "real",
+      "surface": "القتال",
+      "root": "ق.ت.ل",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "القتال"
+    },
+    {
+      "form_id": "real_76",
+      "type": "real",
+      "surface": "النقال",
+      "root": "ن.ق.ل",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "النقال"
+    },
+    {
+      "form_id": "real_77",
+      "type": "real",
+      "surface": "العباد",
+      "root": "ع.ب.د",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "العباد"
+    },
+    {
+      "form_id": "real_78",
+      "type": "real",
+      "surface": "الخطار",
+      "root": "خ.ط.ر",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الخطار"
+    },
+    {
+      "form_id": "real_79",
+      "type": "real",
+      "surface": "الرحال",
+      "root": "ر.ح.ل",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الرحال"
+    },
+    {
+      "form_id": "real_80",
+      "type": "real",
+      "surface": "الجلاد",
+      "root": "ج.ل.د",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الجلاد"
+    },
+    {
+      "form_id": "real_81",
+      "type": "real",
+      "surface": "الدفاع",
+      "root": "د.ف.ع",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الدفاع"
+    },
+    {
+      "form_id": "real_82",
+      "type": "real",
+      "surface": "الملاح",
+      "root": "م.ل.ح",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الملاح"
+    },
+    {
+      "form_id": "real_83",
+      "type": "real",
+      "surface": "الحراق",
+      "root": "ح.ر.ق",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الحراق"
+    },
+    {
+      "form_id": "real_84",
+      "type": "real",
+      "surface": "النظار",
+      "root": "ن.ظ.ر",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "النظار"
+    },
+    {
+      "form_id": "real_85",
+      "type": "real",
+      "surface": "الغفار",
+      "root": "غ.ف.ر",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الغفار"
+    },
+    {
+      "form_id": "real_86",
+      "type": "real",
+      "surface": "العلام",
+      "root": "ع.ل.م",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "العلام"
+    },
+    {
+      "form_id": "real_87",
+      "type": "real",
+      "surface": "الجراح",
+      "root": "ج.ر.ح",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الجراح"
+    },
+    {
+      "form_id": "real_88",
+      "type": "real",
+      "surface": "الزراع",
+      "root": "ز.ر.ع",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الزراع"
+    },
+    {
+      "form_id": "real_89",
+      "type": "real",
+      "surface": "الشراب",
+      "root": "ش.ر.ب",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الشراب"
+    },
+    {
+      "form_id": "real_90",
+      "type": "real",
+      "surface": "الفتاح",
+      "root": "ف.ت.ح",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الفتاح"
+    },
+    {
+      "form_id": "real_91",
+      "type": "real",
+      "surface": "البراد",
+      "root": "ب.ر.د",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "البراد"
+    },
+    {
+      "form_id": "real_92",
+      "type": "real",
+      "surface": "البراق",
+      "root": "ب.ر.ق",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "البراق"
+    },
+    {
+      "form_id": "real_93",
+      "type": "real",
+      "surface": "الخمار",
+      "root": "خ.م.ر",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الخمار"
+    },
+    {
+      "form_id": "real_94",
+      "type": "real",
+      "surface": "الملاك",
+      "root": "م.ل.ك",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الملاك"
+    },
+    {
+      "form_id": "real_95",
+      "type": "real",
+      "surface": "الشغال",
+      "root": "ش.غ.ل",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الشغال"
+    },
+    {
+      "form_id": "real_96",
+      "type": "real",
+      "surface": "الجبار",
+      "root": "ج.ب.ر",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الجبار"
+    },
+    {
+      "form_id": "real_97",
+      "type": "real",
+      "surface": "الغدار",
+      "root": "غ.د.ر",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الغدار"
+    },
+    {
+      "form_id": "real_98",
+      "type": "real",
+      "surface": "المداح",
+      "root": "م.د.ح",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "المداح"
+    },
+    {
+      "form_id": "real_99",
+      "type": "real",
+      "surface": "القصار",
+      "root": "ق.ص.ر",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "القصار"
+    },
+    {
+      "form_id": "real_100",
+      "type": "real",
+      "surface": "الفتان",
+      "root": "ف.ت.ن",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الفتان"
+    },
+    {
+      "form_id": "real_101",
+      "type": "real",
+      "surface": "الجمال",
+      "root": "ج.م.ل",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الجمال"
+    },
+    {
+      "form_id": "real_102",
+      "type": "real",
+      "surface": "الستار",
+      "root": "س.ت.ر",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الستار"
+    },
+    {
+      "form_id": "real_103",
+      "type": "real",
+      "surface": "الصراخ",
+      "root": "ص.ر.خ",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "الصراخ"
+    },
+    {
+      "form_id": "real_104",
+      "type": "real",
+      "surface": "القطاع",
+      "root": "ق.ط.ع",
+      "column": "fa33aal",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "القطاع"
+    },
+    {
+      "form_id": "real_105",
+      "type": "real",
+      "surface": "المعروض",
+      "root": "ع.ر.ض",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "المعروض"
+    },
+    {
+      "form_id": "real_106",
+      "type": "real",
+      "surface": "المفقود",
+      "root": "ف.ق.د",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "المفقود"
+    },
+    {
+      "form_id": "real_107",
+      "type": "real",
+      "surface": "المسكون",
+      "root": "س.ك.ن",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "المسكون"
+    },
+    {
+      "form_id": "real_108",
+      "type": "real",
+      "surface": "المدروس",
+      "root": "د.ر.س",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "المدروس"
+    },
+    {
+      "form_id": "real_109",
+      "type": "real",
+      "surface": "المعبود",
+      "root": "ع.ب.د",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "المعبود"
+    },
+    {
+      "form_id": "real_110",
+      "type": "real",
+      "surface": "المنقول",
+      "root": "ن.ق.ل",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "المنقول"
+    },
+    {
+      "form_id": "real_111",
+      "type": "real",
+      "surface": "المغفور",
+      "root": "غ.ف.ر",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "المغفور"
+    },
+    {
+      "form_id": "real_112",
+      "type": "real",
+      "surface": "المحكوم",
+      "root": "ح.ك.م",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "المحكوم"
+    },
+    {
+      "form_id": "real_113",
+      "type": "real",
+      "surface": "المفتون",
+      "root": "ف.ت.ن",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "المفتون"
+    },
+    {
+      "form_id": "real_114",
+      "type": "real",
+      "surface": "المرصود",
+      "root": "ر.ص.د",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "المرصود"
+    },
+    {
+      "form_id": "real_115",
+      "type": "real",
+      "surface": "المعمول",
+      "root": "ع.م.ل",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "المعمول"
+    },
+    {
+      "form_id": "real_116",
+      "type": "real",
+      "surface": "المخزون",
+      "root": "خ.ز.ن",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "المخزون"
+    },
+    {
+      "form_id": "real_117",
+      "type": "real",
+      "surface": "المعلوم",
+      "root": "ع.ل.م",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "المعلوم"
+    },
+    {
+      "form_id": "real_118",
+      "type": "real",
+      "surface": "المستور",
+      "root": "س.ت.ر",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "المستور"
+    },
+    {
+      "form_id": "real_119",
+      "type": "real",
+      "surface": "المخلوق",
+      "root": "خ.ل.ق",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "المخلوق"
+    },
+    {
+      "form_id": "real_120",
+      "type": "real",
+      "surface": "المضروب",
+      "root": "ض.ر.ب",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "المضروب"
+    },
+    {
+      "form_id": "real_121",
+      "type": "real",
+      "surface": "المنظور",
+      "root": "ن.ظ.ر",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "المنظور"
+    },
+    {
+      "form_id": "real_122",
+      "type": "real",
+      "surface": "المشروع",
+      "root": "ش.ر.ع",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "المشروع"
+    },
+    {
+      "form_id": "real_123",
+      "type": "real",
+      "surface": "المبتور",
+      "root": "ب.ت.ر",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "المبتور"
+    },
+    {
+      "form_id": "real_124",
+      "type": "real",
+      "surface": "المشهود",
+      "root": "ش.ه.د",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "المشهود"
+    },
+    {
+      "form_id": "real_125",
+      "type": "real",
+      "surface": "المجموع",
+      "root": "ج.م.ع",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "المجموع"
+    },
+    {
+      "form_id": "real_126",
+      "type": "real",
+      "surface": "المرفوع",
+      "root": "ر.ف.ع",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "المرفوع"
+    },
+    {
+      "form_id": "real_127",
+      "type": "real",
+      "surface": "المظلوم",
+      "root": "ظ.ل.م",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "المظلوم"
+    },
+    {
+      "form_id": "real_128",
+      "type": "real",
+      "surface": "المجروح",
+      "root": "ج.ر.ح",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "المجروح"
+    },
+    {
+      "form_id": "real_129",
+      "type": "real",
+      "surface": "المحزون",
+      "root": "ح.ز.ن",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "المحزون"
+    },
+    {
+      "form_id": "real_130",
+      "type": "real",
+      "surface": "المصنوع",
+      "root": "ص.ن.ع",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "المصنوع"
+    },
+    {
+      "form_id": "real_131",
+      "type": "real",
+      "surface": "المعروف",
+      "root": "ع.ر.ف",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "المعروف"
+    },
+    {
+      "form_id": "real_132",
+      "type": "real",
+      "surface": "المفعول",
+      "root": "ف.ع.ل",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "المفعول"
+    },
+    {
+      "form_id": "real_133",
+      "type": "real",
+      "surface": "المنصور",
+      "root": "ن.ص.ر",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "المنصور"
+    },
+    {
+      "form_id": "real_134",
+      "type": "real",
+      "surface": "المجبور",
+      "root": "ج.ب.ر",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "المجبور"
+    },
+    {
+      "form_id": "real_135",
+      "type": "real",
+      "surface": "المخمور",
+      "root": "خ.م.ر",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "المخمور"
+    },
+    {
+      "form_id": "real_136",
+      "type": "real",
+      "surface": "المدفوع",
+      "root": "د.ف.ع",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "المدفوع"
+    },
+    {
+      "form_id": "real_137",
+      "type": "real",
+      "surface": "المنشود",
+      "root": "ن.ش.د",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "المنشود"
+    },
+    {
+      "form_id": "real_138",
+      "type": "real",
+      "surface": "المسعود",
+      "root": "س.ع.د",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "المسعود"
+    },
+    {
+      "form_id": "real_139",
+      "type": "real",
+      "surface": "المعقود",
+      "root": "ع.ق.د",
+      "column": "maf3uul",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": false,
+      "inventory_word": "المعقود"
+    },
+    {
+      "form_id": "real_140",
+      "type": "real",
+      "surface": "المصلح",
+      "root": "ص.ل.ح",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": true,
+      "inventory_word": "المصلح"
+    },
+    {
+      "form_id": "real_141",
+      "type": "real",
+      "surface": "المعلم",
+      "root": "ع.ل.م",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": true,
+      "inventory_word": "المعلم"
+    },
+    {
+      "form_id": "real_142",
+      "type": "real",
+      "surface": "المجبر",
+      "root": "ج.ب.ر",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": true,
+      "inventory_word": "المجبر"
+    },
+    {
+      "form_id": "real_143",
+      "type": "real",
+      "surface": "المعلق",
+      "root": "ع.ل.ق",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": true,
+      "inventory_word": "المعلق"
+    },
+    {
+      "form_id": "real_144",
+      "type": "real",
+      "surface": "المصنع",
+      "root": "ص.ن.ع",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": true,
+      "inventory_word": "المصنع"
+    },
+    {
+      "form_id": "real_145",
+      "type": "real",
+      "surface": "المشغل",
+      "root": "ش.غ.ل",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": true,
+      "inventory_word": "المشغل"
+    },
+    {
+      "form_id": "real_146",
+      "type": "real",
+      "surface": "المشرع",
+      "root": "ش.ر.ع",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": true,
+      "inventory_word": "المشرع"
+    },
+    {
+      "form_id": "real_147",
+      "type": "real",
+      "surface": "المقدم",
+      "root": "ق.د.م",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": true,
+      "inventory_word": "المقدم"
+    },
+    {
+      "form_id": "real_148",
+      "type": "real",
+      "surface": "المشرف",
+      "root": "ش.ر.ف",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": true,
+      "inventory_word": "المشرف"
+    },
+    {
+      "form_id": "real_149",
+      "type": "real",
+      "surface": "المحرق",
+      "root": "ح.ر.ق",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": true,
+      "inventory_word": "المحرق"
+    },
+    {
+      "form_id": "real_150",
+      "type": "real",
+      "surface": "المسكن",
+      "root": "س.ك.ن",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": true,
+      "inventory_word": "المسكن"
+    },
+    {
+      "form_id": "real_151",
+      "type": "real",
+      "surface": "المقصر",
+      "root": "ق.ص.ر",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": true,
+      "inventory_word": "المقصر"
+    },
+    {
+      "form_id": "real_152",
+      "type": "real",
+      "surface": "المعرض",
+      "root": "ع.ر.ض",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": true,
+      "inventory_word": "المعرض"
+    },
+    {
+      "form_id": "real_153",
+      "type": "real",
+      "surface": "المبرد",
+      "root": "ب.ر.د",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": true,
+      "inventory_word": "المبرد"
+    },
+    {
+      "form_id": "real_154",
+      "type": "real",
+      "surface": "المجمع",
+      "root": "ج.م.ع",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": true,
+      "inventory_word": "المجمع"
+    },
+    {
+      "form_id": "real_155",
+      "type": "real",
+      "surface": "المجلد",
+      "root": "ج.ل.د",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": true,
+      "inventory_word": "المجلد"
+    },
+    {
+      "form_id": "real_156",
+      "type": "real",
+      "surface": "المعبر",
+      "root": "ع.ب.ر",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": true,
+      "inventory_word": "المعبر"
+    },
+    {
+      "form_id": "real_157",
+      "type": "real",
+      "surface": "المبلغ",
+      "root": "ب.ل.غ",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": true,
+      "inventory_word": "المبلغ"
+    },
+    {
+      "form_id": "real_158",
+      "type": "real",
+      "surface": "المخلص",
+      "root": "خ.ل.ص",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": true,
+      "inventory_word": "المخلص"
+    },
+    {
+      "form_id": "real_159",
+      "type": "real",
+      "surface": "المفرق",
+      "root": "ف.ر.ق",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": true,
+      "inventory_word": "المفرق"
+    },
+    {
+      "form_id": "real_160",
+      "type": "real",
+      "surface": "المظهر",
+      "root": "ظ.ه.ر",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": true,
+      "inventory_word": "المظهر"
+    },
+    {
+      "form_id": "real_161",
+      "type": "real",
+      "surface": "المقدر",
+      "root": "ق.د.ر",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": true,
+      "inventory_word": "المقدر"
+    },
+    {
+      "form_id": "real_162",
+      "type": "real",
+      "surface": "المدرس",
+      "root": "د.ر.س",
+      "column": "mu1",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": true,
+      "inventory_word": "المدرس"
+    },
+    {
+      "form_id": "real_163",
+      "type": "real",
+      "surface": "المنعم",
+      "root": "ن.ع.م",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": true,
+      "inventory_word": "المنعم"
+    },
+    {
+      "form_id": "real_164",
+      "type": "real",
+      "surface": "المنتج",
+      "root": "ن.ت.ج",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": true,
+      "inventory_word": "المنتج"
+    },
+    {
+      "form_id": "real_165",
+      "type": "real",
+      "surface": "المصلح",
+      "root": "ص.ل.ح",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": true,
+      "inventory_word": "المصلح"
+    },
+    {
+      "form_id": "real_166",
+      "type": "real",
+      "surface": "المسلم",
+      "root": "س.ل.م",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": true,
+      "inventory_word": "المسلم"
+    },
+    {
+      "form_id": "real_167",
+      "type": "real",
+      "surface": "المظلم",
+      "root": "ظ.ل.م",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": true,
+      "inventory_word": "المظلم"
+    },
+    {
+      "form_id": "real_168",
+      "type": "real",
+      "surface": "المحزن",
+      "root": "ح.ز.ن",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": true,
+      "inventory_word": "المحزن"
+    },
+    {
+      "form_id": "real_169",
+      "type": "real",
+      "surface": "المقبل",
+      "root": "ق.ب.ل",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": true,
+      "inventory_word": "المقبل"
+    },
+    {
+      "form_id": "real_170",
+      "type": "real",
+      "surface": "المنشد",
+      "root": "ن.ش.د",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": true,
+      "inventory_word": "المنشد"
+    },
+    {
+      "form_id": "real_171",
+      "type": "real",
+      "surface": "المضحك",
+      "root": "ض.ح.ك",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": true,
+      "inventory_word": "المضحك"
+    },
+    {
+      "form_id": "real_172",
+      "type": "real",
+      "surface": "المرشد",
+      "root": "ر.ش.د",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": true,
+      "inventory_word": "المرشد"
+    },
+    {
+      "form_id": "real_173",
+      "type": "real",
+      "surface": "المضرب",
+      "root": "ض.ر.ب",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": true,
+      "inventory_word": "المضرب"
+    },
+    {
+      "form_id": "real_174",
+      "type": "real",
+      "surface": "المقطع",
+      "root": "ق.ط.ع",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": true,
+      "inventory_word": "المقطع"
+    },
+    {
+      "form_id": "real_175",
+      "type": "real",
+      "surface": "المفلح",
+      "root": "ف.ل.ح",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": true,
+      "inventory_word": "المفلح"
+    },
+    {
+      "form_id": "real_176",
+      "type": "real",
+      "surface": "المخلص",
+      "root": "خ.ل.ص",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": true,
+      "inventory_word": "المخلص"
+    },
+    {
+      "form_id": "real_177",
+      "type": "real",
+      "surface": "المجمل",
+      "root": "ج.م.ل",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": true,
+      "inventory_word": "المجمل"
+    },
+    {
+      "form_id": "real_178",
+      "type": "real",
+      "surface": "المشرف",
+      "root": "ش.ر.ف",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": true,
+      "inventory_word": "المشرف"
+    },
+    {
+      "form_id": "real_179",
+      "type": "real",
+      "surface": "المقعد",
+      "root": "ق.ع.د",
+      "column": "mu2",
+      "gold_bounds": [
+        2
+      ],
+      "gold_source": "by_construction_from_inventory",
+      "surface_shared_with_mu_sibling": true,
+      "inventory_word": "المقعد"
+    }
+  ]
+}

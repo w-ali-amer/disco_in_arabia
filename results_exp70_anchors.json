@@ -1,0 +1,229 @@
+{
+ "component": "exp70 anchors -- doc 56 SS6.1, the BLOCKING replication gate",
+ "spec": "qnlp_private_docs/56_exp70_entangled_encodings.md (566b9ce, REGISTERED 2026-08-25, orchestrator rulings 1-7 in the status header)",
+ "spec_commit": "566b9ce",
+ "rule3_note": "the anchors write their OWN results file (doc 56 SS16.1, 'separate by Rule 3'). No exp68 or exp69 artefact is touched, read for writing, or overwritten.",
+ "dataset": "stories_exp69_QA.json",
+ "dataset_sha256": "2b85822b544571969fd40cab12b03a4ac256b08aee914d2b9643b856a6308c96",
+ "exp69_source": "results_exp69.json",
+ "per_arm": {
+  "A0-W-T1": {
+   "exp69_arm": "R1-W",
+   "exp69_per_seed": [
+    0.98,
+    0.99,
+    0.9866666666666667,
+    0.9766666666666667,
+    0.9766666666666667
+   ],
+   "exp69_mean": 0.982,
+   "exp69_sd": 0.00605530070819498,
+   "exp70_per_seed": [
+    0.98,
+    0.99,
+    0.9866666666666667,
+    0.9766666666666667,
+    0.9766666666666667
+   ],
+   "exp70_mean": 0.982,
+   "exp70_sd": 0.00605530070819498,
+   "per_seed_delta": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "max_abs_per_seed_delta": 0.0,
+   "mean_delta_vs_exp69": 0.0,
+   "registered_mean_doc56_SS6_1": 0.982,
+   "mean_delta_vs_registered": 0.0,
+   "bit_exact": true,
+   "per_seed_within_tolerance": true,
+   "mean_within_tolerance": true,
+   "replicates": true,
+   "val_per_seed": [
+    0.9545454545454546,
+    0.946969696969697,
+    0.9166666666666666,
+    0.9318181818181818,
+    0.9166666666666666
+   ],
+   "selected_epoch_per_seed": [
+    124,
+    57,
+    105,
+    104,
+    32
+   ],
+   "n_params": 264,
+   "wires": 4,
+   "wall_sec_total": 4674.817807197571
+  },
+  "A0-W-T2": {
+   "exp69_arm": "R2-W",
+   "exp69_per_seed": [
+    0.7166666666666667,
+    0.77,
+    0.7466666666666667,
+    0.7266666666666667,
+    0.6866666666666666
+   ],
+   "exp69_mean": 0.7293333333333334,
+   "exp69_sd": 0.03139355914125629,
+   "exp70_per_seed": [
+    0.7166666666666667,
+    0.77,
+    0.7466666666666667,
+    0.7266666666666667,
+    0.6866666666666666
+   ],
+   "exp70_mean": 0.7293333333333333,
+   "exp70_sd": 0.03139355914125629,
+   "per_seed_delta": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "max_abs_per_seed_delta": 0.0,
+   "mean_delta_vs_exp69": -1.1102230246251565e-16,
+   "registered_mean_doc56_SS6_1": 0.7293,
+   "mean_delta_vs_registered": 3.333333333332966e-05,
+   "bit_exact": true,
+   "per_seed_within_tolerance": true,
+   "mean_within_tolerance": true,
+   "replicates": true,
+   "val_per_seed": [
+    0.7348484848484849,
+    0.7196969696969697,
+    0.7878787878787878,
+    0.7348484848484849,
+    0.7272727272727273
+   ],
+   "selected_epoch_per_seed": [
+    134,
+    124,
+    139,
+    17,
+    144
+   ],
+   "n_params": 264,
+   "wires": 4,
+   "wall_sec_total": 7402.077771186829
+  },
+  "EA-ctrl-T1": {
+   "exp69_arm": "R1-A",
+   "exp69_per_seed": [
+    0.9033333333333333,
+    0.9366666666666666,
+    0.9266666666666666,
+    0.92,
+    0.9266666666666666
+   ],
+   "exp69_mean": 0.9226666666666666,
+   "exp69_sd": 0.012337837015547824,
+   "exp70_per_seed": [
+    0.9033333333333333,
+    0.9366666666666666,
+    0.9266666666666666,
+    0.92,
+    0.9266666666666666
+   ],
+   "exp70_mean": 0.9226666666666666,
+   "exp70_sd": 0.012337837015547824,
+   "per_seed_delta": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "max_abs_per_seed_delta": 0.0,
+   "mean_delta_vs_exp69": 0.0,
+   "registered_mean_doc56_SS6_1": 0.9227,
+   "mean_delta_vs_registered": -3.333333333332966e-05,
+   "bit_exact": true,
+   "per_seed_within_tolerance": true,
+   "mean_within_tolerance": true,
+   "replicates": true,
+   "val_per_seed": [
+    0.8636363636363636,
+    0.8560606060606061,
+    0.8560606060606061,
+    0.8409090909090909,
+    0.8484848484848485
+   ],
+   "selected_epoch_per_seed": [
+    5,
+    39,
+    12,
+    1,
+    29
+   ],
+   "n_params": 120,
+   "wires": 2,
+   "wall_sec_total": 2912.2515189647675
+  },
+  "EA-ctrl-T2": {
+   "exp69_arm": "R2-A",
+   "exp69_per_seed": [
+    0.9166666666666666,
+    0.9466666666666667,
+    0.8733333333333333,
+    0.9133333333333333,
+    0.9433333333333334
+   ],
+   "exp69_mean": 0.9186666666666666,
+   "exp69_sd": 0.02949576240750527,
+   "exp70_per_seed": [
+    0.9166666666666666,
+    0.9466666666666667,
+    0.8733333333333333,
+    0.9133333333333333,
+    0.9433333333333334
+   ],
+   "exp70_mean": 0.9186666666666665,
+   "exp70_sd": 0.029495762407505267,
+   "per_seed_delta": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "max_abs_per_seed_delta": 0.0,
+   "mean_delta_vs_exp69": -1.1102230246251565e-16,
+   "registered_mean_doc56_SS6_1": 0.9187,
+   "mean_delta_vs_registered": -3.3333333333440684e-05,
+   "bit_exact": true,
+   "per_seed_within_tolerance": true,
+   "mean_within_tolerance": true,
+   "replicates": true,
+   "val_per_seed": [
+    0.8712121212121212,
+    0.8712121212121212,
+    0.8787878787878788,
+    0.8712121212121212,
+    0.8636363636363636
+   ],
+   "selected_epoch_per_seed": [
+    121,
+    121,
+    14,
+    99,
+    114
+   ],
+   "n_params": 120,
+   "wires": 2,
+   "wall_sec_total": 3972.1295895576477
+  }
+ },
+ "tolerance": 0.002,
+ "anchors_replicate_exp69": true,
+ "all_bit_exact": true,
+ "merge_note": "doc 56 SS5.2, RATIFIED by orchestrator ruling 2: A0-A and EA-ctrl are THE SAME RUNS. E-across's map-matched product control IS exp69's R-A arm -- same map, same wires, no CZ -- so registering them separately would be running the same arm twice under two names. Codepath purity still demands an IN-RUN control, which is what this arm is, and the TIGHTER of the two gates (|delta| <= 0.002 against exp69) governs.",
+ "honest_expectation": "BIT-EXACT. Both runs are deterministic given their seeds, and exp70 constructs the COMMITTED parent classes verbatim with exp69's exact call order; the 0.002 tolerance exists only to absorb a documented float/BLAS platform difference and any non-zero delta is reported with its cause identified (doc 56 SS6.1).",
+ "consequence_if_failed": "doc 56 SS11 row 1: THE RUN STOPS. The exp70 pipeline has drifted from exp69's, doc 56 SS5.3's floor-omission argument is VOID along with the run, and NOTHING ELSE IS READ FROM ANY ARM. Hunt the build; interpret nothing."
+}

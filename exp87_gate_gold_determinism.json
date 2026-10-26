@@ -1,0 +1,21 @@
+{
+  "gate_name": "GOLD_DETERMINISM",
+  "description": "Every surface form in the 360-form set maps to exactly one gold boundary set. Note: mu1/mu2 pairs share the same surface AND same gold {2} — no conflict.",
+  "n_unique_surfaces": 327,
+  "n_total_forms": 360,
+  "conflicts": [],
+  "gate_passes_real": true,
+  "dtf_injected_surface": "التستنج",
+  "dtf_conflicting_bounds": [
+    [
+      2
+    ],
+    [
+      3
+    ]
+  ],
+  "dtf_gate_fires": true,
+  "dtf_verdict": "DTF_FIRES: ambiguous mapping correctly detected",
+  "gate_overall_passes": true,
+  "verdict": "PASS: all 360 forms deterministically mapped; DTF injection caught"
+}

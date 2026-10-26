@@ -1,0 +1,14 @@
+{
+  "gate_name": "NONCE_VALIDITY",
+  "description": "No accepted nonce root appears in CAMeL DB root inventory or exp77 enumeration pool.",
+  "n_nonce_roots_checked": 30,
+  "violations": [],
+  "gate_passes_real": true,
+  "dtf_inject_root": "ك.ت.ب",
+  "dtf_in_camel": true,
+  "dtf_in_exp77": false,
+  "dtf_gate_fires": true,
+  "dtf_verdict": "DTF_FIRES: ك.ت.ب correctly caught",
+  "gate_overall_passes": true,
+  "verdict": "PASS: all 30 nonce roots cleared all screens; DTF injection caught"
+}

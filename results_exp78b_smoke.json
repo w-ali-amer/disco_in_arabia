@@ -1,0 +1,284 @@
+{
+ "experiment": "exp78b -- budget-matched scaling (doc 69)",
+ "spec": "doc 69, registered 2026-09-03",
+ "platform": "macOS-26.5.2-arm64-arm-64bit",
+ "python": "3.12.13",
+ "torch": "2.13.0",
+ "flagged_ambiguities": {
+  "F1": "doc 69 §3 says 'n in {2,3,4,5,7} at T=2 primary' but n>=4 requires T>=n-1 (SS4.4.2: n<=T+1). Resolved toward minimum valid T matching exp76's committed cells: n=4->T=4, n=5->T=4, n=7->T=6. Flagged per doc 63 standing rule.",
+  "F2": "doc 69 §3 does not name band32 or I24 cells (different axes). Resolved toward five primary n-axis cells only: n2_T2, n3_T2, n4_T4, n5_T4, n7_T6."
+ },
+ "dataset_shas": {
+  "n2_T2": {
+   "path": "stories_exp76_n2_T2.json",
+   "sha256": "c698aa7346bf330badaf512d646284f69e3c2986bc4899906e185c33b40a0788"
+  },
+  "n3_T2": {
+   "path": "stories_exp76_n3_T2.json",
+   "sha256": "eb46f4e65a8f46c8a6fc0e0013d9dfdabc43200475b9c06b4c1488c5e2c41072"
+  },
+  "n4_T4": {
+   "path": "stories_exp76_n4_T4.json",
+   "sha256": "588e42558c1ecf72abfe0cdbf0d8ae5f65c90b6e512c1a4c74d37e5de075fe29"
+  },
+  "n5_T4": {
+   "path": "stories_exp76_n5_T4.json",
+   "sha256": "8266c30d767c034fe6427052fc16b4c37185c5ebb1db9d7d1e9c8804b09bf0e7"
+  },
+  "n7_T6": {
+   "path": "stories_exp76_n7_T6.json",
+   "sha256": "badcb738a93aac95870a8096922065aecca142364f4ee20ffb2712981eba581e"
+  }
+ },
+ "scaling_table": {
+  "2": {
+   "n": 2,
+   "target_60n": 120,
+   "lv": 3,
+   "lr": 3,
+   "total_params": 120,
+   "rounding_residual": 0,
+   "wires": 2,
+   "derivation": "params(n) = (120/wires(2))*wires(n) = 60n; realized as Lv=2n-1 verb-block layers via Circuit4(2, 2n-1), readout fixed Lr=3 via Circuit4(2,3); exact at every n in {2,3,4,5,7}; rejected alternative: uniform L=ceil(1.5n) rounds +/-20 params at odd n in arbitrary direction -- not nearest-realizable; readout-fixed resolved: scaling readout would split the 60n budget ambiguously; fixed Lr=3 keeps the committed readout unchanged and places all scaling in the verb blocks where the composition lives"
+  },
+  "3": {
+   "n": 3,
+   "target_60n": 180,
+   "lv": 5,
+   "lr": 3,
+   "total_params": 180,
+   "rounding_residual": 0,
+   "wires": 3,
+   "derivation": "params(n) = (120/wires(2))*wires(n) = 60n; realized as Lv=2n-1 verb-block layers via Circuit4(2, 2n-1), readout fixed Lr=3 via Circuit4(2,3); exact at every n in {2,3,4,5,7}; rejected alternative: uniform L=ceil(1.5n) rounds +/-20 params at odd n in arbitrary direction -- not nearest-realizable; readout-fixed resolved: scaling readout would split the 60n budget ambiguously; fixed Lr=3 keeps the committed readout unchanged and places all scaling in the verb blocks where the composition lives"
+  },
+  "4": {
+   "n": 4,
+   "target_60n": 240,
+   "lv": 7,
+   "lr": 3,
+   "total_params": 240,
+   "rounding_residual": 0,
+   "wires": 4,
+   "derivation": "params(n) = (120/wires(2))*wires(n) = 60n; realized as Lv=2n-1 verb-block layers via Circuit4(2, 2n-1), readout fixed Lr=3 via Circuit4(2,3); exact at every n in {2,3,4,5,7}; rejected alternative: uniform L=ceil(1.5n) rounds +/-20 params at odd n in arbitrary direction -- not nearest-realizable; readout-fixed resolved: scaling readout would split the 60n budget ambiguously; fixed Lr=3 keeps the committed readout unchanged and places all scaling in the verb blocks where the composition lives"
+  },
+  "5": {
+   "n": 5,
+   "target_60n": 300,
+   "lv": 9,
+   "lr": 3,
+   "total_params": 300,
+   "rounding_residual": 0,
+   "wires": 5,
+   "derivation": "params(n) = (120/wires(2))*wires(n) = 60n; realized as Lv=2n-1 verb-block layers via Circuit4(2, 2n-1), readout fixed Lr=3 via Circuit4(2,3); exact at every n in {2,3,4,5,7}; rejected alternative: uniform L=ceil(1.5n) rounds +/-20 params at odd n in arbitrary direction -- not nearest-realizable; readout-fixed resolved: scaling readout would split the 60n budget ambiguously; fixed Lr=3 keeps the committed readout unchanged and places all scaling in the verb blocks where the composition lives"
+  },
+  "7": {
+   "n": 7,
+   "target_60n": 420,
+   "lv": 13,
+   "lr": 3,
+   "total_params": 420,
+   "rounding_residual": 0,
+   "wires": 7,
+   "derivation": "params(n) = (120/wires(2))*wires(n) = 60n; realized as Lv=2n-1 verb-block layers via Circuit4(2, 2n-1), readout fixed Lr=3 via Circuit4(2,3); exact at every n in {2,3,4,5,7}; rejected alternative: uniform L=ceil(1.5n) rounds +/-20 params at odd n in arbitrary direction -- not nearest-realizable; readout-fixed resolved: scaling readout would split the 60n budget ambiguously; fixed Lr=3 keeps the committed readout unchanged and places all scaling in the verb blocks where the composition lives"
+  }
+ },
+ "compute_table": {
+  "rows": {
+   "n2_T2": {
+    "exp76_wall_mean_s": 490.6,
+    "param_scale_factor": 1.0,
+    "exp78b_est_per_run_s": 490.6,
+    "exp78b_est_5seeds_s": 2453.0
+   },
+   "n3_T2": {
+    "exp76_wall_mean_s": 495.7,
+    "param_scale_factor": 1.5,
+    "exp78b_est_per_run_s": 743.5,
+    "exp78b_est_5seeds_s": 3717.8
+   },
+   "n4_T4": {
+    "exp76_wall_mean_s": 761.6,
+    "param_scale_factor": 2.0,
+    "exp78b_est_per_run_s": 1523.2,
+    "exp78b_est_5seeds_s": 7616.0
+   },
+   "n5_T4": {
+    "exp76_wall_mean_s": 761.6,
+    "param_scale_factor": 2.5,
+    "exp78b_est_per_run_s": 1904.0,
+    "exp78b_est_5seeds_s": 9520.0
+   },
+   "n7_T6": {
+    "exp76_wall_mean_s": 1044.3,
+    "param_scale_factor": 3.5,
+    "exp78b_est_per_run_s": 3655.0,
+    "exp78b_est_5seeds_s": 18275.2
+   },
+   "S-shuffle-n2_T2": {
+    "exp76_wall_mean_s": 507.8,
+    "param_scale_factor": 1.0,
+    "exp78b_est_per_run_s": 507.8,
+    "exp78b_est_5seeds_s": 2539.0
+   },
+   "S-shuffle-n3_T2": {
+    "exp76_wall_mean_s": 538.2,
+    "param_scale_factor": 1.5,
+    "exp78b_est_per_run_s": 807.3,
+    "exp78b_est_5seeds_s": 4036.5
+   },
+   "S-shuffle-n4_T4": {
+    "exp76_wall_mean_s": 875.3,
+    "param_scale_factor": 2.0,
+    "exp78b_est_per_run_s": 1750.6,
+    "exp78b_est_5seeds_s": 8753.0
+   },
+   "S-shuffle-n5_T4": {
+    "exp76_wall_mean_s": 908.2,
+    "param_scale_factor": 2.5,
+    "exp78b_est_per_run_s": 2270.5,
+    "exp78b_est_5seeds_s": 11352.5
+   },
+   "S-shuffle-n7_T6": {
+    "exp76_wall_mean_s": 1300.4,
+    "param_scale_factor": 3.5,
+    "exp78b_est_per_run_s": 4551.4,
+    "exp78b_est_5seeds_s": 22757.0
+   }
+  },
+  "total_serial_s": 91020.0,
+  "hours_on_5_workers": 5.06,
+  "t_inclusion_decision": "T>=4 INCLUDED",
+  "decision_rule": "doc 69 §3: include T>=4 iff total on 5 workers < 12h",
+  "note": "exp76 walls were measured under 5-worker contention (doc 63 SS19.4) so no additional contention factor applies. For n=7 the minimum valid T is 6 (n<=T+1), so n7_T6 is the sole n=7 cell -- not a T-axis extension."
+ },
+ "designed_to_fail_wrong_param_gate": {
+  "3": {
+   "wrong_model_params": 120,
+   "expected_60n": 180,
+   "gate_fired": true
+  },
+  "4": {
+   "wrong_model_params": 120,
+   "expected_60n": 240,
+   "gate_fired": true
+  },
+  "5": {
+   "wrong_model_params": 120,
+   "expected_60n": 300,
+   "gate_fired": true
+  },
+  "7": {
+   "wrong_model_params": 120,
+   "expected_60n": 420,
+   "gate_fired": true
+  }
+ },
+ "static_bit_exact_n2": {
+  "worst_param_delta": 0.0,
+  "worst_forward_delta": 0.0,
+  "result": "PASS",
+  "assertion": "ScaledStoryModel(n=2, Lv=3) is byte-for-byte the committed QuantumStoryModel('A3') -- same generator consumption order, same tensor values"
+ },
+ "probe": {
+  "n2_T2": {
+   "epochs": 2,
+   "sec": 4.8,
+   "val": 0.5075757575757576,
+   "heldout": 0.53,
+   "n_params": 120,
+   "n": 2,
+   "T": 2
+  },
+  "n3_T2": {
+   "epochs": 2,
+   "sec": 6.5,
+   "val": 0.5757575757575758,
+   "heldout": 0.5233333333333333,
+   "n_params": 180,
+   "n": 3,
+   "T": 2
+  },
+  "n4_T4": {
+   "epochs": 2,
+   "sec": 13.7,
+   "val": 0.5151515151515151,
+   "heldout": 0.5466666666666666,
+   "n_params": 240,
+   "n": 4,
+   "T": 4
+  },
+  "n5_T4": {
+   "epochs": 2,
+   "sec": 15.3,
+   "val": 0.45454545454545453,
+   "heldout": 0.5233333333333333,
+   "n_params": 300,
+   "n": 5,
+   "T": 4
+  },
+  "n7_T6": {
+   "epochs": 2,
+   "sec": 30.9,
+   "val": 0.5075757575757576,
+   "heldout": 0.47,
+   "n_params": 420,
+   "n": 7,
+   "T": 6
+  },
+  "S-shuffle-n2_T2": {
+   "epochs": 2,
+   "sec": 4.4,
+   "val": 0.4772727272727273,
+   "heldout": 0.52,
+   "n_params": 120,
+   "n": 2,
+   "T": 2
+  },
+  "S-shuffle-n3_T2": {
+   "epochs": 2,
+   "sec": 6.5,
+   "val": 0.6060606060606061,
+   "heldout": 0.47333333333333333,
+   "n_params": 180,
+   "n": 3,
+   "T": 2
+  },
+  "S-shuffle-n4_T4": {
+   "epochs": 2,
+   "sec": 12.4,
+   "val": 0.5075757575757576,
+   "heldout": 0.5066666666666667,
+   "n_params": 240,
+   "n": 4,
+   "T": 4
+  },
+  "S-shuffle-n5_T4": {
+   "epochs": 2,
+   "sec": 17.0,
+   "val": 0.5757575757575758,
+   "heldout": 0.5333333333333333,
+   "n_params": 300,
+   "n": 5,
+   "T": 4
+  },
+  "S-shuffle-n7_T6": {
+   "epochs": 2,
+   "sec": 30.8,
+   "val": 0.5303030303030303,
+   "heldout": 0.5566666666666666,
+   "n_params": 420,
+   "n": 7,
+   "T": 6
+  }
+ },
+ "drift_gate": {
+  "exp76_n2_T2_s0_heldout": 0.5233333333333333,
+  "exp78b_n2_T2_s0_heldout": 0.5233333333333333,
+  "abs_delta": 0.0,
+  "bit_exact": true,
+  "verdict": "PASS",
+  "consequence_if_failed": "The exp78b pipeline has drifted from exp76 at n=2. Every scaling comparison is against a moving baseline. Interpret nothing; hunt the build."
+ },
+ "assertions_passed": true,
+ "total_smoke_wall_sec": 875.0
+}

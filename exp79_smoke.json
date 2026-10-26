@@ -1,0 +1,132 @@
+{
+ "component": "exp79 smoke battery (doc 71 SS5, doc 70 SS3.6)",
+ "tests": [
+  {
+   "test": "M1 mechanical build + gradient (all 3 arms)",
+   "passed": true,
+   "per_arm": {
+    "C-DISCARD": {
+     "losses": [
+      0.6524262636899948,
+      0.5002109350636601,
+      0.4364840338937938
+     ],
+     "grad_norms": [
+      3.565961239735318,
+      2.1851391515211787,
+      2.390163820321355
+     ],
+     "passed": true
+    },
+    "C-RESET": {
+     "losses": [
+      0.8313522651791573,
+      0.6395571768283844,
+      0.5851550884544849
+     ],
+     "grad_norms": [
+      7.1105411533897485,
+      3.405658166064421,
+      2.1340704852679675
+     ],
+     "passed": true
+    },
+    "C-FLOOR": {
+     "losses": [
+      0.6524262636899948,
+      0.5002109350636601,
+      0.4364840338937938
+     ],
+     "grad_norms": [
+      3.565961239735318,
+      2.1851391515211787,
+      2.390163820321355
+     ],
+     "passed": true
+    }
+   }
+  },
+  {
+   "test": "M2 zero-coupling C-DISCARD == A2 (reduction check)",
+   "passed": true,
+   "max_abs_delta": 2.9802322387695312e-08,
+   "tol": 1e-05
+  },
+  {
+   "test": "SG-FS fixed-scramble floor (self-emitting)",
+   "passed": true,
+   "floor_admissible": true,
+   "scrambled_acc": 0.45,
+   "dtf_shown_failing": true,
+   "artifact": "exp79_gate_SG_FS.json"
+  },
+  {
+   "test": "SG-ANT ancilla-never-traced (self-emitting)",
+   "passed": true,
+   "zero_coup_delta": 2.9802322387695312e-08,
+   "rand_coup_delta": 0.007572434842586517,
+   "dtf_shown_failing": true,
+   "artifact": "exp79_gate_SG_ANT.json"
+  },
+  {
+   "test": "SG-PS purity sanity (self-emitting)",
+   "passed": true,
+   "product_purity": 1.0,
+   "ext_entangled_purity": 0.49999996577145883,
+   "dtf_shown_failing": true,
+   "artifact": "exp79_gate_SG_PS.json"
+  }
+ ],
+ "all_passed": true,
+ "gate_artifacts": [
+  "exp79_gate_SG_FS.json",
+  "exp79_gate_SG_ANT.json",
+  "exp79_gate_SG_PS.json"
+ ],
+ "designed_to_fail_builds": [
+  "SG-FS fixed-scramble floor",
+  "SG-ANT ancilla-never-traced",
+  "SG-PS purity sanity"
+ ],
+ "torch_version": "2.13.0",
+ "python_version": "3.12.13",
+ "provenance": {
+  "dataset": {
+   "path": "stories_exp41r.json",
+   "sha256": "2326942ffb6ccf6bca95a7ec0502c82563957fabb159b143608a9fb31f8f3113",
+   "n_items": 4000,
+   "generator_seed": 41000,
+   "pin_doc65_SS6_3": "2326942ffb6ccf6bca95a7ec0502c82563957fabb159b143608a9fb31f8f3113",
+   "pin_matches": true
+  },
+  "embeddings": {
+   "path": "exp42_noun_embeddings.json",
+   "sha256": "00c1ecffcaf05b38df082f8a3cbed1d013bddb3e39bc00adf1c2513b4ea674ac",
+   "n": 44,
+   "source": "aravec/full_uni_cbow_300_twitter.mdl + ta-marbuta normalization + PCA-2D over the 44 referent vectors + unit norm"
+  },
+  "c5_gate": {
+   "file": "results_exp40r.json",
+   "harness_calibrated": true,
+   "qualifying_seeds": [
+    0,
+    2,
+    3
+   ],
+   "verdict_rule": ">=1 of 5 seeds: 100% train AND 100% validA AND >=95% valid_comp",
+   "reproduces_august_exactly": true,
+   "august_reference_read_only": "results_exp40b.json"
+  },
+  "untouched_committed_artifacts": [
+   "exp42_run.py",
+   "results_exp42.json",
+   "results_exp40b.json",
+   "exp42_models.py",
+   "exp42_baselines.py",
+   "exp42_controls.py",
+   "exp42_compiler.py",
+   "stories_exp41.json"
+  ]
+ },
+ "wall_time_sec": 30.0
+}

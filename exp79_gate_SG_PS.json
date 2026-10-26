@@ -1,0 +1,18 @@
+{
+ "gate": "SG-PS purity sanity (doc 70 SS3.6, doc 71 SS1)",
+ "pass_assertion": "product state pair_purity == 1.0 to 1e-6",
+ "pass_result": true,
+ "product_state_pair_purity": 1.0,
+ "construction": "wire 0 entangled with wire 2 via H+CNOT; queried pair = wires (0,1); wire 0's partner (wire 2) is external and traced out, making rho_{01} mixed with Tr(rho^2) ~ 0.5",
+ "ext_entangled_pair_purity_01": 0.49999996577145883,
+ "ext_entangled_pair_purity_02": 0.9999999315429177,
+ "ext_entangled_pair_purity_23": 0.49999996577145883,
+ "pair_01_mixed": true,
+ "designed_to_fail_assertion": "externally-entangled pair purity >= 1.0 (on wires 0,1)",
+ "designed_to_fail_result": false,
+ "designed_to_fail_shown_failing": true,
+ "pass_tol": 1e-06,
+ "passed": true,
+ "when": "2026-09-04T07:41:00Z",
+ "artifact_sha256": "552eae5da84738a690fe6ab866d33e7bae3f46bc187b57502f58d8ef5447993d"
+}

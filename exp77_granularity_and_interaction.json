@@ -1,0 +1,1621 @@
+{
+ "d2_patterns_inside_each_tag_family": [
+  {
+   "wazn_tag": "mu_participle",
+   "n_nouns": 142,
+   "n_distinct_true_patterns": 57,
+   "n_templatic_patterns": 56,
+   "n_nouns_non_templatic_alNTWS": 7,
+   "modal_pattern": "المُ1َ2ِّ3",
+   "modal_pattern_n": 22,
+   "modal_share": 0.1549,
+   "patterns_with_1_noun": 36,
+   "top5": [
+    {
+     "pattern": "المُ1َ2ِّ3",
+     "n": 22
+    },
+    {
+     "pattern": "المُ1ْ2ِ3",
+     "n": 12
+    },
+    {
+     "pattern": "المُ1ا2ِ3",
+     "n": 11
+    },
+    {
+     "pattern": "المُتَ1َ2ِّ3",
+     "n": 8
+    },
+    {
+     "pattern": "المُ1ْتَ2ِ3",
+     "n": 7
+    }
+   ]
+  },
+  {
+   "wazn_tag": "nisba_yaa",
+   "n_nouns": 125,
+   "n_distinct_true_patterns": 43,
+   "n_templatic_patterns": 42,
+   "n_nouns_non_templatic_alNTWS": 53,
+   "modal_pattern": "الNTWS",
+   "modal_pattern_n": 53,
+   "modal_share": 0.424,
+   "patterns_with_1_noun": 27,
+   "top5": [
+    {
+     "pattern": "الNTWS",
+     "n": 53
+    },
+    {
+     "pattern": "ال1ا2ِي",
+     "n": 12
+    },
+    {
+     "pattern": "ال1ُو3ِيّ",
+     "n": 5
+    },
+    {
+     "pattern": "ال1َ2َ3ِيّ",
+     "n": 3
+    },
+    {
+     "pattern": "ال1ِ2ْ3ِيّ",
+     "n": 3
+    }
+   ]
+  },
+  {
+   "wazn_tag": "other",
+   "n_nouns": 93,
+   "n_distinct_true_patterns": 48,
+   "n_templatic_patterns": 47,
+   "n_nouns_non_templatic_alNTWS": 11,
+   "modal_pattern": "الNTWS",
+   "modal_pattern_n": 11,
+   "modal_share": 0.1183,
+   "patterns_with_1_noun": 33,
+   "top5": [
+    {
+     "pattern": "الNTWS",
+     "n": 11
+    },
+    {
+     "pattern": "الأَ1ْ2َ3",
+     "n": 9
+    },
+    {
+     "pattern": "ال1َ2ْ3",
+     "n": 6
+    },
+    {
+     "pattern": "ال1ا2ّ",
+     "n": 5
+    },
+    {
+     "pattern": "ال1َ2ُو3",
+     "n": 5
+    }
+   ]
+  },
+  {
+   "wazn_tag": "faail",
+   "n_nouns": 63,
+   "n_distinct_true_patterns": 5,
+   "n_templatic_patterns": 4,
+   "n_nouns_non_templatic_alNTWS": 1,
+   "modal_pattern": "ال1ا2ِ3",
+   "modal_pattern_n": 46,
+   "modal_share": 0.7302,
+   "patterns_with_1_noun": 2,
+   "top5": [
+    {
+     "pattern": "ال1ا2ِ3",
+     "n": 46
+    },
+    {
+     "pattern": "ال1ائِ3",
+     "n": 11
+    },
+    {
+     "pattern": "الوا2ِ3",
+     "n": 4
+    },
+    {
+     "pattern": "الNTWS",
+     "n": 1
+    },
+    {
+     "pattern": "ال1ا2ِئ",
+     "n": 1
+    }
+   ]
+  },
+  {
+   "wazn_tag": "faiil",
+   "n_nouns": 50,
+   "n_distinct_true_patterns": 7,
+   "n_templatic_patterns": 7,
+   "n_nouns_non_templatic_alNTWS": 0,
+   "modal_pattern": "ال1َ2ِي3",
+   "modal_pattern_n": 37,
+   "modal_share": 0.74,
+   "patterns_with_1_noun": 4,
+   "top5": [
+    {
+     "pattern": "ال1َ2ِي3",
+     "n": 37
+    },
+    {
+     "pattern": "الأَ2ِي3",
+     "n": 5
+    },
+    {
+     "pattern": "ال1ِ2ِّي3",
+     "n": 4
+    },
+    {
+     "pattern": "ال1َئِي3",
+     "n": 1
+    },
+    {
+     "pattern": "الوَ2ِي3",
+     "n": 1
+    }
+   ]
+  },
+  {
+   "wazn_tag": "faaal_or_fa33aal",
+   "n_nouns": 46,
+   "n_distinct_true_patterns": 6,
+   "n_templatic_patterns": 6,
+   "n_nouns_non_templatic_alNTWS": 0,
+   "modal_pattern": "ال1َ2ّا3",
+   "modal_pattern_n": 35,
+   "modal_share": 0.7609,
+   "patterns_with_1_noun": 3,
+   "top5": [
+    {
+     "pattern": "ال1َ2ّا3",
+     "n": 35
+    },
+    {
+     "pattern": "ال1َيّا3",
+     "n": 5
+    },
+    {
+     "pattern": "ال1َوّا3",
+     "n": 3
+    },
+    {
+     "pattern": "ال1ِواء",
+     "n": 1
+    },
+    {
+     "pattern": "الأَوّا3",
+     "n": 1
+    }
+   ]
+  }
+ ],
+ "d2_totals": {
+  "n_nouns": 519,
+  "W_at_tag_granularity": 6,
+  "W_at_true_pattern_granularity": 154,
+  "W_true_pattern_templatic_only": 153
+ },
+ "d2_true_patterns_split_across_tag_families": [
+  {
+   "pattern": "الNTWS",
+   "spread_over_tags": {
+    "other": 11,
+    "mu_participle": 7,
+    "faail": 1,
+    "nisba_yaa": 53
+   }
+  },
+  {
+   "pattern": "ال1ا2ِ3",
+   "spread_over_tags": {
+    "mu_participle": 2,
+    "faail": 46
+   }
+  },
+  {
+   "pattern": "ال1َ2ِي3",
+   "spread_over_tags": {
+    "other": 1,
+    "mu_participle": 1,
+    "faiil": 37
+   }
+  },
+  {
+   "pattern": "ال1َ2ّا3",
+   "spread_over_tags": {
+    "faaal_or_fa33aal": 35,
+    "faiil": 1
+   }
+  },
+  {
+   "pattern": "ال1َيّا3",
+   "spread_over_tags": {
+    "mu_participle": 1,
+    "faaal_or_fa33aal": 5
+   }
+  },
+  {
+   "pattern": "ال1ِ2ْ3ِيّ",
+   "spread_over_tags": {
+    "mu_participle": 1,
+    "nisba_yaa": 3
+   }
+  },
+  {
+   "pattern": "ال1ا2ِيَة",
+   "spread_over_tags": {
+    "other": 1,
+    "nisba_yaa": 1
+   }
+  },
+  {
+   "pattern": "ال1َ2ِي3ِيّ",
+   "spread_over_tags": {
+    "mu_participle": 1,
+    "nisba_yaa": 1
+   }
+  },
+  {
+   "pattern": "ال1َ2ُو3ِيّ",
+   "spread_over_tags": {
+    "mu_participle": 1,
+    "nisba_yaa": 1
+   }
+  }
+ ],
+ "d2_n_true_patterns_split_across_tags": 9,
+ "d2_doc63_s3_3_reproduction": {
+  "faail_surface_regex": 63,
+  "faail_camel_pattern": 81,
+  "intersection": 62,
+  "camel_only": [
+   "الباكي",
+   "الجاني",
+   "الحاج",
+   "الداعي",
+   "الراعي",
+   "الرامي",
+   "الزاني",
+   "الساعي",
+   "الساقي",
+   "الشاب",
+   "الشاذ",
+   "الشاكي",
+   "الطاغي",
+   "الغاش",
+   "القاري",
+   "القاضي",
+   "المادح",
+   "المار",
+   "المالك"
+  ],
+  "surface_only": [
+   "الباشا"
+  ],
+  "matches_doc63": true
+ },
+ "d2_nisba_tag_vs_pattern": {
+  "nisba_by_surface_tag": 125,
+  "nisba_by_true_pattern": 66,
+  "intersection": 55,
+  "tag_only": 70,
+  "pattern_only": 11
+ },
+ "d2_grid": {
+  "root_any_non_null | wazn_tag_family": {
+   "n_nouns_used": 412,
+   "R_roots": 345,
+   "W_wazn": 6,
+   "cells_occupied": 395,
+   "grid_size_RxW": 2070,
+   "density_occupied_over_RxW": 0.19082,
+   "mean_nouns_per_occupied_cell": 1.043,
+   "roots_spanning_ge2_wazn": 46,
+   "roots_spanning_ge3_wazn": 4,
+   "root_span_histogram": {
+    "1": 299,
+    "2": 42,
+    "3": 4
+   },
+   "largest_wazn_pairs_any": [
+    {
+     "pair": [
+      "faiil",
+      "mu_participle"
+     ],
+     "n_roots_covering_pair": 10
+    },
+    {
+     "pair": [
+      "mu_participle",
+      "other"
+     ],
+     "n_roots_covering_pair": 6
+    },
+    {
+     "pair": [
+      "faail",
+      "mu_participle"
+     ],
+     "n_roots_covering_pair": 6
+    },
+    {
+     "pair": [
+      "faaal_or_fa33aal",
+      "faail"
+     ],
+     "n_roots_covering_pair": 6
+    },
+    {
+     "pair": [
+      "faail",
+      "faiil"
+     ],
+     "n_roots_covering_pair": 5
+    },
+    {
+     "pair": [
+      "faiil",
+      "other"
+     ],
+     "n_roots_covering_pair": 5
+    },
+    {
+     "pair": [
+      "mu_participle",
+      "nisba_yaa"
+     ],
+     "n_roots_covering_pair": 5
+    },
+    {
+     "pair": [
+      "faail",
+      "nisba_yaa"
+     ],
+     "n_roots_covering_pair": 4
+    },
+    {
+     "pair": [
+      "faail",
+      "other"
+     ],
+     "n_roots_covering_pair": 2
+    },
+    {
+     "pair": [
+      "faaal_or_fa33aal",
+      "nisba_yaa"
+     ],
+     "n_roots_covering_pair": 1
+    },
+    {
+     "pair": [
+      "faiil",
+      "nisba_yaa"
+     ],
+     "n_roots_covering_pair": 1
+    },
+    {
+     "pair": [
+      "nisba_yaa",
+      "other"
+     ],
+     "n_roots_covering_pair": 1
+    },
+    {
+     "pair": [
+      "faaal_or_fa33aal",
+      "faiil"
+     ],
+     "n_roots_covering_pair": 1
+    },
+    {
+     "pair": [
+      "faaal_or_fa33aal",
+      "mu_participle"
+     ],
+     "n_roots_covering_pair": 1
+    }
+   ],
+   "largest_clean_wazn_pairs_exactly_two": [
+    {
+     "pair": [
+      "faiil",
+      "mu_participle"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 8
+    },
+    {
+     "pair": [
+      "faaal_or_fa33aal",
+      "faail"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 6
+    },
+    {
+     "pair": [
+      "faail",
+      "faiil"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 4
+    },
+    {
+     "pair": [
+      "faiil",
+      "other"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 4
+    },
+    {
+     "pair": [
+      "faail",
+      "mu_participle"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 4
+    },
+    {
+     "pair": [
+      "mu_participle",
+      "nisba_yaa"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 4
+    },
+    {
+     "pair": [
+      "faail",
+      "nisba_yaa"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 4
+    },
+    {
+     "pair": [
+      "mu_participle",
+      "other"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 3
+    },
+    {
+     "pair": [
+      "faaal_or_fa33aal",
+      "nisba_yaa"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 1
+    },
+    {
+     "pair": [
+      "faiil",
+      "nisba_yaa"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 1
+    },
+    {
+     "pair": [
+      "faail",
+      "other"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 1
+    },
+    {
+     "pair": [
+      "faaal_or_fa33aal",
+      "faiil"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 1
+    },
+    {
+     "pair": [
+      "faaal_or_fa33aal",
+      "mu_participle"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 1
+    }
+   ],
+   "n_cells_with_ge2_nouns": 17
+  },
+  "root_any_non_null | true_pattern": {
+   "n_nouns_used": 412,
+   "R_roots": 345,
+   "W_wazn": 129,
+   "cells_occupied": 412,
+   "grid_size_RxW": 44505,
+   "density_occupied_over_RxW": 0.00926,
+   "mean_nouns_per_occupied_cell": 1.0,
+   "roots_spanning_ge2_wazn": 61,
+   "roots_spanning_ge3_wazn": 6,
+   "root_span_histogram": {
+    "1": 284,
+    "2": 55,
+    "3": 6
+   },
+   "largest_wazn_pairs_any": [
+    {
+     "pair": [
+      "ال1ا2ِ3",
+      "ال1َ2ِي3"
+     ],
+     "n_roots_covering_pair": 6
+    },
+    {
+     "pair": [
+      "ال1ا2ِ3",
+      "ال1َ2ّا3"
+     ],
+     "n_roots_covering_pair": 4
+    },
+    {
+     "pair": [
+      "الأَ2",
+      "الأَ2ُو"
+     ],
+     "n_roots_covering_pair": 2
+    },
+    {
+     "pair": [
+      "ال1َ2ِي3",
+      "ال1َ2ْ3ان"
+     ],
+     "n_roots_covering_pair": 2
+    },
+    {
+     "pair": [
+      "ال1ا2ِي",
+      "ال1ا2ِيَة"
+     ],
+     "n_roots_covering_pair": 2
+    },
+    {
+     "pair": [
+      "ال1َ2ِي3",
+      "المُ1ْتَ2ِ3"
+     ],
+     "n_roots_covering_pair": 2
+    },
+    {
+     "pair": [
+      "ال1َ2ِي3",
+      "المُ1ا2ِ3"
+     ],
+     "n_roots_covering_pair": 2
+    },
+    {
+     "pair": [
+      "ال1ا2ِ3",
+      "المُ1ْتَ2ِ3"
+     ],
+     "n_roots_covering_pair": 2
+    },
+    {
+     "pair": [
+      "ال1ائِ3",
+      "ال1َيّا3"
+     ],
+     "n_roots_covering_pair": 2
+    },
+    {
+     "pair": [
+      "الأَ2ِي3",
+      "الإِ2ْ3ان"
+     ],
+     "n_roots_covering_pair": 1
+    },
+    {
+     "pair": [
+      "الأَ2ِي3",
+      "المُؤْ2ِ3"
+     ],
+     "n_roots_covering_pair": 1
+    },
+    {
+     "pair": [
+      "الإِ2ْ3ان",
+      "المُؤْ2ِ3"
+     ],
+     "n_roots_covering_pair": 1
+    },
+    {
+     "pair": [
+      "ال1َئِي3",
+      "ال1َيِّ3"
+     ],
+     "n_roots_covering_pair": 1
+    },
+    {
+     "pair": [
+      "ال2َأْمُو3",
+      "الأَ2ِي3"
+     ],
+     "n_roots_covering_pair": 1
+    },
+    {
+     "pair": [
+      "ال1َ2ائِ3ِيّ",
+      "ال1َ2ّا3"
+     ],
+     "n_roots_covering_pair": 1
+    }
+   ],
+   "largest_clean_wazn_pairs_exactly_two": [
+    {
+     "pair": [
+      "ال1ا2ِ3",
+      "ال1َ2ِي3"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 5
+    },
+    {
+     "pair": [
+      "ال1ا2ِ3",
+      "ال1َ2ّا3"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 4
+    },
+    {
+     "pair": [
+      "الأَ2",
+      "الأَ2ُو"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 2
+    },
+    {
+     "pair": [
+      "ال1َ2ِي3",
+      "ال1َ2ْ3ان"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 2
+    },
+    {
+     "pair": [
+      "ال1ائِ3",
+      "ال1َيّا3"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 2
+    },
+    {
+     "pair": [
+      "ال1َئِي3",
+      "ال1َيِّ3"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 1
+    },
+    {
+     "pair": [
+      "ال2َأْمُو3",
+      "الأَ2ِي3"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 1
+    },
+    {
+     "pair": [
+      "ال1َ2ائِ3ِيّ",
+      "ال1َ2ّا3"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 1
+    },
+    {
+     "pair": [
+      "ال1ُ2ْ3ِيّ",
+      "ال1ِ2ِّي3"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 1
+    },
+    {
+     "pair": [
+      "المَ1ْؤُو3",
+      "المَ1ْئُو3"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 1
+    },
+    {
+     "pair": [
+      "المَوْ2ُو3",
+      "الوا2ِ3"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 1
+    },
+    {
+     "pair": [
+      "ال1ا3",
+      "ال1َوَ3"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 1
+    },
+    {
+     "pair": [
+      "ال1ا2ّ",
+      "ال1َ2ّ"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 1
+    },
+    {
+     "pair": [
+      "ال2ُؤَمِّ3",
+      "الأَ2ِي3"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 1
+    },
+    {
+     "pair": [
+      "ال1ا2ِي",
+      "ال1ا2ِيَة"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 1
+    }
+   ],
+   "n_cells_with_ge2_nouns": 0
+  },
+  "root_complete_triliteral_only | wazn_tag_family": {
+   "n_nouns_used": 267,
+   "R_roots": 227,
+   "W_wazn": 6,
+   "cells_occupied": 262,
+   "grid_size_RxW": 1362,
+   "density_occupied_over_RxW": 0.19236,
+   "mean_nouns_per_occupied_cell": 1.019,
+   "roots_spanning_ge2_wazn": 33,
+   "roots_spanning_ge3_wazn": 2,
+   "root_span_histogram": {
+    "1": 194,
+    "2": 31,
+    "3": 2
+   },
+   "largest_wazn_pairs_any": [
+    {
+     "pair": [
+      "faiil",
+      "mu_participle"
+     ],
+     "n_roots_covering_pair": 7
+    },
+    {
+     "pair": [
+      "faail",
+      "faiil"
+     ],
+     "n_roots_covering_pair": 5
+    },
+    {
+     "pair": [
+      "faail",
+      "mu_participle"
+     ],
+     "n_roots_covering_pair": 5
+    },
+    {
+     "pair": [
+      "faaal_or_fa33aal",
+      "faail"
+     ],
+     "n_roots_covering_pair": 4
+    },
+    {
+     "pair": [
+      "faiil",
+      "other"
+     ],
+     "n_roots_covering_pair": 3
+    },
+    {
+     "pair": [
+      "faail",
+      "nisba_yaa"
+     ],
+     "n_roots_covering_pair": 3
+    },
+    {
+     "pair": [
+      "mu_participle",
+      "other"
+     ],
+     "n_roots_covering_pair": 2
+    },
+    {
+     "pair": [
+      "mu_participle",
+      "nisba_yaa"
+     ],
+     "n_roots_covering_pair": 2
+    },
+    {
+     "pair": [
+      "faail",
+      "other"
+     ],
+     "n_roots_covering_pair": 2
+    },
+    {
+     "pair": [
+      "faaal_or_fa33aal",
+      "nisba_yaa"
+     ],
+     "n_roots_covering_pair": 1
+    },
+    {
+     "pair": [
+      "faiil",
+      "nisba_yaa"
+     ],
+     "n_roots_covering_pair": 1
+    },
+    {
+     "pair": [
+      "faaal_or_fa33aal",
+      "faiil"
+     ],
+     "n_roots_covering_pair": 1
+    },
+    {
+     "pair": [
+      "faaal_or_fa33aal",
+      "mu_participle"
+     ],
+     "n_roots_covering_pair": 1
+    }
+   ],
+   "largest_clean_wazn_pairs_exactly_two": [
+    {
+     "pair": [
+      "faiil",
+      "mu_participle"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 6
+    },
+    {
+     "pair": [
+      "faail",
+      "faiil"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 4
+    },
+    {
+     "pair": [
+      "faaal_or_fa33aal",
+      "faail"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 4
+    },
+    {
+     "pair": [
+      "faiil",
+      "other"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 3
+    },
+    {
+     "pair": [
+      "faail",
+      "mu_participle"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 3
+    },
+    {
+     "pair": [
+      "faail",
+      "nisba_yaa"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 3
+    },
+    {
+     "pair": [
+      "mu_participle",
+      "nisba_yaa"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 2
+    },
+    {
+     "pair": [
+      "faaal_or_fa33aal",
+      "nisba_yaa"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 1
+    },
+    {
+     "pair": [
+      "faiil",
+      "nisba_yaa"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 1
+    },
+    {
+     "pair": [
+      "mu_participle",
+      "other"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 1
+    },
+    {
+     "pair": [
+      "faail",
+      "other"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 1
+    },
+    {
+     "pair": [
+      "faaal_or_fa33aal",
+      "faiil"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 1
+    },
+    {
+     "pair": [
+      "faaal_or_fa33aal",
+      "mu_participle"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 1
+    }
+   ],
+   "n_cells_with_ge2_nouns": 5
+  },
+  "root_complete_triliteral_only | true_pattern": {
+   "n_nouns_used": 267,
+   "R_roots": 227,
+   "W_wazn": 47,
+   "cells_occupied": 267,
+   "grid_size_RxW": 10669,
+   "density_occupied_over_RxW": 0.02503,
+   "mean_nouns_per_occupied_cell": 1.0,
+   "roots_spanning_ge2_wazn": 36,
+   "roots_spanning_ge3_wazn": 4,
+   "root_span_histogram": {
+    "1": 191,
+    "2": 32,
+    "3": 4
+   },
+   "largest_wazn_pairs_any": [
+    {
+     "pair": [
+      "ال1ا2ِ3",
+      "ال1َ2ِي3"
+     ],
+     "n_roots_covering_pair": 6
+    },
+    {
+     "pair": [
+      "ال1ا2ِ3",
+      "ال1َ2ّا3"
+     ],
+     "n_roots_covering_pair": 4
+    },
+    {
+     "pair": [
+      "ال1َ2ِي3",
+      "ال1َ2ْ3ان"
+     ],
+     "n_roots_covering_pair": 2
+    },
+    {
+     "pair": [
+      "ال1َ2ِي3",
+      "المُ1ْتَ2ِ3"
+     ],
+     "n_roots_covering_pair": 2
+    },
+    {
+     "pair": [
+      "ال1َ2ِي3",
+      "المُ1ا2ِ3"
+     ],
+     "n_roots_covering_pair": 2
+    },
+    {
+     "pair": [
+      "ال1ا2ِ3",
+      "المُ1ْتَ2ِ3"
+     ],
+     "n_roots_covering_pair": 2
+    },
+    {
+     "pair": [
+      "ال1َ2ائِ3ِيّ",
+      "ال1َ2ّا3"
+     ],
+     "n_roots_covering_pair": 1
+    },
+    {
+     "pair": [
+      "ال1ُ2ْ3ِيّ",
+      "ال1ِ2ِّي3"
+     ],
+     "n_roots_covering_pair": 1
+    },
+    {
+     "pair": [
+      "ال1َ2ِي3",
+      "المُتَ1َ2ِّ3"
+     ],
+     "n_roots_covering_pair": 1
+    },
+    {
+     "pair": [
+      "ال1ا2ِ3",
+      "المُ1ْ2ِ3"
+     ],
+     "n_roots_covering_pair": 1
+    },
+    {
+     "pair": [
+      "ال1َ2َ3",
+      "المُسْتَ1ْ2َ3"
+     ],
+     "n_roots_covering_pair": 1
+    },
+    {
+     "pair": [
+      "ال1َ2ُو3ِيّ",
+      "المُ1ا2ِ3"
+     ],
+     "n_roots_covering_pair": 1
+    },
+    {
+     "pair": [
+      "ال1ا2ِ3",
+      "المُ1ا2ِ3"
+     ],
+     "n_roots_covering_pair": 1
+    },
+    {
+     "pair": [
+      "ال1ا2ِ3",
+      "ال1َ2ا3ِيّ"
+     ],
+     "n_roots_covering_pair": 1
+    },
+    {
+     "pair": [
+      "ال1َ2ِي3",
+      "المَ1ْ2ُو3ِيّ"
+     ],
+     "n_roots_covering_pair": 1
+    }
+   ],
+   "largest_clean_wazn_pairs_exactly_two": [
+    {
+     "pair": [
+      "ال1ا2ِ3",
+      "ال1َ2ِي3"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 5
+    },
+    {
+     "pair": [
+      "ال1ا2ِ3",
+      "ال1َ2ّا3"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 4
+    },
+    {
+     "pair": [
+      "ال1َ2ِي3",
+      "ال1َ2ْ3ان"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 2
+    },
+    {
+     "pair": [
+      "ال1َ2ائِ3ِيّ",
+      "ال1َ2ّا3"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 1
+    },
+    {
+     "pair": [
+      "ال1ُ2ْ3ِيّ",
+      "ال1ِ2ِّي3"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 1
+    },
+    {
+     "pair": [
+      "ال1َ2ِي3",
+      "المُتَ1َ2ِّ3"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 1
+    },
+    {
+     "pair": [
+      "ال1ا2ِ3",
+      "المُ1ْ2ِ3"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 1
+    },
+    {
+     "pair": [
+      "ال1َ2َ3",
+      "المُسْتَ1ْ2َ3"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 1
+    },
+    {
+     "pair": [
+      "ال1َ2ُو3ِيّ",
+      "المُ1ا2ِ3"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 1
+    },
+    {
+     "pair": [
+      "ال1ا2ِ3",
+      "المُ1ا2ِ3"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 1
+    },
+    {
+     "pair": [
+      "ال1ا2ِ3",
+      "ال1َ2ا3ِيّ"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 1
+    },
+    {
+     "pair": [
+      "ال1َ2ِي3",
+      "المَ1ْ2ُو3ِيّ"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 1
+    },
+    {
+     "pair": [
+      "ال1ا2ِ3",
+      "ال1َ2ْ3"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 1
+    },
+    {
+     "pair": [
+      "ال1َ2ِي3",
+      "المُ1ا2ِ3"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 1
+    },
+    {
+     "pair": [
+      "ال1َ2ِي3",
+      "ال1ُ2ْ3َة"
+     ],
+     "n_roots_realised_in_exactly_this_pair": 1
+    }
+   ],
+   "n_cells_with_ge2_nouns": 0
+  }
+ },
+ "d2_freeze_summary": [
+  {
+   "granularity": "root_any_non_null | wazn_tag_family",
+   "R": 345,
+   "W": 6,
+   "nouns": 412,
+   "cells_occupied": 395,
+   "grid_RxW": 2070,
+   "density": 0.19082,
+   "roots_spanning_ge2": 46,
+   "roots_spanning_ge3": 4
+  },
+  {
+   "granularity": "root_any_non_null | true_pattern",
+   "R": 345,
+   "W": 129,
+   "nouns": 412,
+   "cells_occupied": 412,
+   "grid_RxW": 44505,
+   "density": 0.00926,
+   "roots_spanning_ge2": 61,
+   "roots_spanning_ge3": 6
+  },
+  {
+   "granularity": "root_complete_triliteral_only | wazn_tag_family",
+   "R": 227,
+   "W": 6,
+   "nouns": 267,
+   "cells_occupied": 262,
+   "grid_RxW": 1362,
+   "density": 0.19236,
+   "roots_spanning_ge2": 33,
+   "roots_spanning_ge3": 2
+  },
+  {
+   "granularity": "root_complete_triliteral_only | true_pattern",
+   "R": 227,
+   "W": 47,
+   "nouns": 267,
+   "cells_occupied": 267,
+   "grid_RxW": 10669,
+   "density": 0.02503,
+   "roots_spanning_ge2": 36,
+   "roots_spanning_ge3": 4
+  }
+ ],
+ "d2_transfer_capacity": {
+  "root_any | wazn_tag_family": {
+   "roots_spanning_ge2": 46,
+   "nouns_in_sub_grid": 98,
+   "cells_in_sub_grid": 96,
+   "wazn_columns_in_sub_grid": 6,
+   "roots_per_wazn_column": {
+    "mu_participle": 24,
+    "faail": 21,
+    "faiil": 20,
+    "other": 11,
+    "nisba_yaa": 11,
+    "faaal_or_fa33aal": 9
+   },
+   "max_holdable_out_cells_keeping_every_root_seen": 46,
+   "cells_with_ge2_nouns": 2
+  },
+  "root_complete_triliteral | wazn_tag_family": {
+   "roots_spanning_ge2": 33,
+   "nouns_in_sub_grid": 70,
+   "cells_in_sub_grid": 68,
+   "wazn_columns_in_sub_grid": 6,
+   "roots_per_wazn_column": {
+    "faail": 17,
+    "faiil": 16,
+    "mu_participle": 15,
+    "nisba_yaa": 7,
+    "faaal_or_fa33aal": 7,
+    "other": 6
+   },
+   "max_holdable_out_cells_keeping_every_root_seen": 33,
+   "cells_with_ge2_nouns": 2
+  },
+  "root_any | true_pattern": {
+   "roots_spanning_ge2": 61,
+   "nouns_in_sub_grid": 128,
+   "cells_in_sub_grid": 128,
+   "wazn_columns_in_sub_grid": 64,
+   "roots_per_wazn_column": {
+    "ال1ا2ِ3": 18,
+    "ال1َ2ِي3": 15,
+    "ال1َ2ّا3": 7,
+    "المُ1ا2ِ3": 5,
+    "المُ1ْتَ2ِ3": 5,
+    "ال1ا2ِي": 4,
+    "الأَ2ِي3": 3,
+    "المُ1ْ2ِ3": 3,
+    "المُ1َ2ِّ3": 3,
+    "الأَ2": 2,
+    "الأَ2ُو": 2,
+    "ال1ِ2ِّي3": 2
+   },
+   "max_holdable_out_cells_keeping_every_root_seen": 61,
+   "cells_with_ge2_nouns": 0
+  },
+  "root_complete_triliteral | true_pattern": {
+   "roots_spanning_ge2": 36,
+   "nouns_in_sub_grid": 76,
+   "cells_in_sub_grid": 76,
+   "wazn_columns_in_sub_grid": 24,
+   "roots_per_wazn_column": {
+    "ال1ا2ِ3": 18,
+    "ال1َ2ِي3": 15,
+    "ال1َ2ّا3": 7,
+    "المُ1ا2ِ3": 5,
+    "المُ1ْتَ2ِ3": 5,
+    "المُ1ْ2ِ3": 3,
+    "ال1ِ2ِّي3": 2,
+    "ال1َ2ْ3ان": 2,
+    "المُتَ1َ2ِّ3": 2,
+    "ال1َ2ا3ِيّ": 2,
+    "المُ1َ2ِّ3": 2,
+    "ال1َ2ائِ3ِيّ": 1
+   },
+   "max_holdable_out_cells_keeping_every_root_seen": 36,
+   "cells_with_ge2_nouns": 0
+  },
+  "note": "doc 66 SS3 trains on cells where EVERY root and EVERY wazn appears >= m_min times and tests on held-out COMBINATIONS. Only roots realised in >= 2 wazn can contribute a held-out combination at all, so these are the binding numbers."
+ },
+ "d3_label_inventory": {
+  "search": "searched d4_model_check.json (veto/keep classes only, no category field), d4_confirmed_inventory.json (noun / wazn_tag / note only), candidate_human_nouns.json (no category field), exp68_run.py / exp69_datagen.py / exp73_run.py / exp75_run.py / exp76_run.py, and every *.py and *.json in the repo for 'nonoccupational'",
+  "verdict": "per-noun category labels exist ONLY over the 24 frozen HUMANS. NO category label of any kind exists for the 519. exp69_datagen.py:129-136 imports the members from instrument_sb_bounds.CATEGORIES and asserts (4, 20); exp73/exp75/exp76 all cite the same 24+category. The 44 AraVec file carries vectors, not labels.",
+  "labelled_subsets": {
+   "nonoccupational (the committed exp68/69/73/75 target)": {
+    "n_labelled": 24,
+    "n_positive": 4,
+    "members": [
+     "الرجل",
+     "المريض",
+     "المسافر",
+     "الولد"
+    ]
+   },
+   "tertiary": {
+    "n_labelled": 24,
+    "n_positive": 5,
+    "members": [
+     "الباحث",
+     "الصحفي",
+     "الطبيب",
+     "المعلم",
+     "المهندس"
+    ]
+   },
+   "uniformed": {
+    "n_labelled": 24,
+    "n_positive": 4,
+    "members": [
+     "الجندي",
+     "الحارس",
+     "الشرطي",
+     "الضابط"
+    ]
+   },
+   "manual": {
+    "n_labelled": 24,
+    "n_positive": 5,
+    "members": [
+     "السائق",
+     "الصياد",
+     "الطباخ",
+     "العامل",
+     "الفلاح"
+    ]
+   }
+  },
+  "unassigned_by_doc54_s5_2": [
+   "الطالب",
+   "القائد",
+   "الكاتب",
+   "اللاعب",
+   "المدير",
+   "الموظف"
+  ]
+ },
+ "d3_classifiers": {
+  "task": "predict nonoccupational membership over the 24 frozen HUMANS",
+  "n": 24,
+  "n_positive": 4,
+  "base_rate_majority_class": 0.8333,
+  "results": {
+   "wazn_tag": {
+    "resubstitution_acc": 0.9167,
+    "n_distinct_keys": 7,
+    "loo_acc": 0.9167,
+    "loo_fell_back_to_global_majority": 2
+   },
+   "true_pattern": {
+    "resubstitution_acc": 0.9583,
+    "n_distinct_keys": 15,
+    "loo_acc": 0.7917,
+    "loo_fell_back_to_global_majority": 11
+   },
+   "root": {
+    "resubstitution_acc": 1.0,
+    "n_distinct_keys": 24,
+    "loo_acc": 0.8333,
+    "loo_fell_back_to_global_majority": 24
+   }
+  },
+  "per_noun": [
+   {
+    "noun": "الطالب",
+    "y_nonoccupational": 0,
+    "wazn_tag": "faail",
+    "root": "ط.ل.ب",
+    "pattern": "ال1ا2ِ3"
+   },
+   {
+    "noun": "الرجل",
+    "y_nonoccupational": 1,
+    "wazn_tag": "other",
+    "root": "ر.ج.ل",
+    "pattern": "ال1َ2ُ3"
+   },
+   {
+    "noun": "الولد",
+    "y_nonoccupational": 1,
+    "wazn_tag": "other",
+    "root": "#.ل.د",
+    "pattern": "الوَ2َ3"
+   },
+   {
+    "noun": "المدير",
+    "y_nonoccupational": 0,
+    "wazn_tag": "mu_participle",
+    "root": "د.#.ر",
+    "pattern": "المُ1ِي3"
+   },
+   {
+    "noun": "المعلم",
+    "y_nonoccupational": 0,
+    "wazn_tag": "mu_participle",
+    "root": "ع.ل.م",
+    "pattern": "المُ1َ2ِّ3"
+   },
+   {
+    "noun": "الطبيب",
+    "y_nonoccupational": 0,
+    "wazn_tag": "faiil",
+    "root": "ط.ب.ب",
+    "pattern": "ال1َ2ِي3"
+   },
+   {
+    "noun": "العامل",
+    "y_nonoccupational": 0,
+    "wazn_tag": "faail",
+    "root": "ع.م.ل",
+    "pattern": "ال1ا2ِ3"
+   },
+   {
+    "noun": "المهندس",
+    "y_nonoccupational": 0,
+    "wazn_tag": "mu_participle",
+    "root": "ه.ن.د.س",
+    "pattern": "المُ1َ2ْ3ِ4"
+   },
+   {
+    "noun": "الشرطي",
+    "y_nonoccupational": 0,
+    "wazn_tag": null,
+    "root": null,
+    "pattern": null
+   },
+   {
+    "noun": "الكاتب",
+    "y_nonoccupational": 0,
+    "wazn_tag": "faail",
+    "root": "ك.ت.ب",
+    "pattern": "ال1ا2ِ3"
+   },
+   {
+    "noun": "الطباخ",
+    "y_nonoccupational": 0,
+    "wazn_tag": "faaal_or_fa33aal",
+    "root": "ط.ب.خ",
+    "pattern": "ال1َ2ّا3"
+   },
+   {
+    "noun": "الجندي",
+    "y_nonoccupational": 0,
+    "wazn_tag": "nisba_yaa",
+    "root": "ج.ن.د",
+    "pattern": "ال1ُ2ْ3ِيّ"
+   },
+   {
+    "noun": "الفلاح",
+    "y_nonoccupational": 0,
+    "wazn_tag": "faaal_or_fa33aal",
+    "root": "ف.ل.ح",
+    "pattern": "ال1َ2ّا3"
+   },
+   {
+    "noun": "الحارس",
+    "y_nonoccupational": 0,
+    "wazn_tag": "faail",
+    "root": "ح.ر.س",
+    "pattern": "ال1ا2ِ3"
+   },
+   {
+    "noun": "اللاعب",
+    "y_nonoccupational": 0,
+    "wazn_tag": "faail",
+    "root": "ل.ع.ب",
+    "pattern": "ال1ا2ِ3"
+   },
+   {
+    "noun": "الموظف",
+    "y_nonoccupational": 0,
+    "wazn_tag": "mu_participle",
+    "root": "#.ظ.ف",
+    "pattern": "المُوَ2َّ3"
+   },
+   {
+    "noun": "الصحفي",
+    "y_nonoccupational": 0,
+    "wazn_tag": "nisba_yaa",
+    "root": "ص.ح.ف",
+    "pattern": "ال1َ2َ3ِيّ"
+   },
+   {
+    "noun": "السائق",
+    "y_nonoccupational": 0,
+    "wazn_tag": "faail",
+    "root": "س.#.ق",
+    "pattern": "ال1ائِ3"
+   },
+   {
+    "noun": "المسافر",
+    "y_nonoccupational": 1,
+    "wazn_tag": "mu_participle",
+    "root": "س.ف.ر",
+    "pattern": "المُ1ا2ِ3"
+   },
+   {
+    "noun": "الضابط",
+    "y_nonoccupational": 0,
+    "wazn_tag": "faail",
+    "root": "ض.ب.ط",
+    "pattern": "ال1ا2ِ3"
+   },
+   {
+    "noun": "الباحث",
+    "y_nonoccupational": 0,
+    "wazn_tag": "faail",
+    "root": "ب.ح.ث",
+    "pattern": "ال1ا2ِ3"
+   },
+   {
+    "noun": "القائد",
+    "y_nonoccupational": 0,
+    "wazn_tag": "faail",
+    "root": "ق.#.د",
+    "pattern": "ال1ائِ3"
+   },
+   {
+    "noun": "الصياد",
+    "y_nonoccupational": 0,
+    "wazn_tag": "faaal_or_fa33aal",
+    "root": "ص.#.د",
+    "pattern": "ال1َيّا3"
+   },
+   {
+    "noun": "المريض",
+    "y_nonoccupational": 1,
+    "wazn_tag": "mu_participle",
+    "root": "م.ر.ض",
+    "pattern": "ال1َ2ِي3"
+   }
+  ],
+  "positives_by_wazn_tag": {
+   "other": 2,
+   "mu_participle": 2
+  },
+  "all_by_wazn_tag": {
+   "faail": 9,
+   "other": 2,
+   "mu_participle": 6,
+   "faiil": 1,
+   "null": 1,
+   "faaal_or_fa33aal": 3,
+   "nisba_yaa": 2
+  },
+  "root_uniqueness": {
+   "n_nouns": 24,
+   "n_distinct_roots": 24,
+   "n_roots_with_ge2_nouns": 0
+  }
+ },
+ "d3_other_categories_context": {
+  "tertiary": {
+   "base_rate": 0.7917,
+   "wazn_tag": {
+    "resub": 0.8333,
+    "loo": 0.75
+   },
+   "root": {
+    "resub": 1.0,
+    "loo": 0.7917
+   }
+  },
+  "uniformed": {
+   "base_rate": 0.8333,
+   "wazn_tag": {
+    "resub": 0.875,
+    "loo": 0.7917
+   },
+   "root": {
+    "resub": 1.0,
+    "loo": 0.8333
+   }
+  },
+  "manual": {
+   "base_rate": 0.7917,
+   "wazn_tag": {
+    "resub": 0.9167,
+    "loo": 0.9167
+   },
+   "root": {
+    "resub": 1.0,
+    "loo": 0.7917
+   }
+  }
+ }
+}

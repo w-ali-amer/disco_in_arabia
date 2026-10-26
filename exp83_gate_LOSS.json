@@ -1,0 +1,85 @@
+{
+ "gate": "GATE_LOSS",
+ "spec": "qnlp_private_docs/75_exp83_cost_shaping.md (REGISTERED 2026-09-16)",
+ "passed": true,
+ "A1_SMOOTH": {
+  "test_logits": [
+   [
+    0.6,
+    -0.2
+   ],
+   [
+    -0.1,
+    0.5
+   ]
+  ],
+  "test_labels": [
+   0,
+   1
+  ],
+  "formula": "-(1-eps)*log_softmax[y] - (eps/K)*sum_k log_softmax[k]; eps=0.1, K=2",
+  "ref_item0": 0.41110066594777783,
+  "ref_item1": 0.46748795048588554,
+  "ref_batch_mean": 0.4392943082168317,
+  "got_batch_mean": 0.43929430842399597,
+  "diff": 2.0716428572598033e-10,
+  "tol": 1e-05,
+  "passed": true,
+  "dtf_result": "OK: designed-to-fail fired: dtf_A1: got=0.43929431 wrong_ref=0.44929431 diff=1.00e-02"
+ },
+ "A2_MARGIN": {
+  "test_logits": [
+   [
+    0.3,
+    0.5,
+    0.4
+   ],
+   [
+    0.4,
+    0.7,
+    0.3
+   ]
+  ],
+  "test_labels": [
+   0,
+   2
+  ],
+  "formula": "sum_{j!=y} max(0, m - z[y] + z[j]), un-normalized; m=0.2",
+  "hand_computed": {
+   "item0_y0_loss": 0.7000000000000001,
+   "item1_y2_loss": 0.9,
+   "batch_mean": 0.8
+  },
+  "ref_batch_mean": 0.8,
+  "got_batch_mean": 0.7999999821186066,
+  "diff": 1.788139347702611e-08,
+  "tol": 1e-06,
+  "passed": true,
+  "dtf_result": "OK: designed-to-fail fired: dtf_A2: got=0.79999998 wrong_ref=0.81000000"
+ },
+ "A3_FOCAL": {
+  "test_logits": [
+   [
+    0.6,
+    -0.2
+   ],
+   [
+    -0.1,
+    0.5
+   ]
+  ],
+  "test_labels": [
+   0,
+   1
+  ],
+  "formula": "-(1-p_t)^gamma * log(p_t); gamma=2.0, no class weighting",
+  "ref_item0": 0.03566864568298008,
+  "ref_item1": 0.05493074789602194,
+  "ref_batch_mean": 0.04529969678950101,
+  "got_batch_mean": 0.045299699530005455,
+  "diff": 2.740504448373038e-09,
+  "tol": 1e-06,
+  "passed": true,
+  "dtf_result": "OK: designed-to-fail fired: dtf_A3: got=0.04529970 wrong_ref=0.05529970"
+ }
+}

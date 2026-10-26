@@ -1,0 +1,435 @@
+{
+ "experiment": "exp45a",
+ "spec": "qnlp_private_docs/28_exp45_two_qubit_referent_multihop.md (commit cb19b4f, FROZEN)",
+ "question": "does a 2-hop bridge become representable with a two-qubit register per referent?",
+ "not_an_exp43a_extension": "doc 24 SS9 froze exp43a's budget; this is a NEW certificate for a DIFFERENT model class. results_exp43a.json stands as computed and is neither recomputed nor amended.",
+ "platform": "macOS-26.5.2-arm64-arm-64bit",
+ "python": "3.12.13",
+ "torch": "2.13.0",
+ "family_dataset_sha256": "93f52af6daae07f13e48b11d87233d779a21caeb66225571cb85307207b0dfc4",
+ "family_n_items": 200,
+ "embeddings_sha256": "00c1ecffcaf05b38df082f8a3cbed1d013bddb3e39bc00adf1c2513b4ea674ac",
+ "param_counts": {
+  "arm": "A4",
+  "per_verb": 33,
+  "n_verbs": 6,
+  "readout_shared": 66,
+  "total_trained": 264,
+  "wires_per_referent": 2
+ },
+ "budget": {
+  "n_restarts": 40,
+  "optimizer": "Adam",
+  "lr": 0.02,
+  "max_epochs": 500,
+  "batch_size": 1,
+  "early_stop_train_acc": 0.99,
+  "lbfgs_polish_top": 3,
+  "lbfgs_max_iter": 300,
+  "restart_seeds": "45000 + restart_index"
+ },
+ "restarts": [
+  {
+   "restart": 11,
+   "seed": 45011,
+   "best_train_acc_adam": 0.96,
+   "best_epoch": 173,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 2278.6
+  },
+  {
+   "restart": 3,
+   "seed": 45003,
+   "best_train_acc_adam": 0.955,
+   "best_epoch": 435,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 2767.7
+  },
+  {
+   "restart": 10,
+   "seed": 45010,
+   "best_train_acc_adam": 0.945,
+   "best_epoch": 373,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 2290.5
+  },
+  {
+   "restart": 1,
+   "seed": 45001,
+   "best_train_acc_adam": 0.935,
+   "best_epoch": 369,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 2710.3
+  },
+  {
+   "restart": 16,
+   "seed": 45016,
+   "best_train_acc_adam": 0.935,
+   "best_epoch": 343,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 2194.3
+  },
+  {
+   "restart": 23,
+   "seed": 45023,
+   "best_train_acc_adam": 0.935,
+   "best_epoch": 411,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 2159.3
+  },
+  {
+   "restart": 15,
+   "seed": 45015,
+   "best_train_acc_adam": 0.925,
+   "best_epoch": 332,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 2200.5
+  },
+  {
+   "restart": 36,
+   "seed": 45036,
+   "best_train_acc_adam": 0.925,
+   "best_epoch": 466,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 2076.3
+  },
+  {
+   "restart": 35,
+   "seed": 45035,
+   "best_train_acc_adam": 0.92,
+   "best_epoch": 123,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 2121.1
+  },
+  {
+   "restart": 5,
+   "seed": 45005,
+   "best_train_acc_adam": 0.915,
+   "best_epoch": 381,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 2738.2
+  },
+  {
+   "restart": 13,
+   "seed": 45013,
+   "best_train_acc_adam": 0.915,
+   "best_epoch": 306,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 2230.0
+  },
+  {
+   "restart": 8,
+   "seed": 45008,
+   "best_train_acc_adam": 0.91,
+   "best_epoch": 381,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 2464.1
+  },
+  {
+   "restart": 19,
+   "seed": 45019,
+   "best_train_acc_adam": 0.91,
+   "best_epoch": 382,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 2180.1
+  },
+  {
+   "restart": 32,
+   "seed": 45032,
+   "best_train_acc_adam": 0.91,
+   "best_epoch": 301,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 2147.7
+  },
+  {
+   "restart": 39,
+   "seed": 45039,
+   "best_train_acc_adam": 0.91,
+   "best_epoch": 495,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 1351.1
+  },
+  {
+   "restart": 24,
+   "seed": 45024,
+   "best_train_acc_adam": 0.905,
+   "best_epoch": 498,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 2179.1
+  },
+  {
+   "restart": 0,
+   "seed": 45000,
+   "best_train_acc_adam": 0.9,
+   "best_epoch": 447,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 2717.1
+  },
+  {
+   "restart": 4,
+   "seed": 45004,
+   "best_train_acc_adam": 0.9,
+   "best_epoch": 487,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 2753.0
+  },
+  {
+   "restart": 9,
+   "seed": 45009,
+   "best_train_acc_adam": 0.9,
+   "best_epoch": 486,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 2297.8
+  },
+  {
+   "restart": 14,
+   "seed": 45014,
+   "best_train_acc_adam": 0.9,
+   "best_epoch": 237,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 2214.8
+  },
+  {
+   "restart": 20,
+   "seed": 45020,
+   "best_train_acc_adam": 0.9,
+   "best_epoch": 202,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 2165.8
+  },
+  {
+   "restart": 28,
+   "seed": 45028,
+   "best_train_acc_adam": 0.9,
+   "best_epoch": 284,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 2158.6
+  },
+  {
+   "restart": 33,
+   "seed": 45033,
+   "best_train_acc_adam": 0.9,
+   "best_epoch": 412,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 2153.0
+  },
+  {
+   "restart": 21,
+   "seed": 45021,
+   "best_train_acc_adam": 0.895,
+   "best_epoch": 480,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 2187.8
+  },
+  {
+   "restart": 26,
+   "seed": 45026,
+   "best_train_acc_adam": 0.895,
+   "best_epoch": 290,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 2152.3
+  },
+  {
+   "restart": 29,
+   "seed": 45029,
+   "best_train_acc_adam": 0.895,
+   "best_epoch": 142,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 2144.3
+  },
+  {
+   "restart": 25,
+   "seed": 45025,
+   "best_train_acc_adam": 0.89,
+   "best_epoch": 328,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 2166.7
+  },
+  {
+   "restart": 31,
+   "seed": 45031,
+   "best_train_acc_adam": 0.885,
+   "best_epoch": 330,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 2162.9
+  },
+  {
+   "restart": 7,
+   "seed": 45007,
+   "best_train_acc_adam": 0.88,
+   "best_epoch": 191,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 2478.1
+  },
+  {
+   "restart": 18,
+   "seed": 45018,
+   "best_train_acc_adam": 0.88,
+   "best_epoch": 146,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 2193.3
+  },
+  {
+   "restart": 22,
+   "seed": 45022,
+   "best_train_acc_adam": 0.88,
+   "best_epoch": 498,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 2174.3
+  },
+  {
+   "restart": 30,
+   "seed": 45030,
+   "best_train_acc_adam": 0.88,
+   "best_epoch": 112,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 2176.6
+  },
+  {
+   "restart": 34,
+   "seed": 45034,
+   "best_train_acc_adam": 0.875,
+   "best_epoch": 198,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 2141.1
+  },
+  {
+   "restart": 12,
+   "seed": 45012,
+   "best_train_acc_adam": 0.865,
+   "best_epoch": 326,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 2238.7
+  },
+  {
+   "restart": 37,
+   "seed": 45037,
+   "best_train_acc_adam": 0.865,
+   "best_epoch": 361,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 2104.4
+  },
+  {
+   "restart": 2,
+   "seed": 45002,
+   "best_train_acc_adam": 0.855,
+   "best_epoch": 258,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 2691.9
+  },
+  {
+   "restart": 6,
+   "seed": 45006,
+   "best_train_acc_adam": 0.855,
+   "best_epoch": 487,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 2484.6
+  },
+  {
+   "restart": 17,
+   "seed": 45017,
+   "best_train_acc_adam": 0.85,
+   "best_epoch": 240,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 2179.8
+  },
+  {
+   "restart": 38,
+   "seed": 45038,
+   "best_train_acc_adam": 0.845,
+   "best_epoch": 403,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 2118.7
+  },
+  {
+   "restart": 27,
+   "seed": 45027,
+   "best_train_acc_adam": 0.835,
+   "best_epoch": 495,
+   "epochs_run": 500,
+   "aborted_on_certificate": false,
+   "wall_sec": 2168.8
+  }
+ ],
+ "lbfgs_polish": [
+  {
+   "restart": 11,
+   "train_acc_after_lbfgs": 1.0,
+   "final_loss": 0.29130783677101135,
+   "train_acc_before": 0.96
+  },
+  {
+   "restart": 3,
+   "train_acc_after_lbfgs": 1.0,
+   "final_loss": 0.2649815082550049,
+   "train_acc_before": 0.955
+  },
+  {
+   "restart": 10,
+   "train_acc_after_lbfgs": 1.0,
+   "final_loss": 0.27269357442855835,
+   "train_acc_before": 0.945
+  }
+ ],
+ "verdicts": {
+  "bridge_representable_2q": true,
+  "bridge_unrepresentable_2q_proved": false,
+  "representability_2q_open": false,
+  "best_train_acc_overall": 1.0,
+  "target": 0.99
+ },
+ "exp43a_reference": {
+  "best_train_acc": 0.955,
+  "target": 0.99,
+  "verdict": "representability_open = true",
+  "comparison_guard": "doc 28 SS4, frozen BEFORE any number existed: a higher best-train than exp43a's 0.955 is DESCRIPTIVE ONLY -- the runs differ in optimisation landscape as well as model class, and exp43a's 0.955 is a budget-limited FLOOR, not a ceiling. representability_2q_open is NOT evidence against the class; it reproduces exp43a's own ambiguity."
+ },
+ "meta_notes": {
+  "ansatz_caveat": "A4 = Circuit4(4 wires, 3 layers) = 33 params/verb is NOT universal on SU(16) (255 params). exp43a used a provably universal KAK form for its 1-qubit certificate precisely for this reason. A failure to certify is ambiguous between 'the two-qubit register does not make the bridge representable' and 'this ansatz is too small', and must never be reported as the former alone.",
+  "comparison_guard": "doc 28 SS4, frozen BEFORE any number existed: a higher best-train than exp43a's 0.955 is DESCRIPTIVE ONLY -- the runs differ in optimisation landscape as well as model class, and exp43a's 0.955 is a budget-limited FLOOR, not a ceiling. representability_2q_open is NOT evidence against the class; it reproduces exp43a's own ambiguity."
+ },
+ "git_note": {
+  "exp42_paths": [],
+  "n_untracked": 157
+ },
+ "wall_time_sec": 2340.395430803299
+}

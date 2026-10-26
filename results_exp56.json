@@ -1,0 +1,756 @@
+{
+ "experiment": "exp56",
+ "spec": "qnlp_private_docs/41_exp56_tightened_encoding_rp.md (e7081cc), inheriting 37 (1ba1469+38a9fd4+b52d1f9) criteria UNCHANGED",
+ "platform": "macOS-26.5.2-arm64-arm-64bit",
+ "python": "3.12.13",
+ "torch": "2.13.0",
+ "dataset_sha256": "2bfdd9f8aa310974e25a200990db9275844bbf87fca19183508ec95d4686b4fd",
+ "frozen_embeddings_sha256": "00c1ecffcaf05b38df082f8a3cbed1d013bddb3e39bc00adf1c2513b4ea674ac",
+ "encodings": {
+  "RP-A": null,
+  "RP-T": 0.15,
+  "RP-M": 0.6
+ },
+ "angle_seed_table": {
+  "RP-T|0": 56001,
+  "RP-T|1": 56002,
+  "RP-T|2": 56003,
+  "RP-T|3": 56004,
+  "RP-T|4": 56005,
+  "RP-M|0": 56011,
+  "RP-M|1": 56012,
+  "RP-M|2": 56013,
+  "RP-M|3": 56014,
+  "RP-M|4": 56015
+ },
+ "per_encoding": {
+  "RP-A": {
+   "encoding": "RP-A",
+   "half_width": null,
+   "tied_sentinel": 0.5,
+   "drawn_angle_maps": {},
+   "per_arm": {
+    "C": [
+     {
+      "arm": "C",
+      "seed": 0,
+      "lr": 0.005,
+      "batch": 1,
+      "val_acc": 0.7133333333333334,
+      "train_acc": 0.7708333333333334,
+      "heldout_acc": 0.6725,
+      "gate_met": false
+     },
+     {
+      "arm": "C",
+      "seed": 1,
+      "lr": 0.005,
+      "batch": 1,
+      "val_acc": 0.6933333333333334,
+      "train_acc": 0.76,
+      "heldout_acc": 0.6225,
+      "gate_met": false
+     },
+     {
+      "arm": "C",
+      "seed": 0,
+      "lr": 0.005,
+      "batch": 8,
+      "val_acc": 0.61,
+      "train_acc": 0.6833333333333333,
+      "heldout_acc": 0.575,
+      "gate_met": false
+     },
+     {
+      "arm": "C",
+      "seed": 1,
+      "lr": 0.005,
+      "batch": 8,
+      "val_acc": 0.61,
+      "train_acc": 0.6683333333333333,
+      "heldout_acc": 0.5125,
+      "gate_met": false
+     },
+     {
+      "arm": "C",
+      "seed": 0,
+      "lr": 0.02,
+      "batch": 1,
+      "val_acc": 0.6066666666666667,
+      "train_acc": 0.5358333333333334,
+      "heldout_acc": 0.5475,
+      "gate_met": false
+     },
+     {
+      "arm": "C",
+      "seed": 1,
+      "lr": 0.02,
+      "batch": 1,
+      "val_acc": 0.5933333333333334,
+      "train_acc": 0.5166666666666667,
+      "heldout_acc": 0.53,
+      "gate_met": false
+     },
+     {
+      "arm": "C",
+      "seed": 0,
+      "lr": 0.02,
+      "batch": 8,
+      "val_acc": 0.65,
+      "train_acc": 0.595,
+      "heldout_acc": 0.545,
+      "gate_met": false
+     },
+     {
+      "arm": "C",
+      "seed": 1,
+      "lr": 0.02,
+      "batch": 8,
+      "val_acc": 0.61,
+      "train_acc": 0.59,
+      "heldout_acc": 0.4675,
+      "gate_met": false
+     }
+    ],
+    "A": [
+     {
+      "arm": "A",
+      "seed": 0,
+      "lr": 0.005,
+      "batch": 1,
+      "val_acc": 0.6633333333333333,
+      "train_acc": 0.7475,
+      "heldout_acc": 0.59,
+      "gate_met": false
+     },
+     {
+      "arm": "A",
+      "seed": 1,
+      "lr": 0.005,
+      "batch": 1,
+      "val_acc": 0.7166666666666667,
+      "train_acc": 0.7791666666666667,
+      "heldout_acc": 0.6225,
+      "gate_met": false
+     },
+     {
+      "arm": "A",
+      "seed": 0,
+      "lr": 0.005,
+      "batch": 8,
+      "val_acc": 0.71,
+      "train_acc": 0.7616666666666667,
+      "heldout_acc": 0.595,
+      "gate_met": false
+     },
+     {
+      "arm": "A",
+      "seed": 1,
+      "lr": 0.005,
+      "batch": 8,
+      "val_acc": 0.6233333333333333,
+      "train_acc": 0.7458333333333333,
+      "heldout_acc": 0.545,
+      "gate_met": false
+     },
+     {
+      "arm": "A",
+      "seed": 0,
+      "lr": 0.02,
+      "batch": 1,
+      "val_acc": 0.61,
+      "train_acc": 0.5425,
+      "heldout_acc": 0.5575,
+      "gate_met": false
+     },
+     {
+      "arm": "A",
+      "seed": 1,
+      "lr": 0.02,
+      "batch": 1,
+      "val_acc": 0.59,
+      "train_acc": 0.5608333333333333,
+      "heldout_acc": 0.5675,
+      "gate_met": false
+     },
+     {
+      "arm": "A",
+      "seed": 0,
+      "lr": 0.02,
+      "batch": 8,
+      "val_acc": 0.7333333333333333,
+      "train_acc": 0.7866666666666666,
+      "heldout_acc": 0.665,
+      "gate_met": false
+     },
+     {
+      "arm": "A",
+      "seed": 1,
+      "lr": 0.02,
+      "batch": 8,
+      "val_acc": 0.7033333333333334,
+      "train_acc": 0.7708333333333334,
+      "heldout_acc": 0.6025,
+      "gate_met": false
+     }
+    ]
+   },
+   "few_shot_curves": {
+    "C": {
+     "0": 0.6725,
+     "1": 0.6725,
+     "2": 0.6725,
+     "4": 0.6725,
+     "8": 0.6725
+    },
+    "A": {
+     "0": 0.665,
+     "1": 0.6608040201005025,
+     "2": 0.6868686868686869,
+     "4": 0.6428571428571429,
+     "8": 0.6796875
+    }
+   },
+   "registered_novel_block_floor": 0.593125,
+   "registered_novel_block_floor_sd": 0.03849281008930667,
+   "C_heldout_k0": 0.6725,
+   "A_heldout_k0": 0.665,
+   "rp_seen_learnable_C": false,
+   "rp_seen_learnable_A": false,
+   "rp_composes": false,
+   "rp_composition_advantage": false
+  },
+  "RP-T": {
+   "encoding": "RP-T",
+   "half_width": 0.15,
+   "tied_sentinel": 0.5,
+   "drawn_angle_maps": {
+    "RP-T_s0": {
+     "الطالب": 3.045107868522776,
+     "الرجل": 3.2706088858067033,
+     "الولد": 3.1262847432368464,
+     "المدير": 3.0395407684354994,
+     "المعلم": 3.2489664778102343,
+     "الطبيب": 3.145348734767537,
+     "العامل": 3.2844163130475654,
+     "المهندس": 3.2605198876281825,
+     "الشرطي": 3.1098865625884597,
+     "الكاتب": 3.067881964648926,
+     "الطباخ": 3.0667994045642137,
+     "الجندي": 3.053048180747824,
+     "الفلاح": 3.0519560513504183,
+     "الحارس": 3.105980531137816,
+     "اللاعب": 3.2539092387147868,
+     "الموظف": 3.17024785481632,
+     "الصحفي": 3.0609267568548724,
+     "السائق": 3.0599057221640225,
+     "المسافر": 3.1784255142658306,
+     "الضابط": 3.190653509222234,
+     "الباحث": 3.129041393116257,
+     "القائد": 3.2367442334749783,
+     "الصياد": 3.176646979722486,
+     "المريض": 3.1633090168692783
+    },
+    "RP-T_s1": {
+     "الطالب": 3.0799996046676457,
+     "الرجل": 3.0205219574020217,
+     "الولد": 3.1269488166747617,
+     "المدير": 3.024645475480319,
+     "المعلم": 3.289241249056013,
+     "الطبيب": 3.053564508773452,
+     "العامل": 3.1526108305548686,
+     "المهندس": 3.049280088348479,
+     "الشرطي": 3.23854257313228,
+     "الكاتب": 3.110519994683877,
+     "الطباخ": 3.0218711598554124,
+     "الجندي": 3.0117924348521767,
+     "الفلاح": 3.1967622179680495,
+     "الحارس": 3.0834372735435833,
+     "اللاعب": 3.15870851356644,
+     "الموظف": 3.2265979263172824,
+     "الصحفي": 3.2777278507592675,
+     "السائق": 3.1476245388820354,
+     "المسافر": 3.283804800065213,
+     "الضابط": 3.064137752808938,
+     "الباحث": 3.1305041993236657,
+     "القائد": 3.0729126451154407,
+     "الصياد": 3.0273295581145216,
+     "المريض": 3.230038744730619
+    }
+   },
+   "per_arm": {
+    "C": [
+     {
+      "arm": "C",
+      "seed": 0,
+      "lr": 0.005,
+      "batch": 1,
+      "val_acc": 0.7633333333333333,
+      "train_acc": 0.7983333333333333,
+      "heldout_acc": 0.64,
+      "gate_met": false
+     },
+     {
+      "arm": "C",
+      "seed": 1,
+      "lr": 0.005,
+      "batch": 1,
+      "val_acc": 0.74,
+      "train_acc": 0.7675,
+      "heldout_acc": 0.7075,
+      "gate_met": false
+     },
+     {
+      "arm": "C",
+      "seed": 0,
+      "lr": 0.005,
+      "batch": 8,
+      "val_acc": 0.73,
+      "train_acc": 0.8058333333333333,
+      "heldout_acc": 0.66,
+      "gate_met": true
+     },
+     {
+      "arm": "C",
+      "seed": 1,
+      "lr": 0.005,
+      "batch": 8,
+      "val_acc": 0.6833333333333333,
+      "train_acc": 0.7708333333333334,
+      "heldout_acc": 0.55,
+      "gate_met": false
+     },
+     {
+      "arm": "C",
+      "seed": 0,
+      "lr": 0.02,
+      "batch": 1,
+      "val_acc": 0.6,
+      "train_acc": 0.5758333333333333,
+      "heldout_acc": 0.5375,
+      "gate_met": false
+     },
+     {
+      "arm": "C",
+      "seed": 1,
+      "lr": 0.02,
+      "batch": 1,
+      "val_acc": 0.62,
+      "train_acc": 0.57,
+      "heldout_acc": 0.5625,
+      "gate_met": false
+     },
+     {
+      "arm": "C",
+      "seed": 0,
+      "lr": 0.02,
+      "batch": 8,
+      "val_acc": 0.6266666666666667,
+      "train_acc": 0.565,
+      "heldout_acc": 0.51,
+      "gate_met": false
+     },
+     {
+      "arm": "C",
+      "seed": 1,
+      "lr": 0.02,
+      "batch": 8,
+      "val_acc": 0.64,
+      "train_acc": 0.6483333333333333,
+      "heldout_acc": 0.5625,
+      "gate_met": false
+     }
+    ],
+    "A": [
+     {
+      "arm": "A",
+      "seed": 0,
+      "lr": 0.005,
+      "batch": 1,
+      "val_acc": 0.84,
+      "train_acc": 0.8766666666666667,
+      "heldout_acc": 0.605,
+      "gate_met": true
+     },
+     {
+      "arm": "A",
+      "seed": 1,
+      "lr": 0.005,
+      "batch": 1,
+      "val_acc": 0.81,
+      "train_acc": 0.8616666666666667,
+      "heldout_acc": 0.6875,
+      "gate_met": true
+     },
+     {
+      "arm": "A",
+      "seed": 0,
+      "lr": 0.005,
+      "batch": 8,
+      "val_acc": 0.7666666666666667,
+      "train_acc": 0.8258333333333333,
+      "heldout_acc": 0.665,
+      "gate_met": true
+     },
+     {
+      "arm": "A",
+      "seed": 1,
+      "lr": 0.005,
+      "batch": 8,
+      "val_acc": 0.7166666666666667,
+      "train_acc": 0.8066666666666666,
+      "heldout_acc": 0.6925,
+      "gate_met": true
+     },
+     {
+      "arm": "A",
+      "seed": 0,
+      "lr": 0.02,
+      "batch": 1,
+      "val_acc": 0.65,
+      "train_acc": 0.615,
+      "heldout_acc": 0.56,
+      "gate_met": false
+     },
+     {
+      "arm": "A",
+      "seed": 1,
+      "lr": 0.02,
+      "batch": 1,
+      "val_acc": 0.6433333333333333,
+      "train_acc": 0.5916666666666667,
+      "heldout_acc": 0.5825,
+      "gate_met": false
+     },
+     {
+      "arm": "A",
+      "seed": 0,
+      "lr": 0.02,
+      "batch": 8,
+      "val_acc": 0.8066666666666666,
+      "train_acc": 0.8658333333333333,
+      "heldout_acc": 0.7275,
+      "gate_met": true
+     },
+     {
+      "arm": "A",
+      "seed": 1,
+      "lr": 0.02,
+      "batch": 8,
+      "val_acc": 0.78,
+      "train_acc": 0.8133333333333334,
+      "heldout_acc": 0.6875,
+      "gate_met": true
+     }
+    ]
+   },
+   "few_shot_curves": {
+    "C": {
+     "0": 0.64,
+     "1": 0.64,
+     "2": 0.64,
+     "4": 0.64,
+     "8": 0.64
+    },
+    "A": {
+     "0": 0.605,
+     "1": 0.6532663316582915,
+     "2": 0.7297979797979798,
+     "4": 0.6071428571428571,
+     "8": 0.8072916666666666
+    }
+   },
+   "registered_novel_block_floor": 0.6509375000000001,
+   "registered_novel_block_floor_sd": 0.06038474115441511,
+   "C_heldout_k0": 0.64,
+   "A_heldout_k0": 0.605,
+   "rp_seen_learnable_C": true,
+   "rp_seen_learnable_A": true,
+   "rp_composes": false,
+   "rp_composition_advantage": false
+  },
+  "RP-M": {
+   "encoding": "RP-M",
+   "half_width": 0.6,
+   "tied_sentinel": 0.5,
+   "drawn_angle_maps": {
+    "RP-M_s0": {
+     "الطالب": 3.6583920168208217,
+     "الرجل": 3.4382686454887486,
+     "الولد": 2.774912387029068,
+     "المدير": 3.6582313294564566,
+     "المعلم": 3.428933378367896,
+     "الطبيب": 2.6456702591078445,
+     "العامل": 2.8336303356379506,
+     "المهندس": 3.7392314061698877,
+     "الشرطي": 3.3456146899638077,
+     "الكاتب": 2.907897997072191,
+     "الطباخ": 2.5854772722110266,
+     "الجندي": 3.0022419420514574,
+     "الفلاح": 3.082246549735335,
+     "الحارس": 3.1731410691920106,
+     "اللاعب": 3.1481974532618144,
+     "الموظف": 3.6252878490999727,
+     "الصحفي": 3.333474030284738,
+     "السائق": 2.704754675613133,
+     "المسافر": 3.660295598718202,
+     "الضابط": 3.1846628755084057,
+     "الباحث": 2.8071279364377286,
+     "القائد": 3.2425580633339783,
+     "الصياد": 2.9166969297721534,
+     "المريض": 3.030406731379903
+    },
+    "RP-M_s1": {
+     "الطالب": 3.4227727101807686,
+     "الرجل": 3.206809165417023,
+     "الولد": 3.287671054915302,
+     "المدير": 3.5636580210470057,
+     "المعلم": 3.676810726781372,
+     "الطبيب": 2.726001591206426,
+     "العامل": 2.7147780760273927,
+     "المهندس": 3.2452982270114,
+     "الشرطي": 3.460796342404248,
+     "الكاتب": 3.6961746036393386,
+     "الطباخ": 2.8576915371022857,
+     "الجندي": 3.588311222776376,
+     "الفلاح": 2.549527472770424,
+     "الحارس": 2.555118401463858,
+     "اللاعب": 2.7139627107397324,
+     "الموظف": 2.826091733404995,
+     "الصحفي": 2.5572699614855745,
+     "السائق": 2.6249288875426253,
+     "المسافر": 2.6727817734717196,
+     "الضابط": 3.3940427837601495,
+     "الباحث": 3.0141113334607827,
+     "القائد": 2.97740648775983,
+     "الصياد": 3.4222154140774506,
+     "المريض": 2.739115988166328
+    }
+   },
+   "per_arm": {
+    "C": [
+     {
+      "arm": "C",
+      "seed": 0,
+      "lr": 0.005,
+      "batch": 1,
+      "val_acc": 0.7566666666666667,
+      "train_acc": 0.8033333333333333,
+      "heldout_acc": 0.66,
+      "gate_met": true
+     },
+     {
+      "arm": "C",
+      "seed": 1,
+      "lr": 0.005,
+      "batch": 1,
+      "val_acc": 0.7533333333333333,
+      "train_acc": 0.8175,
+      "heldout_acc": 0.6225,
+      "gate_met": true
+     },
+     {
+      "arm": "C",
+      "seed": 0,
+      "lr": 0.005,
+      "batch": 8,
+      "val_acc": 0.6366666666666667,
+      "train_acc": 0.745,
+      "heldout_acc": 0.6175,
+      "gate_met": false
+     },
+     {
+      "arm": "C",
+      "seed": 1,
+      "lr": 0.005,
+      "batch": 8,
+      "val_acc": 0.6766666666666666,
+      "train_acc": 0.7633333333333333,
+      "heldout_acc": 0.57,
+      "gate_met": false
+     },
+     {
+      "arm": "C",
+      "seed": 0,
+      "lr": 0.02,
+      "batch": 1,
+      "val_acc": 0.59,
+      "train_acc": 0.5725,
+      "heldout_acc": 0.5375,
+      "gate_met": false
+     },
+     {
+      "arm": "C",
+      "seed": 1,
+      "lr": 0.02,
+      "batch": 1,
+      "val_acc": 0.6233333333333333,
+      "train_acc": 0.5533333333333333,
+      "heldout_acc": 0.5175,
+      "gate_met": false
+     },
+     {
+      "arm": "C",
+      "seed": 0,
+      "lr": 0.02,
+      "batch": 8,
+      "val_acc": 0.6433333333333333,
+      "train_acc": 0.585,
+      "heldout_acc": 0.5325,
+      "gate_met": false
+     },
+     {
+      "arm": "C",
+      "seed": 1,
+      "lr": 0.02,
+      "batch": 8,
+      "val_acc": 0.6433333333333333,
+      "train_acc": 0.5991666666666666,
+      "heldout_acc": 0.555,
+      "gate_met": false
+     }
+    ],
+    "A": [
+     {
+      "arm": "A",
+      "seed": 0,
+      "lr": 0.005,
+      "batch": 1,
+      "val_acc": 0.76,
+      "train_acc": 0.8066666666666666,
+      "heldout_acc": 0.655,
+      "gate_met": true
+     },
+     {
+      "arm": "A",
+      "seed": 1,
+      "lr": 0.005,
+      "batch": 1,
+      "val_acc": 0.6766666666666666,
+      "train_acc": 0.735,
+      "heldout_acc": 0.5975,
+      "gate_met": false
+     },
+     {
+      "arm": "A",
+      "seed": 0,
+      "lr": 0.005,
+      "batch": 8,
+      "val_acc": 0.73,
+      "train_acc": 0.8058333333333333,
+      "heldout_acc": 0.575,
+      "gate_met": true
+     },
+     {
+      "arm": "A",
+      "seed": 1,
+      "lr": 0.005,
+      "batch": 8,
+      "val_acc": 0.6633333333333333,
+      "train_acc": 0.7583333333333333,
+      "heldout_acc": 0.6025,
+      "gate_met": false
+     },
+     {
+      "arm": "A",
+      "seed": 0,
+      "lr": 0.02,
+      "batch": 1,
+      "val_acc": 0.6433333333333333,
+      "train_acc": 0.565,
+      "heldout_acc": 0.5925,
+      "gate_met": false
+     },
+     {
+      "arm": "A",
+      "seed": 1,
+      "lr": 0.02,
+      "batch": 1,
+      "val_acc": 0.6566666666666666,
+      "train_acc": 0.6316666666666667,
+      "heldout_acc": 0.7075,
+      "gate_met": false
+     },
+     {
+      "arm": "A",
+      "seed": 0,
+      "lr": 0.02,
+      "batch": 8,
+      "val_acc": 0.78,
+      "train_acc": 0.8,
+      "heldout_acc": 0.7025,
+      "gate_met": true
+     },
+     {
+      "arm": "A",
+      "seed": 1,
+      "lr": 0.02,
+      "batch": 8,
+      "val_acc": 0.7866666666666666,
+      "train_acc": 0.7941666666666667,
+      "heldout_acc": 0.6675,
+      "gate_met": false
+     }
+    ]
+   },
+   "few_shot_curves": {
+    "C": {
+     "0": 0.66,
+     "1": 0.66,
+     "2": 0.66,
+     "4": 0.66,
+     "8": 0.66
+    },
+    "A": {
+     "0": 0.6325,
+     "1": 0.6432160804020101,
+     "2": 0.7272727272727273,
+     "4": 0.673469387755102,
+     "8": 0.71875
+    }
+   },
+   "registered_novel_block_floor": 0.6375,
+   "registered_novel_block_floor_sd": 0.05221863378417435,
+   "C_heldout_k0": 0.66,
+   "A_heldout_k0": 0.6325,
+   "rp_seen_learnable_C": true,
+   "rp_seen_learnable_A": true,
+   "rp_composes": false,
+   "rp_composition_advantage": false
+  }
+ },
+ "verdicts": {
+  "encoding_lifts_rp": true,
+  "lifted": [
+   "RP-T/C",
+   "RP-T/A",
+   "RP-M/C",
+   "RP-M/A"
+  ],
+  "RP-A__rp_seen_learnable_C": false,
+  "RP-A__rp_seen_learnable_A": false,
+  "RP-A__rp_composes": false,
+  "RP-A__rp_composition_advantage": false,
+  "RP-A__registered_novel_block_floor": 0.593125,
+  "RP-T__rp_seen_learnable_C": true,
+  "RP-T__rp_seen_learnable_A": true,
+  "RP-T__rp_composes": false,
+  "RP-T__rp_composition_advantage": false,
+  "RP-T__registered_novel_block_floor": 0.6509375000000001,
+  "RP-M__rp_seen_learnable_C": true,
+  "RP-M__rp_seen_learnable_A": true,
+  "RP-M__rp_composes": false,
+  "RP-M__rp_composition_advantage": false,
+  "RP-M__registered_novel_block_floor": 0.6375
+ },
+ "meta_notes": {
+  "floor_is_per_encoding": "doc 37 SS4.1 defines novel_block_floor as arm A's held-out distribution, so it is PER-ENCODING by definition. exp54's 0.5519 belongs to RP-A only and is never reused. A rising floor under RP-T is the consistency mechanism inflating, NOT a fairness problem.",
+  "not_a_budget_extension": "doc 38 prohibited extending COMPUTE; this extends none. Epochs, seeds, arms, grid, dataset and every doc 37 SS4.1 threshold are inherited verbatim; only the angle map changes.",
+  "no_mechanism_claimed": "doc 41 SS6: a positive shows a conditioned encoding lifts the rung; the WHY is not claimed here and is a separate question."
+ },
+ "git_note": {
+  "exp42_paths": [],
+  "n_untracked": 186
+ },
+ "wall_time_sec": 70739.20038795471
+}

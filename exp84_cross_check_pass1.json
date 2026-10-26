@@ -1,0 +1,9 @@
+{
+  "n_rows_in_pass1": 543,
+  "n_readings_found": 437,
+  "n_no_reading": 106,
+  "root_agreement_pct": 93.59,
+  "pattern_agreement_pct": 93.14,
+  "both_agreement_pct": 93.14,
+  "camel_db_both": "calima-msa-r13 (WSL src) vs calima-msa-r13 (committed/pass1)"
+}

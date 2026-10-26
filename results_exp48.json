@@ -1,0 +1,614 @@
+{
+ "experiment": "exp48",
+ "spec": "qnlp_private_docs/32_exp48_l2_phase2_comparison.md (commit 415f6bc, FROZEN)",
+ "question": "does the L2 generalisation gap between A4 and the dimension-matched B5 survive the full Phase-2 protocol?",
+ "platform": "macOS-26.5.2-arm64-arm-64bit",
+ "python": "3.12.13",
+ "torch": "2.13.0",
+ "rung": "L2",
+ "dataset_sha256": "95e2c3407cb9052c7c2a2f4a1a4b8471e53225fc784a005ce8dca128ba9e38c7",
+ "embeddings_sha256": "00c1ecffcaf05b38df082f8a3cbed1d013bddb3e39bc00adf1c2513b4ea674ac",
+ "n_seeds": 5,
+ "max_epochs": 60,
+ "a4_config": {
+  "lr": 0.02,
+  "batch": 8
+ },
+ "b5_grid": [
+  {
+   "lr": 0.005,
+   "batch": 1
+  },
+  {
+   "lr": 0.005,
+   "batch": 8
+  },
+  {
+   "lr": 0.02,
+   "batch": 1
+  },
+  {
+   "lr": 0.02,
+   "batch": 8
+  }
+ ],
+ "param_counts": {
+  "A4": {
+   "arm": "A4",
+   "per_verb": 33,
+   "n_verbs": 6,
+   "readout_shared": 66,
+   "total_trained": 264,
+   "wires_per_referent": 2
+  },
+  "B5": {
+   "arm": "B5",
+   "d_ref": 4,
+   "per_verb": 256,
+   "n_verbs": 6,
+   "readout_shared": 512,
+   "total_trained": 2048
+  },
+  "A5": {
+   "arm": "A5",
+   "per_verb": 2,
+   "n_verbs": 6,
+   "readout_shared": 66,
+   "total_trained": 78,
+   "wires_per_referent": 2
+  }
+ },
+ "reuse_integrity": [
+  {
+   "source": "exp45b_ckpt/L2_A4_lr0.02_b8_s0",
+   "recomputed_test_acc": 0.7566666666666667,
+   "source_test_acc": 0.7566666666666667,
+   "matches": true
+  },
+  {
+   "source": "exp45b_ckpt/L2_A4_lr0.02_b8_s1",
+   "recomputed_test_acc": 0.6866666666666666,
+   "source_test_acc": 0.6866666666666666,
+   "matches": true
+  }
+ ],
+ "per_arm": {
+  "A4": [
+   {
+    "arm": "A4",
+    "seed": 0,
+    "lr": 0.02,
+    "batch": 8,
+    "epochs_run": 60,
+    "steps_taken": 9000,
+    "best_epoch": 49,
+    "val_acc": 0.75,
+    "train_acc": 0.8,
+    "test_acc": 0.7566666666666667,
+    "train_margin": 0.0,
+    "val_margin": 0.050000000000000044,
+    "reused_from": "exp45b_ckpt/L2_A4_lr0.02_b8_s0"
+   },
+   {
+    "arm": "A4",
+    "seed": 1,
+    "lr": 0.02,
+    "batch": 8,
+    "epochs_run": 60,
+    "steps_taken": 9000,
+    "best_epoch": 60,
+    "val_acc": 0.6966666666666667,
+    "train_acc": 0.8025,
+    "test_acc": 0.6866666666666666,
+    "train_margin": 0.0024999999999999467,
+    "val_margin": -0.0033333333333332993,
+    "reused_from": "exp45b_ckpt/L2_A4_lr0.02_b8_s1"
+   },
+   {
+    "arm": "A4",
+    "seed": 2,
+    "lr": 0.02,
+    "batch": 8,
+    "epochs_run": 60,
+    "steps_taken": 9000,
+    "best_epoch": 52,
+    "val_acc": 0.7166666666666667,
+    "train_acc": 0.8108333333333333,
+    "test_acc": 0.6933333333333334,
+    "train_margin": 0.01083333333333325,
+    "val_margin": 0.01666666666666672
+   },
+   {
+    "arm": "A4",
+    "seed": 3,
+    "lr": 0.02,
+    "batch": 8,
+    "epochs_run": 60,
+    "steps_taken": 9000,
+    "best_epoch": 52,
+    "val_acc": 0.74,
+    "train_acc": 0.81,
+    "test_acc": 0.7266666666666667,
+    "train_margin": 0.010000000000000009,
+    "val_margin": 0.040000000000000036
+   },
+   {
+    "arm": "A4",
+    "seed": 4,
+    "lr": 0.02,
+    "batch": 8,
+    "epochs_run": 60,
+    "steps_taken": 9000,
+    "best_epoch": 55,
+    "val_acc": 0.7166666666666667,
+    "train_acc": 0.7958333333333333,
+    "test_acc": 0.72,
+    "train_margin": -0.004166666666666763,
+    "val_margin": 0.01666666666666672
+   }
+  ],
+  "B5": [
+   {
+    "arm": "B5",
+    "seed": 0,
+    "lr": 0.02,
+    "batch": 1,
+    "epochs_run": 60,
+    "steps_taken": 72000,
+    "best_epoch": 40,
+    "val_acc": 0.6666666666666666,
+    "train_acc": 0.9808333333333333,
+    "test_acc": 0.6133333333333333,
+    "train_margin": 0.1808333333333333,
+    "val_margin": -0.033333333333333326
+   },
+   {
+    "arm": "B5",
+    "seed": 1,
+    "lr": 0.005,
+    "batch": 1,
+    "epochs_run": 60,
+    "steps_taken": 72000,
+    "best_epoch": 34,
+    "val_acc": 0.69,
+    "train_acc": 0.9875,
+    "test_acc": 0.56,
+    "train_margin": 0.1875,
+    "val_margin": -0.010000000000000009
+   },
+   {
+    "arm": "B5",
+    "seed": 2,
+    "lr": 0.02,
+    "batch": 1,
+    "epochs_run": 60,
+    "steps_taken": 72000,
+    "best_epoch": 50,
+    "val_acc": 0.6633333333333333,
+    "train_acc": 0.9858333333333333,
+    "test_acc": 0.61,
+    "train_margin": 0.1858333333333333,
+    "val_margin": -0.036666666666666625
+   },
+   {
+    "arm": "B5",
+    "seed": 3,
+    "lr": 0.02,
+    "batch": 1,
+    "epochs_run": 60,
+    "steps_taken": 72000,
+    "best_epoch": 32,
+    "val_acc": 0.65,
+    "train_acc": 0.9808333333333333,
+    "test_acc": 0.6,
+    "train_margin": 0.1808333333333333,
+    "val_margin": -0.04999999999999993
+   },
+   {
+    "arm": "B5",
+    "seed": 4,
+    "lr": 0.02,
+    "batch": 1,
+    "epochs_run": 60,
+    "steps_taken": 72000,
+    "best_epoch": 39,
+    "val_acc": 0.7,
+    "train_acc": 0.9883333333333333,
+    "test_acc": 0.6033333333333334,
+    "train_margin": 0.18833333333333324,
+    "val_margin": 0.0
+   }
+  ],
+  "A5": [
+   {
+    "arm": "A5",
+    "seed": 0,
+    "lr": 0.02,
+    "batch": 8,
+    "epochs_run": 60,
+    "steps_taken": 9000,
+    "best_epoch": 1,
+    "val_acc": 0.5,
+    "train_acc": 0.5,
+    "test_acc": 0.5,
+    "train_margin": -0.30000000000000004,
+    "val_margin": -0.19999999999999996
+   },
+   {
+    "arm": "A5",
+    "seed": 1,
+    "lr": 0.02,
+    "batch": 8,
+    "epochs_run": 60,
+    "steps_taken": 9000,
+    "best_epoch": 1,
+    "val_acc": 0.5,
+    "train_acc": 0.5,
+    "test_acc": 0.5,
+    "train_margin": -0.30000000000000004,
+    "val_margin": -0.19999999999999996
+   },
+   {
+    "arm": "A5",
+    "seed": 2,
+    "lr": 0.02,
+    "batch": 8,
+    "epochs_run": 60,
+    "steps_taken": 9000,
+    "best_epoch": 1,
+    "val_acc": 0.5,
+    "train_acc": 0.5,
+    "test_acc": 0.5,
+    "train_margin": -0.30000000000000004,
+    "val_margin": -0.19999999999999996
+   },
+   {
+    "arm": "A5",
+    "seed": 3,
+    "lr": 0.02,
+    "batch": 8,
+    "epochs_run": 60,
+    "steps_taken": 9000,
+    "best_epoch": 1,
+    "val_acc": 0.5,
+    "train_acc": 0.5,
+    "test_acc": 0.5,
+    "train_margin": -0.30000000000000004,
+    "val_margin": -0.19999999999999996
+   },
+   {
+    "arm": "A5",
+    "seed": 4,
+    "lr": 0.02,
+    "batch": 8,
+    "epochs_run": 60,
+    "steps_taken": 9000,
+    "best_epoch": 1,
+    "val_acc": 0.5,
+    "train_acc": 0.5,
+    "test_acc": 0.5,
+    "train_margin": -0.30000000000000004,
+    "val_margin": -0.19999999999999996
+   }
+  ]
+ },
+ "b5_all_configs": [
+  {
+   "arm": "B5",
+   "seed": 0,
+   "lr": 0.005,
+   "batch": 1,
+   "epochs_run": 60,
+   "steps_taken": 72000,
+   "best_epoch": 48,
+   "val_acc": 0.6433333333333333,
+   "train_acc": 0.9858333333333333,
+   "test_acc": 0.5766666666666667,
+   "train_margin": 0.1858333333333333,
+   "val_margin": -0.05666666666666664
+  },
+  {
+   "arm": "B5",
+   "seed": 0,
+   "lr": 0.005,
+   "batch": 8,
+   "epochs_run": 60,
+   "steps_taken": 9000,
+   "best_epoch": 31,
+   "val_acc": 0.65,
+   "train_acc": 0.9858333333333333,
+   "test_acc": 0.6266666666666667,
+   "train_margin": 0.1858333333333333,
+   "val_margin": -0.04999999999999993
+  },
+  {
+   "arm": "B5",
+   "seed": 0,
+   "lr": 0.02,
+   "batch": 1,
+   "epochs_run": 60,
+   "steps_taken": 72000,
+   "best_epoch": 40,
+   "val_acc": 0.6666666666666666,
+   "train_acc": 0.9808333333333333,
+   "test_acc": 0.6133333333333333,
+   "train_margin": 0.1808333333333333,
+   "val_margin": -0.033333333333333326
+  },
+  {
+   "arm": "B5",
+   "seed": 0,
+   "lr": 0.02,
+   "batch": 8,
+   "epochs_run": 60,
+   "steps_taken": 9000,
+   "best_epoch": 34,
+   "val_acc": 0.6666666666666666,
+   "train_acc": 0.9883333333333333,
+   "test_acc": 0.6566666666666666,
+   "train_margin": 0.18833333333333324,
+   "val_margin": -0.033333333333333326
+  },
+  {
+   "arm": "B5",
+   "seed": 1,
+   "lr": 0.005,
+   "batch": 1,
+   "epochs_run": 60,
+   "steps_taken": 72000,
+   "best_epoch": 34,
+   "val_acc": 0.69,
+   "train_acc": 0.9875,
+   "test_acc": 0.56,
+   "train_margin": 0.1875,
+   "val_margin": -0.010000000000000009
+  },
+  {
+   "arm": "B5",
+   "seed": 1,
+   "lr": 0.005,
+   "batch": 8,
+   "epochs_run": 60,
+   "steps_taken": 9000,
+   "best_epoch": 54,
+   "val_acc": 0.6133333333333333,
+   "train_acc": 0.9883333333333333,
+   "test_acc": 0.59,
+   "train_margin": 0.18833333333333324,
+   "val_margin": -0.08666666666666667
+  },
+  {
+   "arm": "B5",
+   "seed": 1,
+   "lr": 0.02,
+   "batch": 1,
+   "epochs_run": 60,
+   "steps_taken": 72000,
+   "best_epoch": 50,
+   "val_acc": 0.6633333333333333,
+   "train_acc": 0.9925,
+   "test_acc": 0.6433333333333333,
+   "train_margin": 0.1925,
+   "val_margin": -0.036666666666666625
+  },
+  {
+   "arm": "B5",
+   "seed": 1,
+   "lr": 0.02,
+   "batch": 8,
+   "epochs_run": 60,
+   "steps_taken": 9000,
+   "best_epoch": 52,
+   "val_acc": 0.6533333333333333,
+   "train_acc": 0.9858333333333333,
+   "test_acc": 0.61,
+   "train_margin": 0.1858333333333333,
+   "val_margin": -0.046666666666666634
+  },
+  {
+   "arm": "B5",
+   "seed": 2,
+   "lr": 0.005,
+   "batch": 1,
+   "epochs_run": 60,
+   "steps_taken": 72000,
+   "best_epoch": 31,
+   "val_acc": 0.6433333333333333,
+   "train_acc": 0.9741666666666666,
+   "test_acc": 0.58,
+   "train_margin": 0.17416666666666658,
+   "val_margin": -0.05666666666666664
+  },
+  {
+   "arm": "B5",
+   "seed": 2,
+   "lr": 0.005,
+   "batch": 8,
+   "epochs_run": 60,
+   "steps_taken": 9000,
+   "best_epoch": 9,
+   "val_acc": 0.61,
+   "train_acc": 0.935,
+   "test_acc": 0.6233333333333333,
+   "train_margin": 0.135,
+   "val_margin": -0.08999999999999997
+  },
+  {
+   "arm": "B5",
+   "seed": 2,
+   "lr": 0.02,
+   "batch": 1,
+   "epochs_run": 60,
+   "steps_taken": 72000,
+   "best_epoch": 50,
+   "val_acc": 0.6633333333333333,
+   "train_acc": 0.9858333333333333,
+   "test_acc": 0.61,
+   "train_margin": 0.1858333333333333,
+   "val_margin": -0.036666666666666625
+  },
+  {
+   "arm": "B5",
+   "seed": 2,
+   "lr": 0.02,
+   "batch": 8,
+   "epochs_run": 60,
+   "steps_taken": 9000,
+   "best_epoch": 34,
+   "val_acc": 0.6433333333333333,
+   "train_acc": 0.9808333333333333,
+   "test_acc": 0.62,
+   "train_margin": 0.1808333333333333,
+   "val_margin": -0.05666666666666664
+  },
+  {
+   "arm": "B5",
+   "seed": 3,
+   "lr": 0.005,
+   "batch": 1,
+   "epochs_run": 60,
+   "steps_taken": 72000,
+   "best_epoch": 18,
+   "val_acc": 0.6466666666666666,
+   "train_acc": 0.965,
+   "test_acc": 0.6033333333333334,
+   "train_margin": 0.16499999999999992,
+   "val_margin": -0.053333333333333344
+  },
+  {
+   "arm": "B5",
+   "seed": 3,
+   "lr": 0.005,
+   "batch": 8,
+   "epochs_run": 60,
+   "steps_taken": 9000,
+   "best_epoch": 48,
+   "val_acc": 0.6366666666666667,
+   "train_acc": 0.9875,
+   "test_acc": 0.5933333333333334,
+   "train_margin": 0.1875,
+   "val_margin": -0.06333333333333324
+  },
+  {
+   "arm": "B5",
+   "seed": 3,
+   "lr": 0.02,
+   "batch": 1,
+   "epochs_run": 60,
+   "steps_taken": 72000,
+   "best_epoch": 32,
+   "val_acc": 0.65,
+   "train_acc": 0.9808333333333333,
+   "test_acc": 0.6,
+   "train_margin": 0.1808333333333333,
+   "val_margin": -0.04999999999999993
+  },
+  {
+   "arm": "B5",
+   "seed": 3,
+   "lr": 0.02,
+   "batch": 8,
+   "epochs_run": 60,
+   "steps_taken": 9000,
+   "best_epoch": 22,
+   "val_acc": 0.65,
+   "train_acc": 0.975,
+   "test_acc": 0.61,
+   "train_margin": 0.17499999999999993,
+   "val_margin": -0.04999999999999993
+  },
+  {
+   "arm": "B5",
+   "seed": 4,
+   "lr": 0.005,
+   "batch": 1,
+   "epochs_run": 60,
+   "steps_taken": 72000,
+   "best_epoch": 51,
+   "val_acc": 0.6766666666666666,
+   "train_acc": 0.9925,
+   "test_acc": 0.6066666666666667,
+   "train_margin": 0.1925,
+   "val_margin": -0.023333333333333317
+  },
+  {
+   "arm": "B5",
+   "seed": 4,
+   "lr": 0.005,
+   "batch": 8,
+   "epochs_run": 60,
+   "steps_taken": 9000,
+   "best_epoch": 22,
+   "val_acc": 0.6133333333333333,
+   "train_acc": 0.9766666666666667,
+   "test_acc": 0.5833333333333334,
+   "train_margin": 0.17666666666666664,
+   "val_margin": -0.08666666666666667
+  },
+  {
+   "arm": "B5",
+   "seed": 4,
+   "lr": 0.02,
+   "batch": 1,
+   "epochs_run": 60,
+   "steps_taken": 72000,
+   "best_epoch": 39,
+   "val_acc": 0.7,
+   "train_acc": 0.9883333333333333,
+   "test_acc": 0.6033333333333334,
+   "train_margin": 0.18833333333333324,
+   "val_margin": 0.0
+  },
+  {
+   "arm": "B5",
+   "seed": 4,
+   "lr": 0.02,
+   "batch": 8,
+   "epochs_run": 60,
+   "steps_taken": 9000,
+   "best_epoch": 26,
+   "val_acc": 0.6933333333333334,
+   "train_acc": 0.9675,
+   "test_acc": 0.6866666666666666,
+   "train_margin": 0.16749999999999998,
+   "val_margin": -0.006666666666666599
+  }
+ ],
+ "gate_statistics": {
+  "A4_vs_B5": {
+   "mean_acc_x": 0.7166666666666667,
+   "mean_acc_y": 0.5973333333333333,
+   "mean_paired_diff": 0.11933333333333335,
+   "one_sided_p": 9.999000099990002e-05,
+   "n_items": 300
+  }
+ },
+ "controls": {
+  "C1_A4": {
+   "control": "C1 trained-dial-swap (exhaustive, 6 verbs, 2q wiring)",
+   "n_permutations": 719,
+   "original_seed_mean_acc": 0.7166666666666667,
+   "perm_95th_percentile": 0.7193333333333334,
+   "perm_max": 0.732,
+   "perm_mean": 0.697362076958739,
+   "content_earned": false
+  }
+ },
+ "verdicts": {
+  "a5_sentinel_ok": true,
+  "tier_m_p": 9.999000099990002e-05,
+  "content_earned_A4": false,
+  "tier_m_passed": false,
+  "reuse_integrity_ok": true
+ },
+ "meta_notes": {
+  "scope": "doc 32 SS5: NOT quantum advantage. One rung, one task family, one dataset, simulation only, 6 verbs, 5 seeds. B5 is dimension-matched and unconstrained -- a stronger comparator than B1 ever was -- so a positive licenses only 'the two-qubit register class generalises on this rung where the dimension-matched classical linear class does not, at matched referent dimension and with the comparator given more parameters and more search'. A4's L2 gate pass was by EXACTLY ZERO margin on train and this doc does not repair that: if tier-m passes, the underlying learnability remains knife-edge and both facts travel together. B5 is not 'the classical method' -- sequence models and anything with a different inductive bias are untested here. No hardware reading follows.",
+  "search_asymmetry": "doc 32 SS2, DELIBERATE and in the COMPARATOR's favour: A4 runs at ONE frozen config while B5 gets the full 4-config grid with per-seed val-only selection. B5's four configs sat within 0.005 of each other on Phase-1 mean best-val, so fixing one would be near-arbitrary; giving it all four can only raise its score. Must be stated in every report (Rule 5).",
+  "content_rule": "doc 32 SS4, frozen: if content_earned_A4 is FALSE, A4 solves L2 without using verb identity. That is the MORE IMPORTANT finding of the two, it leads the write-up, and it bears retroactively on how every A4 result is described."
+ },
+ "git_note": {
+  "exp42_paths": [],
+  "n_untracked": 84
+ },
+ "wall_time_sec": 13977.56185889244
+}

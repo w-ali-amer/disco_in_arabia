@@ -1,0 +1,80 @@
+{
+ "experiment": "exp52",
+ "design_doc": "qnlp_private_docs/36_exp52_wordorder_tied_ablation.md (6986d13 + 162994d + 5efc91f + 0747cb0)",
+ "platform": "Linux-4.4.0-19041-Microsoft-x86_64-with-glibc2.35",
+ "python": "3.10.13",
+ "env": "qiskit_lambeq_env",
+ "QFM_WARMSTART": "legacy",
+ "sha256": {
+  "sentences.json": "aafaf80052487470d8e203172a7201930289831cfecb95dac3686de846cf84a4",
+  "exp13": "87f3346252565d58f25fd1a9b2718d23abba65cfd6f6e20ee9720663e92c3082",
+  "arabic_dep_reader": "1d8848bc9d5e34a3637b7ba6e131d23e47b0cf9b0bc587e10cc3cf803ea67fd1",
+  "self": "1d140dfb17f54dd964c26af024d6c7040e5e173da1557506aedec8d0ed48e817"
+ },
+ "code_identity_sha256": {
+  "_aravec_vec": "1c7fecec5a2ec26a321773732b0577b92f87a26eb445aa00d9be9f2093042bb1",
+  "sentence_to_aravec": "eeb352da96bbeb5548811c74eda271f9d7498b7f0e4ba42eebc21e0f232bd962",
+  "warmstart_weights": "aaa7ce718716041d51df5c16ef1145fd03f6c755191877e6d50bcd990752c152",
+  "make_ansatz": "75e2cd3afe3a341d05bb8a735038cc79e1cc479d7297e1808bff9f0da0c51fff",
+  "build_circuits": "aafff5a939444ce3000424e02768de5cb8bead3364a06902a9c2e56e20c0cca2",
+  "run_qfm_cv": "6bd368b0e440bfd1ec0cbbbd51f94e221efa961c508a0b51e319a6793aa89bea",
+  "_count_controlled": "986d61e91936e3b43d943e8dcd59cc8ec3915ad55c0e878bf18347c1d3e7f880",
+  "_total_boxes": "477f67aca1fc03f775e1aa61adbadebd64e899160c9d20774c68e93ed518e9f0",
+  "run_topology_only": "4578595c3753939e44639fbb72e84dbad63693dffc7103f1f6a9d9ce185a5184"
+ },
+ "n": 116,
+ "gates": {},
+ "phases": {},
+ "versions": {
+  "lambeq": "0.5.0",
+  "numpy": "1.26.4",
+  "sklearn": "1.6.1",
+  "stanza": "1.10.1"
+ },
+ "dedup": {
+  "n_before": 120,
+  "n_after": 116,
+  "per_label": {
+   "WordOrder_SVO": 58,
+   "WordOrder_VSO": 58
+  },
+  "A_published_QFM_L1": {
+   "mean": 0.648514492753623,
+   "std": 0.013917430241400896,
+   "per_seed": [
+    0.6471014492753622,
+    0.6471014492753623,
+    0.6652173913043479,
+    0.6300724637681159,
+    0.655072463768116,
+    0.6557971014492754,
+    0.6623188405797101,
+    0.6380434782608696,
+    0.6626811594202898,
+    0.6217391304347826
+   ],
+   "n_valid": 116
+  },
+  "D_nested_QFM_L1": {
+   "mean": 0.6131159420289855,
+   "std": 0.019360035229388773,
+   "per_seed": [
+    0.5865942028985508,
+    0.6206521739130435,
+    0.6478260869565217,
+    0.6036231884057971,
+    0.6202898550724637,
+    0.6119565217391305,
+    0.6373188405797101,
+    0.586231884057971,
+    0.6202898550724637,
+    0.596376811594203
+   ],
+   "n_valid": 116
+  },
+  "published": 0.6492,
+  "sd_A": 0.0315,
+  "within_one_sd_of_published": true
+ },
+ "wall_time_sec": 122.86207747459412
+}

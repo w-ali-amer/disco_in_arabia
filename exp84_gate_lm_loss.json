@@ -1,0 +1,32 @@
+{
+  "gate_id": "exp84_gate_lm_loss",
+  "spec": "doc 76 §4.2 (2026-09-17 amendment)",
+  "closed_form": {
+    "ref_item0": 0.3711006659477778,
+    "ref_item1": 0.43748795048588557,
+    "ref_mean": 0.40429430821683165,
+    "got": 0.40429431200027466,
+    "diff": 3.7834430033356625e-09,
+    "tol": 1e-05,
+    "passed": true,
+    "dtf": "OK: designed-to-fail fired: wrong_ref=0.414294 diff=1.00e-02"
+  },
+  "consistency": {
+    "vocab": 50,
+    "n_tokens_eval": 1984,
+    "total_nats_production_path": 16118.207031,
+    "total_nats_independent": 16118.207275,
+    "relative_diff": 1.5146884565304938e-08,
+    "tol_relative": 1e-05,
+    "bits_per_char_production": 3.906864474463373,
+    "bits_per_char_independent": 3.9068645336401993,
+    "passed": true,
+    "untrained_sanity": {
+      "mean_nats_per_token": 8.124096285912298,
+      "ln_vocab": 3.912023005428146,
+      "note": "untrained mean CE need not equal ln(V) exactly — the embed*sqrt(d) init scale inflates it; the equality checked is production-path vs independent recomputation."
+    }
+  },
+  "step1_loss_explanation": "Observed step-1 loss ~38.7 vs ln(32000)=10.37: the forward pass scales embeddings by sqrt(d_model) (Transformer convention) and norm_first encoder blocks apply no final LayerNorm before the head, so initial logits have std >> 1 and initial CE exceeds ln(V). Identical across arms; converges under training; not a mis-normalization of the loss.",
+  "passed": true
+}

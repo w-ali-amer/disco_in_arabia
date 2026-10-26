@@ -1,0 +1,115 @@
+{
+  "experiment": "exp89 — THE ALLOCATION CELL",
+  "registration": "/home/waj/qnlp_private_docs/81_exp88_89_skeleton_scale_and_allocation.md",
+  "sole_writer": "exp89_aggregate.py → results_exp89.json",
+  "bars": {
+    "fertility_bar": "arm fertility ≤ 1.1 × BPE fertility",
+    "f1_gap_bar": "arm F1 ≥ BPE F1 + 0.1",
+    "scope": "all 3 seeds (42/43/44) must satisfy both bars"
+  },
+  "anchor_gate": {
+    "all_seeds_pass": true,
+    "verdict": "ANCHOR_GATE_PASS: all seeds within ±0.03 — run continues"
+  },
+  "gates": {
+    "all_vocab_accounting_pass": true,
+    "all_expansion_determinism_pass": true,
+    "all_gates_pass": true
+  },
+  "per_arm_results": {
+    "opt": {
+      "arm": "opt",
+      "per_seed": [
+        {
+          "seed": 42,
+          "bpe_fertility": 1.381825,
+          "arm_fertility": 1.721156,
+          "fertility_ratio": 1.245567,
+          "bpe_f1": 0.1974,
+          "arm_f1": 0.5785,
+          "f1_gap": 0.3811,
+          "fertility_ok": false,
+          "f1_ok": true,
+          "both_ok": false
+        },
+        {
+          "seed": 43,
+          "bpe_fertility": 1.379707,
+          "arm_fertility": 1.719415,
+          "fertility_ratio": 1.246217,
+          "bpe_f1": 0.1899,
+          "arm_f1": 0.5624,
+          "f1_gap": 0.3725,
+          "fertility_ok": false,
+          "f1_ok": true,
+          "both_ok": false
+        },
+        {
+          "seed": 44,
+          "bpe_fertility": 1.380975,
+          "arm_fertility": 1.724522,
+          "fertility_ratio": 1.248771,
+          "bpe_f1": 0.2045,
+          "arm_f1": 0.5609,
+          "f1_gap": 0.3564,
+          "fertility_ok": false,
+          "f1_ok": true,
+          "both_ok": false
+        }
+      ],
+      "fertility_ok_all_seeds": false,
+      "f1_ok_all_seeds": true,
+      "both_ok_all_seeds": false,
+      "third_outcome": "BOUNDARY_ONLY"
+    },
+    "noback": {
+      "arm": "noback",
+      "per_seed": [
+        {
+          "seed": 42,
+          "bpe_fertility": 1.381825,
+          "arm_fertility": 1.524573,
+          "fertility_ratio": 1.103304,
+          "bpe_f1": 0.1974,
+          "arm_f1": 0.4952,
+          "f1_gap": 0.2978,
+          "fertility_ok": false,
+          "f1_ok": true,
+          "both_ok": false
+        },
+        {
+          "seed": 43,
+          "bpe_fertility": 1.379707,
+          "arm_fertility": 1.524362,
+          "fertility_ratio": 1.104845,
+          "bpe_f1": 0.1899,
+          "arm_f1": 0.4834,
+          "f1_gap": 0.2935,
+          "fertility_ok": false,
+          "f1_ok": true,
+          "both_ok": false
+        },
+        {
+          "seed": 44,
+          "bpe_fertility": 1.380975,
+          "arm_fertility": 1.521635,
+          "fertility_ratio": 1.101856,
+          "bpe_f1": 0.2045,
+          "arm_f1": 0.4808,
+          "f1_gap": 0.2763,
+          "fertility_ok": false,
+          "f1_ok": true,
+          "both_ok": false
+        }
+      ],
+      "fertility_ok_all_seeds": false,
+      "f1_ok_all_seeds": true,
+      "both_ok_all_seeds": false,
+      "third_outcome": "BOUNDARY_ONLY"
+    }
+  },
+  "allocation_cell_occupied": false,
+  "named_outcome": "CELL_EMPTY_AT_32K: no new arm achieves both bars on all seeds. Per-arm outcomes: opt=BOUNDARY_ONLY, noback=BOUNDARY_ONLY. Calibrated probe-B predicts this outcome: fertility and morphology cannot both be had within this allocation family at 32k vocab.",
+  "errors": [],
+  "elapsed_s": 0.0
+}

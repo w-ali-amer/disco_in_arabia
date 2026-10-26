@@ -1,0 +1,1168 @@
+{
+ "experiment": "exp76 -- scaling the composition-free family (doc 63)",
+ "spec": "qnlp_private_docs/63_exp76_scaling.md (REGISTERED 2026-08-29, orchestrator rulings in the status header, BINDING over the body)",
+ "orchestrator_rulings": {
+  "1": "the four measurement-corrected deviations are RATIFIED",
+  "2": "the inertness-theorem grid at cast sizes {2,3,4,5,7} with the padded case as a BLOCKING assertion and n = 16 recorded as structurally obstructed",
+  "3": "constructive-with-exact-bridge at 519",
+  "4": "the growth-slope certificate a <= 0.10 bits/wire",
+  "5": "120 runs ACCEPTED",
+  "6": "SS3.6.2's narrowed conclusion RATIFIED after the bands_c correction: arc count excluded for all five classes; the semantic-coherence correlate remains OPEN and SS16's wazn prohibition holds on those grounds",
+  "7": "no directional call; record 1 held / 2 missed"
+ },
+ "platform": "macOS-26.5.2-arm64-arm-64bit",
+ "python": "3.12.13",
+ "torch": "2.13.0",
+ "numpy": "2.5.1",
+ "script_sha256": "8fcfed49babcc14f2b3d22fb7b77e7e0fab18756b2014730ffefda532cce2347",
+ "datasets_doc63_SS8_5": {
+  "exp69_frozen": {
+   "path": "stories_exp69_QA.json",
+   "sha256": "2b85822b544571969fd40cab12b03a4ac256b08aee914d2b9643b856a6308c96",
+   "n_items": 1920
+  },
+  "inventory_nouns_sha256": "34e95fc6e0429ecb9284f825e5ac411eba48865db3a3ce585aaf6d6aa26328f0",
+  "exp76_cells": {
+   "n2_T2": {
+    "path": "stories_exp76_n2_T2.json",
+    "sha256": "c698aa7346bf330badaf512d646284f69e3c2986bc4899906e185c33b40a0788",
+    "n": 2,
+    "T": 2,
+    "n_items": 960,
+    "split_counts": {
+     "train": 528,
+     "val": 132,
+     "test": 300
+    }
+   },
+   "n3_T2": {
+    "path": "stories_exp76_n3_T2.json",
+    "sha256": "eb46f4e65a8f46c8a6fc0e0013d9dfdabc43200475b9c06b4c1488c5e2c41072",
+    "n": 3,
+    "T": 2,
+    "n_items": 960,
+    "split_counts": {
+     "train": 528,
+     "val": 132,
+     "test": 300
+    }
+   },
+   "n2_T4": {
+    "path": "stories_exp76_n2_T4.json",
+    "sha256": "9aebecae0c4ee957c84407aef5dca38347228e9b3c3a0a52a5c21225107c07af",
+    "n": 2,
+    "T": 4,
+    "n_items": 960,
+    "split_counts": {
+     "train": 528,
+     "val": 132,
+     "test": 300
+    }
+   },
+   "n4_T4": {
+    "path": "stories_exp76_n4_T4.json",
+    "sha256": "588e42558c1ecf72abfe0cdbf0d8ae5f65c90b6e512c1a4c74d37e5de075fe29",
+    "n": 4,
+    "T": 4,
+    "n_items": 960,
+    "split_counts": {
+     "train": 528,
+     "val": 132,
+     "test": 300
+    }
+   },
+   "n5_T4": {
+    "path": "stories_exp76_n5_T4.json",
+    "sha256": "8266c30d767c034fe6427052fc16b4c37185c5ebb1db9d7d1e9c8804b09bf0e7",
+    "n": 5,
+    "T": 4,
+    "n_items": 960,
+    "split_counts": {
+     "train": 528,
+     "val": 132,
+     "test": 300
+    }
+   },
+   "n2_T6": {
+    "path": "stories_exp76_n2_T6.json",
+    "sha256": "695be86eb0e248796c04056e851438346127256043a0716becd10c3e2ee611de",
+    "n": 2,
+    "T": 6,
+    "n_items": 960,
+    "split_counts": {
+     "train": 528,
+     "val": 132,
+     "test": 300
+    }
+   },
+   "n4_T6": {
+    "path": "stories_exp76_n4_T6.json",
+    "sha256": "51929a804d3670b02ba3dac901425649841e53892fa697f70212ba67c4d54882",
+    "n": 4,
+    "T": 6,
+    "n_items": 960,
+    "split_counts": {
+     "train": 528,
+     "val": 132,
+     "test": 300
+    }
+   },
+   "n7_T6": {
+    "path": "stories_exp76_n7_T6.json",
+    "sha256": "badcb738a93aac95870a8096922065aecca142364f4ee20ffb2712981eba581e",
+    "n": 7,
+    "T": 6,
+    "n_items": 960,
+    "split_counts": {
+     "train": 528,
+     "val": 132,
+     "test": 300
+    }
+   },
+   "band32_n2_T2": {
+    "path": "stories_exp76_band32_n2_T2.json",
+    "sha256": "ebdf32a2deb7bc6211bd69e9c673fb341498c3156a2fcdddf5de5a481481ed20",
+    "n": 2,
+    "T": 2,
+    "n_items": 960,
+    "split_counts": {
+     "train": 528,
+     "val": 132,
+     "test": 300
+    }
+   },
+   "I24_n2_T2": {
+    "path": "stories_exp76_I24_n2_T2.json",
+    "sha256": "5cdfc6b2efa55a9ae7f66069005c4a18794885bf87d3ab9df1f7000d95956836",
+    "n": 2,
+    "T": 2,
+    "n_items": 960,
+    "split_counts": {
+     "train": 528,
+     "val": 132,
+     "test": 300
+    }
+   },
+   "I24_n4_T4": {
+    "path": "stories_exp76_I24_n4_T4.json",
+    "sha256": "7ad4e9cc6a374f80b2b333f8dad0832873c4a5e91330286f48ce20952bd401f2",
+    "n": 4,
+    "T": 4,
+    "n_items": 960,
+    "split_counts": {
+     "train": 528,
+     "val": 132,
+     "test": 300
+    }
+   }
+  },
+  "exp76_vsuite": {
+   "file": "results_exp76_WN_validation.json",
+   "kill_gate_passed": true,
+   "flagged_ambiguities": [
+    "F1",
+    "F2",
+    "F3"
+   ]
+  }
+ },
+ "committed_imports_doc63_SS8_6": {
+  "anchors": {
+   "A0-A-T1": {
+    "exp69_arm": "R1-A",
+    "per_seed": [
+     0.9033333333333333,
+     0.9366666666666666,
+     0.9266666666666666,
+     0.92,
+     0.9266666666666666
+    ],
+    "mean": 0.9226666666666666,
+    "sd": 0.012337837015547824,
+    "floor_mean": 0.512,
+    "floor_sd": 0.0461037477387203,
+    "comparator": 0.9200000000000002,
+    "bound": 0.9625,
+    "wall_sec_total": 2098.3481016159058
+   },
+   "A0-A-T2": {
+    "exp69_arm": "R2-A",
+    "per_seed": [
+     0.9166666666666666,
+     0.9466666666666667,
+     0.8733333333333333,
+     0.9133333333333333,
+     0.9433333333333334
+    ],
+    "mean": 0.9186666666666666,
+    "sd": 0.02949576240750527,
+    "floor_mean": 0.506,
+    "floor_sd": 0.021781745670272724,
+    "comparator": 0.9200000000000002,
+    "bound": 0.9625,
+    "wall_sec_total": 3120.713203191757
+   }
+  },
+  "composition_cost_cc_A_recomputed": 0.0040000000000000036,
+  "grade1_bounds_doc63_SS2_6": {
+   "faail_camel": 0.6425672247590056,
+   "band_32arc": 0.5297931112238571
+  },
+  "binds_bar_doc54_SS7": 0.65,
+  "delta_bar_doc63_SS12": 0.06,
+  "exp73_ladder_row": {
+   "cc": {
+    "A3-uniform": 0.34466666666666657,
+    "A3-identity": 0.2626666666666667,
+    "A4-uniform": 0.3933333333333333,
+    "A4-identity": 0.39066666666666683
+   },
+   "definition": "cc(A, init) = heldout_mean(T=1) - heldout_mean(T=2)",
+   "committed_ladder_doc56_SS18_1": [
+    [
+     "angle (FA / EA-ctrl)",
+     0.004
+    ],
+    [
+     "CZ-across (N-across)",
+     0.032
+    ],
+    [
+     "eps-register (P-eps)",
+     0.132
+    ],
+    [
+     "old-map register (F2 / A0-W)",
+     0.253
+    ],
+    [
+     "entangled register (N-in)",
+     0.31
+    ]
+   ],
+   "no_boolean": "DESCRIPTIVE. doc 61 SS10.7(b) refuses any T1-T2 subtraction as a criterion (doc 55 SS6.10b, inherited).",
+   "branch_B1": "COST RISES WITH ENCODING COMPLEXITY -- the ladder's own ordering is by encoding complexity and the amplitude register is the most complex encoding the programme has built (7-15 free coordinates, strongly entangled within itself). Predicts cc(A3) >= 0.132 and cc(A4) >= cc(A3), plausibly both above 0.253.",
+   "branch_B2": "COST IS ABOUT THE MAP, NOT THE WIDTH -- dcc_map = -0.1207: the eps-map HALVED the register's composition collapse at bit-identical architecture (P-eps 0.132 against the old map's 0.253). The amplitude map has NO DEAD ZONES and NO RANGE COMPRESSION, the two defects the eps-map existed to fix, so its collapse could land at or below 0.132.",
+   "no_direction_registered": "doc 61 SS10.5: NO DIRECTION IS REGISTERED ON THE COMPOSITION COST, AND THIS IS STATED AS IGNORANCE RATHER THAN AS A HEDGE. B1 and B2 rest on two COMMITTED MEASUREMENTS THAT POINT IN OPPOSITE DIRECTIONS, and registering a direction would be picking one committed number over another with no mechanism to break the tie. Both branches were written in advance so whichever lands is a registered outcome and not a post-hoc narrative."
+  },
+  "SS12_4_1_note": "REGISTERED BEFORE ANY ARM RUNS: faail_camel's pair-level grade-1 bound is 0.6426 and the inherited `binds` bar is 0.65, so the bar sits ABOVE the reachable bound. `binds` is retained unchanged (doc 55 SS6.2 forbids re-choosing a bar) but is registered as plausibly unreachable by arithmetic across the 519-noun cells, and NO HEADLINE CRITERION IS GATED ON IT. SS12.9.3 gates grade 3 on FLOOR CLEARANCE instead."
+ },
+ "grid_doc63_SS6_2": {
+  "grid_by_T": {
+   "2": [
+    2,
+    3
+   ],
+   "4": [
+    2,
+    4,
+    5
+   ],
+   "6": [
+    2,
+    4,
+    7
+   ]
+  },
+  "cast_sizes": [
+   2,
+   3,
+   4,
+   5,
+   7
+  ],
+  "n_trained_cells": 11,
+  "n_floors": 11,
+  "n_anchor_runs": 10,
+  "n_runs": 120,
+  "run_arithmetic_doc63_SS19_2": {
+   "drift_anchor": 10,
+   "grid_cells": 40,
+   "grade3_target": 5,
+   "inventory_axis": 10,
+   "matched_floors": 55,
+   "inert_padding": 0,
+   "total": 120
+  },
+  "deviation_note_doc63_SS19_5": "The specification asked for n in {2,4,8} x T in {2,4,6} -- 9 cells. SS4.4.2 caps n_active at T + 1, so five of those nine would have contained referents that appear in NO SENTENCE. This doc registers 8 trained cells at cast sizes 2, 3, 4, 5 and 7 -- same cell count, same cost, DIFFERENT cast sizes -- and the orchestrator RATIFIED the deviation in doc 63's status header."
+ },
+ "init_doc63_SS7_4": {
+  "schemes": [
+   "uniform"
+  ],
+  "n_init_arms": 1,
+  "bounded_redraw_doc62_SS24_3": {
+   "applicable": false,
+   "reason": "doc 63 SS7.4 registers the COMMITTED UNIFORM INIT ONLY. No exp76 arm calls `exp72_run.apply_identity_init` or `exp72_run.identity_assertions`, so the committed identity window -- which refuses ~0.1-0.3%% of draws on new architectures and is the thing doc 62 SS24.3's driver-level bounded redraw exists to absorb -- is never consulted. The pattern is NOT BUILT, and this record is the statement that it was considered and found inapplicable rather than forgotten.",
+   "attempts_used": null,
+   "refused_attempts": []
+  },
+  "why_one_init": "doc 63 SS7.4, three registered grounds: the committed drift anchor requires the uniform init (SS6.4); a second init doubles a 120-run design to 220+ for a variable that has not replicated (doc 58 SS20.1 records the identity-init headline dying on its confirm draw); and doc 62 SS3.5 forbids merging init results across rungs anyway, so a fourth unmergeable init point buys nothing. SS21 item 5 offers the reduction that would restore it."
+ },
+ "features_doc63_SS8_4_4": {
+  "provenance_matches_prework_artefact": true,
+  "n_nouns": 519,
+  "angle_sd": 1.9471110360221981,
+  "n_distinct_angles": 519,
+  "nouns_shared_with_the_committed_44": 0,
+  "max_abs_angle_difference_on_shared_nouns": null,
+  "SS2_9b_note": "doc 63 SS2.9(b): the exp76 plane is NOT the committed plane -- the PCA is fit over 563 vectors and the sign pin is a DETERMINISM device, not a continuity claim. SS6.4's drift anchor is unaffected because it runs on exp69's FROZEN dataset with exp69's FROZEN features, which is a SEPARATE map in this file (`fm['exp69']`)."
+ },
+ "anchor_codepath_doc63_SS8_4_1": {
+  "per_arm": {
+   "A0-A-T1": {
+    "max_abs_param_diff": 0.0,
+    "max_abs_forward_diff": 0.0,
+    "bit_exact": true,
+    "n_items_checked": 8,
+    "n_seeds": 5
+   },
+   "A0-A-T2": {
+    "max_abs_param_diff": 0.0,
+    "max_abs_forward_diff": 0.0,
+    "bit_exact": true,
+    "n_items_checked": 8,
+    "n_seeds": 5
+   }
+  },
+  "bit_exact_all": true,
+  "honest_expectation": "doc 63 SS6.4: |delta| = 0 EXACTLY, bit-exact, 10/10. The n-generalisation is not a rewrite -- `exp42_models.story_values` already builds `sim.init_state(cs.K)` for arbitrary K -- so at n = 2 the codepath must be the SAME ARITHMETIC, not merely the same answer. The 0.002 tolerance exists only to absorb a documented float/BLAS platform difference."
+ },
+ "parameters_doc63_SS8_4_2": {
+  "n_params": 120,
+  "n_param_tensors": 8,
+  "params_per_tensor": 15,
+  "per_cell": {
+   "n2_T2": {
+    "n_params": 120,
+    "n": 2,
+    "statevector_dim": 4
+   },
+   "n3_T2": {
+    "n_params": 120,
+    "n": 3,
+    "statevector_dim": 8
+   },
+   "n2_T4": {
+    "n_params": 120,
+    "n": 2,
+    "statevector_dim": 4
+   },
+   "n4_T4": {
+    "n_params": 120,
+    "n": 4,
+    "statevector_dim": 16
+   },
+   "n5_T4": {
+    "n_params": 120,
+    "n": 5,
+    "statevector_dim": 32
+   },
+   "n2_T6": {
+    "n_params": 120,
+    "n": 2,
+    "statevector_dim": 4
+   },
+   "n4_T6": {
+    "n_params": 120,
+    "n": 4,
+    "statevector_dim": 16
+   },
+   "n7_T6": {
+    "n_params": 120,
+    "n": 7,
+    "statevector_dim": 128
+   },
+   "band32_n2_T2": {
+    "n_params": 120,
+    "n": 2,
+    "statevector_dim": 4
+   },
+   "I24_n2_T2": {
+    "n_params": 120,
+    "n": 2,
+    "statevector_dim": 4
+   },
+   "I24_n4_T4": {
+    "n_params": 120,
+    "n": 4,
+    "statevector_dim": 16
+   }
+  },
+  "no_per_wire_or_per_referent_parameter": true,
+  "reading": "doc 63 SS1.3: 6 x 15 + 2 x 15 = 120 at n = 2 and 120 at n = 7. exp76 is the first rung in this programme where the intervention adds ZERO parameters, so a degradation cannot be a capacity story and SS22's sample-complexity row is answered by arithmetic."
+ },
+ "intro_doc63_SS8_4_3_and_5": {
+  "max_abs_purity_deviation_f64": 9.992007221626409e-16,
+  "tolerance": 1e-09,
+  "per_cell": {
+   "n2_T2": 4.440892098500626e-16,
+   "n3_T2": 3.3306690738754696e-16,
+   "n2_T4": 4.440892098500626e-16,
+   "n4_T4": 7.771561172376096e-16,
+   "n5_T4": 6.661338147750939e-16,
+   "n2_T6": 4.440892098500626e-16,
+   "n4_T6": 6.661338147750939e-16,
+   "n7_T6": 9.992007221626409e-16,
+   "band32_n2_T2": 4.440892098500626e-16,
+   "I24_n2_T2": 2.220446049250313e-16,
+   "I24_n4_T4": 6.661338147750939e-16
+  },
+  "product_state_at_every_n": true,
+  "no_rng_consumed_on_the_data_path": true,
+  "no_data_dependent_parameters": true,
+  "failing_direction_entangled_intro": {
+   "purity": 0.4999999999999998,
+   "S_max": 1.0,
+   "R_max": 2,
+   "fires": true,
+   "reading": "a value below 1 means an entangler has entered the intro, which is a different experiment (SS8.4 item 3)"
+  }
+ },
+ "copy_doc63_SS8_4_6": {
+  "per_source": {
+   "exp69_committed": {
+    "arm": "A0-A-T2",
+    "max_abs_diff": 0.0,
+    "exact_zero": true
+   },
+   "exp76_n2_T2": {
+    "arm": "n2_T2",
+    "max_abs_diff": 0.0,
+    "exact_zero": true
+   }
+  },
+  "note": "with the non-queried event suppressed and the query fixed to the surviving event, the T-event forward pass reproduces the T = 1 pipeline bit-for-bit. This is only possible because the referent state prep happens EXACTLY ONCE, before event 1, and the events are parameterised gates on already-prepared wires."
+ },
+ "fourier_closure_doc63_SS8_4_7": {
+  "per_cell": {
+   "n2_T2": {
+    "resid_3term": 1.3842871354752262e-07,
+    "sweep_output_range": 0.3206488937139511,
+    "closes_at_3": true
+   },
+   "n3_T2": {
+    "resid_3term": 1.554341392262515e-07,
+    "sweep_output_range": 0.7099032066762447,
+    "closes_at_3": true
+   },
+   "n2_T4": {
+    "resid_3term": 2.187090690775051e-07,
+    "sweep_output_range": 0.7623053884599358,
+    "closes_at_3": true
+   },
+   "n4_T4": {
+    "resid_3term": 9.167858483483116e-08,
+    "sweep_output_range": 0.3298163264989853,
+    "closes_at_3": true
+   },
+   "n5_T4": {
+    "resid_3term": 1.2853844261195846e-07,
+    "sweep_output_range": 0.41142871230840683,
+    "closes_at_3": true
+   },
+   "n2_T6": {
+    "resid_3term": 2.7652242384768044e-07,
+    "sweep_output_range": 0.9744118525413796,
+    "closes_at_3": true
+   },
+   "n4_T6": {
+    "resid_3term": 1.084661207517712e-07,
+    "sweep_output_range": 0.4934904780238867,
+    "closes_at_3": true
+   },
+   "n7_T6": {
+    "resid_3term": 1.1390462406613011e-07,
+    "sweep_output_range": 0.5500711165368557,
+    "closes_at_3": true
+   },
+   "band32_n2_T2": {
+    "resid_3term": 1.4694934469261511e-07,
+    "sweep_output_range": 0.659425213932991,
+    "closes_at_3": true
+   },
+   "I24_n2_T2": {
+    "resid_3term": 2.612959159042916e-07,
+    "sweep_output_range": 0.7715828330256045,
+    "closes_at_3": true
+   },
+   "I24_n4_T4": {
+    "resid_3term": 1.1017202888874422e-07,
+    "sweep_output_range": 0.4284624606370926,
+    "closes_at_3": true
+   }
+  },
+  "tolerance": 1e-06,
+  "failing_direction_second_RY": {
+   "resid_3term": 0.2762042135197349,
+   "sweep_output_range": 0.6763200126588345,
+   "fires": true,
+   "bar": 0.001,
+   "reading": "a wider basis means a referent has been re-uploaded -- that is exp75, not exp76 (SS8.4 item 7)"
+  },
+  "coefficient_budget": {
+   "per_referent": 3,
+   "joint_at_n2": 9,
+   "identical_at_every_T": true,
+   "note": "doc 55 SS5: referents are introduced ONCE as a single RY per qubit, so the output stays a trigonometric polynomial of the SAME degree in the SAME angles at every T. What T multiplies is circuit DEPTH and the number of CONDITIONING GROUPS, not the coefficient budget."
+  }
+ },
+ "inert_padding_doc63_SS8_3": {
+  "source_cell": "n3_T2",
+  "from_wires": 3,
+  "to_wires": 8,
+  "n_items": 24,
+  "max_abs_diff": 1.1920928955078125e-07,
+  "tolerance": 1e-06,
+  "holds": true,
+  "live_event_on_readout_wires_moves_by": 0.6072971820831299,
+  "failing_direction_all_wires_readout": {
+   "max_abs_diff": 0.4391719102859497,
+   "fires": true
+  },
+  "why_not_bit_exact": "the padded state has a different memory layout, so `prob_all_zero_on`'s summation order differs; SS4.4.1 measured the residue at 6.0e-08 in complex64 and 1e-6 is the registered tolerance.",
+  "why_not_trained": "if the forward pass agrees to 1e-6 the gradients do too, and over 150 epochs the two runs would differ only by accumulated float divergence. A trained padded cell would MEASURE FLOAT NOISE AND CALL IT A WIRE EFFECT (SS6.2.2). The same argument is why SS6.2's grid contains no cell with an inert referent."
+ },
+ "active_structure_doc63_SS8_2_V9": {
+  "per_cell": {
+   "n2_T2": {
+    "n_active": 2,
+    "all_events_active": true
+   },
+   "n3_T2": {
+    "n_active": 3,
+    "all_events_active": true
+   },
+   "n2_T4": {
+    "n_active": 2,
+    "all_events_active": true
+   },
+   "n4_T4": {
+    "n_active": 4,
+    "all_events_active": true
+   },
+   "n5_T4": {
+    "n_active": 5,
+    "all_events_active": true
+   },
+   "n2_T6": {
+    "n_active": 2,
+    "all_events_active": true
+   },
+   "n4_T6": {
+    "n_active": 4,
+    "all_events_active": true
+   },
+   "n7_T6": {
+    "n_active": 7,
+    "all_events_active": true
+   },
+   "band32_n2_T2": {
+    "n_active": 2,
+    "all_events_active": true
+   },
+   "I24_n2_T2": {
+    "n_active": 2,
+    "all_events_active": true
+   },
+   "I24_n4_T4": {
+    "n_active": 4,
+    "all_events_active": true
+   }
+  },
+  "failing_direction_padded_item": {
+   "K": 4,
+   "n_reachable": 3,
+   "fires": true,
+   "reading": "SS0.4: a referent that appears in no event appears in NO SENTENCE -- the story never names it. Such a cell would be a smaller cell plus unused wires and would measure simulation cost and nothing else."
+  }
+ },
+ "trace_and_certificate_doc63_SS9_2_SS11_1": {
+  "max_abs_diff_vs_story_values": 0.0,
+  "bit_exact": true,
+  "intro_is_a_product_state": true,
+  "per_cell_after_last_event": {
+   "n2_T2": {
+    "S_after_last_event": 0.4764150246408487,
+    "R_after_last_event": 2
+   },
+   "n3_T2": {
+    "S_after_last_event": 0.6678477244288046,
+    "R_after_last_event": 2
+   },
+   "n2_T4": {
+    "S_after_last_event": 0.9169632364999045,
+    "R_after_last_event": 2
+   },
+   "n4_T4": {
+    "S_after_last_event": 0.7981662999166006,
+    "R_after_last_event": 4
+   },
+   "n5_T4": {
+    "S_after_last_event": 0.9779361355254088,
+    "R_after_last_event": 4
+   },
+   "n2_T6": {
+    "S_after_last_event": 0.436579356982499,
+    "R_after_last_event": 2
+   },
+   "n4_T6": {
+    "S_after_last_event": 0.5157528616141605,
+    "R_after_last_event": 4
+   },
+   "n7_T6": {
+    "S_after_last_event": 1.4352050664204923,
+    "R_after_last_event": 8
+   },
+   "band32_n2_T2": {
+    "S_after_last_event": 0.07392539812816959,
+    "R_after_last_event": 2
+   },
+   "I24_n2_T2": {
+    "S_after_last_event": 0.5105175046852948,
+    "R_after_last_event": 2
+   },
+   "I24_n4_T4": {
+    "S_after_last_event": 1.09593753722063,
+    "R_after_last_event": 4
+   }
+  },
+  "stages": [
+   "after_intro",
+   "after_event1",
+   "after_last_event",
+   "at_readout"
+  ],
+  "SS9_6_scoping": [
+   "CIRCUIT-LEVEL entropy of the evolving state (arXiv:2307.06937 distinguishes it from the coefficient-MPS entropy; SS9 measures the STATE and makes no function-level claim).",
+   "THE INFERENCE RUNS ONE WAY ONLY: a low R_1e-6 soundly certifies FEASIBILITY; a high one certifies nothing about hardness (arXiv:2607.08396).",
+   "TRAINABILITY AND MPS-FEASIBILITY ARE NOT INDEPENDENT CLAIMS (arXiv:2312.09121): `gap_stable_in_n` TRUE together with `entanglement_area_law_like` TRUE is ONE finding wearing two names, and no write-up may present them as mutual support."
+  ]
+ },
+ "comparator_frame_doc63_SS22": {
+  "per_cell": {
+   "n2_T2": {
+    "wire_frame_max_abs_twin_diff": 0.0,
+    "agent_frame_min_abs_twin_diff": 0.014451885536415354
+   },
+   "n3_T2": {
+    "wire_frame_max_abs_twin_diff": 0.0,
+    "agent_frame_min_abs_twin_diff": 0.014451885536415354
+   },
+   "n2_T4": {
+    "wire_frame_max_abs_twin_diff": 0.0,
+    "agent_frame_min_abs_twin_diff": 0.03249798751159455
+   },
+   "n4_T4": {
+    "wire_frame_max_abs_twin_diff": 0.0,
+    "agent_frame_min_abs_twin_diff": 0.03249798751159455
+   },
+   "n5_T4": {
+    "wire_frame_max_abs_twin_diff": 0.0,
+    "agent_frame_min_abs_twin_diff": 0.03249798751159455
+   },
+   "n2_T6": {
+    "wire_frame_max_abs_twin_diff": 0.0,
+    "agent_frame_min_abs_twin_diff": 0.12028275137077504
+   },
+   "n4_T6": {
+    "wire_frame_max_abs_twin_diff": 0.0,
+    "agent_frame_min_abs_twin_diff": 0.12028275137077504
+   },
+   "n7_T6": {
+    "wire_frame_max_abs_twin_diff": 0.0,
+    "agent_frame_min_abs_twin_diff": 0.12028275137077504
+   },
+   "band32_n2_T2": {
+    "wire_frame_max_abs_twin_diff": 0.0,
+    "agent_frame_min_abs_twin_diff": 0.028498773345661588
+   },
+   "I24_n2_T2": {
+    "wire_frame_max_abs_twin_diff": 0.0,
+    "agent_frame_min_abs_twin_diff": 0.40584365760608565
+   },
+   "I24_n4_T4": {
+    "wire_frame_max_abs_twin_diff": 0.0,
+    "agent_frame_min_abs_twin_diff": 0.33309864933083866
+   }
+  },
+  "wire_frame_is_a_null_instrument": true,
+  "agent_frame_separates_every_twin": true
+ },
+ "floors_doc63_SS18_1": {
+  "per_cell": {
+   "n2_T2": {
+    "n_items": 960,
+    "labels_moved": 444,
+    "geometry_bit_identical": true,
+    "twins_opposite": true
+   },
+   "n3_T2": {
+    "n_items": 960,
+    "labels_moved": 460,
+    "geometry_bit_identical": true,
+    "twins_opposite": true
+   },
+   "n2_T4": {
+    "n_items": 960,
+    "labels_moved": 444,
+    "geometry_bit_identical": true,
+    "twins_opposite": true
+   },
+   "n4_T4": {
+    "n_items": 960,
+    "labels_moved": 464,
+    "geometry_bit_identical": true,
+    "twins_opposite": true
+   },
+   "n5_T4": {
+    "n_items": 960,
+    "labels_moved": 474,
+    "geometry_bit_identical": true,
+    "twins_opposite": true
+   },
+   "n2_T6": {
+    "n_items": 960,
+    "labels_moved": 444,
+    "geometry_bit_identical": true,
+    "twins_opposite": true
+   },
+   "n4_T6": {
+    "n_items": 960,
+    "labels_moved": 442,
+    "geometry_bit_identical": true,
+    "twins_opposite": true
+   },
+   "n7_T6": {
+    "n_items": 960,
+    "labels_moved": 486,
+    "geometry_bit_identical": true,
+    "twins_opposite": true
+   },
+   "band32_n2_T2": {
+    "n_items": 960,
+    "labels_moved": 444,
+    "geometry_bit_identical": true,
+    "twins_opposite": true
+   },
+   "I24_n2_T2": {
+    "n_items": 960,
+    "labels_moved": 444,
+    "geometry_bit_identical": true,
+    "twins_opposite": true
+   },
+   "I24_n4_T4": {
+    "n_items": 960,
+    "labels_moved": 472,
+    "geometry_bit_identical": true,
+    "twins_opposite": true
+   }
+  },
+  "n_floors": 11,
+  "n2_lineage_byte_identical_to_exp69": true,
+  "construction": "the committed S-shuffle -- bearer designation reassigned PER PAIR, independently of the features (doc 55 SS4.4) -- same items, same splits, 5 seeds, run under the IDENTICAL cell procedure. Eleven cells, eleven floors, all in stage 1 (SS18.2)."
+ },
+ "comparator_flat_in_n_doc63_SS10_4": {
+  "I24|faail_camel|T2": {
+   "cells": [
+    "I24_n2_T2"
+   ],
+   "n_cells": 1,
+   "assertion": null,
+   "why_null": "doc 63 SS10.4's scope: the assertion runs across n WITHIN one inventory. This group carries one n, so it is VACUOUS and is stored as null, NOT as TRUE -- a vacuous assertion is not a passed one."
+  },
+  "I24|faail_camel|T4": {
+   "cells": [
+    "I24_n4_T4"
+   ],
+   "n_cells": 1,
+   "assertion": null,
+   "why_null": "doc 63 SS10.4's scope: the assertion runs across n WITHIN one inventory. This group carries one n, so it is VACUOUS and is stored as null, NOT as TRUE -- a vacuous assertion is not a passed one."
+  },
+  "I519|band_32arc|T2": {
+   "cells": [
+    "band32_n2_T2"
+   ],
+   "n_cells": 1,
+   "assertion": null,
+   "why_null": "doc 63 SS10.4's scope: the assertion runs across n WITHIN one inventory. This group carries one n, so it is VACUOUS and is stored as null, NOT as TRUE -- a vacuous assertion is not a passed one."
+  },
+  "I519|faail_camel|T2": {
+   "cells": [
+    "n2_T2",
+    "n3_T2"
+   ],
+   "n_cells": 2,
+   "max_abs_feature_diff": 0.0,
+   "max_abs_label_diff": 0.0,
+   "bit_identical": true,
+   "assertion": true
+  },
+  "I519|faail_camel|T4": {
+   "cells": [
+    "n2_T4",
+    "n4_T4",
+    "n5_T4"
+   ],
+   "n_cells": 3,
+   "max_abs_feature_diff": 0.0,
+   "max_abs_label_diff": 0.0,
+   "bit_identical": true,
+   "assertion": true
+  },
+  "I519|faail_camel|T6": {
+   "cells": [
+    "n2_T6",
+    "n4_T6",
+    "n7_T6"
+   ],
+   "n_cells": 3,
+   "max_abs_feature_diff": 0.0,
+   "max_abs_label_diff": 0.0,
+   "bit_identical": true,
+   "assertion": true
+  },
+  "_failing_direction": {
+   "construction": "the T = 4 core re-drawn at SEED + 999, n = 2 rebuilt",
+   "max_abs_feature_diff": 1.9974130210673544,
+   "fires": true,
+   "reading": "doc 63 SS10.4: a build in which the queried core is RE-DRAWN per n must FAIL this assertion. A pipeline that passes both is actually sharing the core."
+  }
+ },
+ "probe": {
+  "A0-A-T1": {
+   "epochs": 2,
+   "sec": 4.093415021896362,
+   "sec_per_epoch": 2.046707510948181,
+   "val": 0.8484848484848485,
+   "heldout": 0.8733333333333333,
+   "n_params": 120,
+   "wires": 2,
+   "n_active": 2,
+   "S_max": 0.9993497062021461
+  },
+  "A0-A-T2": {
+   "epochs": 2,
+   "sec": 4.853662967681885,
+   "sec_per_epoch": 2.4268314838409424,
+   "val": 0.6287878787878788,
+   "heldout": 0.6566666666666666,
+   "n_params": 120,
+   "wires": 2,
+   "n_active": 2,
+   "S_max": 0.9949882799493428
+  },
+  "n2_T2": {
+   "epochs": 2,
+   "sec": 4.318336009979248,
+   "sec_per_epoch": 2.159168004989624,
+   "val": 0.5075757575757576,
+   "heldout": 0.53,
+   "n_params": 120,
+   "wires": 2,
+   "n_active": 2,
+   "S_max": 0.991691260739729
+  },
+  "n3_T2": {
+   "epochs": 2,
+   "sec": 4.423611879348755,
+   "sec_per_epoch": 2.2118059396743774,
+   "val": 0.48484848484848486,
+   "heldout": 0.53,
+   "n_params": 120,
+   "wires": 3,
+   "n_active": 3,
+   "S_max": 0.9967935643056924
+  },
+  "n2_T4": {
+   "epochs": 2,
+   "sec": 7.2348387241363525,
+   "sec_per_epoch": 3.6174193620681763,
+   "val": 0.4696969696969697,
+   "heldout": 0.49333333333333335,
+   "n_params": 120,
+   "wires": 2,
+   "n_active": 2,
+   "S_max": 0.9876517016846242
+  },
+  "n4_T4": {
+   "epochs": 2,
+   "sec": 6.5679028034210205,
+   "sec_per_epoch": 3.2839514017105103,
+   "val": 0.5227272727272727,
+   "heldout": 0.49333333333333335,
+   "n_params": 120,
+   "wires": 4,
+   "n_active": 4,
+   "S_max": 1.6890622667814936
+  },
+  "n5_T4": {
+   "epochs": 2,
+   "sec": 6.663195848464966,
+   "sec_per_epoch": 3.331597924232483,
+   "val": 0.4696969696969697,
+   "heldout": 0.49,
+   "n_params": 120,
+   "wires": 5,
+   "n_active": 5,
+   "S_max": 1.8550616533156692
+  },
+  "n2_T6": {
+   "epochs": 2,
+   "sec": 9.58011794090271,
+   "sec_per_epoch": 4.790058970451355,
+   "val": 0.4393939393939394,
+   "heldout": 0.48,
+   "n_params": 120,
+   "wires": 2,
+   "n_active": 2,
+   "S_max": 0.9971612443208852
+  },
+  "n4_T6": {
+   "epochs": 2,
+   "sec": 9.720781087875366,
+   "sec_per_epoch": 4.860390543937683,
+   "val": 0.5606060606060606,
+   "heldout": 0.49666666666666665,
+   "n_params": 120,
+   "wires": 4,
+   "n_active": 4,
+   "S_max": 1.7148237562854522
+  },
+  "n7_T6": {
+   "epochs": 2,
+   "sec": 10.159725189208984,
+   "sec_per_epoch": 5.079862594604492,
+   "val": 0.48484848484848486,
+   "heldout": 0.51,
+   "n_params": 120,
+   "wires": 7,
+   "n_active": 7,
+   "S_max": 2.476176894003468
+  },
+  "band32_n2_T2": {
+   "epochs": 2,
+   "sec": 4.901232957839966,
+   "sec_per_epoch": 2.450616478919983,
+   "val": 0.5681818181818182,
+   "heldout": 0.51,
+   "n_params": 120,
+   "wires": 2,
+   "n_active": 2,
+   "S_max": 0.9941379197486879
+  },
+  "I24_n2_T2": {
+   "epochs": 2,
+   "sec": 4.8702380657196045,
+   "sec_per_epoch": 2.4351190328598022,
+   "val": 0.5909090909090909,
+   "heldout": 0.5033333333333333,
+   "n_params": 120,
+   "wires": 2,
+   "n_active": 2,
+   "S_max": 0.9799941918007805
+  },
+  "I24_n4_T4": {
+   "epochs": 2,
+   "sec": 6.67538595199585,
+   "sec_per_epoch": 3.337692975997925,
+   "val": 0.49242424242424243,
+   "heldout": 0.54,
+   "n_params": 120,
+   "wires": 4,
+   "n_active": 4,
+   "S_max": 1.6671692099435997
+  },
+  "S-shuffle-n2_T2": {
+   "epochs": 2,
+   "sec": 4.366227149963379,
+   "sec_per_epoch": 2.1831135749816895,
+   "val": 0.4772727272727273,
+   "heldout": 0.52,
+   "n_params": 120,
+   "wires": 2,
+   "n_active": 2,
+   "S_max": 0.9893469519086204
+  },
+  "S-shuffle-n3_T2": {
+   "epochs": 2,
+   "sec": 4.962776184082031,
+   "sec_per_epoch": 2.4813880920410156,
+   "val": 0.5681818181818182,
+   "heldout": 0.4866666666666667,
+   "n_params": 120,
+   "wires": 3,
+   "n_active": 3,
+   "S_max": 0.9880809380219795
+  },
+  "S-shuffle-n2_T4": {
+   "epochs": 2,
+   "sec": 7.240725994110107,
+   "sec_per_epoch": 3.6203629970550537,
+   "val": 0.5606060606060606,
+   "heldout": 0.5333333333333333,
+   "n_params": 120,
+   "wires": 2,
+   "n_active": 2,
+   "S_max": 0.9895873466830358
+  },
+  "S-shuffle-n4_T4": {
+   "epochs": 2,
+   "sec": 7.451965093612671,
+   "sec_per_epoch": 3.7259825468063354,
+   "val": 0.5606060606060606,
+   "heldout": 0.49,
+   "n_params": 120,
+   "wires": 4,
+   "n_active": 4,
+   "S_max": 1.8701079206158489
+  },
+  "S-shuffle-n5_T4": {
+   "epochs": 2,
+   "sec": 6.708909034729004,
+   "sec_per_epoch": 3.354454517364502,
+   "val": 0.4696969696969697,
+   "heldout": 0.5133333333333333,
+   "n_params": 120,
+   "wires": 5,
+   "n_active": 5,
+   "S_max": 1.8574264565721088
+  },
+  "S-shuffle-n2_T6": {
+   "epochs": 2,
+   "sec": 8.743492841720581,
+   "sec_per_epoch": 4.3717464208602905,
+   "val": 0.4696969696969697,
+   "heldout": 0.5033333333333333,
+   "n_params": 120,
+   "wires": 2,
+   "n_active": 2,
+   "S_max": 0.9920212757283553
+  },
+  "S-shuffle-n4_T6": {
+   "epochs": 2,
+   "sec": 9.844681978225708,
+   "sec_per_epoch": 4.922340989112854,
+   "val": 0.5075757575757576,
+   "heldout": 0.4866666666666667,
+   "n_params": 120,
+   "wires": 4,
+   "n_active": 4,
+   "S_max": 1.7639781423211325
+  },
+  "S-shuffle-n7_T6": {
+   "epochs": 2,
+   "sec": 10.197070837020874,
+   "sec_per_epoch": 5.098535418510437,
+   "val": 0.553030303030303,
+   "heldout": 0.45666666666666667,
+   "n_params": 120,
+   "wires": 7,
+   "n_active": 7,
+   "S_max": 2.632452988454087
+  },
+  "S-shuffle-band32_n2_T2": {
+   "epochs": 2,
+   "sec": 4.421474933624268,
+   "sec_per_epoch": 2.210737466812134,
+   "val": 0.5075757575757576,
+   "heldout": 0.47,
+   "n_params": 120,
+   "wires": 2,
+   "n_active": 2,
+   "S_max": 0.9874439219424028
+  },
+  "S-shuffle-I24_n2_T2": {
+   "epochs": 2,
+   "sec": 4.363983154296875,
+   "sec_per_epoch": 2.1819915771484375,
+   "val": 0.5,
+   "heldout": 0.5266666666666666,
+   "n_params": 120,
+   "wires": 2,
+   "n_active": 2,
+   "S_max": 0.9949056390110627
+  },
+  "S-shuffle-I24_n4_T4": {
+   "epochs": 2,
+   "sec": 6.619320869445801,
+   "sec_per_epoch": 3.3096604347229004,
+   "val": 0.4772727272727273,
+   "heldout": 0.49666666666666665,
+   "n_params": 120,
+   "wires": 4,
+   "n_active": 4,
+   "S_max": 1.7739281136216292
+  }
+ },
+ "projected_wall_time_doc63_SS19": {
+  "measured_sec_per_epoch": {
+   "A0-A-T1": 2.046707510948181,
+   "A0-A-T2": 2.4268314838409424,
+   "n2_T2": 2.159168004989624,
+   "n3_T2": 2.2118059396743774,
+   "n2_T4": 3.6174193620681763,
+   "n4_T4": 3.2839514017105103,
+   "n5_T4": 3.331597924232483,
+   "n2_T6": 4.790058970451355,
+   "n4_T6": 4.860390543937683,
+   "n7_T6": 5.079862594604492,
+   "band32_n2_T2": 2.450616478919983,
+   "I24_n2_T2": 2.4351190328598022,
+   "I24_n4_T4": 3.337692975997925,
+   "S-shuffle-n2_T2": 2.1831135749816895,
+   "S-shuffle-n3_T2": 2.4813880920410156,
+   "S-shuffle-n2_T4": 3.6203629970550537,
+   "S-shuffle-n4_T4": 3.7259825468063354,
+   "S-shuffle-n5_T4": 3.354454517364502,
+   "S-shuffle-n2_T6": 4.3717464208602905,
+   "S-shuffle-n4_T6": 4.922340989112854,
+   "S-shuffle-n7_T6": 5.098535418510437,
+   "S-shuffle-band32_n2_T2": 2.210737466812134,
+   "S-shuffle-I24_n2_T2": 2.1819915771484375,
+   "S-shuffle-I24_n4_T4": 3.3096604347229004
+  },
+  "projected_sec_per_run": {
+   "A0-A-T1": 307.0061266422272,
+   "A0-A-T2": 364.02472257614136,
+   "n2_T2": 323.8752007484436,
+   "n3_T2": 331.7708909511566,
+   "n2_T4": 542.6129043102264,
+   "n4_T4": 492.59271025657654,
+   "n5_T4": 499.73968863487244,
+   "n2_T6": 718.5088455677032,
+   "n4_T6": 729.0585815906525,
+   "n7_T6": 761.9793891906738,
+   "band32_n2_T2": 367.59247183799744,
+   "I24_n2_T2": 365.26785492897034,
+   "I24_n4_T4": 500.6539463996887,
+   "S-shuffle-n2_T2": 327.4670362472534,
+   "S-shuffle-n3_T2": 372.20821380615234,
+   "S-shuffle-n2_T4": 543.054449558258,
+   "S-shuffle-n4_T4": 558.8973820209503,
+   "S-shuffle-n5_T4": 503.1681776046753,
+   "S-shuffle-n2_T6": 655.7619631290436,
+   "S-shuffle-n4_T6": 738.3511483669281,
+   "S-shuffle-n7_T6": 764.7803127765656,
+   "S-shuffle-band32_n2_T2": 331.61062002182007,
+   "S-shuffle-I24_n2_T2": 327.2987365722656,
+   "S-shuffle-I24_n4_T4": 496.44906520843506
+  },
+  "serial_hours_single_process": 16.560736720760662,
+  "contention_factor_of_record": 2.0,
+  "hours_on_5_workers_uncontended": 3.3121473441521325,
+  "hours_on_5_workers_with_contention": 6.624294688304265,
+  "doc63_SS19_3_table_estimate_hours": 5.4,
+  "note": "doc 63 SS19.4: the committed walls were measured UNDER 5 PARALLEL WORKERS, so pool contention is already inside them. The measured factor of record -- 2.0x, settled on completed anchor runs (exp73_LAUNCH_REPORT.md SS3) -- applies to any single-process smoke projection exp76 produces."
+ },
+ "failing_directions_doc63": {
+  "all_wires_readout_must_fail_the_padding_control": true,
+  "second_RY_must_fail_the_3_term_closure": true,
+  "entangled_intro_must_fail_the_purity_assertion": true,
+  "a_redrawn_core_must_fail_comparator_flat_in_n": true,
+  "a_padded_item_must_fail_V9": true,
+  "the_wire_ordered_comparator_frame_is_a_null_instrument": true
+ },
+ "assertions_passed": true,
+ "wall_time_sec": 163.07010579109192
+}

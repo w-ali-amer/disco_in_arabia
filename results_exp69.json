@@ -1,0 +1,7040 @@
+{
+ "experiment": "exp69 -- the DisCoCat reunion (doc 55)",
+ "spec": "qnlp_private_docs/55_exp69_reunion.md (da4b8fe, REGISTERED through SS19.7)",
+ "spec_commit": "da4b8fe",
+ "question": "Does a bound content-role binding survive COMPOSITION? exp60-exp68 all measured binding inside ONE event; exp69 reads a semantic property of a role-filler through TWO COMPOSED EVENTS, with the one-event case as the control (doc 55 SS1).",
+ "aggregated_from": "exp69_ckpt/*.json (tag='')",
+ "aggregator": "exp69_aggregate.py",
+ "platform": "macOS-26.5.2-arm64-arm-64bit",
+ "python": "3.12.13",
+ "torch": "2.13.0",
+ "numpy": "2.5.1",
+ "datasets": {
+  "A": {
+   "path": "stories_exp69_QA.json",
+   "sha256": "2b85822b544571969fd40cab12b03a4ac256b08aee914d2b9643b856a6308c96",
+   "meta": {
+    "experiment": "exp69",
+    "part": "A",
+    "rung": "SB-DisCoCirc (Q69)",
+    "design_doc": "qnlp_private_docs/55_exp69_reunion.md (da4b8fe, REGISTERED through SS19.7)",
+    "seed": 69000,
+    "is_confirm_draw": false,
+    "n_items": 1920,
+    "split_counts": {
+     "1": {
+      "train": 528,
+      "val": 132,
+      "test": 300
+     },
+     "2": {
+      "train": 528,
+      "val": 132,
+      "test": 300
+     }
+    },
+    "T_values": [
+     1,
+     2
+    ],
+    "verb_inventory": {
+     "حمل": {
+      "human_patients": true
+     },
+     "رفع": {
+      "human_patients": true
+     },
+     "سأل": {
+      "human_patients": true
+     },
+     "ساعد": {
+      "human_patients": true
+     },
+     "ضرب": {
+      "human_patients": true
+     },
+     "عالج": {
+      "human_patients": true
+     }
+    },
+    "verb_inventory_source": "stories_exp51_VT.json",
+    "verb_slots": {
+     "V_A": [
+      "سأل",
+      "ضرب",
+      "عالج"
+     ],
+     "V_B": [
+      "حمل",
+      "رفع",
+      "ساعد"
+     ],
+     "rule": "the 6-verb exp51 inventory split 3/3 into DISJOINT slots at the registered generator seed; event 1 draws from V_A, event 2 from V_B (doc 55 SS4.2). Disjointness is what makes the verb-indexed query well-posed and is what costs exp69 any claim about discourse-position resolution (doc 55 SS11)."
+    },
+    "humans": [
+     "الطالب",
+     "الرجل",
+     "الولد",
+     "المدير",
+     "المعلم",
+     "الطبيب",
+     "العامل",
+     "المهندس",
+     "الشرطي",
+     "الكاتب",
+     "الطباخ",
+     "الجندي",
+     "الفلاح",
+     "الحارس",
+     "اللاعب",
+     "الموظف",
+     "الصحفي",
+     "السائق",
+     "المسافر",
+     "الضابط",
+     "الباحث",
+     "القائد",
+     "الصياد",
+     "المريض"
+    ],
+    "objects": [],
+    "category": {
+     "key": "nonoccupational",
+     "gloss": "non-occupational state",
+     "source": "instrument_sb_bounds.CATEGORIES -- doc 54 SS5.2, user-confirmed 2026-08-23; imported, never retyped",
+     "glosses": {
+      "الرجل": "man",
+      "المريض": "patient",
+      "المسافر": "traveller",
+      "الولد": "boy"
+     },
+     "feature_family": "raw AraVec PCA plane (FA angle / F2 register)"
+    },
+    "bearers": [
+     "الرجل",
+     "المريض",
+     "المسافر",
+     "الولد"
+    ],
+    "nonbearers": [
+     "الباحث",
+     "الجندي",
+     "الحارس",
+     "السائق",
+     "الشرطي",
+     "الصحفي",
+     "الصياد",
+     "الضابط",
+     "الطالب",
+     "الطباخ",
+     "الطبيب",
+     "العامل",
+     "الفلاح",
+     "القائد",
+     "الكاتب",
+     "اللاعب",
+     "المدير",
+     "المعلم",
+     "المهندس",
+     "الموظف"
+    ],
+    "n_casts": 80,
+    "cast_pool_draws": 0,
+    "part_b_budget_note": "Part A has exactly |B| x |N| = 4 x 20 = 80 casts; no draw is needed.",
+    "train_casts": [
+     [
+      "الرجل",
+      "الباحث"
+     ],
+     [
+      "الرجل",
+      "السائق"
+     ],
+     [
+      "الرجل",
+      "الضابط"
+     ],
+     [
+      "الرجل",
+      "الطالب"
+     ],
+     [
+      "الرجل",
+      "الطباخ"
+     ],
+     [
+      "الرجل",
+      "الطبيب"
+     ],
+     [
+      "الرجل",
+      "العامل"
+     ],
+     [
+      "الرجل",
+      "القائد"
+     ],
+     [
+      "الرجل",
+      "الكاتب"
+     ],
+     [
+      "الرجل",
+      "اللاعب"
+     ],
+     [
+      "الرجل",
+      "المعلم"
+     ],
+     [
+      "الرجل",
+      "المهندس"
+     ],
+     [
+      "الرجل",
+      "الموظف"
+     ],
+     [
+      "المريض",
+      "الجندي"
+     ],
+     [
+      "المريض",
+      "الصياد"
+     ],
+     [
+      "المريض",
+      "الضابط"
+     ],
+     [
+      "المريض",
+      "العامل"
+     ],
+     [
+      "المريض",
+      "الفلاح"
+     ],
+     [
+      "المريض",
+      "القائد"
+     ],
+     [
+      "المريض",
+      "الكاتب"
+     ],
+     [
+      "المريض",
+      "اللاعب"
+     ],
+     [
+      "المريض",
+      "المعلم"
+     ],
+     [
+      "المريض",
+      "المهندس"
+     ],
+     [
+      "المريض",
+      "الموظف"
+     ],
+     [
+      "المسافر",
+      "الجندي"
+     ],
+     [
+      "المسافر",
+      "الحارس"
+     ],
+     [
+      "المسافر",
+      "الشرطي"
+     ],
+     [
+      "المسافر",
+      "الصحفي"
+     ],
+     [
+      "المسافر",
+      "الضابط"
+     ],
+     [
+      "المسافر",
+      "العامل"
+     ],
+     [
+      "المسافر",
+      "الفلاح"
+     ],
+     [
+      "المسافر",
+      "القائد"
+     ],
+     [
+      "المسافر",
+      "اللاعب"
+     ],
+     [
+      "المسافر",
+      "المدير"
+     ],
+     [
+      "المسافر",
+      "المهندس"
+     ],
+     [
+      "الولد",
+      "الباحث"
+     ],
+     [
+      "الولد",
+      "الجندي"
+     ],
+     [
+      "الولد",
+      "الشرطي"
+     ],
+     [
+      "الولد",
+      "الصحفي"
+     ],
+     [
+      "الولد",
+      "الصياد"
+     ],
+     [
+      "الولد",
+      "الضابط"
+     ],
+     [
+      "الولد",
+      "الفلاح"
+     ],
+     [
+      "الولد",
+      "القائد"
+     ],
+     [
+      "الولد",
+      "المدير"
+     ]
+    ],
+    "val_casts": [
+     [
+      "الرجل",
+      "الحارس"
+     ],
+     [
+      "الرجل",
+      "الصحفي"
+     ],
+     [
+      "المريض",
+      "السائق"
+     ],
+     [
+      "المريض",
+      "الشرطي"
+     ],
+     [
+      "المريض",
+      "الصحفي"
+     ],
+     [
+      "المريض",
+      "المدير"
+     ],
+     [
+      "المسافر",
+      "الطباخ"
+     ],
+     [
+      "المسافر",
+      "الكاتب"
+     ],
+     [
+      "الولد",
+      "الحارس"
+     ],
+     [
+      "الولد",
+      "السائق"
+     ],
+     [
+      "الولد",
+      "المهندس"
+     ]
+    ],
+    "test_casts": [
+     [
+      "الرجل",
+      "الجندي"
+     ],
+     [
+      "الرجل",
+      "الشرطي"
+     ],
+     [
+      "الرجل",
+      "الصياد"
+     ],
+     [
+      "الرجل",
+      "الفلاح"
+     ],
+     [
+      "الرجل",
+      "المدير"
+     ],
+     [
+      "المريض",
+      "الباحث"
+     ],
+     [
+      "المريض",
+      "الحارس"
+     ],
+     [
+      "المريض",
+      "الطالب"
+     ],
+     [
+      "المريض",
+      "الطباخ"
+     ],
+     [
+      "المريض",
+      "الطبيب"
+     ],
+     [
+      "المسافر",
+      "الباحث"
+     ],
+     [
+      "المسافر",
+      "السائق"
+     ],
+     [
+      "المسافر",
+      "الصياد"
+     ],
+     [
+      "المسافر",
+      "الطالب"
+     ],
+     [
+      "المسافر",
+      "الطبيب"
+     ],
+     [
+      "المسافر",
+      "المعلم"
+     ],
+     [
+      "المسافر",
+      "الموظف"
+     ],
+     [
+      "الولد",
+      "الطالب"
+     ],
+     [
+      "الولد",
+      "الطباخ"
+     ],
+     [
+      "الولد",
+      "الطبيب"
+     ],
+     [
+      "الولد",
+      "العامل"
+     ],
+     [
+      "الولد",
+      "الكاتب"
+     ],
+     [
+      "الولد",
+      "اللاعب"
+     ],
+     [
+      "الولد",
+      "المعلم"
+     ],
+     [
+      "الولد",
+      "الموظف"
+     ]
+    ],
+    "split_unit": "CAST -- a (bearer, non-bearer) pairing; never within a pair, and SHARED between the T = 1 and T = 2 item sets so doc 55 SS6.10(b)'s qualitative control compares like with like",
+    "heldout_is": "UNSEEN PAIRINGS, not unseen nouns (doc 55 SS4.5). Every noun's feature is in-inventory by construction, which is what makes the inventory-wide PCA fit (Part A) and the inventory-wide positional-featurizer fit (Part B, doc 55 SS18.4) legitimate, and what makes doc 55 SS11's scope limit binding: exp69 does NOT test novel-filler generalisation.",
+    "coverage_assertion": {
+     "rule": "every bearer AND every non-bearer in >= 1 TRAIN cast; every verb of V_A and V_B in >= 1 train item; both surface orders for EACH event slot in train; both query values in train and test in exactly equal proportion (doc 55 SS4.5)",
+     "draws_until_satisfied": 2,
+     "nouns_in_train_casts": 24,
+     "coverage": {
+      "verbs_VA_in_train": [
+       "سأل",
+       "ضرب",
+       "عالج"
+      ],
+      "verbs_VB_in_train": [
+       "حمل",
+       "رفع",
+       "ساعد"
+      ],
+      "orders_event1_in_train": [
+       "SVO",
+       "VSO"
+      ],
+      "orders_event2_in_train": [
+       "SVO",
+       "VSO"
+      ],
+      "query_values_in_train": [
+       1,
+       2
+      ],
+      "query_values_in_test": [
+       1,
+       2
+      ],
+      "verbs_T1_in_train": [
+       "حمل",
+       "رفع",
+       "سأل",
+       "ساعد",
+       "ضرب",
+       "عالج"
+      ]
+     },
+     "satisfied": true
+    },
+    "balance_schedules": {
+     "verb_pair": {
+      "سأل|حمل": 106,
+      "سأل|رفع": 108,
+      "سأل|ساعد": 108,
+      "ضرب|حمل": 108,
+      "ضرب|رفع": 106,
+      "ضرب|ساعد": 106,
+      "عالج|حمل": 106,
+      "عالج|رفع": 106,
+      "عالج|ساعد": 106
+     },
+     "order_pair": {
+      "SVO|SVO": 240,
+      "SVO|VSO": 240,
+      "VSO|SVO": 240,
+      "VSO|VSO": 240
+     },
+     "query_index": {
+      "1": 480,
+      "2": 480
+     },
+     "unqueried_bearer_is_agent": {
+      "True": 480,
+      "False": 480
+     },
+     "T1_verb": {
+      "حمل": 160,
+      "رفع": 160,
+      "سأل": 160,
+      "ساعد": 160,
+      "ضرب": 160,
+      "عالج": 160
+     },
+     "T1_order": {
+      "SVO": 480,
+      "VSO": 480
+     }
+    },
+    "schedule_rule": "verb pair by stride 5 mod 9, surface-order pair by stride 3 mod 4, unqueried-event roles by (cast + slot) mod 2, query index by a per-cast permutation of [1,1,1,2,2,2]. Strides are coprime to their moduli so no nuisance variable is confounded with the slot index, and every marginal is RE-MEASURED in the V-suite rather than assumed.",
+    "marker_token": "المميز",
+    "question_template": "الذي [v] هل هو [MARKER] -- 'the one who [v] -- is he a [CATEGORY]?'. doc 55 SS16.1's three surface questions were answered in the affirmative by the user (doc 55 SS18.1, verbatim 'yes to all three'), which is what released datagen. The SAME template is used at T = 1 and T = 2 so the SS6.10(b) control differs only in the number of events.",
+    "answer_balance": {
+     "1": {
+      "train": {
+       "yes": 264,
+       "no": 264
+      },
+      "val": {
+       "yes": 66,
+       "no": 66
+      },
+      "test": {
+       "yes": 150,
+       "no": 150
+      }
+     },
+     "2": {
+      "train": {
+       "yes": 264,
+       "no": 264
+      },
+      "val": {
+       "yes": 66,
+       "no": 66
+      },
+      "test": {
+       "yes": 150,
+       "no": 150
+      }
+     }
+    },
+    "construction": "Q69 (doc 55 SS4.2): a text of T events over ONE two-referent cast with exactly one category bearer, followed by a question NAMING ONE OF THE VERBS. The label is 1 iff the agent of the NAMED event is a bearer. The twin exchanges agent and patient WITHIN the queried event only; the other event is byte-identical and the question surface is identical, so any function of the cast alone scores EXACTLY 0.500 and the classes are 50/50 by construction. Each event is rendered independently as SVO or VSO -- the alternation the archived pregroup reader implements (archive/01_parser_pipeline/arabic_dep_reader.py:130-138, 167-180).",
+    "invariants_asserted": [
+     "test casts disjoint from train and val casts (unseen pairings)",
+     "the T = 1 and T = 2 item sets share ONE cast split",
+     "every bearer and every non-bearer appears in >= 1 train cast",
+     "every pair: identical cast, identical wire order, identical question spec, identical surface order flags, opposite answers",
+     "roles exchanged in the QUERIED event only; the other event is byte-identical across twins, sentence included",
+     "exactly one bearer in every cast",
+     "answer == yes iff the agent of the QUERIED event is a real bearer",
+     "the queried verb occurs in EXACTLY ONE event (V8, doc 55 SS7.5)",
+     "answer classes balanced in every split at every T",
+     "n_test == 300 at each T, matching exp60/exp61/exp68 so doc 55 SS6's 0.06 bar transfers exactly",
+     "V_A and V_B are disjoint"
+    ],
+    "dataset_sha256": "2b85822b544571969fd40cab12b03a4ac256b08aee914d2b9643b856a6308c96",
+    "predictions_file": "exp69_predictions.json",
+    "predictions_sha256": "4ea65c5862e6349e3d8c26ce3267980e07603b6c9aa7a8a5cd8ad383aad65bd6"
+   }
+  },
+  "B": {
+   "path": "stories_exp69_QB.json",
+   "sha256": "9fc33eb851397a82957ec16e9e90c52228a1cf2aad109fff6b3f164ff7d87b01",
+   "meta": {
+    "experiment": "exp69",
+    "part": "B",
+    "rung": "SB-DisCoCirc (Q69)",
+    "design_doc": "qnlp_private_docs/55_exp69_reunion.md (da4b8fe, REGISTERED through SS19.7)",
+    "seed": 69000,
+    "is_confirm_draw": false,
+    "n_items": 1920,
+    "split_counts": {
+     "1": {
+      "train": 528,
+      "val": 132,
+      "test": 300
+     },
+     "2": {
+      "train": 528,
+      "val": 132,
+      "test": 300
+     }
+    },
+    "T_values": [
+     1,
+     2
+    ],
+    "verb_inventory": {
+     "حمل": {
+      "human_patients": true
+     },
+     "رفع": {
+      "human_patients": true
+     },
+     "سأل": {
+      "human_patients": true
+     },
+     "ساعد": {
+      "human_patients": true
+     },
+     "ضرب": {
+      "human_patients": true
+     },
+     "عالج": {
+      "human_patients": true
+     }
+    },
+    "verb_inventory_source": "stories_exp51_VT.json",
+    "verb_slots": {
+     "V_A": [
+      "حمل",
+      "رفع",
+      "ضرب"
+     ],
+     "V_B": [
+      "سأل",
+      "ساعد",
+      "عالج"
+     ],
+     "rule": "the 6-verb exp51 inventory split 3/3 into DISJOINT slots at the registered generator seed; event 1 draws from V_A, event 2 from V_B (doc 55 SS4.2). Disjointness is what makes the verb-indexed query well-posed and is what costs exp69 any claim about discourse-position resolution (doc 55 SS11)."
+    },
+    "humans": [
+     "الطالب",
+     "الرجل",
+     "الولد",
+     "المدير",
+     "المعلم",
+     "الطبيب",
+     "العامل",
+     "المهندس",
+     "الشرطي",
+     "الكاتب",
+     "الطباخ",
+     "الجندي",
+     "الفلاح",
+     "الحارس",
+     "اللاعب",
+     "الموظف",
+     "الصحفي",
+     "السائق",
+     "المسافر",
+     "الضابط",
+     "الباحث",
+     "القائد",
+     "الصياد",
+     "المريض"
+    ],
+    "objects": [],
+    "category": {
+     "key": "wazn_faail",
+     "gloss": "faail (CaaCiC) wazn vs non-faail",
+     "source": "exp65_featurizer.FAAIL -- doc 51 SS7, user-confirmed; imported, never retyped",
+     "glosses": {
+      "الباحث": "researcher",
+      "الحارس": "guard",
+      "السائق": "driver",
+      "الضابط": "officer",
+      "الطالب": "student",
+      "العامل": "worker",
+      "القائد": "leader/commander",
+      "الكاتب": "writer/clerk",
+      "اللاعب": "player"
+     },
+     "feature_family": "exp65 POSITIONAL featurizer angle, fit INVENTORY-WIDE (doc 55 SS18.4: not leakage here because exp69 holds out PAIRINGS, not nouns)"
+    },
+    "bearers": [
+     "الباحث",
+     "الحارس",
+     "السائق",
+     "الضابط",
+     "الطالب",
+     "العامل",
+     "القائد",
+     "الكاتب",
+     "اللاعب"
+    ],
+    "nonbearers": [
+     "الجندي",
+     "الرجل",
+     "الشرطي",
+     "الصحفي",
+     "الصياد",
+     "الطباخ",
+     "الطبيب",
+     "الفلاح",
+     "المدير",
+     "المريض",
+     "المسافر",
+     "المعلم",
+     "المهندس",
+     "الموظف",
+     "الولد"
+    ],
+    "n_casts": 80,
+    "cast_pool_draws": 1,
+    "part_b_budget_note": "Part B has 9 x 15 = 135 possible casts; 80 are DRAWN at the registered seed so the budget, the 25-cast test split and n_test = 300 match Part A exactly and doc 55 SS6's 0.06 bar transfers exactly. doc 55 SS18.4 does not fix Part B's cast budget, so this is a JUDGMENT CALL recorded as one.",
+    "train_casts": [
+     [
+      "الباحث",
+      "الجندي"
+     ],
+     [
+      "الباحث",
+      "الطباخ"
+     ],
+     [
+      "الباحث",
+      "المريض"
+     ],
+     [
+      "الباحث",
+      "المسافر"
+     ],
+     [
+      "الباحث",
+      "الموظف"
+     ],
+     [
+      "الحارس",
+      "الرجل"
+     ],
+     [
+      "الحارس",
+      "الشرطي"
+     ],
+     [
+      "الحارس",
+      "الفلاح"
+     ],
+     [
+      "الحارس",
+      "المدير"
+     ],
+     [
+      "الحارس",
+      "المعلم"
+     ],
+     [
+      "الحارس",
+      "الموظف"
+     ],
+     [
+      "السائق",
+      "الشرطي"
+     ],
+     [
+      "السائق",
+      "الفلاح"
+     ],
+     [
+      "السائق",
+      "الولد"
+     ],
+     [
+      "الضابط",
+      "الرجل"
+     ],
+     [
+      "الضابط",
+      "الشرطي"
+     ],
+     [
+      "الضابط",
+      "الصحفي"
+     ],
+     [
+      "الضابط",
+      "المدير"
+     ],
+     [
+      "الضابط",
+      "المسافر"
+     ],
+     [
+      "الضابط",
+      "الولد"
+     ],
+     [
+      "الطالب",
+      "الجندي"
+     ],
+     [
+      "الطالب",
+      "الشرطي"
+     ],
+     [
+      "الطالب",
+      "الصحفي"
+     ],
+     [
+      "الطالب",
+      "الفلاح"
+     ],
+     [
+      "الطالب",
+      "الولد"
+     ],
+     [
+      "العامل",
+      "الجندي"
+     ],
+     [
+      "العامل",
+      "الشرطي"
+     ],
+     [
+      "العامل",
+      "الصحفي"
+     ],
+     [
+      "العامل",
+      "المريض"
+     ],
+     [
+      "العامل",
+      "الولد"
+     ],
+     [
+      "القائد",
+      "الصياد"
+     ],
+     [
+      "القائد",
+      "المريض"
+     ],
+     [
+      "القائد",
+      "المعلم"
+     ],
+     [
+      "القائد",
+      "الموظف"
+     ],
+     [
+      "الكاتب",
+      "الجندي"
+     ],
+     [
+      "الكاتب",
+      "الشرطي"
+     ],
+     [
+      "الكاتب",
+      "الطبيب"
+     ],
+     [
+      "الكاتب",
+      "المدير"
+     ],
+     [
+      "الكاتب",
+      "المسافر"
+     ],
+     [
+      "اللاعب",
+      "الجندي"
+     ],
+     [
+      "اللاعب",
+      "الشرطي"
+     ],
+     [
+      "اللاعب",
+      "المدير"
+     ],
+     [
+      "اللاعب",
+      "المهندس"
+     ],
+     [
+      "اللاعب",
+      "الولد"
+     ]
+    ],
+    "val_casts": [
+     [
+      "السائق",
+      "المريض"
+     ],
+     [
+      "السائق",
+      "المعلم"
+     ],
+     [
+      "الضابط",
+      "الطبيب"
+     ],
+     [
+      "الطالب",
+      "الصياد"
+     ],
+     [
+      "الطالب",
+      "المهندس"
+     ],
+     [
+      "العامل",
+      "الرجل"
+     ],
+     [
+      "الكاتب",
+      "الصياد"
+     ],
+     [
+      "الكاتب",
+      "المريض"
+     ],
+     [
+      "الكاتب",
+      "الموظف"
+     ],
+     [
+      "اللاعب",
+      "الرجل"
+     ],
+     [
+      "اللاعب",
+      "المريض"
+     ]
+    ],
+    "test_casts": [
+     [
+      "الباحث",
+      "الرجل"
+     ],
+     [
+      "الباحث",
+      "الطبيب"
+     ],
+     [
+      "الباحث",
+      "المدير"
+     ],
+     [
+      "الحارس",
+      "المهندس"
+     ],
+     [
+      "السائق",
+      "الجندي"
+     ],
+     [
+      "السائق",
+      "الصياد"
+     ],
+     [
+      "السائق",
+      "المسافر"
+     ],
+     [
+      "السائق",
+      "المهندس"
+     ],
+     [
+      "الضابط",
+      "المعلم"
+     ],
+     [
+      "الضابط",
+      "المهندس"
+     ],
+     [
+      "الضابط",
+      "الموظف"
+     ],
+     [
+      "الطالب",
+      "الرجل"
+     ],
+     [
+      "الطالب",
+      "الطباخ"
+     ],
+     [
+      "الطالب",
+      "المدير"
+     ],
+     [
+      "الطالب",
+      "المسافر"
+     ],
+     [
+      "الطالب",
+      "الموظف"
+     ],
+     [
+      "العامل",
+      "الصياد"
+     ],
+     [
+      "العامل",
+      "المسافر"
+     ],
+     [
+      "القائد",
+      "الطباخ"
+     ],
+     [
+      "القائد",
+      "الطبيب"
+     ],
+     [
+      "القائد",
+      "الولد"
+     ],
+     [
+      "الكاتب",
+      "الصحفي"
+     ],
+     [
+      "الكاتب",
+      "الطباخ"
+     ],
+     [
+      "الكاتب",
+      "المعلم"
+     ],
+     [
+      "اللاعب",
+      "الصحفي"
+     ]
+    ],
+    "split_unit": "CAST -- a (bearer, non-bearer) pairing; never within a pair, and SHARED between the T = 1 and T = 2 item sets so doc 55 SS6.10(b)'s qualitative control compares like with like",
+    "heldout_is": "UNSEEN PAIRINGS, not unseen nouns (doc 55 SS4.5). Every noun's feature is in-inventory by construction, which is what makes the inventory-wide PCA fit (Part A) and the inventory-wide positional-featurizer fit (Part B, doc 55 SS18.4) legitimate, and what makes doc 55 SS11's scope limit binding: exp69 does NOT test novel-filler generalisation.",
+    "coverage_assertion": {
+     "rule": "every bearer AND every non-bearer in >= 1 TRAIN cast; every verb of V_A and V_B in >= 1 train item; both surface orders for EACH event slot in train; both query values in train and test in exactly equal proportion (doc 55 SS4.5)",
+     "draws_until_satisfied": 4,
+     "nouns_in_train_casts": 24,
+     "coverage": {
+      "verbs_VA_in_train": [
+       "حمل",
+       "رفع",
+       "ضرب"
+      ],
+      "verbs_VB_in_train": [
+       "سأل",
+       "ساعد",
+       "عالج"
+      ],
+      "orders_event1_in_train": [
+       "SVO",
+       "VSO"
+      ],
+      "orders_event2_in_train": [
+       "SVO",
+       "VSO"
+      ],
+      "query_values_in_train": [
+       1,
+       2
+      ],
+      "query_values_in_test": [
+       1,
+       2
+      ],
+      "verbs_T1_in_train": [
+       "حمل",
+       "رفع",
+       "سأل",
+       "ساعد",
+       "ضرب",
+       "عالج"
+      ]
+     },
+     "satisfied": true
+    },
+    "balance_schedules": {
+     "verb_pair": {
+      "حمل|سأل": 106,
+      "حمل|ساعد": 108,
+      "حمل|عالج": 108,
+      "رفع|سأل": 108,
+      "رفع|ساعد": 106,
+      "رفع|عالج": 106,
+      "ضرب|سأل": 106,
+      "ضرب|ساعد": 106,
+      "ضرب|عالج": 106
+     },
+     "order_pair": {
+      "SVO|SVO": 240,
+      "SVO|VSO": 240,
+      "VSO|SVO": 240,
+      "VSO|VSO": 240
+     },
+     "query_index": {
+      "2": 480,
+      "1": 480
+     },
+     "unqueried_bearer_is_agent": {
+      "True": 480,
+      "False": 480
+     },
+     "T1_verb": {
+      "حمل": 160,
+      "رفع": 160,
+      "سأل": 160,
+      "ساعد": 160,
+      "ضرب": 160,
+      "عالج": 160
+     },
+     "T1_order": {
+      "SVO": 480,
+      "VSO": 480
+     }
+    },
+    "schedule_rule": "verb pair by stride 5 mod 9, surface-order pair by stride 3 mod 4, unqueried-event roles by (cast + slot) mod 2, query index by a per-cast permutation of [1,1,1,2,2,2]. Strides are coprime to their moduli so no nuisance variable is confounded with the slot index, and every marginal is RE-MEASURED in the V-suite rather than assumed.",
+    "marker_token": "المميز",
+    "question_template": "الذي [v] هل هو [MARKER] -- 'the one who [v] -- is he a [CATEGORY]?'. doc 55 SS16.1's three surface questions were answered in the affirmative by the user (doc 55 SS18.1, verbatim 'yes to all three'), which is what released datagen. The SAME template is used at T = 1 and T = 2 so the SS6.10(b) control differs only in the number of events.",
+    "answer_balance": {
+     "1": {
+      "train": {
+       "yes": 264,
+       "no": 264
+      },
+      "val": {
+       "yes": 66,
+       "no": 66
+      },
+      "test": {
+       "yes": 150,
+       "no": 150
+      }
+     },
+     "2": {
+      "train": {
+       "yes": 264,
+       "no": 264
+      },
+      "val": {
+       "yes": 66,
+       "no": 66
+      },
+      "test": {
+       "yes": 150,
+       "no": 150
+      }
+     }
+    },
+    "construction": "Q69 (doc 55 SS4.2): a text of T events over ONE two-referent cast with exactly one category bearer, followed by a question NAMING ONE OF THE VERBS. The label is 1 iff the agent of the NAMED event is a bearer. The twin exchanges agent and patient WITHIN the queried event only; the other event is byte-identical and the question surface is identical, so any function of the cast alone scores EXACTLY 0.500 and the classes are 50/50 by construction. Each event is rendered independently as SVO or VSO -- the alternation the archived pregroup reader implements (archive/01_parser_pipeline/arabic_dep_reader.py:130-138, 167-180).",
+    "invariants_asserted": [
+     "test casts disjoint from train and val casts (unseen pairings)",
+     "the T = 1 and T = 2 item sets share ONE cast split",
+     "every bearer and every non-bearer appears in >= 1 train cast",
+     "every pair: identical cast, identical wire order, identical question spec, identical surface order flags, opposite answers",
+     "roles exchanged in the QUERIED event only; the other event is byte-identical across twins, sentence included",
+     "exactly one bearer in every cast",
+     "answer == yes iff the agent of the QUERIED event is a real bearer",
+     "the queried verb occurs in EXACTLY ONE event (V8, doc 55 SS7.5)",
+     "answer classes balanced in every split at every T",
+     "n_test == 300 at each T, matching exp60/exp61/exp68 so doc 55 SS6's 0.06 bar transfers exactly",
+     "V_A and V_B are disjoint"
+    ],
+    "dataset_sha256": "9fc33eb851397a82957ec16e9e90c52228a1cf2aad109fff6b3f164ff7d87b01",
+    "predictions_file": "exp69_predictions.json",
+    "predictions_sha256": "4ea65c5862e6349e3d8c26ce3267980e07603b6c9aa7a8a5cd8ad383aad65bd6"
+   }
+  },
+  "exp68": {
+   "path": "stories_exp68_WN.json",
+   "sha256": "9a0b990088a89f5c2697da6f470891a9472fe8e3f4fc2a9d94b81911d54a6ec1",
+   "meta": {
+    "experiment": "exp68",
+    "rung": "SB",
+    "design_doc": "qnlp_private_docs/54_exp68_width_lever.md (1025d21, FROZEN)",
+    "seed": 68000,
+    "is_confirm_draw": false,
+    "n_items": 960,
+    "split_counts": {
+     "train": 528,
+     "val": 132,
+     "test": 300
+    },
+    "verb_inventory": {
+     "حمل": {
+      "human_patients": true
+     },
+     "رفع": {
+      "human_patients": true
+     },
+     "سأل": {
+      "human_patients": true
+     },
+     "ساعد": {
+      "human_patients": true
+     },
+     "ضرب": {
+      "human_patients": true
+     },
+     "عالج": {
+      "human_patients": true
+     }
+    },
+    "verb_inventory_source": "stories_exp51_VT.json",
+    "humans": [
+     "الطالب",
+     "الرجل",
+     "الولد",
+     "المدير",
+     "المعلم",
+     "الطبيب",
+     "العامل",
+     "المهندس",
+     "الشرطي",
+     "الكاتب",
+     "الطباخ",
+     "الجندي",
+     "الفلاح",
+     "الحارس",
+     "اللاعب",
+     "الموظف",
+     "الصحفي",
+     "السائق",
+     "المسافر",
+     "الضابط",
+     "الباحث",
+     "القائد",
+     "الصياد",
+     "المريض"
+    ],
+    "objects": [],
+    "category": {
+     "key": "nonoccupational",
+     "gloss": "non-occupational state",
+     "source": "instrument_sb_bounds.CATEGORIES -- doc 54 SS5.2, user-confirmed 2026-08-23; imported, never retyped",
+     "glosses": {
+      "الرجل": "man",
+      "الولد": "boy",
+      "المسافر": "traveller",
+      "المريض": "patient"
+     }
+    },
+    "bearers": [
+     "الرجل",
+     "المريض",
+     "المسافر",
+     "الولد"
+    ],
+    "nonbearers": [
+     "الباحث",
+     "الجندي",
+     "الحارس",
+     "السائق",
+     "الشرطي",
+     "الصحفي",
+     "الصياد",
+     "الضابط",
+     "الطالب",
+     "الطباخ",
+     "الطبيب",
+     "العامل",
+     "الفلاح",
+     "القائد",
+     "الكاتب",
+     "اللاعب",
+     "المدير",
+     "المعلم",
+     "المهندس",
+     "الموظف"
+    ],
+    "n_casts": 80,
+    "train_casts": [
+     [
+      "الرجل",
+      "الجندي"
+     ],
+     [
+      "الرجل",
+      "الحارس"
+     ],
+     [
+      "الرجل",
+      "الشرطي"
+     ],
+     [
+      "الرجل",
+      "الضابط"
+     ],
+     [
+      "الرجل",
+      "الطالب"
+     ],
+     [
+      "الرجل",
+      "العامل"
+     ],
+     [
+      "الرجل",
+      "القائد"
+     ],
+     [
+      "الرجل",
+      "الكاتب"
+     ],
+     [
+      "الرجل",
+      "اللاعب"
+     ],
+     [
+      "الرجل",
+      "المعلم"
+     ],
+     [
+      "الرجل",
+      "الموظف"
+     ],
+     [
+      "المريض",
+      "الحارس"
+     ],
+     [
+      "المريض",
+      "السائق"
+     ],
+     [
+      "المريض",
+      "الشرطي"
+     ],
+     [
+      "المريض",
+      "الصحفي"
+     ],
+     [
+      "المريض",
+      "الصياد"
+     ],
+     [
+      "المريض",
+      "الضابط"
+     ],
+     [
+      "المريض",
+      "الطالب"
+     ],
+     [
+      "المريض",
+      "العامل"
+     ],
+     [
+      "المريض",
+      "الفلاح"
+     ],
+     [
+      "المريض",
+      "الكاتب"
+     ],
+     [
+      "المريض",
+      "المعلم"
+     ],
+     [
+      "المريض",
+      "المهندس"
+     ],
+     [
+      "المريض",
+      "الموظف"
+     ],
+     [
+      "المسافر",
+      "الباحث"
+     ],
+     [
+      "المسافر",
+      "الجندي"
+     ],
+     [
+      "المسافر",
+      "الحارس"
+     ],
+     [
+      "المسافر",
+      "الشرطي"
+     ],
+     [
+      "المسافر",
+      "الطباخ"
+     ],
+     [
+      "المسافر",
+      "العامل"
+     ],
+     [
+      "المسافر",
+      "الفلاح"
+     ],
+     [
+      "المسافر",
+      "القائد"
+     ],
+     [
+      "المسافر",
+      "الكاتب"
+     ],
+     [
+      "المسافر",
+      "اللاعب"
+     ],
+     [
+      "المسافر",
+      "المهندس"
+     ],
+     [
+      "الولد",
+      "الباحث"
+     ],
+     [
+      "الولد",
+      "الجندي"
+     ],
+     [
+      "الولد",
+      "الضابط"
+     ],
+     [
+      "الولد",
+      "الطباخ"
+     ],
+     [
+      "الولد",
+      "الطبيب"
+     ],
+     [
+      "الولد",
+      "العامل"
+     ],
+     [
+      "الولد",
+      "القائد"
+     ],
+     [
+      "الولد",
+      "المدير"
+     ],
+     [
+      "الولد",
+      "المهندس"
+     ]
+    ],
+    "val_casts": [
+     [
+      "الرجل",
+      "المهندس"
+     ],
+     [
+      "المريض",
+      "الطباخ"
+     ],
+     [
+      "المريض",
+      "اللاعب"
+     ],
+     [
+      "المريض",
+      "المدير"
+     ],
+     [
+      "المسافر",
+      "السائق"
+     ],
+     [
+      "المسافر",
+      "الضابط"
+     ],
+     [
+      "المسافر",
+      "المعلم"
+     ],
+     [
+      "الولد",
+      "الطالب"
+     ],
+     [
+      "الولد",
+      "الفلاح"
+     ],
+     [
+      "الولد",
+      "الكاتب"
+     ],
+     [
+      "الولد",
+      "اللاعب"
+     ]
+    ],
+    "test_casts": [
+     [
+      "الرجل",
+      "الباحث"
+     ],
+     [
+      "الرجل",
+      "السائق"
+     ],
+     [
+      "الرجل",
+      "الصحفي"
+     ],
+     [
+      "الرجل",
+      "الصياد"
+     ],
+     [
+      "الرجل",
+      "الطباخ"
+     ],
+     [
+      "الرجل",
+      "الطبيب"
+     ],
+     [
+      "الرجل",
+      "الفلاح"
+     ],
+     [
+      "الرجل",
+      "المدير"
+     ],
+     [
+      "المريض",
+      "الباحث"
+     ],
+     [
+      "المريض",
+      "الجندي"
+     ],
+     [
+      "المريض",
+      "الطبيب"
+     ],
+     [
+      "المريض",
+      "القائد"
+     ],
+     [
+      "المسافر",
+      "الصحفي"
+     ],
+     [
+      "المسافر",
+      "الصياد"
+     ],
+     [
+      "المسافر",
+      "الطالب"
+     ],
+     [
+      "المسافر",
+      "الطبيب"
+     ],
+     [
+      "المسافر",
+      "المدير"
+     ],
+     [
+      "المسافر",
+      "الموظف"
+     ],
+     [
+      "الولد",
+      "الحارس"
+     ],
+     [
+      "الولد",
+      "السائق"
+     ],
+     [
+      "الولد",
+      "الشرطي"
+     ],
+     [
+      "الولد",
+      "الصحفي"
+     ],
+     [
+      "الولد",
+      "الصياد"
+     ],
+     [
+      "الولد",
+      "المعلم"
+     ],
+     [
+      "الولد",
+      "الموظف"
+     ]
+    ],
+    "split_unit": "CAST -- a (bearer, non-bearer) pairing; never within a pair",
+    "heldout_is": "UNSEEN PAIRINGS, not unseen nouns (doc 54 SS6.1.1). Every noun's feature is in-inventory by construction, which is what makes doc 54 SS4.3's inventory-wide PCA fit legitimate and what makes doc 54 SS10's scope limit binding: exp68 does NOT test novel-filler generalisation.",
+    "coverage_assertion": {
+     "rule": "every bearer AND every non-bearer appears in >= 1 TRAIN cast (doc 54 SS6.1.1)",
+     "draws_until_satisfied": 3,
+     "nouns_in_train_casts": 24,
+     "satisfied": true
+    },
+    "marker_token": "المميز",
+    "answer_balance": {
+     "train": {
+      "yes": 264,
+      "no": 264
+     },
+     "val": {
+      "yes": 66,
+      "no": 66
+     },
+     "test": {
+      "yes": 150,
+      "no": 150
+     }
+    },
+    "construction": "SB (doc 46 SS5): one event, two-referent cast, exactly one category bearer; twins exchange the agent/patient roles over an IDENTICAL cast with an IDENTICAL question surface and opposite labels, so V1 is exactly 0.500 and neither content alone nor position alone can solve it. exp68's category is a REAL semantic category (non-occupational state) and is carried by the per-referent FEATURE MAP -- the raw AraVec PCA coordinates of doc 54 SS6.2 -- never by the surface.",
+    "invariants_asserted": [
+     "test casts are disjoint from train and val casts (unseen pairings)",
+     "every bearer and every non-bearer appears in >= 1 train cast",
+     "every pair: identical cast, identical wire order, identical question surface, one rendering, opposite answers",
+     "exactly one bearer in every cast",
+     "answer == yes iff the agent is a real bearer",
+     "answer classes balanced in every split",
+     "n_test == 300, matching exp60/exp61 so doc 54 SS7's 0.06 bar transfers"
+    ],
+    "dataset_sha256": "9a0b990088a89f5c2697da6f470891a9472fe8e3f4fc2a9d94b81911d54a6ec1"
+   }
+  }
+ },
+ "predictions_file": "exp69_predictions.json",
+ "vsuite_results": "results_exp69_WN_validation.json",
+ "smoke_results": "results_exp69_smoke_validation.json",
+ "a0_results": "results_exp69_A0.json",
+ "arms_run": [
+  "A0",
+  "R1-A",
+  "R1-W",
+  "R2-A",
+  "R2-W",
+  "R1-M",
+  "R2-M",
+  "S-shuffle-R1-A",
+  "S-shuffle-R1-W",
+  "S-shuffle-R2-A",
+  "S-shuffle-R2-W",
+  "S-shuffle-R1-M",
+  "S-shuffle-R2-M"
+ ],
+ "n_seeds": 5,
+ "n_runs": 65,
+ "sd_convention": "sample sd, ddof=1",
+ "training": {
+  "lr": 0.02,
+  "batch": 8,
+  "max_epochs": 150,
+  "optimiser": "Adam",
+  "rng_base": 55000,
+  "model_selection": "best in-distribution val accuracy",
+  "seeds_vary": "OPTIMISER INITIALISATION ONLY -- the features are deterministic constants (doc 55 SS4.4)",
+  "lineage": "the exp60 / exp61 / exp65 / exp68 loop, unchanged"
+ },
+ "arms": {
+  "A0": {
+   "mean": 0.9186666666666666,
+   "sd": 0.001825741858350596,
+   "per_seed": [
+    0.9166666666666666,
+    0.9166666666666666,
+    0.92,
+    0.92,
+    0.92
+   ],
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_seeds": 5,
+   "T": 1,
+   "part": "exp68",
+   "encoding": "FA",
+   "role": "bit-exact replication",
+   "val_per_seed": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "train_per_seed": [
+    0.8939393939393939,
+    0.9071969696969697,
+    0.9090909090909091,
+    0.8939393939393939,
+    0.9053030303030303
+   ],
+   "selected_epoch_per_seed": [
+    69,
+    122,
+    28,
+    21,
+    40
+   ],
+   "val_minus_heldout_per_seed": [
+    0.08333333333333337,
+    0.08333333333333337,
+    0.07999999999999996,
+    0.07999999999999996,
+    0.07999999999999996
+   ],
+   "mean_val_minus_heldout": 0.08133333333333333,
+   "gate_met_per_seed": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   "wires": 2,
+   "n_params": 120,
+   "wall_sec_total": 2010.2571558952332,
+   "ckpt_sha256": [
+    "77cfff779788cc0e0d8eb0fa4bace51e64a1fd3a619e8a5fbe23ad041f77bb52",
+    "a5d41cda432dabce1a98f727df317eb2399a361a46d940e949f4214f0a3dd2f5",
+    "8339d41143ce7c504b128d16abfccae2dafd4d3a5d1adab4600accc8f6ca65ca",
+    "6d5ce41eaac9419f79b7e4ff5bc3d28dc233b991ef2f9165d4f1ea810695a362",
+    "30d7e2fb6dfa8ff518f22740f77dcecac13e4ba730ac52d2fcde28f94a43aa98"
+   ]
+  },
+  "R1-A": {
+   "mean": 0.9226666666666666,
+   "sd": 0.012337837015547824,
+   "per_seed": [
+    0.9033333333333333,
+    0.9366666666666666,
+    0.9266666666666666,
+    0.92,
+    0.9266666666666666
+   ],
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_seeds": 5,
+   "T": 1,
+   "part": "A",
+   "encoding": "FA",
+   "role": "surface anchor",
+   "val_per_seed": [
+    0.8636363636363636,
+    0.8560606060606061,
+    0.8560606060606061,
+    0.8409090909090909,
+    0.8484848484848485
+   ],
+   "train_per_seed": [
+    0.9109848484848485,
+    0.9185606060606061,
+    0.9147727272727273,
+    0.9166666666666666,
+    0.9223484848484849
+   ],
+   "selected_epoch_per_seed": [
+    5,
+    39,
+    12,
+    1,
+    29
+   ],
+   "val_minus_heldout_per_seed": [
+    -0.039696969696969675,
+    -0.08060606060606057,
+    -0.07060606060606056,
+    -0.0790909090909091,
+    -0.07818181818181813
+   ],
+   "mean_val_minus_heldout": -0.06963636363636361,
+   "gate_met_per_seed": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   "wires": 2,
+   "n_params": 120,
+   "wall_sec_total": 2098.3481016159058,
+   "ckpt_sha256": [
+    "5687f39174abfed18bad3038ad1e996d9cda75e0f6a843207af2c2a80034f665",
+    "2af73e5caad6e19f15aedefc34fae1d752792b1ffb894c3aff284b2011331df7",
+    "47a5dacb585f23479e5ca3bd0cee7c5fdf2f7bbe7cfd7e0e48f51807ba2c1213",
+    "32c92b6e5c1c82a65f426c091bec774c5a140c342e6ec542b04ce811741cc6fc",
+    "2ec3e6218392f2f8cb149e4867c899105d88076a59223eb4f1392d97cd88d4fa"
+   ]
+  },
+  "R1-W": {
+   "mean": 0.982,
+   "sd": 0.00605530070819498,
+   "per_seed": [
+    0.98,
+    0.99,
+    0.9866666666666667,
+    0.9766666666666667,
+    0.9766666666666667
+   ],
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_seeds": 5,
+   "T": 1,
+   "part": "A",
+   "encoding": "F2",
+   "role": "register at T=1",
+   "val_per_seed": [
+    0.9545454545454546,
+    0.946969696969697,
+    0.9166666666666666,
+    0.9318181818181818,
+    0.9166666666666666
+   ],
+   "train_per_seed": [
+    0.9924242424242424,
+    1.0,
+    0.990530303030303,
+    1.0,
+    0.9791666666666666
+   ],
+   "selected_epoch_per_seed": [
+    124,
+    57,
+    105,
+    104,
+    32
+   ],
+   "val_minus_heldout_per_seed": [
+    -0.025454545454545396,
+    -0.043030303030302974,
+    -0.07000000000000006,
+    -0.044848484848484915,
+    -0.06000000000000005
+   ],
+   "mean_val_minus_heldout": -0.04866666666666668,
+   "gate_met_per_seed": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   "wires": 4,
+   "n_params": 264,
+   "wall_sec_total": 5384.822018623352,
+   "ckpt_sha256": [
+    "0e2af9aee9ec2601f813326ebe1af3deb72a0bcacd256957cfdf0c0fe79d50d6",
+    "03a9ed625afba33022de83cb51e1ca3cea7af8b42889ba914c3d0c9ae0c1fc23",
+    "b100ac64e62a91e578221870f8ce4b09bd6ea5f6a0055e3c089f860c8ee8a5a9",
+    "df30c8364977caebb64b48944e66341967e1d8e2503fc867a7689d18c6c1e2ee",
+    "a5e03448d83a67b4c52a8033495bed38ff36898086d3bef1e8309f70fc4057cf"
+   ]
+  },
+  "R2-A": {
+   "mean": 0.9186666666666666,
+   "sd": 0.02949576240750527,
+   "per_seed": [
+    0.9166666666666666,
+    0.9466666666666667,
+    0.8733333333333333,
+    0.9133333333333333,
+    0.9433333333333334
+   ],
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_seeds": 5,
+   "T": 2,
+   "part": "A",
+   "encoding": "FA",
+   "role": "angle at T=2",
+   "val_per_seed": [
+    0.8712121212121212,
+    0.8712121212121212,
+    0.8787878787878788,
+    0.8712121212121212,
+    0.8636363636363636
+   ],
+   "train_per_seed": [
+    0.9185606060606061,
+    0.9356060606060606,
+    0.8920454545454546,
+    0.9375,
+    0.9412878787878788
+   ],
+   "selected_epoch_per_seed": [
+    121,
+    121,
+    14,
+    99,
+    114
+   ],
+   "val_minus_heldout_per_seed": [
+    -0.045454545454545414,
+    -0.07545454545454544,
+    0.00545454545454549,
+    -0.042121212121212115,
+    -0.07969696969696971
+   ],
+   "mean_val_minus_heldout": -0.04745454545454544,
+   "gate_met_per_seed": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   "wires": 2,
+   "n_params": 120,
+   "wall_sec_total": 3120.713203191757,
+   "ckpt_sha256": [
+    "bc33070700a077e4747e1a0c952c7502aa124d5cc6c66783c6ee861f5c90ed32",
+    "ac3df177a91e4916507249ad5851fb1489b89bb4c310b8a1c4fab71de5d4d55d",
+    "f408d19ebc006534e7f8b902dcc8b99e79fa05a315eced575545c3196c2b6df1",
+    "4e1b61c55697fde31bd5f80550a97cbc260aa74ddcc3414e22bf34171ec660e3",
+    "a2d3a467e67969e6b46bef591c8af67f1acb28e89897f33bb3f0e495f56589d9"
+   ]
+  },
+  "R2-W": {
+   "mean": 0.7293333333333334,
+   "sd": 0.03139355914125629,
+   "per_seed": [
+    0.7166666666666667,
+    0.77,
+    0.7466666666666667,
+    0.7266666666666667,
+    0.6866666666666666
+   ],
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_seeds": 5,
+   "T": 2,
+   "part": "A",
+   "encoding": "F2",
+   "role": "PRIMARY ARM",
+   "val_per_seed": [
+    0.7348484848484849,
+    0.7196969696969697,
+    0.7878787878787878,
+    0.7348484848484849,
+    0.7272727272727273
+   ],
+   "train_per_seed": [
+    0.7916666666666666,
+    0.8958333333333334,
+    0.9564393939393939,
+    0.8939393939393939,
+    0.8390151515151515
+   ],
+   "selected_epoch_per_seed": [
+    134,
+    124,
+    139,
+    17,
+    144
+   ],
+   "val_minus_heldout_per_seed": [
+    0.018181818181818188,
+    -0.050303030303030294,
+    0.041212121212121144,
+    0.008181818181818179,
+    0.040606060606060645
+   ],
+   "mean_val_minus_heldout": 0.011575757575757573,
+   "gate_met_per_seed": [
+    false,
+    true,
+    true,
+    true,
+    true
+   ],
+   "wires": 4,
+   "n_params": 264,
+   "wall_sec_total": 7273.2667763233185,
+   "ckpt_sha256": [
+    "7b910482b9b078974fbfa9db1770c6d565db8574e23873e7b9c0be9e7e823cf1",
+    "b9a6b488993ecfc12d0ac206a221035d5ba5aee2f3e50b8f8a462caeb022db45",
+    "4655b381f88c08e2c3cdb900a2f5fef32d4c60ad61d1a1389fb430a6dffeb78b",
+    "55ed7954df1a02d2df009dd221fb4894b6c42e560d7074763188379094038f71",
+    "274a54886fe999d3e02ac97df94de9a2c939e5dfeb087f37ed4ac8ed96a04474"
+   ]
+  },
+  "R1-M": {
+   "mean": 0.9966666666666667,
+   "sd": 0.004714045207910328,
+   "per_seed": [
+    1.0,
+    1.0,
+    0.99,
+    0.9933333333333333,
+    1.0
+   ],
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_seeds": 5,
+   "T": 1,
+   "part": "B",
+   "encoding": "WZ",
+   "role": "wazn at T=1",
+   "val_per_seed": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "train_per_seed": [
+    1.0,
+    1.0,
+    0.990530303030303,
+    0.9981060606060606,
+    1.0
+   ],
+   "selected_epoch_per_seed": [
+    1,
+    2,
+    1,
+    1,
+    2
+   ],
+   "val_minus_heldout_per_seed": [
+    0.0,
+    0.0,
+    0.010000000000000009,
+    0.00666666666666671,
+    0.0
+   ],
+   "mean_val_minus_heldout": 0.0033333333333333435,
+   "gate_met_per_seed": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   "wires": 2,
+   "n_params": 120,
+   "wall_sec_total": 2330.896731853485,
+   "ckpt_sha256": [
+    "90d3e1117c61a6adbf8905d7784503e50083d1c0f1243186b8c731ac3f053c00",
+    "56e0dc56a94af78968b3041e3c137ef0024239d20a9277b4833a42299f87025b",
+    "e38d15ec73c86197facfe0dfa36cb55c3a617186a33ac9e6815e1643f3bfc3c1",
+    "b0fd5b3684e42f82960d02a819c3ff21c41cc6193cac4485e2712386efa346a1",
+    "05fbfc2708154b6e101b26853d08e35e253e342b14988c40065a6a4b44e8aa39"
+   ]
+  },
+  "R2-M": {
+   "mean": 0.9933333333333333,
+   "sd": 0.005270462766947297,
+   "per_seed": [
+    0.9933333333333333,
+    1.0,
+    0.99,
+    0.9866666666666667,
+    0.9966666666666667
+   ],
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_seeds": 5,
+   "T": 2,
+   "part": "B",
+   "encoding": "WZ",
+   "role": "wazn at T=2",
+   "val_per_seed": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "train_per_seed": [
+    1.0,
+    1.0,
+    0.9981060606060606,
+    0.9981060606060606,
+    1.0
+   ],
+   "selected_epoch_per_seed": [
+    47,
+    32,
+    20,
+    19,
+    17
+   ],
+   "val_minus_heldout_per_seed": [
+    0.00666666666666671,
+    0.0,
+    0.010000000000000009,
+    0.013333333333333308,
+    0.0033333333333332993
+   ],
+   "mean_val_minus_heldout": 0.006666666666666665,
+   "gate_met_per_seed": [
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   "wires": 2,
+   "n_params": 120,
+   "wall_sec_total": 3155.1820356845856,
+   "ckpt_sha256": [
+    "064840a56b45625fa74142f682bb6284b64db3bcf0830a8863a711999592a197",
+    "c9674b014706599d4a3e44c1a9664e9153a3b042d631831519b9471d1a291b2e",
+    "87a6960a8c56b4fb6518f9c4bd99befbceb321b621113e332ad6efe32a86158b",
+    "f499c382036b34c7bb41718fcd56eaed4c4b823eb9cd73ef6338b08c481c1978",
+    "b182ae13fa8bad04628874d542605e25b2a285bba22dc1b87b6b2267050674bd"
+   ]
+  }
+ },
+ "floors": {
+  "R1-A": {
+   "mean": 0.512,
+   "sd": 0.0461037477387203,
+   "per_seed": [
+    0.49666666666666665,
+    0.56,
+    0.53,
+    0.5333333333333333,
+    0.44
+   ],
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_seeds": 5,
+   "T": 1,
+   "part": "A",
+   "encoding": "FA",
+   "role": "surface anchor",
+   "val_per_seed": [
+    0.6212121212121212,
+    0.5681818181818182,
+    0.5984848484848485,
+    0.5681818181818182,
+    0.5833333333333334
+   ],
+   "train_per_seed": [
+    0.553030303030303,
+    0.5643939393939394,
+    0.5587121212121212,
+    0.5473484848484849,
+    0.5473484848484849
+   ],
+   "selected_epoch_per_seed": [
+    133,
+    33,
+    35,
+    145,
+    12
+   ],
+   "val_minus_heldout_per_seed": [
+    0.12454545454545457,
+    0.008181818181818179,
+    0.06848484848484848,
+    0.034848484848484906,
+    0.14333333333333337
+   ],
+   "mean_val_minus_heldout": 0.0758787878787879,
+   "gate_met_per_seed": [
+    false,
+    false,
+    false,
+    false,
+    false
+   ],
+   "wires": 2,
+   "n_params": 120,
+   "wall_sec_total": 2379.1613528728485,
+   "ckpt_sha256": [
+    "7c3055bf0163eaa4368bdc079d456c157cd0d0af7e3fc9d77bdbe232ab05b44c",
+    "88b0c12b8a969162c8aa46e9bfbe557ec9e424443bd34dcd179131a535f3e9f6",
+    "4374ad517cf10564b9d2f37df7fed03e789abc787eee756e81ecb2797be1aa73",
+    "efda5dd7ca1d9c44c21309a3b4fee6e04106e0f526260536b94429d01e199605",
+    "c9f39dcc8bbee3f0e8329a6368a17e0d392b01669f54a38b3511837e57621780"
+   ]
+  },
+  "R1-W": {
+   "mean": 0.5073333333333333,
+   "sd": 0.029287843515318386,
+   "per_seed": [
+    0.5066666666666667,
+    0.5,
+    0.49333333333333335,
+    0.5566666666666666,
+    0.48
+   ],
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_seeds": 5,
+   "T": 1,
+   "part": "A",
+   "encoding": "F2",
+   "role": "register at T=1",
+   "val_per_seed": [
+    0.5833333333333334,
+    0.6363636363636364,
+    0.5984848484848485,
+    0.5681818181818182,
+    0.5606060606060606
+   ],
+   "train_per_seed": [
+    0.6609848484848485,
+    0.6193181818181818,
+    0.6003787878787878,
+    0.5890151515151515,
+    0.6306818181818182
+   ],
+   "selected_epoch_per_seed": [
+    107,
+    4,
+    57,
+    84,
+    14
+   ],
+   "val_minus_heldout_per_seed": [
+    0.07666666666666666,
+    0.13636363636363635,
+    0.10515151515151516,
+    0.01151515151515159,
+    0.08060606060606057
+   ],
+   "mean_val_minus_heldout": 0.08206060606060607,
+   "gate_met_per_seed": [
+    false,
+    false,
+    false,
+    false,
+    false
+   ],
+   "wires": 4,
+   "n_params": 264,
+   "wall_sec_total": 5471.3329067230225,
+   "ckpt_sha256": [
+    "ab6071fb4eb9bab47eae4740d5b78f75d6022fc1a7c8b11fb348f5a7f92b0da9",
+    "ffa35c493f449b0b253b991dd506b0add8970a715853cca9b38774941f1e79f2",
+    "d5bf537eca91dc8599c69316ca1a0168358dbdb6c7a242b9520adf38106ff2fa",
+    "3ace246929c2b4b259bc3555ebc9c6106f6140b6553ce2ff2cf7ff74ddcfc453",
+    "1df2d18c6fe8303cd52c66d3530dcfce7235e2fcb92f39483060d820a95ac743"
+   ]
+  },
+  "R2-A": {
+   "mean": 0.506,
+   "sd": 0.021781745670272724,
+   "per_seed": [
+    0.5333333333333333,
+    0.5233333333333333,
+    0.49666666666666665,
+    0.49666666666666665,
+    0.48
+   ],
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_seeds": 5,
+   "T": 2,
+   "part": "A",
+   "encoding": "FA",
+   "role": "angle at T=2",
+   "val_per_seed": [
+    0.6060606060606061,
+    0.6060606060606061,
+    0.6439393939393939,
+    0.6136363636363636,
+    0.6212121212121212
+   ],
+   "train_per_seed": [
+    0.5284090909090909,
+    0.5359848484848485,
+    0.4962121212121212,
+    0.5189393939393939,
+    0.5170454545454546
+   ],
+   "selected_epoch_per_seed": [
+    2,
+    20,
+    22,
+    125,
+    87
+   ],
+   "val_minus_heldout_per_seed": [
+    0.07272727272727275,
+    0.08272727272727276,
+    0.14727272727272728,
+    0.116969696969697,
+    0.14121212121212123
+   ],
+   "mean_val_minus_heldout": 0.1121818181818182,
+   "gate_met_per_seed": [
+    false,
+    false,
+    false,
+    false,
+    false
+   ],
+   "wires": 2,
+   "n_params": 120,
+   "wall_sec_total": 3123.1468710899353,
+   "ckpt_sha256": [
+    "dd918c48abf5a3aeb3e6074a5cabb989e8a010cdb332ac8e13233e0b4a2b8d0e",
+    "6457839420eee333c88bb02870ba7c6ad3c2a12f89135513ff6811d41659d196",
+    "9878b3fd7116467ca6af4fbcdadc47076767c2d3dd929cb596d72744980052ea",
+    "1ad0be12ad1a2d87c247ecafcb5eaebec72ef214ef75e196e9b42adfa3b6acd6",
+    "05135b93ba78eff51e0fa685a653be4fca5b489bd7931b14caf148897f2946a0"
+   ]
+  },
+  "R2-W": {
+   "mean": 0.502,
+   "sd": 0.028343135559308414,
+   "per_seed": [
+    0.5066666666666667,
+    0.52,
+    0.4766666666666667,
+    0.5366666666666666,
+    0.47
+   ],
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_seeds": 5,
+   "T": 2,
+   "part": "A",
+   "encoding": "F2",
+   "role": "PRIMARY ARM",
+   "val_per_seed": [
+    0.6287878787878788,
+    0.6515151515151515,
+    0.5909090909090909,
+    0.5984848484848485,
+    0.6060606060606061
+   ],
+   "train_per_seed": [
+    0.5321969696969697,
+    0.5549242424242424,
+    0.615530303030303,
+    0.6401515151515151,
+    0.5492424242424242
+   ],
+   "selected_epoch_per_seed": [
+    132,
+    65,
+    120,
+    10,
+    77
+   ],
+   "val_minus_heldout_per_seed": [
+    0.12212121212121207,
+    0.13151515151515147,
+    0.11424242424242426,
+    0.06181818181818188,
+    0.1360606060606061
+   ],
+   "mean_val_minus_heldout": 0.11315151515151516,
+   "gate_met_per_seed": [
+    false,
+    false,
+    false,
+    false,
+    false
+   ],
+   "wires": 4,
+   "n_params": 264,
+   "wall_sec_total": 7286.388691663742,
+   "ckpt_sha256": [
+    "228a09f440f1c1f83280049231820357f7bc83096f6283799829a6e4aac7960b",
+    "81e331fcb6ca9919b2a5f923351ca6b082a0d062136692020bcf698d4008008d",
+    "d28d5a38a7fcc907e5e10d46d687ac04527a5bc8d9eeeef8401dd6b6349949b3",
+    "a455aa84067c4625d78eb42581b5acc82d6cc809255da967f570ea9f748442c2",
+    "976b17b9329110ce9c76dc8041f26b3da1c9a71f22eceae234c4622b21e5c9d2"
+   ]
+  },
+  "R1-M": {
+   "mean": 0.48466666666666663,
+   "sd": 0.026832815729997465,
+   "per_seed": [
+    0.47333333333333333,
+    0.4866666666666667,
+    0.5266666666666666,
+    0.48333333333333334,
+    0.4533333333333333
+   ],
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_seeds": 5,
+   "T": 1,
+   "part": "B",
+   "encoding": "WZ",
+   "role": "wazn at T=1",
+   "val_per_seed": [
+    0.6136363636363636,
+    0.5454545454545454,
+    0.6212121212121212,
+    0.5757575757575758,
+    0.6287878787878788
+   ],
+   "train_per_seed": [
+    0.5511363636363636,
+    0.6022727272727273,
+    0.5227272727272727,
+    0.5681818181818182,
+    0.5606060606060606
+   ],
+   "selected_epoch_per_seed": [
+    30,
+    11,
+    5,
+    57,
+    148
+   ],
+   "val_minus_heldout_per_seed": [
+    0.14030303030303032,
+    0.05878787878787872,
+    0.0945454545454546,
+    0.09242424242424246,
+    0.17545454545454547
+   ],
+   "mean_val_minus_heldout": 0.11230303030303032,
+   "gate_met_per_seed": [
+    false,
+    false,
+    false,
+    false,
+    false
+   ],
+   "wires": 2,
+   "n_params": 120,
+   "wall_sec_total": 2366.110604763031,
+   "ckpt_sha256": [
+    "2ff43ac55e6755b6e07b6cbaa6c4f889fed1c120b744699c00469af08b228a2d",
+    "99b141565a91c349efe22a691ba77ef89c266ce9d7fd509f467770074cd6bc66",
+    "1dcc85e19862bcd2187da1a17b4b3bf61b6adc87dc14db448f4426f901e5ccd7",
+    "a6a1ebd00b18807af29356d857c2d090ff031cf8f414459899f79d4e43363b4c",
+    "4a671da8a7a85cfba25d0f4473eb29b910690c5c0df1404f9afc22ffe6843958"
+   ]
+  },
+  "R2-M": {
+   "mean": 0.52,
+   "sd": 0.02666666666666667,
+   "per_seed": [
+    0.5666666666666667,
+    0.5033333333333333,
+    0.5033333333333333,
+    0.5166666666666667,
+    0.51
+   ],
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_seeds": 5,
+   "T": 2,
+   "part": "B",
+   "encoding": "WZ",
+   "role": "wazn at T=2",
+   "val_per_seed": [
+    0.6136363636363636,
+    0.5984848484848485,
+    0.6287878787878788,
+    0.5984848484848485,
+    0.6439393939393939
+   ],
+   "train_per_seed": [
+    0.48863636363636365,
+    0.4943181818181818,
+    0.5454545454545454,
+    0.5359848484848485,
+    0.5378787878787878
+   ],
+   "selected_epoch_per_seed": [
+    80,
+    131,
+    102,
+    50,
+    79
+   ],
+   "val_minus_heldout_per_seed": [
+    0.046969696969696995,
+    0.09515151515151521,
+    0.12545454545454549,
+    0.08181818181818179,
+    0.1339393939393939
+   ],
+   "mean_val_minus_heldout": 0.09666666666666668,
+   "gate_met_per_seed": [
+    false,
+    false,
+    false,
+    false,
+    false
+   ],
+   "wires": 2,
+   "n_params": 120,
+   "wall_sec_total": 3023.296605825424,
+   "ckpt_sha256": [
+    "b9bdaee291095c73e8a0a9736dbed5edbca3846a336a97a29106d9de9959a4fb",
+    "c8e1850f8b51d93aeb2036f22a5dba1bd5b367133af5ba947bc5ec199d214f86",
+    "43b77c7e6e08df5250b6f5086ae387b67badeffb83ce12104d632569b8bdf7a7",
+    "c8ae631b86e9f71e74d5ab29a1ae82243d5b1516b6bac0d388a439f9d82dd532",
+    "ac311b17602c059c68828a8b911ecd1bf7792afa6b84d3b9e7fd2d8503cf102d"
+   ]
+  }
+ },
+ "floor_clearance": {
+  "R1-A": {
+   "arm_mean": 0.9226666666666666,
+   "floor_mean": 0.512,
+   "delta_over_floor": 0.4106666666666666,
+   "sd_units_over_floor_using_floor_sd": 8.907446505086778,
+   "readings": {
+    "floor_sd": {
+     "sd": 0.0461037477387203,
+     "bar": 0.6042074954774406,
+     "clears": true
+    },
+    "arm_sd": {
+     "sd": 0.012337837015547824,
+     "bar": 0.5366756740310956,
+     "clears": true
+    },
+    "pooled_sd": {
+     "sd": 0.033747427885527655,
+     "bar": 0.5794948557710553,
+     "clears": true
+    }
+   },
+   "primary_reading": "floor_sd",
+   "clears_floor": true,
+   "clears_under_all_readings": true,
+   "clears_under_any_reading": true,
+   "readings_agree": true
+  },
+  "R1-W": {
+   "arm_mean": 0.982,
+   "floor_mean": 0.5073333333333333,
+   "delta_over_floor": 0.4746666666666667,
+   "sd_units_over_floor_using_floor_sd": 16.206951748373086,
+   "readings": {
+    "floor_sd": {
+     "sd": 0.029287843515318386,
+     "bar": 0.5659090203639701,
+     "clears": true
+    },
+    "arm_sd": {
+     "sd": 0.00605530070819498,
+     "bar": 0.5194439347497233,
+     "clears": true
+    },
+    "pooled_sd": {
+     "sd": 0.02114762923408253,
+     "bar": 0.5496285918014984,
+     "clears": true
+    }
+   },
+   "primary_reading": "floor_sd",
+   "clears_floor": true,
+   "clears_under_all_readings": true,
+   "clears_under_any_reading": true,
+   "readings_agree": true
+  },
+  "R2-A": {
+   "arm_mean": 0.9186666666666666,
+   "floor_mean": 0.506,
+   "delta_over_floor": 0.4126666666666666,
+   "sd_units_over_floor_using_floor_sd": 18.94552773287889,
+   "readings": {
+    "floor_sd": {
+     "sd": 0.021781745670272724,
+     "bar": 0.5495634913405455,
+     "clears": true
+    },
+    "arm_sd": {
+     "sd": 0.02949576240750527,
+     "bar": 0.5649915248150106,
+     "clears": true
+    },
+    "pooled_sd": {
+     "sd": 0.025927248643506755,
+     "bar": 0.5578544972870135,
+     "clears": true
+    }
+   },
+   "primary_reading": "floor_sd",
+   "clears_floor": true,
+   "clears_under_all_readings": true,
+   "clears_under_any_reading": true,
+   "readings_agree": true
+  },
+  "R2-W": {
+   "arm_mean": 0.7293333333333334,
+   "floor_mean": 0.502,
+   "delta_over_floor": 0.2273333333333334,
+   "sd_units_over_floor_using_floor_sd": 8.020754544169439,
+   "readings": {
+    "floor_sd": {
+     "sd": 0.028343135559308414,
+     "bar": 0.5586862711186168,
+     "clears": true
+    },
+    "arm_sd": {
+     "sd": 0.03139355914125629,
+     "bar": 0.5647871182825126,
+     "clears": true
+    },
+    "pooled_sd": {
+     "sd": 0.029907264074877274,
+     "bar": 0.5618145281497545,
+     "clears": true
+    }
+   },
+   "primary_reading": "floor_sd",
+   "clears_floor": true,
+   "clears_under_all_readings": true,
+   "clears_under_any_reading": true,
+   "readings_agree": true
+  },
+  "R1-M": {
+   "arm_mean": 0.9966666666666667,
+   "floor_mean": 0.48466666666666663,
+   "delta_over_floor": 0.512,
+   "sd_units_over_floor_using_floor_sd": 19.081113407998213,
+   "readings": {
+    "floor_sd": {
+     "sd": 0.026832815729997465,
+     "bar": 0.5383322981266616,
+     "clears": true
+    },
+    "arm_sd": {
+     "sd": 0.004714045207910328,
+     "bar": 0.4940947570824873,
+     "clears": true
+    },
+    "pooled_sd": {
+     "sd": 0.019264244369066513,
+     "bar": 0.5231951554047997,
+     "clears": true
+    }
+   },
+   "primary_reading": "floor_sd",
+   "clears_floor": true,
+   "clears_under_all_readings": true,
+   "clears_under_any_reading": true,
+   "readings_agree": true
+  },
+  "R2-M": {
+   "arm_mean": 0.9933333333333333,
+   "floor_mean": 0.52,
+   "delta_over_floor": 0.4733333333333333,
+   "sd_units_over_floor_using_floor_sd": 17.749999999999996,
+   "readings": {
+    "floor_sd": {
+     "sd": 0.02666666666666667,
+     "bar": 0.5733333333333334,
+     "clears": true
+    },
+    "arm_sd": {
+     "sd": 0.005270462766947297,
+     "bar": 0.5305409255338946,
+     "clears": true
+    },
+    "pooled_sd": {
+     "sd": 0.01922093765778466,
+     "bar": 0.5584418753155693,
+     "clears": true
+    }
+   },
+   "primary_reading": "floor_sd",
+   "clears_floor": true,
+   "clears_under_all_readings": true,
+   "clears_under_any_reading": true,
+   "readings_agree": true
+  }
+ },
+ "a0_anchor": {
+  "component": "exp69 A0 -- doc 55 SS6.1, the BLOCKING replication anchor",
+  "spec": "qnlp_private_docs/55_exp69_reunion.md (da4b8fe, REGISTERED through SS19.7)",
+  "rule3_note": "A0 writes its OWN results file. No exp68 artefact is touched, read for writing, or overwritten (doc 55 SS4.4).",
+  "dataset": "stories_exp68_WN.json",
+  "dataset_sha256": "9a0b990088a89f5c2697da6f470891a9472fe8e3f4fc2a9d94b81911d54a6ec1",
+  "exp68_source": "results_exp68.json",
+  "exp68_FA_per_seed": [
+   0.9166666666666666,
+   0.9166666666666666,
+   0.92,
+   0.92,
+   0.92
+  ],
+  "exp68_FA_mean": 0.9186666666666666,
+  "exp69_A0_per_seed": [
+   0.9166666666666666,
+   0.9166666666666666,
+   0.92,
+   0.92,
+   0.92
+  ],
+  "exp69_A0_mean": 0.9186666666666667,
+  "exp69_A0_sd": 0.001825741858350596,
+  "per_seed_delta": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "max_abs_per_seed_delta": 0.0,
+  "mean_delta_vs_exp68": 1.1102230246251565e-16,
+  "mean_delta_vs_registered_0_9187": -3.333333333321864e-05,
+  "tolerance": 0.002,
+  "bit_exact": true,
+  "per_seed_within_tolerance": true,
+  "mean_within_tolerance_of_0_9187": true,
+  "anchor_replicates_exp68": true,
+  "honest_expectation": "BIT-EXACT. Both runs are deterministic given their seeds; the 0.002 tolerance exists only to absorb a documented float/BLAS platform difference and any non-zero delta is reported with its cause identified (doc 55 SS6.1).",
+  "consequence_if_failed": "doc 55 SS9.2 row 1: THE RUN STOPS. The exp69 pipeline does not reproduce exp68 on exp68's own data -- hunt the build, interpret nothing, from any arm.",
+  "val_per_seed": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ],
+  "selected_epoch_per_seed": [
+   69,
+   122,
+   28,
+   21,
+   40
+  ],
+  "n_params": 120,
+  "wires": 2,
+  "wall_sec_total": 2010.2571558952332
+ },
+ "comparator": {
+  "source": "exp69_ckpt/comparator.json",
+  "arms": {
+   "A0": {
+    "mean": 0.9200000000000002,
+    "sd": 1.2412670766236366e-16,
+    "per_seed": [
+     0.92,
+     0.92,
+     0.92,
+     0.92,
+     0.92
+    ],
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "feature_dim": 9,
+    "T": 1,
+    "val_per_seed": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "train_per_seed": [
+     0.8863636363636364,
+     0.9090909090909091,
+     0.8977272727272727,
+     0.8863636363636364,
+     0.8977272727272727
+    ],
+    "train_loss_init_per_seed": [
+     1.007547576459173,
+     0.6938623700421791,
+     0.7033850487985224,
+     0.7050087358855595,
+     0.768099440744696
+    ],
+    "train_loss_final_per_seed": [
+     0.16798106480991085,
+     0.1679810517371674,
+     0.1679810518387011,
+     0.16798105206345468,
+     0.16798105255179274
+    ],
+    "grad_norm_final_per_seed": [
+     2.5766487761662887e-07,
+     1.9542201959804163e-09,
+     9.400615223343299e-10,
+     4.214990223821108e-08,
+     4.395516091483712e-08
+    ],
+    "conditioning_descriptors_per_seed": [
+     {
+      "by_q": {
+       "q1": {
+        "acc": 0.92,
+        "n": 300
+       }
+      },
+      "by_order_pair": {
+       "SVO": {
+        "acc": 0.9178082191780822,
+        "n": 146
+       },
+       "VSO": {
+        "acc": 0.922077922077922,
+        "n": 154
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 0.92,
+        "n": 300
+       }
+      },
+      "by_order_pair": {
+       "SVO": {
+        "acc": 0.9178082191780822,
+        "n": 146
+       },
+       "VSO": {
+        "acc": 0.922077922077922,
+        "n": 154
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 0.92,
+        "n": 300
+       }
+      },
+      "by_order_pair": {
+       "SVO": {
+        "acc": 0.9178082191780822,
+        "n": 146
+       },
+       "VSO": {
+        "acc": 0.922077922077922,
+        "n": 154
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 0.92,
+        "n": 300
+       }
+      },
+      "by_order_pair": {
+       "SVO": {
+        "acc": 0.9178082191780822,
+        "n": 146
+       },
+       "VSO": {
+        "acc": 0.922077922077922,
+        "n": 154
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 0.92,
+        "n": 300
+       }
+      },
+      "by_order_pair": {
+       "SVO": {
+        "acc": 0.9178082191780822,
+        "n": 146
+       },
+       "VSO": {
+        "acc": 0.922077922077922,
+        "n": 154
+       }
+      }
+     }
+    ]
+   },
+   "R1-A": {
+    "mean": 0.9200000000000002,
+    "sd": 1.2412670766236366e-16,
+    "per_seed": [
+     0.92,
+     0.92,
+     0.92,
+     0.92,
+     0.92
+    ],
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "feature_dim": 9,
+    "T": 1,
+    "val_per_seed": [
+     0.8181818181818182,
+     0.8181818181818182,
+     0.8181818181818182,
+     0.8181818181818182,
+     0.8181818181818182
+    ],
+    "train_per_seed": [
+     0.9318181818181818,
+     0.9545454545454546,
+     0.9545454545454546,
+     0.9318181818181818,
+     0.9431818181818182
+    ],
+    "train_loss_init_per_seed": [
+     1.0159834093940205,
+     0.6893817266883522,
+     0.6962906678785197,
+     0.6999676595234822,
+     0.7744799289394027
+    ],
+    "train_loss_final_per_seed": [
+     0.11958538541957037,
+     0.11958538522318818,
+     0.11958538537503606,
+     0.11958538593300762,
+     0.11958538540938779
+    ],
+    "grad_norm_final_per_seed": [
+     2.028243814170849e-09,
+     1.4934467151972451e-09,
+     8.308060287363867e-09,
+     5.1002608505855965e-09,
+     8.551931345543013e-09
+    ],
+    "conditioning_descriptors_per_seed": [
+     {
+      "by_q": {
+       "q1": {
+        "acc": 0.92,
+        "n": 300
+       }
+      },
+      "by_order_pair": {
+       "SVO": {
+        "acc": 0.92,
+        "n": 150
+       },
+       "VSO": {
+        "acc": 0.92,
+        "n": 150
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 0.92,
+        "n": 300
+       }
+      },
+      "by_order_pair": {
+       "SVO": {
+        "acc": 0.92,
+        "n": 150
+       },
+       "VSO": {
+        "acc": 0.92,
+        "n": 150
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 0.92,
+        "n": 300
+       }
+      },
+      "by_order_pair": {
+       "SVO": {
+        "acc": 0.92,
+        "n": 150
+       },
+       "VSO": {
+        "acc": 0.92,
+        "n": 150
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 0.92,
+        "n": 300
+       }
+      },
+      "by_order_pair": {
+       "SVO": {
+        "acc": 0.92,
+        "n": 150
+       },
+       "VSO": {
+        "acc": 0.92,
+        "n": 150
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 0.92,
+        "n": 300
+       }
+      },
+      "by_order_pair": {
+       "SVO": {
+        "acc": 0.92,
+        "n": 150
+       },
+       "VSO": {
+        "acc": 0.92,
+        "n": 150
+       }
+      }
+     }
+    ]
+   },
+   "R1-W": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "per_seed": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "feature_dim": 81,
+    "T": 1,
+    "val_per_seed": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "train_per_seed": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "train_loss_init_per_seed": [
+     0.5613979850690995,
+     0.8763529736577224,
+     0.7260704339912745,
+     0.7433470766401454,
+     0.668171356269926
+    ],
+    "train_loss_final_per_seed": [
+     2.329611251325553e-12,
+     1.700513467360561e-12,
+     3.4422162089158636e-12,
+     2.0884607174462094e-12,
+     3.3835611079550307e-12
+    ],
+    "grad_norm_final_per_seed": [
+     4.144474947633871e-12,
+     7.2020007113197985e-12,
+     3.0130075425423497e-12,
+     4.087130517997664e-12,
+     3.941968530846188e-12
+    ],
+    "conditioning_descriptors_per_seed": [
+     {
+      "by_q": {
+       "q1": {
+        "acc": 1.0,
+        "n": 300
+       }
+      },
+      "by_order_pair": {
+       "SVO": {
+        "acc": 1.0,
+        "n": 150
+       },
+       "VSO": {
+        "acc": 1.0,
+        "n": 150
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 1.0,
+        "n": 300
+       }
+      },
+      "by_order_pair": {
+       "SVO": {
+        "acc": 1.0,
+        "n": 150
+       },
+       "VSO": {
+        "acc": 1.0,
+        "n": 150
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 1.0,
+        "n": 300
+       }
+      },
+      "by_order_pair": {
+       "SVO": {
+        "acc": 1.0,
+        "n": 150
+       },
+       "VSO": {
+        "acc": 1.0,
+        "n": 150
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 1.0,
+        "n": 300
+       }
+      },
+      "by_order_pair": {
+       "SVO": {
+        "acc": 1.0,
+        "n": 150
+       },
+       "VSO": {
+        "acc": 1.0,
+        "n": 150
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 1.0,
+        "n": 300
+       }
+      },
+      "by_order_pair": {
+       "SVO": {
+        "acc": 1.0,
+        "n": 150
+       },
+       "VSO": {
+        "acc": 1.0,
+        "n": 150
+       }
+      }
+     }
+    ]
+   },
+   "R2-A": {
+    "mean": 0.9200000000000002,
+    "sd": 1.2412670766236366e-16,
+    "per_seed": [
+     0.92,
+     0.92,
+     0.92,
+     0.92,
+     0.92
+    ],
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "feature_dim": 9,
+    "T": 2,
+    "val_per_seed": [
+     0.8181818181818182,
+     0.8181818181818182,
+     0.8181818181818182,
+     0.8181818181818182,
+     0.8181818181818182
+    ],
+    "train_per_seed": [
+     0.9318181818181818,
+     0.9545454545454546,
+     0.9545454545454546,
+     0.9318181818181818,
+     0.9431818181818182
+    ],
+    "train_loss_init_per_seed": [
+     1.0159834093940205,
+     0.6893817266883522,
+     0.6962906678785197,
+     0.6999676595234822,
+     0.7744799289394027
+    ],
+    "train_loss_final_per_seed": [
+     0.11958538541957037,
+     0.11958538522318818,
+     0.11958538537503606,
+     0.11958538593300762,
+     0.11958538540938779
+    ],
+    "grad_norm_final_per_seed": [
+     2.028243814170849e-09,
+     1.4934467151972451e-09,
+     8.308060287363867e-09,
+     5.1002608505855965e-09,
+     8.551931345543013e-09
+    ],
+    "conditioning_descriptors_per_seed": [
+     {
+      "by_q": {
+       "q1": {
+        "acc": 0.92,
+        "n": 150
+       },
+       "q2": {
+        "acc": 0.92,
+        "n": 150
+       }
+      },
+      "by_order_pair": {
+       "SVO/SVO": {
+        "acc": 0.8947368421052632,
+        "n": 76
+       },
+       "SVO/VSO": {
+        "acc": 0.8947368421052632,
+        "n": 76
+       },
+       "VSO/SVO": {
+        "acc": 0.9459459459459459,
+        "n": 74
+       },
+       "VSO/VSO": {
+        "acc": 0.9459459459459459,
+        "n": 74
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 0.92,
+        "n": 150
+       },
+       "q2": {
+        "acc": 0.92,
+        "n": 150
+       }
+      },
+      "by_order_pair": {
+       "SVO/SVO": {
+        "acc": 0.8947368421052632,
+        "n": 76
+       },
+       "SVO/VSO": {
+        "acc": 0.8947368421052632,
+        "n": 76
+       },
+       "VSO/SVO": {
+        "acc": 0.9459459459459459,
+        "n": 74
+       },
+       "VSO/VSO": {
+        "acc": 0.9459459459459459,
+        "n": 74
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 0.92,
+        "n": 150
+       },
+       "q2": {
+        "acc": 0.92,
+        "n": 150
+       }
+      },
+      "by_order_pair": {
+       "SVO/SVO": {
+        "acc": 0.8947368421052632,
+        "n": 76
+       },
+       "SVO/VSO": {
+        "acc": 0.8947368421052632,
+        "n": 76
+       },
+       "VSO/SVO": {
+        "acc": 0.9459459459459459,
+        "n": 74
+       },
+       "VSO/VSO": {
+        "acc": 0.9459459459459459,
+        "n": 74
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 0.92,
+        "n": 150
+       },
+       "q2": {
+        "acc": 0.92,
+        "n": 150
+       }
+      },
+      "by_order_pair": {
+       "SVO/SVO": {
+        "acc": 0.8947368421052632,
+        "n": 76
+       },
+       "SVO/VSO": {
+        "acc": 0.8947368421052632,
+        "n": 76
+       },
+       "VSO/SVO": {
+        "acc": 0.9459459459459459,
+        "n": 74
+       },
+       "VSO/VSO": {
+        "acc": 0.9459459459459459,
+        "n": 74
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 0.92,
+        "n": 150
+       },
+       "q2": {
+        "acc": 0.92,
+        "n": 150
+       }
+      },
+      "by_order_pair": {
+       "SVO/SVO": {
+        "acc": 0.8947368421052632,
+        "n": 76
+       },
+       "SVO/VSO": {
+        "acc": 0.8947368421052632,
+        "n": 76
+       },
+       "VSO/SVO": {
+        "acc": 0.9459459459459459,
+        "n": 74
+       },
+       "VSO/VSO": {
+        "acc": 0.9459459459459459,
+        "n": 74
+       }
+      }
+     }
+    ]
+   },
+   "R2-W": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "per_seed": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "feature_dim": 81,
+    "T": 2,
+    "val_per_seed": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "train_per_seed": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "train_loss_init_per_seed": [
+     0.5613979850690995,
+     0.8763529736577224,
+     0.7260704339912745,
+     0.7433470766401454,
+     0.668171356269926
+    ],
+    "train_loss_final_per_seed": [
+     2.329611251325553e-12,
+     1.700513467360561e-12,
+     3.4422162089158636e-12,
+     2.0884607174462094e-12,
+     3.3835611079550307e-12
+    ],
+    "grad_norm_final_per_seed": [
+     4.144474947633871e-12,
+     7.2020007113197985e-12,
+     3.0130075425423497e-12,
+     4.087130517997664e-12,
+     3.941968530846188e-12
+    ],
+    "conditioning_descriptors_per_seed": [
+     {
+      "by_q": {
+       "q1": {
+        "acc": 1.0,
+        "n": 150
+       },
+       "q2": {
+        "acc": 1.0,
+        "n": 150
+       }
+      },
+      "by_order_pair": {
+       "SVO/SVO": {
+        "acc": 1.0,
+        "n": 76
+       },
+       "SVO/VSO": {
+        "acc": 1.0,
+        "n": 76
+       },
+       "VSO/SVO": {
+        "acc": 1.0,
+        "n": 74
+       },
+       "VSO/VSO": {
+        "acc": 1.0,
+        "n": 74
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 1.0,
+        "n": 150
+       },
+       "q2": {
+        "acc": 1.0,
+        "n": 150
+       }
+      },
+      "by_order_pair": {
+       "SVO/SVO": {
+        "acc": 1.0,
+        "n": 76
+       },
+       "SVO/VSO": {
+        "acc": 1.0,
+        "n": 76
+       },
+       "VSO/SVO": {
+        "acc": 1.0,
+        "n": 74
+       },
+       "VSO/VSO": {
+        "acc": 1.0,
+        "n": 74
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 1.0,
+        "n": 150
+       },
+       "q2": {
+        "acc": 1.0,
+        "n": 150
+       }
+      },
+      "by_order_pair": {
+       "SVO/SVO": {
+        "acc": 1.0,
+        "n": 76
+       },
+       "SVO/VSO": {
+        "acc": 1.0,
+        "n": 76
+       },
+       "VSO/SVO": {
+        "acc": 1.0,
+        "n": 74
+       },
+       "VSO/VSO": {
+        "acc": 1.0,
+        "n": 74
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 1.0,
+        "n": 150
+       },
+       "q2": {
+        "acc": 1.0,
+        "n": 150
+       }
+      },
+      "by_order_pair": {
+       "SVO/SVO": {
+        "acc": 1.0,
+        "n": 76
+       },
+       "SVO/VSO": {
+        "acc": 1.0,
+        "n": 76
+       },
+       "VSO/SVO": {
+        "acc": 1.0,
+        "n": 74
+       },
+       "VSO/VSO": {
+        "acc": 1.0,
+        "n": 74
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 1.0,
+        "n": 150
+       },
+       "q2": {
+        "acc": 1.0,
+        "n": 150
+       }
+      },
+      "by_order_pair": {
+       "SVO/SVO": {
+        "acc": 1.0,
+        "n": 76
+       },
+       "SVO/VSO": {
+        "acc": 1.0,
+        "n": 76
+       },
+       "VSO/SVO": {
+        "acc": 1.0,
+        "n": 74
+       },
+       "VSO/VSO": {
+        "acc": 1.0,
+        "n": 74
+       }
+      }
+     }
+    ]
+   },
+   "R1-M": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "per_seed": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "feature_dim": 9,
+    "T": 1,
+    "val_per_seed": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "train_per_seed": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "train_loss_init_per_seed": [
+     0.581606439082036,
+     0.5215372228334215,
+     0.7039594403125451,
+     0.7609460148672745,
+     0.6335905441227546
+    ],
+    "train_loss_final_per_seed": [
+     1.3460066394605658e-12,
+     1.220316776905903e-12,
+     1.4864019106228167e-12,
+     1.3230981966418253e-12,
+     1.5508755895414697e-12
+    ],
+    "grad_norm_final_per_seed": [
+     1.6300586598674117e-12,
+     1.4683152070724635e-12,
+     1.7942231648913036e-12,
+     1.596173174622607e-12,
+     1.8812540591610816e-12
+    ],
+    "conditioning_descriptors_per_seed": [
+     {
+      "by_q": {
+       "q1": {
+        "acc": 1.0,
+        "n": 300
+       }
+      },
+      "by_order_pair": {
+       "SVO": {
+        "acc": 1.0,
+        "n": 150
+       },
+       "VSO": {
+        "acc": 1.0,
+        "n": 150
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 1.0,
+        "n": 300
+       }
+      },
+      "by_order_pair": {
+       "SVO": {
+        "acc": 1.0,
+        "n": 150
+       },
+       "VSO": {
+        "acc": 1.0,
+        "n": 150
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 1.0,
+        "n": 300
+       }
+      },
+      "by_order_pair": {
+       "SVO": {
+        "acc": 1.0,
+        "n": 150
+       },
+       "VSO": {
+        "acc": 1.0,
+        "n": 150
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 1.0,
+        "n": 300
+       }
+      },
+      "by_order_pair": {
+       "SVO": {
+        "acc": 1.0,
+        "n": 150
+       },
+       "VSO": {
+        "acc": 1.0,
+        "n": 150
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 1.0,
+        "n": 300
+       }
+      },
+      "by_order_pair": {
+       "SVO": {
+        "acc": 1.0,
+        "n": 150
+       },
+       "VSO": {
+        "acc": 1.0,
+        "n": 150
+       }
+      }
+     }
+    ]
+   },
+   "R2-M": {
+    "mean": 1.0,
+    "sd": 0.0,
+    "per_seed": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "feature_dim": 9,
+    "T": 2,
+    "val_per_seed": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "train_per_seed": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "train_loss_init_per_seed": [
+     0.581606439082036,
+     0.5215372228334215,
+     0.7039594403125451,
+     0.7609460148672745,
+     0.6335905441227546
+    ],
+    "train_loss_final_per_seed": [
+     1.3460066394605658e-12,
+     1.220316776905903e-12,
+     1.4864019106228167e-12,
+     1.3230981966418253e-12,
+     1.5508755895414697e-12
+    ],
+    "grad_norm_final_per_seed": [
+     1.6300586598674117e-12,
+     1.4683152070724635e-12,
+     1.7942231648913036e-12,
+     1.596173174622607e-12,
+     1.8812540591610816e-12
+    ],
+    "conditioning_descriptors_per_seed": [
+     {
+      "by_q": {
+       "q1": {
+        "acc": 1.0,
+        "n": 150
+       },
+       "q2": {
+        "acc": 1.0,
+        "n": 150
+       }
+      },
+      "by_order_pair": {
+       "SVO/SVO": {
+        "acc": 1.0,
+        "n": 74
+       },
+       "SVO/VSO": {
+        "acc": 1.0,
+        "n": 80
+       },
+       "VSO/SVO": {
+        "acc": 1.0,
+        "n": 76
+       },
+       "VSO/VSO": {
+        "acc": 1.0,
+        "n": 70
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 1.0,
+        "n": 150
+       },
+       "q2": {
+        "acc": 1.0,
+        "n": 150
+       }
+      },
+      "by_order_pair": {
+       "SVO/SVO": {
+        "acc": 1.0,
+        "n": 74
+       },
+       "SVO/VSO": {
+        "acc": 1.0,
+        "n": 80
+       },
+       "VSO/SVO": {
+        "acc": 1.0,
+        "n": 76
+       },
+       "VSO/VSO": {
+        "acc": 1.0,
+        "n": 70
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 1.0,
+        "n": 150
+       },
+       "q2": {
+        "acc": 1.0,
+        "n": 150
+       }
+      },
+      "by_order_pair": {
+       "SVO/SVO": {
+        "acc": 1.0,
+        "n": 74
+       },
+       "SVO/VSO": {
+        "acc": 1.0,
+        "n": 80
+       },
+       "VSO/SVO": {
+        "acc": 1.0,
+        "n": 76
+       },
+       "VSO/VSO": {
+        "acc": 1.0,
+        "n": 70
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 1.0,
+        "n": 150
+       },
+       "q2": {
+        "acc": 1.0,
+        "n": 150
+       }
+      },
+      "by_order_pair": {
+       "SVO/SVO": {
+        "acc": 1.0,
+        "n": 74
+       },
+       "SVO/VSO": {
+        "acc": 1.0,
+        "n": 80
+       },
+       "VSO/SVO": {
+        "acc": 1.0,
+        "n": 76
+       },
+       "VSO/VSO": {
+        "acc": 1.0,
+        "n": 70
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 1.0,
+        "n": 150
+       },
+       "q2": {
+        "acc": 1.0,
+        "n": 150
+       }
+      },
+      "by_order_pair": {
+       "SVO/SVO": {
+        "acc": 1.0,
+        "n": 74
+       },
+       "SVO/VSO": {
+        "acc": 1.0,
+        "n": 80
+       },
+       "VSO/SVO": {
+        "acc": 1.0,
+        "n": 76
+       },
+       "VSO/VSO": {
+        "acc": 1.0,
+        "n": 70
+       }
+      }
+     }
+    ]
+   }
+  },
+  "floors": {
+   "R1-A": {
+    "mean": 0.4826666666666667,
+    "sd": 0.04044200236827496,
+    "per_seed": [
+     0.48,
+     0.5066666666666667,
+     0.5066666666666667,
+     0.5066666666666667,
+     0.41333333333333333
+    ],
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "feature_dim": 9,
+    "T": 1,
+    "val_per_seed": [
+     0.5303030303030303,
+     0.5606060606060606,
+     0.6060606060606061,
+     0.5454545454545454,
+     0.5303030303030303
+    ],
+    "train_per_seed": [
+     0.5151515151515151,
+     0.5227272727272727,
+     0.4810606060606061,
+     0.5113636363636364,
+     0.5378787878787878
+    ],
+    "train_loss_init_per_seed": [
+     0.8150625016620996,
+     0.6998061624734405,
+     0.7602131300720558,
+     0.7596880392945653,
+     0.6987112372238825
+    ],
+    "train_loss_final_per_seed": [
+     0.6868351647106823,
+     0.6923967620603074,
+     0.6927634260804708,
+     0.6904288924121949,
+     0.6835912908892936
+    ],
+    "grad_norm_final_per_seed": [
+     2.79912722052041e-07,
+     7.56389019078763e-07,
+     7.810875470847359e-07,
+     1.1605197300022033e-07,
+     9.415002129364875e-07
+    ],
+    "conditioning_descriptors_per_seed": [
+     {
+      "by_q": {
+       "q1": {
+        "acc": 0.48,
+        "n": 300
+       }
+      },
+      "by_order_pair": {
+       "SVO": {
+        "acc": 0.5266666666666666,
+        "n": 150
+       },
+       "VSO": {
+        "acc": 0.43333333333333335,
+        "n": 150
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 0.5066666666666667,
+        "n": 300
+       }
+      },
+      "by_order_pair": {
+       "SVO": {
+        "acc": 0.5066666666666667,
+        "n": 150
+       },
+       "VSO": {
+        "acc": 0.5066666666666667,
+        "n": 150
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 0.5066666666666667,
+        "n": 300
+       }
+      },
+      "by_order_pair": {
+       "SVO": {
+        "acc": 0.5066666666666667,
+        "n": 150
+       },
+       "VSO": {
+        "acc": 0.5066666666666667,
+        "n": 150
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 0.5066666666666667,
+        "n": 300
+       }
+      },
+      "by_order_pair": {
+       "SVO": {
+        "acc": 0.5066666666666667,
+        "n": 150
+       },
+       "VSO": {
+        "acc": 0.5066666666666667,
+        "n": 150
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 0.41333333333333333,
+        "n": 300
+       }
+      },
+      "by_order_pair": {
+       "SVO": {
+        "acc": 0.37333333333333335,
+        "n": 150
+       },
+       "VSO": {
+        "acc": 0.4533333333333333,
+        "n": 150
+       }
+      }
+     }
+    ]
+   },
+   "R1-W": {
+    "mean": 0.49066666666666664,
+    "sd": 0.0292878435153184,
+    "per_seed": [
+     0.4533333333333333,
+     0.5333333333333333,
+     0.48,
+     0.4866666666666667,
+     0.5
+    ],
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "feature_dim": 81,
+    "T": 1,
+    "val_per_seed": [
+     0.5909090909090909,
+     0.5303030303030303,
+     0.5606060606060606,
+     0.5606060606060606,
+     0.5151515151515151
+    ],
+    "train_per_seed": [
+     0.6401515151515151,
+     0.6401515151515151,
+     0.5681818181818182,
+     0.6515151515151515,
+     0.6098484848484849
+    ],
+    "train_loss_init_per_seed": [
+     0.7855744883577518,
+     0.840023751952084,
+     0.8681790231236362,
+     0.806685966405396,
+     0.8091333102830669
+    ],
+    "train_loss_final_per_seed": [
+     0.630452892059069,
+     0.5989145687694981,
+     0.6490433744441313,
+     0.6373991128368115,
+     0.6505351473712807
+    ],
+    "grad_norm_final_per_seed": [
+     1.4688499813132976e-07,
+     1.166182946271335e-06,
+     9.440751973753288e-07,
+     2.3894937703049056e-07,
+     5.033382931448119e-07
+    ],
+    "conditioning_descriptors_per_seed": [
+     {
+      "by_q": {
+       "q1": {
+        "acc": 0.4533333333333333,
+        "n": 300
+       }
+      },
+      "by_order_pair": {
+       "SVO": {
+        "acc": 0.5066666666666667,
+        "n": 150
+       },
+       "VSO": {
+        "acc": 0.4,
+        "n": 150
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 0.5333333333333333,
+        "n": 300
+       }
+      },
+      "by_order_pair": {
+       "SVO": {
+        "acc": 0.5066666666666667,
+        "n": 150
+       },
+       "VSO": {
+        "acc": 0.56,
+        "n": 150
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 0.48,
+        "n": 300
+       }
+      },
+      "by_order_pair": {
+       "SVO": {
+        "acc": 0.5066666666666667,
+        "n": 150
+       },
+       "VSO": {
+        "acc": 0.4533333333333333,
+        "n": 150
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 0.4866666666666667,
+        "n": 300
+       }
+      },
+      "by_order_pair": {
+       "SVO": {
+        "acc": 0.43333333333333335,
+        "n": 150
+       },
+       "VSO": {
+        "acc": 0.54,
+        "n": 150
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 0.5,
+        "n": 300
+       }
+      },
+      "by_order_pair": {
+       "SVO": {
+        "acc": 0.5,
+        "n": 150
+       },
+       "VSO": {
+        "acc": 0.5,
+        "n": 150
+       }
+      }
+     }
+    ]
+   },
+   "R2-A": {
+    "mean": 0.5066666666666666,
+    "sd": 0.030184617127124724,
+    "per_seed": [
+     0.48,
+     0.5533333333333333,
+     0.52,
+     0.49333333333333335,
+     0.4866666666666667
+    ],
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "feature_dim": 9,
+    "T": 2,
+    "val_per_seed": [
+     0.6060606060606061,
+     0.6363636363636364,
+     0.5151515151515151,
+     0.5606060606060606,
+     0.5757575757575758
+    ],
+    "train_per_seed": [
+     0.5340909090909091,
+     0.5416666666666666,
+     0.5265151515151515,
+     0.5492424242424242,
+     0.5303030303030303
+    ],
+    "train_loss_init_per_seed": [
+     0.799235306292292,
+     0.7054159702274138,
+     0.7622837225669752,
+     0.7709068095800118,
+     0.6973968954119892
+    ],
+    "train_loss_final_per_seed": [
+     0.6906379262811528,
+     0.6875787151904226,
+     0.6913895565633353,
+     0.678418302247164,
+     0.6909376245940232
+    ],
+    "grad_norm_final_per_seed": [
+     3.9420447139609536e-07,
+     7.873177428622339e-07,
+     5.200264829414093e-08,
+     2.535118979038229e-07,
+     2.839005386952192e-08
+    ],
+    "conditioning_descriptors_per_seed": [
+     {
+      "by_q": {
+       "q1": {
+        "acc": 0.5666666666666667,
+        "n": 150
+       },
+       "q2": {
+        "acc": 0.3933333333333333,
+        "n": 150
+       }
+      },
+      "by_order_pair": {
+       "SVO/SVO": {
+        "acc": 0.42105263157894735,
+        "n": 76
+       },
+       "SVO/VSO": {
+        "acc": 0.39473684210526316,
+        "n": 76
+       },
+       "VSO/SVO": {
+        "acc": 0.527027027027027,
+        "n": 74
+       },
+       "VSO/VSO": {
+        "acc": 0.581081081081081,
+        "n": 74
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 0.58,
+        "n": 150
+       },
+       "q2": {
+        "acc": 0.5266666666666666,
+        "n": 150
+       }
+      },
+      "by_order_pair": {
+       "SVO/SVO": {
+        "acc": 0.5921052631578947,
+        "n": 76
+       },
+       "SVO/VSO": {
+        "acc": 0.5131578947368421,
+        "n": 76
+       },
+       "VSO/SVO": {
+        "acc": 0.5675675675675675,
+        "n": 74
+       },
+       "VSO/VSO": {
+        "acc": 0.5405405405405406,
+        "n": 74
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 0.54,
+        "n": 150
+       },
+       "q2": {
+        "acc": 0.5,
+        "n": 150
+       }
+      },
+      "by_order_pair": {
+       "SVO/SVO": {
+        "acc": 0.40789473684210525,
+        "n": 76
+       },
+       "SVO/VSO": {
+        "acc": 0.6052631578947368,
+        "n": 76
+       },
+       "VSO/SVO": {
+        "acc": 0.5675675675675675,
+        "n": 74
+       },
+       "VSO/VSO": {
+        "acc": 0.5,
+        "n": 74
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 0.46,
+        "n": 150
+       },
+       "q2": {
+        "acc": 0.5266666666666666,
+        "n": 150
+       }
+      },
+      "by_order_pair": {
+       "SVO/SVO": {
+        "acc": 0.4605263157894737,
+        "n": 76
+       },
+       "SVO/VSO": {
+        "acc": 0.5394736842105263,
+        "n": 76
+       },
+       "VSO/SVO": {
+        "acc": 0.5405405405405406,
+        "n": 74
+       },
+       "VSO/VSO": {
+        "acc": 0.43243243243243246,
+        "n": 74
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 0.48,
+        "n": 150
+       },
+       "q2": {
+        "acc": 0.49333333333333335,
+        "n": 150
+       }
+      },
+      "by_order_pair": {
+       "SVO/SVO": {
+        "acc": 0.40789473684210525,
+        "n": 76
+       },
+       "SVO/VSO": {
+        "acc": 0.5657894736842105,
+        "n": 76
+       },
+       "VSO/SVO": {
+        "acc": 0.4189189189189189,
+        "n": 74
+       },
+       "VSO/VSO": {
+        "acc": 0.5540540540540541,
+        "n": 74
+       }
+      }
+     }
+    ]
+   },
+   "R2-W": {
+    "mean": 0.49866666666666665,
+    "sd": 0.02467567403109565,
+    "per_seed": [
+     0.5066666666666667,
+     0.49333333333333335,
+     0.5066666666666667,
+     0.5266666666666666,
+     0.46
+    ],
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "feature_dim": 81,
+    "T": 2,
+    "val_per_seed": [
+     0.5151515151515151,
+     0.6363636363636364,
+     0.5454545454545454,
+     0.4696969696969697,
+     0.5606060606060606
+    ],
+    "train_per_seed": [
+     0.5681818181818182,
+     0.6174242424242424,
+     0.6022727272727273,
+     0.6174242424242424,
+     0.6060606060606061
+    ],
+    "train_loss_init_per_seed": [
+     0.8218102339731794,
+     0.8911646442890109,
+     0.8460220873549504,
+     0.7985486185680939,
+     0.7786451786516533
+    ],
+    "train_loss_final_per_seed": [
+     0.6453705220107329,
+     0.6367450216941247,
+     0.6527973139565387,
+     0.5771398544390567,
+     0.6430946089195674
+    ],
+    "grad_norm_final_per_seed": [
+     4.4521989051973405e-07,
+     2.091562600084775e-07,
+     2.0453242603290395e-07,
+     5.688741869007985e-07,
+     7.637240714860509e-07
+    ],
+    "conditioning_descriptors_per_seed": [
+     {
+      "by_q": {
+       "q1": {
+        "acc": 0.5333333333333333,
+        "n": 150
+       },
+       "q2": {
+        "acc": 0.48,
+        "n": 150
+       }
+      },
+      "by_order_pair": {
+       "SVO/SVO": {
+        "acc": 0.5263157894736842,
+        "n": 76
+       },
+       "SVO/VSO": {
+        "acc": 0.4605263157894737,
+        "n": 76
+       },
+       "VSO/SVO": {
+        "acc": 0.5405405405405406,
+        "n": 74
+       },
+       "VSO/VSO": {
+        "acc": 0.5,
+        "n": 74
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 0.5066666666666667,
+        "n": 150
+       },
+       "q2": {
+        "acc": 0.48,
+        "n": 150
+       }
+      },
+      "by_order_pair": {
+       "SVO/SVO": {
+        "acc": 0.5,
+        "n": 76
+       },
+       "SVO/VSO": {
+        "acc": 0.5263157894736842,
+        "n": 76
+       },
+       "VSO/SVO": {
+        "acc": 0.4594594594594595,
+        "n": 74
+       },
+       "VSO/VSO": {
+        "acc": 0.4864864864864865,
+        "n": 74
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 0.52,
+        "n": 150
+       },
+       "q2": {
+        "acc": 0.49333333333333335,
+        "n": 150
+       }
+      },
+      "by_order_pair": {
+       "SVO/SVO": {
+        "acc": 0.47368421052631576,
+        "n": 76
+       },
+       "SVO/VSO": {
+        "acc": 0.5263157894736842,
+        "n": 76
+       },
+       "VSO/SVO": {
+        "acc": 0.5135135135135135,
+        "n": 74
+       },
+       "VSO/VSO": {
+        "acc": 0.5135135135135135,
+        "n": 74
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 0.5466666666666666,
+        "n": 150
+       },
+       "q2": {
+        "acc": 0.5066666666666667,
+        "n": 150
+       }
+      },
+      "by_order_pair": {
+       "SVO/SVO": {
+        "acc": 0.4473684210526316,
+        "n": 76
+       },
+       "SVO/VSO": {
+        "acc": 0.5789473684210527,
+        "n": 76
+       },
+       "VSO/SVO": {
+        "acc": 0.5135135135135135,
+        "n": 74
+       },
+       "VSO/VSO": {
+        "acc": 0.5675675675675675,
+        "n": 74
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 0.44,
+        "n": 150
+       },
+       "q2": {
+        "acc": 0.48,
+        "n": 150
+       }
+      },
+      "by_order_pair": {
+       "SVO/SVO": {
+        "acc": 0.4473684210526316,
+        "n": 76
+       },
+       "SVO/VSO": {
+        "acc": 0.4605263157894737,
+        "n": 76
+       },
+       "VSO/SVO": {
+        "acc": 0.5135135135135135,
+        "n": 74
+       },
+       "VSO/VSO": {
+        "acc": 0.4189189189189189,
+        "n": 74
+       }
+      }
+     }
+    ]
+   },
+   "R1-M": {
+    "mean": 0.49333333333333335,
+    "sd": 0.02624669291337269,
+    "per_seed": [
+     0.5066666666666667,
+     0.4666666666666667,
+     0.5266666666666666,
+     0.5,
+     0.4666666666666667
+    ],
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "feature_dim": 9,
+    "T": 1,
+    "val_per_seed": [
+     0.5606060606060606,
+     0.5454545454545454,
+     0.3939393939393939,
+     0.5151515151515151,
+     0.45454545454545453
+    ],
+    "train_per_seed": [
+     0.5265151515151515,
+     0.5454545454545454,
+     0.5303030303030303,
+     0.5189393939393939,
+     0.5416666666666666
+    ],
+    "train_loss_init_per_seed": [
+     0.7586370318534811,
+     0.726450088216132,
+     0.7729873370435452,
+     0.7287112837639083,
+     0.7026901938144305
+    ],
+    "train_loss_final_per_seed": [
+     0.6909936372922053,
+     0.6856108973070043,
+     0.6863961489408795,
+     0.6904662094936184,
+     0.6907806389566777
+    ],
+    "grad_norm_final_per_seed": [
+     4.877746625413348e-08,
+     2.73377208198312e-08,
+     9.98241084649565e-08,
+     4.672658330800527e-08,
+     5.286949957629038e-08
+    ],
+    "conditioning_descriptors_per_seed": [
+     {
+      "by_q": {
+       "q1": {
+        "acc": 0.5066666666666667,
+        "n": 300
+       }
+      },
+      "by_order_pair": {
+       "SVO": {
+        "acc": 0.5333333333333333,
+        "n": 150
+       },
+       "VSO": {
+        "acc": 0.48,
+        "n": 150
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 0.4666666666666667,
+        "n": 300
+       }
+      },
+      "by_order_pair": {
+       "SVO": {
+        "acc": 0.5,
+        "n": 150
+       },
+       "VSO": {
+        "acc": 0.43333333333333335,
+        "n": 150
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 0.5266666666666666,
+        "n": 300
+       }
+      },
+      "by_order_pair": {
+       "SVO": {
+        "acc": 0.54,
+        "n": 150
+       },
+       "VSO": {
+        "acc": 0.5133333333333333,
+        "n": 150
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 0.5,
+        "n": 300
+       }
+      },
+      "by_order_pair": {
+       "SVO": {
+        "acc": 0.5,
+        "n": 150
+       },
+       "VSO": {
+        "acc": 0.5,
+        "n": 150
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 0.4666666666666667,
+        "n": 300
+       }
+      },
+      "by_order_pair": {
+       "SVO": {
+        "acc": 0.52,
+        "n": 150
+       },
+       "VSO": {
+        "acc": 0.41333333333333333,
+        "n": 150
+       }
+      }
+     }
+    ]
+   },
+   "R2-M": {
+    "mean": 0.5,
+    "sd": 0.022110831935702676,
+    "per_seed": [
+     0.5066666666666667,
+     0.48,
+     0.48,
+     0.5,
+     0.5333333333333333
+    ],
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "feature_dim": 9,
+    "T": 2,
+    "val_per_seed": [
+     0.5757575757575758,
+     0.5151515151515151,
+     0.5,
+     0.5303030303030303,
+     0.5909090909090909
+    ],
+    "train_per_seed": [
+     0.5037878787878788,
+     0.5113636363636364,
+     0.5,
+     0.4962121212121212,
+     0.5037878787878788
+    ],
+    "train_loss_init_per_seed": [
+     0.7510641632109085,
+     0.7151421907910205,
+     0.7754443690859067,
+     0.7253311126323745,
+     0.7023103216674431
+    ],
+    "train_loss_final_per_seed": [
+     0.6912260930614278,
+     0.6911982499328301,
+     0.6919891408528069,
+     0.6904056485378554,
+     0.6921229587971066
+    ],
+    "grad_norm_final_per_seed": [
+     8.509629106309537e-08,
+     9.162071080484641e-08,
+     9.591390102728843e-08,
+     1.702412460426019e-07,
+     5.600903654402847e-08
+    ],
+    "conditioning_descriptors_per_seed": [
+     {
+      "by_q": {
+       "q1": {
+        "acc": 0.5466666666666666,
+        "n": 150
+       },
+       "q2": {
+        "acc": 0.4666666666666667,
+        "n": 150
+       }
+      },
+      "by_order_pair": {
+       "SVO/SVO": {
+        "acc": 0.6216216216216216,
+        "n": 74
+       },
+       "SVO/VSO": {
+        "acc": 0.5,
+        "n": 80
+       },
+       "VSO/SVO": {
+        "acc": 0.47368421052631576,
+        "n": 76
+       },
+       "VSO/VSO": {
+        "acc": 0.42857142857142855,
+        "n": 70
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 0.4533333333333333,
+        "n": 150
+       },
+       "q2": {
+        "acc": 0.5066666666666667,
+        "n": 150
+       }
+      },
+      "by_order_pair": {
+       "SVO/SVO": {
+        "acc": 0.6351351351351351,
+        "n": 74
+       },
+       "SVO/VSO": {
+        "acc": 0.4375,
+        "n": 80
+       },
+       "VSO/SVO": {
+        "acc": 0.40789473684210525,
+        "n": 76
+       },
+       "VSO/VSO": {
+        "acc": 0.44285714285714284,
+        "n": 70
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 0.5066666666666667,
+        "n": 150
+       },
+       "q2": {
+        "acc": 0.4533333333333333,
+        "n": 150
+       }
+      },
+      "by_order_pair": {
+       "SVO/SVO": {
+        "acc": 0.5135135135135135,
+        "n": 74
+       },
+       "SVO/VSO": {
+        "acc": 0.45,
+        "n": 80
+       },
+       "VSO/SVO": {
+        "acc": 0.5,
+        "n": 76
+       },
+       "VSO/VSO": {
+        "acc": 0.45714285714285713,
+        "n": 70
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 0.5333333333333333,
+        "n": 150
+       },
+       "q2": {
+        "acc": 0.4666666666666667,
+        "n": 150
+       }
+      },
+      "by_order_pair": {
+       "SVO/SVO": {
+        "acc": 0.527027027027027,
+        "n": 74
+       },
+       "SVO/VSO": {
+        "acc": 0.425,
+        "n": 80
+       },
+       "VSO/SVO": {
+        "acc": 0.5131578947368421,
+        "n": 76
+       },
+       "VSO/VSO": {
+        "acc": 0.5428571428571428,
+        "n": 70
+       }
+      }
+     },
+     {
+      "by_q": {
+       "q1": {
+        "acc": 0.5,
+        "n": 150
+       },
+       "q2": {
+        "acc": 0.5666666666666667,
+        "n": 150
+       }
+      },
+      "by_order_pair": {
+       "SVO/SVO": {
+        "acc": 0.5135135135135135,
+        "n": 74
+       },
+       "SVO/VSO": {
+        "acc": 0.5125,
+        "n": 80
+       },
+       "VSO/SVO": {
+        "acc": 0.5394736842105263,
+        "n": 76
+       },
+       "VSO/VSO": {
+        "acc": 0.5714285714285714,
+        "n": 70
+       }
+      }
+     }
+    ]
+   }
+  },
+  "floor_clearance": {
+   "R1-A": {
+    "arm_mean": 0.9200000000000002,
+    "floor_mean": 0.4826666666666667,
+    "delta_over_floor": 0.43733333333333346,
+    "sd_units_over_floor_using_floor_sd": 10.813839763690904,
+    "readings": {
+     "floor_sd": {
+      "sd": 0.04044200236827496,
+      "bar": 0.5635506714032166,
+      "clears": true
+     },
+     "arm_sd": {
+      "sd": 1.2412670766236366e-16,
+      "bar": 0.4826666666666669,
+      "clears": true
+     },
+     "pooled_sd": {
+      "sd": 0.028596814119369637,
+      "bar": 0.539860294905406,
+      "clears": true
+     }
+    },
+    "primary_reading": "floor_sd",
+    "clears_floor": true,
+    "clears_under_all_readings": true,
+    "clears_under_any_reading": true,
+    "readings_agree": true
+   },
+   "R1-W": {
+    "arm_mean": 1.0,
+    "floor_mean": 0.49066666666666664,
+    "delta_over_floor": 0.5093333333333334,
+    "sd_units_over_floor_using_floor_sd": 17.390605527748644,
+    "readings": {
+     "floor_sd": {
+      "sd": 0.0292878435153184,
+      "bar": 0.5492423536973035,
+      "clears": true
+     },
+     "arm_sd": {
+      "sd": 0.0,
+      "bar": 0.49066666666666664,
+      "clears": true
+     },
+     "pooled_sd": {
+      "sd": 0.020709632756012092,
+      "bar": 0.5320859321786908,
+      "clears": true
+     }
+    },
+    "primary_reading": "floor_sd",
+    "clears_floor": true,
+    "clears_under_all_readings": true,
+    "clears_under_any_reading": true,
+    "readings_agree": true
+   },
+   "R2-A": {
+    "arm_mean": 0.9200000000000002,
+    "floor_mean": 0.5066666666666666,
+    "delta_over_floor": 0.41333333333333355,
+    "sd_units_over_floor_using_floor_sd": 13.693509233280977,
+    "readings": {
+     "floor_sd": {
+      "sd": 0.030184617127124724,
+      "bar": 0.567035900920916,
+      "clears": true
+     },
+     "arm_sd": {
+      "sd": 1.2412670766236366e-16,
+      "bar": 0.5066666666666668,
+      "clears": true
+     },
+     "pooled_sd": {
+      "sd": 0.021343747458109498,
+      "bar": 0.5493541615828856,
+      "clears": true
+     }
+    },
+    "primary_reading": "floor_sd",
+    "clears_floor": true,
+    "clears_under_all_readings": true,
+    "clears_under_any_reading": true,
+    "readings_agree": true
+   },
+   "R2-W": {
+    "arm_mean": 1.0,
+    "floor_mean": 0.49866666666666665,
+    "delta_over_floor": 0.5013333333333334,
+    "sd_units_over_floor_using_floor_sd": 20.316905333632064,
+    "readings": {
+     "floor_sd": {
+      "sd": 0.02467567403109565,
+      "bar": 0.5480180147288579,
+      "clears": true
+     },
+     "arm_sd": {
+      "sd": 0.0,
+      "bar": 0.49866666666666665,
+      "clears": true
+     },
+     "pooled_sd": {
+      "sd": 0.017448336437736526,
+      "bar": 0.5335633395421397,
+      "clears": true
+     }
+    },
+    "primary_reading": "floor_sd",
+    "clears_floor": true,
+    "clears_under_all_readings": true,
+    "clears_under_any_reading": true,
+    "readings_agree": true
+   },
+   "R1-M": {
+    "arm_mean": 1.0,
+    "floor_mean": 0.49333333333333335,
+    "delta_over_floor": 0.5066666666666666,
+    "sd_units_over_floor_using_floor_sd": 19.304019304028966,
+    "readings": {
+     "floor_sd": {
+      "sd": 0.02624669291337269,
+      "bar": 0.5458267191600787,
+      "clears": true
+     },
+     "arm_sd": {
+      "sd": 0.0,
+      "bar": 0.49333333333333335,
+      "clears": true
+     },
+     "pooled_sd": {
+      "sd": 0.01855921454276673,
+      "bar": 0.5304517624188668,
+      "clears": true
+     }
+    },
+    "primary_reading": "floor_sd",
+    "clears_floor": true,
+    "clears_under_all_readings": true,
+    "clears_under_any_reading": true,
+    "readings_agree": true
+   },
+   "R2-M": {
+    "arm_mean": 1.0,
+    "floor_mean": 0.5,
+    "delta_over_floor": 0.5,
+    "sd_units_over_floor_using_floor_sd": 22.61335084333226,
+    "readings": {
+     "floor_sd": {
+      "sd": 0.022110831935702676,
+      "bar": 0.5442216638714054,
+      "clears": true
+     },
+     "arm_sd": {
+      "sd": 0.0,
+      "bar": 0.5,
+      "clears": true
+     },
+     "pooled_sd": {
+      "sd": 0.015634719199411437,
+      "bar": 0.5312694383988229,
+      "clears": true
+     }
+    },
+    "primary_reading": "floor_sd",
+    "clears_floor": true,
+    "clears_under_all_readings": true,
+    "clears_under_any_reading": true,
+    "readings_agree": true
+   }
+  },
+  "comparator_minus_circuit": {
+   "A0": 0.0013333333333335196,
+   "R1-A": -0.002666666666666484,
+   "R1-W": 0.018000000000000016,
+   "R2-A": 0.0013333333333335196,
+   "R2-W": 0.2706666666666666,
+   "R1-M": 0.0033333333333332993,
+   "R2-M": 0.00666666666666671
+  },
+  "arbiter_row_doc55_SS8_2": "SS8.2 row 1 -- R2-W clears its floor",
+  "arbiter_reading": "R2-W CLEARS ITS MATCHED FLOOR (0.7293 vs 0.5020, +0.2273, 8.0 floor-SD units). doc 55 SS8.2 row 1: composition converts at the circuit level and the reading is SS9.2's, not SS8.2's. The comparator's role here is the GUARD only -- it matches or exceeds R2-W (1.0000 vs 0.7293, +0.2707) -- so no exp69 number may be read as a quantum result (doc 52 SS1, doc 55 SS11).",
+  "function_class_qualifier": "doc 55 SS8.4: 'identical features' makes the comparator a RESTRICTION of the circuit's conditional function class -- the circuit carries one 9-dim (or 81-dim) form PER CONDITIONING GROUP, the comparator carries one TOTAL. doc 55 SS5 counts 12 groups at T = 1 and 72 at T = 2, so at T = 2 the comparator is a STRICTLY STRONGER restriction than it was in exp68 and a comparator loss on a T = 2 cell is even less automatically a circuit win. This qualifier travels with every number in this file."
+ },
+ "bounds_context_only_doc55_SS12": {
+  "A0": {
+   "family": "R-A",
+   "bound": 0.9625,
+   "measured": 0.9186666666666666,
+   "over_bound_by": -0.04383333333333339
+  },
+  "R1-A": {
+   "family": "R-A",
+   "bound": 0.9625,
+   "measured": 0.9226666666666666,
+   "over_bound_by": -0.03983333333333339
+  },
+  "R1-W": {
+   "family": "R-W",
+   "bound": 1.0,
+   "measured": 0.982,
+   "over_bound_by": -0.018000000000000016
+  },
+  "R2-A": {
+   "family": "R-A",
+   "bound": 0.9625,
+   "measured": 0.9186666666666666,
+   "over_bound_by": -0.04383333333333339
+  },
+  "R2-W": {
+   "family": "R-W",
+   "bound": 1.0,
+   "measured": 0.7293333333333334,
+   "over_bound_by": -0.2706666666666666
+  },
+  "R1-M": {
+   "family": "R-M",
+   "bound": 1.0,
+   "measured": 0.9966666666666667,
+   "over_bound_by": -0.0033333333333332993
+  },
+  "R2-M": {
+   "family": "R-M",
+   "bound": 1.0,
+   "measured": 0.9933333333333333,
+   "over_bound_by": -0.00666666666666671
+  }
+ },
+ "composition_cost_doc55_SS18_2": {
+  "cc_A": {
+   "pair": "R1-A - R2-A",
+   "mean": 0.0040000000000000036,
+   "per_seed": [
+    -0.013333333333333308,
+    -0.010000000000000009,
+    0.053333333333333344,
+    0.00666666666666671,
+    -0.01666666666666672
+   ],
+   "sd": 0.02900191564554162
+  },
+  "cc_W": {
+   "pair": "R1-W - R2-W",
+   "mean": 0.2526666666666666,
+   "per_seed": [
+    0.2633333333333333,
+    0.21999999999999997,
+    0.24,
+    0.25,
+    0.29000000000000004
+   ],
+   "sd": 0.026183115848873995
+  },
+  "cc_M": {
+   "pair": "R1-M - R2-M",
+   "mean": 0.0033333333333334103,
+   "per_seed": [
+    0.00666666666666671,
+    0.0,
+    0.0,
+    0.006666666666666599,
+    0.0033333333333332993
+   ],
+   "sd": 0.003333333333333327
+  },
+  "interaction_dcc": {
+   "definition": "dcc = cc_A - cc_W",
+   "mean": -0.2486666666666666,
+   "per_seed": [
+    -0.2766666666666666,
+    -0.22999999999999998,
+    -0.18666666666666665,
+    -0.2433333333333333,
+    -0.30666666666666675
+   ]
+  },
+  "status": "DESCRIPTIVE ONLY -- NEITHER IS A CRITERION",
+  "no_promotion_clause": "doc 55 SS18.2, stated before results existed: neither cc nor dcc may be PROMOTED ONTO A CRITERION after results exist. At 5 seeds both are knife-edge magnets, which is why the per-seed values are printed alongside every mean. doc 55 SS18.2 registers NO CONFIDENT DIRECTION for dcc: the precedents cut both ways (richer parameterisation trained worse twice -- exp62 S2 < S1, exp67 R8 < R2 at M2 -- yet the register converted at T = 1 in exp68), so both branches are readable and neither is a surprise.",
+  "population_note": "doc 55 SS6.10(b) refuses any T = 1 vs T = 2 accuracy DELTA as a CRITERION, because R1 and R2 are different tasks with different label distributions and differencing them is doc 47 SS18.5's population mismatch. SS18.2 registers the same difference as a DESCRIPTIVE quantity, and the distinction is exactly that: reported, never read."
+ },
+ "predictions_vs_measured_doc55_SS19_2": {
+  "grades_kept_apart": "doc 55 SS19.2. GRADE 1 is the BOUND, computed by the committed instrument before datagen and frozen in exp69_predictions.json. GRADE 2 is the CONVERSION POINT PREDICTION, bound x the trained-population single-RY conversion median (0.9969, n = 13 rows in ONE task family), with a +/- 0.06 interval, AND THE EXTRAPOLATION IS ITSELF UNDER TEST -- exp69 is a NEW task family, so a miss refutes the EXTRAPOLATION and not the bound. GRADE 3 was computed before freezing and recorded as UNTESTABLE this run: no exp69 arm has a below-null category.",
+  "grade3": {
+   "flag": "under-conversion predicted for a BELOW-NULL category (the F1 observation, made prospective)",
+   "percentile_vs_size_matched_null": {
+    "R-A": 89.0,
+    "R-W": 85.5,
+    "R-M": 100.0
+   },
+   "below_null": {
+    "R-A": false,
+    "R-W": false,
+    "R-M": false
+   },
+   "any_arm_below_null": false,
+   "testable_this_run": false,
+   "verdict": "UNTESTABLE THIS RUN. doc 55 SS19.2 computed this before freezing and recorded it rather than dropping it: no exp69 arm has a below-null category (R-A 89.0th percentile, R-W 85.5th, R-M 100.0th), so the grade-3 flag has nothing to fire on. It is recorded as untestable, NOT as confirmed."
+  },
+  "table": {
+   "A0": {
+    "family": "R-A",
+    "grade1_bound": 0.9625,
+    "grade1_method": "CONSTRUCTIVE LOWER BOUND",
+    "grade2_point": 0.9594921875,
+    "grade2_interval": [
+     0.8994921874999999,
+     1.0194921875
+    ],
+    "measured": 0.9186666666666666,
+    "measured_minus_point": -0.04082552083333335,
+    "inside_grade2_interval": true,
+    "conversion_ratio_measured_over_bound": 0.9544588744588745,
+    "over_bound_by": -0.04383333333333339,
+    "bug_hunt_row_fires": false
+   },
+   "R1-A": {
+    "family": "R-A",
+    "grade1_bound": 0.9625,
+    "grade1_method": "CONSTRUCTIVE LOWER BOUND",
+    "grade2_point": 0.9594921875,
+    "grade2_interval": [
+     0.8994921874999999,
+     1.0194921875
+    ],
+    "measured": 0.9226666666666666,
+    "measured_minus_point": -0.03682552083333335,
+    "inside_grade2_interval": true,
+    "conversion_ratio_measured_over_bound": 0.9586147186147186,
+    "over_bound_by": -0.03983333333333339,
+    "bug_hunt_row_fires": false
+   },
+   "R1-W": {
+    "family": "R-W",
+    "grade1_bound": 1.0,
+    "grade1_method": "CONSTRUCTIVE LOWER BOUND",
+    "grade2_point": 0.996875,
+    "grade2_interval": [
+     0.9368749999999999,
+     1.056875
+    ],
+    "measured": 0.982,
+    "measured_minus_point": -0.014874999999999972,
+    "inside_grade2_interval": true,
+    "conversion_ratio_measured_over_bound": 0.982,
+    "over_bound_by": -0.018000000000000016,
+    "bug_hunt_row_fires": false
+   },
+   "R2-A": {
+    "family": "R-A",
+    "grade1_bound": 0.9625,
+    "grade1_method": "CONSTRUCTIVE LOWER BOUND",
+    "grade2_point": 0.9594921875,
+    "grade2_interval": [
+     0.8994921874999999,
+     1.0194921875
+    ],
+    "measured": 0.9186666666666666,
+    "measured_minus_point": -0.04082552083333335,
+    "inside_grade2_interval": true,
+    "conversion_ratio_measured_over_bound": 0.9544588744588745,
+    "over_bound_by": -0.04383333333333339,
+    "bug_hunt_row_fires": false
+   },
+   "R2-W": {
+    "family": "R-W",
+    "grade1_bound": 1.0,
+    "grade1_method": "CONSTRUCTIVE LOWER BOUND",
+    "grade2_point": 0.996875,
+    "grade2_interval": [
+     0.9368749999999999,
+     1.056875
+    ],
+    "measured": 0.7293333333333334,
+    "measured_minus_point": -0.26754166666666657,
+    "inside_grade2_interval": false,
+    "conversion_ratio_measured_over_bound": 0.7293333333333334,
+    "over_bound_by": -0.2706666666666666,
+    "bug_hunt_row_fires": false
+   },
+   "R1-M": {
+    "family": "R-M",
+    "grade1_bound": 1.0,
+    "grade1_method": "CONSTRUCTIVE LOWER BOUND",
+    "grade2_point": 0.996875,
+    "grade2_interval": [
+     0.9368749999999999,
+     1.056875
+    ],
+    "measured": 0.9966666666666667,
+    "measured_minus_point": -0.00020833333333325488,
+    "inside_grade2_interval": true,
+    "conversion_ratio_measured_over_bound": 0.9966666666666667,
+    "over_bound_by": -0.0033333333333332993,
+    "bug_hunt_row_fires": false
+   },
+   "R2-M": {
+    "family": "R-M",
+    "grade1_bound": 1.0,
+    "grade1_method": "CONSTRUCTIVE LOWER BOUND",
+    "grade2_point": 0.996875,
+    "grade2_interval": [
+     0.9368749999999999,
+     1.056875
+    ],
+    "measured": 0.9933333333333333,
+    "measured_minus_point": -0.003541666666666665,
+    "inside_grade2_interval": true,
+    "conversion_ratio_measured_over_bound": 0.9933333333333333,
+    "over_bound_by": -0.00666666666666671,
+    "bug_hunt_row_fires": false
+   }
+  },
+  "n_arms_inside_grade2_interval": 6,
+  "n_arms": 7,
+  "extrapolation_verdict": "the grade-2 extrapolation MISSES on 1 of 7 arms. doc 55 SS19.2: a miss refutes THE EXTRAPOLATION (a conversion median from n = 13 rows in one task family, carried into a new family), NOT the bound, and NOT the calculus. No criterion in doc 55 SS6 reads any of these numbers.",
+  "bounds_are_context_only": "doc 55 SS6 / SS12: NO criterion in doc 55 SS6 is read against any number in this file. doc 54 SS17.7 is the standing reason -- a bound moved by 0.0375 AFTER exp68 reported and no stored boolean moved with it. These predictions are a PROSPECTIVE TEST OF THE INSTRUMENT, graded, and they arm doc 55 SS9.2's bug-hunt row (any arm exceeding its bound by > 0.06). They are not criteria and may not be promoted onto one."
+ },
+ "margin_accuracy_doc55_SS19_3": {
+  "A0": {
+   "witness_family": "R-A",
+   "n_items": 300,
+   "n_unmatched": 0,
+   "n_distinct_margins": 50,
+   "spearman_item_level": 0.4432899443988837,
+   "spearman_cast_level": 0.4627009407060123,
+   "n_casts": 50,
+   "direction_registered": "positive expected (doc 55 SS19.3)",
+   "status": "DESCRIPTIVE -- no criterion reads it",
+   "resolution_note": "the witness margin is a function of the (agent, patient) ORDERED PAIR alone, so all items sharing a queried-event direction on the same cast share ONE margin: 50 distinct margin values over 300 held-out items (50 casts). doc 55 SS19.3's '150 pairs per arm' counts test PAIRS; the margin's own resolution is cast-level, and both readings are given rather than the coarser one being hidden. Ties are handled by midranks.",
+   "caveat": null
+  },
+  "R1-A": {
+   "witness_family": "R-A",
+   "n_items": 300,
+   "n_unmatched": 0,
+   "n_distinct_margins": 50,
+   "spearman_item_level": 0.46173265412277026,
+   "spearman_cast_level": 0.4851465322179304,
+   "n_casts": 50,
+   "direction_registered": "positive expected (doc 55 SS19.3)",
+   "status": "DESCRIPTIVE -- no criterion reads it",
+   "resolution_note": "the witness margin is a function of the (agent, patient) ORDERED PAIR alone, so all items sharing a queried-event direction on the same cast share ONE margin: 50 distinct margin values over 300 held-out items (50 casts). doc 55 SS19.3's '150 pairs per arm' counts test PAIRS; the margin's own resolution is cast-level, and both readings are given rather than the coarser one being hidden. Ties are handled by midranks.",
+   "caveat": null
+  },
+  "R1-W": {
+   "witness_family": "R-W",
+   "n_items": 300,
+   "n_unmatched": 0,
+   "n_distinct_margins": 36,
+   "spearman_item_level": 0.1446204797741845,
+   "spearman_cast_level": 0.39330992966110007,
+   "n_casts": 50,
+   "direction_registered": "positive expected (doc 55 SS19.3)",
+   "status": "DESCRIPTIVE -- no criterion reads it",
+   "resolution_note": "the witness margin is a function of the (agent, patient) ORDERED PAIR alone, so all items sharing a queried-event direction on the same cast share ONE margin: 36 distinct margin values over 300 held-out items (50 casts). doc 55 SS19.3's '150 pairs per arm' counts test PAIRS; the margin's own resolution is cast-level, and both readings are given rather than the coarser one being hidden. Ties are handled by midranks.",
+   "caveat": "R-W's witness comes from a LOWER-BOUND search at d = 9, so its margins are noisier BY CONSTRUCTION than the d = 3 arms' (doc 55 SS19.3)."
+  },
+  "R2-A": {
+   "witness_family": "R-A",
+   "n_items": 300,
+   "n_unmatched": 0,
+   "n_distinct_margins": 50,
+   "spearman_item_level": 0.4408121073892006,
+   "spearman_cast_level": 0.6203821333308196,
+   "n_casts": 50,
+   "direction_registered": "positive expected (doc 55 SS19.3)",
+   "status": "DESCRIPTIVE -- no criterion reads it",
+   "resolution_note": "the witness margin is a function of the (agent, patient) ORDERED PAIR alone, so all items sharing a queried-event direction on the same cast share ONE margin: 50 distinct margin values over 300 held-out items (50 casts). doc 55 SS19.3's '150 pairs per arm' counts test PAIRS; the margin's own resolution is cast-level, and both readings are given rather than the coarser one being hidden. Ties are handled by midranks.",
+   "caveat": null
+  },
+  "R2-W": {
+   "witness_family": "R-W",
+   "n_items": 300,
+   "n_unmatched": 0,
+   "n_distinct_margins": 36,
+   "spearman_item_level": 0.333008839943233,
+   "spearman_cast_level": 0.666423480891054,
+   "n_casts": 50,
+   "direction_registered": "positive expected (doc 55 SS19.3)",
+   "status": "DESCRIPTIVE -- no criterion reads it",
+   "resolution_note": "the witness margin is a function of the (agent, patient) ORDERED PAIR alone, so all items sharing a queried-event direction on the same cast share ONE margin: 36 distinct margin values over 300 held-out items (50 casts). doc 55 SS19.3's '150 pairs per arm' counts test PAIRS; the margin's own resolution is cast-level, and both readings are given rather than the coarser one being hidden. Ties are handled by midranks.",
+   "caveat": "R-W's witness comes from a LOWER-BOUND search at d = 9, so its margins are noisier BY CONSTRUCTION than the d = 3 arms' (doc 55 SS19.3)."
+  },
+  "R1-M": {
+   "witness_family": "R-M",
+   "n_items": 300,
+   "n_unmatched": 0,
+   "n_distinct_margins": 33,
+   "spearman_item_level": -0.10019703401993403,
+   "spearman_cast_level": -0.2565426739370876,
+   "n_casts": 50,
+   "direction_registered": "positive expected (doc 55 SS19.3)",
+   "status": "DESCRIPTIVE -- no criterion reads it",
+   "resolution_note": "the witness margin is a function of the (agent, patient) ORDERED PAIR alone, so all items sharing a queried-event direction on the same cast share ONE margin: 33 distinct margin values over 300 held-out items (50 casts). doc 55 SS19.3's '150 pairs per arm' counts test PAIRS; the margin's own resolution is cast-level, and both readings are given rather than the coarser one being hidden. Ties are handled by midranks.",
+   "caveat": null
+  },
+  "R2-M": {
+   "witness_family": "R-M",
+   "n_items": 300,
+   "n_unmatched": 0,
+   "n_distinct_margins": 33,
+   "spearman_item_level": -0.00499463916126629,
+   "spearman_cast_level": 0.00972424420368548,
+   "n_casts": 50,
+   "direction_registered": "positive expected (doc 55 SS19.3)",
+   "status": "DESCRIPTIVE -- no criterion reads it",
+   "resolution_note": "the witness margin is a function of the (agent, patient) ORDERED PAIR alone, so all items sharing a queried-event direction on the same cast share ONE margin: 33 distinct margin values over 300 held-out items (50 casts). doc 55 SS19.3's '150 pairs per arm' counts test PAIRS; the margin's own resolution is cast-level, and both readings are given rather than the coarser one being hidden. Ties are handled by midranks.",
+   "caveat": null
+  }
+ },
+ "purity_contrast_doc55_SS19_4": {
+  "A0": {
+   "T": 1,
+   "cells": {
+    "q1_correct": {
+     "n": 275,
+     "mean_wire_purity": {
+      "after_event1": 0.7159255867654627,
+      "after_intro": 0.9999999642372132,
+      "at_readout": 0.9495979724147103
+     }
+    },
+    "q1_incorrect": {
+     "n": 25,
+     "mean_wire_purity": {
+      "after_event1": 0.7044172716140747,
+      "after_intro": 0.9999999642372132,
+      "at_readout": 0.9274698972702027
+     }
+    }
+   },
+   "readout_minus_after_event1_abs": {
+    "q1": {
+     "n": 300,
+     "mean_abs_gap": 0.25726097226142886,
+     "max_abs_gap": 0.4951637387275696
+    }
+   },
+   "registered_signature": "doc 55 SS19.4: the T = 1 undo-signature (readout returns every wire to purity) does NOT transfer to T = 2 as-is, because the queried block's inverse acts AFTER the other event has entangled the wires and the operations do not commute. The registered expectation is therefore ASYMMETRIC IN QUERY POSITION: for q = 2 the inverse undoes the queried block exactly and readout-stage purity returns to its post-event-1 level; for q = 1 only a partial restoration is expected. DESCRIPTIVE; no criterion reads it.",
+   "status": "DESCRIPTIVE -- doc 55 SS18.3 / SS19.4"
+  },
+  "R1-A": {
+   "T": 1,
+   "cells": {
+    "q1_correct": {
+     "n": 279,
+     "mean_wire_purity": {
+      "after_event1": 0.8249745880617463,
+      "after_intro": 0.9999999642158495,
+      "at_readout": 0.8948940886818807
+     }
+    },
+    "q1_incorrect": {
+     "n": 21,
+     "mean_wire_purity": {
+      "after_event1": 0.8698738997890836,
+      "after_intro": 1.000000041155588,
+      "at_readout": 0.8561098135652996
+     }
+    }
+   },
+   "readout_minus_after_event1_abs": {
+    "q1": {
+     "n": 300,
+     "mean_abs_gap": 0.17992349098126093,
+     "max_abs_gap": 0.4864395558834076
+    }
+   },
+   "registered_signature": "doc 55 SS19.4: the T = 1 undo-signature (readout returns every wire to purity) does NOT transfer to T = 2 as-is, because the queried block's inverse acts AFTER the other event has entangled the wires and the operations do not commute. The registered expectation is therefore ASYMMETRIC IN QUERY POSITION: for q = 2 the inverse undoes the queried block exactly and readout-stage purity returns to its post-event-1 level; for q = 1 only a partial restoration is expected. DESCRIPTIVE; no criterion reads it.",
+   "status": "DESCRIPTIVE -- doc 55 SS18.3 / SS19.4"
+  },
+  "R1-W": {
+   "T": 1,
+   "cells": {
+    "q1_correct": {
+     "n": 297,
+     "mean_wire_purity": {
+      "after_event1": 0.7449348656216053,
+      "after_intro": 0.9999999869552124,
+      "at_readout": 0.8353217236120692
+     }
+    },
+    "q1_incorrect": {
+     "n": 3,
+     "mean_wire_purity": {
+      "after_event1": 0.7508849799633026,
+      "after_intro": 1.00000003973643,
+      "at_readout": 0.6634905536969503
+     }
+    }
+   },
+   "readout_minus_after_event1_abs": {
+    "q1": {
+     "n": 300,
+     "mean_abs_gap": 0.1864839697877566,
+     "max_abs_gap": 0.4742577075958252
+    }
+   },
+   "registered_signature": "doc 55 SS19.4: the T = 1 undo-signature (readout returns every wire to purity) does NOT transfer to T = 2 as-is, because the queried block's inverse acts AFTER the other event has entangled the wires and the operations do not commute. The registered expectation is therefore ASYMMETRIC IN QUERY POSITION: for q = 2 the inverse undoes the queried block exactly and readout-stage purity returns to its post-event-1 level; for q = 1 only a partial restoration is expected. DESCRIPTIVE; no criterion reads it.",
+   "status": "DESCRIPTIVE -- doc 55 SS18.3 / SS19.4"
+  },
+  "R2-A": {
+   "T": 2,
+   "cells": {
+    "q1_correct": {
+     "n": 141,
+     "mean_wire_purity": {
+      "after_event1": 0.8953054682582828,
+      "after_event2": 0.7839000476590285,
+      "after_intro": 0.9999999676613097,
+      "at_readout": 0.8016734383207686
+     }
+    },
+    "q1_incorrect": {
+     "n": 9,
+     "mean_wire_purity": {
+      "after_event1": 0.9019595252143012,
+      "after_event2": 0.8619525134563446,
+      "after_intro": 0.9999999701976776,
+      "at_readout": 0.8855595290660858
+     }
+    },
+    "q2_correct": {
+     "n": 146,
+     "mean_wire_purity": {
+      "after_event1": 0.8750992568388377,
+      "after_event2": 0.7883551974002629,
+      "after_intro": 0.9999999685646737,
+      "at_readout": 0.8755389113132268
+     }
+    },
+    "q2_incorrect": {
+     "n": 4,
+     "mean_wire_purity": {
+      "after_event1": 0.8860856145620346,
+      "after_event2": 0.8788909539580345,
+      "after_intro": 1.0000000447034836,
+      "at_readout": 0.8721853047609329
+     }
+    }
+   },
+   "readout_minus_after_event1_abs": {
+    "q1": {
+     "n": 150,
+     "mean_abs_gap": 0.12515309969584146,
+     "max_abs_gap": 0.4286406934261322
+    },
+    "q2": {
+     "n": 150,
+     "mean_abs_gap": 0.026834325393040974,
+     "max_abs_gap": 0.16283220052719116
+    }
+   },
+   "registered_signature": "doc 55 SS19.4: the T = 1 undo-signature (readout returns every wire to purity) does NOT transfer to T = 2 as-is, because the queried block's inverse acts AFTER the other event has entangled the wires and the operations do not commute. The registered expectation is therefore ASYMMETRIC IN QUERY POSITION: for q = 2 the inverse undoes the queried block exactly and readout-stage purity returns to its post-event-1 level; for q = 1 only a partial restoration is expected. DESCRIPTIVE; no criterion reads it.",
+   "status": "DESCRIPTIVE -- doc 55 SS18.3 / SS19.4"
+  },
+  "R2-W": {
+   "T": 2,
+   "cells": {
+    "q1_correct": {
+     "n": 110,
+     "mean_wire_purity": {
+      "after_event1": 0.7740276734937321,
+      "after_event2": 0.6456800688396801,
+      "after_intro": 0.9999999936331402,
+      "at_readout": 0.6223768988793547
+     }
+    },
+    "q1_incorrect": {
+     "n": 40,
+     "mean_wire_purity": {
+      "after_event1": 0.7619139656424523,
+      "after_event2": 0.633651290461421,
+      "after_intro": 0.9999999772757292,
+      "at_readout": 0.6049253910779953
+     }
+    },
+    "q2_correct": {
+     "n": 134,
+     "mean_wire_purity": {
+      "after_event1": 0.7690551391066011,
+      "after_event2": 0.6372017425610058,
+      "after_intro": 0.9999999867668793,
+      "at_readout": 0.6894273725685789
+     }
+    },
+    "q2_incorrect": {
+     "n": 16,
+     "mean_wire_purity": {
+      "after_event1": 0.730527033098042,
+      "after_event2": 0.6218650303781033,
+      "after_intro": 0.9999999897554517,
+      "at_readout": 0.6453663278371096
+     }
+    }
+   },
+   "readout_minus_after_event1_abs": {
+    "q1": {
+     "n": 150,
+     "mean_abs_gap": 0.15913378844658535,
+     "max_abs_gap": 0.3869713693857193
+    },
+    "q2": {
+     "n": 150,
+     "mean_abs_gap": 0.08162471542755763,
+     "max_abs_gap": 0.3657333701848984
+    }
+   },
+   "registered_signature": "doc 55 SS19.4: the T = 1 undo-signature (readout returns every wire to purity) does NOT transfer to T = 2 as-is, because the queried block's inverse acts AFTER the other event has entangled the wires and the operations do not commute. The registered expectation is therefore ASYMMETRIC IN QUERY POSITION: for q = 2 the inverse undoes the queried block exactly and readout-stage purity returns to its post-event-1 level; for q = 1 only a partial restoration is expected. DESCRIPTIVE; no criterion reads it.",
+   "status": "DESCRIPTIVE -- doc 55 SS18.3 / SS19.4"
+  },
+  "R1-M": {
+   "T": 1,
+   "cells": {
+    "q1_correct": {
+     "n": 300,
+     "mean_wire_purity": {
+      "after_event1": 0.8104882470766703,
+      "after_intro": 0.9999999860922496,
+      "at_readout": 0.9497261196374893
+     }
+    }
+   },
+   "readout_minus_after_event1_abs": {
+    "q1": {
+     "n": 300,
+     "mean_abs_gap": 0.16256764352321626,
+     "max_abs_gap": 0.4884609878063202
+    }
+   },
+   "registered_signature": "doc 55 SS19.4: the T = 1 undo-signature (readout returns every wire to purity) does NOT transfer to T = 2 as-is, because the queried block's inverse acts AFTER the other event has entangled the wires and the operations do not commute. The registered expectation is therefore ASYMMETRIC IN QUERY POSITION: for q = 2 the inverse undoes the queried block exactly and readout-stage purity returns to its post-event-1 level; for q = 1 only a partial restoration is expected. DESCRIPTIVE; no criterion reads it.",
+   "status": "DESCRIPTIVE -- doc 55 SS18.3 / SS19.4"
+  },
+  "R2-M": {
+   "T": 2,
+   "cells": {
+    "q1_correct": {
+     "n": 150,
+     "mean_wire_purity": {
+      "after_event1": 0.7454646946986516,
+      "after_event2": 0.8299434173107147,
+      "after_intro": 0.999999985297521,
+      "at_readout": 0.7699731842676798
+     }
+    },
+    "q2_correct": {
+     "n": 150,
+     "mean_wire_purity": {
+      "after_event1": 0.7497845844427744,
+      "after_event2": 0.805128660996755,
+      "after_intro": 0.9999999880790711,
+      "at_readout": 0.7585817925135294
+     }
+    }
+   },
+   "readout_minus_after_event1_abs": {
+    "q1": {
+     "n": 150,
+     "mean_abs_gap": 0.165379572113355,
+     "max_abs_gap": 0.46727821230888367
+    },
+    "q2": {
+     "n": 150,
+     "mean_abs_gap": 0.033790300687154134,
+     "max_abs_gap": 0.2718147039413452
+    }
+   },
+   "registered_signature": "doc 55 SS19.4: the T = 1 undo-signature (readout returns every wire to purity) does NOT transfer to T = 2 as-is, because the queried block's inverse acts AFTER the other event has entangled the wires and the operations do not commute. The registered expectation is therefore ASYMMETRIC IN QUERY POSITION: for q = 2 the inverse undoes the queried block exactly and readout-stage purity returns to its post-event-1 level; for q = 1 only a partial restoration is expected. DESCRIPTIVE; no criterion reads it.",
+   "status": "DESCRIPTIVE -- doc 55 SS18.3 / SS19.4"
+  }
+ },
+ "error_overlap_doc55_SS19_5": {
+  "A0": {
+   "cohen_kappa_per_seed": [
+    0.98,
+    0.9933333333333334,
+    0.9866666666666666,
+    1.0,
+    0.9866666666666666
+   ],
+   "cohen_kappa_mean": 0.9893333333333333,
+   "error_subsets_per_seed": [
+    {
+     "seed": 0,
+     "n": 300,
+     "n_circuit_errors": 25,
+     "n_comparator_errors": 24,
+     "circuit_errors_that_are_also_comparator_errors": 0.92,
+     "comparator_errors_that_are_also_circuit_errors": 0.9583333333333334
+    },
+    {
+     "seed": 1,
+     "n": 300,
+     "n_circuit_errors": 25,
+     "n_comparator_errors": 24,
+     "circuit_errors_that_are_also_comparator_errors": 0.96,
+     "comparator_errors_that_are_also_circuit_errors": 1.0
+    },
+    {
+     "seed": 2,
+     "n": 300,
+     "n_circuit_errors": 24,
+     "n_comparator_errors": 24,
+     "circuit_errors_that_are_also_comparator_errors": 0.9583333333333334,
+     "comparator_errors_that_are_also_circuit_errors": 0.9583333333333334
+    },
+    {
+     "seed": 3,
+     "n": 300,
+     "n_circuit_errors": 24,
+     "n_comparator_errors": 24,
+     "circuit_errors_that_are_also_comparator_errors": 1.0,
+     "comparator_errors_that_are_also_circuit_errors": 1.0
+    },
+    {
+     "seed": 4,
+     "n": 300,
+     "n_circuit_errors": 24,
+     "n_comparator_errors": 24,
+     "circuit_errors_that_are_also_comparator_errors": 0.9583333333333334,
+     "comparator_errors_that_are_also_circuit_errors": 0.9583333333333334
+    }
+   ],
+   "reading": "doc 55 SS19.5(a): errors-as-SUBSET reads as 'noisy linear model'; DISJOINT errors read as a different inductive bias. DESCRIPTIVE, no direction registered."
+  },
+  "R1-A": {
+   "cohen_kappa_per_seed": [
+    0.8999999999999999,
+    0.8733333333333333,
+    0.8666666666666667,
+    0.8400000000000001,
+    0.8666666666666667
+   ],
+   "cohen_kappa_mean": 0.8693333333333332,
+   "error_subsets_per_seed": [
+    {
+     "seed": 0,
+     "n": 300,
+     "n_circuit_errors": 29,
+     "n_comparator_errors": 24,
+     "circuit_errors_that_are_also_comparator_errors": 0.6551724137931034,
+     "comparator_errors_that_are_also_circuit_errors": 0.7916666666666666
+    },
+    {
+     "seed": 1,
+     "n": 300,
+     "n_circuit_errors": 19,
+     "n_comparator_errors": 24,
+     "circuit_errors_that_are_also_comparator_errors": 0.631578947368421,
+     "comparator_errors_that_are_also_circuit_errors": 0.5
+    },
+    {
+     "seed": 2,
+     "n": 300,
+     "n_circuit_errors": 22,
+     "n_comparator_errors": 24,
+     "circuit_errors_that_are_also_comparator_errors": 0.5909090909090909,
+     "comparator_errors_that_are_also_circuit_errors": 0.5416666666666666
+    },
+    {
+     "seed": 3,
+     "n": 300,
+     "n_circuit_errors": 24,
+     "n_comparator_errors": 24,
+     "circuit_errors_that_are_also_comparator_errors": 0.5,
+     "comparator_errors_that_are_also_circuit_errors": 0.5
+    },
+    {
+     "seed": 4,
+     "n": 300,
+     "n_circuit_errors": 22,
+     "n_comparator_errors": 24,
+     "circuit_errors_that_are_also_comparator_errors": 0.5909090909090909,
+     "comparator_errors_that_are_also_circuit_errors": 0.5416666666666666
+    }
+   ],
+   "reading": "doc 55 SS19.5(a): errors-as-SUBSET reads as 'noisy linear model'; DISJOINT errors read as a different inductive bias. DESCRIPTIVE, no direction registered."
+  },
+  "R1-W": {
+   "cohen_kappa_per_seed": [
+    0.96,
+    0.98,
+    0.9733333333333334,
+    0.9533333333333334,
+    0.9533333333333334
+   ],
+   "cohen_kappa_mean": 0.9639999999999999,
+   "error_subsets_per_seed": [
+    {
+     "seed": 0,
+     "n": 300,
+     "n_circuit_errors": 6,
+     "n_comparator_errors": 0,
+     "circuit_errors_that_are_also_comparator_errors": 0.0,
+     "comparator_errors_that_are_also_circuit_errors": null
+    },
+    {
+     "seed": 1,
+     "n": 300,
+     "n_circuit_errors": 3,
+     "n_comparator_errors": 0,
+     "circuit_errors_that_are_also_comparator_errors": 0.0,
+     "comparator_errors_that_are_also_circuit_errors": null
+    },
+    {
+     "seed": 2,
+     "n": 300,
+     "n_circuit_errors": 4,
+     "n_comparator_errors": 0,
+     "circuit_errors_that_are_also_comparator_errors": 0.0,
+     "comparator_errors_that_are_also_circuit_errors": null
+    },
+    {
+     "seed": 3,
+     "n": 300,
+     "n_circuit_errors": 7,
+     "n_comparator_errors": 0,
+     "circuit_errors_that_are_also_comparator_errors": 0.0,
+     "comparator_errors_that_are_also_circuit_errors": null
+    },
+    {
+     "seed": 4,
+     "n": 300,
+     "n_circuit_errors": 7,
+     "n_comparator_errors": 0,
+     "circuit_errors_that_are_also_comparator_errors": 0.0,
+     "comparator_errors_that_are_also_circuit_errors": null
+    }
+   ],
+   "reading": "doc 55 SS19.5(a): errors-as-SUBSET reads as 'noisy linear model'; DISJOINT errors read as a different inductive bias. DESCRIPTIVE, no direction registered."
+  },
+  "R2-A": {
+   "cohen_kappa_per_seed": [
+    0.8600000000000001,
+    0.8933333333333333,
+    0.72,
+    0.8133333333333332,
+    0.8600000000000001
+   ],
+   "cohen_kappa_mean": 0.8293333333333335,
+   "error_subsets_per_seed": [
+    {
+     "seed": 0,
+     "n": 300,
+     "n_circuit_errors": 25,
+     "n_comparator_errors": 24,
+     "circuit_errors_that_are_also_comparator_errors": 0.56,
+     "comparator_errors_that_are_also_circuit_errors": 0.5833333333333334
+    },
+    {
+     "seed": 1,
+     "n": 300,
+     "n_circuit_errors": 16,
+     "n_comparator_errors": 24,
+     "circuit_errors_that_are_also_comparator_errors": 0.75,
+     "comparator_errors_that_are_also_circuit_errors": 0.5
+    },
+    {
+     "seed": 2,
+     "n": 300,
+     "n_circuit_errors": 38,
+     "n_comparator_errors": 24,
+     "circuit_errors_that_are_also_comparator_errors": 0.2631578947368421,
+     "comparator_errors_that_are_also_circuit_errors": 0.4166666666666667
+    },
+    {
+     "seed": 3,
+     "n": 300,
+     "n_circuit_errors": 26,
+     "n_comparator_errors": 24,
+     "circuit_errors_that_are_also_comparator_errors": 0.4230769230769231,
+     "comparator_errors_that_are_also_circuit_errors": 0.4583333333333333
+    },
+    {
+     "seed": 4,
+     "n": 300,
+     "n_circuit_errors": 17,
+     "n_comparator_errors": 24,
+     "circuit_errors_that_are_also_comparator_errors": 0.5882352941176471,
+     "comparator_errors_that_are_also_circuit_errors": 0.4166666666666667
+    }
+   ],
+   "reading": "doc 55 SS19.5(a): errors-as-SUBSET reads as 'noisy linear model'; DISJOINT errors read as a different inductive bias. DESCRIPTIVE, no direction registered."
+  },
+  "R2-W": {
+   "cohen_kappa_per_seed": [
+    0.43333333333333335,
+    0.54,
+    0.4933333333333334,
+    0.45333333333333337,
+    0.3733333333333333
+   ],
+   "cohen_kappa_mean": 0.45866666666666667,
+   "error_subsets_per_seed": [
+    {
+     "seed": 0,
+     "n": 300,
+     "n_circuit_errors": 85,
+     "n_comparator_errors": 0,
+     "circuit_errors_that_are_also_comparator_errors": 0.0,
+     "comparator_errors_that_are_also_circuit_errors": null
+    },
+    {
+     "seed": 1,
+     "n": 300,
+     "n_circuit_errors": 69,
+     "n_comparator_errors": 0,
+     "circuit_errors_that_are_also_comparator_errors": 0.0,
+     "comparator_errors_that_are_also_circuit_errors": null
+    },
+    {
+     "seed": 2,
+     "n": 300,
+     "n_circuit_errors": 76,
+     "n_comparator_errors": 0,
+     "circuit_errors_that_are_also_comparator_errors": 0.0,
+     "comparator_errors_that_are_also_circuit_errors": null
+    },
+    {
+     "seed": 3,
+     "n": 300,
+     "n_circuit_errors": 82,
+     "n_comparator_errors": 0,
+     "circuit_errors_that_are_also_comparator_errors": 0.0,
+     "comparator_errors_that_are_also_circuit_errors": null
+    },
+    {
+     "seed": 4,
+     "n": 300,
+     "n_circuit_errors": 94,
+     "n_comparator_errors": 0,
+     "circuit_errors_that_are_also_comparator_errors": 0.0,
+     "comparator_errors_that_are_also_circuit_errors": null
+    }
+   ],
+   "reading": "doc 55 SS19.5(a): errors-as-SUBSET reads as 'noisy linear model'; DISJOINT errors read as a different inductive bias. DESCRIPTIVE, no direction registered."
+  },
+  "R1-M": {
+   "cohen_kappa_per_seed": [
+    1.0,
+    1.0,
+    0.98,
+    0.9866666666666666,
+    1.0
+   ],
+   "cohen_kappa_mean": 0.9933333333333334,
+   "error_subsets_per_seed": [
+    {
+     "seed": 0,
+     "n": 300,
+     "n_circuit_errors": 0,
+     "n_comparator_errors": 0,
+     "circuit_errors_that_are_also_comparator_errors": null,
+     "comparator_errors_that_are_also_circuit_errors": null
+    },
+    {
+     "seed": 1,
+     "n": 300,
+     "n_circuit_errors": 0,
+     "n_comparator_errors": 0,
+     "circuit_errors_that_are_also_comparator_errors": null,
+     "comparator_errors_that_are_also_circuit_errors": null
+    },
+    {
+     "seed": 2,
+     "n": 300,
+     "n_circuit_errors": 3,
+     "n_comparator_errors": 0,
+     "circuit_errors_that_are_also_comparator_errors": 0.0,
+     "comparator_errors_that_are_also_circuit_errors": null
+    },
+    {
+     "seed": 3,
+     "n": 300,
+     "n_circuit_errors": 2,
+     "n_comparator_errors": 0,
+     "circuit_errors_that_are_also_comparator_errors": 0.0,
+     "comparator_errors_that_are_also_circuit_errors": null
+    },
+    {
+     "seed": 4,
+     "n": 300,
+     "n_circuit_errors": 0,
+     "n_comparator_errors": 0,
+     "circuit_errors_that_are_also_comparator_errors": null,
+     "comparator_errors_that_are_also_circuit_errors": null
+    }
+   ],
+   "reading": "doc 55 SS19.5(a): errors-as-SUBSET reads as 'noisy linear model'; DISJOINT errors read as a different inductive bias. DESCRIPTIVE, no direction registered."
+  },
+  "R2-M": {
+   "cohen_kappa_per_seed": [
+    0.9866666666666666,
+    1.0,
+    0.98,
+    0.9733333333333334,
+    0.9933333333333334
+   ],
+   "cohen_kappa_mean": 0.9866666666666667,
+   "error_subsets_per_seed": [
+    {
+     "seed": 0,
+     "n": 300,
+     "n_circuit_errors": 2,
+     "n_comparator_errors": 0,
+     "circuit_errors_that_are_also_comparator_errors": 0.0,
+     "comparator_errors_that_are_also_circuit_errors": null
+    },
+    {
+     "seed": 1,
+     "n": 300,
+     "n_circuit_errors": 0,
+     "n_comparator_errors": 0,
+     "circuit_errors_that_are_also_comparator_errors": null,
+     "comparator_errors_that_are_also_circuit_errors": null
+    },
+    {
+     "seed": 2,
+     "n": 300,
+     "n_circuit_errors": 3,
+     "n_comparator_errors": 0,
+     "circuit_errors_that_are_also_comparator_errors": 0.0,
+     "comparator_errors_that_are_also_circuit_errors": null
+    },
+    {
+     "seed": 3,
+     "n": 300,
+     "n_circuit_errors": 4,
+     "n_comparator_errors": 0,
+     "circuit_errors_that_are_also_comparator_errors": 0.0,
+     "comparator_errors_that_are_also_circuit_errors": null
+    },
+    {
+     "seed": 4,
+     "n": 300,
+     "n_circuit_errors": 1,
+     "n_comparator_errors": 0,
+     "circuit_errors_that_are_also_comparator_errors": 0.0,
+     "comparator_errors_that_are_also_circuit_errors": null
+    }
+   ],
+   "reading": "doc 55 SS19.5(a): errors-as-SUBSET reads as 'noisy linear model'; DISJOINT errors read as a different inductive bias. DESCRIPTIVE, no direction registered."
+  }
+ },
+ "reported_not_registered_doc55_SS6_9": {
+  "rule": "doc 55 SS6.9: REPORTED, NOT REGISTERED, and this is deliberate. Per-q held-out accuracy (the persistence cell q = 1 against the late-binding cell q = 2), per-surface-order accuracy, the val-heldout selection gap per seed, and per-verb-pair accuracy. NONE OF THESE MAY BE PROMOTED ONTO A CRITERION AFTER THE FACT -- Rule 4's second sentence and the exp44 lesson. doc 55 SS4.2 states the reason: reporting the per-q cells without a boolean on them pre-empts post-hoc mining of whichever cell happens to look better, without multiplying criteria.",
+  "surface_order_caveat": "exp69's compiled circuit is INVARIANT to the SVO/VSO alternation by construction -- see exp69_run.py's header and the smoke file's word_order verdict for the doc-55-internal reconciliation (DERIVATION DIFFERS / DENOTATION EQUAL, forced by SS4.7, SS5, SS6.1 and SS16.1-Q2). The per-surface-order numbers are therefore a DATA-COMPOSITION statistic and are NOT evidence about word-order processing.",
+  "per_arm": {
+   "A0": {
+    "by_query_index_PRIMACY_RECENCY": {
+     "q1": {
+      "acc": 0.9186666666666666,
+      "n": 1500
+     }
+    },
+    "by_surface_order_pair": {
+     "SVO": {
+      "acc": 0.9205479452054794,
+      "n": 730
+     },
+     "VSO": {
+      "acc": 0.9168831168831169,
+      "n": 770
+     }
+    },
+    "by_surface_order_event1": {
+     "SVO": {
+      "acc": 0.9205479452054794,
+      "n": 730
+     },
+     "VSO": {
+      "acc": 0.9168831168831169,
+      "n": 770
+     }
+    },
+    "by_verb_pair": {
+     "n/a": {
+      "acc": 0.9186666666666666,
+      "n": 1500
+     }
+    },
+    "by_queried_verb": {
+     "حمل": {
+      "acc": 0.92,
+      "n": 250
+     },
+     "رفع": {
+      "acc": 0.92,
+      "n": 250
+     },
+     "سأل": {
+      "acc": 0.92,
+      "n": 250
+     },
+     "ساعد": {
+      "acc": 0.924,
+      "n": 250
+     },
+     "ضرب": {
+      "acc": 0.908,
+      "n": 250
+     },
+     "عالج": {
+      "acc": 0.92,
+      "n": 250
+     }
+    },
+    "val_minus_heldout_per_seed": [
+     0.08333333333333337,
+     0.08333333333333337,
+     0.07999999999999996,
+     0.07999999999999996,
+     0.07999999999999996
+    ],
+    "mean_val_minus_heldout": 0.08133333333333333
+   },
+   "R1-A": {
+    "by_query_index_PRIMACY_RECENCY": {
+     "q1": {
+      "acc": 0.9226666666666666,
+      "n": 1500
+     }
+    },
+    "by_surface_order_pair": {
+     "SVO": {
+      "acc": 0.9253333333333333,
+      "n": 750
+     },
+     "VSO": {
+      "acc": 0.92,
+      "n": 750
+     }
+    },
+    "by_surface_order_event1": {
+     "SVO": {
+      "acc": 0.9253333333333333,
+      "n": 750
+     },
+     "VSO": {
+      "acc": 0.92,
+      "n": 750
+     }
+    },
+    "by_verb_pair": {
+     "حمل|None": {
+      "acc": 0.916,
+      "n": 250
+     },
+     "رفع|None": {
+      "acc": 0.928,
+      "n": 250
+     },
+     "سأل|None": {
+      "acc": 0.928,
+      "n": 250
+     },
+     "ساعد|None": {
+      "acc": 0.936,
+      "n": 250
+     },
+     "ضرب|None": {
+      "acc": 0.908,
+      "n": 250
+     },
+     "عالج|None": {
+      "acc": 0.92,
+      "n": 250
+     }
+    },
+    "by_queried_verb": {
+     "حمل": {
+      "acc": 0.916,
+      "n": 250
+     },
+     "رفع": {
+      "acc": 0.928,
+      "n": 250
+     },
+     "سأل": {
+      "acc": 0.928,
+      "n": 250
+     },
+     "ساعد": {
+      "acc": 0.936,
+      "n": 250
+     },
+     "ضرب": {
+      "acc": 0.908,
+      "n": 250
+     },
+     "عالج": {
+      "acc": 0.92,
+      "n": 250
+     }
+    },
+    "val_minus_heldout_per_seed": [
+     -0.039696969696969675,
+     -0.08060606060606057,
+     -0.07060606060606056,
+     -0.0790909090909091,
+     -0.07818181818181813
+    ],
+    "mean_val_minus_heldout": -0.06963636363636361
+   },
+   "R1-W": {
+    "by_query_index_PRIMACY_RECENCY": {
+     "q1": {
+      "acc": 0.982,
+      "n": 1500
+     }
+    },
+    "by_surface_order_pair": {
+     "SVO": {
+      "acc": 0.9893333333333333,
+      "n": 750
+     },
+     "VSO": {
+      "acc": 0.9746666666666667,
+      "n": 750
+     }
+    },
+    "by_surface_order_event1": {
+     "SVO": {
+      "acc": 0.9893333333333333,
+      "n": 750
+     },
+     "VSO": {
+      "acc": 0.9746666666666667,
+      "n": 750
+     }
+    },
+    "by_verb_pair": {
+     "حمل|None": {
+      "acc": 0.98,
+      "n": 250
+     },
+     "رفع|None": {
+      "acc": 0.972,
+      "n": 250
+     },
+     "سأل|None": {
+      "acc": 0.976,
+      "n": 250
+     },
+     "ساعد|None": {
+      "acc": 0.996,
+      "n": 250
+     },
+     "ضرب|None": {
+      "acc": 0.984,
+      "n": 250
+     },
+     "عالج|None": {
+      "acc": 0.984,
+      "n": 250
+     }
+    },
+    "by_queried_verb": {
+     "حمل": {
+      "acc": 0.98,
+      "n": 250
+     },
+     "رفع": {
+      "acc": 0.972,
+      "n": 250
+     },
+     "سأل": {
+      "acc": 0.976,
+      "n": 250
+     },
+     "ساعد": {
+      "acc": 0.996,
+      "n": 250
+     },
+     "ضرب": {
+      "acc": 0.984,
+      "n": 250
+     },
+     "عالج": {
+      "acc": 0.984,
+      "n": 250
+     }
+    },
+    "val_minus_heldout_per_seed": [
+     -0.025454545454545396,
+     -0.043030303030302974,
+     -0.07000000000000006,
+     -0.044848484848484915,
+     -0.06000000000000005
+    ],
+    "mean_val_minus_heldout": -0.04866666666666668
+   },
+   "R2-A": {
+    "by_query_index_PRIMACY_RECENCY": {
+     "q1": {
+      "acc": 0.904,
+      "n": 750
+     },
+     "q2": {
+      "acc": 0.9333333333333333,
+      "n": 750
+     }
+    },
+    "by_surface_order_pair": {
+     "SVO/SVO": {
+      "acc": 0.9289473684210526,
+      "n": 380
+     },
+     "SVO/VSO": {
+      "acc": 0.9026315789473685,
+      "n": 380
+     },
+     "VSO/SVO": {
+      "acc": 0.927027027027027,
+      "n": 370
+     },
+     "VSO/VSO": {
+      "acc": 0.9162162162162162,
+      "n": 370
+     }
+    },
+    "by_surface_order_event1": {
+     "SVO": {
+      "acc": 0.9157894736842105,
+      "n": 760
+     },
+     "VSO": {
+      "acc": 0.9216216216216216,
+      "n": 740
+     }
+    },
+    "by_verb_pair": {
+     "سأل|حمل": {
+      "acc": 0.9470588235294117,
+      "n": 170
+     },
+     "سأل|رفع": {
+      "acc": 0.8631578947368421,
+      "n": 190
+     },
+     "سأل|ساعد": {
+      "acc": 0.9210526315789473,
+      "n": 190
+     },
+     "ضرب|حمل": {
+      "acc": 0.95625,
+      "n": 160
+     },
+     "ضرب|رفع": {
+      "acc": 0.8923076923076924,
+      "n": 130
+     },
+     "ضرب|ساعد": {
+      "acc": 0.8833333333333333,
+      "n": 120
+     },
+     "عالج|حمل": {
+      "acc": 0.9529411764705882,
+      "n": 170
+     },
+     "عالج|رفع": {
+      "acc": 0.9166666666666666,
+      "n": 180
+     },
+     "عالج|ساعد": {
+      "acc": 0.9263157894736842,
+      "n": 190
+     }
+    },
+    "by_queried_verb": {
+     "حمل": {
+      "acc": 0.9344827586206896,
+      "n": 290
+     },
+     "رفع": {
+      "acc": 0.9055555555555556,
+      "n": 180
+     },
+     "سأل": {
+      "acc": 0.8703703703703703,
+      "n": 270
+     },
+     "ساعد": {
+      "acc": 0.95,
+      "n": 280
+     },
+     "ضرب": {
+      "acc": 0.9157894736842105,
+      "n": 190
+     },
+     "عالج": {
+      "acc": 0.9275862068965517,
+      "n": 290
+     }
+    },
+    "val_minus_heldout_per_seed": [
+     -0.045454545454545414,
+     -0.07545454545454544,
+     0.00545454545454549,
+     -0.042121212121212115,
+     -0.07969696969696971
+    ],
+    "mean_val_minus_heldout": -0.04745454545454544
+   },
+   "R2-W": {
+    "by_query_index_PRIMACY_RECENCY": {
+     "q1": {
+      "acc": 0.6533333333333333,
+      "n": 750
+     },
+     "q2": {
+      "acc": 0.8053333333333333,
+      "n": 750
+     }
+    },
+    "by_surface_order_pair": {
+     "SVO/SVO": {
+      "acc": 0.7315789473684211,
+      "n": 380
+     },
+     "SVO/VSO": {
+      "acc": 0.7210526315789474,
+      "n": 380
+     },
+     "VSO/SVO": {
+      "acc": 0.7162162162162162,
+      "n": 370
+     },
+     "VSO/VSO": {
+      "acc": 0.7486486486486487,
+      "n": 370
+     }
+    },
+    "by_surface_order_event1": {
+     "SVO": {
+      "acc": 0.7263157894736842,
+      "n": 760
+     },
+     "VSO": {
+      "acc": 0.7324324324324324,
+      "n": 740
+     }
+    },
+    "by_verb_pair": {
+     "سأل|حمل": {
+      "acc": 0.6882352941176471,
+      "n": 170
+     },
+     "سأل|رفع": {
+      "acc": 0.6421052631578947,
+      "n": 190
+     },
+     "سأل|ساعد": {
+      "acc": 0.7473684210526316,
+      "n": 190
+     },
+     "ضرب|حمل": {
+      "acc": 0.78125,
+      "n": 160
+     },
+     "ضرب|رفع": {
+      "acc": 0.7230769230769231,
+      "n": 130
+     },
+     "ضرب|ساعد": {
+      "acc": 0.775,
+      "n": 120
+     },
+     "عالج|حمل": {
+      "acc": 0.7529411764705882,
+      "n": 170
+     },
+     "عالج|رفع": {
+      "acc": 0.7333333333333333,
+      "n": 180
+     },
+     "عالج|ساعد": {
+      "acc": 0.7421052631578947,
+      "n": 190
+     }
+    },
+    "by_queried_verb": {
+     "حمل": {
+      "acc": 0.7862068965517242,
+      "n": 290
+     },
+     "رفع": {
+      "acc": 0.7666666666666667,
+      "n": 180
+     },
+     "سأل": {
+      "acc": 0.6296296296296297,
+      "n": 270
+     },
+     "ساعد": {
+      "acc": 0.85,
+      "n": 280
+     },
+     "ضرب": {
+      "acc": 0.6368421052631579,
+      "n": 190
+     },
+     "عالج": {
+      "acc": 0.6862068965517242,
+      "n": 290
+     }
+    },
+    "val_minus_heldout_per_seed": [
+     0.018181818181818188,
+     -0.050303030303030294,
+     0.041212121212121144,
+     0.008181818181818179,
+     0.040606060606060645
+    ],
+    "mean_val_minus_heldout": 0.011575757575757573
+   },
+   "R1-M": {
+    "by_query_index_PRIMACY_RECENCY": {
+     "q1": {
+      "acc": 0.9966666666666667,
+      "n": 1500
+     }
+    },
+    "by_surface_order_pair": {
+     "SVO": {
+      "acc": 0.9973333333333333,
+      "n": 750
+     },
+     "VSO": {
+      "acc": 0.996,
+      "n": 750
+     }
+    },
+    "by_surface_order_event1": {
+     "SVO": {
+      "acc": 0.9973333333333333,
+      "n": 750
+     },
+     "VSO": {
+      "acc": 0.996,
+      "n": 750
+     }
+    },
+    "by_verb_pair": {
+     "حمل|None": {
+      "acc": 1.0,
+      "n": 250
+     },
+     "رفع|None": {
+      "acc": 1.0,
+      "n": 250
+     },
+     "سأل|None": {
+      "acc": 0.992,
+      "n": 250
+     },
+     "ساعد|None": {
+      "acc": 1.0,
+      "n": 250
+     },
+     "ضرب|None": {
+      "acc": 1.0,
+      "n": 250
+     },
+     "عالج|None": {
+      "acc": 0.988,
+      "n": 250
+     }
+    },
+    "by_queried_verb": {
+     "حمل": {
+      "acc": 1.0,
+      "n": 250
+     },
+     "رفع": {
+      "acc": 1.0,
+      "n": 250
+     },
+     "سأل": {
+      "acc": 0.992,
+      "n": 250
+     },
+     "ساعد": {
+      "acc": 1.0,
+      "n": 250
+     },
+     "ضرب": {
+      "acc": 1.0,
+      "n": 250
+     },
+     "عالج": {
+      "acc": 0.988,
+      "n": 250
+     }
+    },
+    "val_minus_heldout_per_seed": [
+     0.0,
+     0.0,
+     0.010000000000000009,
+     0.00666666666666671,
+     0.0
+    ],
+    "mean_val_minus_heldout": 0.0033333333333333435
+   },
+   "R2-M": {
+    "by_query_index_PRIMACY_RECENCY": {
+     "q1": {
+      "acc": 0.988,
+      "n": 750
+     },
+     "q2": {
+      "acc": 0.9986666666666667,
+      "n": 750
+     }
+    },
+    "by_surface_order_pair": {
+     "SVO/SVO": {
+      "acc": 0.9945945945945946,
+      "n": 370
+     },
+     "SVO/VSO": {
+      "acc": 0.995,
+      "n": 400
+     },
+     "VSO/SVO": {
+      "acc": 0.9894736842105263,
+      "n": 380
+     },
+     "VSO/VSO": {
+      "acc": 0.9942857142857143,
+      "n": 350
+     }
+    },
+    "by_surface_order_event1": {
+     "SVO": {
+      "acc": 0.9948051948051948,
+      "n": 770
+     },
+     "VSO": {
+      "acc": 0.9917808219178083,
+      "n": 730
+     }
+    },
+    "by_verb_pair": {
+     "حمل|سأل": {
+      "acc": 1.0,
+      "n": 150
+     },
+     "حمل|ساعد": {
+      "acc": 1.0,
+      "n": 150
+     },
+     "حمل|عالج": {
+      "acc": 1.0,
+      "n": 170
+     },
+     "رفع|سأل": {
+      "acc": 1.0,
+      "n": 160
+     },
+     "رفع|ساعد": {
+      "acc": 0.98125,
+      "n": 160
+     },
+     "رفع|عالج": {
+      "acc": 0.9875,
+      "n": 160
+     },
+     "ضرب|سأل": {
+      "acc": 0.9894736842105263,
+      "n": 190
+     },
+     "ضرب|ساعد": {
+      "acc": 0.9842105263157894,
+      "n": 190
+     },
+     "ضرب|عالج": {
+      "acc": 1.0,
+      "n": 170
+     }
+    },
+    "by_queried_verb": {
+     "حمل": {
+      "acc": 1.0,
+      "n": 200
+     },
+     "رفع": {
+      "acc": 0.9814814814814815,
+      "n": 270
+     },
+     "سأل": {
+      "acc": 0.9966666666666667,
+      "n": 300
+     },
+     "ساعد": {
+      "acc": 1.0,
+      "n": 200
+     },
+     "ضرب": {
+      "acc": 0.9857142857142858,
+      "n": 280
+     },
+     "عالج": {
+      "acc": 1.0,
+      "n": 250
+     }
+    },
+    "val_minus_heldout_per_seed": [
+     0.00666666666666671,
+     0.0,
+     0.010000000000000009,
+     0.013333333333333308,
+     0.0033333333333332993
+    ],
+    "mean_val_minus_heldout": 0.006666666666666665
+   }
+  }
+ },
+ "verdicts": {
+  "anchor_replicates_exp68": true,
+  "t1_surface_anchor_binds": true,
+  "t2_binding_holds": true,
+  "t2_binding_holds_angle": true,
+  "register_beats_angle_at_T2": false,
+  "register_beats_angle_at_T1": false,
+  "wazn_binds_T1": true,
+  "wazn_binds_T2": true,
+  "floor_gate_all_arms": true,
+  "floor_gate_per_arm": {
+   "R1-A": true,
+   "R1-W": true,
+   "R2-A": true,
+   "R2-W": true,
+   "R1-M": true,
+   "R2-M": true
+  },
+  "comparator_matches_or_exceeds_all_arms": true,
+  "comparator_matches_or_exceeds_per_arm": {
+   "A0": true,
+   "R1-A": true,
+   "R1-W": true,
+   "R2-A": true,
+   "R2-W": true,
+   "R1-M": true,
+   "R2-M": true
+  },
+  "bug_hunt_triggered": false,
+  "bug_hunt_per_arm": {
+   "A0": false,
+   "R1-A": false,
+   "R1-W": false,
+   "R2-A": false,
+   "R2-W": false,
+   "R1-M": false,
+   "R2-M": false
+  },
+  "run_is_interpretable": true,
+  "criterion_bars": {
+   "delta_bar": 0.06,
+   "floor_sd_multiple": 2.0,
+   "anchor_absolute": 0.65,
+   "anchor_band": 0.06,
+   "anchor_point": 0.9187,
+   "tie_band": 0.02,
+   "a0_tolerance": 0.002,
+   "threshold_provenance": "0.06 ~ 2 x the binomial SD at n_test = 300 (sqrt(0.25/300) = 0.02887), the bar exp61 SS8 / exp67 SS4 / doc 54 SS7 used. INHERITED, never chosen for doc 55, and the reason exp69's n_test is deliberately 300 at every T and in both parts. doc 55 SS6.2 spends a paragraph refusing to quote exp68's 0.0018 SEED SD against R1-A: that is a different population (new generator, new surface, fresh cast draw) and quoting it would be doc 47 SS18.5's failure class.",
+   "no_criterion_reads_a_bound": "doc 55 SS6 / SS12. doc 54 SS17.7 is the standing reason: the FA per-twin bound moved 0.9250 -> 0.9625 AFTER exp68 reported and NO STORED BOOLEAN MOVED, precisely because none of them read a bound."
+  },
+  "registered_expectations_doc55_SS9_1": {
+   "anchor_replicates_exp68": "TRUE, bit-exact",
+   "t1_surface_anchor_binds": "TRUE",
+   "t2_binding_holds": "TRUE, but with the LOWEST CONFIDENCE in the doc -- no precedent, every SB rung to date is one event",
+   "t2_binding_holds_angle": "TRUE",
+   "register_beats_angle_at_T2": "FALSE",
+   "register_beats_angle_at_T1": "FALSE",
+   "comparator_matches_or_exceeds_all_arms": "TRUE",
+   "bug_hunt_triggered": "FALSE",
+   "wazn_binds_T1": "no direction registered (doc 55 SS18.4)",
+   "wazn_binds_T2": "no direction registered (doc 55 SS18.4)"
+  },
+  "measured": {
+   "means": {
+    "A0": 0.9186666666666666,
+    "R1-A": 0.9226666666666666,
+    "R1-W": 0.982,
+    "R2-A": 0.9186666666666666,
+    "R2-W": 0.7293333333333334,
+    "R1-M": 0.9966666666666667,
+    "R2-M": 0.9933333333333333
+   },
+   "R2W_minus_R2A": -0.18933333333333324,
+   "R1W_minus_R1A": 0.05933333333333335,
+   "comparator_R2W_minus_R2A": 0.07999999999999985,
+   "comparator_R1W_minus_R1A": 0.07999999999999985,
+   "doc55_SS8_3_blocks_T2": false,
+   "doc55_SS8_3_blocks_T1": false
+  },
+  "floor_readings_disagree_for": [],
+  "deliberately_not_registered": "doc 55 SS6.10: (a) NO saturates_ceiling / ceiling_violated criterion -- doc 52 SS2.2 removed the bound's standing as an instrument on this inventory. (b) NO T = 1 versus T = 2 accuracy DELTA, because R1 and R2 are different tasks with different label distributions and differencing them is a population mismatch. The T = 1 arms are a QUALITATIVE control: if T = 2 fails while T = 1 passes with the same encoding, the same compilation path and the same features, the failure is COMPOSITIONAL, not encoding-level -- and that inference is a pass/fail comparison, never a subtraction."
+ },
+ "outcome_rows_doc55_SS9_2": [
+  {
+   "row": "T = 1 arms pass, R2-W clears its floor and 0.65",
+   "reading": "BINDING SURVIVES COMPOSITION -- a semantic property of a role-filler is readable through two composed events, with a real category and a real VSO/SVO surface. This is doc 50's reunion, measured.",
+   "may_not_claim": "NOT 'meaning'. NOT quantum advantage. NOT novel-filler generalisation. NOT multi-hop reasoning or discourse resolution."
+  },
+  {
+   "row": "both register booleans FALSE",
+   "reading": "WIDTH-AS-INFORMATION IS A TWO-POINT (THREE-ARM) NEGATIVE, and doc 54 SS17.6's caveat is discharged in the negative direction. doc 54 SS17.4's surviving statement narrows to: 'one RY per qubit converts; a SECOND FEATURE on the second qubit does not add beyond the angle.'",
+   "may_not_claim": "May not be reported as 'width works' in any form (doc 54 SS9.2 row 2, inherited)."
+  }
+ ],
+ "meta_notes": {
+  "scope_doc55_SS11": [
+   "NOT 'meaning'. One category (plus one morphological contrast), one task family, 24 nouns, 2 referents, 2 events, simulation. A positive shows that a semantic property of a role-filler remains readable through two composed events -- narrow, and worth exactly that.",
+   "NOT quantum advantage. doc 52 SS1 proved it for this encoding family; doc 55 SS8 registers the comparator as a tie-or-win IN ADVANCE. No exp69 number may appear in a sentence containing 'advantage'.",
+   "NOT 'width works'. Whatever the register arms return, the two-feature-register subfamily has THREE members total. A three-member subfamily supports a RECORD, not a design rule, and any claim must be stated with that count attached.",
+   "NOT novel-filler generalisation. The split is over UNSEEN PAIRINGS, not unseen nouns, and V2 is reported un-gated for that reason.",
+   "NOT multi-hop reasoning, anaphora, or discourse. Q69 resolves its query by VERB IDENTITY over disjoint slot inventories. Two events is not a discourse, and T = 2 is not 'long-range'.",
+   "NOT a statement about AraVec: PC1/PC2 of a 300-dim vector over 44 words explain a small share of its variance.",
+   "NOT a statement about DisCoCat's expressive limits. A negative locates a failure in THIS build, THIS optimiser, THIS inventory.",
+   "The bounds bound THIS feature map and THIS inventory. They are not ceilings for the task and NO criterion reads against them."
+  ],
+  "word_order_reconciliation_ORCHESTRATOR_REVIEW": "doc 55 SS7.3 requires SVO and VSO to compile to DIFFERENT circuits. exp69 discharges it as DERIVATION-DIFFERS / DENOTATION-EQUAL: the compiled derivation carries the archived reader's Swap for VSO and not for SVO (so the compiler genuinely consults the surface, which is the null-instrument failure SS7.3 exists to catch), and dropping that Swap is measured to yield EXACTLY the role-reversed circuit, so the Swap is load-bearing. The denotations are equal, which is doc 55 SS16.1-Q2's USER-CONFIRMED premise and is FORCED by SS4.7 ('the same six blocks, reused'), SS5's 12/72 conditioning-group arithmetic (no surface-order factor) and SS6.1 (A0 must reproduce exp68 bit-exactly on a dataset that already contains both orders). Consequence carried into the claim: the circuit is invariant to the alternation, so SS6.9's per-surface-order numbers are a data-composition statistic. See results_exp69_smoke_validation.json :: word_order. THE ORCHESTRATOR MAY VETO THIS READING; it is stated in the open rather than assumed.",
+  "part_b_budget_JUDGMENT_CALL": "doc 55 SS18.4 does not fix Part B's cast budget. Part B has 9 x 15 = 135 possible casts and exp69 DRAWS 80 at the registered seed so the budget, the 25-cast test split and n_test = 300 mirror Part A exactly and doc 55 SS6's 0.06 bar transfers exactly rather than approximately. Recorded as a judgment call in the dataset meta.",
+  "confirm_draw_obligation_doc55_SS4_5": "doc 55 SS4.5 registers a CONFIRM DRAW at generator seed + 1000 (= 70000), to be run FOR ANY POSITIVE VERDICT with ALL ARMS PRESENT on the same fresh draw, and doc 47 SS18 is the standing reminder that a headline which survived one draw died on the second. doc 55 SS15 prices it at 4-6 h. It is NOT included in this file. Any positive reported here is a FIRST-DRAW result and doc 55 SS9.2's upside-surprise row explicitly may not be claimed on the first draw alone.",
+  "T1_is_a_qualitative_control": "doc 55 SS6.10(b): the T = 1 arms exist so that a T = 2 failure is read as COMPOSITIONAL rather than as an encoding or pipeline defect. That inference is a PASS/FAIL comparison and never a subtraction."
+ },
+ "git_note": {
+  "repo_head": "f141916",
+  "spec_commit": "da4b8fe",
+  "note": "doc 55 is committed at da4b8fe in qnlp_private_docs and is the binding registration through SS19.7. This run wrote NO git state; the orchestrator reviews and commits."
+ },
+ "wall_time_sec": 0.2335948944091797
+}

@@ -1,0 +1,228 @@
+{
+ "component": "results_exp79_confirm -- confirm draw verdict (doc 71 §10.2)",
+ "written_by": "exp79_confirm_aggregate.py (sole writer)",
+ "registration": "qnlp_private_docs/71_exp79_channel_composition.md §10.2: generator seed 43000, confirm draw ordered 2026-09-09",
+ "when": "2026-09-09T22:45:27Z",
+ "bar_provenance": {
+  "chance_level": 0.5,
+  "bars_are_differential": "vs B1 and vs A2; no 0.65 bar (doc 70 B1 correction)",
+  "significance_primary": "seed-level paired t, df=4, one-sided p<0.05",
+  "significance_descriptive": "item-level sign-flip permutation (reported, not gating)",
+  "a1_gate": "A1 seed-mean within 2 binomial SD of 0.5; above-chance A1 invalidates the draw (doc 22 §3.2 / doc 70 §3.5)"
+ },
+ "missing_units": {},
+ "c1_shards_missing": [],
+ "seed_union_accs": {
+  "C-DISCARD": [
+   0.52467,
+   0.50133,
+   0.51133,
+   0.512,
+   0.506
+  ],
+  "A2": [
+   0.49533,
+   0.524,
+   0.518,
+   0.504,
+   0.51933
+  ],
+  "B1": [
+   0.50533,
+   0.504,
+   0.50733,
+   0.49467,
+   0.504
+  ],
+  "A1": [
+   0.50133,
+   0.5,
+   0.496,
+   0.508,
+   0.514
+  ]
+ },
+ "seed_means": {
+  "C-DISCARD": 0.51107,
+  "A2": 0.51213,
+  "B1": 0.50307,
+  "A1": 0.50387
+ },
+ "significance": {
+  "primary_test": "seed-level paired t (doc 70 B2, df=4, one-sided)",
+  "CDISCARD_vs_B1": {
+   "t": 1.8321,
+   "p": 0.07044,
+   "n": 5,
+   "mean_diff": 0.008,
+   "se": 0.00437,
+   "df": 4
+  },
+  "CDISCARD_vs_A2": {
+   "t": -0.1173,
+   "p": 0.54385,
+   "n": 5,
+   "mean_diff": -0.00107,
+   "se": 0.0091,
+   "df": 4
+  },
+  "descriptive_sign_flip_CDISCARD_vs_B1": {
+   "p": 0.1568,
+   "observed_delta": 0.008,
+   "n_items": 1500,
+   "n_perm": 1000,
+   "note": "DESCRIPTIVE ONLY (doc 70 B2): primary is seed-level t"
+  },
+  "descriptive_sign_flip_CDISCARD_vs_A2": {
+   "p": 0.5365,
+   "observed_delta": -0.00107,
+   "n_items": 1500,
+   "n_perm": 1000,
+   "note": "DESCRIPTIVE ONLY (doc 70 B2): primary is seed-level t"
+  }
+ },
+ "c1_content_earned": {
+  "content_earned": true,
+  "cdiscard_seed_mean_union_acc": 0.51107,
+  "c1_95th_percentile": 0.50907,
+  "n_permutations": 1000,
+  "note": "C1 dial-swap on C-DISCARD with confirm data; 1000 perms seed 4242"
+ },
+ "a1_gate": {
+  "seed_mean_acc": 0.5039,
+  "n_items": 1500,
+  "binomial_sd": 0.01291,
+  "deviation_from_chance": 0.00387,
+  "within_2sd": true,
+  "at_chance": true,
+  "above_chance": false,
+  "invalidates_draw": false,
+  "rule": "doc 22 §3.2 / doc 70 §3.5: A1 above chance (seed-mean union acc outside 2 binomial SD of 0.5) INVALIDATES this confirm draw."
+ },
+ "bars": {
+  "tier_q_channel_confirmed": {
+   "value": false,
+   "legs": {
+    "t_CDISCARD_vs_B1_pass": false,
+    "content_earned_c1": true
+   },
+   "definition": "C-DISCARD beats B1 (seed t p<0.05) AND C1 content_earned (C-DISCARD seed-mean union acc > C1 95th pct permutation)"
+  },
+  "a1_at_chance": {
+   "value": true,
+   "definition": "A1 seed-mean union acc within 2 binomial SD of 0.5; failing this invalidates the draw"
+  },
+  "confirm_verdict": {
+   "value": false,
+   "definition": "tier_q_channel_confirmed AND a1_at_chance; TRUE = first-draw positive on CONFIRM DRAW"
+  }
+ },
+ "c_discard_nonfinite_skips": {
+  "per_seed": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0,
+   "4": 0
+  },
+  "note": "doc 71 §9.3: non-finite grad skip count per seed. Empty list = clean run."
+ },
+ "per_arm_seed_detail": {
+  "C-DISCARD": {
+   "n_units": 5,
+   "seed_union_accs": [
+    0.52467,
+    0.50133,
+    0.51133,
+    0.512,
+    0.506
+   ],
+   "seed_val_accs": [
+    0.546,
+    0.534,
+    0.556,
+    0.568,
+    0.528
+   ],
+   "wall_times_sec": [
+    1022.7,
+    1014.6,
+    1016.6,
+    1023.7,
+    1007.1
+   ]
+  },
+  "A2": {
+   "n_units": 5,
+   "seed_union_accs": [
+    0.49533,
+    0.524,
+    0.518,
+    0.504,
+    0.51933
+   ],
+   "seed_val_accs": [
+    0.546,
+    0.566,
+    0.524,
+    0.532,
+    0.576
+   ],
+   "wall_times_sec": [
+    1077.9,
+    1077.8,
+    1040.6,
+    1052.3,
+    1072.9
+   ]
+  },
+  "B1": {
+   "n_units": 5,
+   "seed_union_accs": [
+    0.50533,
+    0.504,
+    0.50733,
+    0.49467,
+    0.504
+   ],
+   "seed_val_accs": [
+    0.518,
+    0.522,
+    0.518,
+    0.526,
+    0.512
+   ],
+   "wall_times_sec": [
+    235.1,
+    236.7,
+    236.0,
+    236.8,
+    234.6
+   ]
+  },
+  "A1": {
+   "n_units": 5,
+   "seed_union_accs": [
+    0.50133,
+    0.5,
+    0.496,
+    0.508,
+    0.514
+   ],
+   "seed_val_accs": [
+    0.518,
+    0.522,
+    0.516,
+    0.514,
+    0.514
+   ],
+   "wall_times_sec": [
+    366.7,
+    355.2,
+    349.0,
+    356.8,
+    354.5
+   ]
+  }
+ }
+}

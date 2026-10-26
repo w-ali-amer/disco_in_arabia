@@ -1,0 +1,419 @@
+{
+ "experiment": "exp86 -- WHY IDENTITY INIT HELPS -- MECHANISM STUDY",
+ "spec": "qnlp_private_docs/78_exp86_identity_mechanism.md (REGISTERED 2026-09-17)",
+ "written_by": "exp86_aggregate.py (sole writer of this file)",
+ "timestamp": "2026-09-18 10:14:19 +0300",
+ "n_units_loaded": 30,
+ "n_units_expected": 30,
+ "n_complete_pairs": 15,
+ "missing_units": [],
+ "bit_identity_all_passed": true,
+ "bit_identity_failures": [],
+ "verdict_rule": {
+  "SUPPORTED": "test statistic meets the pre-registered threshold in the expected direction",
+  "REFUTED": "opposite direction fires at p < 0.05 (one-sided, other direction)",
+  "UNDECIDED": "neither SUPPORTED nor REFUTED (includes p >= 0.05 without directional reversal)"
+ },
+ "H_PURITY": {
+  "verdict": "SUPPORTED",
+  "hypothesis": "identity-initialized training retains higher readout purity at each arm's selected epoch than uniform-initialized training",
+  "n_pairs": 15,
+  "mean_identity_purity_at_sel": 0.7976129203372532,
+  "mean_uniform_purity_at_sel": 0.4375883748382331,
+  "mean_diff_identity_minus_uniform": 0.3600245454990202,
+  "sd_diff": 0.12739735601308766,
+  "t_stat": 10.945039305214111,
+  "p_one_sided_identity_greater": 1.5094446872569733e-08,
+  "alpha": 0.05,
+  "test": "scipy.stats.ttest_rel(alternative='greater')",
+  "per_seed_detail": [
+   {
+    "seed": 82000,
+    "identity_selected_epoch": 45,
+    "uniform_selected_epoch": 72,
+    "identity_purity_at_sel": 0.7058272019028664,
+    "uniform_purity_at_sel": 0.3947025947024425,
+    "diff_identity_minus_uniform": 0.3111246072004239
+   },
+   {
+    "seed": 82001,
+    "identity_selected_epoch": 60,
+    "uniform_selected_epoch": 78,
+    "identity_purity_at_sel": 0.8562967830896377,
+    "uniform_purity_at_sel": 0.3894284148265918,
+    "diff_identity_minus_uniform": 0.46686836826304595
+   },
+   {
+    "seed": 82002,
+    "identity_selected_epoch": 33,
+    "uniform_selected_epoch": 44,
+    "identity_purity_at_sel": 0.8500619233647982,
+    "uniform_purity_at_sel": 0.48576162427663805,
+    "diff_identity_minus_uniform": 0.3643002990881602
+   },
+   {
+    "seed": 82003,
+    "identity_selected_epoch": 45,
+    "uniform_selected_epoch": 85,
+    "identity_purity_at_sel": 0.9507558323939641,
+    "uniform_purity_at_sel": 0.46797854579985143,
+    "diff_identity_minus_uniform": 0.4827772865941127
+   },
+   {
+    "seed": 82004,
+    "identity_selected_epoch": 15,
+    "uniform_selected_epoch": 119,
+    "identity_purity_at_sel": 0.7253823004166285,
+    "uniform_purity_at_sel": 0.5229365227123102,
+    "diff_identity_minus_uniform": 0.20244577770431837
+   },
+   {
+    "seed": 82005,
+    "identity_selected_epoch": 52,
+    "uniform_selected_epoch": 43,
+    "identity_purity_at_sel": 0.6700449653466543,
+    "uniform_purity_at_sel": 0.48568733188013236,
+    "diff_identity_minus_uniform": 0.1843576334665219
+   },
+   {
+    "seed": 82006,
+    "identity_selected_epoch": 69,
+    "uniform_selected_epoch": 121,
+    "identity_purity_at_sel": 0.6860291051367918,
+    "uniform_purity_at_sel": 0.5424671979745229,
+    "diff_identity_minus_uniform": 0.1435619071622689
+   },
+   {
+    "seed": 82007,
+    "identity_selected_epoch": 31,
+    "uniform_selected_epoch": 54,
+    "identity_purity_at_sel": 0.9235709876815478,
+    "uniform_purity_at_sel": 0.42309307056168716,
+    "diff_identity_minus_uniform": 0.5004779171198606
+   },
+   {
+    "seed": 82008,
+    "identity_selected_epoch": 73,
+    "uniform_selected_epoch": 131,
+    "identity_purity_at_sel": 0.7038489432136218,
+    "uniform_purity_at_sel": 0.4348426178097725,
+    "diff_identity_minus_uniform": 0.2690063254038493
+   },
+   {
+    "seed": 82009,
+    "identity_selected_epoch": 8,
+    "uniform_selected_epoch": 43,
+    "identity_purity_at_sel": 0.9263006139794986,
+    "uniform_purity_at_sel": 0.3859024474521478,
+    "diff_identity_minus_uniform": 0.5403981665273507
+   },
+   {
+    "seed": 82010,
+    "identity_selected_epoch": 11,
+    "uniform_selected_epoch": 38,
+    "identity_purity_at_sel": 0.732592264264822,
+    "uniform_purity_at_sel": 0.34018458016216757,
+    "diff_identity_minus_uniform": 0.3924076841026545
+   },
+   {
+    "seed": 82011,
+    "identity_selected_epoch": 53,
+    "uniform_selected_epoch": 108,
+    "identity_purity_at_sel": 0.8650691791375478,
+    "uniform_purity_at_sel": 0.4906212835262219,
+    "diff_identity_minus_uniform": 0.37444789561132585
+   },
+   {
+    "seed": 82012,
+    "identity_selected_epoch": 17,
+    "uniform_selected_epoch": 132,
+    "identity_purity_at_sel": 0.9440418070554734,
+    "uniform_purity_at_sel": 0.4100550117343664,
+    "diff_identity_minus_uniform": 0.5339867953211069
+   },
+   {
+    "seed": 82013,
+    "identity_selected_epoch": 59,
+    "uniform_selected_epoch": 86,
+    "identity_purity_at_sel": 0.7353804361323516,
+    "uniform_purity_at_sel": 0.4222652057309945,
+    "diff_identity_minus_uniform": 0.3131152304013571
+   },
+   {
+    "seed": 82014,
+    "identity_selected_epoch": 99,
+    "uniform_selected_epoch": 71,
+    "identity_purity_at_sel": 0.6889914619425933,
+    "uniform_purity_at_sel": 0.36789917342364786,
+    "diff_identity_minus_uniform": 0.32109228851894545
+   }
+  ]
+ },
+ "H_DRIFT": {
+  "verdict": "SUPPORTED",
+  "hypothesis": "identity-initialized verb blocks end training nearer to I in Frobenius norm than uniform-initialized blocks",
+  "lazy_training_caveat": "doc 78 SS0: H-DRIFT BOOLEAN reads the endpoint distance-from-I (field a). Path-length-from-own-init (field b) is reported alongside to distinguish 'never moved' (path near zero) from 'moved and returned' (path > endpoint). H-COUPLING carries the causal weight.",
+  "n_pairs": 15,
+  "mean_identity_final_frob_from_I": 11.303447087605793,
+  "mean_uniform_final_frob_from_I": 11.335807344648572,
+  "mean_diff_uniform_minus_identity": 0.032360257042778784,
+  "sd_diff": 0.041634074924277696,
+  "t_stat_uniform_greater": 3.0102923346710546,
+  "p_one_sided_identity_nearer": 0.0046793045877009,
+  "alpha": 0.05,
+  "test": "scipy.stats.ttest_rel(uniform_frob, identity_frob, alternative='greater')",
+  "path_length_identity_mean": 573.8496133675178,
+  "path_length_uniform_mean": 491.5101472606262,
+  "per_seed_detail": [
+   {
+    "seed": 82000,
+    "identity_final_frob_from_I": 11.29952065149943,
+    "uniform_final_frob_from_I": 11.4090944925944,
+    "diff_uniform_minus_identity": 0.1095738410949707,
+    "identity_path_length": 549.4945693810781,
+    "uniform_path_length": 477.3249036620061
+   },
+   {
+    "seed": 82001,
+    "identity_final_frob_from_I": 11.33344062169393,
+    "uniform_final_frob_from_I": 11.32209587097168,
+    "diff_uniform_minus_identity": -0.011344750722249941,
+    "identity_path_length": 592.1896730264028,
+    "uniform_path_length": 513.7227156658968
+   },
+   {
+    "seed": 82002,
+    "identity_final_frob_from_I": 11.265702565511068,
+    "uniform_final_frob_from_I": 11.320470809936523,
+    "diff_uniform_minus_identity": 0.05476824442545514,
+    "identity_path_length": 617.8665122389793,
+    "uniform_path_length": 546.5810014257828
+   },
+   {
+    "seed": 82003,
+    "identity_final_frob_from_I": 11.303507963816324,
+    "uniform_final_frob_from_I": 11.34144385655721,
+    "diff_uniform_minus_identity": 0.0379358927408866,
+    "identity_path_length": 524.9409708629051,
+    "uniform_path_length": 490.3824023703734
+   },
+   {
+    "seed": 82004,
+    "identity_final_frob_from_I": 11.33033037185669,
+    "uniform_final_frob_from_I": 11.34905481338501,
+    "diff_uniform_minus_identity": 0.018724441528320312,
+    "identity_path_length": 552.8746981124083,
+    "uniform_path_length": 485.01807608207065
+   },
+   {
+    "seed": 82005,
+    "identity_final_frob_from_I": 11.325685660044352,
+    "uniform_final_frob_from_I": 11.280797958374023,
+    "diff_uniform_minus_identity": -0.044887701670328184,
+    "identity_path_length": 597.523079832395,
+    "uniform_path_length": 496.0166649470727
+   },
+   {
+    "seed": 82006,
+    "identity_final_frob_from_I": 11.284496307373047,
+    "uniform_final_frob_from_I": 11.317584991455078,
+    "diff_uniform_minus_identity": 0.03308868408203125,
+    "identity_path_length": 569.2025560587645,
+    "uniform_path_length": 487.27118650078773
+   },
+   {
+    "seed": 82007,
+    "identity_final_frob_from_I": 11.283634185791016,
+    "uniform_final_frob_from_I": 11.310162226359049,
+    "diff_uniform_minus_identity": 0.026528040568033262,
+    "identity_path_length": 615.9383714944124,
+    "uniform_path_length": 497.2678638845682
+   },
+   {
+    "seed": 82008,
+    "identity_final_frob_from_I": 11.305667718251547,
+    "uniform_final_frob_from_I": 11.340739727020264,
+    "diff_uniform_minus_identity": 0.035072008768716856,
+    "identity_path_length": 627.2535399198532,
+    "uniform_path_length": 509.7757703314225
+   },
+   {
+    "seed": 82009,
+    "identity_final_frob_from_I": 11.32501252492269,
+    "uniform_final_frob_from_I": 11.338386058807373,
+    "diff_uniform_minus_identity": 0.013373533884683653,
+    "identity_path_length": 516.4267402142286,
+    "uniform_path_length": 454.68869366745156
+   },
+   {
+    "seed": 82010,
+    "identity_final_frob_from_I": 11.292645454406738,
+    "uniform_final_frob_from_I": 11.336102803548178,
+    "diff_uniform_minus_identity": 0.043457349141439394,
+    "identity_path_length": 523.2167719850937,
+    "uniform_path_length": 472.31061613559723
+   },
+   {
+    "seed": 82011,
+    "identity_final_frob_from_I": 11.253981272379557,
+    "uniform_final_frob_from_I": 11.358447074890137,
+    "diff_uniform_minus_identity": 0.10446580251058002,
+    "identity_path_length": 653.0162449081739,
+    "uniform_path_length": 477.6741154938936
+   },
+   {
+    "seed": 82012,
+    "identity_final_frob_from_I": 11.319751898447672,
+    "uniform_final_frob_from_I": 11.34780470530192,
+    "diff_uniform_minus_identity": 0.028052806854248047,
+    "identity_path_length": 562.6467857807875,
+    "uniform_path_length": 493.2437390387058
+   },
+   {
+    "seed": 82013,
+    "identity_final_frob_from_I": 11.310496807098389,
+    "uniform_final_frob_from_I": 11.371045589447021,
+    "diff_uniform_minus_identity": 0.06054878234863281,
+    "identity_path_length": 557.5748391250769,
+    "uniform_path_length": 476.09489267071086
+   },
+   {
+    "seed": 82014,
+    "identity_final_frob_from_I": 11.317832310994467,
+    "uniform_final_frob_from_I": 11.293879191080729,
+    "diff_uniform_minus_identity": -0.023953119913738163,
+    "identity_path_length": 547.5788475722075,
+    "uniform_path_length": 495.27956703305244
+   }
+  ]
+ },
+ "H_COUPLING": {
+  "verdict": "UNDECIDED",
+  "hypothesis": "per-seed accuracy gain (identity - uniform) tracks per-seed purity retention (Spearman rank correlation)",
+  "fires_criterion": "rho >= 0.5 AND permutation p < 0.05",
+  "n_pairs": 15,
+  "spearman_rho": 0.23949964880702104,
+  "fires": false,
+  "permutation_p": 0.1905,
+  "permutation_seed": 86999,
+  "n_permutations": 10000,
+  "rho_threshold": 0.5,
+  "alpha": 0.05,
+  "perm_rho_mean": -0.0036189469321228082,
+  "perm_rho_sd": 0.2686712070156542,
+  "per_seed_detail": [
+   {
+    "seed": 82000,
+    "delta_acc": 0.07999999999999996,
+    "delta_purity": 0.3111246072004239
+   },
+   {
+    "seed": 82001,
+    "delta_acc": 0.06999999999999995,
+    "delta_purity": 0.46686836826304595
+   },
+   {
+    "seed": 82002,
+    "delta_acc": 0.05999999999999994,
+    "delta_purity": 0.3643002990881602
+   },
+   {
+    "seed": 82003,
+    "delta_acc": 0.29333333333333333,
+    "delta_purity": 0.4827772865941127
+   },
+   {
+    "seed": 82004,
+    "delta_acc": -0.046666666666666745,
+    "delta_purity": 0.20244577770431837
+   },
+   {
+    "seed": 82005,
+    "delta_acc": 0.07666666666666666,
+    "delta_purity": 0.1843576334665219
+   },
+   {
+    "seed": 82006,
+    "delta_acc": 0.08666666666666667,
+    "delta_purity": 0.1435619071622689
+   },
+   {
+    "seed": 82007,
+    "delta_acc": 0.19333333333333336,
+    "delta_purity": 0.5004779171198606
+   },
+   {
+    "seed": 82008,
+    "delta_acc": 0.036666666666666625,
+    "delta_purity": 0.2690063254038493
+   },
+   {
+    "seed": 82009,
+    "delta_acc": -0.026666666666666616,
+    "delta_purity": 0.5403981665273507
+   },
+   {
+    "seed": 82010,
+    "delta_acc": -0.046666666666666634,
+    "delta_purity": 0.3924076841026545
+   },
+   {
+    "seed": 82011,
+    "delta_acc": 0.09333333333333327,
+    "delta_purity": 0.37444789561132585
+   },
+   {
+    "seed": 82012,
+    "delta_acc": 0.16999999999999993,
+    "delta_purity": 0.5339867953211069
+   },
+   {
+    "seed": 82013,
+    "delta_acc": 0.16000000000000003,
+    "delta_purity": 0.3131152304013571
+   },
+   {
+    "seed": 82014,
+    "delta_acc": 0.06999999999999995,
+    "delta_purity": 0.32109228851894545
+   }
+  ]
+ },
+ "rng_discipline": {
+  "unit_rng": "ZERO (all per-epoch instrumentation under torch.no_grad on detached copies)",
+  "aggregate_rng": "np.random.default_rng(86999) for the 10000-permutation test ONLY; no other RNG use in the aggregate"
+ },
+ "results_exp82_source": "results_exp82.json",
+ "per_unit_wall_sec": {
+  "A3-T2-identity_s82000": 2278.005963087082,
+  "A3-T2-identity_s82001": 3709.0122628211975,
+  "A3-T2-identity_s82002": 3693.7078580856323,
+  "A3-T2-identity_s82003": 3729.934119939804,
+  "A3-T2-identity_s82004": 3678.12993311882,
+  "A3-T2-identity_s82005": 3694.2728838920593,
+  "A3-T2-identity_s82006": 3778.651179075241,
+  "A3-T2-identity_s82007": 3747.4210381507874,
+  "A3-T2-identity_s82008": 3764.5869500637054,
+  "A3-T2-identity_s82009": 3731.576281785965,
+  "A3-T2-identity_s82010": 3759.860097885132,
+  "A3-T2-identity_s82011": 3781.105008840561,
+  "A3-T2-identity_s82012": 3749.51797413826,
+  "A3-T2-identity_s82013": 3760.865722179413,
+  "A3-T2-identity_s82014": 3743.2895839214325,
+  "A3-T2-uniform_s82000": 3775.128301858902,
+  "A3-T2-uniform_s82001": 3765.7292170524597,
+  "A3-T2-uniform_s82002": 3720.7741861343384,
+  "A3-T2-uniform_s82003": 3740.6724910736084,
+  "A3-T2-uniform_s82004": 3734.3119711875916,
+  "A3-T2-uniform_s82005": 3765.89115691185,
+  "A3-T2-uniform_s82006": 3710.203408241272,
+  "A3-T2-uniform_s82007": 3691.448997735977,
+  "A3-T2-uniform_s82008": 3708.316239833832,
+  "A3-T2-uniform_s82009": 3719.8426060676575,
+  "A3-T2-uniform_s82010": 3732.8933539390564,
+  "A3-T2-uniform_s82011": 3052.343410015106,
+  "A3-T2-uniform_s82012": 3082.9640288352966,
+  "A3-T2-uniform_s82013": 3058.077133178711,
+  "A3-T2-uniform_s82014": 3092.1803646087646
+ }
+}

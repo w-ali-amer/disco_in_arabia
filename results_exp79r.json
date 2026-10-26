@@ -1,0 +1,238 @@
+{
+ "aggregator_sha256": "d51eeb5a955616212ac97ff3bb5ad35f5a1f4d71d98c14b75b0b6d284574946d",
+ "component": "results_exp79r -- C-RESET clean re-run (doc 71 \u00a712, e790627; erratum \u00a712.3)",
+ "criteria": {
+  "channel_preserves_purity_clean": {
+   "consequence_rule": "AGREES with \u00a710 (FALSE): confirmed on clean code",
+   "definition": "doc 71 \u00a73/\u00a71: every queried-pair purity > 0.75 at T=5-10 (exp79_aggregate.aggregate_purity, imported unedited)",
+   "registered_original": false,
+   "value": false
+  },
+  "creset_clean_run_finite": {
+   "per_seed": {
+    "0": {
+     "epochs_run": 30,
+     "nonfinite": 0,
+     "status": "completed"
+    },
+    "1": {
+     "epochs_run": 30,
+     "nonfinite": 0,
+     "status": "completed"
+    },
+    "2": {
+     "epochs_run": 30,
+     "nonfinite": 0,
+     "status": "completed"
+    },
+    "3": {
+     "epochs_run": 30,
+     "nonfinite": 0,
+     "status": "completed"
+    },
+    "4": {
+     "epochs_run": 30,
+     "nonfinite": 0,
+     "status": "completed"
+    }
+   },
+   "value": true
+  }
+ },
+ "determinism_note": "s0/s2/s4 relaunch per-epoch logs identical to exp79r_logs/failed_v1 (30/30 epochs)",
+ "exp79_aggregate_sha256": "1cff38021f29b375cd1156c5f3fe00e57383318198cb74c5705a67433e15f4dc",
+ "inputs_sha256": {
+  "exp79r_ckpt/CRESET_s0.json": "fed612697d3a6d1846e74ce6780a7f3e6fbce2eba11b6c96bcab680783bc2228",
+  "exp79r_ckpt/CRESET_s0_clean_meta.json": "3b94b4a433fe22fb296bf59bc744f749429f82b5c3f0fe041e2e4657a3f13f0a",
+  "exp79r_ckpt/CRESET_s1.json": "4901b0514d6df82ffc7156b5440cf8efac03385867c6eefdf569a8a6c16ab17b",
+  "exp79r_ckpt/CRESET_s1_clean_meta.json": "ca17980609b20e2abd280cf31085f2880b8b7baeebbc5f1e7340c4b9b864f32f",
+  "exp79r_ckpt/CRESET_s2.json": "ee48395c85c6dcb2e73e78e50d7ff663a2753e0342a2b568c3a7e62bb2f29098",
+  "exp79r_ckpt/CRESET_s2_clean_meta.json": "94db34eaa317010ba64dddcfc970346a1b1bdcaa3cf4c4a8d7fcc543df61ab6b",
+  "exp79r_ckpt/CRESET_s3.json": "ab6780b2a9be486f5411484e0993e25b9ed493c27c226a03b2544de80b243530",
+  "exp79r_ckpt/CRESET_s3_clean_meta.json": "efd159ad7dd61e2d269f51caa93607b9168e411ca49378b75cabaae7e142f2ad",
+  "exp79r_ckpt/CRESET_s4.json": "af2e63220d17488816f6f9f086ecf688083193858dddfced33d8799737ccf876",
+  "exp79r_ckpt/CRESET_s4_clean_meta.json": "e67dd90284c74c456f4c831e67bb9b74c6a61fcdc81ac4ab00da7632a123ed77"
+ },
+ "purity_clean": {
+  "T_range_for_gate": [
+   5,
+   10
+  ],
+  "all_above_bar": false,
+  "arm": "C-RESET-clean",
+  "bar_provenance": "doc 71 SS1: registered prediction purity > 0.75 at T=5-10 where A2 measured ~0.50-0.68",
+  "channel_preserves_purity": false,
+  "mean_purity_in_T_range": 0.6075,
+  "n_items_in_T_range": 5000,
+  "n_rows": 7500,
+  "per_T": {
+   "5": {
+    "max": 0.9663,
+    "mean": 0.6394,
+    "min": 0.3231,
+    "n": 280
+   },
+   "6": {
+    "max": 0.9755,
+    "mean": 0.6275,
+    "min": 0.3285,
+    "n": 440
+   },
+   "7": {
+    "max": 0.9377,
+    "mean": 0.6122,
+    "min": 0.2969,
+    "n": 510
+   },
+   "8": {
+    "max": 0.9431,
+    "mean": 0.6284,
+    "min": 0.3257,
+    "n": 660
+   },
+   "9": {
+    "max": 0.9757,
+    "mean": 0.6015,
+    "min": 0.2647,
+    "n": 1380
+   },
+   "10": {
+    "max": 0.9748,
+    "mean": 0.5927,
+    "min": 0.2639,
+    "n": 1730
+   },
+   "12": {
+    "max": 0.8855,
+    "mean": 0.5022,
+    "min": 0.2728,
+    "n": 200
+   },
+   "13": {
+    "max": 0.8442,
+    "mean": 0.4875,
+    "min": 0.264,
+    "n": 300
+   },
+   "14": {
+    "max": 0.8521,
+    "mean": 0.4774,
+    "min": 0.2654,
+    "n": 320
+   },
+   "15": {
+    "max": 0.8954,
+    "mean": 0.4659,
+    "min": 0.2604,
+    "n": 240
+   },
+   "16": {
+    "max": 0.8461,
+    "mean": 0.4718,
+    "min": 0.2638,
+    "n": 250
+   },
+   "17": {
+    "max": 0.8669,
+    "mean": 0.4411,
+    "min": 0.2618,
+    "n": 220
+   },
+   "18": {
+    "max": 0.8606,
+    "mean": 0.4155,
+    "min": 0.2611,
+    "n": 400
+   },
+   "19": {
+    "max": 0.8032,
+    "mean": 0.4325,
+    "min": 0.2626,
+    "n": 330
+   },
+   "20": {
+    "max": 0.7598,
+    "mean": 0.427,
+    "min": 0.2653,
+    "n": 240
+   }
+  },
+  "purity_bar": 0.75
+ },
+ "purity_original_for_comparison": {
+  "all_above_bar": false,
+  "mean_purity_in_T_range": 0.654
+ },
+ "purity_twice_evaluation": {
+  "agrees": true,
+  "independent": {
+   "all_above": false,
+   "frac_above": 0.1804,
+   "mean": 0.6075023276744262,
+   "n": 5000
+  }
+ },
+ "readout_instrumentation": {
+  "0": {
+   "epochs_with_subnormals": [
+    20,
+    22,
+    24,
+    28,
+    29,
+    31,
+    33
+   ],
+   "min_abs": 6.122272990635126e-42,
+   "subnormal_total": 1233
+  },
+  "1": {
+   "epochs_with_subnormals": [
+    19,
+    30,
+    32
+   ],
+   "min_abs": 5.605193857299268e-45,
+   "subnormal_total": 356
+  },
+  "2": {
+   "epochs_with_subnormals": [],
+   "min_abs": 2.8009763550016118e-36,
+   "subnormal_total": 0
+  },
+  "3": {
+   "epochs_with_subnormals": [],
+   "min_abs": 6.016900665545522e-32,
+   "subnormal_total": 0
+  },
+  "4": {
+   "epochs_with_subnormals": [
+    17,
+    20,
+    22,
+    23
+   ],
+   "min_abs": 1.401298464324817e-45,
+   "subnormal_total": 10294
+  }
+ },
+ "union_accuracy_descriptive": {
+  "mean": 0.5053333333333333,
+  "original_section10_mean": 0.5099,
+  "per_seed": {
+   "0": 0.512,
+   "1": 0.496,
+   "2": 0.514,
+   "3": 0.5253333333333333,
+   "4": 0.47933333333333333
+  },
+  "sd": 0.017907168024751056
+ },
+ "val_acc_per_seed": {
+  "0": 0.554,
+  "1": 0.562,
+  "2": 0.57,
+  "3": 0.598,
+  "4": 0.56
+ }
+}

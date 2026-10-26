@@ -1,0 +1,49 @@
+{
+ "meta": {
+  "purpose": "exp77 §2 tier-3 pending: words where gemma3:12b rejected, awaiting haiku cross-check",
+  "acceptance_rule": "admitted iff AraVec-attested AND at least one model accepts; these words have gemma=False/None, require haiku tiebreaker",
+  "n_disagreements": 3,
+  "note": "DO NOT run haiku yourself; leave this file for the orchestrator"
+ },
+ "words": [
+  {
+   "word": "المقدور",
+   "root": "ق.د.ر",
+   "column": "maf3uul",
+   "weak": false,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": false,
+   "tier3_pending": true,
+   "gemma_reason": "While related to the root ق.د.ر, 'المقدور' is uncommon and leans towards dialectal usage rather than standard.",
+   "gemma_raw": "{\"accept\": false, \"reason\": \"While related to the root ق.د.ر, 'المقدور' is uncommon and leans towards dialectal usage rather than standard.\"}"
+  },
+  {
+   "word": "الباتر",
+   "root": "ب.ت.ر",
+   "column": "faail",
+   "weak": false,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": false,
+   "tier3_pending": true,
+   "gemma_reason": "The word \"الباتر\" is not a recognized Modern Standard Arabic term with that root and pattern.",
+   "gemma_raw": "{\"accept\": false, \"reason\": \"The word \\\"الباتر\\\" is not a recognized Modern Standard Arabic term with that root and pattern.\"}"
+  },
+  {
+   "word": "القراب",
+   "root": "ق.ر.ب",
+   "column": "fa33aal",
+   "weak": false,
+   "geminate": false,
+   "aravec_attested": true,
+   "aravec_attested_basis": "word came from AraVec vocab scan",
+   "gemma_verdict": false,
+   "tier3_pending": true,
+   "gemma_reason": "While related to the root ق.ر.ب, 'القراب' isn't a standard intensive agent noun in MSA; it's more archaic/dialectal.",
+   "gemma_raw": "{\"accept\": false, \"reason\": \"While related to the root ق.ر.ب, 'القراب' isn't a standard intensive agent noun in MSA; it's more archaic/dialectal.\"}"
+  }
+ ]
+}

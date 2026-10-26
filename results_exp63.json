@@ -1,0 +1,453 @@
+{
+ "experiment": "exp63",
+ "spec": "qnlp_private_docs/49_exp63_bringing_it_home.md (771df00, FROZEN)",
+ "aggregated_from": "exp63_ckpt/*.json (70 runs, aggregation dated 2026-08-23; runs completed 2026-08-22)",
+ "platform": "macOS-26.5.2-arm64-arm-64bit",
+ "python": "3.12.13",
+ "torch": "2.13.0",
+ "dataset": "stories_exp60_SB.json",
+ "dataset_sha256": "ae94ab9c31d62778e1c916aa44566a0ec3c8f74b09f4bf3839bab5f331c87b8c",
+ "subsample_seed": 63500,
+ "levels": [
+  120,
+  240,
+  470
+ ],
+ "arms": [
+  "S1",
+  "S2",
+  "S-shuffle"
+ ],
+ "cells_run": [
+  "M2",
+  "M3"
+ ],
+ "n_seeds": 5,
+ "n_runs": 70,
+ "sd_convention": "sample sd, ddof=1 (statistics.stdev)",
+ "cells": [
+  {
+   "cell": "M2",
+   "ceilings": {
+    "S1_K1": 0.875,
+    "S2_K2": 1.0,
+    "source": "exp61_bands.CORRECTED_CEILINGS (doc 47 SS17 erratum)",
+    "constant_across_levels": true
+   },
+   "S1": {
+    "120": {
+     "mean": 0.7253333333333334,
+     "sd": 0.0969707859787335,
+     "per_seed": [
+      0.7566666666666667,
+      0.8233333333333334,
+      0.7666666666666667,
+      0.5666666666666667,
+      0.7133333333333334
+     ],
+     "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "n_seeds": 5,
+     "n_train_pairs": [
+      60
+     ],
+     "gap_to_ceiling": 0.14966666666666661
+    },
+    "240": {
+     "mean": 0.754,
+     "sd": 0.04704607670500628,
+     "per_seed": [
+      0.7366666666666667,
+      0.7666666666666667,
+      0.8266666666666667,
+      0.74,
+      0.7
+     ],
+     "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "n_seeds": 5,
+     "n_train_pairs": [
+      120
+     ],
+     "gap_to_ceiling": 0.121
+    },
+    "470": {
+     "mean": 0.7593333333333333,
+     "sd": 0.01187901978747032,
+     "per_seed": [
+      0.7533333333333333,
+      0.78,
+      0.7566666666666667,
+      0.7566666666666667,
+      0.75
+     ],
+     "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "n_seeds": 5,
+     "n_train_pairs": [
+      235
+     ],
+     "gap_to_ceiling": 0.1156666666666667
+    }
+   },
+   "S2": {
+    "120": {
+     "mean": 0.7193333333333334,
+     "sd": 0.04044200236827494,
+     "per_seed": [
+      0.74,
+      0.6966666666666667,
+      0.78,
+      0.7,
+      0.68
+     ],
+     "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "n_seeds": 5,
+     "n_train_pairs": [
+      60
+     ],
+     "gap_to_ceiling": 0.2806666666666666
+    },
+    "240": {
+     "mean": 0.7526666666666667,
+     "sd": 0.034026133747132925,
+     "per_seed": [
+      0.7233333333333334,
+      0.7466666666666667,
+      0.7733333333333333,
+      0.8,
+      0.72
+     ],
+     "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "n_seeds": 5,
+     "n_train_pairs": [
+      120
+     ],
+     "gap_to_ceiling": 0.2473333333333333
+    },
+    "470": {
+     "mean": 0.7726666666666666,
+     "sd": 0.03538675207224056,
+     "per_seed": [
+      0.7533333333333333,
+      0.7266666666666667,
+      0.77,
+      0.8166666666666667,
+      0.7966666666666666
+     ],
+     "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "n_seeds": 5,
+     "n_train_pairs": [
+      235
+     ],
+     "gap_to_ceiling": 0.2273333333333334
+    }
+   },
+   "S_shuffle_floor": {
+    "mean": 0.498,
+    "sd": 0.030147784145586703,
+    "per_seed": [
+     0.54,
+     0.49,
+     0.46,
+     0.4866666666666667,
+     0.5133333333333333
+    ],
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "n_seeds": 5,
+    "n_train_pairs": [
+     235
+    ]
+   },
+   "criteria": {
+    "s2_gap_shrink_120_to_470": 0.05333333333333323,
+    "s2_gap_shrink_equals_accuracy_rise": true,
+    "s2_gap_to_ceiling_by_level": {
+     "120": 0.2806666666666666,
+     "240": 0.2473333333333333,
+     "470": 0.2273333333333334
+    },
+    "s1_moves_vs_120": {
+     "240": 0.028666666666666618,
+     "470": 0.03399999999999992
+    },
+    "s1_stability_max_abs_move": 0.03399999999999992,
+    "s1_delta_120_to_470": 0.03399999999999992,
+    "shrink_meets_bar_0.06": false,
+    "s1_within_band_0.03": false,
+    "k2_gap_closes_with_data": false
+   }
+  },
+  {
+   "cell": "M3",
+   "ceilings": {
+    "S1_K1": 0.7777777777777778,
+    "S2_K2": 0.9444444444444444,
+    "source": "exp61_bands.CORRECTED_CEILINGS (doc 47 SS17 erratum)",
+    "constant_across_levels": true
+   },
+   "S1": {
+    "120": {
+     "mean": 0.6593333333333333,
+     "sd": 0.05423201186671126,
+     "per_seed": [
+      0.6766666666666666,
+      0.69,
+      0.7033333333333334,
+      0.66,
+      0.5666666666666667
+     ],
+     "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "n_seeds": 5,
+     "n_train_pairs": [
+      60
+     ],
+     "gap_to_ceiling": 0.11844444444444446
+    },
+    "240": {
+     "mean": 0.6786666666666666,
+     "sd": 0.024106246309019388,
+     "per_seed": [
+      0.7066666666666667,
+      0.6833333333333333,
+      0.68,
+      0.6833333333333333,
+      0.64
+     ],
+     "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "n_seeds": 5,
+     "n_train_pairs": [
+      120
+     ],
+     "gap_to_ceiling": 0.09911111111111115
+    },
+    "470": {
+     "mean": 0.662,
+     "sd": 0.05555777773333511,
+     "per_seed": [
+      0.66,
+      0.7333333333333333,
+      0.6533333333333333,
+      0.6833333333333333,
+      0.58
+     ],
+     "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "n_seeds": 5,
+     "n_train_pairs": [
+      235
+     ],
+     "gap_to_ceiling": 0.11577777777777776
+    }
+   },
+   "S2": {
+    "120": {
+     "mean": 0.6046666666666667,
+     "sd": 0.03354930037356303,
+     "per_seed": [
+      0.6533333333333333,
+      0.6166666666666667,
+      0.5766666666666667,
+      0.6066666666666667,
+      0.57
+     ],
+     "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "n_seeds": 5,
+     "n_train_pairs": [
+      60
+     ],
+     "gap_to_ceiling": 0.33977777777777773
+    },
+    "240": {
+     "mean": 0.6226666666666667,
+     "sd": 0.025320172019777286,
+     "per_seed": [
+      0.6133333333333333,
+      0.6233333333333333,
+      0.66,
+      0.6266666666666667,
+      0.59
+     ],
+     "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "n_seeds": 5,
+     "n_train_pairs": [
+      120
+     ],
+     "gap_to_ceiling": 0.3217777777777777
+    },
+    "470": {
+     "mean": 0.6326666666666666,
+     "sd": 0.05277836256985959,
+     "per_seed": [
+      0.5566666666666666,
+      0.6,
+      0.6833333333333333,
+      0.6566666666666666,
+      0.6666666666666666
+     ],
+     "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "n_seeds": 5,
+     "n_train_pairs": [
+      235
+     ],
+     "gap_to_ceiling": 0.3117777777777778
+    }
+   },
+   "S_shuffle_floor": {
+    "mean": 0.4866666666666667,
+    "sd": 0.04034572812303401,
+    "per_seed": [
+     0.48,
+     0.4766666666666667,
+     0.5533333333333333,
+     0.44333333333333336,
+     0.48
+    ],
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "n_seeds": 5,
+    "n_train_pairs": [
+     235
+    ]
+   },
+   "criteria": {
+    "s2_gap_shrink_120_to_470": 0.027999999999999914,
+    "s2_gap_shrink_equals_accuracy_rise": true,
+    "s2_gap_to_ceiling_by_level": {
+     "120": 0.33977777777777773,
+     "240": 0.3217777777777777,
+     "470": 0.3117777777777778
+    },
+    "s1_moves_vs_120": {
+     "240": 0.019333333333333313,
+     "470": 0.002666666666666706
+    },
+    "s1_stability_max_abs_move": 0.019333333333333313,
+    "s1_delta_120_to_470": 0.002666666666666706,
+    "shrink_meets_bar_0.06": false,
+    "s1_within_band_0.03": true,
+    "k2_gap_closes_with_data": false
+   }
+  }
+ ],
+ "verdicts": {
+  "k2_gap_closes_with_data": false,
+  "readings": {
+   "per_cell_M2": false,
+   "per_cell_M3": false,
+   "pooled_over_cells": false,
+   "any_cell": false,
+   "all_cells": false
+  },
+  "pooled": {
+   "s2_gap_shrink_120_to_470": 0.04066666666666663,
+   "s1_moves_vs_120": {
+    "240": 0.02400000000000002,
+    "470": 0.018333333333333313
+   },
+   "s1_stability_max_abs_move": 0.02400000000000002
+  },
+  "criterion_bars": {
+   "s2_gap_shrink_min": 0.06,
+   "s1_gap_band": 0.03,
+   "levels_compared": [
+    120,
+    470
+   ]
+  }
+ },
+ "meta_notes": {
+  "headline": "k2_gap_closes_with_data = FALSE, and FALSE under every reading of doc 49 SS6.2's criterion -- per cell (M2, M3), pooled over cells, any-cell and all-cells. No reading of the frozen criterion returns TRUE.",
+  "ceiling_is_constant": "The criterion is stated on S2's GAP TO CEILING, but the ceiling depends only on the cell and on K (exp61_bands.CORRECTED_CEILINGS (doc 47 SS17 erratum)), not on the size of the training set, so it is identical at 120, 240 and 470. The shrink in the gap is therefore numerically equal to the rise in accuracy, and is computed that way.",
+  "M2_near_miss_is_contaminated": "M2's shrink (+0.0533) is the closer of the two to the 0.06 bar, but it is contaminated by a draw-level lift: S1 rose +0.0340 over the same levels, breaching the registered +-0.03 band. That is exactly what doc 49 SS6.2's S1-stability condition exists to catch -- 'without the S1 condition, any draw-level effect that lifts everything would mimic sample complexity'. M2 fails the criterion on BOTH clauses.",
+  "M3_is_clean_and_still_fails": "M3 is the clean cell: S1 is genuinely flat (+0.0027 from 120 to 470, max move 0.0193, inside the band), so there is no draw-level lift to subtract -- and S2 still rises only +0.0280 over roughly 4x the training data, well short of 0.06.",
+  "third_outcome_registered": "doc 49 SS6.2 registered this outcome before the runs: at 470 items and 25 coefficients there are only ~19 items per coefficient, so the gap may shrink WITHOUT closing. That outcome reads 'consistent with sample complexity, insufficient data to confirm.' NEITHER hypothesis is promoted as winning: not sample complexity, and not optimisation/frequency-decay (doc 49 SS6.3). Any extrapolation from these three levels is descriptive only.",
+  "floors": "S-shuffle at full data sits at 0.4980 (M2) and 0.4867 (M3), so the trained arms are above their label-shuffled floors and the cells are admissible; the FALSE verdict is a real measurement, not a dead instrument.",
+  "scope": "One task family (exp60's SB), two cells, five seeds, simulation, constructed categories, no classical comparator. Three subsample levels from a single registered subsample seed (63500); the level-to-level differences carry the seed's draw as well as its size.",
+  "provenance": "Aggregation only: no training was run here and no stored boolean from an earlier experiment changes. The runs completed 2026-08-22; this file is the verdict that should have been written then."
+ },
+ "git_note": {
+  "exp42_paths": [],
+  "n_untracked": 244
+ },
+ "wall_time_sec": 0.031662940979003906
+}

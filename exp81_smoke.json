@@ -1,0 +1,152 @@
+{
+ "component": "exp81 smoke battery (doc 73 §2, doc 70 SS3.6)",
+ "tests": [
+  {
+   "test": "M1 mechanical build + gradient (all 3 arms)",
+   "passed": true,
+   "per_arm": {
+    "A2q2": {
+     "losses": [
+      0.6942730531096458,
+      0.5871377095580101,
+      0.46763959974050523
+     ],
+     "grad_norms": [
+      2.639378124321543,
+      2.2369020194954485,
+      2.414157036359362
+     ],
+     "passed": true
+    },
+    "A2-WIDE": {
+     "losses": [
+      0.8163782581686974,
+      0.6659792885184288,
+      0.613569262623787
+     ],
+     "grad_norms": [
+      4.310933712459809,
+      3.804909124351427,
+      2.4408593919664883
+     ],
+     "passed": true
+    },
+    "A2-RETRAIN": {
+     "losses": [
+      0.6979270428419113,
+      0.620894555747509,
+      0.5515120342373848
+     ],
+     "grad_norms": [
+      2.5172407789250073,
+      2.297325862640115,
+      2.207717707046595
+     ],
+     "passed": true
+    }
+   }
+  },
+  {
+   "test": "M2 zero-coupling A2q2 == A2 (reduction check)",
+   "passed": true,
+   "max_abs_delta": 5.662441253662109e-07,
+   "tol": 1e-05
+  },
+  {
+   "test": "M3 A2q2 param count == A2-WIDE param count",
+   "passed": true,
+   "A2q2_total": 252,
+   "A2WIDE_total": 252
+  },
+  {
+   "test": "M4 A2q2 max-K forward (K=12, 2^24 amplitudes)",
+   "passed": true,
+   "K": 12,
+   "n_amplitudes": 16777216,
+   "val_pos": 0.007219,
+   "val_neg": 0.002708
+  },
+  {
+   "test": "SG-ZC zero-coupling A2q2 == A2 (self-emitting)",
+   "passed": true,
+   "zero_coup_delta": 5.662441253662109e-07,
+   "rand_coup_delta": 0.003186512738466263,
+   "dtf_shown_failing": true,
+   "artifact": "exp81_gate_SG_ZC.json"
+  },
+  {
+   "test": "SG-FS fixed-scramble floor (self-emitting)",
+   "passed": true,
+   "floor_admissible": true,
+   "scrambled_acc": 0.53,
+   "dtf_shown_failing": true,
+   "artifact": "exp81_gate_SG_FS.json"
+  },
+  {
+   "test": "SG-PC param-count A2q2 == A2-WIDE (self-emitting)",
+   "passed": true,
+   "A2q2_total": 252,
+   "A2WIDE_total": 252,
+   "ratios": {
+    "A2q2_over_A2": 1.05,
+    "A2WIDE_over_A2": 1.05,
+    "A2WIDE_over_A2q2": 1.0
+   },
+   "dtf_shown_failing": true,
+   "artifact": "exp81_gate_SG_PC.json"
+  }
+ ],
+ "all_passed": true,
+ "gate_artifacts": [
+  "exp81_gate_SG_ZC.json",
+  "exp81_gate_SG_FS.json",
+  "exp81_gate_SG_PC.json"
+ ],
+ "designed_to_fail_builds": [
+  "SG-ZC random-coupling A2q2 == A2 (shown failing)",
+  "SG-FS scrambled_acc >= 0.70 (shown failing)",
+  "SG-PC A2q2 total == A2 total (shown failing; A2q2 > A2)",
+  "M4 zero-coupling used so no new entanglement (state finite, not DTF)"
+ ],
+ "torch_version": "2.13.0",
+ "python_version": "3.12.13",
+ "provenance": {
+  "dataset": {
+   "path": "stories_exp41r.json",
+   "sha256": "2326942ffb6ccf6bca95a7ec0502c82563957fabb159b143608a9fb31f8f3113",
+   "n_items": 4000,
+   "generator_seed": 41000,
+   "pin_doc65_SS6_3": "2326942ffb6ccf6bca95a7ec0502c82563957fabb159b143608a9fb31f8f3113",
+   "pin_matches": true
+  },
+  "embeddings": {
+   "path": "exp42_noun_embeddings.json",
+   "sha256": "00c1ecffcaf05b38df082f8a3cbed1d013bddb3e39bc00adf1c2513b4ea674ac",
+   "n": 44,
+   "source": "aravec/full_uni_cbow_300_twitter.mdl + ta-marbuta normalization + PCA-2D over the 44 referent vectors + unit norm"
+  },
+  "c5_gate": {
+   "file": "results_exp40r.json",
+   "harness_calibrated": true,
+   "qualifying_seeds": [
+    0,
+    2,
+    3
+   ],
+   "verdict_rule": ">=1 of 5 seeds: 100% train AND 100% validA AND >=95% valid_comp",
+   "reproduces_august_exactly": true,
+   "august_reference_read_only": "results_exp40b.json"
+  },
+  "untouched_committed_artifacts": [
+   "exp42_run.py",
+   "results_exp42.json",
+   "results_exp40b.json",
+   "exp42_models.py",
+   "exp42_baselines.py",
+   "exp42_controls.py",
+   "exp42_compiler.py",
+   "stories_exp41.json"
+  ]
+ },
+ "wall_time_sec": 6.5
+}

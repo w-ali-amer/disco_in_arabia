@@ -1,0 +1,560 @@
+{
+  "meta": {
+    "experiment": "exp84 — FUSED-VOCAB WAZN-BPE + stage-2 LM",
+    "registration": "/home/waj/qnlp_private_docs/76_exp84_fused_vocab_tokenizer.md",
+    "sole_writer": "exp84_aggregate.py",
+    "errors": [],
+    "lm_units_missing": []
+  },
+  "corpus": {
+    "experiment": "exp84",
+    "n_articles": 3673,
+    "n_lines": 277644,
+    "file_bytes": 78399881,
+    "sha256_actual": "9789f99ce75116eadf5ac494a2e3b1d5501eab55e6963e5f58fbe835e697121a",
+    "sha256_expected": "8cde0c825e3c058340b78d9f3a54af95f32d3e78a4d3cd880e1b6f325a1ead63",
+    "sha256_verdict": "FALLBACK_FIRED",
+    "sha256_reproduced": false,
+    "delta_lines": 0,
+    "delta_bytes": -276073,
+    "elapsed_s": 43.7,
+    "note": "corpus frozen at download; all three tokenizers retrained on it"
+  },
+  "gates": {
+    "per_gate": {
+      "vocab_accounting": {
+        "gate_id": "exp84_gate_vocab_accounting",
+        "description": "FUSED vocab allocation sums to exactly 32,000",
+        "real_check": {
+          "n_special": 3,
+          "n_tmpl": 3993,
+          "n_fused": 8000,
+          "n_bpe_budget": 20004,
+          "total": 32000,
+          "target": 32000,
+          "gate_fires": true,
+          "verdict": "PASS: vocab accounting exact"
+        },
+        "dtf_leg": {
+          "description": "Designed-to-fail: n_fused=N_FUSED+1 overflows budget",
+          "n_fused_injected": 8001,
+          "n_bpe_budget_computed": 20003,
+          "total_computed": 32000,
+          "budget_negative": false,
+          "dtf_gate_fires": false,
+          "verdict": "DTF_DOES_NOT_FIRE: overflow undetected — UNEXPECTED"
+        }
+      },
+      "derangement": {
+        "gate_id": "exp84_gate_derangement",
+        "description": "Corrupted skeleton map tanks FUSED expanded boundary F1",
+        "real_check": {
+          "description": "Designed-to-fail: deranged template→skeleton map on FUSED expanded F1",
+          "derangement_seed": 999,
+          "n_templates_deranged": 3993,
+          "f1_real_fused_expanded": 0.5785,
+          "f1_deranged_fused_expanded": 0.2567,
+          "delta_f1": 0.3217,
+          "gate_fires": true,
+          "verdict": "GATE_FIRES: corrupted expanded F1 tanks as expected"
+        },
+        "dtf_leg": {
+          "description": "The DTF run IS the corrupt check above (same gate structure as exp80)",
+          "f1_deranged": 0.2567,
+          "threshold_checked": "f1_corrupt < f1_real - 0.10",
+          "gate_fires": true,
+          "verdict": "GATE_FIRES: corrupted expanded F1 tanks as expected"
+        }
+      },
+      "expansion_determinism": {
+        "gate_id": "exp84_gate_expansion_determinism",
+        "description": "Every fused token maps to exactly one valid 3-part decomposition",
+        "real_check": {
+          "n_fused_checked": 8000,
+          "n_invalid_decomps": 0,
+          "invalid_examples": [],
+          "n_duplicate_decomps": 313,
+          "duplicate_examples": [
+            {
+              "word": "علي",
+              "conflicts_with": "على"
+            },
+            {
+              "word": "حتَّى",
+              "conflicts_with": "حتى"
+            },
+            {
+              "word": "مُحمَّد",
+              "conflicts_with": "محمد"
+            },
+            {
+              "word": "ثُمَّ",
+              "conflicts_with": "ثم"
+            },
+            {
+              "word": "أنَّهُ",
+              "conflicts_with": "أنه"
+            }
+          ],
+          "gate_fires": true,
+          "verdict": "PASS: all fused tokens have valid decompositions"
+        },
+        "dtf_leg": {
+          "description": "Inject synthetic entry with 1-part root; gate must catch it",
+          "injected_word": "__TEST_INVALID__",
+          "injected_parts": [
+            "xx"
+          ],
+          "n_invalid_after_injection": 1,
+          "dtf_gate_fires": true,
+          "verdict": "DTF_FIRES: invalid decomposition detected as expected"
+        }
+      }
+    },
+    "summary": {
+      "vocab_accounting_fires": true,
+      "derangement_fires": true,
+      "expansion_determinism_fires": true,
+      "all_gates_fire": true,
+      "dtf_vocab_accounting_fires": false,
+      "dtf_derangement_fires": true,
+      "dtf_expansion_determinism_fires": true
+    }
+  },
+  "tokenizer_evaluate": {
+    "experiment": "exp84 — FUSED-VOCAB WAZN-BPE",
+    "registration": "/home/waj/qnlp_private_docs/76_exp84_fused_vocab_tokenizer.md",
+    "per_seed": [
+      {
+        "seed": 42,
+        "fertility": {
+          "heldout_lines_used": 20000,
+          "bpe": {
+            "fertility": 1.381825,
+            "comp": 3.6399
+          },
+          "wazn": {
+            "fertility": 3.049451,
+            "comp": 1.6494,
+            "ratio_over_bpe": 2.206829,
+            "bar_wazn_improves_over_bpe": false
+          },
+          "fused": {
+            "fertility": 1.824266,
+            "comp": 2.7571,
+            "ratio_over_bpe": 1.320186,
+            "bar_fertility_competitive": false,
+            "bar_def": "FUSED fertility ≤ 1.10 × BPE"
+          }
+        },
+        "gold_set_meta": {
+          "n_weak_candidates": 14411,
+          "n_strong_candidates": 27995,
+          "n_gold": 2000,
+          "n_weak_in_gold": 600,
+          "actual_weak_frac": 0.3,
+          "mismatch_drops": 9212
+        },
+        "boundary_f1": {
+          "overall": {
+            "bpe": {
+              "p": 0.2668,
+              "r": 0.1566,
+              "f1": 0.1974,
+              "n": 2000
+            },
+            "wazn": {
+              "p": 0.9006,
+              "r": 0.4261,
+              "f1": 0.5785,
+              "n": 2000
+            },
+            "fused_expanded": {
+              "p": 0.9006,
+              "r": 0.4261,
+              "f1": 0.5785,
+              "n": 2000
+            },
+            "fused_surface": {
+              "p": 0.2713,
+              "r": 0.1558,
+              "f1": 0.198,
+              "n": 2000
+            },
+            "gap_wazn_over_bpe": 0.3811,
+            "gap_fused_over_bpe": 0.3811,
+            "bar_wazn_boundaries_recovered": true,
+            "bar_boundaries_kept": true,
+            "bar_def": "FUSED expanded F1 ≥ BPE F1 + 0.10"
+          },
+          "weak_stratum": {
+            "bpe": {
+              "p": 0.2626,
+              "r": 0.1575,
+              "f1": 0.1969,
+              "n": 600
+            },
+            "wazn": {
+              "p": 0.9208,
+              "r": 0.4423,
+              "f1": 0.5975,
+              "n": 600
+            },
+            "fused_expanded": {
+              "p": 0.9208,
+              "r": 0.4423,
+              "f1": 0.5975,
+              "n": 600
+            },
+            "fused_surface": {
+              "p": 0.2656,
+              "r": 0.1562,
+              "f1": 0.1967,
+              "n": 600
+            }
+          },
+          "strong_stratum": {
+            "bpe": {
+              "p": 0.2687,
+              "r": 0.1563,
+              "f1": 0.1976,
+              "n": 1400
+            },
+            "wazn": {
+              "p": 0.8916,
+              "r": 0.419,
+              "f1": 0.5701,
+              "n": 1400
+            },
+            "fused_expanded": {
+              "p": 0.8916,
+              "r": 0.419,
+              "f1": 0.5701,
+              "n": 1400
+            },
+            "fused_surface": {
+              "p": 0.2739,
+              "r": 0.1557,
+              "f1": 0.1985,
+              "n": 1400
+            }
+          }
+        },
+        "named_outcome": "TAX_PERSISTS: boundary gap kept, but fertility still high",
+        "bars": {
+          "fertility_competitive": false,
+          "boundaries_kept": true,
+          "TAX_CUT": false
+        }
+      },
+      {
+        "seed": 43,
+        "fertility": {
+          "heldout_lines_used": 20000,
+          "bpe": {
+            "fertility": 1.379707,
+            "comp": 3.6459
+          },
+          "wazn": {
+            "fertility": 3.042843,
+            "comp": 1.6532,
+            "ratio_over_bpe": 2.205427,
+            "bar_wazn_improves_over_bpe": false
+          },
+          "fused": {
+            "fertility": 1.822217,
+            "comp": 2.7605,
+            "ratio_over_bpe": 1.320728,
+            "bar_fertility_competitive": false,
+            "bar_def": "FUSED fertility ≤ 1.10 × BPE"
+          }
+        },
+        "gold_set_meta": {
+          "n_weak_candidates": 14365,
+          "n_strong_candidates": 27853,
+          "n_gold": 2000,
+          "n_weak_in_gold": 600,
+          "actual_weak_frac": 0.3,
+          "mismatch_drops": 9181
+        },
+        "boundary_f1": {
+          "overall": {
+            "bpe": {
+              "p": 0.2574,
+              "r": 0.1505,
+              "f1": 0.1899,
+              "n": 2000
+            },
+            "wazn": {
+              "p": 0.8857,
+              "r": 0.412,
+              "f1": 0.5624,
+              "n": 2000
+            },
+            "fused_expanded": {
+              "p": 0.8857,
+              "r": 0.412,
+              "f1": 0.5624,
+              "n": 2000
+            },
+            "fused_surface": {
+              "p": 0.2609,
+              "r": 0.1481,
+              "f1": 0.1889,
+              "n": 2000
+            },
+            "gap_wazn_over_bpe": 0.3725,
+            "gap_fused_over_bpe": 0.3725,
+            "bar_wazn_boundaries_recovered": true,
+            "bar_boundaries_kept": true,
+            "bar_def": "FUSED expanded F1 ≥ BPE F1 + 0.10"
+          },
+          "weak_stratum": {
+            "bpe": {
+              "p": 0.244,
+              "r": 0.1421,
+              "f1": 0.1796,
+              "n": 600
+            },
+            "wazn": {
+              "p": 0.896,
+              "r": 0.3752,
+              "f1": 0.5289,
+              "n": 600
+            },
+            "fused_expanded": {
+              "p": 0.896,
+              "r": 0.3752,
+              "f1": 0.5289,
+              "n": 600
+            },
+            "fused_surface": {
+              "p": 0.246,
+              "r": 0.137,
+              "f1": 0.176,
+              "n": 600
+            }
+          },
+          "strong_stratum": {
+            "bpe": {
+              "p": 0.2634,
+              "r": 0.1542,
+              "f1": 0.1945,
+              "n": 1400
+            },
+            "wazn": {
+              "p": 0.8817,
+              "r": 0.4283,
+              "f1": 0.5766,
+              "n": 1400
+            },
+            "fused_expanded": {
+              "p": 0.8817,
+              "r": 0.4283,
+              "f1": 0.5766,
+              "n": 1400
+            },
+            "fused_surface": {
+              "p": 0.2674,
+              "r": 0.153,
+              "f1": 0.1946,
+              "n": 1400
+            }
+          }
+        },
+        "named_outcome": "TAX_PERSISTS: boundary gap kept, but fertility still high",
+        "bars": {
+          "fertility_competitive": false,
+          "boundaries_kept": true,
+          "TAX_CUT": false
+        }
+      },
+      {
+        "seed": 44,
+        "fertility": {
+          "heldout_lines_used": 20000,
+          "bpe": {
+            "fertility": 1.380975,
+            "comp": 3.64
+          },
+          "wazn": {
+            "fertility": 3.043933,
+            "comp": 1.6514,
+            "ratio_over_bpe": 2.204191,
+            "bar_wazn_improves_over_bpe": false
+          },
+          "fused": {
+            "fertility": 1.823715,
+            "comp": 2.7563,
+            "ratio_over_bpe": 1.320599,
+            "bar_fertility_competitive": false,
+            "bar_def": "FUSED fertility ≤ 1.10 × BPE"
+          }
+        },
+        "gold_set_meta": {
+          "n_weak_candidates": 14299,
+          "n_strong_candidates": 27838,
+          "n_gold": 2000,
+          "n_weak_in_gold": 600,
+          "actual_weak_frac": 0.3,
+          "mismatch_drops": 9159
+        },
+        "boundary_f1": {
+          "overall": {
+            "bpe": {
+              "p": 0.2712,
+              "r": 0.1641,
+              "f1": 0.2045,
+              "n": 2000
+            },
+            "wazn": {
+              "p": 0.8673,
+              "r": 0.4144,
+              "f1": 0.5609,
+              "n": 2000
+            },
+            "fused_expanded": {
+              "p": 0.8673,
+              "r": 0.4144,
+              "f1": 0.5609,
+              "n": 2000
+            },
+            "fused_surface": {
+              "p": 0.2776,
+              "r": 0.1625,
+              "f1": 0.205,
+              "n": 2000
+            },
+            "gap_wazn_over_bpe": 0.3564,
+            "gap_fused_over_bpe": 0.3564,
+            "bar_wazn_boundaries_recovered": true,
+            "bar_boundaries_kept": true,
+            "bar_def": "FUSED expanded F1 ≥ BPE F1 + 0.10"
+          },
+          "weak_stratum": {
+            "bpe": {
+              "p": 0.2617,
+              "r": 0.1476,
+              "f1": 0.1887,
+              "n": 600
+            },
+            "wazn": {
+              "p": 0.9015,
+              "r": 0.3979,
+              "f1": 0.5521,
+              "n": 600
+            },
+            "fused_expanded": {
+              "p": 0.9015,
+              "r": 0.3979,
+              "f1": 0.5521,
+              "n": 600
+            },
+            "fused_surface": {
+              "p": 0.2696,
+              "r": 0.1449,
+              "f1": 0.1885,
+              "n": 600
+            }
+          },
+          "strong_stratum": {
+            "bpe": {
+              "p": 0.2752,
+              "r": 0.1717,
+              "f1": 0.2115,
+              "n": 1400
+            },
+            "wazn": {
+              "p": 0.8533,
+              "r": 0.422,
+              "f1": 0.5647,
+              "n": 1400
+            },
+            "fused_expanded": {
+              "p": 0.8533,
+              "r": 0.422,
+              "f1": 0.5647,
+              "n": 1400
+            },
+            "fused_surface": {
+              "p": 0.2809,
+              "r": 0.1705,
+              "f1": 0.2122,
+              "n": 1400
+            }
+          }
+        },
+        "named_outcome": "TAX_PERSISTS: boundary gap kept, but fertility still high",
+        "bars": {
+          "fertility_competitive": false,
+          "boundaries_kept": true,
+          "TAX_CUT": false
+        }
+      }
+    ],
+    "aggregate": {
+      "fertility_competitive_all_seeds": false,
+      "boundaries_kept_all_seeds": true,
+      "TAX_CUT_all_seeds": false,
+      "mean_fertility_bpe": 1.380836,
+      "mean_fertility_wazn": 3.045409,
+      "mean_fertility_fused": 1.823399,
+      "mean_ratio_fused_over_bpe": 1.320504,
+      "mean_f1_bpe": 0.1973,
+      "mean_f1_wazn": 0.5673,
+      "mean_f1_fused_expanded": 0.5673,
+      "named_outcomes": [
+        "TAX_PERSISTS: boundary gap kept, but fertility still high"
+      ]
+    },
+    "elapsed_s": 10857.5
+  },
+  "lm": {
+    "bits_per_char": {
+      "bpe": {
+        "per_seed": {
+          "0": 3.222224,
+          "1": 3.228089
+        },
+        "mean": 3.225157
+      },
+      "wazn": {
+        "per_seed": {
+          "0": 4.544735,
+          "1": 4.549763
+        },
+        "mean": 4.547249
+      },
+      "fused": {
+        "per_seed": {
+          "0": 3.539609,
+          "1": 3.541576
+        },
+        "mean": 3.540592
+      }
+    },
+    "bpe_mean_bpc": 3.225157,
+    "wazn_mean_bpc": 4.547249,
+    "fused_mean_bpc": 3.540592,
+    "lm_helps_per_seed": {
+      "0": false,
+      "1": false
+    },
+    "mean_gap_min_wazn_fused_over_bpe": -0.315436,
+    "wazn_lm_helps": false,
+    "NO_LM_SIGNAL": true,
+    "bar_def": "wazn_lm_helps = min(WAZN-BPE, FUSED) bpc < BPE bpc in BOTH seeds with mean gap ≥ 0.02 bits/char"
+  },
+  "bars": {
+    "fertility_competitive": false,
+    "boundaries_kept": true,
+    "TAX_CUT": false,
+    "wazn_lm_helps": false,
+    "NO_LM_SIGNAL": true,
+    "third_outcome": "TAX_PERSISTS"
+  },
+  "named_outcomes_from_evaluate": [
+    "TAX_PERSISTS: boundary gap kept, but fertility still high"
+  ],
+  "verdict": "TAX_CUT=FAIL (TAX_PERSISTS) | NO_LM_SIGNAL"
+}

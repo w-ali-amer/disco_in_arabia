@@ -1,0 +1,125 @@
+{
+ "experiment": "exp68 V-suite kill-gate",
+ "spec": "qnlp_private_docs/54_exp68_width_lever.md (1025d21, FROZEN)",
+ "design_doc_of_dataset": "qnlp_private_docs/54_exp68_width_lever.md (1025d21, FROZEN)",
+ "rung": "SB (width lever)",
+ "dataset": "stories_exp68_WN.json",
+ "dataset_sha256": "9a0b990088a89f5c2697da6f470891a9472fe8e3f4fc2a9d94b81911d54a6ec1",
+ "dataset_seed": 68000,
+ "category": {
+  "key": "nonoccupational",
+  "gloss": "non-occupational state",
+  "source": "instrument_sb_bounds.CATEGORIES -- doc 54 SS5.2, user-confirmed 2026-08-23; imported, never retyped",
+  "glosses": {
+   "الرجل": "man",
+   "الولد": "boy",
+   "المسافر": "traveller",
+   "المريض": "patient"
+  }
+ },
+ "bearers": [
+  "الرجل",
+  "المريض",
+  "المسافر",
+  "الولد"
+ ],
+ "split_counts": {
+  "train": 528,
+  "val": 132,
+  "test": 300
+ },
+ "split_unit": "CAST -- a (bearer, non-bearer) pairing; never within a pair",
+ "rederivation_note": "RE-DERIVED for the held-out-PAIRING split (doc 54 SS6.5, doc 46 SS8). exp60's V2-H bar and V6 held-out bar are NOT inherited: under a pairing split a token model transfers by design, so those bars would fail the dataset for satisfying its registration. They are replaced by V5 (split integrity + train coverage) and V7 (label definition), and the un-gated numbers are recorded in full with doc 54 SS10's scope limit attached.",
+ "V1_bag_of_embeddings": {
+  "test_accuracy": 0.5,
+  "twin_features_identical": true,
+  "n_twin_pairs_checked": 150,
+  "passed": true
+ },
+ "V2_ngram": {
+  "seen_pairings_val_accuracy": 1.0,
+  "unseen_pairings_test_accuracy": 1.0,
+  "n_features": 408,
+  "gated": false,
+  "exp60_V2H_bar_not_inherited": 0.55,
+  "why_no_bar": "exp60 split by referent inventory, so a surface model HAD to fail on held-out nouns and 0.55 was the instrument that enforced it. exp68 splits by PAIRING (doc 54 SS6.1.1): the same 24 nouns appear in train and test, the surface names both referents, so token identity transfers BY DESIGN. Importing the bar would fail the dataset for satisfying its own registration. The price is paid in the CLAIM instead -- doc 54 SS10: exp68 is not novel-filler generalisation and may never be reported as such. The compiled circuit consumes per-referent angles only and never sees a token, so this shortcut is available to surface baselines and to nothing exp68 measures."
+ },
+ "V3_balance": {
+  "verb_p": 1.0,
+  "bearer_wire_p": 1.0,
+  "order_flag_p": 1.0,
+  "wire0_noun_p": 1.0,
+  "agent_noun_p_DESCRIPTIVE": 4.2241644402759876e-188,
+  "n_yes": 480,
+  "n_no": 480,
+  "classes_balanced": true,
+  "min_p": 1.0,
+  "passed": true
+ },
+ "V4_dedup_on_circuits": {
+  "n_distinct_circuits": 960,
+  "n_items": 960,
+  "n_contradictory": 0,
+  "all_circuits_distinct": true,
+  "passed": true
+ },
+ "V5_split_integrity": {
+  "n_train_casts": 44,
+  "n_val_casts": 11,
+  "n_test_casts": 25,
+  "casts_disjoint_across_splits": true,
+  "bearers_covered_in_train": true,
+  "nonbearers_covered_in_train": true,
+  "referents_missing_from_train_casts": [],
+  "n_test_items": 300,
+  "n_test_items_is_registered_300": true,
+  "why_coverage_matters": "without it, 'unseen pairing' degenerates into 'unseen noun' for any referent absent from every train cast, and the split stops measuring what doc 54 SS6.1.1 says it measures",
+  "passed": true
+ },
+ "V6_token_identity_probe": {
+  "seen_pairings_val_accuracy": 1.0,
+  "unseen_pairings_test_accuracy": 1.0,
+  "must_succeed_on_seen_pairings": true,
+  "train_bar": 0.8,
+  "heldout_gated": false,
+  "exp60_heldout_bar_not_inherited": 0.55,
+  "why_heldout_not_gated": "the noun inventory is shared across splits by construction (doc 54 SS6.1.1), so a noun-identity probe transfers to unseen PAIRINGS. That is a property of the registered split, not a defect. It is exactly why doc 54 SS10 forbids the novel-filler reading, and it is recorded here so the limitation travels with the dataset.",
+  "passed": true
+ },
+ "V7_label_definition": {
+  "items_violating_label_rule": [],
+  "n_violations": 0,
+  "items_without_exactly_one_bearer": [],
+  "n_cast_violations": 0,
+  "per_split_balance": {
+   "train": {
+    "yes": 264,
+    "no": 264
+   },
+   "val": {
+    "yes": 66,
+    "no": 66
+   },
+   "test": {
+    "yes": 150,
+    "no": 150
+   }
+  },
+  "balanced_in_every_split": true,
+  "passed": true
+ },
+ "gates": {
+  "V1": true,
+  "V3": true,
+  "V4": true,
+  "V5": true,
+  "V6": true,
+  "V7": true
+ },
+ "ungated_recorded": [
+  "V2 (both halves)",
+  "V6 unseen-pairings half"
+ ],
+ "kill_gate_passed": true,
+ "consequence_if_failed": "doc 46 SS9: any gate red and Stage B never runs -- a new doc is required, not a patch."
+}

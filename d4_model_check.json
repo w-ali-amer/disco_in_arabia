@@ -1,0 +1,1519 @@
+{
+ "meta": {
+  "check": "D4 model lexical double-check of candidate_human_nouns.json",
+  "date": "2026-08-28",
+  "n_reviewed": 600,
+  "source_file": "candidate_human_nouns.json",
+  "criterion": "each noun must reliably denote A HUMAN BEING (person: occupation, role, nationality, attribute-bearer) usable as a referent in who-did-what-to-whom stories",
+  "method": "model Arabic lexical judgement over the full 600, no corpus counts consulted; judgements about DOMINANT Twitter usage are informed estimates, not measurements",
+  "decision_rules_applied": {
+   "nisba_nationality": "nationality/affiliation nisbas (اليمني، الكويتي) are human-denoting persons -- keep",
+   "occupation_participle": "occupation and participle forms are the core -- keep",
+   "surname_test": "when a word is a common Arabic surname AND a plausible descriptor, ask whether the DEFINITE form still has a live, frequent common-noun use on Twitter beyond the name; if not, veto as proper_name; if yes, keep_with_note recording the collision",
+   "collective_rule": "veto when the dominant reading is a non-individual collective or institution (الحرس، البوليس، الحريم، الحضر); keep_with_note when it is a countable human plural that merely violates the masculine-singular convention (المشائخ، الدراويش، الكفار، الخدم)",
+   "divine_names": "veto when the definite standalone form is dominantly a divine name or a name element عبد+X (الرزاق، القهار، الوكيل); keep_with_note when a live human reading dominates despite the divine homograph (المؤمن، الوارث، الرقيب)",
+   "relational_adjective": "veto nisba/participle forms whose dominant use is attributive to NON-humans and which lack a common bare person-noun use (الفني، الاقتصادي، التقني، الحرفي); keep السياسي because the bare person-noun use is genuinely common"
+  },
+  "caveat": "this is an reviewery model check, not the doc 59 SS6 gate protocol; nothing here is a membership confirmation and no source file was modified",
+  "orthographic_variant_of_flagged_note": "empty by finding: every orthographic-variant pair detected (المسئول/المسؤول، الانجليزي/الانكليزي/الانقليزي، الاوروبي/الاوربي/الاروبي، الامريكي/الاميركي، اليمني/اليماني، القارئ/القاري، البروفسور/البروفيسور، الاخ/الاخو، الاب/الابو، الطاغية-الطاغيه/الطاغي) is a variant of a KEPT entry, so those are recorded in keep_with_note naming the duplicate rather than vetoed"
+ },
+ "counts": {
+  "n_reviewed": 600,
+  "veto_recommended": 81,
+  "veto_by_reason_class": {
+   "proper_name": 26,
+   "divine_attribute": 12,
+   "non_human_referent": 9,
+   "ambiguous_dominant_nonhuman": 34,
+   "orthographic_variant_of_flagged": 0
+  },
+  "keep_with_note": 185,
+  "clean_count": 334
+ },
+ "veto_recommended": [
+  {
+   "noun": "الرزاق",
+   "reason_class": "divine_attribute",
+   "reason": "One of the 99 names (al-Razzaq, the Provider). The bare definite form is used of God or inside the personal name عبد الرزاق; there is no ordinary human 'provider' noun."
+  },
+  {
+   "noun": "الجبار",
+   "reason_class": "divine_attribute",
+   "reason": "Divine name (الواحد الجبار / عبد الجبار). Residual non-divine use is the adjective 'gigantic, overpowering', not a person."
+  },
+  {
+   "noun": "القهار",
+   "reason_class": "divine_attribute",
+   "reason": "Divine name (الواحد القهار). No independent human-denoting use."
+  },
+  {
+   "noun": "الفتاح",
+   "reason_class": "divine_attribute",
+   "reason": "Divine name (al-Fattah) and the name element عبد الفتاح. 'Opener' is not a human occupation noun in modern usage."
+  },
+  {
+   "noun": "المهيمن",
+   "reason_class": "divine_attribute",
+   "reason": "Divine name (al-Muhaymin, the Guardian). Otherwise a participle applied to states and powers, not a person noun."
+  },
+  {
+   "noun": "الخالق",
+   "reason_class": "divine_attribute",
+   "reason": "Divine name (the Creator) and the name element عبد الخالق; human 'creator' is expressed by مبدع/صانع."
+  },
+  {
+   "noun": "البصير",
+   "reason_class": "divine_attribute",
+   "reason": "Divine name, overwhelmingly in the fixed pair السميع البصير; its adjacency in frequency rank to السميع (6938/6939) confirms formulaic co-occurrence."
+  },
+  {
+   "noun": "السميع",
+   "reason_class": "divine_attribute",
+   "reason": "Divine name, in the fixed pair السميع البصير and in عبد السميع; the human 'listener' sense is السامع/المستمع."
+  },
+  {
+   "noun": "الحليم",
+   "reason_class": "divine_attribute",
+   "reason": "Divine name and the name element عبد الحليم (heavily boosted by عبد الحليم حافظ); human 'forbearing' is a marginal residue."
+  },
+  {
+   "noun": "المنعم",
+   "reason_class": "divine_attribute",
+   "reason": "Divine epithet, and in practice almost always the name element عبد المنعم."
+  },
+  {
+   "noun": "المولي",
+   "reason_class": "divine_attribute",
+   "reason": "المولى in definite standalone form is dominantly God (نعم المولى ونعم النصير). The human 'master/patron' reading is archaic."
+  },
+  {
+   "noun": "الوكيل",
+   "reason_class": "divine_attribute",
+   "reason": "Twitter usage of the definite form is dominated by the formula حسبنا الله ونعم الوكيل, a divine epithet, not the administrative 'agent/undersecretary' sense."
+  },
+  {
+   "noun": "الاحمد",
+   "reason_class": "proper_name",
+   "reason": "Family name (Al-Ahmad). The elative 'more praiseworthy' is not used as a standalone definite noun."
+  },
+  {
+   "noun": "الحمود",
+   "reason_class": "proper_name",
+   "reason": "Family name (Al-Hammoud), common in the Gulf and the Levant; the intensive adjective 'praiseworthy' has no live standalone use."
+  },
+  {
+   "noun": "الغانم",
+   "reason_class": "proper_name",
+   "reason": "Gulf family name (Al-Ghanim); the active participle 'one who takes spoils' is marginal."
+  },
+  {
+   "noun": "الناصر",
+   "reason_class": "proper_name",
+   "reason": "Given/family name and above all the name element عبد الناصر; the surname reading dominates the definite form."
+  },
+  {
+   "noun": "القرشي",
+   "reason_class": "proper_name",
+   "reason": "Tribal nisba to Quraysh, functioning on Twitter as a family name."
+  },
+  {
+   "noun": "التميمي",
+   "reason_class": "proper_name",
+   "reason": "Tribal nisba/family name (Al-Tamimi)."
+  },
+  {
+   "noun": "الهاشمي",
+   "reason_class": "proper_name",
+   "reason": "Clan nisba/family name (Al-Hashimi), also a dynastic label; not a generic person descriptor."
+  },
+  {
+   "noun": "الاحمدي",
+   "reason_class": "proper_name",
+   "reason": "Family name, a Kuwaiti governorate/city (الأحمدي), and a sect label; no generic human-descriptor use."
+  },
+  {
+   "noun": "الادريسي",
+   "reason_class": "proper_name",
+   "reason": "Dynastic/family name (al-Idrisi), including the geographer; not a descriptor."
+  },
+  {
+   "noun": "الشافعي",
+   "reason_class": "proper_name",
+   "reason": "Dominantly the imam al-Shafi'i and the family name; the madhhab-adherent reading is a distant second."
+  },
+  {
+   "noun": "المالكي",
+   "reason_class": "proper_name",
+   "reason": "Dominantly the family name (نوري المالكي and others); the madhhab-adherent reading is minor on Twitter."
+  },
+  {
+   "noun": "الخميني",
+   "reason_class": "proper_name",
+   "reason": "Personal name (Khomeini); no common-noun reading at all."
+  },
+  {
+   "noun": "السعدي",
+   "reason_class": "proper_name",
+   "reason": "Family name / dynastic label (Al-Saadi, the Saadi dynasty)."
+  },
+  {
+   "noun": "الاسدي",
+   "reason_class": "proper_name",
+   "reason": "Tribal nisba and family name (Al-Asadi); the literal 'lion-like' reading is not a person noun."
+  },
+  {
+   "noun": "الطبري",
+   "reason_class": "proper_name",
+   "reason": "Dominantly the historian/exegete al-Tabari (تفسير الطبري، تاريخ الطبري); the 'from Tabaristan' descriptor is negligible."
+  },
+  {
+   "noun": "القرطبي",
+   "reason_class": "proper_name",
+   "reason": "Dominantly the exegete al-Qurtubi (تفسير القرطبي); the 'Cordovan' descriptor is negligible."
+  },
+  {
+   "noun": "الغندور",
+   "reason_class": "proper_name",
+   "reason": "Family name, and on Egyptian football Twitter overwhelmingly خالد الغندور; the 'dandy' common noun is marginal."
+  },
+  {
+   "noun": "المختار",
+   "reason_class": "proper_name",
+   "reason": "Dominantly proper reference (عمر المختار، المختار الثقفي، المصطفى المختار); the 'village headman' sense is weak on Twitter."
+  },
+  {
+   "noun": "المعتصم",
+   "reason_class": "proper_name",
+   "reason": "Caliphal name (al-Mu'tasim) and a given name; the CAMeL gloss 'refuge/secure place' is itself non-human."
+  },
+  {
+   "noun": "المامون",
+   "reason_class": "proper_name",
+   "reason": "Caliphal name (al-Ma'mun) and a given name; 'trustworthy' is an adjective, not a person noun."
+  },
+  {
+   "noun": "الطارق",
+   "reason_class": "proper_name",
+   "reason": "Dominantly the given name طارق and the Quranic surah/star الطارق; the participle 'knocker' is not a referent noun."
+  },
+  {
+   "noun": "العساف",
+   "reason_class": "proper_name",
+   "reason": "Gulf/Levantine family and given name (Assaf); the 'despot' gloss has no live currency."
+  },
+  {
+   "noun": "الهواري",
+   "reason_class": "proper_name",
+   "reason": "Maghrebi tribal nisba and family/given name (هوارة, هواري بومدين); not a descriptor."
+  },
+  {
+   "noun": "العسيري",
+   "reason_class": "proper_name",
+   "reason": "Family name; although a regional nisba (from Asir), the surname reading dominates on Saudi Twitter and there is no live descriptor use."
+  },
+  {
+   "noun": "الصبحان",
+   "reason_class": "proper_name",
+   "reason": "Gulf family name (Al-Sabhan); the dialectal adjective 'comely' is marginal."
+  },
+  {
+   "noun": "البخيت",
+   "reason_class": "proper_name",
+   "reason": "Given name and family name (Bakhit); 'lucky' as a standalone definite noun is marginal."
+  },
+  {
+   "noun": "الهرم",
+   "reason_class": "non_human_referent",
+   "reason": "Dominantly 'the pyramid' and the Giza district الهرم; the CAMeL gloss 'senility/old age' is itself an abstraction, not a person."
+  },
+  {
+   "noun": "القاني",
+   "reason_class": "non_human_referent",
+   "reason": "A colour adjective (crimson/deep red) applied to objects; no human reading."
+  },
+  {
+   "noun": "الحاد",
+   "reason_class": "non_human_referent",
+   "reason": "Adjective 'sharp/acute' applied to things (جدل حاد، منحنى حاد), plus frequent hamza-less spelling of الإلحاد 'atheism'; neither is a person."
+  },
+  {
+   "noun": "الهين",
+   "reason_class": "non_human_referent",
+   "reason": "Predicative adjective of situations (ليس بالأمر الهين); does not pick out a person."
+  },
+  {
+   "noun": "الطاغوت",
+   "reason_class": "non_human_referent",
+   "reason": "Denotes a false object of worship / idolatrous power, an abstraction or idol rather than an individual person."
+  },
+  {
+   "noun": "الحريم",
+   "reason_class": "non_human_referent",
+   "reason": "Denotes the harem quarters or an undifferentiated collective of women, not a masculine singular individual."
+  },
+  {
+   "noun": "الحرس",
+   "reason_class": "non_human_referent",
+   "reason": "An institution/corps (الحرس الوطني، الحرس الثوري، الحرس الجمهوري), not an individual guard; collective rule applied."
+  },
+  {
+   "noun": "البوليس",
+   "reason_class": "non_human_referent",
+   "reason": "Denotes the police force as an institution; collective rule applied (the individual is شرطي/عسكري)."
+  },
+  {
+   "noun": "الحضر",
+   "reason_class": "non_human_referent",
+   "reason": "A mass collective ('the settled population'), with no singular person reading; also the Iraqi site الحضر (Hatra)."
+  },
+  {
+   "noun": "الحادي",
+   "reason_class": "ambiguous_dominant_nonhuman",
+   "reason": "Dominant sense is the ordinal 'eleventh' (الحادي عشر، القرن الحادي والعشرين); the 'cameleer/leader' reading is archaic poetry."
+  },
+  {
+   "noun": "الخليل",
+   "reason_class": "ambiguous_dominant_nonhuman",
+   "reason": "Dominant sense is the city Hebron (الخليل) and the epithet of Ibrahim إبراهيم الخليل; 'intimate friend' is a distant third."
+  },
+  {
+   "noun": "الخصم",
+   "reason_class": "ambiguous_dominant_nonhuman",
+   "reason": "Dominant sense is 'discount/deduction' (خصم 50%، الخصم من الراتب); the 'adversary' reading is secondary."
+  },
+  {
+   "noun": "الدافع",
+   "reason_class": "ambiguous_dominant_nonhuman",
+   "reason": "Dominant sense is 'motive/incentive' (الدافع وراء، دافع الفضول); 'payer' is rare in the definite form."
+  },
+  {
+   "noun": "الراهن",
+   "reason_class": "ambiguous_dominant_nonhuman",
+   "reason": "Dominant sense is 'current/present' (الوقت الراهن، الوضع الراهن); the legal 'mortgagor' reading is negligible."
+  },
+  {
+   "noun": "الحاصل",
+   "reason_class": "ambiguous_dominant_nonhuman",
+   "reason": "Dominant senses are 'what has happened / in short' (الحاصل أن) and 'the obtained result'; the 'holder' reading needs a following genitive."
+  },
+  {
+   "noun": "الدليل",
+   "reason_class": "ambiguous_dominant_nonhuman",
+   "reason": "Dominant sense is 'evidence/proof' and 'directory/guidebook'; the human 'guide' reading is a minority."
+  },
+  {
+   "noun": "الخليط",
+   "reason_class": "ambiguous_dominant_nonhuman",
+   "reason": "Dominant sense is 'mixture/blend' (خليط من); the archaic 'associate' reading is negligible."
+  },
+  {
+   "noun": "المقرر",
+   "reason_class": "ambiguous_dominant_nonhuman",
+   "reason": "Dominant sense is the school/university course or the decreed thing (المقرر الدراسي، من المقرر أن); the 'rapporteur' reading is institutional jargon."
+  },
+  {
+   "noun": "الموال",
+   "reason_class": "ambiguous_dominant_nonhuman",
+   "reason": "Dominant sense is the mawwal, a sung folk-verse genre; the 'financier' gloss is not the Twitter reading."
+  },
+  {
+   "noun": "الراب",
+   "reason_class": "ambiguous_dominant_nonhuman",
+   "reason": "Dominant sense on Twitter is rap music (موسيقى الراب، مغني الراب); the 'stepfather' gloss is archaic and effectively unused."
+  },
+  {
+   "noun": "الشغال",
+   "reason_class": "ambiguous_dominant_nonhuman",
+   "reason": "Dominant dialectal sense is 'working/functioning' said of devices and services; the 'labourer' reading is secondary."
+  },
+  {
+   "noun": "الفني",
+   "reason_class": "ambiguous_dominant_nonhuman",
+   "reason": "Dominant use is the relational adjective 'technical' modifying non-humans (العطل الفني، الجهاز الفني); unlike السياسي it has no common bare person-noun use."
+  },
+  {
+   "noun": "الاقتصادي",
+   "reason_class": "ambiguous_dominant_nonhuman",
+   "reason": "Dominant use is 'economic' modifying non-humans (الوضع/النمو الاقتصادي); the bare 'economist' noun is rare without خبير."
+  },
+  {
+   "noun": "التقني",
+   "reason_class": "ambiguous_dominant_nonhuman",
+   "reason": "Dominant use is 'technical/tech' modifying non-humans (الدعم التقني، المجال التقني)."
+  },
+  {
+   "noun": "الحرفي",
+   "reason_class": "ambiguous_dominant_nonhuman",
+   "reason": "Dominant use is 'literal' (المعنى الحرفي، النقل الحرفي); the 'artisan' reading is a minority."
+  },
+  {
+   "noun": "الشرقي",
+   "reason_class": "ambiguous_dominant_nonhuman",
+   "reason": "Dominant use is geographic modification (المنطقة الشرقية، الساحل الشرقي) rather than a person."
+  },
+  {
+   "noun": "السلطاني",
+   "reason_class": "ambiguous_dominant_nonhuman",
+   "reason": "Dominant use modifies institutions and things (الديوان السلطاني، البلاط السلطاني، الأمر السلطاني)."
+  },
+  {
+   "noun": "الاسلامي",
+   "reason_class": "ambiguous_dominant_nonhuman",
+   "reason": "Dominant use is attributive to non-humans (العالم الإسلامي، الدين/البنك الإسلامي); a Muslim person is المسلم, which is separately in the inventory."
+  },
+  {
+   "noun": "السامي",
+   "reason_class": "ambiguous_dominant_nonhuman",
+   "reason": "Dominant use is 'lofty/august' in Gulf officialese (المقام السامي، الأمر السامي); the 'Semite' reading is academic."
+  },
+  {
+   "noun": "الراقي",
+   "reason_class": "ambiguous_dominant_nonhuman",
+   "reason": "Dominant use is the adjective 'refined/classy' (الذوق الراقي، المستوى الراقي); the 'ruqya practitioner' reading is niche."
+  },
+  {
+   "noun": "الرقيق",
+   "reason_class": "ambiguous_dominant_nonhuman",
+   "reason": "Dominant sense is the adjective 'soft/delicate/gentle'; the 'slaves' reading is a historical mass noun, not an individual person."
+  },
+  {
+   "noun": "الصغير",
+   "reason_class": "ambiguous_dominant_nonhuman",
+   "reason": "Dominant use is the size adjective applied to any noun (الحجم/المشروع الصغير); the 'little one' person reading is a minority."
+  },
+  {
+   "noun": "القريب",
+   "reason_class": "ambiguous_dominant_nonhuman",
+   "reason": "Dominant use is 'near' in time and space (المستقبل القريب، في القريب العاجل); 'relative/kinsman' is secondary."
+  },
+  {
+   "noun": "السوفيتي",
+   "reason_class": "ambiguous_dominant_nonhuman",
+   "reason": "Dominant use is the fixed collocation الاتحاد السوفيتي; unlike other nationality nisbas it rarely stands alone for a person."
+  },
+  {
+   "noun": "المعتمد",
+   "reason_class": "ambiguous_dominant_nonhuman",
+   "reason": "Dominant use is 'approved/accredited' modifying documents, programmes and accounts (الحساب/البرنامج المعتمد)."
+  },
+  {
+   "noun": "المشترك",
+   "reason_class": "ambiguous_dominant_nonhuman",
+   "reason": "Dominant use is 'joint/shared' (العمل المشترك، القاسم المشترك); the 'subscriber' reading is telecom jargon."
+  },
+  {
+   "noun": "المستعمل",
+   "reason_class": "ambiguous_dominant_nonhuman",
+   "reason": "Dominant use is 'used/second-hand' modifying goods (سيارة مستعملة، الجوال المستعمل); 'user' is المستخدم, separately in the inventory."
+  },
+  {
+   "noun": "المزخرف",
+   "reason_class": "ambiguous_dominant_nonhuman",
+   "reason": "Dominant use is 'ornamented/decorated' modifying objects and text; 'interior decorator' is a lexicographic gloss, not a Twitter sense."
+  },
+  {
+   "noun": "القائم",
+   "reason_class": "ambiguous_dominant_nonhuman",
+   "reason": "Dominant use is 'existing/standing' modifying situations (الوضع القائم، النظام القائم); the human reading needs the annexed القائم بأعمال."
+  },
+  {
+   "noun": "السمان",
+   "reason_class": "ambiguous_dominant_nonhuman",
+   "reason": "Dominant senses are the quail (طائر السمان) and the family name Al-Samman; the 'butter merchant' trade term is obsolete."
+  },
+  {
+   "noun": "الساهر",
+   "reason_class": "ambiguous_dominant_nonhuman",
+   "reason": "Dominant references on Gulf Twitter are the Saher traffic-camera system (نظام ساهر) and the singer كاظم الساهر; 'night reveller' is marginal."
+  },
+  {
+   "noun": "القرين",
+   "reason_class": "ambiguous_dominant_nonhuman",
+   "reason": "In the dominant religious usage this is the jinn companion attached to a person, i.e. a non-human being; the 'comrade' reading is literary."
+  },
+  {
+   "noun": "المصاص",
+   "reason_class": "ambiguous_dominant_nonhuman",
+   "reason": "Dominant use is the fixed compound مصاص دماء 'vampire', a fictional non-human; the 'extortionist' metaphor is derivative."
+  }
+ ],
+ "keep_with_note": [
+  {
+   "noun": "المسئول",
+   "note": "Hamza-variant duplicate of المسؤول (also in the inventory); same word, both kept only because both are AraVec vocabulary types."
+  },
+  {
+   "noun": "المسؤول",
+   "note": "Hamza-variant duplicate of المسئول (also in the inventory)."
+  },
+  {
+   "noun": "القارئ",
+   "note": "Hamza-variant duplicate of القاري (also in the inventory, mis-glossed there as 'villager')."
+  },
+  {
+   "noun": "القاري",
+   "note": "Hamza-less spelling of القارئ 'reader' (also in the inventory); the CAMeL gloss 'villager' is a spurious قروي reading."
+  },
+  {
+   "noun": "الانجليزي",
+   "note": "Orthographic duplicate of الانكليزي and الانقليزي, both also in the inventory."
+  },
+  {
+   "noun": "الانكليزي",
+   "note": "Orthographic duplicate of الانجليزي and الانقليزي, both also in the inventory."
+  },
+  {
+   "noun": "الانقليزي",
+   "note": "Rare orthographic duplicate of الانجليزي / الانكليزي, both also in the inventory."
+  },
+  {
+   "noun": "الاوروبي",
+   "note": "Orthographic duplicate of الاوربي and الاروبي, both also in the inventory."
+  },
+  {
+   "noun": "الاوربي",
+   "note": "Orthographic duplicate of الاوروبي and الاروبي, both also in the inventory."
+  },
+  {
+   "noun": "الاروبي",
+   "note": "Misspelled duplicate of الاوروبي / الاوربي, both also in the inventory."
+  },
+  {
+   "noun": "الامريكي",
+   "note": "Orthographic duplicate of الاميركي (also in the inventory)."
+  },
+  {
+   "noun": "الاميركي",
+   "note": "Orthographic duplicate of الامريكي (also in the inventory)."
+  },
+  {
+   "noun": "اليمني",
+   "note": "Near-duplicate of اليماني (also in the inventory); اليمني is the ordinary nationality form."
+  },
+  {
+   "noun": "اليماني",
+   "note": "Classical/poetic variant of اليمني (also in the inventory); on Twitter also carries the eschatological figure اليماني."
+  },
+  {
+   "noun": "البروفسور",
+   "note": "Transliteration duplicate of البروفيسور (also in the inventory)."
+  },
+  {
+   "noun": "البروفيسور",
+   "note": "Transliteration duplicate of البروفسور (also in the inventory)."
+  },
+  {
+   "noun": "الاخ",
+   "note": "Base form; الاخو (also in the inventory) is its non-standard variant."
+  },
+  {
+   "noun": "الاخو",
+   "note": "Non-standard written form of الاخ (also in the inventory), from dialectal/construct spellings; human but orthographically defective."
+  },
+  {
+   "noun": "الاب",
+   "note": "Base form; الابو (also in the inventory) is its non-standard variant."
+  },
+  {
+   "noun": "الابو",
+   "note": "Non-standard written form of الاب (also in the inventory), from أبو-constructions; human but orthographically defective."
+  },
+  {
+   "noun": "البحريني",
+   "note": "Nationality form; contrast البحراني (also in the inventory), which in usage denotes Bahraini Shia specifically."
+  },
+  {
+   "noun": "البحراني",
+   "note": "Confessional/regional near-duplicate of البحريني (also in the inventory)."
+  },
+  {
+   "noun": "الطاغيه",
+   "note": "Ta-marbuta written as ه; equals الطاغية 'tyrant', and is a near-duplicate of الطاغي (also in the inventory). Human but wazn-tagged nisba_yaa in error."
+  },
+  {
+   "noun": "الطاغي",
+   "note": "Variant of الطاغية / الطاغيه (also in the inventory)."
+  },
+  {
+   "noun": "الاعمي",
+   "note": "Alif-maqsura written as ya (الأعمى). Human, but the spelling is defective."
+  },
+  {
+   "noun": "الكازخستاني",
+   "note": "Non-standard spelling of الكازاخستاني 'Kazakhstani'. Human nationality nisba."
+  },
+  {
+   "noun": "الاثيوبي",
+   "note": "Modern nationality form; الحبشي (also in the inventory) is the older/ethnic near-synonym."
+  },
+  {
+   "noun": "الحبشي",
+   "note": "Older ethnic term for the same referent as الاثيوبي (also in the inventory); also a common family name."
+  },
+  {
+   "noun": "المشائخ",
+   "note": "Broken plural 'sheikhs' — human, but violates the masculine-singular convention of the inventory."
+  },
+  {
+   "noun": "الدراويش",
+   "note": "Broken plural 'dervishes' — human, but plural; also a nickname for Zamalek/Ahli fan groups in Egyptian football talk."
+  },
+  {
+   "noun": "الكفار",
+   "note": "Plural 'infidels' — human, but plural; heavily polemical register."
+  },
+  {
+   "noun": "الكرام",
+   "note": "Plural of كريم used of people (الضيوف الكرام) — human, but plural and formulaic."
+  },
+  {
+   "noun": "الخدم",
+   "note": "Plural 'servants/domestic workers' — human, but plural."
+  },
+  {
+   "noun": "الهمج",
+   "note": "Collective plural 'riffraff/barbarians' — human referents, but plural and purely abusive."
+  },
+  {
+   "noun": "الموالي",
+   "note": "Plural — either the historical 'clients/mawali' (human) or 'lords/masters' with divine overtones; plural and ambiguous."
+  },
+  {
+   "noun": "الست",
+   "note": "Refers to a woman ('the lady', Egyptian ست); female referent despite the inventory's masculine convention, and also the fixed epithet of Umm Kulthum."
+  },
+  {
+   "noun": "العروس",
+   "note": "In modern usage denotes the bride (female); the 'bridegroom' gloss is the classical sense. Female referent."
+  },
+  {
+   "noun": "العانس",
+   "note": "Denotes an unmarried woman past the usual age; female referent and a pejorative."
+  },
+  {
+   "noun": "العاقر",
+   "note": "'Barren' — almost always predicated of a woman; female referent and highly marked."
+  },
+  {
+   "noun": "العجوز",
+   "note": "Human ('old person') but frequently female-referring in dialect and pejorative."
+  },
+  {
+   "noun": "المنغولي",
+   "note": "Nationality term (Mongolian) but on Twitter mostly a slur for a person with Down syndrome; human but abusive."
+  },
+  {
+   "noun": "الخول",
+   "note": "Human (Egyptian slur for an effeminate or passive homosexual man); extremely vulgar."
+  },
+  {
+   "noun": "الديوث",
+   "note": "Human (a man complicit in his womenfolk's dishonour); vulgar religious insult."
+  },
+  {
+   "noun": "المعرص",
+   "note": "Human (pimp/cuckold); among the most vulgar Levantine-Egyptian insults."
+  },
+  {
+   "noun": "القواد",
+   "note": "Human (pimp/procurer); vulgar."
+  },
+  {
+   "noun": "الشاذ",
+   "note": "Human in the dominant Twitter usage (slur for a homosexual person); the neutral 'anomalous' adjective also exists."
+  },
+  {
+   "noun": "الخسيس",
+   "note": "Used as an insult for a person, but the CAMeL gloss ('mean trick, infamy') shows an abstract reading is also live."
+  },
+  {
+   "noun": "الغرقان",
+   "note": "Dialectal participle 'drowned/soaked'; applies to people but also to soaked objects."
+  },
+  {
+   "noun": "الطفران",
+   "note": "Dialectal 'broke, penniless'; human but colloquial."
+  },
+  {
+   "noun": "الندمان",
+   "note": "Dialectal/classical 'repentant'; also the classical نديم 'drinking companion'. Human, marked register."
+  },
+  {
+   "noun": "الشيبان",
+   "note": "Gulf dialect plural/collective 'old men' as well as the tribal name شيبان; human but not a masculine singular."
+  },
+  {
+   "noun": "الجدع",
+   "note": "Egyptian dialect 'the decent/stand-up guy'; human, colloquial."
+  },
+  {
+   "noun": "الشب",
+   "note": "Levantine dialect 'the young guy'; also the homograph الشب 'alum'. Human, colloquial."
+  },
+  {
+   "noun": "العيل",
+   "note": "Egyptian dialect 'the kid/child' (human); the CAMeL gloss 'family/household' reflects the classical collective sense."
+  },
+  {
+   "noun": "الريس",
+   "note": "Dialectal form of الرئيس; human, colloquial (boss/skipper)."
+  },
+  {
+   "noun": "البياع",
+   "note": "Dialectal 'salesman'; human, colloquial."
+  },
+  {
+   "noun": "الشحات",
+   "note": "Egyptian 'beggar' (human) and also a common Egyptian family name."
+  },
+  {
+   "noun": "النكات",
+   "note": "Dialectal 'joker'; human, but the plural النكات 'the jokes' is a homograph."
+  },
+  {
+   "noun": "الخراط",
+   "note": "Egyptian 'bullshitter/braggart' and the trade 'lathe turner'; human, colloquial."
+  },
+  {
+   "noun": "الحرامي",
+   "note": "Dialectal 'thief'; human, colloquial."
+  },
+  {
+   "noun": "المطوع",
+   "note": "Gulf 'religious enforcer / Quran teacher'; human, regionally marked."
+  },
+  {
+   "noun": "الخواجة",
+   "note": "Human ('the Westerner/foreigner'), but colloquial-Egyptian and now somewhat dated; ta-marbuta form."
+  },
+  {
+   "noun": "العمدة",
+   "note": "Human (village headman); ta-marbuta form, Egyptian institutional term."
+  },
+  {
+   "noun": "الداعية",
+   "note": "Human (preacher/propagandist); ta-marbuta form, and the CAMeL gloss also lists a non-human 'motive' reading."
+  },
+  {
+   "noun": "الباشا",
+   "note": "Human honorific title; Ottoman-era and now colloquial address."
+  },
+  {
+   "noun": "الاهتم",
+   "note": "Rare ('toothless'); also the classical name الأهتم. Human but very low currency."
+  },
+  {
+   "noun": "الخب",
+   "note": "Rare classical 'deceiver'; low currency and easily confused with dialectal خب."
+  },
+  {
+   "noun": "الحم",
+   "note": "Rare 'father-in-law'; the bare definite spelling is largely a fragment/noise on Twitter."
+  },
+  {
+   "noun": "البعل",
+   "note": "Human ('husband') only in classical/legal register; modern hits also include Baal and rain-fed agriculture (زراعة بعلية)."
+  },
+  {
+   "noun": "الاواب",
+   "note": "Quranic epithet 'oft-repentant' (human referent) but confined to religious quotation."
+  },
+  {
+   "noun": "العشير",
+   "note": "Archaic 'companion/consort'; low currency."
+  },
+  {
+   "noun": "الانيس",
+   "note": "Literary adjective 'affable'; also a given name أنيس."
+  },
+  {
+   "noun": "المياس",
+   "note": "Rare poetic 'swaggering'; also a given name."
+  },
+  {
+   "noun": "الوادع",
+   "note": "Rare; effectively the literary الوديع 'gentle one'. The CAMeL gloss 'consignor' is legal jargon."
+  },
+  {
+   "noun": "الضحوك",
+   "note": "Rare intensive adjective 'much-laughing'; human-applying but low currency."
+  },
+  {
+   "noun": "البشوش",
+   "note": "Adjective 'cheerful, smiling'; human-applying, evaluative rather than referential."
+  },
+  {
+   "noun": "الدمث",
+   "note": "Literary adjective 'mild-mannered'; human-applying, low currency."
+  },
+  {
+   "noun": "الحرار",
+   "note": "Obsolete trade term 'silk weaver'; survives chiefly as a family name."
+  },
+  {
+   "noun": "البزار",
+   "note": "Obsolete trade term 'seed seller'; survives chiefly as the family name al-Bazzar (hadith transmitter)."
+  },
+  {
+   "noun": "الصبان",
+   "note": "Obsolete trade term 'soap boiler'; survives chiefly as a family name."
+  },
+  {
+   "noun": "الخراص",
+   "note": "Quranic 'liar/conjecturer' (قتل الخراصون); human but confined to quotation."
+  },
+  {
+   "noun": "العلام",
+   "note": "Chiefly the divine formula علام الغيوب; the human 'great expert' reading is weak."
+  },
+  {
+   "noun": "الغاوي",
+   "note": "Human ('seducer' or dialectal 'enthusiast/amateur'), but the two senses pull apart sharply by register."
+  },
+  {
+   "noun": "الفذ",
+   "note": "Evaluative adjective 'peerless', used attributively of persons (قائد فذ); human-applying but not a referent noun on its own."
+  },
+  {
+   "noun": "الحابل",
+   "note": "Human only inside the frozen idiom اختلط الحابل بالنابل; no independent referential use."
+  },
+  {
+   "noun": "البليغ",
+   "note": "Human as 'eloquent speaker', but the adjective mostly modifies speech and effects (الأثر البليغ)."
+  },
+  {
+   "noun": "الابتر",
+   "note": "Human ('amputee') but also Quranic polemic (إن شانئك هو الأبتر) and 'docked' of animals."
+  },
+  {
+   "noun": "النسيب",
+   "note": "Human 'kinsman/in-law', but نسيب is also the amatory prelude of a qasida."
+  },
+  {
+   "noun": "الجليس",
+   "note": "Human ('sitting companion'), literary/hadith register (الجليس الصالح)."
+  },
+  {
+   "noun": "الغفير",
+   "note": "Human 'watchman' in Egyptian usage (خفير/غفير), but also the idiom الجم الغفير 'the multitude'."
+  },
+  {
+   "noun": "المؤمن",
+   "note": "Also a divine name (al-Mu'min), but the human 'believer' reading is overwhelmingly dominant on Twitter."
+  },
+  {
+   "noun": "الوارث",
+   "note": "Also a divine name (al-Warith); the human 'heir' reading is live in legal and everyday talk."
+  },
+  {
+   "noun": "الرقيب",
+   "note": "Also a divine name and a military rank; the human 'observer/censor/sergeant' readings are live."
+  },
+  {
+   "noun": "النصير",
+   "note": "Also part of the divine formula نعم المولى ونعم النصير; the human 'supporter' reading survives, and it is a given name."
+  },
+  {
+   "noun": "الحافظ",
+   "note": "Also a divine name and a family name; the human 'Quran memoriser / custodian' reading is live and frequent."
+  },
+  {
+   "noun": "المليك",
+   "note": "Elevated 'king': divine in classical religious texts, human in the Saudi anthem and royal panegyric (عاش المليك). Human reading retained but register-bound."
+  },
+  {
+   "noun": "الحكيم",
+   "note": "Also a divine name; human readings ('sage', and in dialect 'the doctor') are live, and it is a prominent Iraqi family name."
+  },
+  {
+   "noun": "البار",
+   "note": "Human as 'dutiful/pious' (الابن البار), but shares its spelling with the divine name البَرّ and with the loanword البار 'the bar'."
+  },
+  {
+   "noun": "الرسول",
+   "note": "Human, but in practice a rigid designator for the Prophet rather than a generic 'messenger' referent slot."
+  },
+  {
+   "noun": "الصديق",
+   "note": "Human 'friend', but also the epithet of Abu Bakr (أبو بكر الصديق), which inflates its frequency."
+  },
+  {
+   "noun": "العريان",
+   "note": "Egyptian family name (عصام العريان was prominent in the corpus era), but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept ('naked' is fully live in Egyptian usage)."
+  },
+  {
+   "noun": "الحجار",
+   "note": "Family name (علي الحجار), but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept ('stone mason' remains a recognised trade term)."
+  },
+  {
+   "noun": "الزيات",
+   "note": "Family name, but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept (oil/oilseed merchant)."
+  },
+  {
+   "noun": "الهجان",
+   "note": "Family name and a famous drama title (رأفت الهجان), but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept (camel rider/border camel corps)."
+  },
+  {
+   "noun": "الخضري",
+   "note": "Family name, but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept (greengrocer)."
+  },
+  {
+   "noun": "الجزار",
+   "note": "Family name, but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept ('butcher' is fully live, including as a political epithet)."
+  },
+  {
+   "noun": "الحلاق",
+   "note": "Family name, but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept ('barber' is fully live)."
+  },
+  {
+   "noun": "الحلاج",
+   "note": "Dominantly the Sufi al-Hallaj, but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept (cotton ginner) — weakest of this group."
+  },
+  {
+   "noun": "البيطار",
+   "note": "Family name, but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept (veterinarian/farrier)."
+  },
+  {
+   "noun": "الصائغ",
+   "note": "Family name, but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept (jeweller)."
+  },
+  {
+   "noun": "الغنام",
+   "note": "Family name, but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept (shepherd)."
+  },
+  {
+   "noun": "الطحان",
+   "note": "Family name, but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept (miller)."
+  },
+  {
+   "noun": "العطار",
+   "note": "Family name, but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept (herbalist/perfumer, fully live in the Gulf and Egypt)."
+  },
+  {
+   "noun": "الخطيب",
+   "note": "Family name (very common), but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept ('preacher/orator', and dialectal 'fiance')."
+  },
+  {
+   "noun": "الطيار",
+   "note": "Family name, but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept ('pilot' is fully live)."
+  },
+  {
+   "noun": "البواب",
+   "note": "Family name, but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept ('doorman' is fully live)."
+  },
+  {
+   "noun": "القصاب",
+   "note": "Family name, but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept ('butcher'); the CAMeL gloss 'land surveyor' is wrong for modern usage."
+  },
+  {
+   "noun": "المصري",
+   "note": "Extremely common family name and a club name (المصري البورسعيدي), but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept (the nationality reading dominates). Wazn tag mu_participle is an error; it is a nisba."
+  },
+  {
+   "noun": "الراشد",
+   "note": "Common Gulf family name and part of الخلفاء الراشدون, but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept ('adult, of sound judgement' is live in legal/medical talk)."
+  },
+  {
+   "noun": "الطيب",
+   "note": "Common given/family name (and a Sudanese/Egyptian surname), but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept ('the good/kind one' is live); homograph with الطيب 'perfume'."
+  },
+  {
+   "noun": "الامين",
+   "note": "Given name and family name, but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept (الأمين العام 'secretary-general' is highly frequent); also a divine-adjacent epithet."
+  },
+  {
+   "noun": "المكي",
+   "note": "Family name, but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept (Meccan; also modifies non-humans as in السور المكية)."
+  },
+  {
+   "noun": "البصري",
+   "note": "Family name and scholarly nisba (الحسن البصري), but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept (from Basra)."
+  },
+  {
+   "noun": "الحمصي",
+   "note": "Family name, but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept (from Homs)."
+  },
+  {
+   "noun": "القدسي",
+   "note": "Family name, but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept (Jerusalemite); note the very frequent non-human الحديث القدسي."
+  },
+  {
+   "noun": "التبريزي",
+   "note": "Chiefly شمس التبريزي; surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept is only weakly satisfied (from Tabriz)."
+  },
+  {
+   "noun": "الكربلائي",
+   "note": "Family name and clerical title (عبد المهدي الكربلائي); surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept weakly satisfied (from Karbala)."
+  },
+  {
+   "noun": "المنصوري",
+   "note": "Family name, but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept (from Mansoura). Wazn tag mu_participle is an error; it is a nisba."
+  },
+  {
+   "noun": "العيسوي",
+   "note": "Family name (Al-Issawi), but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept (follower of Jesus); low currency as a descriptor."
+  },
+  {
+   "noun": "الهلالي",
+   "note": "Family name and tribal nisba (بنو هلال), but on Gulf Twitter dominantly 'an Al-Hilal club supporter' — still a human referent."
+  },
+  {
+   "noun": "الاموي",
+   "note": "Denotes an Umayyad person, but dominant Twitter use is attributive to non-humans (الدولة الأموية، المسجد الأموي)."
+  },
+  {
+   "noun": "العباسي",
+   "note": "Denotes an Abbasid person, but dominant use is attributive (العصر/الخلافة العباسية); also a family name."
+  },
+  {
+   "noun": "الفاطمي",
+   "note": "Denotes a Fatimid person, but dominant use is attributive (الدولة الفاطمية); also a family name."
+  },
+  {
+   "noun": "العثماني",
+   "note": "Denotes an Ottoman person, but dominant use is attributive (الدولة/الخلافة العثمانية); also a family name."
+  },
+  {
+   "noun": "الايوبي",
+   "note": "Denotes an Ayyubid person, but dominant reference is صلاح الدين الأيوبي; also a family name."
+  },
+  {
+   "noun": "الرومي",
+   "note": "Human (Byzantine/Roman) but dominantly the poet جلال الدين الرومي and the historical adjective; also a family name."
+  },
+  {
+   "noun": "العبري",
+   "note": "Human (Hebrew person) but dominant use modifies language and media (الموقع العبري، اللغة العبرية)."
+  },
+  {
+   "noun": "الحامي",
+   "note": "The 'Hamite' gloss is academic; the live readings are the participle 'protector' (human) and 'hot' (non-human). Ambiguous but a human reading survives."
+  },
+  {
+   "noun": "السياسي",
+   "note": "Kept because the bare person-noun use is genuinely common (سياسي بارز، المحلل السياسي), unlike الفني/الاقتصادي; but the adjective 'political' is also frequent."
+  },
+  {
+   "noun": "القيادي",
+   "note": "Human ('a leading figure', قيادي في الحزب) but also an ordinary adjective 'leadership-related'."
+  },
+  {
+   "noun": "الدبلوماسي",
+   "note": "Human ('diplomat') but also 'diplomatic' modifying missions and language."
+  },
+  {
+   "noun": "الغريب",
+   "note": "Human ('the stranger') but the discourse use والغريب أن and the adjective 'strange' of things are at least as frequent."
+  },
+  {
+   "noun": "الشقيق",
+   "note": "Human ('brother') but also the diplomatic adjective for states (البلد الشقيق)."
+  },
+  {
+   "noun": "النظير",
+   "note": "Human ('counterpart') but heavily used in the idiom منقطع النظير."
+  },
+  {
+   "noun": "الفاعل",
+   "note": "Human ('doer, perpetrator', فاعل خير) but also the grammatical term 'subject of a verb'."
+  },
+  {
+   "noun": "الصراف",
+   "note": "Human ('cashier, money changer') but competes with the very frequent الصراف الآلي 'ATM'."
+  },
+  {
+   "noun": "الرقاص",
+   "note": "Human ('dancer', pejorative for a male dancer) but also 'pendulum'."
+  },
+  {
+   "noun": "العضو",
+   "note": "Human ('member' of a body) but also the anatomical 'organ'."
+  },
+  {
+   "noun": "اللواء",
+   "note": "Human as a military rank/title (اللواء فلان) but also 'brigade' and, in Jordan, an administrative district."
+  },
+  {
+   "noun": "الداعي",
+   "note": "Human ('the one who calls/invites', الداعي إلى الله) with strong Quranic support; kept, but the abstract 'reason' sense exists (though the frequent لا داعي lacks the article)."
+  },
+  {
+   "noun": "المرتزق",
+   "note": "Human singular of المرتزقة 'mercenary'; the CAMeL gloss 'means of subsistence' is the non-human homograph."
+  },
+  {
+   "noun": "المتوج",
+   "note": "Human/team as 'the crowned champion'; often refers to a club rather than a person."
+  },
+  {
+   "noun": "المفقود",
+   "note": "Human as 'the missing person' but equally applied to lost objects."
+  },
+  {
+   "noun": "المجهول",
+   "note": "Human as 'unidentified person' but equally 'unknown quantity/thing' (ضد مجهول، المجهول)."
+  },
+  {
+   "noun": "المتواجد",
+   "note": "Human-applying participle 'present/on hand' but freely applied to objects; also widely considered a usage error for الموجود."
+  },
+  {
+   "noun": "المتالق",
+   "note": "Human-applying ('outstanding', of players and performers) but formally just an adjective."
+  },
+  {
+   "noun": "المتسبب",
+   "note": "Human as 'the one who caused it' but equally applied to non-human causes."
+  },
+  {
+   "noun": "المسيطر",
+   "note": "Human as 'the dominant one' but equally applied to teams, states and forces."
+  },
+  {
+   "noun": "المحرر",
+   "note": "Human as 'editor' (the dominant reading); the CAMeL gloss 'written/booked' reflects the non-human passive participle."
+  },
+  {
+   "noun": "المهذب",
+   "note": "Human ('well-mannered'); the CAMeL gloss 'educator' is misleading."
+  },
+  {
+   "noun": "المعيب",
+   "note": "The CAMeL gloss 'critic' is wrong for modern usage: المعيب normally means 'shameful/defective' of an act or thing. Kept only because a 'faultfinder' reading is formally available."
+  },
+  {
+   "noun": "العاذل",
+   "note": "Human ('the reproacher') but confined to classical love poetry."
+  },
+  {
+   "noun": "اللائم",
+   "note": "Human ('the blamer') but literary/Quranic register (لومة لائم)."
+  },
+  {
+   "noun": "الراعي",
+   "note": "Human ('shepherd, patron, sponsor') but also a well-known Saudi dairy brand."
+  },
+  {
+   "noun": "الظهير",
+   "note": "Human, dominantly the football full-back (الظهير الأيمن); the 'supporter' sense is literary."
+  },
+  {
+   "noun": "الدخيل",
+   "note": "Human ('intruder, outsider') but also the linguistic 'loanword' (لفظ دخيل); also a family name."
+  },
+  {
+   "noun": "المغربي",
+   "note": "Human nationality nisba (wazn tag mu_participle is an error); also collides with المغرب 'sunset/Maghrib prayer' derivatives and is a common family name."
+  },
+  {
+   "noun": "المجوسي",
+   "note": "Human ('Magian/Zoroastrian') but almost entirely a sectarian slur in Gulf Twitter usage."
+  },
+  {
+   "noun": "المختص",
+   "note": "Human ('specialist') but also 'competent' of authorities and bodies (الجهة المختصة)."
+  },
+  {
+   "noun": "المساهم",
+   "note": "Human ('shareholder') but also 'contributing' of factors, and الشركة المساهمة."
+  },
+  {
+   "noun": "الفتي",
+   "note": "Human (الفتى 'youth') but the alif-maqsura is written as ya, and فَتِيّ 'youthful/strong' is a homograph."
+  },
+  {
+   "noun": "الشاب",
+   "note": "Human ('young man') but also the adjective 'young' and, unvocalised, الشَّبّ 'alum'."
+  },
+  {
+   "noun": "العميل",
+   "note": "Human, but note two live senses: 'client/customer' (commercial) and 'collaborator/agent' (political slur)."
+  },
+  {
+   "noun": "الكفيل",
+   "note": "Human ('sponsor' in the Gulf kafala system); a legal role term, and also a divine-adjacent epithet in some religious usage."
+  },
+  {
+   "noun": "المامور",
+   "note": "Human ('officer in charge'); Egyptian administrative term, and the passive participle 'the one ordered'."
+  },
+  {
+   "noun": "الامبراطور",
+   "note": "Human ('emperor') but also a common sports epithet."
+  },
+  {
+   "noun": "القيصر",
+   "note": "Human ('Caesar/tsar') but also an epithet (قيصر الغناء) and a codename (قانون قيصر)."
+  },
+  {
+   "noun": "المشتكي",
+   "note": "Human ('complainant'); the CAMeL gloss 'defendant' is wrong (that is المشتكى عليه)."
+  },
+  {
+   "noun": "الممرض",
+   "note": "Human ('male nurse'); strongly gendered counterpart of the far more frequent الممرضة."
+  },
+  {
+   "noun": "المعيد",
+   "note": "Human (university 'teaching assistant'); institutional jargon, and the participle 'the one who repeats'."
+  },
+  {
+   "noun": "الفرد",
+   "note": "Human ('individual') but also 'a single unit' of non-humans, and 'a pistol' in some dialects."
+  },
+  {
+   "noun": "المولود",
+   "note": "Human ('newborn') but also the passive participle 'born' and the Prophet's مولد derivatives."
+  },
+  {
+   "noun": "الوصي",
+   "note": "Human ('guardian/trustee'); legal role term, and the Shia theological الوصي."
+  },
+  {
+   "noun": "الولي",
+   "note": "Human ('guardian, saint, patron') but also the divine name الولي and abstract 'authority' (ولي الأمر)."
+  },
+  {
+   "noun": "الخال",
+   "note": "Human ('maternal uncle') but also 'mole/beauty spot' (خال) in poetry."
+  }
+ ],
+ "clean_count": 334,
+ "clean_nouns": [
+  "العاشق",
+  "الفنان",
+  "السفير",
+  "السوري",
+  "المجنون",
+  "الانسان",
+  "الرئيس",
+  "الاستاذ",
+  "الراجل",
+  "الامير",
+  "الخباز",
+  "الكويتي",
+  "المعلق",
+  "المتحدث",
+  "السواق",
+  "الساحر",
+  "البلجيكي",
+  "الجزائري",
+  "القديس",
+  "الكوري",
+  "المسيحي",
+  "البدوي",
+  "الوالد",
+  "السرياني",
+  "المدرب",
+  "المؤيد",
+  "المزيف",
+  "المسلم",
+  "السوداني",
+  "الحقير",
+  "الفرنسي",
+  "المجرم",
+  "القطري",
+  "العسكري",
+  "المستفيد",
+  "الدكتور",
+  "التلميذ",
+  "البليد",
+  "الثائر",
+  "المعلن",
+  "الشيخ",
+  "المشير",
+  "الاسير",
+  "المحقق",
+  "المستخدم",
+  "المتطوع",
+  "المرء",
+  "الحاكم",
+  "العراقي",
+  "السعودي",
+  "الخليجي",
+  "الشاعر",
+  "المتخلف",
+  "الاجنبي",
+  "الملحن",
+  "الشهيد",
+  "الناجح",
+  "النائب",
+  "الرائد",
+  "المحافظ",
+  "المؤذن",
+  "القائل",
+  "الناشط",
+  "المنتفع",
+  "الشخص",
+  "الصاحب",
+  "الوزير",
+  "الايراني",
+  "الاسيوي",
+  "المرشد",
+  "الدجال",
+  "الزعيم",
+  "الكوبي",
+  "الشامي",
+  "العبد",
+  "الظالم",
+  "الاسرائيلي",
+  "الغريق",
+  "التونسي",
+  "الفقيه",
+  "الليبي",
+  "الحاج",
+  "الراصد",
+  "المنظم",
+  "الروسي",
+  "العميد",
+  "الزوج",
+  "الراقص",
+  "الاعزب",
+  "الرسام",
+  "الموسيقار",
+  "القاتل",
+  "المحامي",
+  "المذيع",
+  "المستشار",
+  "الكاذب",
+  "المنتظر",
+  "الكذاب",
+  "القاطن",
+  "الاسباني",
+  "اليتيم",
+  "الايطالي",
+  "الابن",
+  "المحب",
+  "الراوي",
+  "المنقذ",
+  "المبتدئ",
+  "المدقق",
+  "الياباني",
+  "النقيب",
+  "البخيل",
+  "الالماني",
+  "المساعد",
+  "السائح",
+  "الثرثار",
+  "المهاجم",
+  "الصيدلي",
+  "الشرير",
+  "الالباني",
+  "المستورد",
+  "الافغاني",
+  "المحتاج",
+  "التركي",
+  "العقيد",
+  "المبدع",
+  "المتشدد",
+  "المنافق",
+  "الكافر",
+  "الساعي",
+  "الاصلع",
+  "الرفيق",
+  "العابد",
+  "البائع",
+  "الجاني",
+  "الخاسر",
+  "المفسر",
+  "المدخن",
+  "البرازيلي",
+  "الفارس",
+  "الارهابي",
+  "المادح",
+  "المدرس",
+  "القاضي",
+  "الفاجر",
+  "المسكين",
+  "المصور",
+  "المحترم",
+  "السنغالي",
+  "الملحد",
+  "العشيق",
+  "المفتي",
+  "السامع",
+  "المغتاب",
+  "العم",
+  "المطرب",
+  "الكتائبي",
+  "الفلسطيني",
+  "المقيم",
+  "السجان",
+  "الفلمنكي",
+  "الصبي",
+  "المقاوم",
+  "القبطان",
+  "اللبناني",
+  "المتسابق",
+  "السيناتور",
+  "البريطاني",
+  "المحترف",
+  "السجين",
+  "المحلل",
+  "الخبير",
+  "المفتري",
+  "الساجد",
+  "الزاني",
+  "الخائن",
+  "الضيف",
+  "الكابتن",
+  "الممثل",
+  "السباك",
+  "السياح",
+  "الرابح",
+  "المهتدي",
+  "السويدي",
+  "المناضل",
+  "المؤنس",
+  "الدعي",
+  "الافريقي",
+  "العارف",
+  "المغلوب",
+  "الفارسي",
+  "الجنرال",
+  "الكاثوليكي",
+  "الشيوعي",
+  "المار",
+  "الناظر",
+  "البربري",
+  "الزميل",
+  "المنشد",
+  "المشبوه",
+  "البولندي",
+  "الاردني",
+  "المستهلك",
+  "الباكستاني",
+  "الناطق",
+  "الفائز",
+  "المشجع",
+  "الراكب",
+  "المهرج",
+  "الصحابي",
+  "القناص",
+  "المولع",
+  "العاهل",
+  "السلفي",
+  "المجدد",
+  "المتعاطي",
+  "المفكر",
+  "المقصر",
+  "المنسق",
+  "الدوق",
+  "المجتهد",
+  "المتهم",
+  "الشاهد",
+  "النحال",
+  "الاخرس",
+  "النقاد",
+  "الوالي",
+  "الاندلسي",
+  "المتفرج",
+  "العماني",
+  "المجاهد",
+  "الراهب",
+  "المالك",
+  "اللورد",
+  "القنصل",
+  "الصعلوك",
+  "المحرض",
+  "النديم",
+  "الموريتاني",
+  "السارق",
+  "الاشقر",
+  "الشهم",
+  "الكولونيل",
+  "الساقي",
+  "الصانع",
+  "العراب",
+  "الملاكم",
+  "المتبرع",
+  "الزائر",
+  "الهداف",
+  "الارعن",
+  "الواعظ",
+  "الشريك",
+  "الصهيوني",
+  "الفاسق",
+  "المغترب",
+  "القاصر",
+  "الارجنتيني",
+  "الهولندي",
+  "التشيلي",
+  "الناقد",
+  "المفاوض",
+  "المراهق",
+  "الابكم",
+  "الاقرع",
+  "المخاطب",
+  "المستمع",
+  "الزبال",
+  "الاديب",
+  "المشرك",
+  "السياف",
+  "الملياردير",
+  "الوهابي",
+  "المبتدع",
+  "الكردستاني",
+  "المؤرخ",
+  "الخريج",
+  "البرتغالي",
+  "الروماني",
+  "الباكي",
+  "الشاكي",
+  "الفلبيني",
+  "الفنزويلي",
+  "المهووس",
+  "المنادي",
+  "البقال",
+  "النزيل",
+  "العازف",
+  "المكسيكي",
+  "المخرب",
+  "القبطي",
+  "المتبلد",
+  "المتخرج",
+  "الفاهم",
+  "المحنك",
+  "الماركسي",
+  "المبجل",
+  "المصمم",
+  "المستشرق",
+  "الديكتاتور",
+  "الربان",
+  "المعذب",
+  "المعتدي",
+  "الرائي",
+  "الصارخ",
+  "المحتل",
+  "الماسوني",
+  "الناصح",
+  "المدعي",
+  "العلوي",
+  "الزنديق",
+  "التشيكي",
+  "السبئي",
+  "الغاش",
+  "اليزيدي",
+  "اليوناني",
+  "المدمن",
+  "المراكشي",
+  "الرامي",
+  "المشارك",
+  "المخرف",
+  "المرتد",
+  "المعاون",
+  "البوسني",
+  "الحطاب",
+  "العريف",
+  "الضامن",
+  "السويسري",
+  "المعزي",
+  "البوليفي",
+  "الصربي",
+  "القسيس",
+  "الكندي",
+  "الجاسوس",
+  "الكهل"
+ ]
+}

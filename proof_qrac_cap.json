@@ -1,0 +1,35 @@
+{
+ "a_attainment": {
+  "b": 0.5535743588970453,
+  "tan2b": 2.000000000000001,
+  "sigma": 0.5257311121191336,
+  "kappa": 0.8506508083520399,
+  "unit_codewords": true,
+  "planar": 1.2246467991473532e-16,
+  "S_lengths": [
+   3.577708763999663,
+   3.5777087639996634,
+   5.788854381999831
+  ],
+  "predicted": [
+   3.577708763999663,
+   3.577708763999664,
+   5.788854381999831
+  ],
+  "T": 12.944271909999156,
+  "T_target": 12.94427190999916,
+  "P": 0.7696723314583158,
+  "P_target": 0.7696723314583158
+ },
+ "b_free_rebit_certificate": {
+  "certified_sup_T_leq": 12.944371909999159,
+  "certified_sup_P_leq": 0.7696744147916492,
+  "max_found_T": 12.944271909973466,
+  "target_T": 12.94427190999916,
+  "boxes_evaluated": 82269696,
+  "iterations": 11,
+  "lipschitz": "dF/dbeta, dF/dgamma <= 8 (each modulus term 1-Lipschitz)",
+  "note": "floating point: safety margin 1e-9 on the prune test; values computed in float64"
+ },
+ "self_sha256": "348c181366780c4d7c0bebf54f2ef6d38c3ddd333e23debeaff2cef5c31a1605"
+}

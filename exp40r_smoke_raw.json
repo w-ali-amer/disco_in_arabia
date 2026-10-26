@@ -1,0 +1,208 @@
+{
+ "stage": "exp40r smoke battery (doc 65 SS2.3 designed-to-fail builds)",
+ "torch_version": "2.13.0",
+ "python_version": "3.12.13",
+ "dataset": {
+  "path": "duneau_mini_data_b.json",
+  "sha256": "f22eeea3cc9f14a084bffd05043fda226c274fafcd36f66cac696773bdb0fde3"
+ },
+ "seed": 0,
+ "tests": [
+  {
+   "name": "S1_scrambled_labels",
+   "kind": "designed_to_fail",
+   "bar": "max clean train acc < 0.75",
+   "observed_max_clean_train_acc": 0.695,
+   "n_train": 200,
+   "epochs": 15,
+   "passed": true,
+   "trajectory": {
+    "epoch": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15
+    ],
+    "mean_loss": [
+     0.7517774768918752,
+     0.7014942298829555,
+     0.6898073467612267,
+     0.6836655689030886,
+     0.6767914094030857,
+     0.6691324942559004,
+     0.6618576480075717,
+     0.666582968570292,
+     0.6651970451325178,
+     0.6550610609352588,
+     0.661545211225748,
+     0.6408455149829387,
+     0.6460448444448411,
+     0.6425676204264164,
+     0.6351711033657194
+    ],
+    "mean_grad_norm": [
+     2.2404026545870868,
+     1.5110812722545013,
+     1.5041181187195312,
+     1.4250515468264937,
+     1.493577277005059,
+     1.4614242462113263,
+     1.6167097569441091,
+     1.7345047625951482,
+     1.7918965791159553,
+     1.7540124048993304,
+     1.9146408004935682,
+     1.8511524419838947,
+     1.9490864425273928,
+     1.9001835571186252,
+     1.9297963000597664
+    ],
+    "running_train_acc": [
+     0.505,
+     0.495,
+     0.545,
+     0.57,
+     0.625,
+     0.6,
+     0.6,
+     0.6,
+     0.605,
+     0.62,
+     0.6,
+     0.62,
+     0.625,
+     0.63,
+     0.59
+    ],
+    "clean_train_acc": [
+     0.535,
+     0.575,
+     0.6,
+     0.65,
+     0.615,
+     0.62,
+     0.615,
+     0.67,
+     0.685,
+     0.625,
+     0.65,
+     0.64,
+     0.66,
+     0.645,
+     0.695
+    ],
+    "eval_acc": {},
+    "epochs_run": 15,
+    "final_clean_train_acc": 0.695,
+    "max_clean_train_acc": 0.695,
+    "final_eval_acc": {},
+    "wall_time_sec": 28.1
+   }
+  },
+  {
+   "name": "S2_easy_onehop",
+   "kind": "positive_control",
+   "bar": "final clean train acc >= 0.95",
+   "observed_final_clean_train_acc": 1.0,
+   "observed_max_clean_train_acc": 1.0,
+   "n_train": 120,
+   "epochs": 20,
+   "passed": true,
+   "trajectory": {
+    "epoch": [
+     1,
+     2
+    ],
+    "mean_loss": [
+     0.7823455202280456,
+     0.28991782340356925
+    ],
+    "mean_grad_norm": [
+     2.4714594460405617,
+     1.3445513591625335
+    ],
+    "running_train_acc": [
+     0.5916666666666667,
+     0.9083333333333333
+    ],
+    "clean_train_acc": [
+     0.7333333333333333,
+     1.0
+    ],
+    "eval_acc": {},
+    "epochs_run": 2,
+    "final_clean_train_acc": 1.0,
+    "max_clean_train_acc": 1.0,
+    "final_eval_acc": {},
+    "wall_time_sec": 1.0
+   }
+  },
+  {
+   "name": "S3_story_blind",
+   "kind": "leak_detector",
+   "bar": "acc == 0.5 exactly (untrained AND after 5 epochs) and all story values identical to 1e-06",
+   "observed_untrained_acc": 0.5,
+   "observed_trained_acc": 0.5,
+   "observed_value_spread": 3.725290298461914e-08,
+   "balanced": true,
+   "n_items": 120,
+   "passed": true,
+   "trajectory": {
+    "epoch": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ],
+    "mean_loss": [
+     0.7471939692894618,
+     0.7103924746314685,
+     0.720667164772749,
+     0.7076423197984696,
+     0.7068517292539279
+    ],
+    "mean_grad_norm": [
+     4.83362913179016,
+     4.111490082521854,
+     3.793863403791062,
+     3.436714970112433,
+     3.18036974892986
+    ],
+    "running_train_acc": [
+     0.45,
+     0.475,
+     0.45,
+     0.475,
+     0.5
+    ],
+    "clean_train_acc": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "eval_acc": {},
+    "epochs_run": 5,
+    "final_clean_train_acc": 0.5,
+    "max_clean_train_acc": 0.5,
+    "final_eval_acc": {},
+    "wall_time_sec": 2.5
+   }
+  }
+ ],
+ "smoke_all_passed": true,
+ "wall_time_sec": 32.6
+}

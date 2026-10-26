@@ -1,0 +1,44 @@
+{
+  "gate_id": "exp84_gate_expansion_determinism",
+  "description": "Every fused token maps to exactly one valid 3-part decomposition",
+  "real_check": {
+    "n_fused_checked": 8000,
+    "n_invalid_decomps": 0,
+    "invalid_examples": [],
+    "n_duplicate_decomps": 313,
+    "duplicate_examples": [
+      {
+        "word": "علي",
+        "conflicts_with": "على"
+      },
+      {
+        "word": "حتَّى",
+        "conflicts_with": "حتى"
+      },
+      {
+        "word": "مُحمَّد",
+        "conflicts_with": "محمد"
+      },
+      {
+        "word": "ثُمَّ",
+        "conflicts_with": "ثم"
+      },
+      {
+        "word": "أنَّهُ",
+        "conflicts_with": "أنه"
+      }
+    ],
+    "gate_fires": true,
+    "verdict": "PASS: all fused tokens have valid decompositions"
+  },
+  "dtf_leg": {
+    "description": "Inject synthetic entry with 1-part root; gate must catch it",
+    "injected_word": "__TEST_INVALID__",
+    "injected_parts": [
+      "xx"
+    ],
+    "n_invalid_after_injection": 1,
+    "dtf_gate_fires": true,
+    "verdict": "DTF_FIRES: invalid decomposition detected as expected"
+  }
+}

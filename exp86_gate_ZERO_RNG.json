@@ -1,0 +1,21 @@
+{
+ "gate": "GATE_ZERO_RNG",
+ "passed": true,
+ "arm": "A3-T2-identity",
+ "seed": 82000,
+ "real_leg": {
+  "torch_states_match": true,
+  "numpy_states_match": true,
+  "python_states_match": true,
+  "passed": true
+ },
+ "dtf_leg": {
+  "description": "deliberately called torch.rand(1) inside _instrument_epoch; torch RNG state must differ after -- proving the gate catches a stray draw",
+  "torch_states_match": false,
+  "numpy_states_match": true,
+  "python_states_match": true,
+  "caught": true,
+  "passed": true
+ },
+ "pin_doc78_SS0": "instrumentation under torch.no_grad() on detached copies consumes ZERO RNG draws; all three RNG states (torch global, numpy global, python global) are identical before and after one full instrumented epoch on the real path"
+}

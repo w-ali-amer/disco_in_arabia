@@ -1,0 +1,384 @@
+{
+  "meta": {
+    "experiment": "exp80 — WAZN-aware tokenizer",
+    "registration": "/Users/wajahath/qnlp_private_docs/72_exp80_wazn_tokenizer.md",
+    "script": "/Users/wajahath/discocat_arabic_v2/exp80_run.py",
+    "camel_route": "LIVE (Mac, calima-msa-r13)",
+    "wsl_status": "DOWN — Mac-local CAMeL used",
+    "corpus": {
+      "source": "wikimedia/wikipedia 20231101.ar (HuggingFace datasets streaming)",
+      "path": "/tmp/arwiki_raw.txt",
+      "sha256": "8cde0c825e3c058340b78d9f3a54af95f32d3e78a4d3cd880e1b6f325a1ead63",
+      "n_lines": 277644,
+      "raw_bytes": 78675954,
+      "n_articles": 3673
+    },
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "vocab_size": 32000,
+    "gold_size_target": 2000,
+    "weak_min_frac": 0.3,
+    "tokenizer_lib": "HuggingFace tokenizers (BpeTrainer)",
+    "elapsed_seconds": 231.6
+  },
+  "cross_check_pass1": {
+    "n_rows_in_pass1": 543,
+    "n_readings_found": 437,
+    "n_no_reading": 106,
+    "root_agreement_pct": 93.59,
+    "pattern_agreement_pct": 93.14,
+    "both_agreement_pct": 93.14,
+    "camel_db_both": "calima-msa-r13 (Mac) vs calima-msa-r13 (committed/WSL)"
+  },
+  "per_seed": [
+    {
+      "seed": 42,
+      "corpus_split": {
+        "n_train_lines": 249879,
+        "n_heldout_lines": 27765,
+        "train_sha256": "defee298626a61d88943358c0bf5394d040f7c0d34dfe54a049761598a3fd02c",
+        "heldout_sha256": "dc96ac1f8cd7e8fb5846f1a538e52462477207625253f29e566a7afb376cd316"
+      },
+      "vocab_accounting": {
+        "total_target": 32000,
+        "n_special_tokens": 3,
+        "n_template_tokens": 3489,
+        "bpe_budget": 28508,
+        "n_radical_syms_approx": 29,
+        "note": "Radical symbols (Arabic consonants) appear in BPE vocab naturally; not separately reserved. Template tokens added as special tokens.",
+        "n_radical_syms_observed": 26,
+        "actual_wazn_bpe_vocab": 32000
+      },
+      "baseline_bpe_vocab_actual": 32000,
+      "wazn_bpe_vocab_actual": 32000,
+      "fertility": {
+        "definition": "total_tokens / total_whitespace_words on held-out sample",
+        "held_out_lines_used": 20000,
+        "bpe_fertility": 1.381825,
+        "wazn_bpe_fertility": 3.047496,
+        "ratio_wazn_over_bpe": 2.205414,
+        "bar_fertility_improves": false,
+        "bar_definition": "wazn_fertility ≤ 0.95 × bpe_fertility",
+        "compression_ratio": {
+          "definition": "surface chars / tokens (chars per token; higher = more compression)",
+          "bpe": 3.6399,
+          "wazn_bpe": 1.6504
+        }
+      },
+      "gold_set": {
+        "n_weak_candidates": 12496,
+        "n_strong_candidates": 24322,
+        "n_gold": 2000,
+        "n_weak_in_gold": 600,
+        "actual_weak_frac": 0.3,
+        "mismatch_drops": 8019,
+        "train_overlap_frac": 0.907,
+        "n_gold_valid_for_f1": 2000
+      },
+      "boundary_f1": {
+        "overall": {
+          "bpe": {
+            "p": 0.2656,
+            "r": 0.1488,
+            "f1": 0.1907
+          },
+          "wazn": {
+            "p": 0.8784,
+            "r": 0.4431,
+            "f1": 0.589
+          },
+          "gap_wazn_minus_bpe": 0.3983,
+          "bar_boundaries_recovered": true,
+          "bar_definition": "wazn_f1 ≥ bpe_f1 + 0.10"
+        },
+        "weak_stratum": {
+          "n": 600,
+          "bpe": {
+            "p": 0.2702,
+            "r": 0.1521,
+            "f1": 0.1947
+          },
+          "wazn": {
+            "p": 0.9011,
+            "r": 0.4148,
+            "f1": 0.5681
+          },
+          "gap_wazn_minus_bpe": 0.3734
+        },
+        "strong_stratum": {
+          "n": 1400,
+          "bpe": {
+            "p": 0.2635,
+            "r": 0.1472,
+            "f1": 0.1889
+          },
+          "wazn": {
+            "p": 0.8695,
+            "r": 0.4557,
+            "f1": 0.5979
+          },
+          "gap_wazn_minus_bpe": 0.409
+        }
+      },
+      "gate": {
+        "description": "Designed-to-fail: deranged template→skeleton map",
+        "derangement_seed": 999,
+        "n_templates_deranged": 3489,
+        "f1_real_wazn_bpe": 0.589,
+        "f1_deranged_wazn_bpe": 0.2241,
+        "delta_f1": 0.3649,
+        "gate_fires": true,
+        "verdict": "GATE_FIRES: corrupted F1 tanks as expected"
+      },
+      "named_outcome": "MORPHOLOGY_TAX: fertility worse, boundaries better"
+    },
+    {
+      "seed": 43,
+      "corpus_split": {
+        "n_train_lines": 249879,
+        "n_heldout_lines": 27765,
+        "train_sha256": "13d71d6c97617fedc63ad41a9895275db04ff70a729b1a1a47d2e74dbb4c719d",
+        "heldout_sha256": "d5ee8f3ad30b20169ddec7e2c82313d0c9edd89b6db3985288d7484b451cff6a"
+      },
+      "vocab_accounting": {
+        "total_target": 32000,
+        "n_special_tokens": 3,
+        "n_template_tokens": 3462,
+        "bpe_budget": 28535,
+        "n_radical_syms_approx": 29,
+        "note": "Radical symbols (Arabic consonants) appear in BPE vocab naturally; not separately reserved. Template tokens added as special tokens.",
+        "n_radical_syms_observed": 26,
+        "actual_wazn_bpe_vocab": 32000
+      },
+      "baseline_bpe_vocab_actual": 32000,
+      "wazn_bpe_vocab_actual": 32000,
+      "fertility": {
+        "definition": "total_tokens / total_whitespace_words on held-out sample",
+        "held_out_lines_used": 20000,
+        "bpe_fertility": 1.379707,
+        "wazn_bpe_fertility": 3.042357,
+        "ratio_wazn_over_bpe": 2.205075,
+        "bar_fertility_improves": false,
+        "bar_definition": "wazn_fertility ≤ 0.95 × bpe_fertility",
+        "compression_ratio": {
+          "definition": "surface chars / tokens (chars per token; higher = more compression)",
+          "bpe": 3.6459,
+          "wazn_bpe": 1.6534
+        }
+      },
+      "gold_set": {
+        "n_weak_candidates": 12574,
+        "n_strong_candidates": 24208,
+        "n_gold": 2000,
+        "n_weak_in_gold": 600,
+        "actual_weak_frac": 0.3,
+        "mismatch_drops": 7973,
+        "train_overlap_frac": 0.91,
+        "n_gold_valid_for_f1": 2000
+      },
+      "boundary_f1": {
+        "overall": {
+          "bpe": {
+            "p": 0.2655,
+            "r": 0.1521,
+            "f1": 0.1934
+          },
+          "wazn": {
+            "p": 0.8801,
+            "r": 0.4321,
+            "f1": 0.5797
+          },
+          "gap_wazn_minus_bpe": 0.3863,
+          "bar_boundaries_recovered": true,
+          "bar_definition": "wazn_f1 ≥ bpe_f1 + 0.10"
+        },
+        "weak_stratum": {
+          "n": 600,
+          "bpe": {
+            "p": 0.3073,
+            "r": 0.1731,
+            "f1": 0.2215
+          },
+          "wazn": {
+            "p": 0.8961,
+            "r": 0.4021,
+            "f1": 0.5551
+          },
+          "gap_wazn_minus_bpe": 0.3337
+        },
+        "strong_stratum": {
+          "n": 1400,
+          "bpe": {
+            "p": 0.2474,
+            "r": 0.1428,
+            "f1": 0.1811
+          },
+          "wazn": {
+            "p": 0.8738,
+            "r": 0.4454,
+            "f1": 0.5901
+          },
+          "gap_wazn_minus_bpe": 0.409
+        }
+      },
+      "gate": {
+        "description": "Designed-to-fail: deranged template→skeleton map",
+        "derangement_seed": 999,
+        "n_templates_deranged": 3462,
+        "f1_real_wazn_bpe": 0.5797,
+        "f1_deranged_wazn_bpe": 0.2105,
+        "delta_f1": 0.3692,
+        "gate_fires": true,
+        "verdict": "GATE_FIRES: corrupted F1 tanks as expected"
+      },
+      "named_outcome": "MORPHOLOGY_TAX: fertility worse, boundaries better"
+    },
+    {
+      "seed": 44,
+      "corpus_split": {
+        "n_train_lines": 249879,
+        "n_heldout_lines": 27765,
+        "train_sha256": "3facfd42385a229f9608feb76128507e9bc1f17c27ce8188011f2499afa4fd88",
+        "heldout_sha256": "fd20f90c24737b38e62b84c4094fbac847be88f93913ef6cf1ef44949b87f147"
+      },
+      "vocab_accounting": {
+        "total_target": 32000,
+        "n_special_tokens": 3,
+        "n_template_tokens": 3452,
+        "bpe_budget": 28545,
+        "n_radical_syms_approx": 29,
+        "note": "Radical symbols (Arabic consonants) appear in BPE vocab naturally; not separately reserved. Template tokens added as special tokens.",
+        "n_radical_syms_observed": 26,
+        "actual_wazn_bpe_vocab": 32000
+      },
+      "baseline_bpe_vocab_actual": 32000,
+      "wazn_bpe_vocab_actual": 32000,
+      "fertility": {
+        "definition": "total_tokens / total_whitespace_words on held-out sample",
+        "held_out_lines_used": 20000,
+        "bpe_fertility": 1.380975,
+        "wazn_bpe_fertility": 3.042219,
+        "ratio_wazn_over_bpe": 2.20295,
+        "bar_fertility_improves": false,
+        "bar_definition": "wazn_fertility ≤ 0.95 × bpe_fertility",
+        "compression_ratio": {
+          "definition": "surface chars / tokens (chars per token; higher = more compression)",
+          "bpe": 3.64,
+          "wazn_bpe": 1.6523
+        }
+      },
+      "gold_set": {
+        "n_weak_candidates": 12485,
+        "n_strong_candidates": 24251,
+        "n_gold": 2000,
+        "n_weak_in_gold": 600,
+        "actual_weak_frac": 0.3,
+        "mismatch_drops": 7976,
+        "train_overlap_frac": 0.902,
+        "n_gold_valid_for_f1": 2000
+      },
+      "boundary_f1": {
+        "overall": {
+          "bpe": {
+            "p": 0.2843,
+            "r": 0.1614,
+            "f1": 0.2059
+          },
+          "wazn": {
+            "p": 0.8944,
+            "r": 0.4308,
+            "f1": 0.5815
+          },
+          "gap_wazn_minus_bpe": 0.3757,
+          "bar_boundaries_recovered": true,
+          "bar_definition": "wazn_f1 ≥ bpe_f1 + 0.10"
+        },
+        "weak_stratum": {
+          "n": 600,
+          "bpe": {
+            "p": 0.2778,
+            "r": 0.1546,
+            "f1": 0.1987
+          },
+          "wazn": {
+            "p": 0.8994,
+            "r": 0.3918,
+            "f1": 0.5458
+          },
+          "gap_wazn_minus_bpe": 0.3471
+        },
+        "strong_stratum": {
+          "n": 1400,
+          "bpe": {
+            "p": 0.2871,
+            "r": 0.1644,
+            "f1": 0.2091
+          },
+          "wazn": {
+            "p": 0.8924,
+            "r": 0.4483,
+            "f1": 0.5968
+          },
+          "gap_wazn_minus_bpe": 0.3877
+        }
+      },
+      "gate": {
+        "description": "Designed-to-fail: deranged template→skeleton map",
+        "derangement_seed": 999,
+        "n_templates_deranged": 3452,
+        "f1_real_wazn_bpe": 0.5815,
+        "f1_deranged_wazn_bpe": 0.2279,
+        "delta_f1": 0.3536,
+        "gate_fires": true,
+        "verdict": "GATE_FIRES: corrupted F1 tanks as expected"
+      },
+      "named_outcome": "MORPHOLOGY_TAX: fertility worse, boundaries better"
+    }
+  ],
+  "aggregate": {
+    "fertility": {
+      "bpe_mean": 1.380836,
+      "wazn_bpe_mean": 3.044024,
+      "ratio_mean": 2.20448,
+      "bar_fertility_improves": false,
+      "compression_ratio": {
+        "bpe_mean": 3.6419,
+        "wazn_bpe_mean": 1.652
+      }
+    },
+    "boundary_f1_overall": {
+      "bpe_f1_mean": 0.1967,
+      "wazn_f1_mean": 0.5834,
+      "gap_mean": 0.3868,
+      "bar_boundaries_recovered": true
+    },
+    "weak_stratum": {
+      "bpe_f1_mean": 0.205,
+      "wazn_f1_mean": 0.5563,
+      "gap_mean": 0.3514
+    },
+    "strong_stratum": {
+      "bpe_f1_mean": 0.193,
+      "wazn_f1_mean": 0.5949,
+      "gap_mean": 0.4019
+    },
+    "named_outcomes": [
+      "MORPHOLOGY_TAX: fertility worse, boundaries better"
+    ],
+    "gate": {
+      "all_gates_fire": true,
+      "f1_real_mean": 0.5834,
+      "f1_corrupt_mean": 0.2208
+    }
+  },
+  "bars_summary": {
+    "fertility_improves": false,
+    "boundaries_recovered": true,
+    "named_outcome": [
+      "MORPHOLOGY_TAX: fertility worse, boundaries better"
+    ]
+  }
+}

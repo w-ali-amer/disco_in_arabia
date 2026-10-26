@@ -1,0 +1,1802 @@
+{
+  "experiment": "exp88 — SKELETON MATCHING AT FULL INVENTORY",
+  "registration": "/home/waj/qnlp_private_docs/81_exp88_89_skeleton_scale_and_allocation.md",
+  "sole_writer": "exp88_run.py → results_exp88.json",
+  "skeleton_meta": {
+    "n_patterns_in_cache": 13158,
+    "n_skeletons": 8645,
+    "inventory_sha": "e4eb9c4b420ab4105cc6c40d5b9d80eeef83f4d3e1901965965637a8e02c37da",
+    "compile_seed": 42
+  },
+  "sample_measures": {
+    "label": "sample_8k",
+    "n_lines": 8000,
+    "n_types": 53653,
+    "n_tokens": 199812,
+    "unique_match_types": 12115,
+    "unique_match_tokens": 34960,
+    "ambiguous_types": 22078,
+    "ambiguous_tokens": 133115,
+    "no_match_types": 19460,
+    "no_match_tokens": 31737,
+    "unique_match_type_coverage": 0.225803,
+    "unique_match_token_coverage": 0.174964,
+    "ambiguity_rate_types": 0.411496,
+    "precision_root_agreement": 0.968451,
+    "precision_numerator": 6784,
+    "precision_denominator": 7005,
+    "n_camel_unanalyzable": 5110,
+    "elapsed_s": 227.8
+  },
+  "full_corpus_measures": {
+    "label": "full_corpus",
+    "n_lines": 277644,
+    "n_types": 494100,
+    "n_tokens": 6894722,
+    "unique_match_types": 88297,
+    "unique_match_tokens": 1204903,
+    "ambiguous_types": 117701,
+    "ambiguous_tokens": 4581928,
+    "no_match_types": 288102,
+    "no_match_tokens": 1107891,
+    "unique_match_type_coverage": 0.178703,
+    "unique_match_token_coverage": 0.174757,
+    "ambiguity_rate_types": 0.238213,
+    "precision_root_agreement": 0.959547,
+    "precision_numerator": 16794,
+    "precision_denominator": 17502,
+    "n_camel_unanalyzable": 70795,
+    "elapsed_s": 2323.6
+  },
+  "nonce_leg": {
+    "n_nonce_forms": 180,
+    "total_unique": 0,
+    "total_ambiguous": 180,
+    "total_no_match": 0,
+    "exp87_baseline": 120,
+    "meets_exp87_baseline": false,
+    "per_column": {
+      "faail": {
+        "unique": 0,
+        "ambiguous": 30,
+        "no_match": 0
+      },
+      "faiil": {
+        "unique": 0,
+        "ambiguous": 30,
+        "no_match": 0
+      },
+      "fa33aal": {
+        "unique": 0,
+        "ambiguous": 30,
+        "no_match": 0
+      },
+      "maf3uul": {
+        "unique": 0,
+        "ambiguous": 30,
+        "no_match": 0
+      },
+      "mu1": {
+        "unique": 0,
+        "ambiguous": 30,
+        "no_match": 0
+      },
+      "mu2": {
+        "unique": 0,
+        "ambiguous": 30,
+        "no_match": 0
+      }
+    },
+    "per_form": [
+      {
+        "form_id": "nonce_0_faail",
+        "surface": "الخامظ",
+        "column": "faail",
+        "true_root": "خ.م.ظ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 3
+      },
+      {
+        "form_id": "nonce_0_faiil",
+        "surface": "الخميظ",
+        "column": "faiil",
+        "true_root": "خ.م.ظ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 6
+      },
+      {
+        "form_id": "nonce_0_fa33aal",
+        "surface": "الخماظ",
+        "column": "fa33aal",
+        "true_root": "خ.م.ظ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 5
+      },
+      {
+        "form_id": "nonce_0_maf3uul",
+        "surface": "المخموظ",
+        "column": "maf3uul",
+        "true_root": "خ.م.ظ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_0_mu1",
+        "surface": "المخمظ",
+        "column": "mu1",
+        "true_root": "خ.م.ظ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_0_mu2",
+        "surface": "المخمظ",
+        "column": "mu2",
+        "true_root": "خ.م.ظ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_1_faail",
+        "surface": "الظاضس",
+        "column": "faail",
+        "true_root": "ظ.ض.س",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_1_faiil",
+        "surface": "الظضيس",
+        "column": "faiil",
+        "true_root": "ظ.ض.س",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_1_fa33aal",
+        "surface": "الظضاس",
+        "column": "fa33aal",
+        "true_root": "ظ.ض.س",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_1_maf3uul",
+        "surface": "المظضوس",
+        "column": "maf3uul",
+        "true_root": "ظ.ض.س",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_1_mu1",
+        "surface": "المظضس",
+        "column": "mu1",
+        "true_root": "ظ.ض.س",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_1_mu2",
+        "surface": "المظضس",
+        "column": "mu2",
+        "true_root": "ظ.ض.س",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_2_faail",
+        "surface": "العادض",
+        "column": "faail",
+        "true_root": "ع.د.ض",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_2_faiil",
+        "surface": "العديض",
+        "column": "faiil",
+        "true_root": "ع.د.ض",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_2_fa33aal",
+        "surface": "العداض",
+        "column": "fa33aal",
+        "true_root": "ع.د.ض",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_2_maf3uul",
+        "surface": "المعدوض",
+        "column": "maf3uul",
+        "true_root": "ع.د.ض",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 5
+      },
+      {
+        "form_id": "nonce_2_mu1",
+        "surface": "المعدض",
+        "column": "mu1",
+        "true_root": "ع.د.ض",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_2_mu2",
+        "surface": "المعدض",
+        "column": "mu2",
+        "true_root": "ع.د.ض",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_3_faail",
+        "surface": "التاخظ",
+        "column": "faail",
+        "true_root": "ت.خ.ظ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 6
+      },
+      {
+        "form_id": "nonce_3_faiil",
+        "surface": "التخيظ",
+        "column": "faiil",
+        "true_root": "ت.خ.ظ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 6
+      },
+      {
+        "form_id": "nonce_3_fa33aal",
+        "surface": "التخاظ",
+        "column": "fa33aal",
+        "true_root": "ت.خ.ظ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 7
+      },
+      {
+        "form_id": "nonce_3_maf3uul",
+        "surface": "المتخوظ",
+        "column": "maf3uul",
+        "true_root": "ت.خ.ظ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 6
+      },
+      {
+        "form_id": "nonce_3_mu1",
+        "surface": "المتخظ",
+        "column": "mu1",
+        "true_root": "ت.خ.ظ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 5
+      },
+      {
+        "form_id": "nonce_3_mu2",
+        "surface": "المتخظ",
+        "column": "mu2",
+        "true_root": "ت.خ.ظ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 5
+      },
+      {
+        "form_id": "nonce_4_faail",
+        "surface": "الطاعص",
+        "column": "faail",
+        "true_root": "ط.ع.ص",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_4_faiil",
+        "surface": "الطعيص",
+        "column": "faiil",
+        "true_root": "ط.ع.ص",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_4_fa33aal",
+        "surface": "الطعاص",
+        "column": "fa33aal",
+        "true_root": "ط.ع.ص",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_4_maf3uul",
+        "surface": "المطعوص",
+        "column": "maf3uul",
+        "true_root": "ط.ع.ص",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_4_mu1",
+        "surface": "المطعص",
+        "column": "mu1",
+        "true_root": "ط.ع.ص",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_4_mu2",
+        "surface": "المطعص",
+        "column": "mu2",
+        "true_root": "ط.ع.ص",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_5_faail",
+        "surface": "الذاطث",
+        "column": "faail",
+        "true_root": "ذ.ط.ث",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_5_faiil",
+        "surface": "الذطيث",
+        "column": "faiil",
+        "true_root": "ذ.ط.ث",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_5_fa33aal",
+        "surface": "الذطاث",
+        "column": "fa33aal",
+        "true_root": "ذ.ط.ث",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_5_maf3uul",
+        "surface": "المذطوث",
+        "column": "maf3uul",
+        "true_root": "ذ.ط.ث",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 4
+      },
+      {
+        "form_id": "nonce_5_mu1",
+        "surface": "المذطث",
+        "column": "mu1",
+        "true_root": "ذ.ط.ث",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_5_mu2",
+        "surface": "المذطث",
+        "column": "mu2",
+        "true_root": "ذ.ط.ث",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_6_faail",
+        "surface": "الصاضت",
+        "column": "faail",
+        "true_root": "ص.ض.ت",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 5
+      },
+      {
+        "form_id": "nonce_6_faiil",
+        "surface": "الصضيت",
+        "column": "faiil",
+        "true_root": "ص.ض.ت",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 4
+      },
+      {
+        "form_id": "nonce_6_fa33aal",
+        "surface": "الصضات",
+        "column": "fa33aal",
+        "true_root": "ص.ض.ت",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 7
+      },
+      {
+        "form_id": "nonce_6_maf3uul",
+        "surface": "المصضوت",
+        "column": "maf3uul",
+        "true_root": "ص.ض.ت",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 4
+      },
+      {
+        "form_id": "nonce_6_mu1",
+        "surface": "المصضت",
+        "column": "mu1",
+        "true_root": "ص.ض.ت",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 3
+      },
+      {
+        "form_id": "nonce_6_mu2",
+        "surface": "المصضت",
+        "column": "mu2",
+        "true_root": "ص.ض.ت",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 3
+      },
+      {
+        "form_id": "nonce_7_faail",
+        "surface": "التاطك",
+        "column": "faail",
+        "true_root": "ت.ط.ك",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 13
+      },
+      {
+        "form_id": "nonce_7_faiil",
+        "surface": "التطيك",
+        "column": "faiil",
+        "true_root": "ت.ط.ك",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 9
+      },
+      {
+        "form_id": "nonce_7_fa33aal",
+        "surface": "التطاك",
+        "column": "fa33aal",
+        "true_root": "ت.ط.ك",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 10
+      },
+      {
+        "form_id": "nonce_7_maf3uul",
+        "surface": "المتطوك",
+        "column": "maf3uul",
+        "true_root": "ت.ط.ك",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 10
+      },
+      {
+        "form_id": "nonce_7_mu1",
+        "surface": "المتطك",
+        "column": "mu1",
+        "true_root": "ت.ط.ك",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 6
+      },
+      {
+        "form_id": "nonce_7_mu2",
+        "surface": "المتطك",
+        "column": "mu2",
+        "true_root": "ت.ط.ك",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 6
+      },
+      {
+        "form_id": "nonce_8_faail",
+        "surface": "التاثط",
+        "column": "faail",
+        "true_root": "ت.ث.ط",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 6
+      },
+      {
+        "form_id": "nonce_8_faiil",
+        "surface": "التثيط",
+        "column": "faiil",
+        "true_root": "ت.ث.ط",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 6
+      },
+      {
+        "form_id": "nonce_8_fa33aal",
+        "surface": "التثاط",
+        "column": "fa33aal",
+        "true_root": "ت.ث.ط",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 7
+      },
+      {
+        "form_id": "nonce_8_maf3uul",
+        "surface": "المتثوط",
+        "column": "maf3uul",
+        "true_root": "ت.ث.ط",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 6
+      },
+      {
+        "form_id": "nonce_8_mu1",
+        "surface": "المتثط",
+        "column": "mu1",
+        "true_root": "ت.ث.ط",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 5
+      },
+      {
+        "form_id": "nonce_8_mu2",
+        "surface": "المتثط",
+        "column": "mu2",
+        "true_root": "ت.ث.ط",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 5
+      },
+      {
+        "form_id": "nonce_9_faail",
+        "surface": "الجاثظ",
+        "column": "faail",
+        "true_root": "ج.ث.ظ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_9_faiil",
+        "surface": "الجثيظ",
+        "column": "faiil",
+        "true_root": "ج.ث.ظ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_9_fa33aal",
+        "surface": "الجثاظ",
+        "column": "fa33aal",
+        "true_root": "ج.ث.ظ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_9_maf3uul",
+        "surface": "المجثوظ",
+        "column": "maf3uul",
+        "true_root": "ج.ث.ظ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_9_mu1",
+        "surface": "المجثظ",
+        "column": "mu1",
+        "true_root": "ج.ث.ظ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_9_mu2",
+        "surface": "المجثظ",
+        "column": "mu2",
+        "true_root": "ج.ث.ظ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_10_faail",
+        "surface": "الضانع",
+        "column": "faail",
+        "true_root": "ض.ن.ع",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_10_faiil",
+        "surface": "الضنيع",
+        "column": "faiil",
+        "true_root": "ض.ن.ع",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_10_fa33aal",
+        "surface": "الضناع",
+        "column": "fa33aal",
+        "true_root": "ض.ن.ع",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_10_maf3uul",
+        "surface": "المضنوع",
+        "column": "maf3uul",
+        "true_root": "ض.ن.ع",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_10_mu1",
+        "surface": "المضنع",
+        "column": "mu1",
+        "true_root": "ض.ن.ع",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_10_mu2",
+        "surface": "المضنع",
+        "column": "mu2",
+        "true_root": "ض.ن.ع",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_11_faail",
+        "surface": "العارخ",
+        "column": "faail",
+        "true_root": "ع.ر.خ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_11_faiil",
+        "surface": "العريخ",
+        "column": "faiil",
+        "true_root": "ع.ر.خ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_11_fa33aal",
+        "surface": "العراخ",
+        "column": "fa33aal",
+        "true_root": "ع.ر.خ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_11_maf3uul",
+        "surface": "المعروخ",
+        "column": "maf3uul",
+        "true_root": "ع.ر.خ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_11_mu1",
+        "surface": "المعرخ",
+        "column": "mu1",
+        "true_root": "ع.ر.خ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_11_mu2",
+        "surface": "المعرخ",
+        "column": "mu2",
+        "true_root": "ع.ر.خ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_12_faail",
+        "surface": "الجاثذ",
+        "column": "faail",
+        "true_root": "ج.ث.ذ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_12_faiil",
+        "surface": "الجثيذ",
+        "column": "faiil",
+        "true_root": "ج.ث.ذ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_12_fa33aal",
+        "surface": "الجثاذ",
+        "column": "fa33aal",
+        "true_root": "ج.ث.ذ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_12_maf3uul",
+        "surface": "المجثوذ",
+        "column": "maf3uul",
+        "true_root": "ج.ث.ذ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_12_mu1",
+        "surface": "المجثذ",
+        "column": "mu1",
+        "true_root": "ج.ث.ذ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_12_mu2",
+        "surface": "المجثذ",
+        "column": "mu2",
+        "true_root": "ج.ث.ذ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_13_faail",
+        "surface": "الضازه",
+        "column": "faail",
+        "true_root": "ض.ز.ه",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 6
+      },
+      {
+        "form_id": "nonce_13_faiil",
+        "surface": "الضزيه",
+        "column": "faiil",
+        "true_root": "ض.ز.ه",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 5
+      },
+      {
+        "form_id": "nonce_13_fa33aal",
+        "surface": "الضزاه",
+        "column": "fa33aal",
+        "true_root": "ض.ز.ه",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 5
+      },
+      {
+        "form_id": "nonce_13_maf3uul",
+        "surface": "المضزوه",
+        "column": "maf3uul",
+        "true_root": "ض.ز.ه",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 5
+      },
+      {
+        "form_id": "nonce_13_mu1",
+        "surface": "المضزه",
+        "column": "mu1",
+        "true_root": "ض.ز.ه",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 4
+      },
+      {
+        "form_id": "nonce_13_mu2",
+        "surface": "المضزه",
+        "column": "mu2",
+        "true_root": "ض.ز.ه",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 4
+      },
+      {
+        "form_id": "nonce_14_faail",
+        "surface": "الصانب",
+        "column": "faail",
+        "true_root": "ص.ن.ب",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_14_faiil",
+        "surface": "الصنيب",
+        "column": "faiil",
+        "true_root": "ص.ن.ب",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_14_fa33aal",
+        "surface": "الصناب",
+        "column": "fa33aal",
+        "true_root": "ص.ن.ب",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_14_maf3uul",
+        "surface": "المصنوب",
+        "column": "maf3uul",
+        "true_root": "ص.ن.ب",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_14_mu1",
+        "surface": "المصنب",
+        "column": "mu1",
+        "true_root": "ص.ن.ب",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_14_mu2",
+        "surface": "المصنب",
+        "column": "mu2",
+        "true_root": "ص.ن.ب",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_15_faail",
+        "surface": "الناعذ",
+        "column": "faail",
+        "true_root": "ن.ع.ذ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 4
+      },
+      {
+        "form_id": "nonce_15_faiil",
+        "surface": "النعيذ",
+        "column": "faiil",
+        "true_root": "ن.ع.ذ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 4
+      },
+      {
+        "form_id": "nonce_15_fa33aal",
+        "surface": "النعاذ",
+        "column": "fa33aal",
+        "true_root": "ن.ع.ذ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 5
+      },
+      {
+        "form_id": "nonce_15_maf3uul",
+        "surface": "المنعوذ",
+        "column": "maf3uul",
+        "true_root": "ن.ع.ذ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 6
+      },
+      {
+        "form_id": "nonce_15_mu1",
+        "surface": "المنعذ",
+        "column": "mu1",
+        "true_root": "ن.ع.ذ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 3
+      },
+      {
+        "form_id": "nonce_15_mu2",
+        "surface": "المنعذ",
+        "column": "mu2",
+        "true_root": "ن.ع.ذ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 3
+      },
+      {
+        "form_id": "nonce_16_faail",
+        "surface": "القاكل",
+        "column": "faail",
+        "true_root": "ق.ك.ل",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_16_faiil",
+        "surface": "القكيل",
+        "column": "faiil",
+        "true_root": "ق.ك.ل",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_16_fa33aal",
+        "surface": "القكال",
+        "column": "fa33aal",
+        "true_root": "ق.ك.ل",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 3
+      },
+      {
+        "form_id": "nonce_16_maf3uul",
+        "surface": "المقكول",
+        "column": "maf3uul",
+        "true_root": "ق.ك.ل",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 3
+      },
+      {
+        "form_id": "nonce_16_mu1",
+        "surface": "المقكل",
+        "column": "mu1",
+        "true_root": "ق.ك.ل",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_16_mu2",
+        "surface": "المقكل",
+        "column": "mu2",
+        "true_root": "ق.ك.ل",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_17_faail",
+        "surface": "الصاعظ",
+        "column": "faail",
+        "true_root": "ص.ع.ظ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_17_faiil",
+        "surface": "الصعيظ",
+        "column": "faiil",
+        "true_root": "ص.ع.ظ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_17_fa33aal",
+        "surface": "الصعاظ",
+        "column": "fa33aal",
+        "true_root": "ص.ع.ظ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_17_maf3uul",
+        "surface": "المصعوظ",
+        "column": "maf3uul",
+        "true_root": "ص.ع.ظ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_17_mu1",
+        "surface": "المصعظ",
+        "column": "mu1",
+        "true_root": "ص.ع.ظ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_17_mu2",
+        "surface": "المصعظ",
+        "column": "mu2",
+        "true_root": "ص.ع.ظ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_18_faail",
+        "surface": "الزافش",
+        "column": "faail",
+        "true_root": "ز.ف.ش",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_18_faiil",
+        "surface": "الزفيش",
+        "column": "faiil",
+        "true_root": "ز.ف.ش",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_18_fa33aal",
+        "surface": "الزفاش",
+        "column": "fa33aal",
+        "true_root": "ز.ف.ش",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_18_maf3uul",
+        "surface": "المزفوش",
+        "column": "maf3uul",
+        "true_root": "ز.ف.ش",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_18_mu1",
+        "surface": "المزفش",
+        "column": "mu1",
+        "true_root": "ز.ف.ش",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_18_mu2",
+        "surface": "المزفش",
+        "column": "mu2",
+        "true_root": "ز.ف.ش",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_19_faail",
+        "surface": "الظاثت",
+        "column": "faail",
+        "true_root": "ظ.ث.ت",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 5
+      },
+      {
+        "form_id": "nonce_19_faiil",
+        "surface": "الظثيت",
+        "column": "faiil",
+        "true_root": "ظ.ث.ت",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 4
+      },
+      {
+        "form_id": "nonce_19_fa33aal",
+        "surface": "الظثات",
+        "column": "fa33aal",
+        "true_root": "ظ.ث.ت",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 7
+      },
+      {
+        "form_id": "nonce_19_maf3uul",
+        "surface": "المظثوت",
+        "column": "maf3uul",
+        "true_root": "ظ.ث.ت",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 4
+      },
+      {
+        "form_id": "nonce_19_mu1",
+        "surface": "المظثت",
+        "column": "mu1",
+        "true_root": "ظ.ث.ت",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 3
+      },
+      {
+        "form_id": "nonce_19_mu2",
+        "surface": "المظثت",
+        "column": "mu2",
+        "true_root": "ظ.ث.ت",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 3
+      },
+      {
+        "form_id": "nonce_20_faail",
+        "surface": "الضاصب",
+        "column": "faail",
+        "true_root": "ض.ص.ب",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_20_faiil",
+        "surface": "الضصيب",
+        "column": "faiil",
+        "true_root": "ض.ص.ب",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_20_fa33aal",
+        "surface": "الضصاب",
+        "column": "fa33aal",
+        "true_root": "ض.ص.ب",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_20_maf3uul",
+        "surface": "المضصوب",
+        "column": "maf3uul",
+        "true_root": "ض.ص.ب",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_20_mu1",
+        "surface": "المضصب",
+        "column": "mu1",
+        "true_root": "ض.ص.ب",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_20_mu2",
+        "surface": "المضصب",
+        "column": "mu2",
+        "true_root": "ض.ص.ب",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_21_faail",
+        "surface": "اللافم",
+        "column": "faail",
+        "true_root": "ل.ف.م",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 6
+      },
+      {
+        "form_id": "nonce_21_faiil",
+        "surface": "اللفيم",
+        "column": "faiil",
+        "true_root": "ل.ف.م",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 4
+      },
+      {
+        "form_id": "nonce_21_fa33aal",
+        "surface": "اللفام",
+        "column": "fa33aal",
+        "true_root": "ل.ف.م",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 5
+      },
+      {
+        "form_id": "nonce_21_maf3uul",
+        "surface": "الملفوم",
+        "column": "maf3uul",
+        "true_root": "ل.ف.م",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_21_mu1",
+        "surface": "الملفم",
+        "column": "mu1",
+        "true_root": "ل.ف.م",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_21_mu2",
+        "surface": "الملفم",
+        "column": "mu2",
+        "true_root": "ل.ف.م",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_22_faail",
+        "surface": "الهاطك",
+        "column": "faail",
+        "true_root": "ه.ط.ك",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 6
+      },
+      {
+        "form_id": "nonce_22_faiil",
+        "surface": "الهطيك",
+        "column": "faiil",
+        "true_root": "ه.ط.ك",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 4
+      },
+      {
+        "form_id": "nonce_22_fa33aal",
+        "surface": "الهطاك",
+        "column": "fa33aal",
+        "true_root": "ه.ط.ك",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 4
+      },
+      {
+        "form_id": "nonce_22_maf3uul",
+        "surface": "المهطوك",
+        "column": "maf3uul",
+        "true_root": "ه.ط.ك",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 6
+      },
+      {
+        "form_id": "nonce_22_mu1",
+        "surface": "المهطك",
+        "column": "mu1",
+        "true_root": "ه.ط.ك",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 3
+      },
+      {
+        "form_id": "nonce_22_mu2",
+        "surface": "المهطك",
+        "column": "mu2",
+        "true_root": "ه.ط.ك",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 3
+      },
+      {
+        "form_id": "nonce_23_faail",
+        "surface": "الجاشس",
+        "column": "faail",
+        "true_root": "ج.ش.س",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_23_faiil",
+        "surface": "الجشيس",
+        "column": "faiil",
+        "true_root": "ج.ش.س",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_23_fa33aal",
+        "surface": "الجشاس",
+        "column": "fa33aal",
+        "true_root": "ج.ش.س",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_23_maf3uul",
+        "surface": "المجشوس",
+        "column": "maf3uul",
+        "true_root": "ج.ش.س",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_23_mu1",
+        "surface": "المجشس",
+        "column": "mu1",
+        "true_root": "ج.ش.س",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_23_mu2",
+        "surface": "المجشس",
+        "column": "mu2",
+        "true_root": "ج.ش.س",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_24_faail",
+        "surface": "التالخ",
+        "column": "faail",
+        "true_root": "ت.ل.خ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 6
+      },
+      {
+        "form_id": "nonce_24_faiil",
+        "surface": "التليخ",
+        "column": "faiil",
+        "true_root": "ت.ل.خ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 6
+      },
+      {
+        "form_id": "nonce_24_fa33aal",
+        "surface": "التلاخ",
+        "column": "fa33aal",
+        "true_root": "ت.ل.خ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 7
+      },
+      {
+        "form_id": "nonce_24_maf3uul",
+        "surface": "المتلوخ",
+        "column": "maf3uul",
+        "true_root": "ت.ل.خ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 6
+      },
+      {
+        "form_id": "nonce_24_mu1",
+        "surface": "المتلخ",
+        "column": "mu1",
+        "true_root": "ت.ل.خ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 5
+      },
+      {
+        "form_id": "nonce_24_mu2",
+        "surface": "المتلخ",
+        "column": "mu2",
+        "true_root": "ت.ل.خ",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 5
+      },
+      {
+        "form_id": "nonce_25_faail",
+        "surface": "الفامه",
+        "column": "faail",
+        "true_root": "ف.م.ه",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 12
+      },
+      {
+        "form_id": "nonce_25_faiil",
+        "surface": "الفميه",
+        "column": "faiil",
+        "true_root": "ف.م.ه",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 13
+      },
+      {
+        "form_id": "nonce_25_fa33aal",
+        "surface": "الفماه",
+        "column": "fa33aal",
+        "true_root": "ف.م.ه",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 13
+      },
+      {
+        "form_id": "nonce_25_maf3uul",
+        "surface": "المفموه",
+        "column": "maf3uul",
+        "true_root": "ف.م.ه",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 5
+      },
+      {
+        "form_id": "nonce_25_mu1",
+        "surface": "المفمه",
+        "column": "mu1",
+        "true_root": "ف.م.ه",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 4
+      },
+      {
+        "form_id": "nonce_25_mu2",
+        "surface": "المفمه",
+        "column": "mu2",
+        "true_root": "ف.م.ه",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 4
+      },
+      {
+        "form_id": "nonce_26_faail",
+        "surface": "الثاخز",
+        "column": "faail",
+        "true_root": "ث.خ.ز",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_26_faiil",
+        "surface": "الثخيز",
+        "column": "faiil",
+        "true_root": "ث.خ.ز",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_26_fa33aal",
+        "surface": "الثخاز",
+        "column": "fa33aal",
+        "true_root": "ث.خ.ز",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_26_maf3uul",
+        "surface": "المثخوز",
+        "column": "maf3uul",
+        "true_root": "ث.خ.ز",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_26_mu1",
+        "surface": "المثخز",
+        "column": "mu1",
+        "true_root": "ث.خ.ز",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_26_mu2",
+        "surface": "المثخز",
+        "column": "mu2",
+        "true_root": "ث.خ.ز",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_27_faail",
+        "surface": "الظالص",
+        "column": "faail",
+        "true_root": "ظ.ل.ص",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_27_faiil",
+        "surface": "الظليص",
+        "column": "faiil",
+        "true_root": "ظ.ل.ص",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_27_fa33aal",
+        "surface": "الظلاص",
+        "column": "fa33aal",
+        "true_root": "ظ.ل.ص",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_27_maf3uul",
+        "surface": "المظلوص",
+        "column": "maf3uul",
+        "true_root": "ظ.ل.ص",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_27_mu1",
+        "surface": "المظلص",
+        "column": "mu1",
+        "true_root": "ظ.ل.ص",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_27_mu2",
+        "surface": "المظلص",
+        "column": "mu2",
+        "true_root": "ظ.ل.ص",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_28_faail",
+        "surface": "الباقث",
+        "column": "faail",
+        "true_root": "ب.ق.ث",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 5
+      },
+      {
+        "form_id": "nonce_28_faiil",
+        "surface": "البقيث",
+        "column": "faiil",
+        "true_root": "ب.ق.ث",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 4
+      },
+      {
+        "form_id": "nonce_28_fa33aal",
+        "surface": "البقاث",
+        "column": "fa33aal",
+        "true_root": "ب.ق.ث",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 5
+      },
+      {
+        "form_id": "nonce_28_maf3uul",
+        "surface": "المبقوث",
+        "column": "maf3uul",
+        "true_root": "ب.ق.ث",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_28_mu1",
+        "surface": "المبقث",
+        "column": "mu1",
+        "true_root": "ب.ق.ث",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_28_mu2",
+        "surface": "المبقث",
+        "column": "mu2",
+        "true_root": "ب.ق.ث",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_29_faail",
+        "surface": "الزافق",
+        "column": "faail",
+        "true_root": "ز.ف.ق",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_29_faiil",
+        "surface": "الزفيق",
+        "column": "faiil",
+        "true_root": "ز.ف.ق",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_29_fa33aal",
+        "surface": "الزفاق",
+        "column": "fa33aal",
+        "true_root": "ز.ف.ق",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_29_maf3uul",
+        "surface": "المزفوق",
+        "column": "maf3uul",
+        "true_root": "ز.ف.ق",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_29_mu1",
+        "surface": "المزفق",
+        "column": "mu1",
+        "true_root": "ز.ف.ق",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      },
+      {
+        "form_id": "nonce_29_mu2",
+        "surface": "المزفق",
+        "column": "mu2",
+        "true_root": "ز.ف.ق",
+        "status": "ambiguous",
+        "matched_root": null,
+        "n_matches": 2
+      }
+    ]
+  },
+  "booleans": {
+    "full_inventory_lifts_coverage": false,
+    "precision_holds_at_scale": true,
+    "coverage_bar": 0.2,
+    "precision_bar": 0.8,
+    "full_token_coverage_measured": 0.174757,
+    "full_precision_measured": 0.959547,
+    "named_outcome": "NICHE: precision without coverage — skeleton too sparse at scale"
+  },
+  "gates": {
+    "compilation_determinism": {
+      "gate_name": "SKELETON_COMPILATION_DETERMINISM",
+      "description": "Compiling the skeleton inventory from two different traversal orders of the analysis cache yields identical content (sorted SHA matches). DTF: unsorted serialization from two orders produces different SHAs, showing the sort step is necessary.",
+      "real_check": {
+        "n_skeletons": 8645,
+        "sha_forward": "e4eb9c4b420ab410",
+        "sha_reversed": "e4eb9c4b420ab410",
+        "sha_match": true,
+        "gate_passes": true,
+        "verdict": "PASS: inventory content is order-independent"
+      },
+      "dtf_leg": {
+        "description": "Unsorted serialization should differ by traversal order",
+        "dtf_sha_forward_prefix": "802faa999e77f040",
+        "dtf_sha_reversed_prefix": "56f141e12406c220",
+        "dtf_fires": true,
+        "verdict": "DTF_FIRES: unsorted sha differs — sort step validated"
+      },
+      "gate_passes": true,
+      "elapsed_s": 1.3
+    },
+    "matcher_sanity_exp87": {
+      "gate_name": "MATCHER_SANITY_EXP87",
+      "description": "Restricted 6-template inventory reproduces exp87-consistent match statuses on nonce forms. mu1/mu2 counted unique at skeleton level (shared skeleton الم123); pattern-level ambiguity noted but not a failure.",
+      "restricted_skeleton_inventory": [
+        "ال1ا23",
+        "ال12ي3",
+        "ال12ا3",
+        "الم12و3",
+        "الم123"
+      ],
+      "real_check": {
+        "per_column": {
+          "faail": {
+            "n_unique": 30,
+            "n_other": 0,
+            "ok": true
+          },
+          "faiil": {
+            "n_unique": 30,
+            "n_other": 0,
+            "ok": true
+          },
+          "fa33aal": {
+            "n_unique": 30,
+            "n_other": 0,
+            "ok": true
+          },
+          "maf3uul": {
+            "n_unique": 30,
+            "n_other": 0,
+            "ok": true
+          },
+          "mu1": {
+            "n_unique": 30,
+            "n_other": 0,
+            "ok": true
+          },
+          "mu2": {
+            "n_unique": 30,
+            "n_other": 0,
+            "ok": true
+          }
+        },
+        "all_columns_ok": true,
+        "gate_passes": true,
+        "verdict": "PASS: restricted matcher matches exp87 statuses"
+      },
+      "dtf_leg": {
+        "description": "Corrupt faail skeleton ال1ا23→ال1ب23; faail unique matches should drop to 0",
+        "n_faail_unique_after_corruption": 0,
+        "dtf_fires": true,
+        "verdict": "DTF_FIRES: faail matches dropped — corruption detected"
+      },
+      "gate_passes": true
+    },
+    "all_gates_pass": true
+  },
+  "elapsed_s": 2556.1
+}

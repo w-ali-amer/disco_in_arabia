@@ -1,0 +1,55 @@
+{
+  "gate_name": "MATCHER_SANITY_EXP87",
+  "description": "Restricted 6-template inventory reproduces exp87-consistent match statuses on nonce forms. mu1/mu2 counted unique at skeleton level (shared skeleton الم123); pattern-level ambiguity noted but not a failure.",
+  "restricted_skeleton_inventory": [
+    "ال1ا23",
+    "ال12ي3",
+    "ال12ا3",
+    "الم12و3",
+    "الم123"
+  ],
+  "real_check": {
+    "per_column": {
+      "faail": {
+        "n_unique": 30,
+        "n_other": 0,
+        "ok": true
+      },
+      "faiil": {
+        "n_unique": 30,
+        "n_other": 0,
+        "ok": true
+      },
+      "fa33aal": {
+        "n_unique": 30,
+        "n_other": 0,
+        "ok": true
+      },
+      "maf3uul": {
+        "n_unique": 30,
+        "n_other": 0,
+        "ok": true
+      },
+      "mu1": {
+        "n_unique": 30,
+        "n_other": 0,
+        "ok": true
+      },
+      "mu2": {
+        "n_unique": 30,
+        "n_other": 0,
+        "ok": true
+      }
+    },
+    "all_columns_ok": true,
+    "gate_passes": true,
+    "verdict": "PASS: restricted matcher matches exp87 statuses"
+  },
+  "dtf_leg": {
+    "description": "Corrupt faail skeleton ال1ا23→ال1ب23; faail unique matches should drop to 0",
+    "n_faail_unique_after_corruption": 0,
+    "dtf_fires": true,
+    "verdict": "DTF_FIRES: faail matches dropped — corruption detected"
+  },
+  "gate_passes": true
+}

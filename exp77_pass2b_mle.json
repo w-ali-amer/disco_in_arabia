@@ -1,0 +1,5440 @@
+{
+ "meta": {
+  "purpose": "exp77 pass 2b (working file, NOT of record): root under a DIFFERENT analysis selector",
+  "selector": "camel_tools.disambig.mle.MLEDisambiguator.pretrained(), token in isolation",
+  "camel_tools": "1.5.5",
+  "python": "3.10.13"
+ },
+ "rows": [
+  {
+   "noun": "الخواجة",
+   "set": "d4_519",
+   "root_mle_top": "خ.#.ج",
+   "pattern_mle_top": "ال1َوا3َة",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "خ.#.ج",
+   "pattern_mle_best_definite_noun": "ال1َوا3َة",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المصري",
+   "set": "d4_519",
+   "root_mle_top": "م.ص.ر",
+   "pattern_mle_top": "ال1ِ2ْ3ِيِّ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "العاشق",
+   "set": "d4_519",
+   "root_mle_top": "ع.ش.ق",
+   "pattern_mle_top": "ال1ا2ِ3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ع.ش.ق",
+   "pattern_mle_best_definite_noun": "ال1ا2ِ3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "العريان",
+   "set": "d4_519",
+   "root_mle_top": "ع.ر.#",
+   "pattern_mle_top": "ال1ُ2ْيان",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ع.ر.#",
+   "pattern_mle_best_definite_noun": "ال1ُ2ْيان",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الاخ",
+   "set": "d4_519",
+   "root_mle_top": "#.خ.#",
+   "pattern_mle_top": "الأَ2",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "#.خ.#",
+   "pattern_mle_best_definite_noun": "الأَ2",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الفنان",
+   "set": "d4_519",
+   "root_mle_top": "ف.ن.ن",
+   "pattern_mle_top": "ال1َ2ّا3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ف.ن.ن",
+   "pattern_mle_best_definite_noun": "ال1َ2ّا3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "السفير",
+   "set": "d4_519",
+   "root_mle_top": "س.ف.ر",
+   "pattern_mle_top": "ال1َ2ِي3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "س.ف.ر",
+   "pattern_mle_best_definite_noun": "ال1َ2ِي3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "السوري",
+   "set": "d4_519",
+   "root_mle_top": "س.#.ر.#",
+   "pattern_mle_top": "ال1ُو3ِيِّ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المجنون",
+   "set": "d4_519",
+   "root_mle_top": "ج.ن.ن",
+   "pattern_mle_top": "المَ1ْ2ُو3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ج.ن.ن",
+   "pattern_mle_best_definite_noun": "المَ1ْ2ُو3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الانسان",
+   "set": "d4_519",
+   "root_mle_top": "#.ن.س",
+   "pattern_mle_top": "الإِ2ْ3انِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "#.ن.س",
+   "pattern_mle_best_definite_noun": "الإِ2ْ3انِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "اليمني",
+   "set": "d4_519",
+   "root_mle_top": "#.م.ن",
+   "pattern_mle_top": "اليَ2َ3ِيِّ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الرئيس",
+   "set": "d4_519",
+   "root_mle_top": "ر.#.س",
+   "pattern_mle_top": "ال1َئِي3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ر.#.س",
+   "pattern_mle_best_definite_noun": "ال1َئِي3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الاستاذ",
+   "set": "d4_519",
+   "root_mle_top": "#.س.ت.ذ",
+   "pattern_mle_top": "الأُ2ْ3ا4ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "#.س.ت.ذ",
+   "pattern_mle_best_definite_noun": "الأُ2ْ3ا4ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الراجل",
+   "set": "d4_519",
+   "root_mle_top": "ر.ج.ل",
+   "pattern_mle_top": "ال1ا2ِ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ر.ج.ل",
+   "pattern_mle_best_definite_noun": "ال1ا2ِ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الامير",
+   "set": "d4_519",
+   "root_mle_top": "#.م.ر",
+   "pattern_mle_top": "الأَ2ِي3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "#.م.ر",
+   "pattern_mle_best_definite_noun": "الأَ2ِي3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الخباز",
+   "set": "d4_519",
+   "root_mle_top": "خ.ب.ز",
+   "pattern_mle_top": "ال1َ2ّا3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "خ.ب.ز",
+   "pattern_mle_best_definite_noun": "ال1َ2ّا3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الكويتي",
+   "set": "d4_519",
+   "root_mle_top": "ك.#.ت",
+   "pattern_mle_top": "ال1ُوَيْ3ِيُّ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المعلق",
+   "set": "d4_519",
+   "root_mle_top": "ع.ل.ق",
+   "pattern_mle_top": "المُ1َ2ِّ3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ع.ل.ق",
+   "pattern_mle_best_definite_noun": "المُ1َ2ِّ3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المتحدث",
+   "set": "d4_519",
+   "root_mle_top": "ح.د.ث",
+   "pattern_mle_top": "المُتَ1َ2ِّ3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ح.د.ث",
+   "pattern_mle_best_definite_noun": "المُتَ1َ2ِّ3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "السواق",
+   "set": "d4_519",
+   "root_mle_top": "س.#.ق",
+   "pattern_mle_top": "ال1َوّا3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "س.#.ق",
+   "pattern_mle_best_definite_noun": "ال1َوّا3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الساحر",
+   "set": "d4_519",
+   "root_mle_top": "س.ح.ر",
+   "pattern_mle_top": "ال1ا2ِ3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "س.ح.ر",
+   "pattern_mle_best_definite_noun": "ال1ا2ِ3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "البلجيكي",
+   "set": "d4_519",
+   "root_mle_top": "ب.ل.ج.ك",
+   "pattern_mle_top": "ال1ِ2ْ3ِي4ِيِّ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الجزائري",
+   "set": "d4_519",
+   "root_mle_top": "ج.ز.ر",
+   "pattern_mle_top": "ال1َ2ائِ3ِيُّ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "القديس",
+   "set": "d4_519",
+   "root_mle_top": "ق.د.س",
+   "pattern_mle_top": "ال1ِ2ِّي3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ق.د.س",
+   "pattern_mle_best_definite_noun": "ال1ِ2ِّي3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الكوري",
+   "set": "d4_519",
+   "root_mle_top": "ك.#.ر.#",
+   "pattern_mle_top": "ال1ُو3ِيِّ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "اللواء",
+   "set": "d4_519",
+   "root_mle_top": "ل.#.#",
+   "pattern_mle_top": "ال1ِواءُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ل.#.#",
+   "pattern_mle_best_definite_noun": "ال1ِواءُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الامريكي",
+   "set": "d4_519",
+   "root_mle_top": "#.م.ر.ك",
+   "pattern_mle_top": "الأَ2ْ3ِي4ِيُّ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "#.م.ر.ك",
+   "pattern_mle_best_definite_noun": "الأَ2ْ3ِي4ِيُّ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المسيحي",
+   "set": "d4_519",
+   "root_mle_top": "م.س.ح",
+   "pattern_mle_top": "ال1َ2ِي3ِيِّ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "البدوي",
+   "set": "d4_519",
+   "root_mle_top": "ب.د.#",
+   "pattern_mle_top": "ال1َ2َوِيّ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ب.د.#",
+   "pattern_mle_best_definite_noun": "ال1َ2َوِيّ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الحبشي",
+   "set": "d4_519",
+   "root_mle_top": "ح.ب.ش",
+   "pattern_mle_top": "ال1َ2َ3ِيّ",
+   "pos_mle_top": "noun_prop",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المسئول",
+   "set": "d4_519",
+   "root_mle_top": "س.#.ل",
+   "pattern_mle_top": "المَ1ْئُو3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "س.#.ل",
+   "pattern_mle_best_definite_noun": "المَ1ْئُو3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الوالد",
+   "set": "d4_519",
+   "root_mle_top": "#.ل.د",
+   "pattern_mle_top": "الوا2ِ3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "#.ل.د",
+   "pattern_mle_best_definite_noun": "الوا2ِ3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "السياسي",
+   "set": "d4_519",
+   "root_mle_top": "س.#.س",
+   "pattern_mle_top": "ال1ِيا3ِيِّ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "السرياني",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWS",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الغرقان",
+   "set": "d4_519",
+   "root_mle_top": "غ.ر.ق",
+   "pattern_mle_top": "ال1َ2ْ3ان",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "غ.ر.ق",
+   "pattern_mle_best_definite_noun": "ال1َ2ْ3ان",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الخول",
+   "set": "d4_519",
+   "root_mle_top": "خ.#.ل",
+   "pattern_mle_top": "ال1َوَ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "خ.#.ل",
+   "pattern_mle_best_definite_noun": "ال1َوَ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المدرب",
+   "set": "d4_519",
+   "root_mle_top": "د.ر.ب",
+   "pattern_mle_top": "المُ1َ2ِّ3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "د.ر.ب",
+   "pattern_mle_best_definite_noun": "المُ1َ2ِّ3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المؤيد",
+   "set": "d4_519",
+   "root_mle_top": "#.#.د",
+   "pattern_mle_top": "المُؤَيِّ3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "#.#.د",
+   "pattern_mle_best_definite_noun": "المُؤَيِّ3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المزيف",
+   "set": "d4_519",
+   "root_mle_top": "ز.#.ف",
+   "pattern_mle_top": "المُ1َيَّ3",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الشاب",
+   "set": "d4_519",
+   "root_mle_top": "ش.ب.ب",
+   "pattern_mle_top": "ال1ا2ُّ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ش.ب.ب",
+   "pattern_mle_best_definite_noun": "ال1ا2ُّ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المسلم",
+   "set": "d4_519",
+   "root_mle_top": "س.ل.م",
+   "pattern_mle_top": "المُ1ْ2ِ3ِ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "السوداني",
+   "set": "d4_519",
+   "root_mle_top": "س.#.د",
+   "pattern_mle_top": "ال1ُو3انِيِّ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الامين",
+   "set": "d4_519",
+   "root_mle_top": "#.م.ن",
+   "pattern_mle_top": "الأَ2ِي3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "#.م.ن",
+   "pattern_mle_best_definite_noun": "الأَ2ِي3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الحقير",
+   "set": "d4_519",
+   "root_mle_top": "ح.ق.ر",
+   "pattern_mle_top": "ال1َ2ِي3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ح.ق.ر",
+   "pattern_mle_best_definite_noun": "ال1َ2ِي3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الفرنسي",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSِ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المجرم",
+   "set": "d4_519",
+   "root_mle_top": "ج.ر.م",
+   "pattern_mle_top": "المُ1ْ2ِ3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ج.ر.م",
+   "pattern_mle_best_definite_noun": "المُ1ْ2ِ3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "القطري",
+   "set": "d4_519",
+   "root_mle_top": "ق.ط.ر",
+   "pattern_mle_top": "ال1َ2َ3ِيِّ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "العسكري",
+   "set": "d4_519",
+   "root_mle_top": "ع.س.ك.ر",
+   "pattern_mle_top": "ال1َ2ْ3َ4ِيِّ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المستفيد",
+   "set": "d4_519",
+   "root_mle_top": "ف.#.د",
+   "pattern_mle_top": "المُسْتَ1ِي3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ف.#.د",
+   "pattern_mle_best_definite_noun": "المُسْتَ1ِي3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الطاغيه",
+   "set": "d4_519",
+   "root_mle_top": "ط.غ.#",
+   "pattern_mle_top": "ال1ا2ِيَة",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ط.غ.#",
+   "pattern_mle_best_definite_noun": "ال1ا2ِيَة",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الدكتور",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "NTWS",
+   "pattern_mle_best_definite_noun": "الNTWSُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الرسول",
+   "set": "d4_519",
+   "root_mle_top": "ر.س.ل",
+   "pattern_mle_top": "ال1َ2ُو3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ر.س.ل",
+   "pattern_mle_best_definite_noun": "ال1َ2ُو3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "التلميذ",
+   "set": "d4_519",
+   "root_mle_top": "ت.ل.م.ذ",
+   "pattern_mle_top": "ال1ِ2ْ3ِي4ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ت.ل.م.ذ",
+   "pattern_mle_best_definite_noun": "ال1ِ2ْ3ِي4ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "البليد",
+   "set": "d4_519",
+   "root_mle_top": "ب.ل.د",
+   "pattern_mle_top": "ال1َ2ِي3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ب.ل.د",
+   "pattern_mle_best_definite_noun": "ال1َ2ِي3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الثائر",
+   "set": "d4_519",
+   "root_mle_top": "ث.#.ر",
+   "pattern_mle_top": "ال1ائِ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ث.#.ر",
+   "pattern_mle_best_definite_noun": "ال1ائِ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المعلن",
+   "set": "d4_519",
+   "root_mle_top": "ع.ل.ن",
+   "pattern_mle_top": "المُ1ْ2َ3ُ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الشيخ",
+   "set": "d4_519",
+   "root_mle_top": "ش.#.خ",
+   "pattern_mle_top": "ال1َيْ3",
+   "pos_mle_top": "noun_prop",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الراشد",
+   "set": "d4_519",
+   "root_mle_top": "ر.ش.د",
+   "pattern_mle_top": "ال1ا2ِ3",
+   "pos_mle_top": "noun_prop",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المشائخ",
+   "set": "d4_519",
+   "root_mle_top": "ش.#.خ",
+   "pattern_mle_top": "المَ1ائِ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ش.#.خ",
+   "pattern_mle_best_definite_noun": "المَ1ائِ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المشير",
+   "set": "d4_519",
+   "root_mle_top": "ش.#.ر",
+   "pattern_mle_top": "المُ1ِي3",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الاسير",
+   "set": "d4_519",
+   "root_mle_top": "#.س.ر",
+   "pattern_mle_top": "الأَ2ِي3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "#.س.ر",
+   "pattern_mle_best_definite_noun": "الأَ2ِي3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المحقق",
+   "set": "d4_519",
+   "root_mle_top": "ح.ق.ق",
+   "pattern_mle_top": "المُ1َ2َّ3ِ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "العيسوي",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWS",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "NTWS",
+   "pattern_mle_best_definite_noun": "الNTWS",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المستخدم",
+   "set": "d4_519",
+   "root_mle_top": "خ.د.م",
+   "pattern_mle_top": "المُسْتَ1ْ2ِ3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "خ.د.م",
+   "pattern_mle_best_definite_noun": "المُسْتَ1ْ2ِ3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الرقيب",
+   "set": "d4_519",
+   "root_mle_top": "ر.ق.ب",
+   "pattern_mle_top": "ال1َ2ِي3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ر.ق.ب",
+   "pattern_mle_best_definite_noun": "ال1َ2ِي3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المتطوع",
+   "set": "d4_519",
+   "root_mle_top": "ط.#.ع",
+   "pattern_mle_top": "المُتَ1َوِّ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ط.#.ع",
+   "pattern_mle_best_definite_noun": "المُتَ1َوِّ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المرء",
+   "set": "d4_519",
+   "root_mle_top": "م.ر.#",
+   "pattern_mle_top": "ال1َ2ْء",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "م.ر.#",
+   "pattern_mle_best_definite_noun": "ال1َ2ْء",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الشقيق",
+   "set": "d4_519",
+   "root_mle_top": "ش.ق.ق",
+   "pattern_mle_top": "ال1َ2ِي3ِ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الحاكم",
+   "set": "d4_519",
+   "root_mle_top": "ح.ك.م",
+   "pattern_mle_top": "ال1ا2ِ3ِ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "العراقي",
+   "set": "d4_519",
+   "root_mle_top": "ع.ر.ق",
+   "pattern_mle_top": "ال1ِ2ا3ِيِّ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الباشا",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWS",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "NTWS",
+   "pattern_mle_best_definite_noun": "الNTWS",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الصديق",
+   "set": "d4_519",
+   "root_mle_top": "ص.د.ق",
+   "pattern_mle_top": "ال1َ2ِي3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ص.د.ق",
+   "pattern_mle_best_definite_noun": "ال1َ2ِي3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "السعودي",
+   "set": "d4_519",
+   "root_mle_top": "س.ع.د",
+   "pattern_mle_top": "ال1َ2ُو3ِيِّ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الخليجي",
+   "set": "d4_519",
+   "root_mle_top": "خ.ل.ج",
+   "pattern_mle_top": "ال1َ2ِي3ِيِّ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الشاعر",
+   "set": "d4_519",
+   "root_mle_top": "ش.ع.ر",
+   "pattern_mle_top": "ال1ا2ِ3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ش.ع.ر",
+   "pattern_mle_best_definite_noun": "ال1ا2ِ3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المتخلف",
+   "set": "d4_519",
+   "root_mle_top": "خ.ل.ف",
+   "pattern_mle_top": "المُتَ1َ2ِّ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "خ.ل.ف",
+   "pattern_mle_best_definite_noun": "المُتَ1َ2ِّ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الاجنبي",
+   "set": "d4_519",
+   "root_mle_top": "ج.ن.ب",
+   "pattern_mle_top": "الأَ1ْ2َ3ِيِّ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الملحن",
+   "set": "d4_519",
+   "root_mle_top": "ل.ح.ن",
+   "pattern_mle_top": "المُ1َ2ِّ3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ل.ح.ن",
+   "pattern_mle_best_definite_noun": "المُ1َ2ِّ3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الشهيد",
+   "set": "d4_519",
+   "root_mle_top": "ش.ه.د",
+   "pattern_mle_top": "ال1َ2ِي3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ش.ه.د",
+   "pattern_mle_best_definite_noun": "ال1َ2ِي3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الاموي",
+   "set": "d4_519",
+   "root_mle_top": "#.م.#",
+   "pattern_mle_top": "الأُ2َوِيّ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "#.م.#",
+   "pattern_mle_best_definite_noun": "الأُ2َوِيّ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المولود",
+   "set": "d4_519",
+   "root_mle_top": "#.ل.د",
+   "pattern_mle_top": "المَوْ2ُو3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "#.ل.د",
+   "pattern_mle_best_definite_noun": "المَوْ2ُو3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الحكيم",
+   "set": "d4_519",
+   "root_mle_top": "ح.ك.م",
+   "pattern_mle_top": "ال1َ2ِي3",
+   "pos_mle_top": "noun_prop",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الناجح",
+   "set": "d4_519",
+   "root_mle_top": "ن.ج.ح",
+   "pattern_mle_top": "ال1ا2ِ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ن.ج.ح",
+   "pattern_mle_best_definite_noun": "ال1ا2ِ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "النائب",
+   "set": "d4_519",
+   "root_mle_top": "ن.#.ب",
+   "pattern_mle_top": "ال1ائِ3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ن.#.ب",
+   "pattern_mle_best_definite_noun": "ال1ائِ3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الرائد",
+   "set": "d4_519",
+   "root_mle_top": "ر.#.د",
+   "pattern_mle_top": "ال1ائِ3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ر.#.د",
+   "pattern_mle_best_definite_noun": "ال1ائِ3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المحافظ",
+   "set": "d4_519",
+   "root_mle_top": "ح.ف.ظ",
+   "pattern_mle_top": "المُ1ا2ِ3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ح.ف.ظ",
+   "pattern_mle_best_definite_noun": "المُ1ا2ِ3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الانجليزي",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWS",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المؤذن",
+   "set": "d4_519",
+   "root_mle_top": "#.ذ.ن",
+   "pattern_mle_top": "المُؤَ2ِّ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "#.ذ.ن",
+   "pattern_mle_best_definite_noun": "المُؤَ2ِّ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "القائل",
+   "set": "d4_519",
+   "root_mle_top": "ق.#.ل",
+   "pattern_mle_top": "ال1ائِ3",
+   "pos_mle_top": "adv",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الناشط",
+   "set": "d4_519",
+   "root_mle_top": "ن.ش.ط",
+   "pattern_mle_top": "ال1ا2ِ3ِ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المنتفع",
+   "set": "d4_519",
+   "root_mle_top": "ن.ف.ع",
+   "pattern_mle_top": "المُ1ْتَ2ِ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ن.ف.ع",
+   "pattern_mle_best_definite_noun": "المُ1ْتَ2ِ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الشخص",
+   "set": "d4_519",
+   "root_mle_top": "ش.خ.ص",
+   "pattern_mle_top": "ال1َ2ْ3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ش.خ.ص",
+   "pattern_mle_best_definite_noun": "ال1َ2ْ3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المؤمن",
+   "set": "d4_519",
+   "root_mle_top": "#.م.ن",
+   "pattern_mle_top": "ال2ُؤْمِ3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "#.م.ن",
+   "pattern_mle_best_definite_noun": "ال2ُؤْمِ3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الصاحب",
+   "set": "d4_519",
+   "root_mle_top": "ص.ح.ب",
+   "pattern_mle_top": "ال1ا2ِ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ص.ح.ب",
+   "pattern_mle_best_definite_noun": "ال1ا2ِ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الريس",
+   "set": "d4_519",
+   "root_mle_top": "ر.#.س",
+   "pattern_mle_top": "ال1َيِّ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ر.#.س",
+   "pattern_mle_best_definite_noun": "ال1َيِّ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الوزير",
+   "set": "d4_519",
+   "root_mle_top": "#.ز.ر",
+   "pattern_mle_top": "الوَ2ِي3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "#.ز.ر",
+   "pattern_mle_best_definite_noun": "الوَ2ِي3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "النصير",
+   "set": "d4_519",
+   "root_mle_top": "ن.ص.ر",
+   "pattern_mle_top": "ال1َ2ِي3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ن.ص.ر",
+   "pattern_mle_best_definite_noun": "ال1َ2ِي3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الايراني",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSُ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الاسيوي",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSِ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المغربي",
+   "set": "d4_519",
+   "root_mle_top": "غ.ر.ب",
+   "pattern_mle_top": "المَ1ْ2ِ3ِيُّ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المرشد",
+   "set": "d4_519",
+   "root_mle_top": "ر.ش.د",
+   "pattern_mle_top": "المُ1ْ2ِ3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ر.ش.د",
+   "pattern_mle_best_definite_noun": "المُ1ْ2ِ3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الدجال",
+   "set": "d4_519",
+   "root_mle_top": "د.ج.ل",
+   "pattern_mle_top": "ال1َ2ّا3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "د.ج.ل",
+   "pattern_mle_best_definite_noun": "ال1َ2ّا3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الزعيم",
+   "set": "d4_519",
+   "root_mle_top": "ز.ع.م",
+   "pattern_mle_top": "ال1َ2ِي3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ز.ع.م",
+   "pattern_mle_best_definite_noun": "ال1َ2ِي3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الكوبي",
+   "set": "d4_519",
+   "root_mle_top": "ك.#.ب",
+   "pattern_mle_top": "ال1ُو3ِيِّ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الشامي",
+   "set": "d4_519",
+   "root_mle_top": "ش.#.م",
+   "pattern_mle_top": "ال1ا3ِيّ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ش.#.م",
+   "pattern_mle_best_definite_noun": "ال1ا3ِيّ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "البحريني",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSِ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الغريب",
+   "set": "d4_519",
+   "root_mle_top": "غ.ر.ب",
+   "pattern_mle_top": "ال1َ2ِي3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "غ.ر.ب",
+   "pattern_mle_best_definite_noun": "ال1َ2ِي3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "العبد",
+   "set": "d4_519",
+   "root_mle_top": "ع.ب.د",
+   "pattern_mle_top": "ال1َ2ْ3",
+   "pos_mle_top": "noun_prop",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الظالم",
+   "set": "d4_519",
+   "root_mle_top": "ظ.ل.م",
+   "pattern_mle_top": "ال1ا2ِ3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ظ.ل.م",
+   "pattern_mle_best_definite_noun": "ال1ا2ِ3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الابو",
+   "set": "d4_519",
+   "root_mle_top": "#.ب.#",
+   "pattern_mle_top": "الأَ2ُو",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "#.ب.#",
+   "pattern_mle_best_definite_noun": "الأَ2ُو",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الاسرائيلي",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSِ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الغريق",
+   "set": "d4_519",
+   "root_mle_top": "غ.ر.ق",
+   "pattern_mle_top": "ال1َ2ِي3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "غ.ر.ق",
+   "pattern_mle_best_definite_noun": "ال1َ2ِي3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الفرد",
+   "set": "d4_519",
+   "root_mle_top": "ف.ر.د",
+   "pattern_mle_top": "ال1َ2ْ3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ف.ر.د",
+   "pattern_mle_best_definite_noun": "ال1َ2ْ3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "التونسي",
+   "set": "d4_519",
+   "root_mle_top": "ت.#.ن.س",
+   "pattern_mle_top": "ال1ُو3ِ4ِيِّ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الهلالي",
+   "set": "d4_519",
+   "root_mle_top": "ه.ل.ل",
+   "pattern_mle_top": "ال1ِ2ا3ِيّ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ه.ل.ل",
+   "pattern_mle_best_definite_noun": "ال1ِ2ا3ِيّ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الخطيب",
+   "set": "d4_519",
+   "root_mle_top": "خ.ط.ب",
+   "pattern_mle_top": "ال1َ2ِي3",
+   "pos_mle_top": "noun_prop",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الفقيه",
+   "set": "d4_519",
+   "root_mle_top": "ف.ق.ه",
+   "pattern_mle_top": "ال1َ2ِي3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ف.ق.ه",
+   "pattern_mle_best_definite_noun": "ال1َ2ِي3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الليبي",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSِ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الحاج",
+   "set": "d4_519",
+   "root_mle_top": "ح.ج.ج",
+   "pattern_mle_top": "ال1ا2ّ",
+   "pos_mle_top": "noun_prop",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الراصد",
+   "set": "d4_519",
+   "root_mle_top": "ر.ص.د",
+   "pattern_mle_top": "ال1ا2ِ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ر.ص.د",
+   "pattern_mle_best_definite_noun": "ال1ا2ِ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "العجوز",
+   "set": "d4_519",
+   "root_mle_top": "ع.ج.ز",
+   "pattern_mle_top": "ال1َ2ُو3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ع.ج.ز",
+   "pattern_mle_best_definite_noun": "ال1َ2ُو3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المنظم",
+   "set": "d4_519",
+   "root_mle_top": "ن.ظ.م",
+   "pattern_mle_top": "المُ1َ2َّ3ِ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الدراويش",
+   "set": "d4_519",
+   "root_mle_top": "د.ر.#.ش",
+   "pattern_mle_top": "ال1َ2اوِي4",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "د.ر.#.ش",
+   "pattern_mle_best_definite_noun": "ال1َ2اوِي4",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الدخيل",
+   "set": "d4_519",
+   "root_mle_top": "د.خ.ل",
+   "pattern_mle_top": "ال1َ2ِي3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "د.خ.ل",
+   "pattern_mle_best_definite_noun": "ال1َ2ِي3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الروسي",
+   "set": "d4_519",
+   "root_mle_top": "ر.#.س",
+   "pattern_mle_top": "ال1ُو3ِيِّ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "العميد",
+   "set": "d4_519",
+   "root_mle_top": "ع.م.د",
+   "pattern_mle_top": "ال1َ2ِي3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ع.م.د",
+   "pattern_mle_best_definite_noun": "ال1َ2ِي3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "العضو",
+   "set": "d4_519",
+   "root_mle_top": "ع.ض.#",
+   "pattern_mle_top": "ال1ُ2ْوُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ع.ض.#",
+   "pattern_mle_best_definite_noun": "ال1ُ2ْوُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الزوج",
+   "set": "d4_519",
+   "root_mle_top": "ز.#.ج",
+   "pattern_mle_top": "ال1َوْ3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ز.#.ج",
+   "pattern_mle_best_definite_noun": "ال1َوْ3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الاميركي",
+   "set": "d4_519",
+   "root_mle_top": "#.م.ر.ك",
+   "pattern_mle_top": "الأَ2ِي3ْ4ِيِّ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الراقص",
+   "set": "d4_519",
+   "root_mle_top": "ر.ق.ص",
+   "pattern_mle_top": "ال1ا2ِ3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ر.ق.ص",
+   "pattern_mle_best_definite_noun": "ال1ا2ِ3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الاعزب",
+   "set": "d4_519",
+   "root_mle_top": "ع.ز.ب",
+   "pattern_mle_top": "الأَ1ْ2َ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ع.ز.ب",
+   "pattern_mle_best_definite_noun": "الأَ1ْ2َ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الرسام",
+   "set": "d4_519",
+   "root_mle_top": "ر.س.م",
+   "pattern_mle_top": "ال1َ2ّا3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ر.س.م",
+   "pattern_mle_best_definite_noun": "ال1َ2ّا3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الموسيقار",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSَ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "NTWS",
+   "pattern_mle_best_definite_noun": "الNTWSَ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "القاتل",
+   "set": "d4_519",
+   "root_mle_top": "ق.ت.ل",
+   "pattern_mle_top": "ال1ا2ِ3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ق.ت.ل",
+   "pattern_mle_best_definite_noun": "ال1ا2ِ3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الطيب",
+   "set": "d4_519",
+   "root_mle_top": "ط.#.ب",
+   "pattern_mle_top": "ال1َيِّ3",
+   "pos_mle_top": "noun_prop",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المطوع",
+   "set": "d4_519",
+   "root_mle_top": "ط.#.ع",
+   "pattern_mle_top": "المُ1َوِّ3",
+   "pos_mle_top": "noun_prop",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المحامي",
+   "set": "d4_519",
+   "root_mle_top": "ح.م.#",
+   "pattern_mle_top": "المُ1ا2ِي",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ح.م.#",
+   "pattern_mle_best_definite_noun": "المُ1ا2ِي",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الاب",
+   "set": "d4_519",
+   "root_mle_top": "#.ب.#",
+   "pattern_mle_top": "الأَ2",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "#.ب.#",
+   "pattern_mle_best_definite_noun": "الأَ2",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المذيع",
+   "set": "d4_519",
+   "root_mle_top": "ذ.#.ع",
+   "pattern_mle_top": "المُ1ِي3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ذ.#.ع",
+   "pattern_mle_best_definite_noun": "المُ1ِي3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المستشار",
+   "set": "d4_519",
+   "root_mle_top": "ش.#.ر",
+   "pattern_mle_top": "المُسْتَ1ا3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ش.#.ر",
+   "pattern_mle_best_definite_noun": "المُسْتَ1ا3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الاوروبي",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSِ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الداعية",
+   "set": "d4_519",
+   "root_mle_top": "د.ع.#",
+   "pattern_mle_top": "ال1ا2ِيَة",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "د.ع.#",
+   "pattern_mle_best_definite_noun": "ال1ا2ِيَة",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الكاذب",
+   "set": "d4_519",
+   "root_mle_top": "ك.ذ.ب",
+   "pattern_mle_top": "ال1ا2ِ3",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المنتظر",
+   "set": "d4_519",
+   "root_mle_top": "ن.ظ.ر",
+   "pattern_mle_top": "المُ1ْتَ2َ3ِ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الصراف",
+   "set": "d4_519",
+   "root_mle_top": "ص.ر.ف",
+   "pattern_mle_top": "ال1َ2ّا3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ص.ر.ف",
+   "pattern_mle_best_definite_noun": "ال1َ2ّا3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الكذاب",
+   "set": "d4_519",
+   "root_mle_top": "ك.ذ.ب",
+   "pattern_mle_top": "ال1َ2ّا3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ك.ذ.ب",
+   "pattern_mle_best_definite_noun": "ال1َ2ّا3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الولي",
+   "set": "d4_519",
+   "root_mle_top": "#.ل.#",
+   "pattern_mle_top": "الوَ2ِيُّ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "#.ل.#",
+   "pattern_mle_best_definite_noun": "الوَ2ِيُّ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المجهول",
+   "set": "d4_519",
+   "root_mle_top": "ج.ه.ل",
+   "pattern_mle_top": "المَ1ْ2ُو3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ج.ه.ل",
+   "pattern_mle_best_definite_noun": "المَ1ْ2ُو3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "القاطن",
+   "set": "d4_519",
+   "root_mle_top": "ق.ط.ن",
+   "pattern_mle_top": "ال1ا2ِ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ق.ط.ن",
+   "pattern_mle_best_definite_noun": "ال1ا2ِ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الاسباني",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSُ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "العميل",
+   "set": "d4_519",
+   "root_mle_top": "ع.م.ل",
+   "pattern_mle_top": "ال1َ2ِي3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ع.م.ل",
+   "pattern_mle_best_definite_noun": "ال1َ2ِي3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "اليتيم",
+   "set": "d4_519",
+   "root_mle_top": "#.ت.م",
+   "pattern_mle_top": "اليَ2ِي3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "#.ت.م",
+   "pattern_mle_best_definite_noun": "اليَ2ِي3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الوصي",
+   "set": "d4_519",
+   "root_mle_top": "#.ص.#",
+   "pattern_mle_top": "الوَ2ِيّ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "#.ص.#",
+   "pattern_mle_best_definite_noun": "الوَ2ِيّ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الشحات",
+   "set": "d4_519",
+   "root_mle_top": "ش.ح.ت",
+   "pattern_mle_top": "ال1َ2ّا3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ش.ح.ت",
+   "pattern_mle_best_definite_noun": "ال1َ2ّا3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الايطالي",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSِ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الابن",
+   "set": "d4_519",
+   "root_mle_top": "ب.ن.#",
+   "pattern_mle_top": "الٱِ1ْ2ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ب.ن.#",
+   "pattern_mle_best_definite_noun": "الٱِ1ْ2ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المحب",
+   "set": "d4_519",
+   "root_mle_top": "ح.ب.ب",
+   "pattern_mle_top": "المُ1ِ2ُّ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ح.ب.ب",
+   "pattern_mle_best_definite_noun": "المُ1ِ2ُّ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الحابل",
+   "set": "d4_519",
+   "root_mle_top": "ح.ب.ل",
+   "pattern_mle_top": "ال1ا2ِ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ح.ب.ل",
+   "pattern_mle_best_definite_noun": "ال1ا2ِ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الراوي",
+   "set": "d4_519",
+   "root_mle_top": "ر.#.#",
+   "pattern_mle_top": "ال1اوِي",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ر.#.#",
+   "pattern_mle_best_definite_noun": "ال1اوِي",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المنقذ",
+   "set": "d4_519",
+   "root_mle_top": "ن.ق.ذ",
+   "pattern_mle_top": "المُ1ْ2ِ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ن.ق.ذ",
+   "pattern_mle_best_definite_noun": "المُ1ْ2ِ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المبتدئ",
+   "set": "d4_519",
+   "root_mle_top": "ب.د.#",
+   "pattern_mle_top": "المُ1ْتَ2ِئ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ب.د.#",
+   "pattern_mle_best_definite_noun": "المُ1ْتَ2ِئ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المدقق",
+   "set": "d4_519",
+   "root_mle_top": "د.ق.ق",
+   "pattern_mle_top": "المُ1َ2َّ3",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الياباني",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSِ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الراعي",
+   "set": "d4_519",
+   "root_mle_top": "ر.ع.#",
+   "pattern_mle_top": "ال1ا2ِي",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ر.ع.#",
+   "pattern_mle_best_definite_noun": "ال1ا2ِي",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "النقيب",
+   "set": "d4_519",
+   "root_mle_top": "ن.ق.ب",
+   "pattern_mle_top": "ال1َ2ِي3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ن.ق.ب",
+   "pattern_mle_best_definite_noun": "ال1َ2ِي3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "البخيل",
+   "set": "d4_519",
+   "root_mle_top": "ب.خ.ل",
+   "pattern_mle_top": "ال1َ2ِي3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ب.خ.ل",
+   "pattern_mle_best_definite_noun": "ال1َ2ِي3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الالماني",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSِ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المساعد",
+   "set": "d4_519",
+   "root_mle_top": "س.ع.د",
+   "pattern_mle_top": "المُ1ا2ِ3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "س.ع.د",
+   "pattern_mle_best_definite_noun": "المُ1ا2ِ3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "السائح",
+   "set": "d4_519",
+   "root_mle_top": "س.#.ح",
+   "pattern_mle_top": "ال1ائِ3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "س.#.ح",
+   "pattern_mle_best_definite_noun": "ال1ائِ3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الشيبان",
+   "set": "d4_519",
+   "root_mle_top": "ش.#.ب",
+   "pattern_mle_top": "ال1َيْ3ان",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ش.#.ب",
+   "pattern_mle_best_definite_noun": "ال1َيْ3ان",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الثرثار",
+   "set": "d4_519",
+   "root_mle_top": "ث.ر.ث.ر",
+   "pattern_mle_top": "ال1َ2ْ3ا4",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ث.ر.ث.ر",
+   "pattern_mle_best_definite_noun": "ال1َ2ْ3ا4",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الكرام",
+   "set": "d4_519",
+   "root_mle_top": "ك.ر.م",
+   "pattern_mle_top": "ال1َ2ا3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ك.ر.م",
+   "pattern_mle_best_definite_noun": "ال1َ2ا3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المهاجم",
+   "set": "d4_519",
+   "root_mle_top": "ه.ج.م",
+   "pattern_mle_top": "المُ1ا2ِ3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ه.ج.م",
+   "pattern_mle_best_definite_noun": "المُ1ا2ِ3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الست",
+   "set": "d4_519",
+   "root_mle_top": "س.ت.ت",
+   "pattern_mle_top": "ال1ِ2ِّ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "س.ت.ت",
+   "pattern_mle_best_definite_noun": "ال1ِ2ِّ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الصيدلي",
+   "set": "d4_519",
+   "root_mle_top": "ص.#.د.ل",
+   "pattern_mle_top": "ال1َيْ3َ4ِيِّ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الكفار",
+   "set": "d4_519",
+   "root_mle_top": "ك.ف.ر",
+   "pattern_mle_top": "ال1ُ2ّا3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ك.ف.ر",
+   "pattern_mle_best_definite_noun": "ال1ُ2ّا3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الوارث",
+   "set": "d4_519",
+   "root_mle_top": "#.ر.ث",
+   "pattern_mle_top": "الوا2ِ3",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الشرير",
+   "set": "d4_519",
+   "root_mle_top": "ش.ر.ر",
+   "pattern_mle_top": "ال1ِ2ِّي3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ش.ر.ر",
+   "pattern_mle_best_definite_noun": "ال1ِ2ِّي3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الالباني",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWS",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "NTWS",
+   "pattern_mle_best_definite_noun": "الNTWS",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "البصري",
+   "set": "d4_519",
+   "root_mle_top": "ب.ص.ر",
+   "pattern_mle_top": "ال1َ2ْ3ِيّ",
+   "pos_mle_top": "noun_prop",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المستورد",
+   "set": "d4_519",
+   "root_mle_top": "#.ر.د",
+   "pattern_mle_top": "المُسْتَوْ2ِ3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "#.ر.د",
+   "pattern_mle_best_definite_noun": "المُسْتَوْ2ِ3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الافغاني",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSِ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المحتاج",
+   "set": "d4_519",
+   "root_mle_top": "ح.#.ج",
+   "pattern_mle_top": "المُ1ْتا3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ح.#.ج",
+   "pattern_mle_best_definite_noun": "المُ1ْتا3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "التركي",
+   "set": "d4_519",
+   "root_mle_top": "ت.ر.ك",
+   "pattern_mle_top": "ال1ُ2ْ3ِيِّ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "العقيد",
+   "set": "d4_519",
+   "root_mle_top": "ع.ق.د",
+   "pattern_mle_top": "ال1َ2ِي3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ع.ق.د",
+   "pattern_mle_best_definite_noun": "ال1َ2ِي3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "القيادي",
+   "set": "d4_519",
+   "root_mle_top": "ق.#.د",
+   "pattern_mle_top": "ال1ِيا3ِيِّ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ق.#.د",
+   "pattern_mle_best_definite_noun": "ال1ِيا3ِيِّ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "القيصر",
+   "set": "d4_519",
+   "root_mle_top": "ق.ص.ر",
+   "pattern_mle_top": "ال1َيْ2َ3",
+   "pos_mle_top": "noun_prop",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الاخو",
+   "set": "d4_519",
+   "root_mle_top": "#.خ.#",
+   "pattern_mle_top": "الأَ2ُو",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "#.خ.#",
+   "pattern_mle_best_definite_noun": "الأَ2ُو",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المبدع",
+   "set": "d4_519",
+   "root_mle_top": "ب.د.ع",
+   "pattern_mle_top": "المُ1ْ2ِ3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ب.د.ع",
+   "pattern_mle_best_definite_noun": "المُ1ْ2ِ3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المتشدد",
+   "set": "d4_519",
+   "root_mle_top": "ش.د.د",
+   "pattern_mle_top": "المُتَ1َ2ِّ3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ش.د.د",
+   "pattern_mle_best_definite_noun": "المُتَ1َ2ِّ3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "البليغ",
+   "set": "d4_519",
+   "root_mle_top": "ب.ل.غ",
+   "pattern_mle_top": "ال1َ2ِي3",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المنافق",
+   "set": "d4_519",
+   "root_mle_top": "ن.ف.ق",
+   "pattern_mle_top": "المُ1ا2ِ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ن.ف.ق",
+   "pattern_mle_best_definite_noun": "المُ1ا2ِ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الخال",
+   "set": "d4_519",
+   "root_mle_top": "خ.#.ل",
+   "pattern_mle_top": "ال1ا3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "خ.#.ل",
+   "pattern_mle_best_definite_noun": "ال1ا3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الفتي",
+   "set": "d4_519",
+   "root_mle_top": "ف.ت.#",
+   "pattern_mle_top": "ال1َ2َى",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ف.ت.#",
+   "pattern_mle_best_definite_noun": "ال1َ2َى",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الكافر",
+   "set": "d4_519",
+   "root_mle_top": "ك.ف.ر",
+   "pattern_mle_top": "ال1ا2ِ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ك.ف.ر",
+   "pattern_mle_best_definite_noun": "ال1ا2ِ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الساعي",
+   "set": "d4_519",
+   "root_mle_top": "س.ع.#",
+   "pattern_mle_top": "ال1ا2ِي",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "س.ع.#",
+   "pattern_mle_best_definite_noun": "ال1ا2ِي",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "القاري",
+   "set": "d4_519",
+   "root_mle_top": "ق.ر.ر",
+   "pattern_mle_top": "ال1ا2ِّيِّ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الخراط",
+   "set": "d4_519",
+   "root_mle_top": "خ.ر.ط",
+   "pattern_mle_top": "ال1َ2ّا3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "خ.ر.ط",
+   "pattern_mle_best_definite_noun": "ال1َ2ّا3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الحم",
+   "set": "d4_519",
+   "root_mle_top": "ل.ح.م",
+   "pattern_mle_top": "أَ1ْ2َ3",
+   "pos_mle_top": "verb",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الفذ",
+   "set": "d4_519",
+   "root_mle_top": "ف.ذ.ذ",
+   "pattern_mle_top": "ال1َ2ُّ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ف.ذ.ذ",
+   "pattern_mle_best_definite_noun": "ال1َ2ُّ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الاصلع",
+   "set": "d4_519",
+   "root_mle_top": "ص.ل.ع",
+   "pattern_mle_top": "الأَ1ْ2َ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ص.ل.ع",
+   "pattern_mle_best_definite_noun": "الأَ1ْ2َ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الحرامي",
+   "set": "d4_519",
+   "root_mle_top": "ح.ر.م",
+   "pattern_mle_top": "ال1َ2ا3ِيّ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ح.ر.م",
+   "pattern_mle_best_definite_noun": "ال1َ2ا3ِيّ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الرفيق",
+   "set": "d4_519",
+   "root_mle_top": "ر.ف.ق",
+   "pattern_mle_top": "ال1َ2ِي3",
+   "pos_mle_top": "noun_prop",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الداعي",
+   "set": "d4_519",
+   "root_mle_top": "د.ع.#",
+   "pattern_mle_top": "ال1ا2ِي",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "د.ع.#",
+   "pattern_mle_best_definite_noun": "ال1ا2ِي",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "العابد",
+   "set": "d4_519",
+   "root_mle_top": "ع.ب.د",
+   "pattern_mle_top": "ال1ا2ِ3",
+   "pos_mle_top": "noun_prop",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "البائع",
+   "set": "d4_519",
+   "root_mle_top": "ب.#.ع",
+   "pattern_mle_top": "ال1ائِ3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ب.#.ع",
+   "pattern_mle_best_definite_noun": "ال1ائِ3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الاعمي",
+   "set": "d4_519",
+   "root_mle_top": "ع.م.#",
+   "pattern_mle_top": "الأَ1ْ2َى",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ع.م.#",
+   "pattern_mle_best_definite_noun": "الأَ1ْ2َى",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "البار",
+   "set": "d4_519",
+   "root_mle_top": "ب.ر.#",
+   "pattern_mle_top": "ال1ا2",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ب.ر.#",
+   "pattern_mle_best_definite_noun": "ال1ا2",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الجاني",
+   "set": "d4_519",
+   "root_mle_top": "ج.ن.#",
+   "pattern_mle_top": "ال1ا2ِي",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ج.ن.#",
+   "pattern_mle_best_definite_noun": "ال1ا2ِي",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الخاسر",
+   "set": "d4_519",
+   "root_mle_top": "خ.س.ر",
+   "pattern_mle_top": "ال1ا2ِ3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "خ.س.ر",
+   "pattern_mle_best_definite_noun": "ال1ا2ِ3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المفسر",
+   "set": "d4_519",
+   "root_mle_top": "ف.س.ر",
+   "pattern_mle_top": "المُ1َ2ِّ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ف.س.ر",
+   "pattern_mle_best_definite_noun": "المُ1َ2ِّ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المدخن",
+   "set": "d4_519",
+   "root_mle_top": "د.خ.ن",
+   "pattern_mle_top": "المُ1َ2ِّ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "د.خ.ن",
+   "pattern_mle_best_definite_noun": "المُ1َ2ِّ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "البرازيلي",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSِ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الفارس",
+   "set": "d4_519",
+   "root_mle_top": "ف.ر.س",
+   "pattern_mle_top": "ال1ا2ِ3",
+   "pos_mle_top": "noun_prop",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الارهابي",
+   "set": "d4_519",
+   "root_mle_top": "ر.ه.ب",
+   "pattern_mle_top": "الإِ1ْ2ا3ِيَّ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ر.ه.ب",
+   "pattern_mle_best_definite_noun": "الإِ1ْ2ا3ِيَّ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المادح",
+   "set": "d4_519",
+   "root_mle_top": "م.د.ح",
+   "pattern_mle_top": "ال1ا2ِ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "م.د.ح",
+   "pattern_mle_best_definite_noun": "ال1ا2ِ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المدرس",
+   "set": "d4_519",
+   "root_mle_top": "د.ر.س",
+   "pattern_mle_top": "المُ1َ2ِّ3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "د.ر.س",
+   "pattern_mle_best_definite_noun": "المُ1َ2ِّ3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المجوسي",
+   "set": "d4_519",
+   "root_mle_top": "م.ج.س",
+   "pattern_mle_top": "ال1َ2ُو3ِيّ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "م.ج.س",
+   "pattern_mle_best_definite_noun": "ال1َ2ُو3ِيّ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "القاضي",
+   "set": "d4_519",
+   "root_mle_top": "ق.ض.#",
+   "pattern_mle_top": "ال1ا2ِي",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ق.ض.#",
+   "pattern_mle_best_definite_noun": "ال1ا2ِي",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الفاجر",
+   "set": "d4_519",
+   "root_mle_top": "ف.ج.ر",
+   "pattern_mle_top": "ال1ا2ِ3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ف.ج.ر",
+   "pattern_mle_best_definite_noun": "ال1ا2ِ3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المسكين",
+   "set": "d4_519",
+   "root_mle_top": "س.ك.ن",
+   "pattern_mle_top": "المِ1ْ2ِي3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "س.ك.ن",
+   "pattern_mle_best_definite_noun": "المِ1ْ2ِي3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الاوربي",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWS",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المصور",
+   "set": "d4_519",
+   "root_mle_top": "ص.#.ر",
+   "pattern_mle_top": "المُ1َوِّ3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ص.#.ر",
+   "pattern_mle_best_definite_noun": "المُ1َوِّ3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المحترم",
+   "set": "d4_519",
+   "root_mle_top": "ح.ر.م",
+   "pattern_mle_top": "المُ1ْتَ2َ3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ح.ر.م",
+   "pattern_mle_best_definite_noun": "المُ1ْتَ2َ3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "السنغالي",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSُ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الملحد",
+   "set": "d4_519",
+   "root_mle_top": "ل.ح.د",
+   "pattern_mle_top": "المُ1ْ2ِ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ل.ح.د",
+   "pattern_mle_best_definite_noun": "المُ1ْ2ِ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "العشيق",
+   "set": "d4_519",
+   "root_mle_top": "ع.ش.ق",
+   "pattern_mle_top": "ال1َ2ِي3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ع.ش.ق",
+   "pattern_mle_best_definite_noun": "ال1َ2ِي3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المفتي",
+   "set": "d4_519",
+   "root_mle_top": "ف.ت.#",
+   "pattern_mle_top": "المُ1ْ2ِي",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ف.ت.#",
+   "pattern_mle_best_definite_noun": "المُ1ْ2ِي",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "السامع",
+   "set": "d4_519",
+   "root_mle_top": "س.م.ع",
+   "pattern_mle_top": "ال1ا2ِ3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "س.م.ع",
+   "pattern_mle_best_definite_noun": "ال1ا2ِ3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المغتاب",
+   "set": "d4_519",
+   "root_mle_top": "غ.#.ب",
+   "pattern_mle_top": "المُ1ْتا3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "غ.#.ب",
+   "pattern_mle_best_definite_noun": "المُ1ْتا3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "القارئ",
+   "set": "d4_519",
+   "root_mle_top": "ق.ر.#",
+   "pattern_mle_top": "ال1ا2ِئَ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ق.ر.#",
+   "pattern_mle_best_definite_noun": "ال1ا2ِئَ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "العم",
+   "set": "d4_519",
+   "root_mle_top": "ع.م.م",
+   "pattern_mle_top": "ال1َ2ّ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ع.م.م",
+   "pattern_mle_best_definite_noun": "ال1َ2ّ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المطرب",
+   "set": "d4_519",
+   "root_mle_top": "ط.ر.ب",
+   "pattern_mle_top": "المُ1ْ2ِ3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ط.ر.ب",
+   "pattern_mle_best_definite_noun": "المُ1ْ2ِ3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "البروفسور",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWS",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "NTWS",
+   "pattern_mle_best_definite_noun": "الNTWS",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "العشير",
+   "set": "d4_519",
+   "root_mle_top": "ع.ش.ر",
+   "pattern_mle_top": "ال1َ2ِي3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ع.ش.ر",
+   "pattern_mle_best_definite_noun": "ال1َ2ِي3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "العروس",
+   "set": "d4_519",
+   "root_mle_top": "ع.ر.س",
+   "pattern_mle_top": "ال1َ2ُو3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ع.ر.س",
+   "pattern_mle_best_definite_noun": "ال1َ2ُو3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الكتائبي",
+   "set": "d4_519",
+   "root_mle_top": "ك.ت.ب",
+   "pattern_mle_top": "ال1َ2ائِ3ِيَّ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الفلسطيني",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSِ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المقيم",
+   "set": "d4_519",
+   "root_mle_top": "ق.#.م",
+   "pattern_mle_top": "المُ1ِي3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ق.#.م",
+   "pattern_mle_best_definite_noun": "المُ1ِي3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "السجان",
+   "set": "d4_519",
+   "root_mle_top": "س.ج.ن",
+   "pattern_mle_top": "ال1َ2ّا3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "س.ج.ن",
+   "pattern_mle_best_definite_noun": "ال1َ2ّا3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الفلمنكي",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWS",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المهذب",
+   "set": "d4_519",
+   "root_mle_top": "ه.ذ.ب",
+   "pattern_mle_top": "المُ1َ2َّ3",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الصبي",
+   "set": "d4_519",
+   "root_mle_top": "ص.ب.#",
+   "pattern_mle_top": "ال1َ2ِيِّ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ص.ب.#",
+   "pattern_mle_best_definite_noun": "ال1َ2ِيِّ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الهمج",
+   "set": "d4_519",
+   "root_mle_top": "ه.م.ج",
+   "pattern_mle_top": "ال1َ2َ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ه.م.ج",
+   "pattern_mle_best_definite_noun": "ال1َ2َ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المقاوم",
+   "set": "d4_519",
+   "root_mle_top": "ق.#.م",
+   "pattern_mle_top": "المُ1اوِ3َ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ق.#.م",
+   "pattern_mle_best_definite_noun": "المُ1اوِ3َ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الحافظ",
+   "set": "d4_519",
+   "root_mle_top": "ح.ف.ظ",
+   "pattern_mle_top": "ال1ا2ِ3",
+   "pos_mle_top": "noun_prop",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الرقاص",
+   "set": "d4_519",
+   "root_mle_top": "ر.ق.ص",
+   "pattern_mle_top": "ال1َ2ّا3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ر.ق.ص",
+   "pattern_mle_best_definite_noun": "ال1َ2ّا3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "العانس",
+   "set": "d4_519",
+   "root_mle_top": "ع.ن.س",
+   "pattern_mle_top": "ال1ا2ِ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ع.ن.س",
+   "pattern_mle_best_definite_noun": "ال1ا2ِ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "القبطان",
+   "set": "d4_519",
+   "root_mle_top": "ق.ب.ط.ن",
+   "pattern_mle_top": "ال1ُ2ْ3ا4َ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ق.ب.ط.ن",
+   "pattern_mle_best_definite_noun": "ال1ُ2ْ3ا4َ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "اللبناني",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSِ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المتسابق",
+   "set": "d4_519",
+   "root_mle_top": "س.ب.ق",
+   "pattern_mle_top": "المُتَ1ا2ِ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "س.ب.ق",
+   "pattern_mle_best_definite_noun": "المُتَ1ا2ِ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المتواجد",
+   "set": "d4_519",
+   "root_mle_top": "#.ج.د",
+   "pattern_mle_top": "المُتَوا2ِ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "#.ج.د",
+   "pattern_mle_best_definite_noun": "المُتَوا2ِ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المكي",
+   "set": "d4_519",
+   "root_mle_top": "م.ك.ك",
+   "pattern_mle_top": "ال1َ2ِّيِّ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "السيناتور",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "NTWS",
+   "pattern_mle_best_definite_noun": "الNTWSُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "النظير",
+   "set": "d4_519",
+   "root_mle_top": "ن.ظ.ر",
+   "pattern_mle_top": "ال1َ2ِي3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ن.ظ.ر",
+   "pattern_mle_best_definite_noun": "ال1َ2ِي3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "البريطاني",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSِ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الجدع",
+   "set": "d4_519",
+   "root_mle_top": "ج.د.ع",
+   "pattern_mle_top": "ال1َ2َ3",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "النكات",
+   "set": "d4_519",
+   "root_mle_top": "ن.ك.ت",
+   "pattern_mle_top": "ال1َ2ّا3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ن.ك.ت",
+   "pattern_mle_best_definite_noun": "ال1َ2ّا3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الطاغي",
+   "set": "d4_519",
+   "root_mle_top": "ط.غ.#",
+   "pattern_mle_top": "ال1ا2ِي",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ط.غ.#",
+   "pattern_mle_best_definite_noun": "ال1ا2ِي",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الخب",
+   "set": "d4_519",
+   "root_mle_top": "خ.ب.ب",
+   "pattern_mle_top": "ال1َ2ّ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "خ.ب.ب",
+   "pattern_mle_best_definite_noun": "ال1َ2ّ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المحترف",
+   "set": "d4_519",
+   "root_mle_top": "ح.ر.ف",
+   "pattern_mle_top": "المُ1ْتَ2ِ3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ح.ر.ف",
+   "pattern_mle_best_definite_noun": "المُ1ْتَ2ِ3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المفقود",
+   "set": "d4_519",
+   "root_mle_top": "ف.ق.د",
+   "pattern_mle_top": "المَ1ْ2ُو3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ف.ق.د",
+   "pattern_mle_best_definite_noun": "المَ1ْ2ُو3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "السجين",
+   "set": "d4_519",
+   "root_mle_top": "س.ج.ن",
+   "pattern_mle_top": "ال1َ2ِي3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "س.ج.ن",
+   "pattern_mle_best_definite_noun": "ال1َ2ِي3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المليك",
+   "set": "d4_519",
+   "root_mle_top": "م.ل.ك",
+   "pattern_mle_top": "ال1َ2ِي3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "م.ل.ك",
+   "pattern_mle_best_definite_noun": "ال1َ2ِي3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المحلل",
+   "set": "d4_519",
+   "root_mle_top": "ح.ل.ل",
+   "pattern_mle_top": "المُ1َ2ِّ3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ح.ل.ل",
+   "pattern_mle_best_definite_noun": "المُ1َ2ِّ3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الخبير",
+   "set": "d4_519",
+   "root_mle_top": "خ.ب.ر",
+   "pattern_mle_top": "ال1َ2ِي3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "خ.ب.ر",
+   "pattern_mle_best_definite_noun": "ال1َ2ِي3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الهجان",
+   "set": "d4_519",
+   "root_mle_top": "ه.ج.ن",
+   "pattern_mle_top": "ال1َ2ّا3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ه.ج.ن",
+   "pattern_mle_best_definite_noun": "ال1َ2ّا3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الحامي",
+   "set": "d4_519",
+   "root_mle_top": "ح.م.#",
+   "pattern_mle_top": "ال1ا2ِي",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ح.م.#",
+   "pattern_mle_best_definite_noun": "ال1ا2ِي",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "العباسي",
+   "set": "d4_519",
+   "root_mle_top": "ع.ب.س",
+   "pattern_mle_top": "ال1َ2ّا3ِيِّ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المعرص",
+   "set": "d4_519",
+   "root_mle_top": "ع.ر.ص",
+   "pattern_mle_top": "المُ1َ2َّ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ع.ر.ص",
+   "pattern_mle_best_definite_noun": "المُ1َ2َّ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المفتري",
+   "set": "d4_519",
+   "root_mle_top": "ف.ر.#",
+   "pattern_mle_top": "المُ1ْتَ2ِي",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ف.ر.#",
+   "pattern_mle_best_definite_noun": "المُ1ْتَ2ِي",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الساجد",
+   "set": "d4_519",
+   "root_mle_top": "س.ج.د",
+   "pattern_mle_top": "ال1ا2ِ3",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الزاني",
+   "set": "d4_519",
+   "root_mle_top": "ز.ن.#",
+   "pattern_mle_top": "ال1ا2ِي",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ز.ن.#",
+   "pattern_mle_best_definite_noun": "ال1ا2ِي",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المامور",
+   "set": "d4_519",
+   "root_mle_top": "#.م.ر",
+   "pattern_mle_top": "ال2َأْمُو3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "#.م.ر",
+   "pattern_mle_best_definite_noun": "ال2َأْمُو3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الخائن",
+   "set": "d4_519",
+   "root_mle_top": "خ.#.ن",
+   "pattern_mle_top": "ال1ائِ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "خ.#.ن",
+   "pattern_mle_best_definite_noun": "ال1ائِ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الطيار",
+   "set": "d4_519",
+   "root_mle_top": "ط.#.ر",
+   "pattern_mle_top": "ال1َيّا3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ط.#.ر",
+   "pattern_mle_best_definite_noun": "ال1َيّا3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الاثيوبي",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSُ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الضيف",
+   "set": "d4_519",
+   "root_mle_top": "ض.#.ف",
+   "pattern_mle_top": "ال1َيْ3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ض.#.ف",
+   "pattern_mle_best_definite_noun": "ال1َيْ3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الرومي",
+   "set": "d4_519",
+   "root_mle_top": "ر.#.م",
+   "pattern_mle_top": "ال1ُو3ِيّ",
+   "pos_mle_top": "noun_prop",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الكابتن",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWS",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "NTWS",
+   "pattern_mle_best_definite_noun": "الNTWS",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الممثل",
+   "set": "d4_519",
+   "root_mle_top": "م.ث.ل",
+   "pattern_mle_top": "ال1ُمَ2ِّ3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "م.ث.ل",
+   "pattern_mle_best_definite_noun": "ال1ُمَ2ِّ3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "السباك",
+   "set": "d4_519",
+   "root_mle_top": "س.ب.ك",
+   "pattern_mle_top": "ال1َ2ّا3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "س.ب.ك",
+   "pattern_mle_best_definite_noun": "ال1َ2ّا3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "السياح",
+   "set": "d4_519",
+   "root_mle_top": "س.#.ح",
+   "pattern_mle_top": "ال1ُيّا3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "س.#.ح",
+   "pattern_mle_best_definite_noun": "ال1ُيّا3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الرابح",
+   "set": "d4_519",
+   "root_mle_top": "ر.ب.ح",
+   "pattern_mle_top": "ال1ا2ِ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ر.ب.ح",
+   "pattern_mle_best_definite_noun": "ال1ا2ِ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المهتدي",
+   "set": "d4_519",
+   "root_mle_top": "ه.د.#",
+   "pattern_mle_top": "المُ1ْتَ2ِي",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ه.د.#",
+   "pattern_mle_best_definite_noun": "المُ1ْتَ2ِي",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الامبراطور",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "NTWS",
+   "pattern_mle_best_definite_noun": "الNTWSِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الصائغ",
+   "set": "d4_519",
+   "root_mle_top": "ص.#.غ",
+   "pattern_mle_top": "ال1ائِ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ص.#.غ",
+   "pattern_mle_best_definite_noun": "ال1ائِ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "السويدي",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "NTWS",
+   "pattern_mle_best_definite_noun": "الNTWSِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المناضل",
+   "set": "d4_519",
+   "root_mle_top": "ن.ض.ل",
+   "pattern_mle_top": "المُ1ا2ِ3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ن.ض.ل",
+   "pattern_mle_best_definite_noun": "المُ1ا2ِ3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المؤنس",
+   "set": "d4_519",
+   "root_mle_top": "#.ن.س",
+   "pattern_mle_top": "المُؤْ2ِ3",
+   "pos_mle_top": "noun_prop",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الاهتم",
+   "set": "d4_519",
+   "root_mle_top": "ه.ت.م",
+   "pattern_mle_top": "الأَ1ْ2َ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ه.ت.م",
+   "pattern_mle_best_definite_noun": "الأَ1ْ2َ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الدعي",
+   "set": "d4_519",
+   "root_mle_top": "د.ع.#",
+   "pattern_mle_top": "ال1َ2ِيّ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "د.ع.#",
+   "pattern_mle_best_definite_noun": "ال1َ2ِيّ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الافريقي",
+   "set": "d4_519",
+   "root_mle_top": "#.ف.ر.ق",
+   "pattern_mle_top": "الإِ2ْ3ِي4ِيِّ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "العارف",
+   "set": "d4_519",
+   "root_mle_top": "ع.ر.ف",
+   "pattern_mle_top": "ال1ا2ِ3",
+   "pos_mle_top": "noun_prop",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المغلوب",
+   "set": "d4_519",
+   "root_mle_top": "غ.ل.ب",
+   "pattern_mle_top": "المَ1ْ2ُو3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "غ.ل.ب",
+   "pattern_mle_best_definite_noun": "المَ1ْ2ُو3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الفارسي",
+   "set": "d4_519",
+   "root_mle_top": "ف.ر.س",
+   "pattern_mle_top": "ال1ا2ِ3ِيِّ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الجنرال",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "NTWS",
+   "pattern_mle_best_definite_noun": "الNTWSُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الزيات",
+   "set": "d4_519",
+   "root_mle_top": "ز.#.ت",
+   "pattern_mle_top": "ال1َيّا3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ز.#.ت",
+   "pattern_mle_best_definite_noun": "ال1َيّا3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المشتكي",
+   "set": "d4_519",
+   "root_mle_top": "ش.ك.#",
+   "pattern_mle_top": "المُ1ْتَ2َى",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ش.ك.#",
+   "pattern_mle_best_definite_noun": "المُ1ْتَ2َى",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الحلاق",
+   "set": "d4_519",
+   "root_mle_top": "ح.ل.ق",
+   "pattern_mle_top": "ال1َ2ّا3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ح.ل.ق",
+   "pattern_mle_best_definite_noun": "ال1َ2ّا3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الكاثوليكي",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSِ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الشيوعي",
+   "set": "d4_519",
+   "root_mle_top": "ش.#.ع",
+   "pattern_mle_top": "ال1ُيُو3ِيِّ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "البياع",
+   "set": "d4_519",
+   "root_mle_top": "ب.#.ع",
+   "pattern_mle_top": "ال1َيّا3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ب.#.ع",
+   "pattern_mle_best_definite_noun": "ال1َيّا3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الغنام",
+   "set": "d4_519",
+   "root_mle_top": "غ.ن.م",
+   "pattern_mle_top": "ال1َ2ّا3",
+   "pos_mle_top": "noun_prop",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المار",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWS",
+   "pos_mle_top": "noun_prop",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الناظر",
+   "set": "d4_519",
+   "root_mle_top": "ن.ظ.ر",
+   "pattern_mle_top": "ال1ا2ِ3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ن.ظ.ر",
+   "pattern_mle_best_definite_noun": "ال1ا2ِ3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "البربري",
+   "set": "d4_519",
+   "root_mle_top": "ب.ر.ب.ر",
+   "pattern_mle_top": "ال1َ2ْ3َ4ِيّ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ب.ر.ب.ر",
+   "pattern_mle_best_definite_noun": "ال1َ2ْ3َ4ِيّ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الزميل",
+   "set": "d4_519",
+   "root_mle_top": "ز.م.ل",
+   "pattern_mle_top": "ال1َ2ِي3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ز.م.ل",
+   "pattern_mle_best_definite_noun": "ال1َ2ِي3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المنشد",
+   "set": "d4_519",
+   "root_mle_top": "ن.ش.د",
+   "pattern_mle_top": "المُ1ْ2ِ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ن.ش.د",
+   "pattern_mle_best_definite_noun": "المُ1ْ2ِ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المشبوه",
+   "set": "d4_519",
+   "root_mle_top": "ش.ب.ه",
+   "pattern_mle_top": "المَ1ْ2ُو3ِ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "البولندي",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWS",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "NTWS",
+   "pattern_mle_best_definite_noun": "الNTWS",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "القصاب",
+   "set": "d4_519",
+   "root_mle_top": "ق.ص.ب",
+   "pattern_mle_top": "ال1َ2ّا3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ق.ص.ب",
+   "pattern_mle_best_definite_noun": "ال1َ2ّا3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المرتزق",
+   "set": "d4_519",
+   "root_mle_top": "ر.ز.ق",
+   "pattern_mle_top": "المُ1ْتَ2ِ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ر.ز.ق",
+   "pattern_mle_best_definite_noun": "المُ1ْتَ2ِ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الاردني",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSِ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المستهلك",
+   "set": "d4_519",
+   "root_mle_top": "ه.ل.ك",
+   "pattern_mle_top": "المُسْتَ1ْ2ِ3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ه.ل.ك",
+   "pattern_mle_best_definite_noun": "المُسْتَ1ْ2ِ3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "اليماني",
+   "set": "d4_519",
+   "root_mle_top": "#.م.ن",
+   "pattern_mle_top": "اليَ2ا3ِيّ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الباكستاني",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSُ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الناطق",
+   "set": "d4_519",
+   "root_mle_top": "ن.ط.ق",
+   "pattern_mle_top": "ال1ا2ِ3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ن.ط.ق",
+   "pattern_mle_best_definite_noun": "ال1ا2ِ3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الفائز",
+   "set": "d4_519",
+   "root_mle_top": "ف.#.ز",
+   "pattern_mle_top": "ال1ائِ3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ف.#.ز",
+   "pattern_mle_best_definite_noun": "ال1ائِ3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المشجع",
+   "set": "d4_519",
+   "root_mle_top": "ش.ج.ع",
+   "pattern_mle_top": "المُ1َ2ِّ3",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الراكب",
+   "set": "d4_519",
+   "root_mle_top": "ر.ك.ب",
+   "pattern_mle_top": "ال1ا2ِ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ر.ك.ب",
+   "pattern_mle_best_definite_noun": "ال1ا2ِ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المهرج",
+   "set": "d4_519",
+   "root_mle_top": "ه.ر.ج",
+   "pattern_mle_top": "المُ1َ2ِّ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ه.ر.ج",
+   "pattern_mle_best_definite_noun": "المُ1َ2ِّ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "القواد",
+   "set": "d4_519",
+   "root_mle_top": "ق.#.د",
+   "pattern_mle_top": "ال1ُوّا3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ق.#.د",
+   "pattern_mle_best_definite_noun": "ال1ُوّا3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الصحابي",
+   "set": "d4_519",
+   "root_mle_top": "ص.ح.ب",
+   "pattern_mle_top": "ال1َ2ا3ِيّ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ص.ح.ب",
+   "pattern_mle_best_definite_noun": "ال1َ2ا3ِيّ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "القناص",
+   "set": "d4_519",
+   "root_mle_top": "ق.ن.ص",
+   "pattern_mle_top": "ال1َ2ّا3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ق.ن.ص",
+   "pattern_mle_best_definite_noun": "ال1َ2ّا3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المولع",
+   "set": "d4_519",
+   "root_mle_top": "#.ل.ع",
+   "pattern_mle_top": "المُو2َ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "#.ل.ع",
+   "pattern_mle_best_definite_noun": "المُو2َ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "العاهل",
+   "set": "d4_519",
+   "root_mle_top": "ع.ه.ل",
+   "pattern_mle_top": "ال1ا2ِ3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ع.ه.ل",
+   "pattern_mle_best_definite_noun": "ال1ا2ِ3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "السلفي",
+   "set": "d4_519",
+   "root_mle_top": "س.ل.ف",
+   "pattern_mle_top": "ال1َ2َ3ِيِّ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "س.ل.ف",
+   "pattern_mle_best_definite_noun": "ال1َ2َ3ِيِّ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المجدد",
+   "set": "d4_519",
+   "root_mle_top": "ج.د.د",
+   "pattern_mle_top": "المُ1َ2َّ3",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الابتر",
+   "set": "d4_519",
+   "root_mle_top": "ب.ت.ر",
+   "pattern_mle_top": "الأَ1ْ2َ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ب.ت.ر",
+   "pattern_mle_best_definite_noun": "الأَ1ْ2َ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المتعاطي",
+   "set": "d4_519",
+   "root_mle_top": "ع.ط.#",
+   "pattern_mle_top": "المُتَ1ا2ِي",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ع.ط.#",
+   "pattern_mle_best_definite_noun": "المُتَ1ا2ِي",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الطفران",
+   "set": "d4_519",
+   "root_mle_top": "ط.ف.ر",
+   "pattern_mle_top": "ال1َ2ْ3ان",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ط.ف.ر",
+   "pattern_mle_best_definite_noun": "ال1َ2ْ3ان",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المفكر",
+   "set": "d4_519",
+   "root_mle_top": "ف.ك.ر",
+   "pattern_mle_top": "المُ1َ2ِّ3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ف.ك.ر",
+   "pattern_mle_best_definite_noun": "المُ1َ2ِّ3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الديوث",
+   "set": "d4_519",
+   "root_mle_top": "د.#.ث",
+   "pattern_mle_top": "ال1َيُّو3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "د.#.ث",
+   "pattern_mle_best_definite_noun": "ال1َيُّو3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الاواب",
+   "set": "d4_519",
+   "root_mle_top": "#.#.ب",
+   "pattern_mle_top": "الأَوّا3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "#.#.ب",
+   "pattern_mle_best_definite_noun": "الأَوّا3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المقصر",
+   "set": "d4_519",
+   "root_mle_top": "ق.ص.ر",
+   "pattern_mle_top": "المُ1َ2ِّ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ق.ص.ر",
+   "pattern_mle_best_definite_noun": "المُ1َ2ِّ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المنسق",
+   "set": "d4_519",
+   "root_mle_top": "ن.س.ق",
+   "pattern_mle_top": "المُ1َ2ِّ3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ن.س.ق",
+   "pattern_mle_best_definite_noun": "المُ1َ2ِّ3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الانقليزي",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWS",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "NTWS",
+   "pattern_mle_best_definite_noun": "الNTWS",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الكفيل",
+   "set": "d4_519",
+   "root_mle_top": "ك.ف.ل",
+   "pattern_mle_top": "ال1َ2ِي3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ك.ف.ل",
+   "pattern_mle_best_definite_noun": "ال1َ2ِي3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الدوق",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWS",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "NTWS",
+   "pattern_mle_best_definite_noun": "الNTWS",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المجتهد",
+   "set": "d4_519",
+   "root_mle_top": "ج.ه.د",
+   "pattern_mle_top": "المُ1ْتَ2ِ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ج.ه.د",
+   "pattern_mle_best_definite_noun": "المُ1ْتَ2ِ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المتهم",
+   "set": "d4_519",
+   "root_mle_top": "#.ه.م",
+   "pattern_mle_top": "المُتَّ2َ3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "#.ه.م",
+   "pattern_mle_best_definite_noun": "المُتَّ2َ3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الشاهد",
+   "set": "d4_519",
+   "root_mle_top": "ش.ه.د",
+   "pattern_mle_top": "ال1ا2ِ3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ش.ه.د",
+   "pattern_mle_best_definite_noun": "ال1ا2ِ3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "العطار",
+   "set": "d4_519",
+   "root_mle_top": "ع.ط.ر",
+   "pattern_mle_top": "ال1َ2ّا3",
+   "pos_mle_top": "noun_prop",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "العثماني",
+   "set": "d4_519",
+   "root_mle_top": "ع.ث.م",
+   "pattern_mle_top": "ال1ُ2ْ3انِيِّ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "النحال",
+   "set": "d4_519",
+   "root_mle_top": "ن.ح.ل",
+   "pattern_mle_top": "ال1َ2ّا3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ن.ح.ل",
+   "pattern_mle_best_definite_noun": "ال1َ2ّا3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الاخرس",
+   "set": "d4_519",
+   "root_mle_top": "خ.ر.س",
+   "pattern_mle_top": "الأَ1ْ2َ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "خ.ر.س",
+   "pattern_mle_best_definite_noun": "الأَ1ْ2َ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "النقاد",
+   "set": "d4_519",
+   "root_mle_top": "ن.ق.د",
+   "pattern_mle_top": "ال1ُ2ّا3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ن.ق.د",
+   "pattern_mle_best_definite_noun": "ال1ُ2ّا3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الجليس",
+   "set": "d4_519",
+   "root_mle_top": "ج.ل.س",
+   "pattern_mle_top": "ال1َ2ِي3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ج.ل.س",
+   "pattern_mle_best_definite_noun": "ال1َ2ِي3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الوالي",
+   "set": "d4_519",
+   "root_mle_top": "#.ل.#",
+   "pattern_mle_top": "الوا2ِي",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "#.ل.#",
+   "pattern_mle_best_definite_noun": "الوا2ِي",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الاندلسي",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWS",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المتفرج",
+   "set": "d4_519",
+   "root_mle_top": "ف.ر.ج",
+   "pattern_mle_top": "المُتَ1َ2ِّ3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ف.ر.ج",
+   "pattern_mle_best_definite_noun": "المُتَ1َ2ِّ3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المنغولي",
+   "set": "d4_519",
+   "root_mle_top": "م.ن.غ.ل",
+   "pattern_mle_top": "ال1ُ2ْ3ُو4ِيّ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "العماني",
+   "set": "d4_519",
+   "root_mle_top": "ع.م.ن",
+   "pattern_mle_top": "ال1ُ2ا3ِيِّ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "العمدة",
+   "set": "d4_519",
+   "root_mle_top": "ع.م.د",
+   "pattern_mle_top": "ال1ُ2ْ3َة",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ع.م.د",
+   "pattern_mle_best_definite_noun": "ال1ُ2ْ3َة",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الانيس",
+   "set": "d4_519",
+   "root_mle_top": "#.ن.س",
+   "pattern_mle_top": "الأَ2ِي3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "#.ن.س",
+   "pattern_mle_best_definite_noun": "الأَ2ِي3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المجاهد",
+   "set": "d4_519",
+   "root_mle_top": "ج.ه.د",
+   "pattern_mle_top": "المُ1ا2ِ3َ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ج.ه.د",
+   "pattern_mle_best_definite_noun": "المُ1ا2ِ3َ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الراهب",
+   "set": "d4_519",
+   "root_mle_top": "ر.ه.ب",
+   "pattern_mle_top": "ال1ا2ِ3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ر.ه.ب",
+   "pattern_mle_best_definite_noun": "ال1ا2ِ3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المالك",
+   "set": "d4_519",
+   "root_mle_top": "م.ل.ك",
+   "pattern_mle_top": "ال1ا2ِ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "م.ل.ك",
+   "pattern_mle_best_definite_noun": "ال1ا2ِ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "اللورد",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "NTWS",
+   "pattern_mle_best_definite_noun": "الNTWSُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الفاعل",
+   "set": "d4_519",
+   "root_mle_top": "ف.ع.ل",
+   "pattern_mle_top": "ال1ا2ِ3ِ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "القنصل",
+   "set": "d4_519",
+   "root_mle_top": "ق.ن.ص.ل",
+   "pattern_mle_top": "ال1ُ2ْ3ُ4ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ق.ن.ص.ل",
+   "pattern_mle_best_definite_noun": "ال1ُ2ْ3ُ4ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الصعلوك",
+   "set": "d4_519",
+   "root_mle_top": "ص.ع.ل.ك",
+   "pattern_mle_top": "ال1ُ2ْ3ُو4",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ص.ع.ل.ك",
+   "pattern_mle_best_definite_noun": "ال1ُ2ْ3ُو4",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "العيل",
+   "set": "d4_519",
+   "root_mle_top": "ع.#.ل",
+   "pattern_mle_top": "ال1َيِّ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ع.#.ل",
+   "pattern_mle_best_definite_noun": "ال1َيِّ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الحجار",
+   "set": "d4_519",
+   "root_mle_top": "ح.ج.ر",
+   "pattern_mle_top": "ال1َ2ّا3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ح.ج.ر",
+   "pattern_mle_best_definite_noun": "ال1َ2ّا3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المحرض",
+   "set": "d4_519",
+   "root_mle_top": "ح.ر.ض",
+   "pattern_mle_top": "المُ1َ2ِّ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ح.ر.ض",
+   "pattern_mle_best_definite_noun": "المُ1َ2ِّ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "النديم",
+   "set": "d4_519",
+   "root_mle_top": "ن.د.م",
+   "pattern_mle_top": "ال1َ2ِي3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ن.د.م",
+   "pattern_mle_best_definite_noun": "ال1َ2ِي3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الموريتاني",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSُ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "السارق",
+   "set": "d4_519",
+   "root_mle_top": "س.ر.ق",
+   "pattern_mle_top": "ال1ا2ِ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "س.ر.ق",
+   "pattern_mle_best_definite_noun": "ال1ا2ِ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الضحوك",
+   "set": "d4_519",
+   "root_mle_top": "ض.ح.ك",
+   "pattern_mle_top": "ال1َ2ُو3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ض.ح.ك",
+   "pattern_mle_best_definite_noun": "ال1َ2ُو3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الاشقر",
+   "set": "d4_519",
+   "root_mle_top": "ش.ق.ر",
+   "pattern_mle_top": "الأَ1ْ2َ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ش.ق.ر",
+   "pattern_mle_best_definite_noun": "الأَ1ْ2َ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المسؤول",
+   "set": "d4_519",
+   "root_mle_top": "س.#.ل",
+   "pattern_mle_top": "المَ1ْؤُو3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "س.#.ل",
+   "pattern_mle_best_definite_noun": "المَ1ْؤُو3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الشهم",
+   "set": "d4_519",
+   "root_mle_top": "ش.ه.م",
+   "pattern_mle_top": "ال1َ2ْ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ش.ه.م",
+   "pattern_mle_best_definite_noun": "ال1َ2ْ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الكولونيل",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSَ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "NTWS",
+   "pattern_mle_best_definite_noun": "الNTWSَ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الساقي",
+   "set": "d4_519",
+   "root_mle_top": "س.ق.#",
+   "pattern_mle_top": "ال1ا2ِي",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "س.ق.#",
+   "pattern_mle_best_definite_noun": "ال1ا2ِي",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الصانع",
+   "set": "d4_519",
+   "root_mle_top": "ص.ن.ع",
+   "pattern_mle_top": "ال1ا2ِ3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ص.ن.ع",
+   "pattern_mle_best_definite_noun": "ال1ا2ِ3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "العراب",
+   "set": "d4_519",
+   "root_mle_top": "ع.ر.ب",
+   "pattern_mle_top": "ال1َ2ّا3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ع.ر.ب",
+   "pattern_mle_best_definite_noun": "ال1َ2ّا3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الملاكم",
+   "set": "d4_519",
+   "root_mle_top": "ل.ك.م",
+   "pattern_mle_top": "المُ1ا2ِ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ل.ك.م",
+   "pattern_mle_best_definite_noun": "المُ1ا2ِ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المتبرع",
+   "set": "d4_519",
+   "root_mle_top": "ب.ر.ع",
+   "pattern_mle_top": "المُتَ1َ2ِّ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ب.ر.ع",
+   "pattern_mle_best_definite_noun": "المُتَ1َ2ِّ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الزائر",
+   "set": "d4_519",
+   "root_mle_top": "ز.#.ر",
+   "pattern_mle_top": "ال1ائِ3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ز.#.ر",
+   "pattern_mle_best_definite_noun": "ال1ائِ3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "العلام",
+   "set": "d4_519",
+   "root_mle_top": "ع.ل.م",
+   "pattern_mle_top": "ال1َ2ّا3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ع.ل.م",
+   "pattern_mle_best_definite_noun": "ال1َ2ّا3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الطحان",
+   "set": "d4_519",
+   "root_mle_top": "ط.ح.ن",
+   "pattern_mle_top": "ال1َ2ّا3",
+   "pos_mle_top": "noun_prop",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "العاقر",
+   "set": "d4_519",
+   "root_mle_top": "ع.ق.ر",
+   "pattern_mle_top": "ال1ا2ِ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ع.ق.ر",
+   "pattern_mle_best_definite_noun": "ال1ا2ِ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "البشوش",
+   "set": "d4_519",
+   "root_mle_top": "ب.ش.ش",
+   "pattern_mle_top": "ال1َ2ُو3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ب.ش.ش",
+   "pattern_mle_best_definite_noun": "ال1َ2ُو3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الهداف",
+   "set": "d4_519",
+   "root_mle_top": "ه.د.ف",
+   "pattern_mle_top": "ال1َ2ّا3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ه.د.ف",
+   "pattern_mle_best_definite_noun": "ال1َ2ّا3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الحمصي",
+   "set": "d4_519",
+   "root_mle_top": "ح.م.ص",
+   "pattern_mle_top": "ال1ِ2ْ3ِيّ",
+   "pos_mle_top": "noun_prop",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الشب",
+   "set": "d4_519",
+   "root_mle_top": "ش.ب.ب",
+   "pattern_mle_top": "ال1َ2ّ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ش.ب.ب",
+   "pattern_mle_best_definite_noun": "ال1َ2ّ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الارعن",
+   "set": "d4_519",
+   "root_mle_top": "ر.ع.ن",
+   "pattern_mle_top": "الأَ1ْ2َ3َ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ر.ع.ن",
+   "pattern_mle_best_definite_noun": "الأَ1ْ2َ3َ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الخسيس",
+   "set": "d4_519",
+   "root_mle_top": "خ.س.س",
+   "pattern_mle_top": "ال1َ2ِي3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "خ.س.س",
+   "pattern_mle_best_definite_noun": "ال1َ2ِي3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الواعظ",
+   "set": "d4_519",
+   "root_mle_top": "#.ع.ظ",
+   "pattern_mle_top": "الوا2ِ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "#.ع.ظ",
+   "pattern_mle_best_definite_noun": "الوا2ِ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الشريك",
+   "set": "d4_519",
+   "root_mle_top": "ش.ر.ك",
+   "pattern_mle_top": "ال1َ2ِي3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ش.ر.ك",
+   "pattern_mle_best_definite_noun": "ال1َ2ِي3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الصهيوني",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSِ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الفاسق",
+   "set": "d4_519",
+   "root_mle_top": "ف.س.ق",
+   "pattern_mle_top": "ال1ا2ِ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ف.س.ق",
+   "pattern_mle_best_definite_noun": "ال1ا2ِ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الجزار",
+   "set": "d4_519",
+   "root_mle_top": "ج.ز.ر",
+   "pattern_mle_top": "ال1َ2ّا3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ج.ز.ر",
+   "pattern_mle_best_definite_noun": "ال1َ2ّا3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الحلاج",
+   "set": "d4_519",
+   "root_mle_top": "ح.ل.ج",
+   "pattern_mle_top": "ال1َ2ّا3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ح.ل.ج",
+   "pattern_mle_best_definite_noun": "ال1َ2ّا3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المغترب",
+   "set": "d4_519",
+   "root_mle_top": "غ.ر.ب",
+   "pattern_mle_top": "المُ1ْتَ2ِ3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "غ.ر.ب",
+   "pattern_mle_best_definite_noun": "المُ1ْتَ2ِ3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "القاصر",
+   "set": "d4_519",
+   "root_mle_top": "ق.ص.ر",
+   "pattern_mle_top": "ال1ا2ِ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ق.ص.ر",
+   "pattern_mle_best_definite_noun": "ال1ا2ِ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الارجنتيني",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSِ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المتسبب",
+   "set": "d4_519",
+   "root_mle_top": "س.ب.ب",
+   "pattern_mle_top": "المُتَ1َ2ِّ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "س.ب.ب",
+   "pattern_mle_best_definite_noun": "المُتَ1َ2ِّ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الهولندي",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "NTWS",
+   "pattern_mle_best_definite_noun": "الNTWSُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "النسيب",
+   "set": "d4_519",
+   "root_mle_top": "ن.س.ب",
+   "pattern_mle_top": "ال1َ2ِي3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ن.س.ب",
+   "pattern_mle_best_definite_noun": "ال1َ2ِي3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "التشيلي",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWS",
+   "pos_mle_top": "noun_prop",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الناقد",
+   "set": "d4_519",
+   "root_mle_top": "ن.ق.د",
+   "pattern_mle_top": "ال1ا2ِ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ن.ق.د",
+   "pattern_mle_best_definite_noun": "ال1ا2ِ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المتالق",
+   "set": "d4_519",
+   "root_mle_top": "#.ل.ق",
+   "pattern_mle_top": "المُتَأَ2ِّ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "#.ل.ق",
+   "pattern_mle_best_definite_noun": "المُتَأَ2ِّ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المفاوض",
+   "set": "d4_519",
+   "root_mle_top": "ف.#.ض",
+   "pattern_mle_top": "المُ1اوِ3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ف.#.ض",
+   "pattern_mle_best_definite_noun": "المُ1اوِ3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الظهير",
+   "set": "d4_519",
+   "root_mle_top": "ظ.ه.ر",
+   "pattern_mle_top": "ال1َ2ِي3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ظ.ه.ر",
+   "pattern_mle_best_definite_noun": "ال1َ2ِي3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "البواب",
+   "set": "d4_519",
+   "root_mle_top": "ب.#.ب",
+   "pattern_mle_top": "ال1َوّا3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ب.#.ب",
+   "pattern_mle_best_definite_noun": "ال1َوّا3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المراهق",
+   "set": "d4_519",
+   "root_mle_top": "ر.ه.ق",
+   "pattern_mle_top": "المُ1ا2ِ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ر.ه.ق",
+   "pattern_mle_best_definite_noun": "المُ1ا2ِ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المتوج",
+   "set": "d4_519",
+   "root_mle_top": "ت.#.ج",
+   "pattern_mle_top": "المُ1َوَّ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ت.#.ج",
+   "pattern_mle_best_definite_noun": "المُ1َوَّ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المعيب",
+   "set": "d4_519",
+   "root_mle_top": "ع.#.ب",
+   "pattern_mle_top": "المُ1َيِّ3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ع.#.ب",
+   "pattern_mle_best_definite_noun": "المُ1َيِّ3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الابكم",
+   "set": "d4_519",
+   "root_mle_top": "ب.ك.م",
+   "pattern_mle_top": "الأَ1ْ2َ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ب.ك.م",
+   "pattern_mle_best_definite_noun": "الأَ1ْ2َ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الاقرع",
+   "set": "d4_519",
+   "root_mle_top": "ق.ر.ع",
+   "pattern_mle_top": "الأَ1ْ2َ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ق.ر.ع",
+   "pattern_mle_best_definite_noun": "الأَ1ْ2َ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الدبلوماسي",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "NTWS",
+   "pattern_mle_best_definite_noun": "الNTWSُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المخاطب",
+   "set": "d4_519",
+   "root_mle_top": "خ.ط.ب",
+   "pattern_mle_top": "المُ1ا2َ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "خ.ط.ب",
+   "pattern_mle_best_definite_noun": "المُ1ا2َ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المستمع",
+   "set": "d4_519",
+   "root_mle_top": "س.م.ع",
+   "pattern_mle_top": "المُ1ْتَ2ِ3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "س.م.ع",
+   "pattern_mle_best_definite_noun": "المُ1ْتَ2ِ3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الزبال",
+   "set": "d4_519",
+   "root_mle_top": "ز.ب.ل",
+   "pattern_mle_top": "ال1َ2ّا3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ز.ب.ل",
+   "pattern_mle_best_definite_noun": "ال1َ2ّا3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الاديب",
+   "set": "d4_519",
+   "root_mle_top": "#.د.ب",
+   "pattern_mle_top": "الأَ2ِي3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "#.د.ب",
+   "pattern_mle_best_definite_noun": "الأَ2ِي3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الصبان",
+   "set": "d4_519",
+   "root_mle_top": "ص.ب.ن",
+   "pattern_mle_top": "ال1َ2ّا3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ص.ب.ن",
+   "pattern_mle_best_definite_noun": "ال1َ2ّا3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "البيطار",
+   "set": "d4_519",
+   "root_mle_top": "ب.ط.ر",
+   "pattern_mle_top": "ال1َيْ2ا3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ب.ط.ر",
+   "pattern_mle_best_definite_noun": "ال1َيْ2ا3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الايوبي",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWS",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "NTWS",
+   "pattern_mle_best_definite_noun": "الNTWS",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المشرك",
+   "set": "d4_519",
+   "root_mle_top": "ش.ر.ك",
+   "pattern_mle_top": "المُ1ْ2ِ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ش.ر.ك",
+   "pattern_mle_best_definite_noun": "المُ1ْ2ِ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الانكليزي",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSِ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الخدم",
+   "set": "d4_519",
+   "root_mle_top": "خ.د.م",
+   "pattern_mle_top": "ال1َ2َ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "خ.د.م",
+   "pattern_mle_best_definite_noun": "ال1َ2َ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "السياف",
+   "set": "d4_519",
+   "root_mle_top": "س.#.ف",
+   "pattern_mle_top": "ال1َيّا3",
+   "pos_mle_top": "noun_prop",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المياس",
+   "set": "d4_519",
+   "root_mle_top": "م.#.س",
+   "pattern_mle_top": "ال1َيّا3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "م.#.س",
+   "pattern_mle_best_definite_noun": "ال1َيّا3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الوادع",
+   "set": "d4_519",
+   "root_mle_top": "#.د.ع",
+   "pattern_mle_top": "الوا2ِ3",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الممرض",
+   "set": "d4_519",
+   "root_mle_top": "م.ر.ض",
+   "pattern_mle_top": "ال1ُمَ2ِّ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "م.ر.ض",
+   "pattern_mle_best_definite_noun": "ال1ُمَ2ِّ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الملياردير",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWS",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "NTWS",
+   "pattern_mle_best_definite_noun": "الNTWS",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الوهابي",
+   "set": "d4_519",
+   "root_mle_top": "#.ه.ب",
+   "pattern_mle_top": "الوَ2ّا3ِيّ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "#.ه.ب",
+   "pattern_mle_best_definite_noun": "الوَ2ّا3ِيّ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المبتدع",
+   "set": "d4_519",
+   "root_mle_top": "ب.د.ع",
+   "pattern_mle_top": "المُ1ْتَ2ِ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ب.د.ع",
+   "pattern_mle_best_definite_noun": "المُ1ْتَ2ِ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "العاذل",
+   "set": "d4_519",
+   "root_mle_top": "ع.ذ.ل",
+   "pattern_mle_top": "ال1ا2ِ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ع.ذ.ل",
+   "pattern_mle_best_definite_noun": "ال1ا2ِ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الكردستاني",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSِ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المؤرخ",
+   "set": "d4_519",
+   "root_mle_top": "#.ر.خ",
+   "pattern_mle_top": "المُؤَ2ِّ3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "#.ر.خ",
+   "pattern_mle_best_definite_noun": "المُؤَ2ِّ3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الخريج",
+   "set": "d4_519",
+   "root_mle_top": "خ.ر.ج",
+   "pattern_mle_top": "ال1ِ2ِّي3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "خ.ر.ج",
+   "pattern_mle_best_definite_noun": "ال1ِ2ِّي3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المنصوري",
+   "set": "d4_519",
+   "root_mle_top": "ن.ص.ر",
+   "pattern_mle_top": "المَ1ْ2ُو3ِيّ",
+   "pos_mle_top": "noun_prop",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "البرتغالي",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSِ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الروماني",
+   "set": "d4_519",
+   "root_mle_top": "ر.#.م",
+   "pattern_mle_top": "ال1ُو3انِيِّ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ر.#.م",
+   "pattern_mle_best_definite_noun": "ال1ُو3انِيِّ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الباكي",
+   "set": "d4_519",
+   "root_mle_top": "ب.ك.#",
+   "pattern_mle_top": "ال1ا2ِي",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ب.ك.#",
+   "pattern_mle_best_definite_noun": "ال1ا2ِي",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الشاكي",
+   "set": "d4_519",
+   "root_mle_top": "ش.ك.#",
+   "pattern_mle_top": "ال1ا2ِي",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ش.ك.#",
+   "pattern_mle_best_definite_noun": "ال1ا2ِي",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الفاطمي",
+   "set": "d4_519",
+   "root_mle_top": "ف.ط.م",
+   "pattern_mle_top": "ال1ا2ِ3ِيّ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الفلبيني",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWS",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الفنزويلي",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSِ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المهووس",
+   "set": "d4_519",
+   "root_mle_top": "ه.#.س",
+   "pattern_mle_top": "المَ1ْوُو3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ه.#.س",
+   "pattern_mle_best_definite_noun": "المَ1ْوُو3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المعيد",
+   "set": "d4_519",
+   "root_mle_top": "ع.#.د",
+   "pattern_mle_top": "المُ1ِي3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ع.#.د",
+   "pattern_mle_best_definite_noun": "المُ1ِي3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "البعل",
+   "set": "d4_519",
+   "root_mle_top": "ب.ع.ل",
+   "pattern_mle_top": "ال1َ2ْ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ب.ع.ل",
+   "pattern_mle_best_definite_noun": "ال1َ2ْ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المختص",
+   "set": "d4_519",
+   "root_mle_top": "خ.ص.ص",
+   "pattern_mle_top": "المُ1ْتَ2ِّ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "خ.ص.ص",
+   "pattern_mle_best_definite_noun": "المُ1ْتَ2ِّ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المنادي",
+   "set": "d4_519",
+   "root_mle_top": "ن.د.#",
+   "pattern_mle_top": "المُ1ا2َى",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "التبريزي",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWS",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "NTWS",
+   "pattern_mle_best_definite_noun": "الNTWS",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "البقال",
+   "set": "d4_519",
+   "root_mle_top": "ب.ق.ل",
+   "pattern_mle_top": "ال1َ2ّا3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ب.ق.ل",
+   "pattern_mle_best_definite_noun": "ال1َ2ّا3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الشاذ",
+   "set": "d4_519",
+   "root_mle_top": "ش.ذ.ذ",
+   "pattern_mle_top": "ال1ا2ِّ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ش.ذ.ذ",
+   "pattern_mle_best_definite_noun": "ال1ا2ِّ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "النزيل",
+   "set": "d4_519",
+   "root_mle_top": "ن.ز.ل",
+   "pattern_mle_top": "ال1َ2ِي3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ن.ز.ل",
+   "pattern_mle_best_definite_noun": "ال1َ2ِي3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الاروبي",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWS",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الكازخستاني",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWS",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "العازف",
+   "set": "d4_519",
+   "root_mle_top": "ع.ز.ف",
+   "pattern_mle_top": "ال1ا2ِ3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ع.ز.ف",
+   "pattern_mle_best_definite_noun": "ال1ا2ِ3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الغفير",
+   "set": "d4_519",
+   "root_mle_top": "غ.ف.ر",
+   "pattern_mle_top": "ال1َ2ِي3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "غ.ف.ر",
+   "pattern_mle_best_definite_noun": "ال1َ2ِي3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المكسيكي",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSِ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المخرب",
+   "set": "d4_519",
+   "root_mle_top": "خ.ر.ب",
+   "pattern_mle_top": "المُ1َ2ِّ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "خ.ر.ب",
+   "pattern_mle_best_definite_noun": "المُ1َ2ِّ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "القبطي",
+   "set": "d4_519",
+   "root_mle_top": "ق.ب.ط",
+   "pattern_mle_top": "ال1ِ2ْ3ِيِّ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المتبلد",
+   "set": "d4_519",
+   "root_mle_top": "ب.ل.د",
+   "pattern_mle_top": "المُتَ1َ2ِّ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ب.ل.د",
+   "pattern_mle_best_definite_noun": "المُتَ1َ2ِّ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المتخرج",
+   "set": "d4_519",
+   "root_mle_top": "خ.ر.ج",
+   "pattern_mle_top": "المُتَ1َ2ِّ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "خ.ر.ج",
+   "pattern_mle_best_definite_noun": "المُتَ1َ2ِّ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الفاهم",
+   "set": "d4_519",
+   "root_mle_top": "#.ل.ف",
+   "pattern_mle_top": "إِ2ْ3اهُم",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المحنك",
+   "set": "d4_519",
+   "root_mle_top": "ل.م.ح",
+   "pattern_mle_top": "أَ1ْ2َ3ْنَكَ",
+   "pos_mle_top": "verb",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الماركسي",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSِ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المبجل",
+   "set": "d4_519",
+   "root_mle_top": "ب.ج.ل",
+   "pattern_mle_top": "المُ1َ2َّ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ب.ج.ل",
+   "pattern_mle_best_definite_noun": "المُ1َ2َّ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الندمان",
+   "set": "d4_519",
+   "root_mle_top": "ن.د.م",
+   "pattern_mle_top": "ال1َ2ْ3ان",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ن.د.م",
+   "pattern_mle_best_definite_noun": "ال1َ2ْ3ان",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "البزار",
+   "set": "d4_519",
+   "root_mle_top": "ب.ز.ر",
+   "pattern_mle_top": "ال1َ2ّا3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ب.ز.ر",
+   "pattern_mle_best_definite_noun": "ال1َ2ّا3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الخضري",
+   "set": "d4_519",
+   "root_mle_top": "خ.ض.ر",
+   "pattern_mle_top": "ال1ُ2َ3ِيّ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "خ.ض.ر",
+   "pattern_mle_best_definite_noun": "ال1ُ2َ3ِيّ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المصمم",
+   "set": "d4_519",
+   "root_mle_top": "ص.م.م",
+   "pattern_mle_top": "المُ1َ2ِّ3",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "اللائم",
+   "set": "d4_519",
+   "root_mle_top": "ل.#.م",
+   "pattern_mle_top": "ال1ائِ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ل.#.م",
+   "pattern_mle_best_definite_noun": "ال1ائِ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المستشرق",
+   "set": "d4_519",
+   "root_mle_top": "ش.ر.ق",
+   "pattern_mle_top": "المُسْتَ1ْ2ِ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ش.ر.ق",
+   "pattern_mle_best_definite_noun": "المُسْتَ1ْ2ِ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الديكتاتور",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "NTWS",
+   "pattern_mle_best_definite_noun": "الNTWSُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الربان",
+   "set": "d4_519",
+   "root_mle_top": "ر.ب.ب",
+   "pattern_mle_top": "ال1َ2ّانِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ر.ب.ب",
+   "pattern_mle_best_definite_noun": "ال1َ2ّانِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المعذب",
+   "set": "d4_519",
+   "root_mle_top": "ع.ذ.ب",
+   "pattern_mle_top": "المُ1َ2ِّ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ع.ذ.ب",
+   "pattern_mle_best_definite_noun": "المُ1َ2ِّ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الحرار",
+   "set": "d4_519",
+   "root_mle_top": "ح.ر.ر",
+   "pattern_mle_top": "ال1َ2ّا3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ح.ر.ر",
+   "pattern_mle_best_definite_noun": "ال1َ2ّا3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المعتدي",
+   "set": "d4_519",
+   "root_mle_top": "ع.د.#",
+   "pattern_mle_top": "المُ1ْتَ2ِي",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ع.د.#",
+   "pattern_mle_best_definite_noun": "المُ1ْتَ2ِي",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الرائي",
+   "set": "d4_519",
+   "root_mle_top": "ر.#.#",
+   "pattern_mle_top": "ال1ائِي",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ر.#.#",
+   "pattern_mle_best_definite_noun": "ال1ائِي",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الصارخ",
+   "set": "d4_519",
+   "root_mle_top": "ص.ر.خ",
+   "pattern_mle_top": "ال1ا2ِ3",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المحتل",
+   "set": "d4_519",
+   "root_mle_top": "ح.ل.ل",
+   "pattern_mle_top": "المُ1ْتَ2ِّ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الماسوني",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWS",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "NTWS",
+   "pattern_mle_best_definite_noun": "الNTWS",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الناصح",
+   "set": "d4_519",
+   "root_mle_top": "ن.ص.ح",
+   "pattern_mle_top": "ال1ا2ِ3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ن.ص.ح",
+   "pattern_mle_best_definite_noun": "ال1ا2ِ3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المدعي",
+   "set": "d4_519",
+   "root_mle_top": "د.ع.#",
+   "pattern_mle_top": "المُ1َّ2ِي",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "د.ع.#",
+   "pattern_mle_best_definite_noun": "المُ1َّ2ِي",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الغاوي",
+   "set": "d4_519",
+   "root_mle_top": "غ.#.#",
+   "pattern_mle_top": "ال1اوِي",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "غ.#.#",
+   "pattern_mle_best_definite_noun": "ال1اوِي",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "البروفيسور",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWS",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "NTWS",
+   "pattern_mle_best_definite_noun": "الNTWS",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "العلوي",
+   "set": "d4_519",
+   "root_mle_top": "ع.ل.#",
+   "pattern_mle_top": "ال1َ2َوِيّ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الزنديق",
+   "set": "d4_519",
+   "root_mle_top": "ز.ن.د.ق",
+   "pattern_mle_top": "ال1ِ2ْ3ِي4",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ز.ن.د.ق",
+   "pattern_mle_best_definite_noun": "ال1ِ2ْ3ِي4",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الكربلائي",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWS",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "NTWS",
+   "pattern_mle_best_definite_noun": "الNTWS",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "التشيكي",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSِ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الدمث",
+   "set": "d4_519",
+   "root_mle_top": "د.م.ث",
+   "pattern_mle_top": "ال1َ2ِ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "د.م.ث",
+   "pattern_mle_best_definite_noun": "ال1َ2ِ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "السبئي",
+   "set": "d4_519",
+   "root_mle_top": "س.ب.#",
+   "pattern_mle_top": "ال1َ2َئِيّ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "س.ب.#",
+   "pattern_mle_best_definite_noun": "ال1َ2َئِيّ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الغاش",
+   "set": "d4_519",
+   "root_mle_top": "غ.ش.ش",
+   "pattern_mle_top": "ال1ا2ّ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "غ.ش.ش",
+   "pattern_mle_best_definite_noun": "ال1ا2ّ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "اليزيدي",
+   "set": "d4_519",
+   "root_mle_top": "ز.#.د",
+   "pattern_mle_top": "اليَ1ِي3ِيّ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "اليوناني",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSُ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المحرر",
+   "set": "d4_519",
+   "root_mle_top": "ح.ر.ر",
+   "pattern_mle_top": "المُ1َ2ِّ3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ح.ر.ر",
+   "pattern_mle_best_definite_noun": "المُ1َ2ِّ3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المدمن",
+   "set": "d4_519",
+   "root_mle_top": "د.م.ن",
+   "pattern_mle_top": "المُ1ْ2ِ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "د.م.ن",
+   "pattern_mle_best_definite_noun": "المُ1ْ2ِ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المراكشي",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWS",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الموالي",
+   "set": "d4_519",
+   "root_mle_top": "#.ل.#",
+   "pattern_mle_top": "المُوا2ِي",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "#.ل.#",
+   "pattern_mle_best_definite_noun": "المُوا2ِي",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الرامي",
+   "set": "d4_519",
+   "root_mle_top": "ر.م.#",
+   "pattern_mle_top": "ال1ا2ِي",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ر.م.#",
+   "pattern_mle_best_definite_noun": "ال1ا2ِي",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المشارك",
+   "set": "d4_519",
+   "root_mle_top": "ش.ر.ك",
+   "pattern_mle_top": "المُ1ا2ِ3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ش.ر.ك",
+   "pattern_mle_best_definite_noun": "المُ1ا2ِ3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "البحراني",
+   "set": "d4_519",
+   "root_mle_top": "ب.ح.ر",
+   "pattern_mle_top": "ال1َ2ْ3انِيّ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "القدسي",
+   "set": "d4_519",
+   "root_mle_top": "ق.د.س",
+   "pattern_mle_top": "ال1ُ2ْ3ِيِّ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المخرف",
+   "set": "d4_519",
+   "root_mle_top": "خ.ر.ف",
+   "pattern_mle_top": "المُ1َ2ِّ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "خ.ر.ف",
+   "pattern_mle_best_definite_noun": "المُ1َ2ِّ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المرتد",
+   "set": "d4_519",
+   "root_mle_top": "ر.د.د",
+   "pattern_mle_top": "المُ1ْتَ2ّ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ر.د.د",
+   "pattern_mle_best_definite_noun": "المُ1ْتَ2ّ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المعاون",
+   "set": "d4_519",
+   "root_mle_top": "ع.#.ن",
+   "pattern_mle_top": "المُ1اوِ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ع.#.ن",
+   "pattern_mle_best_definite_noun": "المُ1اوِ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المساهم",
+   "set": "d4_519",
+   "root_mle_top": "س.ه.م",
+   "pattern_mle_top": "المُ1ا2ِ3َ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "س.ه.م",
+   "pattern_mle_best_definite_noun": "المُ1ا2ِ3َ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "العبري",
+   "set": "d4_519",
+   "root_mle_top": "ع.ب.ر",
+   "pattern_mle_top": "ال1ِ2ْ3ِيّ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "البوسني",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSِ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الحطاب",
+   "set": "d4_519",
+   "root_mle_top": "ح.ط.ب",
+   "pattern_mle_top": "ال1َ2ّا3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ح.ط.ب",
+   "pattern_mle_best_definite_noun": "ال1َ2ّا3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "العريف",
+   "set": "d4_519",
+   "root_mle_top": "ع.ر.ف",
+   "pattern_mle_top": "ال1َ2ِي3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ع.ر.ف",
+   "pattern_mle_best_definite_noun": "ال1َ2ِي3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الضامن",
+   "set": "d4_519",
+   "root_mle_top": "ض.م.ن",
+   "pattern_mle_top": "ال1ا2ِ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ض.م.ن",
+   "pattern_mle_best_definite_noun": "ال1ا2ِ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المسيطر",
+   "set": "d4_519",
+   "root_mle_top": "س.ط.ر",
+   "pattern_mle_top": "المُ1َيْ2ِ3َ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الخراص",
+   "set": "d4_519",
+   "root_mle_top": "خ.ر.ص",
+   "pattern_mle_top": "ال1َ2ّا3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "خ.ر.ص",
+   "pattern_mle_best_definite_noun": "ال1َ2ّا3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "السويسري",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSِ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المعزي",
+   "set": "d4_519",
+   "root_mle_top": "ع.ز.#",
+   "pattern_mle_top": "المُ1َ2ِّي",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ع.ز.#",
+   "pattern_mle_best_definite_noun": "المُ1َ2ِّي",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "البوليفي",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWS",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الصربي",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSِ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "القسيس",
+   "set": "d4_519",
+   "root_mle_top": "ق.س.س",
+   "pattern_mle_top": "ال1ِ2ِّي3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ق.س.س",
+   "pattern_mle_best_definite_noun": "ال1ِ2ِّي3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الكندي",
+   "set": "d4_519",
+   "root_mle_top": "NTWS",
+   "pattern_mle_top": "الNTWSُ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الجاسوس",
+   "set": "d4_519",
+   "root_mle_top": "ج.س.س",
+   "pattern_mle_top": "ال1ا2ُو3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ج.س.س",
+   "pattern_mle_best_definite_noun": "ال1ا2ُو3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الكهل",
+   "set": "d4_519",
+   "root_mle_top": "ك.ه.ل",
+   "pattern_mle_top": "ال1َ2ْ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ك.ه.ل",
+   "pattern_mle_best_definite_noun": "ال1َ2ْ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الطالب",
+   "set": "humans_24",
+   "root_mle_top": "ط.ل.ب",
+   "pattern_mle_top": "ال1ا2ِ3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ط.ل.ب",
+   "pattern_mle_best_definite_noun": "ال1ا2ِ3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الرجل",
+   "set": "humans_24",
+   "root_mle_top": "ر.ج.ل",
+   "pattern_mle_top": "ال1َ2ُ3َ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ر.ج.ل",
+   "pattern_mle_best_definite_noun": "ال1َ2ُ3َ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الولد",
+   "set": "humans_24",
+   "root_mle_top": "#.ل.د",
+   "pattern_mle_top": "الوَ2َ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "#.ل.د",
+   "pattern_mle_best_definite_noun": "الوَ2َ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المدير",
+   "set": "humans_24",
+   "root_mle_top": "د.#.ر",
+   "pattern_mle_top": "المُ1ِي3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "د.#.ر",
+   "pattern_mle_best_definite_noun": "المُ1ِي3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المعلم",
+   "set": "humans_24",
+   "root_mle_top": "ع.ل.م",
+   "pattern_mle_top": "المُ1َ2ِّ3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ع.ل.م",
+   "pattern_mle_best_definite_noun": "المُ1َ2ِّ3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الطبيب",
+   "set": "humans_24",
+   "root_mle_top": "ط.ب.ب",
+   "pattern_mle_top": "ال1َ2ِي3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ط.ب.ب",
+   "pattern_mle_best_definite_noun": "ال1َ2ِي3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "العامل",
+   "set": "humans_24",
+   "root_mle_top": "ع.م.ل",
+   "pattern_mle_top": "ال1ا2ِ3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ع.م.ل",
+   "pattern_mle_best_definite_noun": "ال1ا2ِ3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المهندس",
+   "set": "humans_24",
+   "root_mle_top": "ه.ن.د.س",
+   "pattern_mle_top": "المُ1َ2ْ3ِ4ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ه.ن.د.س",
+   "pattern_mle_best_definite_noun": "المُ1َ2ْ3ِ4ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الشرطي",
+   "set": "humans_24",
+   "root_mle_top": "ش.ر.ط",
+   "pattern_mle_top": "ال1ُ2ْ3ِيَّ",
+   "pos_mle_top": "adj",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الكاتب",
+   "set": "humans_24",
+   "root_mle_top": "ك.ت.ب",
+   "pattern_mle_top": "ال1ا2ِ3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ك.ت.ب",
+   "pattern_mle_best_definite_noun": "ال1ا2ِ3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الطباخ",
+   "set": "humans_24",
+   "root_mle_top": "ط.ب.خ",
+   "pattern_mle_top": "ال1َ2ّا3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ط.ب.خ",
+   "pattern_mle_best_definite_noun": "ال1َ2ّا3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الجندي",
+   "set": "humans_24",
+   "root_mle_top": "ج.ن.د",
+   "pattern_mle_top": "ال1ُ2ْ3ِيُّ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ج.ن.د",
+   "pattern_mle_best_definite_noun": "ال1ُ2ْ3ِيُّ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الفلاح",
+   "set": "humans_24",
+   "root_mle_top": "ف.ل.ح",
+   "pattern_mle_top": "ال1َ2ا3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ف.ل.ح",
+   "pattern_mle_best_definite_noun": "ال1َ2ا3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الحارس",
+   "set": "humans_24",
+   "root_mle_top": "ح.ر.س",
+   "pattern_mle_top": "ال1ا2ِ3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ح.ر.س",
+   "pattern_mle_best_definite_noun": "ال1ا2ِ3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "اللاعب",
+   "set": "humans_24",
+   "root_mle_top": "ل.ع.ب",
+   "pattern_mle_top": "ال1ا2ِ3َ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ل.ع.ب",
+   "pattern_mle_best_definite_noun": "ال1ا2ِ3َ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الموظف",
+   "set": "humans_24",
+   "root_mle_top": "#.ظ.ف",
+   "pattern_mle_top": "المُوَ2َّ3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "#.ظ.ف",
+   "pattern_mle_best_definite_noun": "المُوَ2َّ3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الصحفي",
+   "set": "humans_24",
+   "root_mle_top": "ص.ح.ف",
+   "pattern_mle_top": "ال1َ2َ3ِيّ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ص.ح.ف",
+   "pattern_mle_best_definite_noun": "ال1َ2َ3ِيّ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "السائق",
+   "set": "humans_24",
+   "root_mle_top": "س.#.ق",
+   "pattern_mle_top": "ال1ائِ3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "س.#.ق",
+   "pattern_mle_best_definite_noun": "ال1ائِ3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المسافر",
+   "set": "humans_24",
+   "root_mle_top": "س.ف.ر",
+   "pattern_mle_top": "المُ1ا2ِ3",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "س.ف.ر",
+   "pattern_mle_best_definite_noun": "المُ1ا2ِ3",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الضابط",
+   "set": "humans_24",
+   "root_mle_top": "ض.ب.ط",
+   "pattern_mle_top": "ال1ا2ِ3ِ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ض.ب.ط",
+   "pattern_mle_best_definite_noun": "ال1ا2ِ3ِ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الباحث",
+   "set": "humans_24",
+   "root_mle_top": "ب.ح.ث",
+   "pattern_mle_top": "ال1ا2ِ3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ب.ح.ث",
+   "pattern_mle_best_definite_noun": "ال1ا2ِ3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "القائد",
+   "set": "humans_24",
+   "root_mle_top": "ق.#.د",
+   "pattern_mle_top": "ال1ائِ3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "ق.#.د",
+   "pattern_mle_best_definite_noun": "ال1ائِ3ُ",
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "الصياد",
+   "set": "humans_24",
+   "root_mle_top": "ص.#.د",
+   "pattern_mle_top": "ال1َيّا3",
+   "pos_mle_top": "noun_prop",
+   "root_mle_best_definite_noun": null,
+   "pattern_mle_best_definite_noun": null,
+   "n_analyses_scored": 1
+  },
+  {
+   "noun": "المريض",
+   "set": "humans_24",
+   "root_mle_top": "م.ر.ض",
+   "pattern_mle_top": "ال1َ2ِي3ُ",
+   "pos_mle_top": "noun",
+   "root_mle_best_definite_noun": "م.ر.ض",
+   "pattern_mle_best_definite_noun": "ال1َ2ِي3ُ",
+   "n_analyses_scored": 1
+  }
+ ]
+}

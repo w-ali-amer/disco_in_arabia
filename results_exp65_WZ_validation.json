@@ -1,0 +1,28 @@
+{
+ "V1": [
+  0.5,
+  true,
+  true
+ ],
+ "V2_descriptive": [
+  1.0,
+  0.5
+ ],
+ "V3": [
+  1.0,
+  true,
+  true
+ ],
+ "V4": [
+  0,
+  900
+ ],
+ "V6": [
+  1.0,
+  0.5,
+  true
+ ],
+ "kill_gate_passed": true,
+ "dataset_sha256": "97c20d0f549dc01ad04a011ddd47a959094ed1238b59e59f63182b6910af0c40",
+ "note": "V2-H is DESCRIPTIVE not gated (doc 51 SS11.6): the wazn class is a SURFACE property, so an n-gram model is expected to score high on held-out. It estimates the classical surface ceiling."
+}

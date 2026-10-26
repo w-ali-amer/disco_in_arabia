@@ -1,0 +1,31 @@
+{
+ "gate": "SG-FS fixed-scramble floor (doc 66 SS12.2, doc 70 B3)",
+ "designed_to_fail_assertion": "scrambled_acc >= 0.70",
+ "designed_to_fail_result": false,
+ "designed_to_fail_shown_failing": true,
+ "scramble_seed": 79999,
+ "scramble_sha256": "0a764f3fa24725330cda9b0221d65ab948c06e190837df2f428f6cd9b09634b8",
+ "n_eval_items": 100,
+ "scrambled_accuracy": 0.45,
+ "real_accuracy": 0.57,
+ "binomial_sd": 0.05,
+ "within_2sd_of_chance": true,
+ "floor_admissible": true,
+ "pass_criterion": "scrambled_acc within 2 binomial SD of 0.5",
+ "passed": true,
+ "inputs": {
+  "n_train_items": 40,
+  "train_epochs": 5,
+  "init_spec": {
+   "spec": "exp79 init: all params ~ N(0, 0.10^2)",
+   "arm": "C-DISCARD",
+   "seed": 0,
+   "stream_seed": 79000000,
+   "stream_rule": "79_000_000 + 1000*EXP79_ARM_INDEX[arm] + seed (C-FLOOR uses C-DISCARD index; streams disjoint from exp42r's 42_000_000 family)",
+   "n_params": 255,
+   "init_vector_sha256": "0b469e5dbc10e53697cc8a1c92949cff83ef7f9c82c4adaa17df2d5099f9eada"
+  }
+ },
+ "when": "2026-09-04T07:41:00Z",
+ "artifact_sha256": "37f94c3f2c48ccb028f555cae9c81d9bfe3e1e1866a38c8ec6f43cea95b975a7"
+}

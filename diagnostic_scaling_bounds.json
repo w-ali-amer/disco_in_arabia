@@ -1,0 +1,947 @@
+{
+ "component": "exp76_scaling_bounds",
+ "purpose": "grade-1 reachable-accuracy bounds and size-matched nulls for the D4 519-noun inventory of record, under the committed single-angle FA map, as PRE-WORK for doc 63 / exp76",
+ "status": "PRE-WORK INSTRUMENT, doc 54's status-block instrument exception (cited downstream as doc 54 SS0). This is a bound calculator, not an experiment. No exp76 experiment code exists.",
+ "spec": "qnlp_private_docs/63_exp76_scaling_DRAFT.md",
+ "generated_utc": "2026-08-28T23:03:49Z",
+ "platform": "macOS-26.5.2-arm64-arm-64bit",
+ "python": "3.12.13",
+ "numpy": "2.5.1",
+ "script_sha256": "8bcf25093a3c72d5d814d36e284f5b9c9e971960443c5a48c047a3d3d7ba6e07",
+ "provenance": {
+  "instrument_sb_bounds_sha256": "a616d1243d5dd589675eb89c6a6341ea6448ea8c716ba14af4139f3fae1d9507",
+  "capacity_check_sha256": "1e5f38d91d8795d67aad8a436bb9d0417d78934f0273307e4a2d0b9503d15ba9",
+  "inventory_file": "d4_confirmed_inventory.json",
+  "inventory_file_sha256": "f7a8cb9f7d296f810131a0a37f9380daa514680c69e8935be287c91a759b536f",
+  "inventory_nouns_sha256": "34e95fc6e0429ecb9284f825e5ac411eba48865db3a3ce585aaf6d6aa26328f0",
+  "inventory_gate": "doc 59 SS8.2 sample-audit protocol, closed 2026-08-28: user approval (verbatim: \"confirm the nouns, approved from my side\") + Opus lexical double-check over all 600 (d4_model_check.json, reviewery) with its 81 vetoes APPLIED",
+  "inventory_caveat": "model dominance judgments are informed estimates, not corpus measurements; any experiment registration naming memberships still states its own provenance",
+  "candidates_file_sha256": "4cad264724c7ba1aeead0b2ea1f41f7240cd7df06571d2a2acb4dac260520bb0",
+  "budget": {
+   "restarts": 48,
+   "steps": 500,
+   "ls_starts": 6,
+   "seed": 0
+  },
+  "null_draws": 200,
+  "null_seed": 68000,
+  "calls_not_copies": "the search, the sign-flip invariant, the constraint rows and the null discipline are instrument_sb_bounds's, imported and called"
+ },
+ "features": {
+  "family": "raw519_union_fit",
+  "feature_kind": "FA",
+  "d": 3,
+  "d_joint": 9,
+  "formula": "FA: phi = atan2(p2, p1); u = (1, cos phi, sin phi). d = 3. The EXISTING single-angle map (exp42 intro_convention, angle = atan2(y, x)); scaling-free.",
+  "raw_file": "aravec_raw_vectors_candidates.json",
+  "raw_file_sha256": "1de4e9dca68ccf9f1677081278215ad77529118600c534d76f70e61b21ac64aa",
+  "raw44_file": "aravec_raw_vectors_44.json",
+  "raw44_file_sha256": "4e919966b3d359a9c1af397904113ad4d1dad3a6f6f9d2560fb17523843ba35a",
+  "frozen_emb_sha256": "a23a489e843780c2d10cd633e87f98ba65205abd2a4067991803cf895a1a0e3c",
+  "pca_fit_on": "union of the 519 confirmed and the committed 44",
+  "pca_fit_n": 563,
+  "raw_dim": 300,
+  "var_explained_pc1": 0.067937702084598,
+  "var_explained_pc2": 0.04925453621776552,
+  "var_explained_pc1_plus_pc2": 0.11719223830236353,
+  "sign_pin_applied": [
+   1,
+   -1
+  ],
+  "sign_pin_max_abs_coord_diff_over_humans24": 1.6429198426019471,
+  "norm_divisors_over_519": [
+   15.297066273552097,
+   13.208578229271847
+  ],
+  "normalisation": "p_k(r) = PC_k(r) / max_{r' in the 519} |PC_k(r')|; REGISTERED as a population change from load_raw's max over the 24 HUMANS (doc 47 SS18.5)",
+  "radius_min_max_mean": [
+   0.07461154241835118,
+   17.810352506784113,
+   5.471903455657376
+  ],
+  "leakage_condition": "valid for splits over unseen PAIRINGS only; if any arm splits over unseen NOUNS, doc 51 SS4 binds and this featurizer is invalid for that arm"
+ },
+ "population": {
+  "n_nouns": 519,
+  "statement": "EVERY bound here is the n = 2 SB decision sign(u_a^T C u_p) over the 519-noun inventory. capacity_check.py's scope statement binds: this instrument is NOT a bound 'on tasks with more than two referents'. It is a statement about the INVENTORY, and it is NOT a grade-1 bound for any exp76 arm at n > 2."
+ },
+ "exactness": {
+  "exact_available": false,
+  "why": "exact_maxfs_r3 is O(n_rows^3); n_rows here is 2060-28728 against <= 190 at the committed 24-noun scale. Measured: it did not complete in 120 s at the smallest 519-scale contrast tried.",
+  "consequence": "every 519-scale value is a CONSTRUCTIVE LOWER BOUND. A measured accuracy above it is not a violation."
+ },
+ "selftest": {
+  "committed_anchor_tertiary_pair": {
+   "value": 0.8526315789473684,
+   "fraction": "81/95",
+   "exact": true,
+   "published_doc47_s13": 0.8526,
+   "reproduces": true
+  },
+  "two_arc_band_is_exactly_one": {
+   "size": 40,
+   "arcs": 2,
+   "value": 1.0,
+   "fraction": "19160/19160",
+   "passes": true
+  },
+  "per_twin_ge_pair": {
+   "pair": 1.0,
+   "twin": 1.0
+  },
+  "certificate_does_not_fire": {
+   "rank_G": 3,
+   "n_rows": 19160,
+   "fires": false,
+   "as_expected": true
+  },
+  "null_is_not_a_point_mass": {
+   "draws": 25,
+   "mean": 0.5830271398747391,
+   "sd": 0.033944393087742046,
+   "min": 0.5281315240083507,
+   "max": 0.6424321503131524,
+   "passes": true
+  },
+  "all_passed": true
+ },
+ "membership_provenance_table": {
+  "why_this_table_exists": "doc 47 SS13.4 makes category membership a DESIGN INPUT with a stated provenance; doc 54 SS5.1 records what happens when it is not written down. No 'membership provenance table' existed in the private repo before this file; this is its first instance.",
+  "classes": {
+   "faail_surface": {
+    "n": 63,
+    "definition": "d4_confirmed_inventory.json :: nouns[].wazn_tag == 'faail'",
+    "produced_by": "extract_aravec_candidates.py :: wazn_tag(lex_bare), lines 99-112",
+    "provenance_class": "SURFACE REGEX over a CAMeL-derived lemma",
+    "producer_own_words": "its own comment reads 'Surface wazn tags. DESCRIPTIVE metadata attached to the admitting analysis's lemma -- they are not admission rules and carry no semantic claim.'",
+    "confirmation": "PROGRAMMATIC. The user's 2026-08-28 approval (doc 59 SS8.4) confirmed HUMAN-DENOTING-NESS over the 600 candidates; it did not confirm any wazn tag.",
+    "known_defect": "rule ORDER: the m-initial and yaa-final tests fire before the faaCil test, so m-initial and defective-root participles are mis-tagged. The inventory carries an audit note recording one such case in its own data (المصري: 'Wazn tag mu_participle is an error')."
+   },
+   "faail_camel": {
+    "n": 81,
+    "definition": "candidate_human_nouns.json :: candidates[].pattern in the enumerated set FAAIL_CAMEL_PATTERNS",
+    "produced_by": "CAMeL Tools MorphologyDB.builtin_db(), the admitting analysis",
+    "provenance_class": "MORPHOLOGICAL ANALYSIS OUTPUT (not a string test)",
+    "patterns": {
+     "ال1ا2ِ3": "sound root (salim) -- the canonical al-faaCil",
+     "ال1ائِ3": "hollow root (ajwaf) -- al-faaCil realised faa'iC",
+     "ال1ا2ِي": "defective root (naqis) -- al-faaCil realised faaCi",
+     "الوا2ِ3": "assimilated waw root (mithal) -- waaCiC",
+     "ال1ا2ِئ": "hamzated lam -- faaCi'",
+     "ال1ا2ّ": "geminate root (mudaaCaf) -- faaCC"
+    },
+    "patterns_excluded": [
+     "ال1اوِي",
+     "ال1ا2ِيَة",
+     "ال1ا2ِ3ِيّ"
+    ],
+    "confirmation": "PROGRAMMATIC WITH SPOT-CHECK. Distinct in kind from the user-confirmed 24-noun / 9-member faaCil contrast of doc 51 SS7, which the user confirmed noun by noun."
+   },
+   "faail_intersection": {
+    "n": 62,
+    "definition": "both definitions agree",
+    "provenance_class": "the conservative core"
+   }
+  },
+  "disagreement": {
+   "camel_only": [
+    "الباكي",
+    "الجاني",
+    "الحاج",
+    "الداعي",
+    "الراعي",
+    "الرامي",
+    "الزاني",
+    "الساعي",
+    "الساقي",
+    "الشاب",
+    "الشاذ",
+    "الشاكي",
+    "الطاغي",
+    "الغاش",
+    "القاري",
+    "القاضي",
+    "المادح",
+    "المار",
+    "المالك"
+   ],
+   "surface_only": [
+    "الباشا"
+   ],
+   "n_camel_only": 19,
+   "n_surface_only": 1,
+   "reading": "the shipped surface tag MISSES weak-root realisations of the same morphological class and ADMITS at least one loanword that is not a participle at all. Reported, not repaired -- doc 63 registers BOTH memberships and reads the difference."
+  },
+  "surface_tag_counts": {
+   "faail": 63,
+   "mu_participle": 142,
+   "nisba_yaa": 125,
+   "faiil": 50,
+   "faaal_or_fa33aal": 46,
+   "other": 93
+  },
+  "spot_check_sample": [
+   {
+    "noun": "الباكي",
+    "surface_wazn_tag": "nisba_yaa",
+    "camel_pattern": "ال1ا2ِي",
+    "camel_lemma": "باكِي",
+    "camel_root": "ب.ك.#",
+    "camel_stemgloss": "mourner;weeping"
+   },
+   {
+    "noun": "الجاني",
+    "surface_wazn_tag": "nisba_yaa",
+    "camel_pattern": "ال1ا2ِي",
+    "camel_lemma": "جانِي",
+    "camel_root": "ج.ن.#",
+    "camel_stemgloss": "delinquent;criminal"
+   },
+   {
+    "noun": "الحاج",
+    "surface_wazn_tag": "other",
+    "camel_pattern": "ال1ا2ّ",
+    "camel_lemma": "حاجّ",
+    "camel_root": "ح.ج.ج",
+    "camel_stemgloss": "pilgrim"
+   },
+   {
+    "noun": "الداعي",
+    "surface_wazn_tag": "nisba_yaa",
+    "camel_pattern": "ال1ا2ِي",
+    "camel_lemma": "داعِي",
+    "camel_root": "د.ع.#",
+    "camel_stemgloss": "inviter;propagandist"
+   },
+   {
+    "noun": "الراعي",
+    "surface_wazn_tag": "nisba_yaa",
+    "camel_pattern": "ال1ا2ِي",
+    "camel_lemma": "راعِي",
+    "camel_root": "ر.ع.#",
+    "camel_stemgloss": "guardian;patron;sponsor"
+   },
+   {
+    "noun": "الرامي",
+    "surface_wazn_tag": "nisba_yaa",
+    "camel_pattern": "ال1ا2ِي",
+    "camel_lemma": "رامِي",
+    "camel_root": "ر.م.#",
+    "camel_stemgloss": "throwing;thrower;rifleman;archer"
+   },
+   {
+    "noun": "الزاني",
+    "surface_wazn_tag": "nisba_yaa",
+    "camel_pattern": "ال1ا2ِي",
+    "camel_lemma": "زانِي",
+    "camel_root": "ز.ن.#",
+    "camel_stemgloss": "fornicator"
+   },
+   {
+    "noun": "الساعي",
+    "surface_wazn_tag": "nisba_yaa",
+    "camel_pattern": "ال1ا2ِي",
+    "camel_lemma": "ساعِي",
+    "camel_root": "س.ع.#",
+    "camel_stemgloss": "messenger;delivery_boy;slanderer"
+   },
+   {
+    "noun": "الساقي",
+    "surface_wazn_tag": "nisba_yaa",
+    "camel_pattern": "ال1ا2ِي",
+    "camel_lemma": "ساقِي",
+    "camel_root": "س.ق.#",
+    "camel_stemgloss": "water_carrier"
+   },
+   {
+    "noun": "الشاب",
+    "surface_wazn_tag": "other",
+    "camel_pattern": "ال1ا2ّ",
+    "camel_lemma": "شابّ",
+    "camel_root": "ش.ب.ب",
+    "camel_stemgloss": "young_man"
+   },
+   {
+    "noun": "الباشا",
+    "surface_wazn_tag": "faail",
+    "camel_pattern": "الNTWS",
+    "camel_lemma": "باشا",
+    "camel_root": "NTWS",
+    "camel_stemgloss": "pasha"
+   },
+   {
+    "noun": "البائع",
+    "surface_wazn_tag": "faail",
+    "camel_pattern": "ال1ائِ3",
+    "camel_lemma": "بائِع",
+    "camel_root": "ب.#.ع",
+    "camel_stemgloss": "vendor;merchant"
+   },
+   {
+    "noun": "الثائر",
+    "surface_wazn_tag": "faail",
+    "camel_pattern": "ال1ائِ3",
+    "camel_lemma": "ثائِر",
+    "camel_root": "ث.#.ر",
+    "camel_stemgloss": "agitated;exited"
+   },
+   {
+    "noun": "الحابل",
+    "surface_wazn_tag": "faail",
+    "camel_pattern": "ال1ا2ِ3",
+    "camel_lemma": "حابِل",
+    "camel_root": "ح.ب.ل",
+    "camel_stemgloss": "trickster"
+   },
+   {
+    "noun": "الحافظ",
+    "surface_wazn_tag": "faail",
+    "camel_pattern": "ال1ا2ِ3",
+    "camel_lemma": "حافِظ",
+    "camel_root": "ح.ف.ظ",
+    "camel_stemgloss": "guardian;custodian;memorizer_(of_the_Quran)"
+   },
+   {
+    "noun": "الحاكم",
+    "surface_wazn_tag": "faail",
+    "camel_pattern": "ال1ا2ِ3",
+    "camel_lemma": "حاكِم",
+    "camel_root": "ح.ك.م",
+    "camel_stemgloss": "ruler;governor"
+   },
+   {
+    "noun": "الخائن",
+    "surface_wazn_tag": "faail",
+    "camel_pattern": "ال1ائِ3",
+    "camel_lemma": "خائِن",
+    "camel_root": "خ.#.ن",
+    "camel_stemgloss": "traitor;treacherous"
+   },
+   {
+    "noun": "الخاسر",
+    "surface_wazn_tag": "faail",
+    "camel_pattern": "ال1ا2ِ3",
+    "camel_lemma": "خاسِر",
+    "camel_root": "خ.س.ر",
+    "camel_stemgloss": "loser;losing"
+   },
+   {
+    "noun": "الرائد",
+    "surface_wazn_tag": "faail",
+    "camel_pattern": "ال1ائِ3",
+    "camel_lemma": "رائِد",
+    "camel_root": "ر.#.د",
+    "camel_stemgloss": "leader;explorer;pioneer"
+   },
+   {
+    "noun": "الرابح",
+    "surface_wazn_tag": "faail",
+    "camel_pattern": "ال1ا2ِ3",
+    "camel_lemma": "رابِح",
+    "camel_root": "ر.ب.ح",
+    "camel_stemgloss": "beneficiary;profiteer;lucrative"
+   },
+   {
+    "noun": "الراجل",
+    "surface_wazn_tag": "faail",
+    "camel_pattern": "ال1ا2ِ3",
+    "camel_lemma": "راجِل",
+    "camel_root": "ر.ج.ل",
+    "camel_stemgloss": "pedestrian"
+   }
+  ]
+ },
+ "contrasts": {
+  "faail_surface": {
+   "mode": "pair",
+   "d": 3,
+   "d_joint": 9,
+   "n_bearers": 63,
+   "n_nonbearers": 456,
+   "n_casts": 28728,
+   "n_rows": 28728,
+   "count": 17839,
+   "value": 0.6209621275410749,
+   "fraction": "17839/28728",
+   "exact": false,
+   "method": "CONSTRUCTIVE LOWER BOUND (48 restarts x 500 steps + 6 LS-drop starts); the EXACT R^3 arrangement enumeration is O(n_rows^3) and is INFEASIBLE at this inventory size",
+   "saturation_certificate": {
+    "rank_G": 3,
+    "n_rows": 28728,
+    "d_joint": 9,
+    "fires": false,
+    "note": "doc 61 SS2.4's certificate fires iff rank(G) == n_rows. At d_joint = 9 the rank is at most 9, so it CANNOT fire at this inventory size and the grade-1 instrument DISCRIMINATES."
+   },
+   "sign_flip_check": {
+    "n_rows": 28728,
+    "satisfied_c": 17839,
+    "satisfied_minus_c": 10889,
+    "boundary_rows": 0,
+    "sums_to_n": true
+   },
+   "null": {
+    "draws": 200,
+    "size_matched_B": 63,
+    "null_seed": 68000,
+    "mean": 0.5741062726260094,
+    "sd": 0.023041703433183798,
+    "min": 0.523635477582846,
+    "max": 0.6553536619326094,
+    "percentile_of_contrast": 96.0,
+    "identical_search_budget": true,
+    "z_vs_null": 2.033523912454556
+   },
+   "grade3": {
+    "below_null": false,
+    "below_null_5th_percentile": false,
+    "testable": true,
+    "note": "grade 3 is TESTABLE at this inventory size because the null is not a point mass (sd > 0) -- the condition doc 61 SS2.5 recorded as failing at exp73's saturated rungs"
+   },
+   "contrast_kind": "wazn (surface regex over CAMeL lemma)",
+   "note": "the tag as shipped in d4_confirmed_inventory.json",
+   "arcs": 114,
+   "members_sha256": "9949705584463208d1898124b9c94de71ec269d80e6dacd6524b4998bbc028a4"
+  },
+  "faail_camel": {
+   "mode": "pair",
+   "d": 3,
+   "d_joint": 9,
+   "n_bearers": 81,
+   "n_nonbearers": 438,
+   "n_casts": 35478,
+   "n_rows": 35478,
+   "count": 22797,
+   "value": 0.6425672247590056,
+   "fraction": "22797/35478",
+   "exact": false,
+   "method": "CONSTRUCTIVE LOWER BOUND (48 restarts x 500 steps + 6 LS-drop starts); the EXACT R^3 arrangement enumeration is O(n_rows^3) and is INFEASIBLE at this inventory size",
+   "saturation_certificate": {
+    "rank_G": 3,
+    "n_rows": 35478,
+    "d_joint": 9,
+    "fires": false,
+    "note": "doc 61 SS2.4's certificate fires iff rank(G) == n_rows. At d_joint = 9 the rank is at most 9, so it CANNOT fire at this inventory size and the grade-1 instrument DISCRIMINATES."
+   },
+   "sign_flip_check": {
+    "n_rows": 35478,
+    "satisfied_c": 22797,
+    "satisfied_minus_c": 12681,
+    "boundary_rows": 0,
+    "sums_to_n": true
+   },
+   "null": {
+    "draws": 200,
+    "size_matched_B": 81,
+    "null_seed": 68000,
+    "mean": 0.5661087152601612,
+    "sd": 0.019833970338575216,
+    "min": 0.5244376796888213,
+    "max": 0.6456395512712103,
+    "percentile_of_contrast": 99.5,
+    "identical_search_budget": true,
+    "z_vs_null": 3.8549270868949437
+   },
+   "grade3": {
+    "below_null": false,
+    "below_null_5th_percentile": false,
+    "testable": true,
+    "note": "grade 3 is TESTABLE at this inventory size because the null is not a point mass (sd > 0) -- the condition doc 61 SS2.5 recorded as failing at exp73's saturated rungs"
+   },
+   "contrast_kind": "wazn (CAMeL pattern field)",
+   "note": "morphological analysis output; the provenance class doc 63 registers",
+   "arcs": 140,
+   "members_sha256": "6a3e12c2fd031c74a33d9bc3db086c7f71c98ad492128af6f8f17167be22521e"
+  },
+  "faail_intersection": {
+   "mode": "pair",
+   "d": 3,
+   "d_joint": 9,
+   "n_bearers": 62,
+   "n_nonbearers": 457,
+   "n_casts": 28334,
+   "n_rows": 28334,
+   "count": 17700,
+   "value": 0.6246911837368533,
+   "fraction": "17700/28334",
+   "exact": false,
+   "method": "CONSTRUCTIVE LOWER BOUND (48 restarts x 500 steps + 6 LS-drop starts); the EXACT R^3 arrangement enumeration is O(n_rows^3) and is INFEASIBLE at this inventory size",
+   "saturation_certificate": {
+    "rank_G": 3,
+    "n_rows": 28334,
+    "d_joint": 9,
+    "fires": false,
+    "note": "doc 61 SS2.4's certificate fires iff rank(G) == n_rows. At d_joint = 9 the rank is at most 9, so it CANNOT fire at this inventory size and the grade-1 instrument DISCRIMINATES."
+   },
+   "sign_flip_check": {
+    "n_rows": 28334,
+    "satisfied_c": 17700,
+    "satisfied_minus_c": 10634,
+    "boundary_rows": 0,
+    "sums_to_n": true
+   },
+   "null": {
+    "draws": 200,
+    "size_matched_B": 62,
+    "null_seed": 68000,
+    "mean": 0.5747774758240983,
+    "sd": 0.02354919472331001,
+    "min": 0.5261170325404109,
+    "max": 0.6624902943460154,
+    "percentile_of_contrast": 97.5,
+    "identical_search_budget": true,
+    "z_vs_null": 2.1195505196340414
+   },
+   "grade3": {
+    "below_null": false,
+    "below_null_5th_percentile": false,
+    "testable": true,
+    "note": "grade 3 is TESTABLE at this inventory size because the null is not a point mass (sd > 0) -- the condition doc 61 SS2.5 recorded as failing at exp73's saturated rungs"
+   },
+   "contrast_kind": "wazn (both definitions agree)",
+   "note": "the conservative core",
+   "arcs": 112,
+   "members_sha256": "f7a57357de1865e9376271b9e3fe2743e0fc17191da59322cb24665454d91648"
+  },
+  "mu_participle_surface": {
+   "mode": "pair",
+   "d": 3,
+   "d_joint": 9,
+   "n_bearers": 142,
+   "n_nonbearers": 377,
+   "n_casts": 53534,
+   "n_rows": 53534,
+   "count": 31517,
+   "value": 0.5887286584226846,
+   "fraction": "31517/53534",
+   "exact": false,
+   "method": "CONSTRUCTIVE LOWER BOUND (48 restarts x 500 steps + 6 LS-drop starts); the EXACT R^3 arrangement enumeration is O(n_rows^3) and is INFEASIBLE at this inventory size",
+   "saturation_certificate": {
+    "rank_G": 3,
+    "n_rows": 53534,
+    "d_joint": 9,
+    "fires": false,
+    "note": "doc 61 SS2.4's certificate fires iff rank(G) == n_rows. At d_joint = 9 the rank is at most 9, so it CANNOT fire at this inventory size and the grade-1 instrument DISCRIMINATES."
+   },
+   "sign_flip_check": {
+    "n_rows": 53534,
+    "satisfied_c": 31517,
+    "satisfied_minus_c": 22017,
+    "boundary_rows": 0,
+    "sums_to_n": true
+   },
+   "null": {
+    "draws": 200,
+    "size_matched_B": 142,
+    "null_seed": 68000,
+    "mean": 0.5539322673441177,
+    "sd": 0.01601682809936704,
+    "min": 0.5136361938207494,
+    "max": 0.6040086673889491,
+    "percentile_of_contrast": 98.0,
+    "identical_search_budget": true,
+    "z_vs_null": 2.172489513072942
+   },
+   "grade3": {
+    "below_null": false,
+    "below_null_5th_percentile": false,
+    "testable": true,
+    "note": "grade 3 is TESTABLE at this inventory size because the null is not a point mass (sd > 0) -- the condition doc 61 SS2.5 recorded as failing at exp73's saturated rungs"
+   },
+   "contrast_kind": "wazn (surface regex)",
+   "note": "reported for the provenance table, not an exp76 arm",
+   "arcs": 186,
+   "members_sha256": "2bb78527dc2df7cc64795bd5ace11c624c43e6fafda26c7e3aac4c6f63428081"
+  },
+  "nisba_yaa_surface": {
+   "mode": "pair",
+   "d": 3,
+   "d_joint": 9,
+   "n_bearers": 125,
+   "n_nonbearers": 394,
+   "n_casts": 49250,
+   "n_rows": 49250,
+   "count": 39412,
+   "value": 0.8002436548223351,
+   "fraction": "39412/49250",
+   "exact": false,
+   "method": "CONSTRUCTIVE LOWER BOUND (48 restarts x 500 steps + 6 LS-drop starts); the EXACT R^3 arrangement enumeration is O(n_rows^3) and is INFEASIBLE at this inventory size",
+   "saturation_certificate": {
+    "rank_G": 3,
+    "n_rows": 49250,
+    "d_joint": 9,
+    "fires": false,
+    "note": "doc 61 SS2.4's certificate fires iff rank(G) == n_rows. At d_joint = 9 the rank is at most 9, so it CANNOT fire at this inventory size and the grade-1 instrument DISCRIMINATES."
+   },
+   "sign_flip_check": {
+    "n_rows": 49250,
+    "satisfied_c": 39412,
+    "satisfied_minus_c": 9838,
+    "boundary_rows": 0,
+    "sums_to_n": true
+   },
+   "null": {
+    "draws": 200,
+    "size_matched_B": 125,
+    "null_seed": 68000,
+    "mean": 0.5555218274111675,
+    "sd": 0.017558976174336674,
+    "min": 0.5267005076142132,
+    "max": 0.6179695431472081,
+    "percentile_of_contrast": 100.0,
+    "identical_search_budget": true,
+    "z_vs_null": 13.937135342141463
+   },
+   "grade3": {
+    "below_null": false,
+    "below_null_5th_percentile": false,
+    "testable": true,
+    "note": "grade 3 is TESTABLE at this inventory size because the null is not a point mass (sd > 0) -- the condition doc 61 SS2.5 recorded as failing at exp73's saturated rungs"
+   },
+   "contrast_kind": "wazn (surface regex)",
+   "note": "doc 51 SS3 marks the nisba row NEAR-TAUTOLOGICAL under a character map; reported here under the AraVec angle map, where that objection does not apply, and still NOT proposed as an exp76 arm",
+   "arcs": 126,
+   "members_sha256": "1d660a6d435ed7cb23549f8c4647edf9b0fb388b8a4c26b716b6426284f3a7fd"
+  },
+  "band_02arc": {
+   "mode": "pair",
+   "d": 3,
+   "d_joint": 9,
+   "n_bearers": 81,
+   "n_nonbearers": 438,
+   "n_casts": 35478,
+   "n_rows": 35478,
+   "count": 35478,
+   "value": 1.0,
+   "fraction": "35478/35478",
+   "exact": false,
+   "method": "CONSTRUCTIVE LOWER BOUND (48 restarts x 500 steps + 6 LS-drop starts); the EXACT R^3 arrangement enumeration is O(n_rows^3) and is INFEASIBLE at this inventory size",
+   "saturation_certificate": {
+    "rank_G": 3,
+    "n_rows": 35478,
+    "d_joint": 9,
+    "fires": false,
+    "note": "doc 61 SS2.4's certificate fires iff rank(G) == n_rows. At d_joint = 9 the rank is at most 9, so it CANNOT fire at this inventory size and the grade-1 instrument DISCRIMINATES."
+   },
+   "sign_flip_check": {
+    "n_rows": 35478,
+    "satisfied_c": 35478,
+    "satisfied_minus_c": 0,
+    "boundary_rows": 0,
+    "sums_to_n": true
+   },
+   "null": {
+    "draws": 200,
+    "size_matched_B": 81,
+    "null_seed": 68000,
+    "mean": 0.5661087152601612,
+    "sd": 0.019833970338575216,
+    "min": 0.5244376796888213,
+    "max": 0.6456395512712103,
+    "percentile_of_contrast": 100.0,
+    "identical_search_budget": true,
+    "z_vs_null": 21.876168882634705
+   },
+   "grade3": {
+    "below_null": false,
+    "below_null_5th_percentile": false,
+    "testable": true,
+    "note": "grade 3 is TESTABLE at this inventory size because the null is not a point mass (sd > 0) -- the condition doc 61 SS2.5 recorded as failing at exp73's saturated rungs"
+   },
+   "contrast_kind": "constructed angle band (capacity-validation layer)",
+   "note": "|B| matched to faail_camel; exactly 2 arcs by construction",
+   "arcs": 2,
+   "members_sha256": "5177199b1007226975264549d2a5ae192ac947eb1ead3e283f7216415eafba58"
+  },
+  "band_04arc": {
+   "mode": "pair",
+   "d": 3,
+   "d_joint": 9,
+   "n_bearers": 81,
+   "n_nonbearers": 438,
+   "n_casts": 35478,
+   "n_rows": 35478,
+   "count": 26718,
+   "value": 0.7530864197530864,
+   "fraction": "26718/35478",
+   "exact": false,
+   "method": "CONSTRUCTIVE LOWER BOUND (48 restarts x 500 steps + 6 LS-drop starts); the EXACT R^3 arrangement enumeration is O(n_rows^3) and is INFEASIBLE at this inventory size",
+   "saturation_certificate": {
+    "rank_G": 3,
+    "n_rows": 35478,
+    "d_joint": 9,
+    "fires": false,
+    "note": "doc 61 SS2.4's certificate fires iff rank(G) == n_rows. At d_joint = 9 the rank is at most 9, so it CANNOT fire at this inventory size and the grade-1 instrument DISCRIMINATES."
+   },
+   "sign_flip_check": {
+    "n_rows": 35478,
+    "satisfied_c": 26718,
+    "satisfied_minus_c": 8760,
+    "boundary_rows": 0,
+    "sums_to_n": true
+   },
+   "null": {
+    "draws": 200,
+    "size_matched_B": 81,
+    "null_seed": 68000,
+    "mean": 0.5661087152601612,
+    "sd": 0.019833970338575216,
+    "min": 0.5244376796888213,
+    "max": 0.6456395512712103,
+    "percentile_of_contrast": 100.0,
+    "identical_search_budget": true,
+    "z_vs_null": 9.427144505166025
+   },
+   "grade3": {
+    "below_null": false,
+    "below_null_5th_percentile": false,
+    "testable": true,
+    "note": "grade 3 is TESTABLE at this inventory size because the null is not a point mass (sd > 0) -- the condition doc 61 SS2.5 recorded as failing at exp73's saturated rungs"
+   },
+   "contrast_kind": "constructed angle band (capacity-validation layer)",
+   "note": "|B| matched to faail_camel; exactly 4 arcs by construction",
+   "arcs": 4,
+   "members_sha256": "a72dac46fb71c4ad41aef1b537603a5b4a872197aedc66da55cfd75e3dc8556d"
+  },
+  "band_08arc": {
+   "mode": "pair",
+   "d": 3,
+   "d_joint": 9,
+   "n_bearers": 81,
+   "n_nonbearers": 438,
+   "n_casts": 35478,
+   "n_rows": 35478,
+   "count": 22358,
+   "value": 0.6301933592648965,
+   "fraction": "22358/35478",
+   "exact": false,
+   "method": "CONSTRUCTIVE LOWER BOUND (48 restarts x 500 steps + 6 LS-drop starts); the EXACT R^3 arrangement enumeration is O(n_rows^3) and is INFEASIBLE at this inventory size",
+   "saturation_certificate": {
+    "rank_G": 3,
+    "n_rows": 35478,
+    "d_joint": 9,
+    "fires": false,
+    "note": "doc 61 SS2.4's certificate fires iff rank(G) == n_rows. At d_joint = 9 the rank is at most 9, so it CANNOT fire at this inventory size and the grade-1 instrument DISCRIMINATES."
+   },
+   "sign_flip_check": {
+    "n_rows": 35478,
+    "satisfied_c": 22358,
+    "satisfied_minus_c": 13120,
+    "boundary_rows": 0,
+    "sums_to_n": true
+   },
+   "null": {
+    "draws": 200,
+    "size_matched_B": 81,
+    "null_seed": 68000,
+    "mean": 0.5661087152601612,
+    "sd": 0.019833970338575216,
+    "min": 0.5244376796888213,
+    "max": 0.6456395512712103,
+    "percentile_of_contrast": 99.5,
+    "identical_search_budget": true,
+    "z_vs_null": 3.231054746517227
+   },
+   "grade3": {
+    "below_null": false,
+    "below_null_5th_percentile": false,
+    "testable": true,
+    "note": "grade 3 is TESTABLE at this inventory size because the null is not a point mass (sd > 0) -- the condition doc 61 SS2.5 recorded as failing at exp73's saturated rungs"
+   },
+   "contrast_kind": "constructed angle band (capacity-validation layer)",
+   "note": "|B| matched to faail_camel; exactly 8 arcs by construction",
+   "arcs": 8,
+   "members_sha256": "70644a38ff502226766d0cd35806943708ce6df6998dd3d7d54a1c0006b38dd9"
+  },
+  "band_16arc": {
+   "mode": "pair",
+   "d": 3,
+   "d_joint": 9,
+   "n_bearers": 81,
+   "n_nonbearers": 438,
+   "n_casts": 35478,
+   "n_rows": 35478,
+   "count": 20148,
+   "value": 0.5679012345679012,
+   "fraction": "20148/35478",
+   "exact": false,
+   "method": "CONSTRUCTIVE LOWER BOUND (48 restarts x 500 steps + 6 LS-drop starts); the EXACT R^3 arrangement enumeration is O(n_rows^3) and is INFEASIBLE at this inventory size",
+   "saturation_certificate": {
+    "rank_G": 3,
+    "n_rows": 35478,
+    "d_joint": 9,
+    "fires": false,
+    "note": "doc 61 SS2.4's certificate fires iff rank(G) == n_rows. At d_joint = 9 the rank is at most 9, so it CANNOT fire at this inventory size and the grade-1 instrument DISCRIMINATES."
+   },
+   "sign_flip_check": {
+    "n_rows": 35478,
+    "satisfied_c": 20148,
+    "satisfied_minus_c": 15330,
+    "boundary_rows": 0,
+    "sums_to_n": true
+   },
+   "null": {
+    "draws": 200,
+    "size_matched_B": 81,
+    "null_seed": 68000,
+    "mean": 0.5661087152601612,
+    "sd": 0.019833970338575216,
+    "min": 0.5244376796888213,
+    "max": 0.6456395512712103,
+    "percentile_of_contrast": 54.0,
+    "identical_search_budget": true,
+    "z_vs_null": 0.09037622206451351
+   },
+   "grade3": {
+    "below_null": false,
+    "below_null_5th_percentile": false,
+    "testable": true,
+    "note": "grade 3 is TESTABLE at this inventory size because the null is not a point mass (sd > 0) -- the condition doc 61 SS2.5 recorded as failing at exp73's saturated rungs"
+   },
+   "contrast_kind": "constructed angle band (capacity-validation layer)",
+   "note": "|B| matched to faail_camel; exactly 16 arcs by construction",
+   "arcs": 16,
+   "members_sha256": "7501da12986a26dc803ac621ab4786ab48c15443899fb5842451bed4eefd58c9"
+  },
+  "band_32arc": {
+   "mode": "pair",
+   "d": 3,
+   "d_joint": 9,
+   "n_bearers": 81,
+   "n_nonbearers": 438,
+   "n_casts": 35478,
+   "n_rows": 35478,
+   "count": 18796,
+   "value": 0.5297931112238571,
+   "fraction": "18796/35478",
+   "exact": false,
+   "method": "CONSTRUCTIVE LOWER BOUND (48 restarts x 500 steps + 6 LS-drop starts); the EXACT R^3 arrangement enumeration is O(n_rows^3) and is INFEASIBLE at this inventory size",
+   "saturation_certificate": {
+    "rank_G": 3,
+    "n_rows": 35478,
+    "d_joint": 9,
+    "fires": false,
+    "note": "doc 61 SS2.4's certificate fires iff rank(G) == n_rows. At d_joint = 9 the rank is at most 9, so it CANNOT fire at this inventory size and the grade-1 instrument DISCRIMINATES."
+   },
+   "sign_flip_check": {
+    "n_rows": 35478,
+    "satisfied_c": 18796,
+    "satisfied_minus_c": 16682,
+    "boundary_rows": 0,
+    "sums_to_n": true
+   },
+   "null": {
+    "draws": 200,
+    "size_matched_B": 81,
+    "null_seed": 68000,
+    "mean": 0.5661087152601612,
+    "sd": 0.019833970338575216,
+    "min": 0.5244376796888213,
+    "max": 0.6456395512712103,
+    "percentile_of_contrast": 1.0,
+    "identical_search_budget": true,
+    "z_vs_null": -1.83098005171832
+   },
+   "grade3": {
+    "below_null": true,
+    "below_null_5th_percentile": true,
+    "testable": true,
+    "note": "grade 3 is TESTABLE at this inventory size because the null is not a point mass (sd > 0) -- the condition doc 61 SS2.5 recorded as failing at exp73's saturated rungs"
+   },
+   "contrast_kind": "constructed angle band (capacity-validation layer)",
+   "note": "|B| matched to faail_camel; exactly 32 arcs by construction",
+   "arcs": 32,
+   "members_sha256": "0d0049ee873b1c792065ca42065c66b90124ee923474a2e6f6ca8124a8f8145d"
+  }
+ },
+ "grade3_under_conversion_flag": {
+  "any_contrast_below_null": true,
+  "testable_this_run": true,
+  "why_testable": "the size-matched null has non-zero sd at this inventory size, so the percentile has content -- the condition doc 61 SS2.5 recorded as FAILING at exp73's saturated rungs, and doc 55 SS19.2 recorded as untestable at exp69",
+  "below_null_contrasts": [
+   "band_32arc"
+  ]
+ },
+ "exact_bridge_at_24": {
+  "sub_inventory_size": 24,
+  "bearer_size": 4,
+  "draws": 12,
+  "per_draw": [
+   {
+    "n_rows": 80,
+    "exact": 67,
+    "constructive": 67,
+    "gap": 0.0
+   },
+   {
+    "n_rows": 80,
+    "exact": 61,
+    "constructive": 57,
+    "gap": 0.05
+   },
+   {
+    "n_rows": 80,
+    "exact": 59,
+    "constructive": 57,
+    "gap": 0.025
+   },
+   {
+    "n_rows": 80,
+    "exact": 67,
+    "constructive": 65,
+    "gap": 0.025
+   },
+   {
+    "n_rows": 80,
+    "exact": 60,
+    "constructive": 56,
+    "gap": 0.05
+   },
+   {
+    "n_rows": 80,
+    "exact": 70,
+    "constructive": 70,
+    "gap": 0.0
+   },
+   {
+    "n_rows": 80,
+    "exact": 59,
+    "constructive": 59,
+    "gap": 0.0
+   },
+   {
+    "n_rows": 80,
+    "exact": 69,
+    "constructive": 67,
+    "gap": 0.025
+   },
+   {
+    "n_rows": 80,
+    "exact": 54,
+    "constructive": 53,
+    "gap": 0.0125
+   },
+   {
+    "n_rows": 80,
+    "exact": 56,
+    "constructive": 56,
+    "gap": 0.0
+   },
+   {
+    "n_rows": 80,
+    "exact": 64,
+    "constructive": 63,
+    "gap": 0.0125
+   },
+   {
+    "n_rows": 80,
+    "exact": 61,
+    "constructive": 59,
+    "gap": 0.025
+   }
+  ],
+  "gap_mean": 0.018750000000000003,
+  "gap_max": 0.05,
+  "search_never_beat_exact": true,
+  "note": "the constructive search's shortfall against the EXACT maximum, measured at the only scale where both run. It does NOT transfer as a correction to the 519-scale numbers; it bounds how much those numbers may understate, at a smaller n_rows."
+ }
+}

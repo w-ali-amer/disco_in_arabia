@@ -1,0 +1,158 @@
+{
+  "experiment": "exp89 gates",
+  "per_seed": [
+    {
+      "seed": 42,
+      "vocab_accounting": {
+        "gate_name": "VOCAB_ACCOUNTING",
+        "seed": 42,
+        "description": "Measure REAL trained vocab size; must equal 32000",
+        "opt": {
+          "n_fused": 24000,
+          "n_tmpl": 3993,
+          "n_bpe_arithmetic": 4004,
+          "vocab_actual": 32000,
+          "passes": true
+        },
+        "noback": {
+          "n_fused": 16000,
+          "n_tmpl": 0,
+          "n_bpe_arithmetic": 15997,
+          "vocab_actual": 32000,
+          "passes": true
+        },
+        "dtf_leg": {
+          "dtf_vocab_trained": 29,
+          "expected": 32000,
+          "dtf_fires": true,
+          "verdict": "DTF_FIRES: wrong vocab caught"
+        },
+        "seed_passes": true
+      },
+      "expansion_determinism": {
+        "gate_name": "EXPANSION_DETERMINISM",
+        "seed": 42,
+        "opt": {
+          "n_checked": 24000,
+          "n_invalid": 0,
+          "passes": true
+        },
+        "noback": {
+          "n_checked": 16000,
+          "n_invalid": 0,
+          "passes": true
+        },
+        "dtf_leg": {
+          "n_invalid_after_injection": 1,
+          "dtf_fires": true,
+          "verdict": "DTF_FIRES: invalid detected"
+        },
+        "seed_passes": true
+      }
+    },
+    {
+      "seed": 43,
+      "vocab_accounting": {
+        "gate_name": "VOCAB_ACCOUNTING",
+        "seed": 43,
+        "description": "Measure REAL trained vocab size; must equal 32000",
+        "opt": {
+          "n_fused": 24000,
+          "n_tmpl": 4009,
+          "n_bpe_arithmetic": 3988,
+          "vocab_actual": 32000,
+          "passes": true
+        },
+        "noback": {
+          "n_fused": 16000,
+          "n_tmpl": 0,
+          "n_bpe_arithmetic": 15997,
+          "vocab_actual": 32000,
+          "passes": true
+        },
+        "dtf_leg": {
+          "dtf_vocab_trained": 29,
+          "expected": 32000,
+          "dtf_fires": true,
+          "verdict": "DTF_FIRES: wrong vocab caught"
+        },
+        "seed_passes": true
+      },
+      "expansion_determinism": {
+        "gate_name": "EXPANSION_DETERMINISM",
+        "seed": 43,
+        "opt": {
+          "n_checked": 24000,
+          "n_invalid": 0,
+          "passes": true
+        },
+        "noback": {
+          "n_checked": 16000,
+          "n_invalid": 0,
+          "passes": true
+        },
+        "dtf_leg": {
+          "n_invalid_after_injection": 1,
+          "dtf_fires": true,
+          "verdict": "DTF_FIRES: invalid detected"
+        },
+        "seed_passes": true
+      }
+    },
+    {
+      "seed": 44,
+      "vocab_accounting": {
+        "gate_name": "VOCAB_ACCOUNTING",
+        "seed": 44,
+        "description": "Measure REAL trained vocab size; must equal 32000",
+        "opt": {
+          "n_fused": 24000,
+          "n_tmpl": 4021,
+          "n_bpe_arithmetic": 3976,
+          "vocab_actual": 32000,
+          "passes": true
+        },
+        "noback": {
+          "n_fused": 16000,
+          "n_tmpl": 0,
+          "n_bpe_arithmetic": 15997,
+          "vocab_actual": 32000,
+          "passes": true
+        },
+        "dtf_leg": {
+          "dtf_vocab_trained": 29,
+          "expected": 32000,
+          "dtf_fires": true,
+          "verdict": "DTF_FIRES: wrong vocab caught"
+        },
+        "seed_passes": true
+      },
+      "expansion_determinism": {
+        "gate_name": "EXPANSION_DETERMINISM",
+        "seed": 44,
+        "opt": {
+          "n_checked": 24000,
+          "n_invalid": 0,
+          "passes": true
+        },
+        "noback": {
+          "n_checked": 16000,
+          "n_invalid": 0,
+          "passes": true
+        },
+        "dtf_leg": {
+          "n_invalid_after_injection": 1,
+          "dtf_fires": true,
+          "verdict": "DTF_FIRES: invalid detected"
+        },
+        "seed_passes": true
+      }
+    }
+  ],
+  "summary": {
+    "all_vocab_accounting_pass": true,
+    "all_expansion_determinism_pass": true,
+    "all_gates_pass": true
+  },
+  "elapsed_s": 1.4
+}

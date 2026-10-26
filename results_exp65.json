@@ -1,0 +1,65 @@
+{
+ "experiment": "exp65",
+ "spec": "qnlp_private_docs/51_exp65_wazn_binding_PROPOSAL.md (d293f42, FROZEN incl. SS11-12)",
+ "platform": "macOS-26.5.2-arm64-arm-64bit",
+ "torch": "2.13.0",
+ "dataset_sha256": "97c20d0f549dc01ad04a011ddd47a959094ed1238b59e59f63182b6910af0c40",
+ "contrast": "فاعِل vs non-فاعِل",
+ "split_seed": 65000,
+ "arms": {
+  "S-scramble": {
+   "mean": 0.6566666666666666,
+   "sd": 0.1557736566264188,
+   "per_seed": [
+    0.4666666666666667,
+    0.5666666666666667,
+    0.6166666666666667,
+    0.8111111111111111,
+    0.8222222222222222
+   ]
+  },
+  "S-real": {
+   "mean": 1.0,
+   "sd": 0.0,
+   "per_seed": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  "S-shuffle": {
+   "mean": 0.5033333333333333,
+   "sd": 0.03324061178144797,
+   "per_seed": [
+    0.45555555555555555,
+    0.49444444444444446,
+    0.5,
+    0.5222222222222223,
+    0.5444444444444444
+   ]
+  }
+ },
+ "classical_comparator": {
+  "char_positional_logreg_heldout": 1.0,
+  "word_ngram_V2H": 0.5,
+  "note": "a LINEAR classical model on the SAME positional features scores 1.0000 on the same held-out words. The circuit matches it; it does not beat it."
+ },
+ "verdicts": {
+  "wazn_binds": true,
+  "wazn_transfers_to_unseen_words": true,
+  "position_matters": true,
+  "resolution_caveat_SS11_5_bites": false
+ },
+ "meta_notes": {
+  "headline": "S-real 1.0000 +/- 0.0000 (5/5 seeds), S-scramble 0.6567 +/- 0.1558, floor 0.5033 +/- 0.0332. The circuit binds a REAL morphological contrast and transfers it to words never seen in training, and the binding is POSITIONAL -- destroying character order costs 0.343.",
+  "resolution": "doc 51 SS11.5 pre-registered that the scramble arm might be unresolvable at n=8. It IS resolved: the gap is 0.3433 against a standard error of 0.0697 on the S-scramble mean, ~4.9 SE. The caveat does not bite.",
+  "NOT_quantum": "doc 47 SS14 applies and here it is MEASURED, not argued: a linear classical model on the identical positional features reaches 1.0000 on the same held-out words. The contribution is the ENCODING DESIGN, not the quantum component. No quantum-advantage reading is licensed and none is registered.",
+  "scope": "One contrast, one inventory (24 nouns, 8 held out), simulation. WORD-holdout not root-holdout (SS11.8: one word per root). S-scramble's high variance (0.467-0.822) reflects residual non-positional signal the scrambled map retains (test bound 0.9333)."
+ },
+ "git_note": {
+  "exp42_paths": [],
+  "n_untracked": 242
+ }
+}

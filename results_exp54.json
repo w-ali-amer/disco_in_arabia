@@ -1,0 +1,269 @@
+{
+ "experiment": "exp54",
+ "spec": "qnlp_private_docs/38_exp54_rp_budget_extension.md (a55a0f2) extending 37_exp53_root_pattern_composition.md (1ba1469 + 38a9fd4 + b52d1f9), criteria UNCHANGED",
+ "platform": "macOS-26.5.2-arm64-arm-64bit",
+ "python": "3.12.13",
+ "torch": "2.13.0",
+ "dataset_sha256": "2bfdd9f8aa310974e25a200990db9275844bbf87fca19183508ec95d4686b4fd",
+ "embeddings_sha256": "00c1ecffcaf05b38df082f8a3cbed1d013bddb3e39bc00adf1c2513b4ea674ac",
+ "grid": {
+  "خ.ب.ر|II": "خبّر",
+  "خ.ب.ر|III": "خابر",
+  "خ.ب.ر|IV": "أخبر",
+  "ش.غ.ل|II": "شغّل",
+  "ش.غ.ل|III": "شاغل",
+  "ش.غ.ل|IV": "أشغل",
+  "س.ك.ن|II": "سكّن",
+  "س.ك.ن|III": "ساكن",
+  "س.ك.ن|IV": "أسكن",
+  "ر.ج.ع|II": "رجّع",
+  "ر.ج.ع|III": "راجع",
+  "ر.ج.ع|IV": "أرجع"
+ },
+ "held_out_cells": [
+  [
+   "خ.ب.ر",
+   "II"
+  ],
+  [
+   "ش.غ.ل",
+   "III"
+  ],
+  [
+   "س.ك.ن",
+   "IV"
+  ],
+  [
+   "ر.ج.ع",
+   "II"
+  ]
+ ],
+ "grid_provenance": "screened against CAMeL MorphologyDB on WSL: 24 roots analysed, 13 with a complete II/III/IV verb paradigm, filtered to those whose three cells all take a DIRECT human object; native-speaker sign-off 2026-08-15, no substitutions (doc 37 SS6.1)",
+ "param_counts": {
+  "C": {
+   "arm": "C",
+   "n_root_blocks": 4,
+   "n_pat_blocks": 3,
+   "total_trained": 135
+  },
+  "A": {
+   "arm": "A3",
+   "per_verb": 15,
+   "n_verbs": 12,
+   "readout_shared": 30,
+   "total_trained": 210
+  }
+ },
+ "tied_sentinel_heldout_acc": 0.5,
+ "novel_block_floor_draws": [
+  0.54,
+  0.485,
+  0.52,
+  0.5025,
+  0.5025
+ ],
+ "per_arm": {
+  "C": [
+   {
+    "arm": "C",
+    "seed": 0,
+    "lr": 0.005,
+    "batch": 1,
+    "val_acc": 0.7133333333333334,
+    "train_acc": 0.7708333333333334,
+    "heldout_acc": 0.6725,
+    "gate_met": false
+   },
+   {
+    "arm": "C",
+    "seed": 1,
+    "lr": 0.005,
+    "batch": 1,
+    "val_acc": 0.6933333333333334,
+    "train_acc": 0.76,
+    "heldout_acc": 0.6225,
+    "gate_met": false
+   },
+   {
+    "arm": "C",
+    "seed": 0,
+    "lr": 0.005,
+    "batch": 8,
+    "val_acc": 0.61,
+    "train_acc": 0.6833333333333333,
+    "heldout_acc": 0.575,
+    "gate_met": false
+   },
+   {
+    "arm": "C",
+    "seed": 1,
+    "lr": 0.005,
+    "batch": 8,
+    "val_acc": 0.61,
+    "train_acc": 0.6683333333333333,
+    "heldout_acc": 0.5125,
+    "gate_met": false
+   },
+   {
+    "arm": "C",
+    "seed": 0,
+    "lr": 0.02,
+    "batch": 1,
+    "val_acc": 0.6066666666666667,
+    "train_acc": 0.5358333333333334,
+    "heldout_acc": 0.5475,
+    "gate_met": false
+   },
+   {
+    "arm": "C",
+    "seed": 1,
+    "lr": 0.02,
+    "batch": 1,
+    "val_acc": 0.5933333333333334,
+    "train_acc": 0.5166666666666667,
+    "heldout_acc": 0.53,
+    "gate_met": false
+   },
+   {
+    "arm": "C",
+    "seed": 0,
+    "lr": 0.02,
+    "batch": 8,
+    "val_acc": 0.65,
+    "train_acc": 0.595,
+    "heldout_acc": 0.545,
+    "gate_met": false
+   },
+   {
+    "arm": "C",
+    "seed": 1,
+    "lr": 0.02,
+    "batch": 8,
+    "val_acc": 0.61,
+    "train_acc": 0.59,
+    "heldout_acc": 0.4675,
+    "gate_met": false
+   }
+  ],
+  "A": [
+   {
+    "arm": "A",
+    "seed": 0,
+    "lr": 0.005,
+    "batch": 1,
+    "val_acc": 0.6633333333333333,
+    "train_acc": 0.7475,
+    "heldout_acc": 0.59,
+    "gate_met": false
+   },
+   {
+    "arm": "A",
+    "seed": 1,
+    "lr": 0.005,
+    "batch": 1,
+    "val_acc": 0.7166666666666667,
+    "train_acc": 0.7791666666666667,
+    "heldout_acc": 0.6225,
+    "gate_met": false
+   },
+   {
+    "arm": "A",
+    "seed": 0,
+    "lr": 0.005,
+    "batch": 8,
+    "val_acc": 0.71,
+    "train_acc": 0.7616666666666667,
+    "heldout_acc": 0.595,
+    "gate_met": false
+   },
+   {
+    "arm": "A",
+    "seed": 1,
+    "lr": 0.005,
+    "batch": 8,
+    "val_acc": 0.6233333333333333,
+    "train_acc": 0.7458333333333333,
+    "heldout_acc": 0.545,
+    "gate_met": false
+   },
+   {
+    "arm": "A",
+    "seed": 0,
+    "lr": 0.02,
+    "batch": 1,
+    "val_acc": 0.61,
+    "train_acc": 0.5425,
+    "heldout_acc": 0.5575,
+    "gate_met": false
+   },
+   {
+    "arm": "A",
+    "seed": 1,
+    "lr": 0.02,
+    "batch": 1,
+    "val_acc": 0.59,
+    "train_acc": 0.5608333333333333,
+    "heldout_acc": 0.5675,
+    "gate_met": false
+   },
+   {
+    "arm": "A",
+    "seed": 0,
+    "lr": 0.02,
+    "batch": 8,
+    "val_acc": 0.7333333333333333,
+    "train_acc": 0.7866666666666666,
+    "heldout_acc": 0.665,
+    "gate_met": false
+   },
+   {
+    "arm": "A",
+    "seed": 1,
+    "lr": 0.02,
+    "batch": 8,
+    "val_acc": 0.7033333333333334,
+    "train_acc": 0.7708333333333334,
+    "heldout_acc": 0.6025,
+    "gate_met": false
+   }
+  ]
+ },
+ "few_shot_curves": {
+  "C": {
+   "0": 0.6725,
+   "1": 0.6725,
+   "2": 0.6725,
+   "4": 0.6725,
+   "8": 0.6725
+  },
+  "A": {
+   "0": 0.665,
+   "1": 0.6608040201005025,
+   "2": 0.6868686868686869,
+   "4": 0.6428571428571429,
+   "8": 0.6796875
+  }
+ },
+ "verdicts": {
+  "tied_sentinel_exact_half": true,
+  "novel_block_floor_note": "REGISTERED floor = arm A held-out (trained model, never-trained held-out blocks). The untrained-model floor is descriptive only.",
+  "rp_seen_learnable_C": false,
+  "rp_seen_learnable_A": false,
+  "C_heldout_k0": 0.6725,
+  "A_heldout_k0": 0.665,
+  "untrained_floor_descriptive": 0.51,
+  "registered_novel_block_floor": 0.593125,
+  "registered_novel_block_floor_sd": 0.03849281008930667,
+  "rp_composes": false,
+  "rp_composition_advantage": false
+ },
+ "meta_notes": {
+  "scope": "doc 37 SS7: not quantum advantage (no arm comparison of that kind is registered); composition of verb FORM, not of meaning -- generalising to an unseen root x pattern cell shows the model factorises form, and whether the block means anything is a separate question; R=4 x P=3 is a small grid with 4 held-out cells; it does not revive the wazn line, which closed negative on its own criteria (exp50); simulation only.",
+  "factorisation_is_built_in": "arm C BUILDS IN the factorisation, so a positive says 'the morphology is learnable compositionally when the architecture is given the factorisation', NOT 'models spontaneously discover wazn'. The passive probes asked the latter and failed."
+ },
+ "git_note": {
+  "exp42_paths": [],
+  "n_untracked": 170
+ },
+ "wall_time_sec": 21648.231323957443
+}

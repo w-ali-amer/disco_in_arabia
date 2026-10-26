@@ -1,0 +1,14 @@
+{
+  "experiment": "exp84",
+  "n_articles": 3673,
+  "n_lines": 277644,
+  "file_bytes": 78399881,
+  "sha256_actual": "9789f99ce75116eadf5ac494a2e3b1d5501eab55e6963e5f58fbe835e697121a",
+  "sha256_expected": "8cde0c825e3c058340b78d9f3a54af95f32d3e78a4d3cd880e1b6f325a1ead63",
+  "sha256_verdict": "FALLBACK_FIRED",
+  "sha256_reproduced": false,
+  "delta_lines": 0,
+  "delta_bytes": -276073,
+  "elapsed_s": 43.7,
+  "note": "corpus frozen at download; all three tokenizers retrained on it"
+}

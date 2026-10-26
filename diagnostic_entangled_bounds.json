@@ -1,0 +1,1143 @@
+{
+  "component": "exp70_entangled_bounds",
+  "purpose": "grade-1 reachable-accuracy bounds for exp70's entangled encodings, computed BEFORE any exp70_*.py exists (doc 55 SS19.2's ordering rule, inherited)",
+  "spec": "qnlp_private_docs/56_exp70_entangled_encodings_DRAFT.md",
+  "generated_utc": "2026-08-25T20:32:46Z",
+  "script_sha256": "788cc413bc12f1aa09aeadf942bc4a4ab8b2b06dd0dbc2e1b46c20f3e0733a50",
+  "python": "3.12.13",
+  "numpy": "2.5.1",
+  "provenance": {
+    "instrument_sb_bounds_sha256": "a616d1243d5dd589675eb89c6a6341ea6448ea8c716ba14af4139f3fae1d9507",
+    "capacity_check_sha256": "1e5f38d91d8795d67aad8a436bb9d0417d78934f0273307e4a2d0b9503d15ba9",
+    "raw_family": {
+      "family": "raw",
+      "file": "aravec_raw_vectors_44.json",
+      "file_sha256": "4e919966b3d359a9c1af397904113ad4d1dad3a6f6f9d2560fb17523843ba35a",
+      "declared_vectors_sha256": "699450d3d292f789d368920c33febf49ee4fe4ceff63501308b6da5759d6ce11",
+      "declared_sha_verified_with_repo_canonical_sha256": true,
+      "source": "aravec/full_uni_cbow_300_twitter.mdl",
+      "convention": "ta-marbuta U+0629 -> U+0647, as exp42_make_embeddings.py",
+      "raw_dim": 300,
+      "pca_fit_on": "all44",
+      "pca_fit_n": 44,
+      "var_explained_pc1": 0.12685513291325928,
+      "var_explained_pc2": 0.08050060927190729,
+      "var_explained_pc1_plus_pc2": 0.20735574218516656,
+      "sign_pin": "REGISTERED: PC signs pinned to the frozen vec2 plane. Bounds are invariant to PC sign; a trained circuit is not.",
+      "normalisation": "REGISTERED: p_k(r) = PC_k(r) / max_{r' in HUMANS} |PC_k(r')| for k = 1, 2. Divisors: PC1 8.669495, PC2 10.160404",
+      "norm_divisors": [
+        8.669494516224397,
+        10.160404144924657
+      ],
+      "plane_agreement_with_frozen2d": {
+        "unit_raw_pca_vs_frozen_vec2_max_abs_coord_diff": 3.7192471324942744e-15,
+        "sign_pin_applied": [
+          -1,
+          1
+        ],
+        "max_angular_difference_rad_after_pin": 3.9968028886505635e-15,
+        "verdict": "the frozen 2D embeddings ARE the unit-normalised raw PCA plane; FA's angle and the raw-PCA angle are the SAME quantity"
+      },
+      "radial_coordinate": {
+        "min": 3.6419608233134277,
+        "max": 11.818584443590053,
+        "mean": 7.897899236390401,
+        "note": "this is exactly the information unit-normalisation destroyed. F2-raw = (PC1, PC2) = (rho cos phi, rho sin phi) carries angle AND radius; FA carries angle only. That is why exp68 on this family is width-as-INFORMATION, not width-as-reparameterisation."
+      },
+      "features_deterministically_dependent": false,
+      "pc1_pc2_pearson_r": 0.5842698525485022
+    },
+    "budget": {
+      "restarts": 48,
+      "steps": 500,
+      "ls_starts": 6,
+      "seed": 0
+    },
+    "null_draws": 200,
+    "null_seed": 68000,
+    "extends": "capacity_check.py, whose scope note explicitly excludes 'entangling the referent register with itself'. This module supplies exactly that case and the cross-referent case, and its selftest reproduces capacity_check's committed anchors through the generalised path."
+  },
+  "category": {
+    "key": "nonoccupational",
+    "gloss": "non-occupational state",
+    "members": [
+      "الرجل",
+      "الولد",
+      "المسافر",
+      "المريض"
+    ],
+    "source": "instrument_sb_bounds.CATEGORIES -- doc 54 SS5.2, user-confirmed 2026-08-23; imported, never re-typed"
+  },
+  "eps_map": {
+    "eps": 0.5235987755982988,
+    "formula": "theta = p (pi - 2 eps)/2 + pi/2, eps = pi/6",
+    "range": [
+      0.5235987755982988,
+      2.6179938779914944
+    ],
+    "forced_by": "diagnostic_encoding_entanglement.json -- the committed degeneracy check; the exp68 map theta = (p+1)pi puts |p| = 1 exactly on the concurrence dead zones"
+  },
+  "selftest": {
+    "anchors": [
+      {
+        "anchor": "doc47_SS13_tertiary_pair",
+        "expected": 0.8526315789473684,
+        "expected_fraction": "81/95",
+        "got": 0.8526315789473684,
+        "got_fraction": "81/95",
+        "exact": true,
+        "expected_exact": true,
+        "reproduced": true,
+        "source": "doc 47 SS13 (published 0.8526); diagnostic_sb_bounds.json membership_reconstruction.tertiary.recomputed_pair_level"
+      },
+      {
+        "anchor": "exp68_F1_raw_per_twin",
+        "expected": 0.7625,
+        "expected_fraction": "122/160",
+        "got": 0.7625,
+        "got_fraction": "122/160",
+        "exact": false,
+        "expected_exact": false,
+        "reproduced": true,
+        "source": "diagnostic_sb_bounds.json target_selection.table.nonoccupational.F1.per_twin (= results_exp68.json bounds_context_only_doc54_SS12.per_twin_bounds.F1)"
+      },
+      {
+        "anchor": "exp68_FA_per_twin",
+        "expected": 0.925,
+        "expected_fraction": "148/160",
+        "got": 0.925,
+        "got_fraction": "148/160",
+        "exact": false,
+        "expected_exact": false,
+        "reproduced": true,
+        "source": "diagnostic_sb_bounds.json target_selection.table.nonoccupational.FA.per_twin (= results_exp68.json bounds_context_only_doc54_SS12.per_twin_bounds.FA)"
+      },
+      {
+        "anchor": "exp69_F2_raw_per_twin",
+        "expected": 1.0,
+        "expected_fraction": "160/160",
+        "got": 1.0,
+        "got_fraction": "160/160",
+        "exact": false,
+        "expected_exact": false,
+        "reproduced": true,
+        "source": "exp69_predictions.json :: grade1_bounds.R-W (= diagnostic_sb_bounds.json target_selection.table.nonoccupational.F2.per_twin)"
+      }
+    ],
+    "invariants": {
+      "P-eps": {
+        "pair": 1.0,
+        "twin": 1.0,
+        "d_joint": 81,
+        "max_at_or_above_chance": true,
+        "twin_ge_pair": true,
+        "sign_flip_sums_to_n": true,
+        "swap_perm_max_abs_error": 0.0,
+        "swap_perm_verified": true
+      },
+      "N-in": {
+        "pair": 1.0,
+        "twin": 1.0,
+        "d_joint": 36,
+        "max_at_or_above_chance": true,
+        "twin_ge_pair": true,
+        "sign_flip_sums_to_n": true,
+        "swap_perm_max_abs_error": 0.0,
+        "swap_perm_verified": true
+      },
+      "N-across": {
+        "pair": 0.925,
+        "twin": 0.925,
+        "d_joint": 10,
+        "max_at_or_above_chance": true,
+        "twin_ge_pair": true,
+        "sign_flip_sums_to_n": true,
+        "swap_perm_max_abs_error": 0.0,
+        "swap_perm_verified": true
+      },
+      "EA-ctrl": {
+        "pair": 0.925,
+        "twin": 0.925,
+        "d_joint": 10,
+        "max_at_or_above_chance": true,
+        "twin_ge_pair": true,
+        "sign_flip_sums_to_n": true,
+        "swap_perm_max_abs_error": 0.0,
+        "swap_perm_verified": true
+      }
+    },
+    "structure": {
+      "E_in_span": {
+        "rank_coordinate_map": 6,
+        "rank_claimed_basis": 6,
+        "rank_stacked": 6,
+        "spans_agree": true,
+        "grid": "40 x 40 over theta in [0.30, 2.90]^2",
+        "label": "CERTIFIED on a dense grid (derivation in the module docstring; this is a numerical certificate, not a proof)"
+      },
+      "P_eps_span": {
+        "rank_coordinate_map": 9,
+        "rank_claimed_basis": 9,
+        "rank_stacked": 9,
+        "spans_agree": true,
+        "grid": "40 x 40 over theta in [0.30, 2.90]^2",
+        "label": "CERTIFIED on a dense grid (derivation in the module docstring; this is a numerical certificate, not a proof)"
+      },
+      "E_across_span_equals_product": {
+        "rank_coordinate_map": 9,
+        "rank_claimed_basis": 9,
+        "rank_stacked": 9,
+        "spans_agree": true,
+        "grid": "40 x 40 over theta in [0.30, 2.90]^2",
+        "label": "CERTIFIED on a dense grid (derivation in the module docstring; this is a numerical certificate, not a proof)"
+      },
+      "EA_ctrl_span_equals_product": {
+        "rank_coordinate_map": 9,
+        "rank_claimed_basis": 9,
+        "rank_stacked": 9,
+        "spans_agree": true,
+        "grid": "40 x 40 over theta in [0.30, 2.90]^2",
+        "label": "CERTIFIED on a dense grid (derivation in the module docstring; this is a numerical certificate, not a proof)"
+      },
+      "pauli_table": {
+        "claimed_closed_forms": {
+          "I(x)I": "1",
+          "Z(x)I": "cos tA",
+          "I(x)Z": "cos tB",
+          "X(x)I": "sin tA cos tB",
+          "I(x)X": "cos tA sin tB",
+          "X(x)Z": "sin tA",
+          "Z(x)X": "sin tB",
+          "Z(x)Z": "cos tA cos tB",
+          "Y(x)Y": "sin tA sin tB",
+          "X(x)X": "0 (identically)"
+        },
+        "max_abs_error_vs_statevector": {
+          "I(x)I": 4.440892098500626e-16,
+          "Z(x)I": 3.3306690738754696e-16,
+          "I(x)Z": 3.3306690738754696e-16,
+          "X(x)I": 2.220446049250313e-16,
+          "I(x)X": 2.220446049250313e-16,
+          "X(x)Z": 3.3306690738754696e-16,
+          "Z(x)X": 3.3306690738754696e-16,
+          "Z(x)Z": 2.7755575615628914e-16,
+          "Y(x)Y": 3.3306690738754696e-16,
+          "X(x)X": 5.551115123125783e-17
+        },
+        "all_within_1e-12": true,
+        "reading": "every coordinate lies in the 9-dim product span {1,cos tA,sin tA} (x) {1,cos tB,sin tB} and together they fill it: CZ is Clifford, so it PERMUTES Pauli coordinates and leaves the readable function space invariant"
+      }
+    },
+    "committed_diagnostic_crosscheck": {
+      "source_file": "diagnostic_encoding_entanglement.json",
+      "source_sha256": "fb1b552547cb4a7a701fec30b130513b6337cbbd119407af42a818c3da719f64",
+      "max_abs_error_under_the_committed_producers_own_convention": {
+        "p1": 1.1102230246251565e-16,
+        "p2": 2.7755575615628914e-17,
+        "frozen_angle": 0.0,
+        "concurrence_registered_map": 0.0,
+        "concurrence_eps_map": 0.0
+      },
+      "closed_forms_reproduce_committed_per_noun": true,
+      "frozen_angle_space": "the committed `frozen_angle` is EXACTLY exp42_noun_embeddings.json's stored angle -- the RUNTIME angle -- not atan2 of the normalised coordinates. Verified to 0.0 on all 24 nouns.",
+      "normalisation_forensics": {
+        "finding": "the committed producer's p1/p2 differ from instrument_sb_bounds.load_raw's by a CONSTANT per-component scale of 1 + 5.58e-08 (PC1) and 1 - 1.43e-08 (PC2)",
+        "cause": "it used the SIX-DECIMAL-ROUNDED divisors printed in instrument_sb_bounds' provenance string (8.669495, 10.160404) instead of the exact ones (8.669494516224397, 10.160404144924657). Re-applying that rounding reproduces the committed p1/p2 to 1.1e-16.",
+        "consequence_for_exp70": "exp70 uses the EXACT divisors, imported from instrument_sb_bounds and never re-typed. Under the exact divisors the committed eps-map concurrences shift by at most 4.37e-08 and the registered-map ones by at most 1.69e-07 -- seven orders of magnitude below the 0.10 degenerate-entanglement gate and below every digit the committed diagnostic's finding is stated to. The committed finding stands unchanged.",
+        "max_abs_concurrence_shift_under_exact_divisors": {
+          "eps_map": 4.3654388215408346e-08,
+          "registered_map": 1.693355680190689e-07
+        }
+      },
+      "e_across_purity": {
+        "recomputed_min": 0.5764454752305189,
+        "committed_min": 0.5764454752305193,
+        "recomputed_max": 0.9998563458804477,
+        "committed_max": 0.9998563458804479,
+        "min_max_exact": true,
+        "recomputed_median_interpolated": 0.982736320808271,
+        "recomputed_median_upper_element": 0.9829178604248839,
+        "committed_median": 0.982917860424884,
+        "median_convention_note": "the committed median equals the UPPER middle element of the 276 distinct-pair values (sorted[len//2]), not numpy's interpolated median (0.9827363208). Every element matches to <1e-12; the only difference is the median convention, so the closed form 1 - (sin tA sin tB)^2/2 reproduces the committed distribution exactly.",
+        "pair_set": "276 distinct unordered pairs of the 24 human nouns"
+      }
+    },
+    "all_passed": true
+  },
+  "derivations": {
+    "E_in": {
+      "state": "cos(t1/2)|00> + sin(t1/2)cos(t2/2)|10> + sin(t1/2)sin(t2/2)|11>",
+      "amplitude_on_01": "identically zero",
+      "per_referent_feature": "(a^2, b^2, c^2, ab, ac, bc) -- outer square of the three coefficients",
+      "d_per_referent": 6,
+      "d_joint": 36,
+      "span": [
+        "1",
+        "cos t1",
+        "(1 - cos t1) cos t2",
+        "(1 - cos t1) sin t2",
+        "sin t1 cos(t2/2)",
+        "sin t1 sin(t2/2)"
+      ],
+      "concurrence": "|sin t1| |sin(t2/2)|",
+      "per_wire_purity": "1 - |sin t1|^2 |sin(t2/2)|^2 / 2",
+      "relation_to_the_product_register": "NEITHER NESTED. The two half-angle terms leave the product span; `sin t1` alone is absent from the E-in span. The intersection is 4-dimensional (ranks 6, 9, 11 for E-in, P-eps and their union). The map is RESTRUCTURED, not enlarged, and nothing about which reaches further follows from dimension counting.",
+      "completeness": "COMPLETE. The six coordinates are derived in closed form and the claimed 6-function basis is certified to span exactly the same space."
+    },
+    "E_across": {
+      "state": "( cA cB, cA sB, sA cB, -sA sB ), cX = cos(tX/2), sX = sin(tX/2)",
+      "joint_feature": "the 10 independent entries of the outer square of that 4-vector",
+      "d_joint": 10,
+      "effective_rank": 9,
+      "concurrence": "|sin tA| |sin tB|",
+      "per_wire_purity": "1 - (sin tA sin tB)^2 / 2",
+      "clifford_argument": "CZ is Clifford, so conjugation permutes the Pauli coordinates; with a general readout the reachable function space is INVARIANT. The E-across span is exactly the 9-dimensional product span, identical to EA-ctrl's, with <X(x)X> identically zero and <Y(x)Y> = sin tA sin tB carrying what <X(x)X> carried in the control.",
+      "consequences": [
+        "the N-across grade-1 bound EQUALS EA-ctrl's, by proof",
+        "FOURIER CLOSURE IS A NULL INSTRUMENT for N-across: closure in the product basis holds with the CZ present and absent alike, so validity must be asserted by the purity closed form and a circuit-difference check instead",
+        "the joint-state comparator for N-across is the SAME function class as EA-ctrl's, so it cannot separate them either: any measured difference is trainability / inductive bias, never capacity"
+      ],
+      "completeness": "COMPLETE, and verified: the Pauli closed-form table is checked against the statevector to better than 1e-12 on a 441-point grid."
+    }
+  },
+  "concurrence_and_purity": {
+    "e_in_eps_map": {
+      "per_noun": {
+        "الطالب": 0.4324241071276081,
+        "الرجل": 0.5183986748389793,
+        "الولد": 0.8818824503417738,
+        "المدير": 0.41338804761576875,
+        "المعلم": 0.3562998927392299,
+        "الطبيب": 0.48423932613165976,
+        "العامل": 0.7058281527455301,
+        "المهندس": 0.3817965487623124,
+        "الشرطي": 0.7589668396881308,
+        "الكاتب": 0.22893523946721844,
+        "الطباخ": 0.7369844684316741,
+        "الجندي": 0.331498656121025,
+        "الفلاح": 0.7460244548274635,
+        "الحارس": 0.6108070397129545,
+        "اللاعب": 0.3221943597343736,
+        "الموظف": 0.7144340944682017,
+        "الصحفي": 0.18983488222434122,
+        "السائق": 0.7969099689408938,
+        "المسافر": 0.8785054372803279,
+        "الضابط": 0.5127986137698851,
+        "الباحث": 0.19386983253647053,
+        "القائد": 0.2737635832763937,
+        "الصياد": 0.6253798201395522,
+        "المريض": 0.649362428008447
+      },
+      "stats": {
+        "min": 0.18983488222434122,
+        "median": 0.5155986443044323,
+        "max": 0.8818824503417738,
+        "n_below_0.05": 0,
+        "n_below_0.10": 0
+      },
+      "gate_min_0.10_satisfied": true
+    },
+    "e_in_registered_map_DISQUALIFIED": {
+      "stats": {
+        "min": 0.0,
+        "median": 0.43279966328929653,
+        "max": 0.9868372526664397,
+        "n_below_0.05": 4,
+        "n_below_0.10": 6
+      }
+    },
+    "e_across_over_the_80_SB_casts": {
+      "concurrence": {
+        "min": 0.08840307686409732,
+        "median": 0.4018754592218512,
+        "max": 0.8243710789551988,
+        "n_below_0.05": 0,
+        "n_below_0.10": 4
+      },
+      "purity_min": 0.6602061620911207,
+      "purity_median": 0.9192472318156544,
+      "purity_max": 0.9960924480004802,
+      "per_cast_purity": {
+        "الرجل|الطالب": 0.9879202082548711,
+        "الرجل|المدير": 0.9834787389619389,
+        "الرجل|المعلم": 0.9921288788647078,
+        "الرجل|الطبيب": 0.9816851756248092,
+        "الرجل|العامل": 0.916428244536808,
+        "الرجل|المهندس": 0.9197637072834995,
+        "الرجل|الشرطي": 0.839007033928636,
+        "الرجل|الكاتب": 0.8869132451324434,
+        "الرجل|الطباخ": 0.9057589664091783,
+        "الرجل|الجندي": 0.9931504268669937,
+        "الرجل|الفلاح": 0.8552863159278371,
+        "الرجل|الحارس": 0.9955809325962128,
+        "الرجل|اللاعب": 0.9596388908064803,
+        "الرجل|الموظف": 0.8879916510953691,
+        "الرجل|الصحفي": 0.8574060321010044,
+        "الرجل|السائق": 0.8214879291949565,
+        "الرجل|الضابط": 0.988525264937996,
+        "الرجل|الباحث": 0.893357939966331,
+        "الرجل|القائد": 0.9476845714423388,
+        "الرجل|الصياد": 0.9959817396411224,
+        "الولد|الطالب": 0.9782544574459048,
+        "الولد|المدير": 0.9702591077287946,
+        "الولد|المعلم": 0.9858307325815484,
+        "الولد|الطبيب": 0.9670304090315056,
+        "الولد|العامل": 0.8495575749078531,
+        "الولد|المهندس": 0.8555619372864534,
+        "الولد|الشرطي": 0.7101871068243721,
+        "الولد|الكاتب": 0.7964258910946351,
+        "الولد|الطباخ": 0.8303511807546256,
+        "الولد|الجندي": 0.9876696811349219,
+        "الولد|الفلاح": 0.7394923984165467,
+        "الولد|الحارس": 0.9920449772391798,
+        "الولد|اللاعب": 0.9273435969745021,
+        "الولد|الموظف": 0.7983671930021657,
+        "الولد|الصحفي": 0.743308223988606,
+        "الولد|السائق": 0.6786499375143549,
+        "الولد|الضابط": 0.9793436555155516,
+        "الولد|الباحث": 0.8080273647553852,
+        "الولد|القائد": 0.9058239246222852,
+        "الولد|الصياد": 0.9927664935397049,
+        "المسافر|الطالب": 0.977006379570264,
+        "المسافر|المدير": 0.9685521395281546,
+        "المسافر|المعلم": 0.9850174923905982,
+        "المسافر|الطبيب": 0.965138130788535,
+        "المسافر|العامل": 0.8409229840785757,
+        "المسافر|المهندس": 0.8472719647541633,
+        "المسافر|الشرطي": 0.6935533962996454,
+        "المسافر|الكاتب": 0.7847418256938286,
+        "المسافر|الطباخ": 0.8206142455918439,
+        "المسافر|الجندي": 0.9869619867586231,
+        "المسافر|الفلاح": 0.7245406549425114,
+        "المسافر|الحارس": 0.9915884014658553,
+        "المسافر|اللاعب": 0.9231735079130687,
+        "المسافر|الموظف": 0.786794547951286,
+        "المسافر|الصحفي": 0.7285754885003197,
+        "المسافر|السائق": 0.6602061620911207,
+        "المسافر|الضابط": 0.9781580917854896,
+        "المسافر|الباحث": 0.7970091619130679,
+        "المسافر|القائد": 0.9004187214271381,
+        "المسافر|الصياد": 0.9923513289442969,
+        "المريض|الطالب": 0.9882530224097663,
+        "المريض|المدير": 0.983933921439104,
+        "المريض|المعلم": 0.9923457386073252,
+        "المريض|الطبيب": 0.9821897731315452,
+        "المريض|العامل": 0.9187307563478091,
+        "المريض|المهندس": 0.9219743227076549,
+        "المريض|الشرطي": 0.8434426019481526,
+        "المريض|الكاتب": 0.890028934007317,
+        "المريض|الطباخ": 0.9083554308692241,
+        "المريض|الجندي": 0.9933391416181875,
+        "المريض|الفلاح": 0.8592733683110597,
+        "المريض|الحارس": 0.9957026837169646,
+        "المريض|اللاعب": 0.9607508924643146,
+        "المريض|الموظف": 0.8910776284672005,
+        "المريض|الصحفي": 0.8613346835149326,
+        "المريض|السائق": 0.8264061715982274,
+        "المريض|الضابط": 0.9888414089852513,
+        "المريض|الباحث": 0.8962960690198142,
+        "المريض|القائد": 0.949125930325899,
+        "المريض|الصياد": 0.9960924480004802
+      },
+      "closed_form": "purity = 1 - (sin tA sin tB)^2 / 2, both wires",
+      "honest_note": "many pairs are NEAR-PRODUCT. Over the full 24-noun inventory the committed diagnostic reports per-pair purity 0.5764-0.9999 with median 0.983, i.e. the median cast is only weakly entangled. E-across is a MECHANISM PROBE and this is the honest measure of how much mechanism it actually injects."
+    }
+  },
+  "grade1_bounds": {
+    "P-eps": {
+      "pair": {
+        "map": "P-eps",
+        "mode": "pair",
+        "d_joint": 81,
+        "d_per_referent": 9,
+        "feature_kind": "product",
+        "n_casts": 80,
+        "n_rows": 80,
+        "count": 80,
+        "bound": 1.0,
+        "fraction": "80/80",
+        "population": "casts (both twins won together)",
+        "method": "CONSTRUCTIVE LOWER BOUND (48 restarts x 500 steps + 6 LS-drop starts) -- NOT a maximum",
+        "exact": false,
+        "sign_flip_check": {
+          "n_rows": 80,
+          "satisfied_c": 80,
+          "satisfied_minus_c": 0,
+          "boundary_rows": 0,
+          "sums_to_n": true
+        },
+        "n_bearers": 4,
+        "n_nonbearers": 20,
+        "swap_perm_max_abs_error": 0.0,
+        "null": {
+          "draws": 200,
+          "size_matched_B": 4,
+          "mean": 0.9386875,
+          "sd": 0.04347495199543095,
+          "min": 0.7625,
+          "max": 1.0,
+          "percentile_of_category": 93.5,
+          "below_null": false,
+          "identical_search_budget": true,
+          "seed": 68000
+        },
+        "definition": "P-eps: product register on the eps-map. theta_k = p_k (pi - 2 eps)/2 + pi/2, eps = pi/6; RY(theta_1) on q0, RY(theta_2) on q1, NO entangler. d_ref = 9, d_joint = 81. The MAP-MATCHED PRODUCT TWIN."
+      },
+      "twin": {
+        "map": "P-eps",
+        "mode": "twin",
+        "d_joint": 81,
+        "d_per_referent": 9,
+        "feature_kind": "product",
+        "n_casts": 80,
+        "n_rows": 160,
+        "count": 160,
+        "bound": 1.0,
+        "fraction": "160/160",
+        "population": "twins (a cast may score 0, 1/2 or 1)",
+        "method": "CONSTRUCTIVE LOWER BOUND (48 restarts x 500 steps + 6 LS-drop starts) -- NOT a maximum",
+        "exact": false,
+        "sign_flip_check": {
+          "n_rows": 160,
+          "satisfied_c": 160,
+          "satisfied_minus_c": 0,
+          "boundary_rows": 0,
+          "sums_to_n": true
+        },
+        "n_bearers": 4,
+        "n_nonbearers": 20,
+        "swap_perm_max_abs_error": 0.0,
+        "null": {
+          "draws": 200,
+          "size_matched_B": 4,
+          "mean": 0.9429375,
+          "sd": 0.04026797602582082,
+          "min": 0.79375,
+          "max": 1.0,
+          "percentile_of_category": 92.5,
+          "below_null": false,
+          "identical_search_budget": true,
+          "seed": 68000
+        },
+        "definition": "P-eps: product register on the eps-map. theta_k = p_k (pi - 2 eps)/2 + pi/2, eps = pi/6; RY(theta_1) on q0, RY(theta_2) on q1, NO entangler. d_ref = 9, d_joint = 81. The MAP-MATCHED PRODUCT TWIN."
+      }
+    },
+    "N-in": {
+      "pair": {
+        "map": "N-in",
+        "mode": "pair",
+        "d_joint": 36,
+        "d_per_referent": 6,
+        "feature_kind": "product",
+        "n_casts": 80,
+        "n_rows": 80,
+        "count": 80,
+        "bound": 1.0,
+        "fraction": "80/80",
+        "population": "casts (both twins won together)",
+        "method": "CONSTRUCTIVE LOWER BOUND (48 restarts x 500 steps + 6 LS-drop starts) -- NOT a maximum",
+        "exact": false,
+        "sign_flip_check": {
+          "n_rows": 80,
+          "satisfied_c": 80,
+          "satisfied_minus_c": 0,
+          "boundary_rows": 0,
+          "sums_to_n": true
+        },
+        "n_bearers": 4,
+        "n_nonbearers": 20,
+        "swap_perm_max_abs_error": 0.0,
+        "null": {
+          "draws": 200,
+          "size_matched_B": 4,
+          "mean": 0.8958750000000001,
+          "sd": 0.05904535242689368,
+          "min": 0.7375,
+          "max": 1.0,
+          "percentile_of_category": 98.5,
+          "below_null": false,
+          "identical_search_budget": true,
+          "seed": 68000
+        },
+        "definition": "N-in: E-in on the eps-map. RY(theta_1) on q0 then CRY(theta_2) q0 -> q1, orientation PC1-controls-PC2 registered a priori. d_ref = 6 (outer square of the three state coefficients), d_joint = 36."
+      },
+      "twin": {
+        "map": "N-in",
+        "mode": "twin",
+        "d_joint": 36,
+        "d_per_referent": 6,
+        "feature_kind": "product",
+        "n_casts": 80,
+        "n_rows": 160,
+        "count": 160,
+        "bound": 1.0,
+        "fraction": "160/160",
+        "population": "twins (a cast may score 0, 1/2 or 1)",
+        "method": "CONSTRUCTIVE LOWER BOUND (48 restarts x 500 steps + 6 LS-drop starts) -- NOT a maximum",
+        "exact": false,
+        "sign_flip_check": {
+          "n_rows": 160,
+          "satisfied_c": 160,
+          "satisfied_minus_c": 0,
+          "boundary_rows": 0,
+          "sums_to_n": true
+        },
+        "n_bearers": 4,
+        "n_nonbearers": 20,
+        "swap_perm_max_abs_error": 0.0,
+        "null": {
+          "draws": 200,
+          "size_matched_B": 4,
+          "mean": 0.8990937500000001,
+          "sd": 0.05722184434978881,
+          "min": 0.75,
+          "max": 1.0,
+          "percentile_of_category": 98.0,
+          "below_null": false,
+          "identical_search_budget": true,
+          "seed": 68000
+        },
+        "definition": "N-in: E-in on the eps-map. RY(theta_1) on q0 then CRY(theta_2) q0 -> q1, orientation PC1-controls-PC2 registered a priori. d_ref = 6 (outer square of the three state coefficients), d_joint = 36."
+      }
+    },
+    "N-across": {
+      "pair": {
+        "map": "N-across",
+        "mode": "pair",
+        "d_joint": 10,
+        "d_per_referent": null,
+        "feature_kind": "joint",
+        "n_casts": 80,
+        "n_rows": 80,
+        "count": 74,
+        "bound": 0.925,
+        "fraction": "74/80",
+        "population": "casts (both twins won together)",
+        "method": "CONSTRUCTIVE LOWER BOUND (48 restarts x 500 steps + 6 LS-drop starts) -- NOT a maximum",
+        "exact": false,
+        "sign_flip_check": {
+          "n_rows": 80,
+          "satisfied_c": 74,
+          "satisfied_minus_c": 6,
+          "boundary_rows": 0,
+          "sums_to_n": true
+        },
+        "n_bearers": 4,
+        "n_nonbearers": 20,
+        "swap_perm_max_abs_error": 0.0,
+        "null": {
+          "draws": 200,
+          "size_matched_B": 4,
+          "mean": 0.78625,
+          "sd": 0.08356646618923637,
+          "min": 0.6125,
+          "max": 0.975,
+          "percentile_of_category": 92.5,
+          "below_null": false,
+          "identical_search_budget": true,
+          "seed": 68000
+        },
+        "definition": "N-across: one qubit per referent on the FROZEN angle map (runtime space), plus one CZ between the two referents' wires after intro. JOINT feature: the 10 independent entries of the outer square of the 4-dim amplitude vector."
+      },
+      "twin": {
+        "map": "N-across",
+        "mode": "twin",
+        "d_joint": 10,
+        "d_per_referent": null,
+        "feature_kind": "joint",
+        "n_casts": 80,
+        "n_rows": 160,
+        "count": 148,
+        "bound": 0.925,
+        "fraction": "148/160",
+        "population": "twins (a cast may score 0, 1/2 or 1)",
+        "method": "CONSTRUCTIVE LOWER BOUND (48 restarts x 500 steps + 6 LS-drop starts) -- NOT a maximum",
+        "exact": false,
+        "sign_flip_check": {
+          "n_rows": 160,
+          "satisfied_c": 148,
+          "satisfied_minus_c": 12,
+          "boundary_rows": 0,
+          "sums_to_n": true
+        },
+        "n_bearers": 4,
+        "n_nonbearers": 20,
+        "swap_perm_max_abs_error": 0.0,
+        "null": {
+          "draws": 200,
+          "size_matched_B": 4,
+          "mean": 0.7940312500000001,
+          "sd": 0.07946877621369294,
+          "min": 0.63125,
+          "max": 0.975,
+          "percentile_of_category": 92.0,
+          "below_null": false,
+          "identical_search_budget": true,
+          "seed": 68000
+        },
+        "definition": "N-across: one qubit per referent on the FROZEN angle map (runtime space), plus one CZ between the two referents' wires after intro. JOINT feature: the 10 independent entries of the outer square of the 4-dim amplitude vector."
+      }
+    },
+    "EA-ctrl": {
+      "pair": {
+        "map": "EA-ctrl",
+        "mode": "pair",
+        "d_joint": 10,
+        "d_per_referent": null,
+        "feature_kind": "joint",
+        "n_casts": 80,
+        "n_rows": 80,
+        "count": 74,
+        "bound": 0.925,
+        "fraction": "74/80",
+        "population": "casts (both twins won together)",
+        "method": "CONSTRUCTIVE LOWER BOUND (48 restarts x 500 steps + 6 LS-drop starts) -- NOT a maximum",
+        "exact": false,
+        "sign_flip_check": {
+          "n_rows": 80,
+          "satisfied_c": 74,
+          "satisfied_minus_c": 6,
+          "boundary_rows": 0,
+          "sums_to_n": true
+        },
+        "n_bearers": 4,
+        "n_nonbearers": 20,
+        "swap_perm_max_abs_error": 0.0,
+        "null": {
+          "draws": 200,
+          "size_matched_B": 4,
+          "mean": 0.7858125,
+          "sd": 0.08433040185565154,
+          "min": 0.6125,
+          "max": 0.975,
+          "percentile_of_category": 92.5,
+          "below_null": false,
+          "identical_search_budget": true,
+          "seed": 68000
+        },
+        "definition": "EA-ctrl: the same frozen-angle single-qubit map WITHOUT the CZ (runtime space), run in exp70's codepath. Dual role: codepath control (must reproduce exp69's R-A arms) and the map-matched contrast baseline for N-across."
+      },
+      "twin": {
+        "map": "EA-ctrl",
+        "mode": "twin",
+        "d_joint": 10,
+        "d_per_referent": null,
+        "feature_kind": "joint",
+        "n_casts": 80,
+        "n_rows": 160,
+        "count": 148,
+        "bound": 0.925,
+        "fraction": "148/160",
+        "population": "twins (a cast may score 0, 1/2 or 1)",
+        "method": "CONSTRUCTIVE LOWER BOUND (48 restarts x 500 steps + 6 LS-drop starts) -- NOT a maximum",
+        "exact": false,
+        "sign_flip_check": {
+          "n_rows": 160,
+          "satisfied_c": 148,
+          "satisfied_minus_c": 12,
+          "boundary_rows": 0,
+          "sums_to_n": true
+        },
+        "n_bearers": 4,
+        "n_nonbearers": 20,
+        "swap_perm_max_abs_error": 0.0,
+        "null": {
+          "draws": 200,
+          "size_matched_B": 4,
+          "mean": 0.79384375,
+          "sd": 0.07979460299275483,
+          "min": 0.63125,
+          "max": 0.975,
+          "percentile_of_category": 92.5,
+          "below_null": false,
+          "identical_search_budget": true,
+          "seed": 68000
+        },
+        "definition": "EA-ctrl: the same frozen-angle single-qubit map WITHOUT the CZ (runtime space), run in exp70's codepath. Dual role: codepath control (must reproduce exp69's R-A arms) and the map-matched contrast baseline for N-across."
+      }
+    }
+  },
+  "fa_angle_space": {
+    "registered_for_exp70": "runtime (exp42_noun_embeddings.json angle)",
+    "why": "it is the angle the compiled circuit applies and the angle the committed degeneracy diagnostic states its E-across distribution over; the instrument space is reported alongside because every committed FA bound lives there",
+    "clifford_crosscheck": {
+      "runtime": {
+        "pair": {
+          "values": {
+            "product_path_no_CZ": {
+              "bound": 0.925,
+              "fraction": "74/80",
+              "exact": true,
+              "d_joint": 9
+            },
+            "joint_path_with_CZ_N-across": {
+              "bound": 0.925,
+              "fraction": "74/80",
+              "exact": false,
+              "d_joint": 10
+            },
+            "joint_path_no_CZ_EA-ctrl": {
+              "bound": 0.925,
+              "fraction": "74/80",
+              "exact": false,
+              "d_joint": 10
+            }
+          },
+          "best_lower_bound_for_all_three": 0.925,
+          "spread": 0.0,
+          "reading": "the three bound the same reachable class (SS3's Clifford argument, span certificate rank 9 = 9 = 9). Any spread is search luck across coordinate systems, NOT capacity, and the best value governs all three."
+        },
+        "twin": {
+          "values": {
+            "product_path_no_CZ": {
+              "bound": 0.925,
+              "fraction": "148/160",
+              "exact": false,
+              "d_joint": 9
+            },
+            "joint_path_with_CZ_N-across": {
+              "bound": 0.925,
+              "fraction": "148/160",
+              "exact": false,
+              "d_joint": 10
+            },
+            "joint_path_no_CZ_EA-ctrl": {
+              "bound": 0.925,
+              "fraction": "148/160",
+              "exact": false,
+              "d_joint": 10
+            }
+          },
+          "best_lower_bound_for_all_three": 0.925,
+          "spread": 0.0,
+          "reading": "the three bound the same reachable class (SS3's Clifford argument, span certificate rank 9 = 9 = 9). Any spread is search luck across coordinate systems, NOT capacity, and the best value governs all three."
+        }
+      },
+      "instrument": {
+        "pair": {
+          "values": {
+            "product_path_no_CZ": {
+              "bound": 0.925,
+              "fraction": "74/80",
+              "exact": true,
+              "d_joint": 9
+            },
+            "joint_path_with_CZ_N-across": {
+              "bound": 0.925,
+              "fraction": "74/80",
+              "exact": false,
+              "d_joint": 10
+            },
+            "joint_path_no_CZ_EA-ctrl": {
+              "bound": 0.925,
+              "fraction": "74/80",
+              "exact": false,
+              "d_joint": 10
+            }
+          },
+          "best_lower_bound_for_all_three": 0.925,
+          "spread": 0.0,
+          "reading": "the three bound the same reachable class (SS3's Clifford argument, span certificate rank 9 = 9 = 9). Any spread is search luck across coordinate systems, NOT capacity, and the best value governs all three."
+        },
+        "twin": {
+          "values": {
+            "product_path_no_CZ": {
+              "bound": 0.925,
+              "fraction": "148/160",
+              "exact": false,
+              "d_joint": 9
+            },
+            "joint_path_with_CZ_N-across": {
+              "bound": 0.93125,
+              "fraction": "149/160",
+              "exact": false,
+              "d_joint": 10
+            },
+            "joint_path_no_CZ_EA-ctrl": {
+              "bound": 0.925,
+              "fraction": "148/160",
+              "exact": false,
+              "d_joint": 10
+            }
+          },
+          "best_lower_bound_for_all_three": 0.93125,
+          "spread": 0.006249999999999978,
+          "reading": "the three bound the same reachable class (SS3's Clifford argument, span certificate rank 9 = 9 = 9). Any spread is search luck across coordinate systems, NOT capacity, and the best value governs all three."
+        }
+      }
+    }
+  },
+  "bound_of_record_note": {
+    "N-across / EA-ctrl": "the FA family's bound OF RECORD is the committed 0.9625 (154/160) from diagnostic_readout_arity_bounds_addendum.json's three-stage search (doc 54 SS17.7's supersession). The value computed here by the TWO-stage search is the pre-supersession 0.9250 (148/160) -- the capacity_check anchor -- and is reported only as a consistency check, never as a second bound. Both are lower bounds; the higher one governs.",
+    "P-eps / N-in": "no committed bound exists for either map; the values here are the bounds of record, both CONSTRUCTIVE LOWER BOUNDS.",
+    "binding_rule": "doc 55 SS6 / SS12: NO exp70 criterion reads against any number in this file. doc 54 SS17.7 is the standing reason -- a bound moved after exp68 reported and no stored boolean moved with it."
+  },
+  "grade3_under_conversion_flag": {
+    "flag": "under-conversion predicted for a BELOW-NULL category (the F1 observation, made prospective -- doc 55 SS19.2 grade 3)",
+    "percentile_vs_size_matched_null": {
+      "P-eps": 92.5,
+      "N-in": 98.0,
+      "N-across": 92.0,
+      "EA-ctrl": 92.5
+    },
+    "below_null": {
+      "P-eps": false,
+      "N-in": false,
+      "N-across": false,
+      "EA-ctrl": false
+    },
+    "any_arm_below_null": false,
+    "testable_this_run": false,
+    "verdict": "UNTESTABLE THIS RUN -- no exp70 arm has a below-null category. Computed before freezing and recorded rather than quietly dropped, exactly as doc 55 SS19.2 did for exp69."
+  },
+  "witnesses_doc55_SS19_3": {
+    "P-eps": {
+      "W": [
+        0.0,
+        0.17061761898824418,
+        0.06072364827455575,
+        0.1401299014995877,
+        0.0394813578488873,
+        0.15327307472103036,
+        0.22257796732311771,
+        -0.021128628762719114,
+        0.2208237894138484,
+        -0.17061761898824418,
+        0.0,
+        -0.16671132097279476,
+        -0.15171528093251752,
+        0.015958752716964553,
+        -0.14265360684164416,
+        -0.2779680021216485,
+        0.10014301438925031,
+        -0.24307192086652826,
+        -0.06072364827455575,
+        0.16671132097279476,
+        0.0,
+        0.08853761838122909,
+        0.04101773445305314,
+        0.10368975161905195,
+        0.12748454068855633,
+        0.009586249392660354,
+        0.13626316864159996,
+        -0.1401299014995877,
+        0.15171528093251752,
+        -0.08853761838122909,
+        0.0,
+        0.047620880447662,
+        0.015048590521760313,
+        -0.004787821576933424,
+        0.048404545996041,
+        0.013455851039648189,
+        -0.0394813578488873,
+        -0.015958752716964553,
+        -0.04101773445305314,
+        -0.047620880447662,
+        0.0,
+        -0.04457107332538658,
+        -0.10329151579921174,
+        0.035851768097913864,
+        -0.0892204174065042,
+        -0.15327307472103036,
+        0.14265360684164416,
+        -0.10368975161905195,
+        -0.015048590521760313,
+        0.04457107332538658,
+        0.0,
+        -0.03916012201521233,
+        0.05777160555771137,
+        -0.01740124922187863,
+        -0.22257796732311771,
+        0.2779680021216485,
+        -0.12748454068855633,
+        0.004787821576933424,
+        0.10329151579921174,
+        0.03916012201521233,
+        0.0,
+        0.0939099798942915,
+        0.03479118464074011,
+        0.021128628762719114,
+        -0.10014301438925031,
+        -0.009586249392660354,
+        -0.048404545996041,
+        -0.035851768097913864,
+        -0.05777160555771137,
+        -0.0939099798942915,
+        0.0,
+        -0.09294900420382109,
+        -0.2208237894138484,
+        0.24307192086652826,
+        -0.13626316864159996,
+        -0.013455851039648189,
+        0.0892204174065042,
+        0.01740124922187863,
+        -0.03479118464074011,
+        0.09294900420382109,
+        0.0
+      ],
+      "d": 81,
+      "n_twins": 160,
+      "n_positive_margin": 160,
+      "certifies_the_bound_count": true,
+      "convention": "doc 55 SS19.3, re-pinned for exp70's maps: the witness of record is THIS committed search's output at THIS registered seed (0), exported at bound-computation time, BEFORE any exp70 run. margin(twin) = <W, Phi>/(||W|| ||Phi||) with Phi the AGENT-FIRST joint feature of the map named above and the sign convention of `maxfs_lower`; pair margin = min over the pair's two twins."
+    },
+    "N-in": {
+      "W": [
+        0.0,
+        -0.24843705452455345,
+        -0.17541751247688853,
+        0.29683199556644746,
+        0.11968374246724364,
+        0.08840749028059917,
+        0.24843705452455345,
+        0.0,
+        0.016419259431302378,
+        -0.07679905239084367,
+        -0.12996557872464676,
+        -0.211898031478469,
+        0.17541751247688853,
+        -0.016419259431302378,
+        0.0,
+        0.27899626570261976,
+        0.2956358119827387,
+        -0.1556184771874517,
+        -0.29683199556644746,
+        0.07679905239084367,
+        -0.27899626570261976,
+        0.0,
+        -0.055941814034040103,
+        -0.04608707265665894,
+        -0.11968374246724364,
+        0.12996557872464676,
+        -0.2956358119827387,
+        0.055941814034040103,
+        0.0,
+        0.185980728357909,
+        -0.08840749028059917,
+        0.211898031478469,
+        0.1556184771874517,
+        0.04608707265665894,
+        -0.185980728357909,
+        0.0
+      ],
+      "d": 36,
+      "n_twins": 160,
+      "n_positive_margin": 160,
+      "certifies_the_bound_count": true,
+      "convention": "doc 55 SS19.3, re-pinned for exp70's maps: the witness of record is THIS committed search's output at THIS registered seed (0), exported at bound-computation time, BEFORE any exp70 run. margin(twin) = <W, Phi>/(||W|| ||Phi||) with Phi the AGENT-FIRST joint feature of the map named above and the sign convention of `maxfs_lower`; pair margin = min over the pair's two twins."
+    },
+    "N-across": {
+      "W": [
+        0.0,
+        -0.023876575601489862,
+        0.023876575601489862,
+        0.0,
+        0.16456379418248535,
+        0.0,
+        -0.687276266709255,
+        -0.16456379418248535,
+        0.687276266709255,
+        0.0
+      ],
+      "d": 10,
+      "n_twins": 160,
+      "n_positive_margin": 148,
+      "certifies_the_bound_count": true,
+      "convention": "doc 55 SS19.3, re-pinned for exp70's maps: the witness of record is THIS committed search's output at THIS registered seed (0), exported at bound-computation time, BEFORE any exp70 run. margin(twin) = <W, Phi>/(||W|| ||Phi||) with Phi the AGENT-FIRST joint feature of the map named above and the sign convention of `maxfs_lower`; pair margin = min over the pair's two twins."
+    },
+    "EA-ctrl": {
+      "W": [
+        0.0,
+        0.5370873633825017,
+        -0.5370873633825017,
+        0.0,
+        0.2235143542606932,
+        0.0,
+        0.4019682792637473,
+        -0.2235143542606932,
+        -0.4019682792637473,
+        0.0
+      ],
+      "d": 10,
+      "n_twins": 160,
+      "n_positive_margin": 148,
+      "certifies_the_bound_count": true,
+      "convention": "doc 55 SS19.3, re-pinned for exp70's maps: the witness of record is THIS committed search's output at THIS registered seed (0), exported at bound-computation time, BEFORE any exp70 run. margin(twin) = <W, Phi>/(||W|| ||Phi||) with Phi the AGENT-FIRST joint feature of the map named above and the sign convention of `maxfs_lower`; pair margin = min over the pair's two twins."
+    }
+  },
+  "sensitivity_noted_not_run": {
+    "N-in-REVERSED": {
+      "map": "N-in-REVERSED",
+      "mode": "twin",
+      "d_joint": 36,
+      "d_per_referent": 6,
+      "feature_kind": "product",
+      "n_casts": 80,
+      "n_rows": 160,
+      "count": 160,
+      "bound": 1.0,
+      "fraction": "160/160",
+      "population": "twins (a cast may score 0, 1/2 or 1)",
+      "method": "CONSTRUCTIVE LOWER BOUND (48 restarts x 500 steps + 6 LS-drop starts) -- NOT a maximum",
+      "exact": false,
+      "sign_flip_check": {
+        "n_rows": 160,
+        "satisfied_c": 160,
+        "satisfied_minus_c": 0,
+        "boundary_rows": 0,
+        "sums_to_n": true
+      },
+      "definition": "E-in with the orientation REVERSED (PC2 controls PC1). NOTED, NOT RUN -- PC1 carries 12.7% of the variance against PC2's 8.1%, and the orientation is registered a priori by that fact, not by this number.",
+      "null": "NOT COMPUTED -- sensitivity row, noted-not-run; a bound without a size-matched null is context, never a criterion"
+    },
+    "N-in-OLDMAP": {
+      "map": "N-in-OLDMAP",
+      "mode": "twin",
+      "d_joint": 36,
+      "d_per_referent": 6,
+      "feature_kind": "product",
+      "n_casts": 80,
+      "n_rows": 160,
+      "count": 152,
+      "bound": 0.95,
+      "fraction": "152/160",
+      "population": "twins (a cast may score 0, 1/2 or 1)",
+      "method": "CONSTRUCTIVE LOWER BOUND (48 restarts x 500 steps + 6 LS-drop starts) -- NOT a maximum",
+      "exact": false,
+      "sign_flip_check": {
+        "n_rows": 160,
+        "satisfied_c": 152,
+        "satisfied_minus_c": 8,
+        "boundary_rows": 0,
+        "sums_to_n": true
+      },
+      "definition": "E-in under exp68's registered map theta = (p + 1) pi -- the map the committed degeneracy check DISQUALIFIED (4 nouns below concurrence 0.05, two at 0.0). Reported so the cost of the dead zones is visible, NOT RUN.",
+      "null": "NOT COMPUTED -- sensitivity row, noted-not-run; a bound without a size-matched null is context, never a criterion"
+    },
+    "A0-W": {
+      "map": "A0-W",
+      "mode": "twin",
+      "d_joint": 81,
+      "d_per_referent": 9,
+      "feature_kind": "product",
+      "n_casts": 80,
+      "n_rows": 160,
+      "count": 160,
+      "bound": 1.0,
+      "fraction": "160/160",
+      "population": "twins (a cast may score 0, 1/2 or 1)",
+      "method": "CONSTRUCTIVE LOWER BOUND (48 restarts x 500 steps + 6 LS-drop starts) -- NOT a maximum",
+      "exact": false,
+      "sign_flip_check": {
+        "n_rows": 160,
+        "satisfied_c": 160,
+        "satisfied_minus_c": 0,
+        "boundary_rows": 0,
+        "sums_to_n": true
+      },
+      "definition": "A0-W: exp68/exp69's F2 product register on the OLD map theta = (p + 1) pi. The anchor family; its bound of record is the committed F2 value, reproduced here through the extended path.",
+      "null": "NOT COMPUTED -- sensitivity row, noted-not-run; a bound without a size-matched null is context, never a criterion"
+    }
+  },
+  "wall_sec": 100.63314390182495
+}

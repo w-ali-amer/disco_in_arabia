@@ -1,0 +1,7 @@
+Pasqal emulator feasibility check (NOT a registered experiment), 2026-09-28 ~22:45, WSL pulser_env (pulser 1.9.0).
+Device: pulser.devices.AnalogDevice (global rydberg channel only), 1 atom per sequence, 8 sequences (4 words x 2 queries).
+Encode: one Blackman pulse (area pi/4 or 3pi/4, phase 0 or pi) -> optimal 2->1 codeword; query Y: extra pi/2 pulse; measure ground-rydberg.
+Conventions verified: statevector basis order [r, g]; sampled bitstring '0' = ground.
+noiseless mean single-shot success: 0.8536  (optimum 0.8536; classical 1-bit max 0.75)
+SPAM fp=0.01 fn=0.05 (state prep 0.005; 50 runs x 40 samples): 0.8282   vs noisy classical-bit ceiling ~0.735
+SPAM fp=0.03 fn=0.08:                                           0.8134   vs noisy classical-bit ceiling ~0.723

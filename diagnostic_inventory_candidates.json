@@ -1,0 +1,668 @@
+{
+ "meta": {
+  "purpose": "D4 candidate-inventory diagnostic: how many candidates each source rule produced, how much of the committed PC1/PC2 plane they cover, how spread out they are, and which are morphological variants of each other",
+  "HEADER_WARNING_NO_MEMBERSHIP": "CANDIDATES ONLY. No membership, category, or human-ness is confirmed here. Admission is by the stated morphological rule (CAMeL Tools `rat` over the AraVec vocabulary), which is evidence, not confirmation. The doc 59 SS6 gate protocol is a separate user decision and has NOT run.",
+  "candidate_file": "candidate_human_nouns.json",
+  "candidate_file_sha256": "4cad264724c7ba1aeead0b2ea1f41f7240cd7df06571d2a2acb4dac260520bb0",
+  "vectors_file": "aravec_raw_vectors_candidates.json",
+  "vectors_file_sha256": "1de4e9dca68ccf9f1677081278215ad77529118600c534d76f70e61b21ac64aa",
+  "frozen44_file_sha256": "4e919966b3d359a9c1af397904113ad4d1dad3a6f6f9d2560fb17523843ba35a",
+  "n_candidates": 600,
+  "generated_on": "Wajahaths-MacBook-Air.local 2026-08-27",
+  "generator": "extract_aravec_candidates.py",
+  "generator_sha256": "d325278733fe0b18dea8e54c9626983150d15a6e031311a90b8cf7e6c20301df"
+ },
+ "sha_reverification_on_mac": {
+  "candidates_recomputed": "1a987c721d83747c23aadd8853983988083e10bb1863d14777f65605b27d74c8",
+  "candidates_declared": "1a987c721d83747c23aadd8853983988083e10bb1863d14777f65605b27d74c8",
+  "vectors_recomputed": "67431593ab943d12618d324d5ebc7e4686580c3ec4e593fad25dc28a5bb62b0c",
+  "vectors_declared": "67431593ab943d12618d324d5ebc7e4686580c3ec4e593fad25dc28a5bb62b0c",
+  "frozen44_recomputed": "699450d3d292f789d368920c33febf49ee4fe4ceff63501308b6da5759d6ce11",
+  "frozen44_declared": "699450d3d292f789d368920c33febf49ee4fe4ceff63501308b6da5759d6ce11",
+  "all_match": true
+ },
+ "committed_plane_check": {
+  "recomputed_norm_divisors": [
+   8.669494516224397,
+   10.160404144924657
+  ],
+  "committed_norm_divisors": [
+   8.669494516224397,
+   10.160404144924657
+  ],
+  "recomputed_var_explained": [
+   0.12685513291325928,
+   0.08050060927190729
+  ],
+  "committed_var_explained": [
+   0.12685513291325928,
+   0.08050060927190729
+  ],
+  "recomputed_sign_pin": [
+   -1,
+   1
+  ],
+  "committed_sign_pin": [
+   -1,
+   1
+  ],
+  "max_abs_coord_diff_vs_frozen_vec2": 3.7192471324942744e-15,
+  "verified": true
+ },
+ "counts": {
+  "by_provenance_rule": {
+   "camel_rat_r_unanimous": 600
+  },
+  "by_provenance_rule_all_admitted_before_band_cap": {
+   "camel_rat_r_unanimous": 841,
+   "camel_rat_r_majority": 11,
+   "camel_rat_r_any": 218
+  },
+  "by_wazn_tag": {
+   "other": 107,
+   "mu_participle": 156,
+   "faail": 73,
+   "faaal_or_fa33aal": 53,
+   "faiil": 63,
+   "nisba_yaa": 148
+  },
+  "by_frequency_rank_decile": {
+   "decile_0": 232,
+   "decile_1": 98,
+   "decile_2": 88,
+   "decile_3": 95,
+   "decile_4": 75,
+   "decile_5": 12
+  },
+  "funnel": {
+   "scanned_vocab_tokens": 300000,
+   "al_form_tokens": 29830,
+   "already_in_frozen_44": 44,
+   "no_definite_analysis": 12733,
+   "no_definite_noun_reading": 3845,
+   "no_rational_reading": 10317,
+   "rational_but_not_masc_sing": 1821,
+   "admitted_before_dedup": 1070,
+   "dropped_as_orthographic_duplicate": 0,
+   "admitted_after_dedup": 1070,
+   "kept_after_band_cap": 600
+  }
+ },
+ "rule_behaviour_on_committed_44": {
+  "humans_24_readmitted": [
+   {
+    "noun": "الطالب",
+    "tier": "camel_rat_r_unanimous"
+   },
+   {
+    "noun": "الرجل",
+    "tier": "camel_rat_r_any"
+   },
+   {
+    "noun": "الولد",
+    "tier": "camel_rat_r_unanimous"
+   },
+   {
+    "noun": "المدير",
+    "tier": "camel_rat_r_unanimous"
+   },
+   {
+    "noun": "المعلم",
+    "tier": "camel_rat_r_any"
+   },
+   {
+    "noun": "الطبيب",
+    "tier": "camel_rat_r_unanimous"
+   },
+   {
+    "noun": "العامل",
+    "tier": "camel_rat_r_unanimous"
+   },
+   {
+    "noun": "المهندس",
+    "tier": "camel_rat_r_unanimous"
+   },
+   {
+    "noun": "الكاتب",
+    "tier": "camel_rat_r_unanimous"
+   },
+   {
+    "noun": "الطباخ",
+    "tier": "camel_rat_r_unanimous"
+   },
+   {
+    "noun": "الجندي",
+    "tier": "camel_rat_r_unanimous"
+   },
+   {
+    "noun": "الفلاح",
+    "tier": "camel_rat_r_any"
+   },
+   {
+    "noun": "الحارس",
+    "tier": "camel_rat_r_unanimous"
+   },
+   {
+    "noun": "اللاعب",
+    "tier": "camel_rat_r_unanimous"
+   },
+   {
+    "noun": "الموظف",
+    "tier": "camel_rat_r_unanimous"
+   },
+   {
+    "noun": "الصحفي",
+    "tier": "camel_rat_r_unanimous"
+   },
+   {
+    "noun": "السائق",
+    "tier": "camel_rat_r_unanimous"
+   },
+   {
+    "noun": "المسافر",
+    "tier": "camel_rat_r_unanimous"
+   },
+   {
+    "noun": "الضابط",
+    "tier": "camel_rat_r_unanimous"
+   },
+   {
+    "noun": "الباحث",
+    "tier": "camel_rat_r_unanimous"
+   },
+   {
+    "noun": "القائد",
+    "tier": "camel_rat_r_unanimous"
+   },
+   {
+    "noun": "الصياد",
+    "tier": "camel_rat_r_unanimous"
+   },
+   {
+    "noun": "المريض",
+    "tier": "camel_rat_r_unanimous"
+   }
+  ],
+  "humans_24_rejected": [
+   {
+    "noun": "الشرطي",
+    "tier": null
+   }
+  ],
+  "objects_20_admitted_by_rule": [],
+  "objects_20_rejected": [
+   {
+    "noun": "الباب",
+    "tier": null
+   },
+   {
+    "noun": "البيت",
+    "tier": null
+   },
+   {
+    "noun": "التقرير",
+    "tier": null
+   },
+   {
+    "noun": "الجدار",
+    "tier": null
+   },
+   {
+    "noun": "الحقيبة",
+    "tier": null
+   },
+   {
+    "noun": "الخبز",
+    "tier": null
+   },
+   {
+    "noun": "الدرس",
+    "tier": null
+   },
+   {
+    "noun": "الرسالة",
+    "tier": null
+   },
+   {
+    "noun": "السيارة",
+    "tier": null
+   },
+   {
+    "noun": "الصندوق",
+    "tier": null
+   },
+   {
+    "noun": "الصورة",
+    "tier": null
+   },
+   {
+    "noun": "العقد",
+    "tier": null
+   },
+   {
+    "noun": "القصيدة",
+    "tier": null
+   },
+   {
+    "noun": "الكتاب",
+    "tier": null
+   },
+   {
+    "noun": "المشروع",
+    "tier": null
+   },
+   {
+    "noun": "المكتب",
+    "tier": null
+   },
+   {
+    "noun": "الملف",
+    "tier": null
+   },
+   {
+    "noun": "النافذة",
+    "tier": null
+   },
+   {
+    "noun": "الوثيقة",
+    "tier": null
+   },
+   {
+    "noun": "الورقة",
+    "tier": null
+   }
+  ]
+ },
+ "aravec_coverage": {
+  "candidates_in_aravec_vocab": 600,
+  "candidates_total": 600,
+  "fraction": 1.0,
+  "basis": "candidates were ENUMERATED FROM the AraVec vocabulary and every one was re-looked-up during extraction; a missing key would have raised, not been skipped",
+  "frozen_44_coverage": "44/44 (committed artifact, unchanged)"
+ },
+ "plane_coverage": {
+  "coordinates": "PC1/PC2 of the COMMITTED plane: PCA fitted on the 44 committed vectors only, sign-pinned to exp42's frozen vec2, divided by the registered per-component divisors max_{24 HUMANS}|PC_k|. Candidates are PROJECTED, never refitted, so |coord| > 1 is expected and meaningful.",
+  "bbox_24": {
+   "pc1": [
+    -1.0,
+    -0.1689867532971583
+   ],
+   "pc2": [
+    -0.8809472455932299,
+    1.0
+   ]
+  },
+  "bbox_candidates": {
+   "pc1": [
+    -1.1416088858175395,
+    0.7204596158403517
+   ],
+   "pc2": [
+    -0.8323404193711601,
+    0.9225808055062543
+   ]
+  },
+  "hull_area_24": 0.9201816989269082,
+  "hull_area_candidates": 2.339666930972439,
+  "hull_area_ratio_candidates_over_24": 2.542614066005548,
+  "n_candidates_inside_24_hull": 130,
+  "frac_candidates_inside_24_hull": 0.21666666666666667,
+  "angular_bins_of_36_occupied_24": 11,
+  "angular_bins_of_36_occupied_candidates": 36,
+  "angular_bins_occupied_by_candidates_not_by_24": 25,
+  "angular_bins_occupied_by_24_not_by_candidates": 0,
+  "radius_24": {
+   "min": 0.4025918566208062,
+   "p25": 0.7215909373822047,
+   "median": 0.8675684058401755,
+   "p75": 1.019201655281458,
+   "max": 1.2524146040715955,
+   "mean": 0.8627844740072387,
+   "sd": 0.24595806335623388
+  },
+  "radius_candidates": {
+   "min": 0.0021349579557501017,
+   "p25": 0.1991188406333018,
+   "median": 0.3610771176000107,
+   "p75": 0.5202742732380863,
+   "max": 1.2447302185171214,
+   "mean": 0.3970303181400324,
+   "sd": 0.24595639402350522
+  },
+  "var_explained_pc1_plus_pc2": 0.20735574218516656,
+  "note": "plane-FILLING is a geometric statement about where the raw vectors land. It says nothing about what any noun denotes."
+ },
+ "nearest_neighbour": {
+  "raw300_cosine_distance": {
+   "candidate_to_nearest_candidate": {
+    "min": 0.14975974000841308,
+    "p25": 0.3822914627887768,
+    "median": 0.48622406656077855,
+    "p75": 0.5839126259354865,
+    "max": 0.8819348536596905,
+    "mean": 0.4800428664456515,
+    "sd": 0.14180324753218126
+   },
+   "human24_to_nearest_human24": {
+    "min": 0.28134102354465507,
+    "p25": 0.3370779321076548,
+    "median": 0.4218027994654596,
+    "p75": 0.5022898283105584,
+    "max": 0.7411153618176218,
+    "mean": 0.4361227896263493,
+    "sd": 0.1281705957283734
+   },
+   "candidate_to_nearest_of_24": {
+    "min": 0.18777030075339463,
+    "p25": 0.5548898031183322,
+    "median": 0.6350550730407678,
+    "p75": 0.716919225766985,
+    "max": 0.9605659572944589,
+    "mean": 0.6332468338649871,
+    "sd": 0.12539111236271683
+   }
+  },
+  "plane2d_euclidean_registered_units": {
+   "candidate_to_nearest_candidate": {
+    "min": 0.0005572279759310445,
+    "p25": 0.011078013354351768,
+    "median": 0.017389999598285917,
+    "p75": 0.028402351250056485,
+    "max": 0.3382955676570886,
+    "mean": 0.02631198417159767,
+    "sd": 0.03225759769645677
+   },
+   "human24_to_nearest_human24": {
+    "min": 0.03923249336723161,
+    "p25": 0.08364186699271628,
+    "median": 0.09893782032600404,
+    "p75": 0.16509367104638684,
+    "max": 0.39324094060419956,
+    "mean": 0.1301307991857538,
+    "sd": 0.08682298728381452
+   },
+   "candidate_to_nearest_of_24": {
+    "min": 0.00799151311770512,
+    "p25": 0.13635103773299506,
+    "median": 0.2253103822789091,
+    "p75": 0.3621122065777464,
+    "max": 1.1174387203890157,
+    "mean": 0.25733474807496703,
+    "sd": 0.15702723870972304
+   }
+  },
+  "reading": "smaller candidate-to-candidate NN than 24-to-24 means the candidate cloud is DENSER, not that it is more coherent."
+ },
+ "duplicates_and_variants": {
+  "distinct_lemmas": 591,
+  "distinct_roots": 428,
+  "lemma_groups_with_multiple_candidates": 9,
+  "root_groups_with_multiple_candidates": 78,
+  "largest_root_groups": [
+   [
+    "NTWS",
+    [
+     "السرياني",
+     "الفرنسي",
+     "الدكتور",
+     "العيسوي",
+     "الباشا",
+     "الانجليزي",
+     "الايراني",
+     "الاسيوي",
+     "البحريني",
+     "الاسرائيلي",
+     "الليبي",
+     "الموسيقار",
+     "الاوروبي",
+     "الاسباني",
+     "الايطالي",
+     "الياباني",
+     "الالماني",
+     "الالباني",
+     "الافغاني",
+     "السوفيتي",
+     "البرازيلي",
+     "الاوربي",
+     "السنغالي",
+     "البروفسور",
+     "الفلسطيني",
+     "الفلمنكي",
+     "اللبناني",
+     "السيناتور",
+     "البريطاني",
+     "الاثيوبي",
+     "الكابتن",
+     "الامبراطور",
+     "السويدي",
+     "الجنرال",
+     "الكاثوليكي",
+     "البولندي",
+     "الاردني",
+     "الباكستاني",
+     "الانقليزي",
+     "الدوق",
+     "الاندلسي",
+     "اللورد",
+     "الموريتاني",
+     "الكولونيل",
+     "السعدي",
+     "الصهيوني",
+     "الارجنتيني",
+     "الهولندي",
+     "التشيلي",
+     "الدبلوماسي",
+     "الايوبي",
+     "الانكليزي",
+     "الملياردير",
+     "الكردستاني",
+     "البرتغالي",
+     "الفلبيني",
+     "الفنزويلي",
+     "التبريزي",
+     "الاروبي",
+     "الكازخستاني",
+     "المكسيكي",
+     "الماركسي",
+     "الديكتاتور",
+     "الماسوني",
+     "البروفيسور",
+     "الكربلائي",
+     "التشيكي",
+     "اليوناني",
+     "المراكشي",
+     "البوسني",
+     "السويسري",
+     "البوليفي",
+     "الصربي",
+     "الكندي"
+    ]
+   ],
+   [
+    "#.م.ن",
+    [
+     "اليمني",
+     "الامين",
+     "المؤمن",
+     "اليماني",
+     "المامون"
+    ]
+   ],
+   [
+    "#.ل.#",
+    [
+     "المولي",
+     "الولي",
+     "الوالي",
+     "الموالي"
+    ]
+   ],
+   [
+    "د.ع.#",
+    [
+     "الداعية",
+     "الداعي",
+     "الدعي",
+     "المدعي"
+    ]
+   ],
+   [
+    "ش.ر.ك",
+    [
+     "المشترك",
+     "الشريك",
+     "المشرك",
+     "المشارك"
+    ]
+   ],
+   [
+    "#.ن.س",
+    [
+     "الانسان",
+     "المؤنس",
+     "الانيس"
+    ]
+   ],
+   [
+    "ر.#.س",
+    [
+     "الرئيس",
+     "الريس",
+     "الروسي"
+    ]
+   ],
+   [
+    "ح.م.د",
+    [
+     "الاحمدي",
+     "الاحمد",
+     "الحمود"
+    ]
+   ],
+   [
+    "ط.غ.#",
+    [
+     "الطاغيه",
+     "الطاغوت",
+     "الطاغي"
+    ]
+   ],
+   [
+    "س.م.ع",
+    [
+     "السميع",
+     "السامع",
+     "المستمع"
+    ]
+   ],
+   [
+    "ح.ر.م",
+    [
+     "الحريم",
+     "الحرامي",
+     "المحترم"
+    ]
+   ],
+   [
+    "ع.م.د",
+    [
+     "المعتمد",
+     "العميد",
+     "العمدة"
+    ]
+   ],
+   [
+    "ن.ص.ر",
+    [
+     "النصير",
+     "الناصر",
+     "المنصوري"
+    ]
+   ],
+   [
+    "غ.ر.ب",
+    [
+     "المغربي",
+     "الغريب",
+     "المغترب"
+    ]
+   ],
+   [
+    "ن.ظ.ر",
+    [
+     "المنتظر",
+     "النظير",
+     "الناظر"
+    ]
+   ]
+  ],
+  "largest_lemma_groups": [
+   [
+    "أخ",
+    [
+     "الاخ",
+     "الاخو"
+    ]
+   ],
+   [
+    "أمريكي",
+    [
+     "الامريكي",
+     "الاميركي"
+    ]
+   ],
+   [
+    "مسؤول",
+    [
+     "المسئول",
+     "المسؤول"
+    ]
+   ],
+   [
+    "طاغي",
+    [
+     "الطاغيه",
+     "الطاغي"
+    ]
+   ],
+   [
+    "شيخ",
+    [
+     "الشيخ",
+     "المشائخ"
+    ]
+   ],
+   [
+    "مولى",
+    [
+     "المولي",
+     "الموالي"
+    ]
+   ],
+   [
+    "أب",
+    [
+     "الابو",
+     "الاب"
+    ]
+   ],
+   [
+    "أوربي",
+    [
+     "الاوروبي",
+     "الاوربي"
+    ]
+   ],
+   [
+    "بروفسور",
+    [
+     "البروفسور",
+     "البروفيسور"
+    ]
+   ]
+  ],
+  "ta_marbuta_collisions": {},
+  "identical_vector_groups": [],
+  "note": "a shared root is a morphological relation, not a semantic one; these groups are flagged for the gate protocol to look at, not pruned here."
+ }
+}

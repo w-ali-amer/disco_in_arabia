@@ -1,0 +1,45 @@
+{
+ "purpose": "doc 82 §13 A1",
+ "data": "stories_exp43a_family.json",
+ "data_sha256": "fe097c96d2740f128f0776883ba6033acd4f49473397dae74e083c8cfe469295",
+ "validator_sha256": "bec7759d8090818cf1298aa026d08b5ec337172f429f81648feba5afb5135a84",
+ "n": {
+  "train": 200,
+  "val": 100,
+  "test": 504
+ },
+ "strong_v5": {
+  "oracle": "sentence-level logistic over question-relative symbolic features + sentence/question 1-2 grams; item score aggregated over sentences; thresholds tuned on val only",
+  "selected_C": 0.1,
+  "n_features": 785,
+  "n_test": 504,
+  "test_accuracy_max_aggregation": 0.9900793650793651,
+  "ci95_max_aggregation": [
+   0.9814267867074085,
+   0.9987319434513218
+  ],
+  "test_accuracy_best_sentence": 1.0,
+  "ci95_best_sentence": [
+   0.9999999126946609,
+   1.000000087305339
+  ],
+  "val_accuracy_max_aggregation": 1.0,
+  "val_accuracy_best_sentence": 1.0,
+  "per_split_accuracy_max_aggregation": {
+   "test_a": 0.9940476190476191,
+   "test_b": 0.9821428571428571,
+   "test_c": 0.9940476190476191
+  },
+  "descriptive_mean_aggregation": {
+   "note": "mean over sentences can see per-pattern COUNTS, which a strict 'sees ONE sentence' reading does not license; recorded, NOT gating",
+   "test_accuracy": 0.9841269841269841,
+   "ci95": [
+    0.9732151916361276,
+    0.9950387766178406
+   ],
+   "val_accuracy": 0.98
+  },
+  "passed": false
+ },
+ "a1_family_v5strong_passed": false
+}

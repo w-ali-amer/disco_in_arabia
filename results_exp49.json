@@ -1,0 +1,220 @@
+{
+ "experiment": "exp49",
+ "spec": "qnlp_private_docs/33_exp49_verb_agnostic_route.md (commit 7e82b41, FROZEN)",
+ "platform": "macOS-26.5.2-arm64-arm-64bit",
+ "python": "3.12.13",
+ "torch": "2.13.0",
+ "embeddings_sha256": "00c1ecffcaf05b38df082f8a3cbed1d013bddb3e39bc00adf1c2513b4ea674ac",
+ "dataset_sha256": {
+  "L1": "88cd70ad530356911c17f18d0b42de3edf3c956324513a1455c9548aaef15534",
+  "L2": "95e2c3407cb9052c7c2a2f4a1a4b8471e53225fc784a005ce8dca128ba9e38c7"
+ },
+ "P1_prediction_stability": {
+  "A2_L1": {
+   "n_models": 5,
+   "n_perms": 100,
+   "base_acc": 0.7993333333333333,
+   "mean_unchanged_fraction": 0.71802,
+   "min_unchanged_fraction": 0.5933333333333334,
+   "mean_consistent_perm_acc": 0.7645933333333333
+  },
+  "A4_L2": {
+   "n_models": 5,
+   "n_perms": 100,
+   "base_acc": 0.7166666666666667,
+   "mean_unchanged_fraction": 0.66492,
+   "min_unchanged_fraction": 0.5633333333333334,
+   "mean_consistent_perm_acc": 0.6982
+  }
+ },
+ "P2_question_only_permutation": {
+  "A2_L1": {
+   "mean_question_only_perm_acc": 0.6248400000000001,
+   "min": 0.38333333333333336,
+   "max": 0.8133333333333334
+  },
+  "A4_L2": {
+   "mean_question_only_perm_acc": 0.6701333333333334,
+   "min": 0.5966666666666667,
+   "max": 0.73
+  }
+ },
+ "P3_tied_block": {
+  "A2_L1": {
+   "runs": [
+    {
+     "arm": "tied_A2",
+     "seed": 0,
+     "lr": 0.005,
+     "batch": 1,
+     "val_acc": 0.8033333333333333,
+     "train_acc": 0.8258333333333333,
+     "test_acc": 0.79
+    },
+    {
+     "arm": "tied_A2",
+     "seed": 1,
+     "lr": 0.005,
+     "batch": 1,
+     "val_acc": 0.81,
+     "train_acc": 0.8175,
+     "test_acc": 0.79
+    },
+    {
+     "arm": "tied_A2",
+     "seed": 0,
+     "lr": 0.005,
+     "batch": 8,
+     "val_acc": 0.8066666666666666,
+     "train_acc": 0.8075,
+     "test_acc": 0.7833333333333333
+    },
+    {
+     "arm": "tied_A2",
+     "seed": 1,
+     "lr": 0.005,
+     "batch": 8,
+     "val_acc": 0.81,
+     "train_acc": 0.8125,
+     "test_acc": 0.81
+    },
+    {
+     "arm": "tied_A2",
+     "seed": 0,
+     "lr": 0.02,
+     "batch": 1,
+     "val_acc": 0.8066666666666666,
+     "train_acc": 0.7816666666666666,
+     "test_acc": 0.77
+    },
+    {
+     "arm": "tied_A2",
+     "seed": 1,
+     "lr": 0.02,
+     "batch": 1,
+     "val_acc": 0.81,
+     "train_acc": 0.7783333333333333,
+     "test_acc": 0.7633333333333333
+    },
+    {
+     "arm": "tied_A2",
+     "seed": 0,
+     "lr": 0.02,
+     "batch": 8,
+     "val_acc": 0.8066666666666666,
+     "train_acc": 0.8216666666666667,
+     "test_acc": 0.8033333333333333
+    },
+    {
+     "arm": "tied_A2",
+     "seed": 1,
+     "lr": 0.02,
+     "batch": 8,
+     "val_acc": 0.7966666666666666,
+     "train_acc": 0.7941666666666667,
+     "test_acc": 0.8
+    }
+   ],
+   "best_tied_test_acc": 0.81,
+   "untied_reference_test_acc": 0.7993,
+   "gap": -0.010700000000000043,
+   "matches_within_2pp": true
+  },
+  "A4_L2": {
+   "runs": [
+    {
+     "arm": "tied_A4",
+     "seed": 0,
+     "lr": 0.005,
+     "batch": 1,
+     "val_acc": 0.7933333333333333,
+     "train_acc": 0.7975,
+     "test_acc": 0.7866666666666666
+    },
+    {
+     "arm": "tied_A4",
+     "seed": 1,
+     "lr": 0.005,
+     "batch": 1,
+     "val_acc": 0.7766666666666666,
+     "train_acc": 0.8058333333333333,
+     "test_acc": 0.7933333333333333
+    },
+    {
+     "arm": "tied_A4",
+     "seed": 0,
+     "lr": 0.005,
+     "batch": 8,
+     "val_acc": 0.7333333333333333,
+     "train_acc": 0.7925,
+     "test_acc": 0.7166666666666667
+    },
+    {
+     "arm": "tied_A4",
+     "seed": 1,
+     "lr": 0.005,
+     "batch": 8,
+     "val_acc": 0.7333333333333333,
+     "train_acc": 0.765,
+     "test_acc": 0.7433333333333333
+    },
+    {
+     "arm": "tied_A4",
+     "seed": 0,
+     "lr": 0.02,
+     "batch": 1,
+     "val_acc": 0.74,
+     "train_acc": 0.7516666666666667,
+     "test_acc": 0.7433333333333333
+    },
+    {
+     "arm": "tied_A4",
+     "seed": 1,
+     "lr": 0.02,
+     "batch": 1,
+     "val_acc": 0.76,
+     "train_acc": 0.7158333333333333,
+     "test_acc": 0.6866666666666666
+    },
+    {
+     "arm": "tied_A4",
+     "seed": 0,
+     "lr": 0.02,
+     "batch": 8,
+     "val_acc": 0.7833333333333333,
+     "train_acc": 0.7983333333333333,
+     "test_acc": 0.75
+    },
+    {
+     "arm": "tied_A4",
+     "seed": 1,
+     "lr": 0.02,
+     "batch": 8,
+     "val_acc": 0.78,
+     "train_acc": 0.795,
+     "test_acc": 0.7766666666666666
+    }
+   ],
+   "best_tied_test_acc": 0.7933333333333333,
+   "untied_reference_test_acc": 0.7167,
+   "gap": -0.07663333333333333,
+   "matches_within_2pp": false
+  }
+ },
+ "verdicts": {
+  "c1_structurally_blind": false,
+  "mean_unchanged_fraction": 0.69147,
+  "question_swap_collapses": false,
+  "mean_question_only_acc": 0.6474866666666668,
+  "verb_blind_matches_L1": true,
+  "verb_blind_matches_L2": false
+ },
+ "meta_notes": {
+  "scope": "doc 33 SS5: retracts nothing. content_earned booleans across exp42/43b/44/48 stand as computed against the criteria they were registered on (Rule 4); exp49 changes how they are READ, never their values. This is NOT a claim that the exp41 generator leaked -- V1-V5 tested whether shortcut models can solve these datasets and they cannot; a verb-agnostic route inside a COMPOSITIONAL model is a different thing from a bag-of-words shortcut and this doc does not conflate them. No quantum reading: all three probes are about task structure and control adequacy. Simulation only, 6 verbs, two rungs."
+ },
+ "git_note": {
+  "exp42_paths": [],
+  "n_untracked": 113
+ },
+ "wall_time_sec": 27781.667490005493
+}

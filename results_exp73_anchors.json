@@ -1,0 +1,64 @@
+{
+ "component": "exp73 drift anchor -- doc 61 SS5.3, the BLOCKING gate",
+ "spec": "qnlp_private_docs/61_exp73_amplitude.md (REGISTERED 2026-08-28, orchestrator rulings 1-5 in the status header, BINDING over the body)",
+ "rule3_note": "the anchor writes its OWN results file (doc 61 SS16.5, 'separate by Rule 3'). No exp68/69/70/72 artefact is touched, read for writing, or overwritten.",
+ "dataset": "stories_exp69_QA.json",
+ "dataset_sha256": "2b85822b544571969fd40cab12b03a4ac256b08aee914d2b9643b856a6308c96",
+ "exp69_source": "results_exp69.json",
+ "exp69_arm": "R2-W",
+ "arm": "A0-W-T2",
+ "exp69_per_seed": [
+  0.7166666666666667,
+  0.77,
+  0.7466666666666667,
+  0.7266666666666667,
+  0.6866666666666666
+ ],
+ "exp69_mean": 0.7293333333333334,
+ "exp69_sd": 0.03139355914125629,
+ "exp73_per_seed": [
+  0.7166666666666667,
+  0.77,
+  0.7466666666666667,
+  0.7266666666666667,
+  0.6866666666666666
+ ],
+ "exp73_mean": 0.7293333333333333,
+ "exp73_sd": 0.03139355914125629,
+ "per_seed_delta": [
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0
+ ],
+ "max_abs_per_seed_delta": 0.0,
+ "mean_delta_vs_exp69": -1.1102230246251565e-16,
+ "registered_mean_doc61_SS5_3": 0.7293,
+ "mean_delta_vs_registered": 3.333333333332966e-05,
+ "tolerance": 0.002,
+ "bit_exact": true,
+ "per_seed_within_tolerance": true,
+ "mean_within_tolerance": true,
+ "anchor_replicates_committed": true,
+ "val_per_seed": [
+  0.7348484848484849,
+  0.7196969696969697,
+  0.7878787878787878,
+  0.7348484848484849,
+  0.7272727272727273
+ ],
+ "selected_epoch_per_seed": [
+  134,
+  124,
+  139,
+  17,
+  144
+ ],
+ "n_params": 264,
+ "wires": 4,
+ "wall_sec_total": 8776.751540184021,
+ "same_entry_point_doc61_SS7_2_8": "the anchor is trained by exp73's OWN `train()` with the amplitude intro and the amplitude block OFF -- `build_model` returns the COMMITTED `exp68_run.F2Model(verbs, seed, fm['theta_pc2'])` verbatim. A separate legacy path would make this bit-exactness prove nothing about the amplitude arms' pipeline.",
+ "honest_expectation": "BIT-EXACT, 5/5. Both runs are deterministic given their seeds and exp73 constructs the COMMITTED parent class verbatim with exp69's exact call order; the 0.002 tolerance exists only to absorb a documented float/BLAS platform difference and any non-zero delta is reported with its cause identified.",
+ "consequence_if_failed": "doc 61 SS5.3: THE EXP73 PIPELINE HAS DRIFTED, every amplitude number is a comparison against a moving baseline, and NOTHING ELSE IN THE RUN IS READ. SS5.3.1's floor-omission argument for the anchor is VOID along with the run. Hunt the build; interpret nothing."
+}

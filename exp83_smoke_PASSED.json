@@ -1,0 +1,7 @@
+{
+ "assertions_passed": true,
+ "smoke_file": "exp83_smoke.json",
+ "spec": "qnlp_private_docs/75_exp83_cost_shaping.md (REGISTERED 2026-09-16)",
+ "seed": 83000,
+ "n_smoke_epochs": 5
+}

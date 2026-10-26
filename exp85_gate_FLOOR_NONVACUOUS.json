@@ -1,0 +1,18 @@
+{
+ "gate": "GATE_FLOOR_NONVACUOUS",
+ "spec": "qnlp_private_docs/77_exp85_identity_T3.md (FROZEN 2026-09-17)",
+ "passed": true,
+ "floor_scramble_seed": 8599942,
+ "T": 3,
+ "n_items_total": 960,
+ "n_train": 528,
+ "n_val": 132,
+ "n_test": 300,
+ "mismatch_count": 458,
+ "mismatch_fraction": 0.47708333333333336,
+ "scramble_is_deterministic": true,
+ "train_val_test_use_same_scramble": true,
+ "note": "same id_to_label map applied to all T=3 splits before split-filtering; per exp79 vacuous-floor lesson",
+ "dtf_different_seed": "OK: designed-to-fail fired: different seeds give different scrambles",
+ "dtf_zero_mismatch": "OK: designed-to-fail fired: dtf_zero_mismatch: mismatch_count=458"
+}

@@ -1,0 +1,138 @@
+{
+ "component": "exp75 drift anchor -- doc 62 SS6.3, the BLOCKING gate",
+ "spec": "qnlp_private_docs/62_exp75_reuploading.md (REGISTERED 2026-08-28, orchestrator rulings 1-7 in the status header, BINDING over the body)",
+ "rule3_note": "the anchor writes its OWN results file (doc 62 SS19.5, 'its own file by Rule 3'). No exp68/69/70/72/73 artefact is touched, read for writing, or overwritten.",
+ "dataset": "stories_exp69_QA.json",
+ "dataset_sha256": "2b85822b544571969fd40cab12b03a4ac256b08aee914d2b9643b856a6308c96",
+ "exp69_source": "results_exp69.json",
+ "per_arm": {
+  "A0-A-T1": {
+   "exp69_source_arm": "R1-A",
+   "exp69_per_seed": [
+    0.9033333333333333,
+    0.9366666666666666,
+    0.9266666666666666,
+    0.92,
+    0.9266666666666666
+   ],
+   "exp69_mean": 0.9226666666666666,
+   "exp69_sd": 0.012337837015547824,
+   "exp75_per_seed": [
+    0.9033333333333333,
+    0.9366666666666666,
+    0.9266666666666666,
+    0.92,
+    0.9266666666666666
+   ],
+   "exp75_mean": 0.9226666666666666,
+   "exp75_sd": 0.012337837015547824,
+   "per_seed_delta": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "max_abs_per_seed_delta": 0.0,
+   "mean_delta_vs_exp69": 0.0,
+   "registered_mean_doc62_SS6_3": 0.9226667,
+   "mean_delta_vs_registered": -3.333333331578814e-08,
+   "bit_exact": true,
+   "per_seed_within_tolerance": true,
+   "mean_within_tolerance": true,
+   "replicates": true,
+   "val_per_seed": [
+    0.8636363636363636,
+    0.8560606060606061,
+    0.8560606060606061,
+    0.8409090909090909,
+    0.8484848484848485
+   ],
+   "train_per_seed": [
+    0.9109848484848485,
+    0.9185606060606061,
+    0.9147727272727273,
+    0.9166666666666666,
+    0.9223484848484849
+   ],
+   "selected_epoch_per_seed": [
+    5,
+    39,
+    12,
+    1,
+    29
+   ],
+   "n_params": 120,
+   "L": 1,
+   "wall_sec_total": 2358.810478925705
+  },
+  "A0-A-T2": {
+   "exp69_source_arm": "R2-A",
+   "exp69_per_seed": [
+    0.9166666666666666,
+    0.9466666666666667,
+    0.8733333333333333,
+    0.9133333333333333,
+    0.9433333333333334
+   ],
+   "exp69_mean": 0.9186666666666666,
+   "exp69_sd": 0.02949576240750527,
+   "exp75_per_seed": [
+    0.9166666666666666,
+    0.9466666666666667,
+    0.8733333333333333,
+    0.9133333333333333,
+    0.9433333333333334
+   ],
+   "exp75_mean": 0.9186666666666665,
+   "exp75_sd": 0.029495762407505267,
+   "per_seed_delta": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "max_abs_per_seed_delta": 0.0,
+   "mean_delta_vs_exp69": -1.1102230246251565e-16,
+   "registered_mean_doc62_SS6_3": 0.9186667,
+   "mean_delta_vs_registered": -3.333333342681044e-08,
+   "bit_exact": true,
+   "per_seed_within_tolerance": true,
+   "mean_within_tolerance": true,
+   "replicates": true,
+   "val_per_seed": [
+    0.8712121212121212,
+    0.8712121212121212,
+    0.8787878787878788,
+    0.8712121212121212,
+    0.8636363636363636
+   ],
+   "train_per_seed": [
+    0.9185606060606061,
+    0.9356060606060606,
+    0.8920454545454546,
+    0.9375,
+    0.9412878787878788
+   ],
+   "selected_epoch_per_seed": [
+    121,
+    121,
+    14,
+    99,
+    114
+   ],
+   "n_params": 120,
+   "L": 1,
+   "wall_sec_total": 3563.166669845581
+  }
+ },
+ "n_runs": 10,
+ "tolerance": 0.002,
+ "bit_exact_all": true,
+ "anchor_replicates_committed": true,
+ "both_baselines_anchored_doc62_SS6_3_1": "doc 61 SS5.3 anchored ONE arm; exp75 anchors TWO, because SS12.4's lift booleans read the best cell at each T against THAT T's committed mean and BOTH committed means are therefore load-bearing. The extra 5 runs cost ~0.58 h serial, the cheapest possible insurance on a criterion.",
+ "same_entry_point_doc62_SS8_3": "the anchors are trained by exp75's OWN `train()` with the re-uploading intro OFF (L = 1). `ReuploadModel(verbs, seed, 1)` constructs the committed `QuantumStoryModel('A3')` VERBATIM and carries NO interleave blocks, so the parameter list, its order, the RNG consumption and the forward gate sequence are bit-identical (asserted at smoke). A separate legacy path would make this bit-exactness prove nothing about the re-uploading arms' pipeline.",
+ "honest_expectation": "BIT-EXACT, 10/10. Both runs are deterministic given their seeds and exp75 constructs the COMMITTED model verbatim with exp69's exact call order; the 0.002 tolerance exists only to absorb a documented float/BLAS platform difference and any non-zero delta is reported with its cause identified. FIFTH ENFORCED USE; the first four returned bit-exact.",
+ "consequence_if_failed": "doc 62 SS6.3 / SS14 row 1: THE EXP75 PIPELINE HAS DRIFTED, every re-uploading number is a comparison against a moving baseline, and NOTHING ELSE IN THE RUN IS READ. SS6.3.2's floor-omission argument for the anchor is VOID along with the run. HUNT THE BUILD; INTERPRET NOTHING."
+}

@@ -1,0 +1,21 @@
+{
+  "gate_name": "SKELETON_COMPILATION_DETERMINISM",
+  "description": "Compiling the skeleton inventory from two different traversal orders of the analysis cache yields identical content (sorted SHA matches). DTF: unsorted serialization from two orders produces different SHAs, showing the sort step is necessary.",
+  "real_check": {
+    "n_skeletons": 8645,
+    "sha_forward": "e4eb9c4b420ab410",
+    "sha_reversed": "e4eb9c4b420ab410",
+    "sha_match": true,
+    "gate_passes": true,
+    "verdict": "PASS: inventory content is order-independent"
+  },
+  "dtf_leg": {
+    "description": "Unsorted serialization should differ by traversal order",
+    "dtf_sha_forward_prefix": "802faa999e77f040",
+    "dtf_sha_reversed_prefix": "56f141e12406c220",
+    "dtf_fires": true,
+    "verdict": "DTF_FIRES: unsorted sha differs — sort step validated"
+  },
+  "gate_passes": true,
+  "elapsed_s": 1.3
+}

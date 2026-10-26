@@ -1,0 +1,7 @@
+{
+  "seed": 44,
+  "n_train": 249879,
+  "n_heldout": 27765,
+  "train_sha": "14c5b0aabc64cd1a3f4f95e375cf4a8ae6d298db047c8cacb32bedb350661d86",
+  "heldout_sha": "a5d05aba9bcdf511917bcea7a618c6c0073b9be58857aca909454b73b30bc04e"
+}

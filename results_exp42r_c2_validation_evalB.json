@@ -1,0 +1,344 @@
+{
+ "experiment": "exp41r_validation",
+ "design_doc": "qnlp_private_docs/22_phase2_trained_story_qa_design.md SS2.3 + 65_exp40_42_revival.md SS2.3",
+ "timestamp": "2026-09-03T00:49:32.987392",
+ "python": "3.12.13",
+ "generator": "exp41_datagen.py",
+ "generator_seed": 4212,
+ "vocabulary_source": "exp41_story_generator.py (imported, not retyped)",
+ "dataset_file": "stories_exp42r_c2_evalB.json",
+ "dataset_sha256": "dcef8d95ff8b1787b2ad44b1c72f4051753e8e262dc13c359e7fb696a2c92dc7",
+ "dataset_hash_matches_meta": true,
+ "n_train": 2000,
+ "n_val": 500,
+ "n_test": 1500,
+ "n_test_per_split": {
+  "test_a": 500,
+  "test_b": 500,
+  "test_c": 500
+ },
+ "criteria": {
+  "accuracy_bound": 0.55,
+  "ci": "95% normal approx must contain 0.5",
+  "chi2_alpha": 0.05,
+  "n_test_per_split_min": 500
+ },
+ "V1_bag_of_embeddings": {
+  "test_accuracy": 0.5,
+  "ci95": [
+   0.4746965088047782,
+   0.5253034911952218
+  ],
+  "n_test": 1500,
+  "train_accuracy": 0.5,
+  "best_val_accuracy": 0.5,
+  "per_split_accuracy": {
+   "test_a": 0.5,
+   "test_b": 0.5,
+   "test_c": 0.5
+  },
+  "passed": true
+ },
+ "V2_ngram_logistic": {
+  "test_accuracy": 0.5046666666666667,
+  "ci95": [
+   0.47936427760306394,
+   0.5299690557302695
+  ],
+  "n_test": 1500,
+  "selected_C": 1.0,
+  "best_val_accuracy": 0.54,
+  "n_features": 1509,
+  "per_split_accuracy": {
+   "test_a": 0.502,
+   "test_b": 0.5,
+   "test_c": 0.512
+  },
+  "passed": true
+ },
+ "V3_balance_audit": {
+  "n_yes": 2000,
+  "n_no": 2000,
+  "classes_balanced_50_50": true,
+  "min_p": 1.0,
+  "n_tests": 64,
+  "verb_min_p": 1.0,
+  "referent_min_p": 1.0,
+  "template_min_p": 1.0,
+  "pro_drop_min_p": 1.0,
+  "passed": true
+ },
+ "V4_dedup": {
+  "n_verbatim_duplicates": 0,
+  "n_near_dup_groups": 0,
+  "near_dup_groups_sample": [],
+  "passed": true
+ },
+ "V5_single_sentence_oracle": {
+  "oracle": "sentence-level logistic over question-relative symbolic features + sentence/question 1-2 grams; item score aggregated over sentences; thresholds tuned on val only",
+  "selected_C": 0.1,
+  "n_features": 1551,
+  "n_test": 1500,
+  "test_accuracy_max_aggregation": 0.49866666666666665,
+  "ci95_max_aggregation": [
+   0.4733632654395735,
+   0.5239700678937598
+  ],
+  "test_accuracy_best_sentence": 0.49066666666666664,
+  "ci95_best_sentence": [
+   0.46536758428600106,
+   0.5159657490473322
+  ],
+  "val_accuracy_max_aggregation": 0.57,
+  "val_accuracy_best_sentence": 0.6,
+  "per_split_accuracy_max_aggregation": {
+   "test_a": 0.5,
+   "test_b": 0.498,
+   "test_c": 0.498
+  },
+  "descriptive_mean_aggregation": {
+   "note": "mean over sentences can see per-pattern COUNTS, which a strict 'sees ONE sentence' reading does not license; recorded, NOT gating",
+   "test_accuracy": 0.5,
+   "ci95": [
+    0.4746965088047782,
+    0.5253034911952218
+   ],
+   "val_accuracy": 0.596
+  },
+  "passed": true
+ },
+ "V5_august_orderblind_descriptive": {
+  "test_accuracy_best_sentence": 0.5,
+  "ci95_best_sentence": [
+   0.4746965088047782,
+   0.5253034911952218
+  ],
+  "test_accuracy_max_yes": 0.5,
+  "ci95_max_yes": [
+   0.4746965088047782,
+   0.5253034911952218
+  ],
+  "n_test": 1500,
+  "sentence_level_val_accuracy": 0.5,
+  "passed": true,
+  "note": "the August order-blind mean-pooled oracle; DESCRIPTIVE ONLY, non-gating -- it is bag-identical-blind and so returns 0.5 on any dataset in this family"
+ },
+ "v1_passed": true,
+ "v2_passed": true,
+ "v3_passed": true,
+ "v4_passed": true,
+ "v5_passed": true,
+ "vsuite_all_passed": true,
+ "smoke_battery": {
+  "purpose": "doc 65 SS2.3 designed-to-fail builds; separate aggregation, never mixed into the five verdict booleans; a build that PASSES indicts the validator, not the generator",
+  "builds": {
+   "qleak": {
+    "dataset_file": "stories_exp41r_sab_qleak.json",
+    "dataset_sha256": "8bba725152be1d9675523e0a671a24f3c43879503f555a307d79c3ee88c668b4",
+    "n_items": 4000,
+    "must_fail": "V2",
+    "fired": true,
+    "results": {
+     "V1_bag_of_embeddings": {
+      "test_accuracy": 0.9933333333333333,
+      "ci95": [
+       0.9892150870327105,
+       0.997451579633956
+      ],
+      "n_test": 1500,
+      "train_accuracy": 1.0,
+      "best_val_accuracy": 1.0,
+      "per_split_accuracy": {
+       "test_a": 0.984,
+       "test_b": 1.0,
+       "test_c": 0.996
+      },
+      "passed": false
+     },
+     "V2_ngram_logistic": {
+      "test_accuracy": 1.0,
+      "ci95": [
+       0.9999999493930176,
+       1.0000000506069824
+      ],
+      "n_test": 1500,
+      "selected_C": 0.1,
+      "best_val_accuracy": 1.0,
+      "n_features": 2191,
+      "per_split_accuracy": {
+       "test_a": 1.0,
+       "test_b": 1.0,
+       "test_c": 1.0
+      },
+      "passed": false
+     },
+     "V3_balance_audit": {
+      "n_yes": 2000,
+      "n_no": 2000,
+      "classes_balanced_50_50": true,
+      "min_p": 1.0,
+      "n_tests": 64,
+      "verb_min_p": 1.0,
+      "referent_min_p": 1.0,
+      "template_min_p": 1.0,
+      "pro_drop_min_p": 1.0,
+      "passed": true
+     }
+    }
+   },
+   "singlehop": {
+    "dataset_file": "stories_exp41r_sab_singlehop.json",
+    "dataset_sha256": "419f91bd50e202ae0d46dc672f51164a8cca44c5b8cbb609d3887a8a5987d8e7",
+    "n_items": 4000,
+    "must_fail": "V5",
+    "fired": true,
+    "results": {
+     "V2_ngram_logistic": {
+      "test_accuracy": 0.5046666666666667,
+      "ci95": [
+       0.47936427760306394,
+       0.5299690557302695
+      ],
+      "n_test": 1500,
+      "selected_C": 10.0,
+      "best_val_accuracy": 0.498,
+      "n_features": 2130,
+      "per_split_accuracy": {
+       "test_a": 0.488,
+       "test_b": 0.528,
+       "test_c": 0.498
+      },
+      "passed": true
+     },
+     "V5_single_sentence_oracle": {
+      "oracle": "sentence-level logistic over question-relative symbolic features + sentence/question 1-2 grams; item score aggregated over sentences; thresholds tuned on val only",
+      "selected_C": 0.1,
+      "n_features": 2180,
+      "n_test": 1500,
+      "test_accuracy_max_aggregation": 0.9366666666666666,
+      "ci95_max_aggregation": [
+       0.9243407522614013,
+       0.948992581071932
+      ],
+      "test_accuracy_best_sentence": 1.0,
+      "ci95_best_sentence": [
+       0.9999999493930176,
+       1.0000000506069824
+      ],
+      "val_accuracy_max_aggregation": 0.582,
+      "val_accuracy_best_sentence": 0.604,
+      "per_split_accuracy_max_aggregation": {
+       "test_a": 0.908,
+       "test_b": 0.934,
+       "test_c": 0.968
+      },
+      "descriptive_mean_aggregation": {
+       "note": "mean over sentences can see per-pattern COUNTS, which a strict 'sees ONE sentence' reading does not license; recorded, NOT gating",
+       "test_accuracy": 0.9306666666666666,
+       "ci95": [
+        0.9178114748416001,
+        0.9435218584917332
+       ],
+       "val_accuracy": 0.578
+      },
+      "passed": false
+     },
+     "V5_august_orderblind_descriptive": {
+      "test_accuracy_best_sentence": 0.5,
+      "ci95_best_sentence": [
+       0.4746965088047782,
+       0.5253034911952218
+      ],
+      "test_accuracy_max_yes": 0.5,
+      "ci95_max_yes": [
+       0.4746965088047782,
+       0.5253034911952218
+      ],
+      "n_test": 1500,
+      "sentence_level_val_accuracy": 0.5,
+      "passed": true,
+      "note": "the August order-blind mean-pooled oracle; DESCRIPTIVE ONLY, non-gating -- it is bag-identical-blind and so returns 0.5 on any dataset in this family"
+     }
+    }
+   },
+   "nodistract": {
+    "dataset_file": "stories_exp41r_sab_nodistract.json",
+    "dataset_sha256": "d03bbd72e87d2132a616e8f4671e71ba45bbdc941b957ac3fcd057f1f6fc8e44",
+    "n_items": 4000,
+    "must_fail": "V5",
+    "fired": true,
+    "results": {
+     "V2_ngram_logistic": {
+      "test_accuracy": 0.5126666666666667,
+      "ci95": [
+       0.48737129638378396,
+       0.5379620369495495
+      ],
+      "n_test": 1500,
+      "selected_C": 0.1,
+      "best_val_accuracy": 0.5,
+      "n_features": 2127,
+      "per_split_accuracy": {
+       "test_a": 0.53,
+       "test_b": 0.496,
+       "test_c": 0.512
+      },
+      "passed": true
+     },
+     "V5_single_sentence_oracle": {
+      "oracle": "sentence-level logistic over question-relative symbolic features + sentence/question 1-2 grams; item score aggregated over sentences; thresholds tuned on val only",
+      "selected_C": 0.1,
+      "n_features": 2177,
+      "n_test": 1500,
+      "test_accuracy_max_aggregation": 0.8766666666666667,
+      "ci95_max_aggregation": [
+       0.8600261072031372,
+       0.8933072261301962
+      ],
+      "test_accuracy_best_sentence": 0.9026666666666666,
+      "ci95_best_sentence": [
+       0.8876661940380631,
+       0.9176671392952701
+      ],
+      "val_accuracy_max_aggregation": 0.874,
+      "val_accuracy_best_sentence": 0.906,
+      "per_split_accuracy_max_aggregation": {
+       "test_a": 0.874,
+       "test_b": 0.878,
+       "test_c": 0.878
+      },
+      "descriptive_mean_aggregation": {
+       "note": "mean over sentences can see per-pattern COUNTS, which a strict 'sees ONE sentence' reading does not license; recorded, NOT gating",
+       "test_accuracy": 0.858,
+       "ci95": [
+        0.8403356257286028,
+        0.8756643742713972
+       ],
+       "val_accuracy": 0.9
+      },
+      "passed": false
+     },
+     "V5_august_orderblind_descriptive": {
+      "test_accuracy_best_sentence": 0.5,
+      "ci95_best_sentence": [
+       0.4746965088047782,
+       0.5253034911952218
+      ],
+      "test_accuracy_max_yes": 0.5,
+      "ci95_max_yes": [
+       0.4746965088047782,
+       0.5253034911952218
+      ],
+      "n_test": 1500,
+      "sentence_level_val_accuracy": 0.5,
+      "passed": true,
+      "note": "the August order-blind mean-pooled oracle; DESCRIPTIVE ONLY, non-gating -- it is bag-identical-blind and so returns 0.5 on any dataset in this family"
+     }
+    }
+   }
+  },
+  "all_fired": true
+ },
+ "smoke_battery_all_fired": true,
+ "ready_for_training": true
+}

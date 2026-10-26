@@ -1,0 +1,29 @@
+{
+  "stages": [
+    {
+      "seed": 42,
+      "n_tmpl": 4292,
+      "fused_opt_size": 24000,
+      "fused_noback_size": 16000,
+      "fused_opt_vocab": 32000,
+      "fused_noback_vocab": 32000
+    },
+    {
+      "seed": 43,
+      "n_tmpl": 4290,
+      "fused_opt_size": 24000,
+      "fused_noback_size": 16000,
+      "fused_opt_vocab": 32000,
+      "fused_noback_vocab": 32000
+    },
+    {
+      "seed": 44,
+      "n_tmpl": 4289,
+      "fused_opt_size": 24000,
+      "fused_noback_size": 16000,
+      "fused_opt_vocab": 32000,
+      "fused_noback_vocab": 32000
+    }
+  ],
+  "elapsed_s": 172.6
+}

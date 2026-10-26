@@ -1,0 +1,17 @@
+{
+ "gate": "GATE_FLOOR_NONVACUOUS",
+ "spec": "qnlp_private_docs/75_exp83_cost_shaping.md (REGISTERED 2026-09-16)",
+ "passed": true,
+ "floor_scramble_seed": 8399942,
+ "n_items_total": 960,
+ "n_train": 528,
+ "n_val": 132,
+ "n_test": 300,
+ "mismatch_count": 472,
+ "mismatch_fraction": 0.49166666666666664,
+ "scramble_is_deterministic": true,
+ "train_val_test_use_same_scramble": true,
+ "note": "same id_to_label map applied to all splits before split-filtering; train and eval use identical scrambled labels",
+ "dtf_different_seed": "OK: designed-to-fail fired: different seeds give different scrambles",
+ "dtf_zero_mismatch": "OK: designed-to-fail fired: dtf_zero_mismatch: mismatch_count=472 (should be 0 to trip this)"
+}

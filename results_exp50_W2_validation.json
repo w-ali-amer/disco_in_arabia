@@ -1,0 +1,122 @@
+{
+ "experiment": "exp50 rung validation (doc 34 SS4 leak gate)",
+ "design_doc": "qnlp_private_docs/34_exp50_wazn_stage_c.md (commit 1bd6f01, FROZEN)",
+ "rung": "W2",
+ "platform": "macOS-26.5.2-arm64-arm-64bit",
+ "python": "3.12.13",
+ "torch": "2.13.0",
+ "env_note": "scipy 1.18.0 and scikit-learn 1.9.0 were installed into the Mac env on 2026-08-13 for this gate: validate_exp41_data imports chi2_contingency and CountVectorizer. Additive only -- torch 2.13.0 and numpy 2.5.1 unchanged. The exp44/45 training line still imports torch alone.",
+ "dataset_sha256": "572148a42a5c73d0199978aee9ff4c1615e41a3e5998b900e4f8ebec4dfa26d3",
+ "sign_off": {
+  "date": null,
+  "reviewer": "native-speaker reviewer (project owner)",
+  "verdict": "PENDING -- doc 34 SS3 sign-off gate not yet recorded. No exp50 number may be quoted until it is; a rejected verb forces regeneration under a new seed and discards all runs.",
+  "criteria": "(i) unambiguously of the stated wazn; (ii) transitive with a DIRECT human object, no preposition"
+ },
+ "wazn_groups": {
+  "I": [
+   "نصر",
+   "طرد",
+   "حرس",
+   "سمع"
+  ],
+  "II": [
+   "وظّف",
+   "عيّن",
+   "كرّم",
+   "نبّه"
+  ],
+  "III": [
+   "شاهد",
+   "خاطب",
+   "سابق",
+   "واجه"
+  ]
+ },
+ "n_train": 1200,
+ "n_val": 300,
+ "n_test": 300,
+ "note_n_test": "rung size fixed by doc 34 SS2 (300 < the doc-22 main-dataset 500 minimum; CI bounds recorded at n=300)",
+ "oov_note": "V1/V5 build vocabulary from this dataset's surface tokens and train their own embeddings, so the Form II and Form III surface forms introduced here carry no pretrained-embedding OOV exposure.",
+ "V1_bag_of_embeddings": {
+  "test_accuracy": 0.5,
+  "ci95": [
+   0.4434196736194167,
+   0.5565803263805833
+  ],
+  "n_test": 300,
+  "train_accuracy": 0.5,
+  "best_val_accuracy": 0.5,
+  "per_split_accuracy": {
+   "test_a": 0.52,
+   "test_b": 0.52,
+   "test_c": 0.46
+  },
+  "passed": true,
+  "per_split_note": "single rung test split round-robined over test_a/b/c; thirds are arbitrary partitions"
+ },
+ "V2_ngram_logistic": {
+  "test_accuracy": 0.52,
+  "ci95": [
+   0.4634649560007247,
+   0.5765350439992754
+  ],
+  "n_test": 300,
+  "selected_C": 10.0,
+  "best_val_accuracy": 0.5133333333333333,
+  "n_features": 1208,
+  "per_split_accuracy": {
+   "test_a": 0.58,
+   "test_b": 0.44,
+   "test_c": 0.54
+  },
+  "passed": true,
+  "per_split_note": "single rung test split round-robined over test_a/b/c; thirds are arbitrary partitions"
+ },
+ "V3_balance_audit": {
+  "n_yes": 900,
+  "n_no": 900,
+  "classes_balanced_50_50": true,
+  "min_p": 1.0,
+  "n_tests": 41,
+  "verb_min_p": 1.0,
+  "referent_min_p": 1.0,
+  "template_min_p": 1.0,
+  "pro_drop_min_p": 1.0,
+  "passed": true
+ },
+ "V4_dedup": {
+  "n_verbatim_duplicates": 0,
+  "n_near_dup_groups": 0,
+  "near_dup_groups_sample": [],
+  "passed": true
+ },
+ "V5_single_sentence_oracle": {
+  "mode": "na_by_design",
+  "note": "W1 is one-hop by construction: every item IS single-sentence-answerable, so the oracle SHOULD succeed. V5 is recorded, not gated -- identical treatment to L1 (doc 23 V-suite 'for the record').",
+  "full_test": {
+   "test_accuracy_best_sentence": 0.5,
+   "ci95_best_sentence": [
+    0.4434196736194167,
+    0.5565803263805833
+   ],
+   "test_accuracy_max_yes": 0.5,
+   "ci95_max_yes": [
+    0.4434196736194167,
+    0.5565803263805833
+   ],
+   "n_test": 300,
+   "sentence_level_val_accuracy": 0.5,
+   "passed": true
+  },
+  "gated": false,
+  "passed": null
+ },
+ "v1_passed": true,
+ "v2_passed": true,
+ "v3_passed": true,
+ "v4_passed": true,
+ "all_passed_v1_to_v4": true,
+ "leak_gate_passed": true,
+ "consequence_if_failed": "doc 34 SS5: exp46 is VOID and reported as void with the failing check named; no clustering number is quoted anywhere."
+}

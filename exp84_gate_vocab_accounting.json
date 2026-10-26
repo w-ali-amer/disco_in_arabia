@@ -1,0 +1,23 @@
+{
+  "gate_id": "exp84_gate_vocab_accounting",
+  "description": "FUSED vocab allocation sums to exactly 32,000",
+  "real_check": {
+    "n_special": 3,
+    "n_tmpl": 3993,
+    "n_fused": 8000,
+    "n_bpe_budget": 20004,
+    "total": 32000,
+    "target": 32000,
+    "gate_fires": true,
+    "verdict": "PASS: vocab accounting exact"
+  },
+  "dtf_leg": {
+    "description": "Designed-to-fail: n_fused=N_FUSED+1 overflows budget",
+    "n_fused_injected": 8001,
+    "n_bpe_budget_computed": 20003,
+    "total_computed": 32000,
+    "budget_negative": false,
+    "dtf_gate_fires": false,
+    "verdict": "DTF_DOES_NOT_FIRE: overflow undetected — UNEXPECTED"
+  }
+}

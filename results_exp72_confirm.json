@@ -1,0 +1,867 @@
+{
+ "experiment": "exp72 CONFIRM DRAW -- doc 58 SS16.3 step 11 on the one first-draw positive, rescue_partial(I1, R-identity)",
+ "spec": "qnlp_private_docs/58_exp72_rescue_rung.md (REGISTERED 2026-08-27, orchestrator rulings 1-6 in the status header, SS18 post-registration note on I2)",
+ "spec_commit_line": "0fc70b2 doc 58 SS19: exp72 reports -- identity-init partial rescue of I1 (floors clean, mechanism partially restored); directional call missed honestly; I2 resists all four; confirm ordered; reopening consequence registered",
+ "aggregator": "exp72_confirm_aggregate.py -- the ONLY writer of this file",
+ "standing_reason_doc47_SS18": "A HEADLINE THAT SURVIVED ONE DRAW DIED ON THE SECOND. doc 58 SS16.3 step 11 makes the confirm draw MANDATORY on any positive, with ALL ARMS OF THE AFFECTED INSTANCE present (its anchor and all four rescues) plus SS16.2's retrained donor.",
+ "platform": "macOS-26.5.2-arm64-arm-64bit",
+ "python": "3.12.13",
+ "torch": "2.13.0",
+ "numpy": "2.5.1",
+ "sd_convention": "sample sd, ddof = 1",
+ "dataset_decision_doc58_SS16_2": {
+  "decision": "REUSE the committed seed+1000 draw; DO NOT regenerate",
+  "path": "stories_exp70_confirm_QA.json",
+  "sha256": "59e6ada8a98b8917a1bd8e927d09249132a9765f7002e40fceb807a4bd51cd7c",
+  "generator_seed": 70000,
+  "first_draw_seed": 69000,
+  "seed_offset": 1000,
+  "is_confirm_draw": true,
+  "first_draw_sha256": "2b85822b544571969fd40cab12b03a4ac256b08aee914d2b9643b856a6308c96",
+  "differs_from_first_draw": true,
+  "vsuite": "results_exp70_confirm_WN_validation.json",
+  "vsuite_kill_gate_passed": true,
+  "vsuite_validates_this_sha": true,
+  "verb_inventory_identical_to_first_draw": true,
+  "human_inventory_identical_to_first_draw": true,
+  "split_counts": {
+   "1": {
+    "train": 528,
+    "val": 132,
+    "test": 300
+   },
+   "2": {
+    "train": 528,
+    "val": 132,
+    "test": 300
+   }
+  },
+  "verb_slots_first_draw": {
+   "V_A": [
+    "سأل",
+    "ضرب",
+    "عالج"
+   ],
+   "V_B": [
+    "حمل",
+    "رفع",
+    "ساعد"
+   ],
+   "rule": "the 6-verb exp51 inventory split 3/3 into DISJOINT slots at the registered generator seed; event 1 draws from V_A, event 2 from V_B (doc 55 SS4.2). Disjointness is what makes the verb-indexed query well-posed and is what costs exp69 any claim about discourse-position resolution (doc 55 SS11)."
+  },
+  "verb_slots_confirm_draw": {
+   "V_A": [
+    "رفع",
+    "ساعد",
+    "عالج"
+   ],
+   "V_B": [
+    "حمل",
+    "سأل",
+    "ضرب"
+   ],
+   "rule": "the 6-verb exp51 inventory split 3/3 into DISJOINT slots at the registered generator seed; event 1 draws from V_A, event 2 from V_B (doc 55 SS4.2). Disjointness is what makes the verb-indexed query well-posed and is what costs exp69 any claim about discourse-position resolution (doc 55 SS11)."
+  },
+  "argument": "doc 58 SS16.2 defines the confirm draw as a re-run of the COMMITTED exp69_datagen.py, UNMODIFIED, at generator seed + 1000. exp69_datagen.py carries SEED = 69000 and documents its own confirm invocation as `--seed 70000`. This dataset IS that object (meta.seed = 70000, is_confirm_draw = true, same design doc, same verb and noun inventories, same 528/132/300 splits at both T), it was produced by exp70's confirm draw, and its FULL V-SUITE WAS RE-RUN ON IT AND PASSED -- which is exactly what SS16.2 requires. The generator is deterministic, so a third invocation at the same seed produces a BYTE-IDENTICAL file: regenerating would add a duplicate artefact, put Rule 3 at risk, and change nothing. The sha and the V-suite verdict are ASSERTED here rather than trusted, which is doc 58 SS7.4's discipline applied to the fresh draw. doc 50 SS5.2's native-speaker gate stays CLOSED and that is asserted, not assumed: no new surface template, no new noun, no new verb.",
+  "one_thing_that_changes": "the generator RE-DRAWS the V_A / V_B verb split, so R-layerwise's event-1 / event-2 partition is NOT the first draw's. exp72_run.verb_groups reads meta.verb_slots from the dataset being run, so the partition follows the draw automatically; the 99/99/66 arithmetic and the 165/99/264 stage counts are re-asserted on this draw at smoke."
+ },
+ "comparator_target_doc58_SS3": {
+  "comparator": 0.9879999999999999,
+  "sd": 0.010954451150103333,
+  "per_seed": [
+   1.0,
+   0.98,
+   0.98,
+   1.0,
+   0.98
+  ],
+  "feature_dim": 81,
+  "source": "results_exp70_confirm.json :: comparator.arms['A0-W-T2']['class']",
+  "first_draw_comparator": 1.0,
+  "note": "exp72 runs NO comparator on either draw (doc 58 SS3). This value is imported from the committed exp70 confirm results and asserted. It is 0.9880 on this draw against 1.0000 on the first, so the bars MOVE and are recomputed from the registered formulas rather than carried over."
+ },
+ "bars_recomputed_doc58_SS9_2": {
+  "baseline": 0.6993333333333333,
+  "comparator": 0.9879999999999999,
+  "gap": 0.2886666666666666,
+  "rescue_full_bar": 0.9679999999999999,
+  "rescue_partial_bar": 0.8436666666666666,
+  "formulas": "rescue_full  >= comparator - 0.02;  rescue_partial >= baseline + 0.50 * gap. FROZEN in doc 58 SS9.2. The FORMULAS are the registered object; the numbers they consume are the draw's own baseline and the draw's own imported comparator.",
+  "first_draw_bars": {
+   "baseline": 0.7293333333333334,
+   "comparator": 1.0,
+   "rescue_full_bar": 0.98,
+   "rescue_partial_bar": 0.8646666666666667
+  }
+ },
+ "instance": {
+  "id": "I1",
+  "arm": "A0-W-T2",
+  "first_draw_arm": "exp69 R2-W / exp72 A0-W-T2",
+  "encoding": "F2 product register, old map (p+1)pi, 4 wires"
+ },
+ "anchor_baseline_on_this_draw": {
+  "mean": 0.6993333333333333,
+  "sd": 0.028616234708446334,
+  "per_seed": [
+   0.73,
+   0.6833333333333333,
+   0.6933333333333334,
+   0.6633333333333333,
+   0.7266666666666667
+  ],
+  "seeds": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "n_seeds": 5,
+  "val_per_seed": [
+   0.7651515151515151,
+   0.7348484848484849,
+   0.7196969696969697,
+   0.75,
+   0.7272727272727273
+  ],
+  "train_per_seed": [
+   0.9375,
+   0.8617424242424242,
+   0.8977272727272727,
+   0.8181818181818182,
+   0.9545454545454546
+  ],
+  "selected_epoch_per_seed": [
+   18,
+   71,
+   59,
+   47,
+   104
+  ],
+  "selected_stage_per_seed": [
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "val_minus_heldout_per_seed": [
+   0.035151515151515156,
+   0.051515151515151514,
+   0.026363636363636367,
+   0.08666666666666667,
+   0.00060606060606061
+  ],
+  "mean_val_minus_heldout": 0.04006060606060606,
+  "max_epochs": 150,
+  "n_params": 264,
+  "wires": 4,
+  "n_test": 300,
+  "wall_sec_total": 10212.540536642075,
+  "ckpt_sha256": [
+   "435147b39164ee68adccc542daafa9a934626f412a32d8c6d8850f67c4f720d0",
+   "0e55b0a09d20e7d3c656e271be20f03ce48aba7542f881c7c354f4802f68a93e",
+   "8ee7eb7aea34e8abdfa53b208f1806f80f8d3ec27ad29699470d0602ffd2ed21",
+   "d6931b19eefee5592d4d2d9029546fbd57b35980fff937983f9d7b0f2c97243a",
+   "084c82f10e845225a38308a7c5f8849c29b7b8059ba112ccda13d9be9e0b1f9f"
+  ]
+ },
+ "anchor_role_and_codepath_parity": {
+  "per_arm": {
+   "A0-W-T1": {
+    "exp70_confirm_per_seed": [
+     0.97,
+     0.9733333333333334,
+     0.96,
+     0.9666666666666667,
+     0.97
+    ],
+    "exp72_confirm_per_seed": [
+     0.97,
+     0.9733333333333334,
+     0.96,
+     0.9666666666666667,
+     0.97
+    ],
+    "per_seed_delta": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "max_abs_per_seed_delta": 0.0,
+    "bit_exact_heldout": true,
+    "checkpoint_tensors_identical": true,
+    "max_abs_parameter_diff": 0.0,
+    "reference": "results_exp70_confirm.json :: arms['A0-W-T1']"
+   },
+   "A0-W-T2": {
+    "exp70_confirm_per_seed": [
+     0.73,
+     0.6833333333333333,
+     0.6933333333333334,
+     0.6633333333333333,
+     0.7266666666666667
+    ],
+    "exp72_confirm_per_seed": [
+     0.73,
+     0.6833333333333333,
+     0.6933333333333334,
+     0.6633333333333333,
+     0.7266666666666667
+    ],
+    "per_seed_delta": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "max_abs_per_seed_delta": 0.0,
+    "bit_exact_heldout": true,
+    "checkpoint_tensors_identical": true,
+    "max_abs_parameter_diff": 0.0,
+    "reference": "results_exp70_confirm.json :: arms['A0-W-T2']"
+   }
+  },
+  "all_bit_exact": true,
+  "role_on_a_fresh_draw": "doc 58 SS5.1's |delta| <= 0.002 ANCHOR GATE IS INAPPLICABLE HERE, not skipped, and the difference matters: it compares per-seed accuracies against committed measurements ON THE FIRST DRAW'S OWN ITEMS, and these are different items. On this draw A0-W-T2 is a BASELINE ARM (doc 56 SS6.1's reconciliation, inherited by doc 58 SS16.2). What IS available is stronger in kind and is asserted instead: exp70's confirm draw already measured BOTH arms on THESE items at the committed recipe and the same five seeds, so exp72's re-run through its own codepath must reproduce them BIT-EXACTLY -- and does, including parameter-level identity of every selected checkpoint.",
+  "file_sha_note": "the .pt FILE shas differ between the two runs while the TENSORS are identical. That is a zip-container artefact: torch.save records the archive member name, and the exp72 checkpoints carry longer labels (C_I1_donor_s4 vs A0-W-T1_s4), so the container bytes differ by the name length alone. The load-bearing comparison is parameter-level identity, which is exact."
+ },
+ "retrained_donor_doc58_SS16_2": {
+  "component": "exp72 confirm draw -- doc 58 SS16.2's RETRAINED DONOR and its selection",
+  "spec": "qnlp_private_docs/58_exp72_rescue_rung.md (REGISTERED 2026-08-27, orchestrator rulings 1-6 in the status header, SS18 post-registration note on I2)",
+  "spec_commit_line": "0fc70b2 doc 58 SS19: exp72 reports -- identity-init partial rescue of I1 (floors clean, mechanism partially restored); directional call missed honestly; I2 resists all four; confirm ordered; reopening consequence registered",
+  "why_retrained": "doc 58 SS16.2, registered because it is easy to get wrong: the committed donor R1-W_s0 was trained on the FIRST draw's train split. Carrying it into a fresh-draw confirm would initialise the confirm run from a model fitted to A DIFFERENT DRAW'S ITEMS. The T = 1 donor arm is therefore re-run at the committed T = 1 recipe on the confirm draw's own T = 1 items and re-selected by the same val rule and the same tie-break.",
+  "donor_arm": "A0-W-T1",
+  "recipe": "committed T = 1: 150 epochs, Adam, lr 0.02, batch 8, best-val selection",
+  "selection": {
+   "val_per_seed": [
+    0.9545454545454546,
+    0.9545454545454546,
+    0.9621212121212122,
+    0.9545454545454546,
+    0.9696969696969697
+   ],
+   "max_val": 0.9696969696969697,
+   "tied_seeds": [
+    4
+   ],
+   "selected_seed": 4,
+   "tie_break": "lowest seed index among the val maxima (doc 58 SS6.4.1, orchestrator ruling 3)",
+   "selection_is_on_val_never_heldout": true
+  },
+  "selected_ckpt": "exp72_confirm_ckpt/C_I1_donor_s4.pt",
+  "selected_ckpt_sha256": "6d66416f4661aac5ecf75a919a4ae60336d483ffab931548dfd7ad0fc5bed52e",
+  "selected_val": 0.9696969696969697,
+  "selected_heldout_reported_not_used": 0.97,
+  "per_seed_heldout": [
+   0.97,
+   0.9733333333333334,
+   0.96,
+   0.9666666666666667,
+   0.97
+  ],
+  "first_draw_donor": {
+   "ckpt": "exp69_ckpt/R1-W_s0.pt",
+   "seed": 0,
+   "val": 0.9545454545454546,
+   "note": "NOT USED on this draw (SS16.2)"
+  },
+  "codepath_parity_on_the_fresh_draw": {
+   "reference": "results_exp70_confirm.json :: arms['A0-W-T1']",
+   "exp70_confirm_per_seed": [
+    0.97,
+    0.9733333333333334,
+    0.96,
+    0.9666666666666667,
+    0.97
+   ],
+   "exp72_confirm_per_seed": [
+    0.97,
+    0.9733333333333334,
+    0.96,
+    0.9666666666666667,
+    0.97
+   ],
+   "per_seed_delta": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "max_abs_per_seed_delta": 0.0,
+   "bit_exact": true,
+   "ckpt_sha_matches": [
+    false,
+    false,
+    false,
+    false,
+    false
+   ],
+   "all_ckpt_shas_match": false,
+   "note": "doc 58 SS5.1's |delta| <= 0.002 gate is INAPPLICABLE on a fresh draw -- it compares against measurements on the FIRST draw's items. This is the check that IS available and it is stronger in kind: exp70's confirm draw already ran this arm on THESE items at the committed recipe and the same five seeds, so exp72's re-run must reproduce it BIT-EXACTLY, checkpoint shas included."
+  },
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "torch": "2.13.0",
+  "git_note": {
+   "repo_head": "a763ea3 D4 audit session prepared: 50-noun random sample (registered seed 4900) for the user's sample-audit gate; veto applies to the full 600",
+   "exp72_paths": [
+    "?? exp72_ckpt/",
+    "?? exp72_confirm_ckpt/",
+    "?? exp72_confirm_run.py",
+    "?? results_exp72_confirm_smoke_validation.json"
+   ],
+   "n_untracked": 253,
+   "rule3_note": "exp72 writes ONLY exp72_ckpt/ and results_exp72* (through fresh_results_path). No exp68 / exp69 / exp70 artefact is modified; the donor checkpoints are READ-ONLY and sha-asserted before use."
+  }
+ },
+ "arms": {
+  "R-budget": {
+   "mean": 0.762,
+   "sd": 0.04862555341016127,
+   "per_seed": [
+    0.7333333333333333,
+    0.7333333333333333,
+    0.76,
+    0.7366666666666667,
+    0.8466666666666667
+   ],
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_seeds": 5,
+   "val_per_seed": [
+    0.7954545454545454,
+    0.7727272727272727,
+    0.7424242424242424,
+    0.7954545454545454,
+    0.8636363636363636
+   ],
+   "train_per_seed": [
+    0.9166666666666666,
+    0.9829545454545454,
+    0.9450757575757576,
+    0.9867424242424242,
+    0.9924242424242424
+   ],
+   "selected_epoch_per_seed": [
+    213,
+    228,
+    148,
+    295,
+    367
+   ],
+   "selected_stage_per_seed": [
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "val_minus_heldout_per_seed": [
+    0.06212121212121213,
+    0.039393939393939426,
+    -0.017575757575757578,
+    0.05878787878787872,
+    0.016969696969696968
+   ],
+   "mean_val_minus_heldout": 0.031939393939393934,
+   "max_epochs": 450,
+   "n_params": 264,
+   "wires": 4,
+   "n_test": 300,
+   "wall_sec_total": 18190.931237220764,
+   "ckpt_sha256": [
+    "2f1ef12f74909d0983080282906019340bf7e0914736bbe35ddfc021bd8e0fce",
+    "7e154e6496fcec2770e6c862ac0c978ea25b1f7abfcb03436495a67e3c6de701",
+    "623b9f88168670a6d39d3d0f491ffcc8c6a05105c10cd0c71b3fe802d125855c",
+    "77b7e85aa6584bb6caea609a6b08d4bfeae66fae586d950c9d50dd6f1368c627",
+    "3bc9ef425c5f0443f44e37d7dba605b03cadd26d1b29316fb498babf8d8b356d"
+   ]
+  },
+  "R-identity": {
+   "mean": 0.8313333333333333,
+   "sd": 0.043754364861627745,
+   "per_seed": [
+    0.8666666666666667,
+    0.79,
+    0.7833333333333333,
+    0.8366666666666667,
+    0.88
+   ],
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_seeds": 5,
+   "val_per_seed": [
+    0.8257575757575758,
+    0.8106060606060606,
+    0.8181818181818182,
+    0.8333333333333334,
+    0.8333333333333334
+   ],
+   "train_per_seed": [
+    0.9204545454545454,
+    0.9071969696969697,
+    0.9450757575757576,
+    0.9450757575757576,
+    0.9261363636363636
+   ],
+   "selected_epoch_per_seed": [
+    35,
+    43,
+    149,
+    54,
+    49
+   ],
+   "selected_stage_per_seed": [
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "val_minus_heldout_per_seed": [
+    -0.040909090909090895,
+    0.020606060606060517,
+    0.034848484848484906,
+    -0.0033333333333332993,
+    -0.046666666666666634
+   ],
+   "mean_val_minus_heldout": -0.007090909090909081,
+   "max_epochs": 150,
+   "n_params": 264,
+   "wires": 4,
+   "n_test": 300,
+   "wall_sec_total": 6211.803800106049,
+   "ckpt_sha256": [
+    "fc8d31442a1d9aa32ebca69188f28df99315ada93f52c030a4adad552cf7671d",
+    "4c2b558c0ce31c8831403820847f006310e0e4bd55ee8c8baa88539a20b5815d",
+    "b5477ea17000b6edcd4ba93d5e756ed7e1f1e7c2fcec155ba1b003f2f715523b",
+    "1092ad9b40414cd47cc1dfaed2e6ccfd3e2cb1f0101c8e41e75a58115fc78dce",
+    "29e6a6188ecdcfedf06212411752034173fd9731314e6f9ce3a5c3ea5ffa8880"
+   ]
+  },
+  "R-layerwise": {
+   "mean": 0.712,
+   "sd": 0.08305286134611964,
+   "per_seed": [
+    0.7433333333333333,
+    0.5833333333333334,
+    0.69,
+    0.8066666666666666,
+    0.7366666666666667
+   ],
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_seeds": 5,
+   "val_per_seed": [
+    0.8106060606060606,
+    0.7424242424242424,
+    0.7727272727272727,
+    0.7803030303030303,
+    0.7121212121212122
+   ],
+   "train_per_seed": [
+    0.8825757575757576,
+    0.759469696969697,
+    0.928030303030303,
+    0.9696969696969697,
+    0.8920454545454546
+   ],
+   "selected_epoch_per_seed": [
+    160,
+    42,
+    135,
+    173,
+    166
+   ],
+   "selected_stage_per_seed": [
+    3,
+    1,
+    2,
+    3,
+    3
+   ],
+   "val_minus_heldout_per_seed": [
+    0.06727272727272726,
+    0.15909090909090906,
+    0.08272727272727276,
+    -0.026363636363636367,
+    -0.024545454545454537
+   ],
+   "mean_val_minus_heldout": 0.05163636363636363,
+   "max_epochs": 225,
+   "n_params": 264,
+   "wires": 4,
+   "n_test": 300,
+   "wall_sec_total": 7313.54093837738,
+   "ckpt_sha256": [
+    "9484b78d7a78b181e41e6b1ebbcd73f5de7d9b58b7c207671986b60b75929f53",
+    "860efa7a477e58289645bbae08c45838854e904c1515b381c147f573fea660bf",
+    "dec1696aa2e8887b56fae5e2a2161cb0fc35cb44db1b1d462b8997d694436a93",
+    "b73869125c514345aa275a6bbae5c98aa700542fc493a8ca68fbc879f670230a",
+    "8a1d13359ec93a746be67fb7dc06dd97ff090546818c67679f9c931012df269b"
+   ]
+  },
+  "R-warmstart": {
+   "mean": 0.7273333333333334,
+   "sd": 0.035071355833500364,
+   "per_seed": [
+    0.77,
+    0.6733333333333333,
+    0.73,
+    0.74,
+    0.7233333333333334
+   ],
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_seeds": 5,
+   "val_per_seed": [
+    0.7424242424242424,
+    0.7196969696969697,
+    0.7575757575757576,
+    0.7424242424242424,
+    0.75
+   ],
+   "train_per_seed": [
+    0.9753787878787878,
+    0.8787878787878788,
+    0.9261363636363636,
+    0.9318181818181818,
+    0.8825757575757576
+   ],
+   "selected_epoch_per_seed": [
+    50,
+    148,
+    106,
+    83,
+    19
+   ],
+   "selected_stage_per_seed": [
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "val_minus_heldout_per_seed": [
+    -0.027575757575757587,
+    0.046363636363636385,
+    0.027575757575757587,
+    0.00242424242424244,
+    0.026666666666666616
+   ],
+   "mean_val_minus_heldout": 0.015090909090909089,
+   "max_epochs": 150,
+   "n_params": 264,
+   "wires": 4,
+   "n_test": 300,
+   "wall_sec_total": 6089.856554746628,
+   "ckpt_sha256": [
+    "4fcb40aa17a0459db0d8e35a70d0100eca29e6ec06ce7c5c586779f14c95277f",
+    "a9b3e0c819a2d5e9032369b448c1d4945f0ab5e312836324ea1f6ad7f3aac1f3",
+    "28133272527e2f5e3229354f3674ef440c23c5b7842b69b5836268929aacbf30",
+    "81e977ea7495fe9b0a1c906fff42eff13f1e22617884c06286a750faa24f2a44",
+    "727b79d60930feb2e21c56f7f26bbc2c724c95cd900c404439b70998f77813fc"
+   ]
+  }
+ },
+ "runs_missing": [],
+ "floors_doc58_SS14": {
+  "orientation_floor": {
+   "available": false,
+   "reason": "exp70's confirm draw demoted the A0-W anchor family to UN-FLOORED DESCRIPTIVE BASELINES and floored only P-eps / N-in / N-across, so no committed S-shuffle floor for A0-W-T2 exists on this draw. doc 58 SS14.1's orientation comparison CARRIES NO VERDICT, and SS14.2's trigger test reads the arm's mean against its bar alone, so nothing that is read depends on it. Every TRIGGERED cell is given its own procedure-matched floor here, which is the floor the booleans actually read (SS14.3 / SS14.5)."
+  },
+  "stage2_floors": {},
+  "triggered_cells": [],
+  "triggered_but_unfloored": [],
+  "gating_order": "arm mean -> trigger test (SS14.2) -> procedure-matched floor if triggered -> ONLY THEN the booleans. A triggered cell without its floor has NO verdict and stores null."
+ },
+ "verdicts_per_cell": {
+  "R-budget": {
+   "instance": "I1",
+   "rescue": "R-budget",
+   "heldout_mean": 0.762,
+   "heldout_sd": 0.04862555341016127,
+   "per_seed": [
+    0.7333333333333333,
+    0.7333333333333333,
+    0.76,
+    0.7366666666666667,
+    0.8466666666666667
+   ],
+   "baseline": 0.6993333333333333,
+   "comparator": 0.9879999999999999,
+   "gap": 0.2886666666666666,
+   "rescue_full_bar": 0.9679999999999999,
+   "rescue_partial_bar": 0.8436666666666666,
+   "reaches_full_bar": false,
+   "reaches_partial_bar": false,
+   "per_seed_rescue_delta": [
+    0.03400000000000003,
+    0.03400000000000003,
+    0.06066666666666676,
+    0.03733333333333344,
+    0.14733333333333343
+   ],
+   "mean_rescue_delta": 0.06266666666666676,
+   "stage2_triggered": false,
+   "floor_used": null,
+   "floor_status": "NOT REQUIRED -- the cell does not reach its partial bar (doc 58 SS14.2)",
+   "rescue_full": false,
+   "rescue_partial": false,
+   "verdict": "NOT RESCUED. doc 58 SS14.2: a cell that does not reach its rescue_partial bar cannot pass either boolean regardless of its floor, so no procedure-matched floor is run and the stage-1 comparison against the COMMITTED floor is stated as ORIENTATION ONLY."
+  },
+  "R-identity": {
+   "instance": "I1",
+   "rescue": "R-identity",
+   "heldout_mean": 0.8313333333333333,
+   "heldout_sd": 0.043754364861627745,
+   "per_seed": [
+    0.8666666666666667,
+    0.79,
+    0.7833333333333333,
+    0.8366666666666667,
+    0.88
+   ],
+   "baseline": 0.6993333333333333,
+   "comparator": 0.9879999999999999,
+   "gap": 0.2886666666666666,
+   "rescue_full_bar": 0.9679999999999999,
+   "rescue_partial_bar": 0.8436666666666666,
+   "reaches_full_bar": false,
+   "reaches_partial_bar": false,
+   "per_seed_rescue_delta": [
+    0.16733333333333344,
+    0.09066666666666678,
+    0.08400000000000007,
+    0.13733333333333342,
+    0.18066666666666675
+   ],
+   "mean_rescue_delta": 0.132,
+   "stage2_triggered": false,
+   "floor_used": null,
+   "floor_status": "NOT REQUIRED -- the cell does not reach its partial bar (doc 58 SS14.2)",
+   "rescue_full": false,
+   "rescue_partial": false,
+   "verdict": "NOT RESCUED. doc 58 SS14.2: a cell that does not reach its rescue_partial bar cannot pass either boolean regardless of its floor, so no procedure-matched floor is run and the stage-1 comparison against the COMMITTED floor is stated as ORIENTATION ONLY."
+  },
+  "R-layerwise": {
+   "instance": "I1",
+   "rescue": "R-layerwise",
+   "heldout_mean": 0.712,
+   "heldout_sd": 0.08305286134611964,
+   "per_seed": [
+    0.7433333333333333,
+    0.5833333333333334,
+    0.69,
+    0.8066666666666666,
+    0.7366666666666667
+   ],
+   "baseline": 0.6993333333333333,
+   "comparator": 0.9879999999999999,
+   "gap": 0.2886666666666666,
+   "rescue_full_bar": 0.9679999999999999,
+   "rescue_partial_bar": 0.8436666666666666,
+   "reaches_full_bar": false,
+   "reaches_partial_bar": false,
+   "per_seed_rescue_delta": [
+    0.04400000000000004,
+    -0.11599999999999988,
+    -0.009333333333333305,
+    0.10733333333333339,
+    0.03733333333333344
+   ],
+   "mean_rescue_delta": 0.012666666666666715,
+   "stage2_triggered": false,
+   "floor_used": null,
+   "floor_status": "NOT REQUIRED -- the cell does not reach its partial bar (doc 58 SS14.2)",
+   "rescue_full": false,
+   "rescue_partial": false,
+   "verdict": "NOT RESCUED. doc 58 SS14.2: a cell that does not reach its rescue_partial bar cannot pass either boolean regardless of its floor, so no procedure-matched floor is run and the stage-1 comparison against the COMMITTED floor is stated as ORIENTATION ONLY."
+  },
+  "R-warmstart": {
+   "instance": "I1",
+   "rescue": "R-warmstart",
+   "heldout_mean": 0.7273333333333334,
+   "heldout_sd": 0.035071355833500364,
+   "per_seed": [
+    0.77,
+    0.6733333333333333,
+    0.73,
+    0.74,
+    0.7233333333333334
+   ],
+   "baseline": 0.6993333333333333,
+   "comparator": 0.9879999999999999,
+   "gap": 0.2886666666666666,
+   "rescue_full_bar": 0.9679999999999999,
+   "rescue_partial_bar": 0.8436666666666666,
+   "reaches_full_bar": false,
+   "reaches_partial_bar": false,
+   "per_seed_rescue_delta": [
+    0.07066666666666677,
+    -0.025999999999999912,
+    0.03066666666666673,
+    0.04066666666666674,
+    0.024000000000000132
+   ],
+   "mean_rescue_delta": 0.028000000000000136,
+   "stage2_triggered": false,
+   "floor_used": null,
+   "floor_status": "NOT REQUIRED -- the cell does not reach its partial bar (doc 58 SS14.2)",
+   "rescue_full": false,
+   "rescue_partial": false,
+   "verdict": "NOT RESCUED. doc 58 SS14.2: a cell that does not reach its rescue_partial bar cannot pass either boolean regardless of its floor, so no procedure-matched floor is run and the stage-1 comparison against the COMMITTED floor is stated as ORIENTATION ONLY."
+  }
+ },
+ "booleans_on_this_draw": {
+  "rescue_full(I1, R-budget)": false,
+  "rescue_partial(I1, R-budget)": false,
+  "rescue_full(I1, R-identity)": false,
+  "rescue_partial(I1, R-identity)": false,
+  "rescue_full(I1, R-layerwise)": false,
+  "rescue_partial(I1, R-layerwise)": false,
+  "rescue_full(I1, R-warmstart)": false,
+  "rescue_partial(I1, R-warmstart)": false
+ },
+ "confirm_vs_first_draw": {
+  "R-budget": {
+   "first_draw_mean": 0.794,
+   "first_draw_sd": 0.038830114315795895,
+   "confirm_mean": 0.762,
+   "confirm_sd": 0.04862555341016127,
+   "delta_confirm_minus_first": -0.03200000000000003,
+   "first_draw_delta_over_baseline": 0.06466666666666665,
+   "confirm_delta_over_baseline": 0.06266666666666676,
+   "first_draw_rescue_partial": false,
+   "confirm_rescue_partial": false,
+   "first_draw_rescue_full": false,
+   "confirm_rescue_full": false,
+   "booleans_agree": true
+  },
+  "R-identity": {
+   "first_draw_mean": 0.8860000000000001,
+   "first_draw_sd": 0.046927840587674824,
+   "confirm_mean": 0.8313333333333333,
+   "confirm_sd": 0.043754364861627745,
+   "delta_confirm_minus_first": -0.05466666666666686,
+   "first_draw_delta_over_baseline": 0.15666666666666673,
+   "confirm_delta_over_baseline": 0.132,
+   "first_draw_rescue_partial": true,
+   "confirm_rescue_partial": false,
+   "first_draw_rescue_full": false,
+   "confirm_rescue_full": false,
+   "booleans_agree": false
+  },
+  "R-layerwise": {
+   "first_draw_mean": 0.7126666666666666,
+   "first_draw_sd": 0.04499382673705856,
+   "confirm_mean": 0.712,
+   "confirm_sd": 0.08305286134611964,
+   "delta_confirm_minus_first": -0.0006666666666665932,
+   "first_draw_delta_over_baseline": -0.01666666666666683,
+   "confirm_delta_over_baseline": 0.012666666666666715,
+   "first_draw_rescue_partial": false,
+   "confirm_rescue_partial": false,
+   "first_draw_rescue_full": false,
+   "confirm_rescue_full": false,
+   "booleans_agree": true
+  },
+  "R-warmstart": {
+   "first_draw_mean": 0.7326666666666666,
+   "first_draw_sd": 0.05272570530585628,
+   "confirm_mean": 0.7273333333333334,
+   "confirm_sd": 0.035071355833500364,
+   "delta_confirm_minus_first": -0.00533333333333319,
+   "first_draw_delta_over_baseline": 0.0033333333333331883,
+   "confirm_delta_over_baseline": 0.028000000000000136,
+   "first_draw_rescue_partial": false,
+   "confirm_rescue_partial": false,
+   "first_draw_rescue_full": false,
+   "confirm_rescue_full": false,
+   "booleans_agree": true
+  },
+  "ANCHOR (unrescued baseline)": {
+   "first_draw_mean": 0.7293333333333334,
+   "first_draw_sd": 0.03139355914125629,
+   "confirm_mean": 0.6993333333333333,
+   "confirm_sd": 0.028616234708446334,
+   "delta_confirm_minus_first": -0.030000000000000138,
+   "note": "a BASELINE on this draw, not a bit-exact gate. Its bit-exact check is against exp70's confirm measurement of the SAME items, in `base_parity`."
+  }
+ },
+ "RIDER_VERDICT": {
+  "rider": "rescue_partial(I1, R-identity)",
+  "why_this_cell": "it is exp72's ONE positive on the first draw and therefore the ONLY thing doc 58 SS16.3 step 11 obliges a confirm draw to re-test. The other seven cells were FALSE on the first draw and are re-run here because step 11 requires ALL ARMS OF THE AFFECTED INSTANCE to be present, not because any of them carries a headline.",
+  "first_draw": {
+   "mean": 0.8860000000000001,
+   "sd": 0.046927840587674824,
+   "bar": 0.8646666666666667,
+   "floor_mean": 0.4913333333333334,
+   "sd_units_over_floor": 8.303917256941615,
+   "rescue_partial": true,
+   "rescue_full": false
+  },
+  "confirm_draw": {
+   "mean": 0.8313333333333333,
+   "sd": 0.043754364861627745,
+   "bar": 0.8436666666666666,
+   "floor_mean": null,
+   "sd_units_over_floor": null,
+   "rescue_partial": false,
+   "rescue_full": false
+  },
+  "holds_on_the_fresh_draw": false,
+  "agrees_with_first_draw": false,
+  "reading": "THE HEADLINE DIED ON THE SECOND DRAW, and doc 47 SS18's precedent applies exactly as registered. `rescue_partial(I1, R-identity)` was TRUE on the first draw and is FALSE on a fresh draw at generator seed + 1000. NEITHER MEASUREMENT IS EDITED: the first draw's boolean stands as the measurement it was, and the headline does NOT stand. exp72's reportable outcome becomes the one doc 58 SS10 registered for 'nothing rescues' -- the walls are OPTIMISER-ROBUST at this budget class -- with the first draw's R-identity result carried as a SINGLE-DRAW observation that did not replicate. This is the outcome doc 47 SS18 exists to catch and it is reported plainly."
+ },
+ "not_run_on_this_draw": "I2 (N-in-T2) and the positive control. doc 58 SS16.3 step 11 scopes the confirm draw to ALL ARMS OF THE AFFECTED INSTANCE, and the affected instance is I1. All four I2 rescues were FALSE on the first draw, so no I2 headline exists to confirm; `positive_control_degrades` was FALSE and is a first-draw degradation check against a committed value, not a gain claim.",
+ "scope_doc58_SS12": [
+  "NO QUANTUM READING OF ANY KIND. The comparators are already at 1.0000 on both instances; there is nothing for a circuit to win. exp72 is about OPTIMISATION and only optimisation, and NO EXP72 NUMBER MAY APPEAR IN A SENTENCE CONTAINING 'ADVANTAGE'.",
+  "NOT A STATEMENT ABOUT BARREN PLATEAUS. These are 4-qubit circuits. No gradient-variance-versus-qubit-count scaling is measured, and doc 58 SS4.4 / SS4.5's asymptotic results are cited as MECHANISM LANGUAGE, never as diagnoses of these instances.",
+  "'THE FIELD'S MITIGATIONS' MEANS EXACTLY THESE FOUR OPERATIONALISATIONS, not the literature's every variant. Noted, not run: full barren-plateau-aware initialisation schemes (beta / Gaussian / reduced-domain / He / Xavier, and the CNN- and RL-based initialisers); quantum natural gradient; SGLD and other noisy/stochastic-gradient optimisers; encoding-entanglement reduction; cost-function locality; circuit-growing layerwise learning in Skolik et al.'s published form; the R-budget budget/schedule decomposition. A NULL ON THESE FOUR IS NOT A NULL ON THOSE.",
+  "One dataset, one task family, one category, one surface, two referents, two events, 24 nouns, simulation. doc 50 SS7's ceiling stands.",
+  "NOT 'MEANING', not composition-in-general, not DisCoCirc's expressive limits. A rescue relocates a failure from 'training' to 'training with a better recipe'; a null relocates nothing. Neither touches representability -- the bounds are 1.0000 in both cases and always were.",
+  "Not novel-filler generalisation; exp69's held-out-PAIRING split, inherited.",
+  "Not a statement about AraVec.",
+  "R-layerwise is an ADAPTATION of arXiv:2006.14904, not a replication (SS4.2). A null on it says NOTHING about their published circuit-growing method."
+ ],
+ "git_note": {
+  "repo_head": "a5c1700 amplitude bounds instrument (doc 61 pre-work): outer-square extension to amplitude maps; doc 47 SS13 anchor reproduced exactly; A3/A4 saturation certificate (bound exactly 1.0 for ALL labellings at 24 nouns -- provably uninformative, the doc 52 SS2.2 regime made a theorem)",
+  "exp72_paths": [
+   "?? exp72_ckpt/",
+   "?? exp72_confirm_aggregate.py",
+   "?? exp72_confirm_ckpt/",
+   "?? exp72_confirm_run.py",
+   "?? results_exp72_confirm_donor.json",
+   "?? results_exp72_confirm_smoke_validation.json"
+  ],
+  "n_untracked": 253,
+  "rule3_note": "exp72 writes ONLY exp72_ckpt/ and results_exp72* (through fresh_results_path). No exp68 / exp69 / exp70 artefact is modified; the donor checkpoints are READ-ONLY and sha-asserted before use."
+ },
+ "wall_time_sec": 0.1483621597290039
+}

@@ -1,0 +1,115 @@
+{
+ "registration": "qnlp_private_docs/25_exp43b_hop_split_rerun.md SSR (CLEAN-DATA RE-DECISION, commit 6d5c6a4) + doc 28 pointer",
+ "procedure": "doc 25 SSR.2 (frozen)",
+ "datasets": {
+  "L2r": {
+   "file": "stories_exp43b_L2r.json",
+   "seed": 4312000,
+   "canonical_items_sha256": "f16749f0cadfff929bc62b6064417e7e52ce77b8b1da0d89971d1fe692b15e25",
+   "file_sha256": "4b2ec70c42cf0db278ee8d15e3ce9ab36d644ef88866bf5caed639e12a66814e",
+   "n_items": 1800,
+   "split_counts": {
+    "train": 1200,
+    "val": 300,
+    "test": 300
+   },
+   "split_qtype_counts": {
+    "test/Q0": 150,
+    "test/Q1": 150,
+    "train/Q0": 600,
+    "train/Q1": 600,
+    "val/Q0": 150,
+    "val/Q1": 150
+   },
+   "verb_order": [
+    "حمل",
+    "رفع",
+    "سأل",
+    "ساعد",
+    "ضرب",
+    "عالج"
+   ],
+   "embeddings_sha256": "00c1ecffcaf05b38df082f8a3cbed1d013bddb3e39bc00adf1c2513b4ea674ac",
+   "disclosures": {
+    "Q0_items": 900,
+    "Q0_items_with_ANY_other_event_using_question_verb": 0,
+    "Q1_items": 900,
+    "Q1_items_with_exactly_two_v2_events_(core+balancing)": 900,
+    "flip_idxs_length_by_qtype": {
+     "Q0": {
+      "1": 900
+     },
+     "Q1": {
+      "2": 900
+     }
+    },
+    "AUGUST_L2_Q0_items_with_other_event_using_question_verb": 178,
+    "AUGUST_L2_Q0_items": 900
+   },
+   "port_fidelity_check": {
+    "original_seed": 4312,
+    "sha_at_original_seed_in_memory": "b0d86f7940573af99b58137fd58cd1645a3ea37396de1ce9484e90f6f8166781",
+    "doc25_R1_dry_run_prefix": "b0d86f79",
+    "matches_dry_run": true
+   }
+  },
+  "familyr": {
+   "file": "stories_exp43a_familyr.json",
+   "seed": 4301000,
+   "canonical_items_sha256": "2e6650d6a2ea8e11c8eaee3a0b4d7c275c985203dbb2318675e3fb78abc4535a",
+   "file_sha256": "3086961eadb70f71af98200d712dd64b972bced62eee8eaa1365d15883d42a26",
+   "n_items": 804,
+   "split_counts": {
+    "train": 200,
+    "val": 100,
+    "test_a": 168,
+    "test_b": 168,
+    "test_c": 168
+   },
+   "split_qtype_counts": {
+    "test_a/Q1": 168,
+    "test_b/Q1": 168,
+    "test_c/Q1": 168,
+    "train/Q1": 200,
+    "val/Q1": 100
+   },
+   "verb_order": [
+    "ضرب",
+    "حمل",
+    "رفع",
+    "ساعد",
+    "قطع",
+    "فتح"
+   ],
+   "embeddings_sha256": "00c1ecffcaf05b38df082f8a3cbed1d013bddb3e39bc00adf1c2513b4ea674ac",
+   "disclosures": {
+    "items": 804,
+    "X_is_object": 804,
+    "v1_distribution": {
+     "فتح": 290,
+     "رفع": 184,
+     "قطع": 118,
+     "حمل": 212
+    },
+    "v2_distribution": {
+     "ضرب": 228,
+     "حمل": 164,
+     "رفع": 172,
+     "ساعد": 240
+    },
+    "K_T": {
+     "K4_T5": 804
+    },
+    "AUGUST_family_X_is_object": 322,
+    "AUGUST_family_items": 804
+   },
+   "port_fidelity_check": {
+    "original_seed": 4301,
+    "sha_at_original_seed_in_memory": "63270aab5e62216cc21b7094af20b2a70687013b2910d29e81d84e5dde689c5e",
+    "doc25_R1_dry_run_prefix": "63270aab",
+    "matches_dry_run": true
+   }
+  }
+ },
+ "flip_idxs_note": "repaired-generator items carry `flip_idxs` (list). Old scripts that read the August scalar `flip_idx` would KeyError on these files: exp43a_analysis.py:234 (it['flip_idx']). None of the r_ runners (exp45a/45b/47/48/43b_phase1 via exp42_compiler) read either key."
+}

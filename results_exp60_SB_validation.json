@@ -1,0 +1,56 @@
+{
+ "experiment": "exp60 Stage A validation",
+ "design_doc": "qnlp_private_docs/46_exp60_semantic_binding_and_reuploading.md (a45a2e9, FROZEN)",
+ "rung": "SB",
+ "dataset_sha256": "ae94ab9c31d62778e1c916aa44566a0ec3c8f74b09f4bf3839bab5f331c87b8c",
+ "split_counts": {
+  "train": 470,
+  "val": 118,
+  "test": 300
+ },
+ "V1_bag_of_embeddings": {
+  "test_accuracy": 0.5,
+  "twin_features_identical": true,
+  "passed": true
+ },
+ "V2_ngram": {
+  "train_nouns_val_accuracy": 1.0,
+  "heldout_accuracy": 0.5,
+  "n_features": 305,
+  "V2H_bar": 0.55,
+  "V2H_passed": true
+ },
+ "V3_balance": {
+  "verb_p": 1.0,
+  "bearer_wire_p": 1.0,
+  "order_flag_p": 1.0,
+  "wire0_noun_p": 1.0,
+  "agent_noun_p_DESCRIPTIVE": 8.046648526837429e-173,
+  "n_yes": 444,
+  "n_no": 444,
+  "classes_balanced": true,
+  "min_p": 1.0,
+  "passed": true
+ },
+ "V4_dedup_on_circuits": {
+  "n_distinct_circuits": 888,
+  "n_items": 888,
+  "n_contradictory": 0,
+  "passed": true
+ },
+ "V6_token_identity_probe": {
+  "train_nouns_val_accuracy": 1.0,
+  "heldout_accuracy": 0.5,
+  "must_succeed_on_train": true,
+  "must_fail_on_heldout": true,
+  "passed": true
+ },
+ "gates": {
+  "V1": true,
+  "V2H": true,
+  "V3": true,
+  "V4": true,
+  "V6": true
+ },
+ "stage_a_kill_gate_passed": true
+}

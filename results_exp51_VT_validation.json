@@ -1,0 +1,98 @@
+{
+ "experiment": "exp51 rung validation (doc 35 SS11 leak gate)",
+ "design_doc": "qnlp_private_docs/35_exp51_verb_twin_rung.md (commit 6101ffe, FROZEN)",
+ "rung": "VT",
+ "platform": "macOS-26.5.2-arm64-arm-64bit",
+ "python": "3.12.13",
+ "torch": "2.13.0",
+ "env_note": "scipy 1.18.0 and scikit-learn 1.9.0 were installed into the Mac env on 2026-08-13 for this gate: validate_exp41_data imports chi2_contingency and CountVectorizer. Additive only -- torch 2.13.0 and numpy 2.5.1 unchanged. The exp44/45 training line still imports torch alone.",
+ "dataset_sha256": "8aa71d1e286392ad96fe7a5f77dc8afb7998e5594b8abde67bbaef024e9d1064",
+ "no_sign_off_gate": "doc 35 SS10: all six verbs come from the frozen validated exp41 inventory and all carry human_patients=True; the construction only pairs them with human agents and patients. No new lexical judgment is made, so no native-speaker gate is required.",
+ "construction": "VERB-EXCHANGE twins: (v1,A,X),(v2,C,D) vs (v2,A,X),(v1,C,D) at the SAME slots, identical fillers/cast/question. Bag-identical. A tied-block model compiles both twins to the IDENTICAL statevector and is pinned at exactly 0.500 (doc 35 SS3).",
+ "n_train": 1200,
+ "n_val": 300,
+ "n_test": 300,
+ "note_n_test": "rung size fixed by doc 35 SS11 (300 < the doc-22 main-dataset 500 minimum; CI bounds recorded at n=300)",
+ "oov_note": "V1/V5 build vocabulary from this dataset's surface tokens and train their own embeddings, so the Form II and Form III surface forms introduced here carry no pretrained-embedding OOV exposure.",
+ "V1_bag_of_embeddings": {
+  "test_accuracy": 0.5,
+  "ci95": [
+   0.4434196736194167,
+   0.5565803263805833
+  ],
+  "n_test": 300,
+  "train_accuracy": 0.5,
+  "best_val_accuracy": 0.5,
+  "per_split_accuracy": {
+   "test_a": 0.46,
+   "test_b": 0.48,
+   "test_c": 0.56
+  },
+  "passed": true,
+  "per_split_note": "single rung test split round-robined over test_a/b/c; thirds are arbitrary partitions"
+ },
+ "V2_ngram_logistic": {
+  "test_accuracy": 0.5233333333333333,
+  "ci95": [
+   0.4668146502211027,
+   0.579852016445564
+  ],
+  "n_test": 300,
+  "selected_C": 10.0,
+  "best_val_accuracy": 0.5466666666666666,
+  "n_features": 944,
+  "per_split_accuracy": {
+   "test_a": 0.52,
+   "test_b": 0.54,
+   "test_c": 0.51
+  },
+  "passed": true,
+  "per_split_note": "single rung test split round-robined over test_a/b/c; thirds are arbitrary partitions"
+ },
+ "V3_balance_audit": {
+  "n_yes": 900,
+  "n_no": 900,
+  "classes_balanced_50_50": true,
+  "min_p": 1.0,
+  "n_tests": 35,
+  "verb_min_p": 1.0,
+  "referent_min_p": 1.0,
+  "template_min_p": 1.0,
+  "pro_drop_min_p": 1.0,
+  "passed": true
+ },
+ "V4_dedup": {
+  "n_verbatim_duplicates": 0,
+  "n_near_dup_groups": 0,
+  "near_dup_groups_sample": [],
+  "passed": true
+ },
+ "V5_single_sentence_oracle": {
+  "mode": "na_by_design",
+  "note": "VT is one-hop by construction: every item IS single-sentence-answerable, so the oracle SHOULD succeed. V5 is recorded, not gated -- identical treatment to L1 (doc 23 V-suite 'for the record').",
+  "full_test": {
+   "test_accuracy_best_sentence": 0.6533333333333333,
+   "ci95_best_sentence": [
+    0.599479218183992,
+    0.7071874484826747
+   ],
+   "test_accuracy_max_yes": 0.5133333333333333,
+   "ci95_max_yes": [
+    0.4567731279798374,
+    0.5698935386868292
+   ],
+   "n_test": 300,
+   "sentence_level_val_accuracy": 0.5713333487510681,
+   "passed": false
+  },
+  "gated": false,
+  "passed": null
+ },
+ "v1_passed": true,
+ "v2_passed": true,
+ "v3_passed": true,
+ "v4_passed": true,
+ "all_passed_v1_to_v4": true,
+ "leak_gate_passed": true,
+ "consequence_if_failed": "doc 35 SS7: exp46 is VOID and reported as void with the failing check named; no clustering number is quoted anywhere."
+}

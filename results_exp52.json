@@ -1,0 +1,1163 @@
+{
+ "experiment": "exp52",
+ "design_doc": "qnlp_private_docs/36_exp52_wordorder_tied_ablation.md (6986d13 + 162994d + 5efc91f + 0747cb0)",
+ "platform": "Linux-4.4.0-19041-Microsoft-x86_64-with-glibc2.35",
+ "python": "3.10.13",
+ "env": "qiskit_lambeq_env",
+ "QFM_WARMSTART": "legacy",
+ "sha256": {
+  "sentences.json": "aafaf80052487470d8e203172a7201930289831cfecb95dac3686de846cf84a4",
+  "exp13": "87f3346252565d58f25fd1a9b2718d23abba65cfd6f6e20ee9720663e92c3082",
+  "arabic_dep_reader": "1d8848bc9d5e34a3637b7ba6e131d23e47b0cf9b0bc587e10cc3cf803ea67fd1",
+  "self": "4a6b1ca43e1da5f8a49dfd445d7bcd74814eee598abacc336798e90793e81b31"
+ },
+ "code_identity_sha256": {
+  "_aravec_vec": "1c7fecec5a2ec26a321773732b0577b92f87a26eb445aa00d9be9f2093042bb1",
+  "sentence_to_aravec": "eeb352da96bbeb5548811c74eda271f9d7498b7f0e4ba42eebc21e0f232bd962",
+  "warmstart_weights": "aaa7ce718716041d51df5c16ef1145fd03f6c755191877e6d50bcd990752c152",
+  "make_ansatz": "75e2cd3afe3a341d05bb8a735038cc79e1cc479d7297e1808bff9f0da0c51fff",
+  "build_circuits": "aafff5a939444ce3000424e02768de5cb8bead3364a06902a9c2e56e20c0cca2",
+  "run_qfm_cv": "6bd368b0e440bfd1ec0cbbbd51f94e221efa961c508a0b51e319a6793aa89bea",
+  "_count_controlled": "986d61e91936e3b43d943e8dcd59cc8ec3915ad55c0e878bf18347c1d3e7f880",
+  "_total_boxes": "477f67aca1fc03f775e1aa61adbadebd64e899160c9d20774c68e93ed518e9f0",
+  "run_topology_only": "4578595c3753939e44639fbb72e84dbad63693dffc7103f1f6a9d9ce185a5184"
+ },
+ "n": 120,
+ "gates": {
+  "n_vso_routed": {
+   "A": 17,
+   "D": 17,
+   "D2": 17
+  },
+  "g1_nested_cod_s_no_swap": true,
+  "g2_nonvso_identical": true,
+  "g4_designed_to_fail_raises": true,
+  "g5_vso_same_words": true,
+  "n_vso_diagrams": 17,
+  "vso_idx_by_label": {
+   "WordOrder_VSO": 17
+  },
+  "single_box_fallback_diagrams": 0,
+  "fallback_by_label": {},
+  "published_A_vso_has_swap": true,
+  "vso_routing_complete": {
+   "n_vso_label": 60,
+   "n_vso_diagrams": 17,
+   "n_vso_routed": {
+    "A": 17,
+    "D": 17,
+    "D2": 17
+   },
+   "vso_label_fallbacks": 0
+  },
+  "duplicate_sentences_descriptive": {
+   "n_unique": 116,
+   "n": 120
+  },
+  "word_boxes_nonempty": true,
+  "g3_valid_idx_identical": true
+ },
+ "phases": {
+  "A": {
+   "QFM_IQP_L1": {
+    "mean": 0.6491666666666667,
+    "std": 0.031501763619059674,
+    "per_seed": [
+     0.6583333333333333,
+     0.6583333333333333,
+     0.6583333333333333,
+     0.6416666666666667,
+     0.675,
+     0.6666666666666667,
+     0.5583333333333333,
+     0.6666666666666667,
+     0.6583333333333333,
+     0.65
+    ],
+    "n_valid": 120
+   },
+   "QFM_IQP_L0": {
+    "mean": 0.5,
+    "std": 0.0,
+    "per_seed": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "n_valid": 120
+   },
+   "wordorder_reproduced": true,
+   "published": {
+    "mean": 0.6492,
+    "std": 0.0315
+   }
+  },
+  "B": {
+   "aravec_mean": 0.12777777777777777,
+   "aravec_std": 0.04427049291808119,
+   "aravec_twin_stratified": {
+    "twin_in_train": [
+     0.014492753623188406,
+     276
+    ],
+    "twin_not_in_train": [
+     0.5,
+     84
+    ]
+   },
+   "aravec_subchance_is_twin_antilearning": true,
+   "topology_only_A": {
+    "acc": 0.35833333333333334,
+    "symmetrised": 0.6416666666666666,
+    "controlled_per_class": {
+     "WordOrder_SVO": {
+      "2": 48,
+      "1": 12
+     },
+     "WordOrder_VSO": {
+      "1": 43,
+      "3": 17
+     }
+    },
+    "n_valid": 120
+   },
+   "topology_only_symmetrised_matches_erratum": true,
+   "aravec_pred_class_distribution": {
+    "1": 180,
+    "0": 180
+   },
+   "aravec_majority_pred_frac": 0.5,
+   "baselines_sub_chance_explained": false,
+   "baselines_sub_chance_explained_operationalisation": "symmetrised >= 0.45 (≈0.5 or above) AND majority predicted class >= 0.90 (near-constant); pinned in code before any run"
+  },
+  "C": {
+   "T_verb": {
+    "mean": 0.75,
+    "std": 7.021666937153402e-17,
+    "per_seed": [
+     0.75,
+     0.7499999999999999,
+     0.75,
+     0.75,
+     0.7500000000000001,
+     0.75,
+     0.75,
+     0.7499999999999999,
+     0.7499999999999999,
+     0.75
+    ],
+    "n_valid": 120
+   },
+   "T_all": {
+    "mean": 0.8158333333333333,
+    "std": 0.015567951410224483,
+    "per_seed": [
+     0.8166666666666667,
+     0.8,
+     0.825,
+     0.8166666666666667,
+     0.8333333333333334,
+     0.825,
+     0.8333333333333333,
+     0.8,
+     0.825,
+     0.7833333333333333
+    ],
+    "n_valid": 120
+   },
+   "tie_groups": {
+    "verb": {
+     "('V', 2, '0')": 51,
+     "('V', 3, '0')": 58,
+     "('V', 3, '1')": 58
+    },
+    "all": {
+     "('V', 2, '0')": 51,
+     "('V', 3, '0')": 58,
+     "('V', 3, '1')": 58,
+     "('N', 1, '0')": 90,
+     "('N', 1, '1')": 90,
+     "('N', 1, '2')": 90
+    }
+   },
+   "wordorder_survives_verb_tying": true,
+   "wordorder_survives_full_tying": true
+  },
+  "D": {
+   "reference": {
+    "mu_A": 0.6491666666666667,
+    "sd_A": 0.031501763619059674,
+    "source": "phase A"
+   },
+   "D_nested_QFM_L1": {
+    "mean": 0.6216666666666667,
+    "std": 0.020816659994661365,
+    "per_seed": [
+     0.6166666666666667,
+     0.6166666666666667,
+     0.6166666666666666,
+     0.6249999999999999,
+     0.6333333333333334,
+     0.6,
+     0.5833333333333333,
+     0.6666666666666667,
+     0.625,
+     0.6333333333333334
+    ],
+    "n_valid": 120
+   },
+   "D2_crossed_inner_QFM_L1": {
+    "mean": 0.6216666666666667,
+    "std": 0.020816659994661365,
+    "per_seed": [
+     0.6166666666666667,
+     0.6166666666666667,
+     0.6166666666666666,
+     0.6249999999999999,
+     0.6333333333333334,
+     0.6,
+     0.5833333333333333,
+     0.6666666666666667,
+     0.625,
+     0.6333333333333334
+    ],
+    "n_valid": 120
+   },
+   "D1_topology_nested": {
+    "acc": 0.5,
+    "symmetrised": 0.5,
+    "controlled_per_class": {
+     "WordOrder_SVO": {
+      "2": 48,
+      "1": 12
+     },
+     "WordOrder_VSO": {
+      "1": 43,
+      "2": 17
+     }
+    },
+    "n_valid": 120
+   },
+   "D1_topology_crossed_inner": {
+    "acc": 0.6416666666666667,
+    "symmetrised": 0.6416666666666667,
+    "controlled_per_class": {
+     "WordOrder_SVO": {
+      "2": 48,
+      "1": 12
+     },
+     "WordOrder_VSO": {
+      "1": 43,
+      "4": 17
+     }
+    },
+    "n_valid": 120
+   },
+   "D3_nested_QFM_L0": {
+    "mean": 0.5,
+    "std": 0.0,
+    "per_seed": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "n_valid": 120
+   },
+   "D3_nested_T_all": {
+    "mean": 0.8158333333333333,
+    "std": 0.015567951410224483,
+    "per_seed": [
+     0.8166666666666667,
+     0.8,
+     0.825,
+     0.8166666666666667,
+     0.8333333333333334,
+     0.825,
+     0.8333333333333333,
+     0.8,
+     0.825,
+     0.7833333333333333
+    ],
+    "n_valid": 120
+   },
+   "wordorder_survives_nested": true,
+   "nested_at_theorem_floor": false,
+   "wordorder_leg_assignment_matters": false,
+   "named_outcome": "SURVIVES"
+  }
+ },
+ "versions": {
+  "lambeq": "0.5.0",
+  "numpy": "1.26.4",
+  "sklearn": "1.6.1",
+  "stanza": "1.10.1"
+ },
+ "structure_by_label": {
+  "WordOrder_SVO": {
+   "n|n.r @ s @ n.l|n": 48,
+   "n|n.r @ s": 12
+  },
+  "WordOrder_VSO": {
+   "s @ n.l|n": 34,
+   "n|n.r @ s": 9,
+   "s @ n.l @ n.l|n|n": 17
+  }
+ },
+ "per_sentence_structure": [
+  {
+   "i": 0,
+   "sentence": "الولد يقرا الكتاب",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 1,
+   "sentence": "البنت تشرب الحليب",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 2,
+   "sentence": "الطالب كتب الدرس",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 3,
+   "sentence": "المعلم شرح القاعدة",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s",
+   "routed_vso": false
+  },
+  {
+   "i": 4,
+   "sentence": "الطبيب فحص المريض",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s",
+   "routed_vso": false
+  },
+  {
+   "i": 5,
+   "sentence": "المهندس بنى البيت",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s",
+   "routed_vso": false
+  },
+  {
+   "i": 6,
+   "sentence": "القطة اكلت السمك",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s",
+   "routed_vso": false
+  },
+  {
+   "i": 7,
+   "sentence": "الطفل يلعب بالكرة",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 8,
+   "sentence": "الفلاح يزرع الارض",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 9,
+   "sentence": "العامل يبني الجدار",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 10,
+   "sentence": "الطائرة تطير عاليا",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s",
+   "routed_vso": false
+  },
+  {
+   "i": 11,
+   "sentence": "الشمس تشرق صباحا",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s",
+   "routed_vso": false
+  },
+  {
+   "i": 12,
+   "sentence": "الام تعد الطعام",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 13,
+   "sentence": "النهر يجري في الوادي",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s",
+   "routed_vso": false
+  },
+  {
+   "i": 14,
+   "sentence": "الريح تهب بقوة",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s",
+   "routed_vso": false
+  },
+  {
+   "i": 15,
+   "sentence": "الفتاة ترسم اللوحة",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 16,
+   "sentence": "الرجل يشتري الخبز",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 17,
+   "sentence": "الصبي يحمل الحقيبة",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 18,
+   "sentence": "الموظف ارسل الرسالة",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 19,
+   "sentence": "الشاب قرا المجلة",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 20,
+   "sentence": "البنت تغسل الصحون",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 21,
+   "sentence": "المدير وقع الوثيقة",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 22,
+   "sentence": "الطفل يحب الحلوى",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 23,
+   "sentence": "الطالبة تدرس الفيزياء",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 24,
+   "sentence": "الشرطي يحرس المبنى",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 25,
+   "sentence": "المزارع يقطف الثمار",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 26,
+   "sentence": "العجوز يعبر الشارع",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 27,
+   "sentence": "الطباخ يعد الوجبة",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 28,
+   "sentence": "الحارس يفتح الباب",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 29,
+   "sentence": "السائق يوقف السيارة",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 30,
+   "sentence": "المعلمة تصحح الاوراق",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 31,
+   "sentence": "الولد يطعم القطة",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 32,
+   "sentence": "الطبيبة تفحص الطفل",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 33,
+   "sentence": "الرياضي يحمل الكاس",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 34,
+   "sentence": "الكاتب يكتب الرواية",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 35,
+   "sentence": "الولد احضر الماء",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 36,
+   "sentence": "الطالب حفظ القصيدة",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s",
+   "routed_vso": false
+  },
+  {
+   "i": 37,
+   "sentence": "البنت رسمت الصورة",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 38,
+   "sentence": "المهندسة صممت المشروع",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 39,
+   "sentence": "الطفل تناول الدواء",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 40,
+   "sentence": "الرجل يفتح الباب",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 41,
+   "sentence": "المراة غسلت الثياب",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 42,
+   "sentence": "الولد يكسر الزجاج",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 43,
+   "sentence": "البنت رسمت الصورة",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 44,
+   "sentence": "الاستاذ يصحح الواجب",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 45,
+   "sentence": "الطالبة حلت المسالة",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 46,
+   "sentence": "الشرطي يمسك اللص",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 47,
+   "sentence": "الطفلة لبست الفستان",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s",
+   "routed_vso": false
+  },
+  {
+   "i": 48,
+   "sentence": "المدير يوقع العقد",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 49,
+   "sentence": "الممرضة ضمدت الجرح",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 50,
+   "sentence": "الصياد يصيد السمك",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 51,
+   "sentence": "الطباخ طبخ الطعام",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s",
+   "routed_vso": false
+  },
+  {
+   "i": 52,
+   "sentence": "الحارس يفتش الحقيبة",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 53,
+   "sentence": "العالم اكتشف الحقيقة",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 54,
+   "sentence": "الراعي يرعى الغنم",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 55,
+   "sentence": "الجندي حمى المدينة",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s",
+   "routed_vso": false
+  },
+  {
+   "i": 56,
+   "sentence": "السائق يوقف السيارة",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 57,
+   "sentence": "المحامي دافع الموكل",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 58,
+   "sentence": "الكاتب ينشر الكتاب",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 59,
+   "sentence": "الطيار قاد الطائرة",
+   "label": "WordOrder_SVO",
+   "sig": "n|n.r @ s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 60,
+   "sentence": "يقرا الولد الكتاب",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 61,
+   "sentence": "تشرب البنت الحليب",
+   "label": "WordOrder_VSO",
+   "sig": "n|n.r @ s",
+   "routed_vso": false
+  },
+  {
+   "i": 62,
+   "sentence": "كتب الطالب الدرس",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l @ n.l|n|n",
+   "routed_vso": true
+  },
+  {
+   "i": 63,
+   "sentence": "شرح المعلم القاعدة",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 64,
+   "sentence": "فحص الطبيب المريض",
+   "label": "WordOrder_VSO",
+   "sig": "n|n.r @ s",
+   "routed_vso": false
+  },
+  {
+   "i": 65,
+   "sentence": "بنى المهندس البيت",
+   "label": "WordOrder_VSO",
+   "sig": "n|n.r @ s",
+   "routed_vso": false
+  },
+  {
+   "i": 66,
+   "sentence": "اكلت القطة السمك",
+   "label": "WordOrder_VSO",
+   "sig": "n|n.r @ s",
+   "routed_vso": false
+  },
+  {
+   "i": 67,
+   "sentence": "يلعب الطفل بالكرة",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 68,
+   "sentence": "يزرع الفلاح الارض",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 69,
+   "sentence": "يبني العامل الجدار",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 70,
+   "sentence": "تطير الطائرة عاليا",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 71,
+   "sentence": "تشرق الشمس صباحا",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 72,
+   "sentence": "تعد الام الطعام",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 73,
+   "sentence": "يجري النهر في الوادي",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 74,
+   "sentence": "تهب الريح بقوة",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l @ n.l|n|n",
+   "routed_vso": true
+  },
+  {
+   "i": 75,
+   "sentence": "ترسم الفتاة اللوحة",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 76,
+   "sentence": "يشتري الرجل الخبز",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 77,
+   "sentence": "يحمل الصبي الحقيبة",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l @ n.l|n|n",
+   "routed_vso": true
+  },
+  {
+   "i": 78,
+   "sentence": "ارسل الموظف الرسالة",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l @ n.l|n|n",
+   "routed_vso": true
+  },
+  {
+   "i": 79,
+   "sentence": "قرا الشاب المجلة",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 80,
+   "sentence": "تغسل البنت الصحون",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 81,
+   "sentence": "وقع المدير الوثيقة",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 82,
+   "sentence": "يحب الطفل الحلوى",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 83,
+   "sentence": "تدرس الطالبة الفيزياء",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 84,
+   "sentence": "يحرس الشرطي المبنى",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 85,
+   "sentence": "يقطف المزارع الثمار",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 86,
+   "sentence": "يعبر العجوز الشارع",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l @ n.l|n|n",
+   "routed_vso": true
+  },
+  {
+   "i": 87,
+   "sentence": "يعد الطباخ الوجبة",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l @ n.l|n|n",
+   "routed_vso": true
+  },
+  {
+   "i": 88,
+   "sentence": "يفتح الحارس الباب",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 89,
+   "sentence": "يوقف السائق السيارة",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l @ n.l|n|n",
+   "routed_vso": true
+  },
+  {
+   "i": 90,
+   "sentence": "تصحح المعلمة الاوراق",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 91,
+   "sentence": "يطعم الولد القطة",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 92,
+   "sentence": "تفحص الطبيبة الطفل",
+   "label": "WordOrder_VSO",
+   "sig": "n|n.r @ s",
+   "routed_vso": false
+  },
+  {
+   "i": 93,
+   "sentence": "يحمل الرياضي الكاس",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l @ n.l|n|n",
+   "routed_vso": true
+  },
+  {
+   "i": 94,
+   "sentence": "يكتب الكاتب الرواية",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l @ n.l|n|n",
+   "routed_vso": true
+  },
+  {
+   "i": 95,
+   "sentence": "احضر الولد الماء",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 96,
+   "sentence": "حفظ الطالب القصيدة",
+   "label": "WordOrder_VSO",
+   "sig": "n|n.r @ s",
+   "routed_vso": false
+  },
+  {
+   "i": 97,
+   "sentence": "رسمت البنت الصورة",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l @ n.l|n|n",
+   "routed_vso": true
+  },
+  {
+   "i": 98,
+   "sentence": "صممت المهندسة المشروع",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l @ n.l|n|n",
+   "routed_vso": true
+  },
+  {
+   "i": 99,
+   "sentence": "تناول الطفل الدواء",
+   "label": "WordOrder_VSO",
+   "sig": "n|n.r @ s",
+   "routed_vso": false
+  },
+  {
+   "i": 100,
+   "sentence": "يفتح الرجل الباب",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 101,
+   "sentence": "غسلت المراة الثياب",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l @ n.l|n|n",
+   "routed_vso": true
+  },
+  {
+   "i": 102,
+   "sentence": "يكسر الولد الزجاج",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 103,
+   "sentence": "رسمت البنت الصورة",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l @ n.l|n|n",
+   "routed_vso": true
+  },
+  {
+   "i": 104,
+   "sentence": "يصحح الاستاذ الواجب",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 105,
+   "sentence": "حلت الطالبة المسالة",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 106,
+   "sentence": "يمسك الشرطي اللص",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 107,
+   "sentence": "لبست الطفلة الفستان",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l @ n.l|n|n",
+   "routed_vso": true
+  },
+  {
+   "i": 108,
+   "sentence": "يوقع المدير العقد",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 109,
+   "sentence": "ضمدت الممرضة الجرح",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 110,
+   "sentence": "يصيد الصياد السمك",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l @ n.l|n|n",
+   "routed_vso": true
+  },
+  {
+   "i": 111,
+   "sentence": "طبخ الطباخ الطعام",
+   "label": "WordOrder_VSO",
+   "sig": "n|n.r @ s",
+   "routed_vso": false
+  },
+  {
+   "i": 112,
+   "sentence": "يفتش الحارس الحقيبة",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 113,
+   "sentence": "اكتشف العالم الحقيقة",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l @ n.l|n|n",
+   "routed_vso": true
+  },
+  {
+   "i": 114,
+   "sentence": "يرعى الراعي الغنم",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 115,
+   "sentence": "حمى الجندي المدينة",
+   "label": "WordOrder_VSO",
+   "sig": "n|n.r @ s",
+   "routed_vso": false
+  },
+  {
+   "i": 116,
+   "sentence": "يوقف السائق السيارة",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l @ n.l|n|n",
+   "routed_vso": true
+  },
+  {
+   "i": 117,
+   "sentence": "دافع المحامي الموكل",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 118,
+   "sentence": "ينشر الكاتب الكتاب",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l|n",
+   "routed_vso": false
+  },
+  {
+   "i": 119,
+   "sentence": "قاد الطيار الطائرة",
+   "label": "WordOrder_VSO",
+   "sig": "s @ n.l|n",
+   "routed_vso": false
+  }
+ ],
+ "wall_time_sec": 654.9046854972839
+}

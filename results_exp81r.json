@@ -1,0 +1,545 @@
+{
+ "experiment": "exp81 width per referent (doc 73)",
+ "registration": "qnlp_private_docs/73_exp81_width_per_referent.md",
+ "sole_writer": "exp81_aggregate.py",
+ "when": "2026-09-25T10:48:34Z",
+ "smoke_gate": {
+  "passed": true,
+  "file": "exp81_smoke_PASSED.json"
+ },
+ "gate_SG_ZC": {
+  "gate": "SG-ZC zero-coupling (doc 73 §2, doc 70 SS3.6)",
+  "pass_assertion": "zero-coupling A2q2 == A2 (max |delta| < 1e-5)",
+  "pass_result": true,
+  "designed_to_fail_assertion": "random_coupling A2q2 == A2 (max |delta| < 1e-5)",
+  "designed_to_fail_result": false,
+  "designed_to_fail_shown_failing": true,
+  "max_delta_zero_coupling_vs_A2": 5.662441253662109e-07,
+  "max_delta_random_coupling_vs_A2": 0.003186512738466263,
+  "pass_tol": 1e-05,
+  "n_items": 20,
+  "mechanism": "XX(0)=I (IsingXX at phi=0 is identity); secondaries stay in |0>; prob_all_zero_on on (qa,qp) marginalises them out, recovering A2's K-wire story_values exactly",
+  "passed": true,
+  "when": "2026-09-10T21:02:56Z",
+  "artifact_sha256": "4c375a41a97c59ea58654ba733b6d2bb8c88681dfd6767abe3471f3e7402c32f"
+ },
+ "gate_SG_FS": {
+  "gate": "SG-FS fixed-scramble floor (doc 66 SS12.2, doc 70 B3)",
+  "scramble_seed": 81999,
+  "scramble_sha256": "a2a5c3005e97f28d85c7ad5046af2a98835a2027e785a2fb8691e213bb7c2078",
+  "n_eval_items": 100,
+  "scrambled_accuracy": 0.53,
+  "real_accuracy": 0.49,
+  "binomial_sd": 0.05,
+  "within_2sd_of_chance": true,
+  "floor_admissible": true,
+  "pass_criterion": "scrambled_acc within 2 binomial SD of 0.5",
+  "designed_to_fail_assertion": "scrambled_acc >= 0.70 (should fail)",
+  "designed_to_fail_result": false,
+  "designed_to_fail_shown_failing": true,
+  "passed": true,
+  "inputs": {
+   "n_train_items": 40,
+   "train_epochs": 5,
+   "arm": "A2q2",
+   "init_spec": {
+    "spec": "exp81 init: N(0,0.10^2), sd-window [0.08,0.12] (doc 62 §24.3)",
+    "arm": "A2q2",
+    "seed": 0,
+    "accepted_stream": 81000000,
+    "accepted_sd": 0.099207,
+    "attempts": 1,
+    "refused_sds": [],
+    "stream_rule": "81_000_000 + 1000*EXP81_ARM_INDEX['A2q2'] + seed + 100_000*attempt",
+    "n_params": 252,
+    "init_vector_sha256": "e49a36f7c5b97e6d438293dec008d76fdef6549086aebe594de45c7a59979984"
+   }
+  },
+  "when": "2026-09-10T21:02:59Z",
+  "artifact_sha256": "d74cf3fc3f36645165e8dcae5093ab71a7e4b3552aee4c8dda7bf42f035fce5b"
+ },
+ "gate_SG_PC": {
+  "gate": "SG-PC param-count (doc 73 §2 build addendum)",
+  "pass_assertion": "A2q2 total == A2-WIDE total (exact match by construction)",
+  "pass_result": true,
+  "designed_to_fail_assertion": "A2q2 total == A2 total (should fail; A2q2 has K_MAX extra params)",
+  "designed_to_fail_result": false,
+  "designed_to_fail_shown_failing": true,
+  "K_MAX": 12,
+  "n_verbs": 15,
+  "param_accounting": {
+   "A2": {
+    "total": 240,
+    "detail": {
+     "arm": "A2",
+     "per_verb": 14,
+     "n_verbs": 15,
+     "readout_shared": 30,
+     "total_trained": 240
+    }
+   },
+   "A2q2": {
+    "total": 252,
+    "detail": {
+     "arm": "A2q2",
+     "arm_label": "A2q2",
+     "per_verb_A2_core": 14,
+     "n_verbs": 15,
+     "readout_shared": 30,
+     "n_coupling_params": 12,
+     "K_MAX": 12,
+     "total_trained": 252,
+     "A2q2_over_A2_ratio": 1.05,
+     "note": "FLAGGED (doc 73 §2): A2q2 coupling gate family is IsingXX (sim.xx), same family as the committed symmetric core. CRY was exp79's gadget and is NOT used here. Application point: ONCE AT INTRO per referent (not per event as in exp79 C-DISCARD). Coupling is POSITIONAL (slot index 0..K_MAX-1), not per-noun, to keep the width axis pure (the A2TI confound). Secondary wires are untouched after intro: A2q2 implements A2 dynamics on a per-referent trained-mixedness initial state. The all-four-wire ladder is OUT OF SCOPE (doc 73 §2 naming clause)."
+    },
+    "extra_over_A2": 12
+   },
+   "A2-WIDE": {
+    "total": 252,
+    "detail": {
+     "arm": "A2-WIDE",
+     "arm_label": "A2-WIDE",
+     "per_verb": 14,
+     "n_verbs": 15,
+     "readout_shared": 30,
+     "n_extra_intro_angles": 12,
+     "K_MAX": 12,
+     "total_trained": 252,
+     "A2WIDE_over_A2_ratio": 1.05,
+     "note": "FLAGGED (doc 73 §2): A2-WIDE adds K_MAX=12 extra trained Ry angles, one per wire SLOT (positional, same index set as A2q2's coupling). Applied as a SECOND Ry after the frozen embedding Ry at intro time, on the PRIMARY wire only (no second qubit). This gives EXACT param match with A2q2 (both 252 total). Extra dressing layers on verb blocks were considered but would quantize at 12*n_verbs=180 extra params, massively overshooting K_MAX=12. The slot-wise intro-Ry is the natural positional analogue of A2q2's coupling and the only way to achieve exact match at this delta. Flagged as a deviation from 'extra dressing layers' if that phrase is read as verb-block dressings."
+    },
+    "extra_over_A2": 12
+   }
+  },
+  "ratios": {
+   "A2q2_over_A2": 1.05,
+   "A2WIDE_over_A2": 1.05,
+   "A2WIDE_over_A2q2": 1.0
+  },
+  "passed": true,
+  "when": "2026-09-10T21:02:59Z",
+  "artifact_sha256": "06fbb6bb4a04de9bec6f7cfc5822c9b1d88299b21d84e7592b661565f78b136c"
+ },
+ "timing": {
+  "derived_from": "measured 3-epoch times (doc 73 §3: derived, not guessed). Build agent task 1.",
+  "n_items_measured": 50,
+  "n_timed_epochs": 3,
+  "k_distribution_timing_slice": [
+   [
+    4,
+    3
+   ],
+   [
+    5,
+    10
+   ],
+   [
+    6,
+    17
+   ],
+   [
+    7,
+    12
+   ],
+   [
+    8,
+    8
+   ]
+  ],
+  "A2_committed_reference": {
+   "wall_time_sec_30epochs_full": 526.7,
+   "n_train_items": 2000,
+   "sec_per_item_per_epoch": 0.00878
+  },
+  "arms": {
+   "A2q2": {
+    "n_items_measured": 50,
+    "n_timed_epochs": 3,
+    "wall_sec_total": 2.53,
+    "sec_per_item_per_epoch": 0.01689
+   },
+   "A2-WIDE": {
+    "n_items_measured": 50,
+    "n_timed_epochs": 3,
+    "wall_sec_total": 1.45,
+    "sec_per_item_per_epoch": 0.00969
+   }
+  },
+  "estimates": {
+   "A2q2": {
+    "sec_per_item_per_epoch_measured": 0.01689,
+    "ratio_vs_A2_baseline": 1.92,
+    "estimated_sec_per_seed": 1013.0,
+    "estimated_hours_per_seed": 0.28,
+    "n_seeds": 5,
+    "estimated_total_wall_hours_5workers": 0.28
+   },
+   "A2-WIDE": {
+    "sec_per_item_per_epoch_measured": 0.00969,
+    "ratio_vs_A2_baseline": 1.1,
+    "estimated_sec_per_seed": 581.0,
+    "estimated_hours_per_seed": 0.16,
+    "n_seeds": 5,
+    "estimated_total_wall_hours_5workers": 0.16
+   }
+  },
+  "n_trainable_units_total": 15,
+  "note": "A2q2 at 2K wires has 2^(2K) state vs A2's 2^K -- ratio expected 16x at K=4, 256x at K=8. A2-WIDE uses K wires (same as A2), overhead from extra intro Ry only.",
+  "machine_load_note": "exp82 workers may be running; ratio vs A2 baseline is load-robust; absolute times may be contention-affected.",
+  "when": "2026-09-10T04:23:55Z"
+ },
+ "floor_admissibility": {
+  "accuracy": 0.53,
+  "n": 100,
+  "sd": 0.05,
+  "deviation_from_chance": 0.03,
+  "within_2sd": true,
+  "admissible": true,
+  "source": "exp81_gate_SG_FS.json",
+  "gate_passed": true,
+  "note": "Smoke proxy (SG-FS). Trained floor-of-record is A2q2-FLOOR arm (5 seeds, 30 epochs)."
+ },
+ "floor_of_record": {
+  "accuracy": 0.48933333333333334,
+  "n": 1500,
+  "sd": 0.0129,
+  "deviation_from_chance": 0.0107,
+  "within_2sd": true,
+  "admissible": true,
+  "source": "A2q2-FLOOR trained arm (mean over seeds)",
+  "n_seeds": 5,
+  "per_seed_accs": [
+   0.48533333333333334,
+   0.49333333333333335,
+   0.48133333333333334,
+   0.49133333333333334,
+   0.49533333333333335
+  ]
+ },
+ "bar_provenance": {
+  "chance_level": 0.5,
+  "reason": "balanced yes/no task (exp41r)",
+  "ceiling_comparator": "B1 (structure-matched classical baseline, ~0.50 union acc)",
+  "bars_are_differential": "vs A2-RETRAIN and vs B1; NO absolute threshold",
+  "significance_primary": "seed-level paired t, df=4, one-sided p<0.05 (doc 70 B2 correction)",
+  "significance_descriptive": "item-level sign-flip permutation (reported, not decision-making)",
+  "margin_leg": "mean(A2q2 seeds) - mean(baseline seeds) >= 0.06",
+  "doc_70_b1_b2_b3": true,
+  "doc_73_two_leg_form": true
+ },
+ "width_per_referent_helps": false,
+ "tier_q_q2": false,
+ "gate_met": true,
+ "trainability_failure": false,
+ "sub_bar_positive_direction": false,
+ "owes_confirm": false,
+ "owes_confirm_scope": null,
+ "A2_WIDE_invalidation": {
+  "invalidates_width_bar": false,
+  "bar_A2WIDE_vs_A2RETRAIN": {
+   "met": false,
+   "definition": "A2-WIDE beats A2-RETRAIN: paired t p<0.05 (one-sided, df=4) AND margin >= 0.06",
+   "leg_t": {
+    "t": 0.0556,
+    "p": 0.47915,
+    "n": 5,
+    "mean_diff": 0.0004,
+    "se": 0.0072,
+    "df": 4
+   },
+   "leg_margin": {
+    "mean_A2-WIDE": 0.5109,
+    "mean_A2-RETRAIN": 0.5105,
+    "margin": 0.0004,
+    "bar": 0.06,
+    "met": false
+   },
+   "sub_bar_positive_direction": false,
+   "owes_confirm_near_miss": false,
+   "descriptive_item_sign_flip": {
+    "p": null,
+    "n_items": 0,
+    "note": "no data; DESCRIPTIVE ONLY (doc 70 B2)"
+   },
+   "mde": {
+    "n_seeds": 5,
+    "paired_null_se": 0.00719,
+    "observed_mean_diff": 0.0004,
+    "margin_bar": 0.06,
+    "mde_note": "Paired null SE = 0.0072; mean diff = 0.0004; bar margin = 0.06. To achieve p<0.05 (one-sided, df=4) requires effect >= ~0.0118 (1.645 × SE). Power at bar (0.06) with SE 0.0072: approx 100%."
+   },
+   "n_valid_seed_pairs": 5
+  },
+  "interpretation": "A2-WIDE does NOT match A2q2 vs A2-RETRAIN -- capacity confound does not apply; architecture reading is admitted."
+ },
+ "bar_width_per_referent_helps": {
+  "final_verdict": false,
+  "pre_invalidation_verdict": false,
+  "invalidated_by_A2_WIDE": false,
+  "detail": {
+   "met": false,
+   "definition": "A2q2 beats A2-RETRAIN: paired t p<0.05 (one-sided, df=4) AND margin >= 0.06",
+   "leg_t": {
+    "t": 1.5733,
+    "p": 0.09538,
+    "n": 5,
+    "mean_diff": 0.0092,
+    "se": 0.0058,
+    "df": 4
+   },
+   "leg_margin": {
+    "mean_A2q2": 0.5197,
+    "mean_A2-RETRAIN": 0.5105,
+    "margin": 0.0092,
+    "bar": 0.06,
+    "met": false
+   },
+   "sub_bar_positive_direction": false,
+   "owes_confirm_near_miss": false,
+   "descriptive_item_sign_flip": {
+    "p": null,
+    "n_items": 0,
+    "note": "no data; DESCRIPTIVE ONLY (doc 70 B2)"
+   },
+   "mde": {
+    "n_seeds": 5,
+    "paired_null_se": 0.00585,
+    "observed_mean_diff": 0.0092,
+    "margin_bar": 0.06,
+    "mde_note": "Paired null SE = 0.0058; mean diff = 0.0092; bar margin = 0.06. To achieve p<0.05 (one-sided, df=4) requires effect >= ~0.0096 (1.645 × SE). Power at bar (0.06) with SE 0.0058: approx 100%."
+   },
+   "n_valid_seed_pairs": 5
+  }
+ },
+ "bar_tier_q_q2": {
+  "final_verdict": false,
+  "detail": {
+   "met": false,
+   "definition": "A2q2 beats B1: paired t p<0.05 (one-sided, df=4) AND margin >= 0.06",
+   "leg_t": {
+    "t": 4.0918,
+    "p": 0.00748,
+    "n": 5,
+    "mean_diff": 0.0199,
+    "se": 0.0049,
+    "df": 4
+   },
+   "leg_margin": {
+    "mean_A2q2": 0.5197,
+    "mean_B1": 0.4999,
+    "margin": 0.0199,
+    "bar": 0.06,
+    "met": false
+   },
+   "sub_bar_positive_direction": true,
+   "owes_confirm_near_miss": false,
+   "descriptive_item_sign_flip": {
+    "p": null,
+    "n_items": 0,
+    "note": "no data; DESCRIPTIVE ONLY (doc 70 B2)"
+   },
+   "mde": {
+    "n_seeds": 5,
+    "paired_null_se": 0.00486,
+    "observed_mean_diff": 0.01987,
+    "margin_bar": 0.06,
+    "mde_note": "Paired null SE = 0.0049; mean diff = 0.0199; bar margin = 0.06. To achieve p<0.05 (one-sided, df=4) requires effect >= ~0.0080 (1.645 × SE). Power at bar (0.06) with SE 0.0049: approx 100%."
+   },
+   "n_valid_seed_pairs": 5
+  }
+ },
+ "bar_A2q2_vs_committed_A2_informational": {
+  "note": "INFORMATIONAL ONLY: committed A2 is drift anchor, not primary paired baseline (use A2-RETRAIN for pairing)",
+  "detail": {
+   "met": false,
+   "definition": "A2q2 beats A2-committed: paired t p<0.05 (one-sided, df=4) AND margin >= 0.06",
+   "leg_t": {
+    "t": 0.2906,
+    "p": 0.3929,
+    "n": 5,
+    "mean_diff": 0.0031,
+    "se": 0.0106,
+    "df": 4
+   },
+   "leg_margin": {
+    "mean_A2q2": 0.5197,
+    "mean_A2-committed": 0.5167,
+    "margin": 0.0031,
+    "bar": 0.06,
+    "met": false
+   },
+   "sub_bar_positive_direction": false,
+   "owes_confirm_near_miss": false,
+   "descriptive_item_sign_flip": null,
+   "mde": {
+    "n_seeds": 5,
+    "paired_null_se": 0.01055,
+    "observed_mean_diff": 0.00307,
+    "margin_bar": 0.06,
+    "mde_note": "Paired null SE = 0.0106; mean diff = 0.0031; bar margin = 0.06. To achieve p<0.05 (one-sided, df=4) requires effect >= ~0.0174 (1.645 × SE). Power at bar (0.06) with SE 0.0106: approx 100%."
+   },
+   "n_valid_seed_pairs": 5
+  }
+ },
+ "arm_means_test_union": {
+  "A2q2": 0.5197,
+  "A2-WIDE": 0.5109,
+  "A2-RETRAIN": 0.5105,
+  "A2q2-FLOOR": 0.4893,
+  "A2 (committed)": 0.5167,
+  "B1 (committed)": 0.4999
+ },
+ "per_seed_accs": {
+  "A2q2": [
+   0.506,
+   0.5153333333333333,
+   0.5246666666666666,
+   0.5206666666666667,
+   0.532
+  ],
+  "A2-WIDE": [
+   0.5266666666666666,
+   0.5213333333333333,
+   0.49866666666666665,
+   0.5086666666666667,
+   0.49933333333333335
+  ],
+  "A2-RETRAIN": [
+   0.5066666666666667,
+   0.514,
+   0.5226666666666666,
+   0.508,
+   0.5013333333333333
+  ],
+  "A2q2-FLOOR": [
+   0.48533333333333334,
+   0.49333333333333335,
+   0.48133333333333334,
+   0.49133333333333334,
+   0.49533333333333335
+  ],
+  "A2 (committed)": [
+   0.5326666666666666,
+   0.5226666666666666,
+   0.48733333333333334,
+   0.5193333333333333,
+   0.5213333333333333
+  ],
+  "B1 (committed)": [
+   0.5033333333333333,
+   0.498,
+   0.496,
+   0.49933333333333335,
+   0.5026666666666667
+  ]
+ },
+ "A2RETRAIN_vs_A2committed_t": {
+  "note": "Descriptive: checks A2-RETRAIN reproduces committed A2 under same harness (t test, no bar)",
+  "result": {
+   "t": -0.567,
+   "p": 0.6995,
+   "n": 5,
+   "mean_diff": -0.0061,
+   "se": 0.0108,
+   "df": 4
+  }
+ },
+ "completeness": {
+  "A2q2": {
+   "n_loaded": 5,
+   "n_expected": 5
+  },
+  "A2-WIDE": {
+   "n_loaded": 5,
+   "n_expected": 5
+  },
+  "A2-RETRAIN": {
+   "n_loaded": 5,
+   "n_expected": 5
+  },
+  "A2q2-FLOOR": {
+   "n_loaded": 5,
+   "n_expected": 5
+  },
+  "A2 (committed)": {
+   "n_loaded": 5,
+   "n_expected": 5
+  },
+  "B1 (committed)": {
+   "n_loaded": 5,
+   "n_expected": 5
+  }
+ },
+ "param_accounting": {
+  "A2": {
+   "total": 240,
+   "detail": {
+    "arm": "A2",
+    "per_verb": 14,
+    "n_verbs": 15,
+    "readout_shared": 30,
+    "total_trained": 240
+   }
+  },
+  "A2q2": {
+   "total": 252,
+   "detail": {
+    "arm": "A2q2",
+    "arm_label": "A2q2",
+    "per_verb_A2_core": 14,
+    "n_verbs": 15,
+    "readout_shared": 30,
+    "n_coupling_params": 12,
+    "K_MAX": 12,
+    "total_trained": 252,
+    "A2q2_over_A2_ratio": 1.05,
+    "note": "FLAGGED (doc 73 §2): A2q2 coupling gate family is IsingXX (sim.xx), same family as the committed symmetric core. CRY was exp79's gadget and is NOT used here. Application point: ONCE AT INTRO per referent (not per event as in exp79 C-DISCARD). Coupling is POSITIONAL (slot index 0..K_MAX-1), not per-noun, to keep the width axis pure (the A2TI confound). Secondary wires are untouched after intro: A2q2 implements A2 dynamics on a per-referent trained-mixedness initial state. The all-four-wire ladder is OUT OF SCOPE (doc 73 §2 naming clause)."
+   },
+   "extra_over_A2": 12
+  },
+  "A2-WIDE": {
+   "total": 252,
+   "detail": {
+    "arm": "A2-WIDE",
+    "arm_label": "A2-WIDE",
+    "per_verb": 14,
+    "n_verbs": 15,
+    "readout_shared": 30,
+    "n_extra_intro_angles": 12,
+    "K_MAX": 12,
+    "total_trained": 252,
+    "A2WIDE_over_A2_ratio": 1.05,
+    "note": "FLAGGED (doc 73 §2): A2-WIDE adds K_MAX=12 extra trained Ry angles, one per wire SLOT (positional, same index set as A2q2's coupling). Applied as a SECOND Ry after the frozen embedding Ry at intro time, on the PRIMARY wire only (no second qubit). This gives EXACT param match with A2q2 (both 252 total). Extra dressing layers on verb blocks were considered but would quantize at 12*n_verbs=180 extra params, massively overshooting K_MAX=12. The slot-wise intro-Ry is the natural positional analogue of A2q2's coupling and the only way to achieve exact match at this delta. Flagged as a deviation from 'extra dressing layers' if that phrase is read as verb-block dressings."
+   },
+   "extra_over_A2": 12
+  }
+ },
+ "param_ratios": {
+  "A2q2_over_A2": 1.05,
+  "A2WIDE_over_A2": 1.05,
+  "A2WIDE_over_A2q2": 1.0
+ },
+ "K_MAX": 12,
+ "third_outcomes": {
+  "sub_bar_positive_direction": {
+   "fired": false,
+   "interpretation": "A2q2 beats A2-RETRAIN (p<0.05) but margin < 0.06 -- directional signal below threshold; feeds doc 74-style closure later."
+  },
+  "trainability_failure": {
+   "fired": false,
+   "interpretation": "A2q2 NEVER fired gate_met_unit (loss decreased AND max|Δcoupling| >= 0.10 rad) in any seed. The wall extends to local width."
+  }
+ },
+ "gate_met_per_unit": {
+  "values": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "any_true": true,
+  "rule": "loss_decreased AND max|Δcoupling| >= 0.10 rad per unit",
+  "n_units_with_data": 5
+ }
+}

@@ -1,0 +1,2607 @@
+{
+ "meta": {
+  "purpose": "D4 confirmed human-noun inventory of record",
+  "gate": "doc 59 SS8.2 sample-audit protocol, closed 2026-08-28: user approval (verbatim: \"confirm the nouns, approved from my side\") + Opus lexical double-check over all 600 (d4_model_check.json, reviewery) with its 81 vetoes APPLIED",
+  "n_confirmed": 519,
+  "n_vetoed": 81,
+  "nouns_sha256": "34e95fc6e0429ecb9284f825e5ac411eba48865db3a3ce585aaf6d6aa26328f0",
+  "caveat": "model dominance judgments are informed estimates, not corpus measurements; any experiment registration naming memberships still states its own provenance"
+ },
+ "nouns": [
+  {
+   "noun": "الخواجة",
+   "wazn_tag": "other",
+   "note": "Human ('the Westerner/foreigner'), but colloquial-Egyptian and now somewhat dated; ta-marbuta form."
+  },
+  {
+   "noun": "المصري",
+   "wazn_tag": "mu_participle",
+   "note": "Extremely common family name and a club name (المصري البورسعيدي), but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept (the nationality reading dominates). Wazn tag mu_participle is an error; it is a nisba."
+  },
+  {
+   "noun": "العاشق",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "العريان",
+   "wazn_tag": "other",
+   "note": "Egyptian family name (عصام العريان was prominent in the corpus era), but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept ('naked' is fully live in Egyptian usage)."
+  },
+  {
+   "noun": "الاخ",
+   "wazn_tag": "other",
+   "note": "Base form; الاخو (also in the inventory) is its non-standard variant."
+  },
+  {
+   "noun": "الفنان",
+   "wazn_tag": "faaal_or_fa33aal",
+   "note": null
+  },
+  {
+   "noun": "السفير",
+   "wazn_tag": "faiil",
+   "note": null
+  },
+  {
+   "noun": "السوري",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "المجنون",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الانسان",
+   "wazn_tag": "other",
+   "note": null
+  },
+  {
+   "noun": "اليمني",
+   "wazn_tag": "nisba_yaa",
+   "note": "Near-duplicate of اليماني (also in the inventory); اليمني is the ordinary nationality form."
+  },
+  {
+   "noun": "الرئيس",
+   "wazn_tag": "faiil",
+   "note": null
+  },
+  {
+   "noun": "الاستاذ",
+   "wazn_tag": "other",
+   "note": null
+  },
+  {
+   "noun": "الراجل",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "الامير",
+   "wazn_tag": "faiil",
+   "note": null
+  },
+  {
+   "noun": "الخباز",
+   "wazn_tag": "faaal_or_fa33aal",
+   "note": null
+  },
+  {
+   "noun": "الكويتي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "المعلق",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "المتحدث",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "السواق",
+   "wazn_tag": "faaal_or_fa33aal",
+   "note": null
+  },
+  {
+   "noun": "الساحر",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "البلجيكي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "الجزائري",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "القديس",
+   "wazn_tag": "faiil",
+   "note": null
+  },
+  {
+   "noun": "الكوري",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "اللواء",
+   "wazn_tag": "faaal_or_fa33aal",
+   "note": "Human as a military rank/title (اللواء فلان) but also 'brigade' and, in Jordan, an administrative district."
+  },
+  {
+   "noun": "الامريكي",
+   "wazn_tag": "nisba_yaa",
+   "note": "Orthographic duplicate of الاميركي (also in the inventory)."
+  },
+  {
+   "noun": "المسيحي",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "البدوي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "الحبشي",
+   "wazn_tag": "nisba_yaa",
+   "note": "Older ethnic term for the same referent as الاثيوبي (also in the inventory); also a common family name."
+  },
+  {
+   "noun": "المسئول",
+   "wazn_tag": "mu_participle",
+   "note": "Hamza-variant duplicate of المسؤول (also in the inventory); same word, both kept only because both are AraVec vocabulary types."
+  },
+  {
+   "noun": "الوالد",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "السياسي",
+   "wazn_tag": "nisba_yaa",
+   "note": "Kept because the bare person-noun use is genuinely common (سياسي بارز، المحلل السياسي), unlike الفني/الاقتصادي; but the adjective 'political' is also frequent."
+  },
+  {
+   "noun": "السرياني",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "الغرقان",
+   "wazn_tag": "other",
+   "note": "Dialectal participle 'drowned/soaked'; applies to people but also to soaked objects."
+  },
+  {
+   "noun": "الخول",
+   "wazn_tag": "other",
+   "note": "Human (Egyptian slur for an effeminate or passive homosexual man); extremely vulgar."
+  },
+  {
+   "noun": "المدرب",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "المؤيد",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "المزيف",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الشاب",
+   "wazn_tag": "other",
+   "note": "Human ('young man') but also the adjective 'young' and, unvocalised, الشَّبّ 'alum'."
+  },
+  {
+   "noun": "المسلم",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "السوداني",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "الامين",
+   "wazn_tag": "faiil",
+   "note": "Given name and family name, but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept (الأمين العام 'secretary-general' is highly frequent); also a divine-adjacent epithet."
+  },
+  {
+   "noun": "الحقير",
+   "wazn_tag": "faiil",
+   "note": null
+  },
+  {
+   "noun": "الفرنسي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "المجرم",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "القطري",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "العسكري",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "المستفيد",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الطاغيه",
+   "wazn_tag": "nisba_yaa",
+   "note": "Ta-marbuta written as ه; equals الطاغية 'tyrant', and is a near-duplicate of الطاغي (also in the inventory). Human but wazn-tagged nisba_yaa in error."
+  },
+  {
+   "noun": "الدكتور",
+   "wazn_tag": "other",
+   "note": null
+  },
+  {
+   "noun": "الرسول",
+   "wazn_tag": "other",
+   "note": "Human, but in practice a rigid designator for the Prophet rather than a generic 'messenger' referent slot."
+  },
+  {
+   "noun": "التلميذ",
+   "wazn_tag": "other",
+   "note": null
+  },
+  {
+   "noun": "البليد",
+   "wazn_tag": "faiil",
+   "note": null
+  },
+  {
+   "noun": "الثائر",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "المعلن",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الشيخ",
+   "wazn_tag": "other",
+   "note": null
+  },
+  {
+   "noun": "الراشد",
+   "wazn_tag": "faail",
+   "note": "Common Gulf family name and part of الخلفاء الراشدون, but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept ('adult, of sound judgement' is live in legal/medical talk)."
+  },
+  {
+   "noun": "المشائخ",
+   "wazn_tag": "other",
+   "note": "Broken plural 'sheikhs' — human, but violates the masculine-singular convention of the inventory."
+  },
+  {
+   "noun": "المشير",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الاسير",
+   "wazn_tag": "faiil",
+   "note": null
+  },
+  {
+   "noun": "المحقق",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "العيسوي",
+   "wazn_tag": "nisba_yaa",
+   "note": "Family name (Al-Issawi), but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept (follower of Jesus); low currency as a descriptor."
+  },
+  {
+   "noun": "المستخدم",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الرقيب",
+   "wazn_tag": "faiil",
+   "note": "Also a divine name and a military rank; the human 'observer/censor/sergeant' readings are live."
+  },
+  {
+   "noun": "المتطوع",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "المرء",
+   "wazn_tag": "other",
+   "note": null
+  },
+  {
+   "noun": "الشقيق",
+   "wazn_tag": "faiil",
+   "note": "Human ('brother') but also the diplomatic adjective for states (البلد الشقيق)."
+  },
+  {
+   "noun": "الحاكم",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "العراقي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "الباشا",
+   "wazn_tag": "faail",
+   "note": "Human honorific title; Ottoman-era and now colloquial address."
+  },
+  {
+   "noun": "الصديق",
+   "wazn_tag": "faiil",
+   "note": "Human 'friend', but also the epithet of Abu Bakr (أبو بكر الصديق), which inflates its frequency."
+  },
+  {
+   "noun": "السعودي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "الخليجي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "الشاعر",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "المتخلف",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الاجنبي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "الملحن",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الشهيد",
+   "wazn_tag": "faiil",
+   "note": null
+  },
+  {
+   "noun": "الاموي",
+   "wazn_tag": "nisba_yaa",
+   "note": "Denotes an Umayyad person, but dominant Twitter use is attributive to non-humans (الدولة الأموية، المسجد الأموي)."
+  },
+  {
+   "noun": "المولود",
+   "wazn_tag": "mu_participle",
+   "note": "Human ('newborn') but also the passive participle 'born' and the Prophet's مولد derivatives."
+  },
+  {
+   "noun": "الحكيم",
+   "wazn_tag": "faiil",
+   "note": "Also a divine name; human readings ('sage', and in dialect 'the doctor') are live, and it is a prominent Iraqi family name."
+  },
+  {
+   "noun": "الناجح",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "النائب",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "الرائد",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "المحافظ",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الانجليزي",
+   "wazn_tag": "nisba_yaa",
+   "note": "Orthographic duplicate of الانكليزي and الانقليزي, both also in the inventory."
+  },
+  {
+   "noun": "المؤذن",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "القائل",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "الناشط",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "المنتفع",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الشخص",
+   "wazn_tag": "other",
+   "note": null
+  },
+  {
+   "noun": "المؤمن",
+   "wazn_tag": "mu_participle",
+   "note": "Also a divine name (al-Mu'min), but the human 'believer' reading is overwhelmingly dominant on Twitter."
+  },
+  {
+   "noun": "الصاحب",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "الريس",
+   "wazn_tag": "other",
+   "note": "Dialectal form of الرئيس; human, colloquial (boss/skipper)."
+  },
+  {
+   "noun": "الوزير",
+   "wazn_tag": "faiil",
+   "note": null
+  },
+  {
+   "noun": "النصير",
+   "wazn_tag": "faiil",
+   "note": "Also part of the divine formula نعم المولى ونعم النصير; the human 'supporter' reading survives, and it is a given name."
+  },
+  {
+   "noun": "الايراني",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "الاسيوي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "المغربي",
+   "wazn_tag": "mu_participle",
+   "note": "Human nationality nisba (wazn tag mu_participle is an error); also collides with المغرب 'sunset/Maghrib prayer' derivatives and is a common family name."
+  },
+  {
+   "noun": "المرشد",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الدجال",
+   "wazn_tag": "faaal_or_fa33aal",
+   "note": null
+  },
+  {
+   "noun": "الزعيم",
+   "wazn_tag": "faiil",
+   "note": null
+  },
+  {
+   "noun": "الكوبي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "الشامي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "البحريني",
+   "wazn_tag": "nisba_yaa",
+   "note": "Nationality form; contrast البحراني (also in the inventory), which in usage denotes Bahraini Shia specifically."
+  },
+  {
+   "noun": "الغريب",
+   "wazn_tag": "faiil",
+   "note": "Human ('the stranger') but the discourse use والغريب أن and the adjective 'strange' of things are at least as frequent."
+  },
+  {
+   "noun": "العبد",
+   "wazn_tag": "other",
+   "note": null
+  },
+  {
+   "noun": "الظالم",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "الابو",
+   "wazn_tag": "other",
+   "note": "Non-standard written form of الاب (also in the inventory), from أبو-constructions; human but orthographically defective."
+  },
+  {
+   "noun": "الاسرائيلي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "الغريق",
+   "wazn_tag": "faiil",
+   "note": null
+  },
+  {
+   "noun": "الفرد",
+   "wazn_tag": "other",
+   "note": "Human ('individual') but also 'a single unit' of non-humans, and 'a pistol' in some dialects."
+  },
+  {
+   "noun": "التونسي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "الهلالي",
+   "wazn_tag": "nisba_yaa",
+   "note": "Family name and tribal nisba (بنو هلال), but on Gulf Twitter dominantly 'an Al-Hilal club supporter' — still a human referent."
+  },
+  {
+   "noun": "الخطيب",
+   "wazn_tag": "faiil",
+   "note": "Family name (very common), but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept ('preacher/orator', and dialectal 'fiance')."
+  },
+  {
+   "noun": "الفقيه",
+   "wazn_tag": "faiil",
+   "note": null
+  },
+  {
+   "noun": "الليبي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "الحاج",
+   "wazn_tag": "other",
+   "note": null
+  },
+  {
+   "noun": "الراصد",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "العجوز",
+   "wazn_tag": "other",
+   "note": "Human ('old person') but frequently female-referring in dialect and pejorative."
+  },
+  {
+   "noun": "المنظم",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الدراويش",
+   "wazn_tag": "other",
+   "note": "Broken plural 'dervishes' — human, but plural; also a nickname for Zamalek/Ahli fan groups in Egyptian football talk."
+  },
+  {
+   "noun": "الدخيل",
+   "wazn_tag": "faiil",
+   "note": "Human ('intruder, outsider') but also the linguistic 'loanword' (لفظ دخيل); also a family name."
+  },
+  {
+   "noun": "الروسي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "العميد",
+   "wazn_tag": "faiil",
+   "note": null
+  },
+  {
+   "noun": "العضو",
+   "wazn_tag": "other",
+   "note": "Human ('member' of a body) but also the anatomical 'organ'."
+  },
+  {
+   "noun": "الزوج",
+   "wazn_tag": "other",
+   "note": null
+  },
+  {
+   "noun": "الاميركي",
+   "wazn_tag": "nisba_yaa",
+   "note": "Orthographic duplicate of الامريكي (also in the inventory)."
+  },
+  {
+   "noun": "الراقص",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "الاعزب",
+   "wazn_tag": "other",
+   "note": null
+  },
+  {
+   "noun": "الرسام",
+   "wazn_tag": "faaal_or_fa33aal",
+   "note": null
+  },
+  {
+   "noun": "الموسيقار",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "القاتل",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "الطيب",
+   "wazn_tag": "other",
+   "note": "Common given/family name (and a Sudanese/Egyptian surname), but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept ('the good/kind one' is live); homograph with الطيب 'perfume'."
+  },
+  {
+   "noun": "المطوع",
+   "wazn_tag": "mu_participle",
+   "note": "Gulf 'religious enforcer / Quran teacher'; human, regionally marked."
+  },
+  {
+   "noun": "المحامي",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الاب",
+   "wazn_tag": "other",
+   "note": "Base form; الابو (also in the inventory) is its non-standard variant."
+  },
+  {
+   "noun": "المذيع",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "المستشار",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الاوروبي",
+   "wazn_tag": "nisba_yaa",
+   "note": "Orthographic duplicate of الاوربي and الاروبي, both also in the inventory."
+  },
+  {
+   "noun": "الداعية",
+   "wazn_tag": "other",
+   "note": "Human (preacher/propagandist); ta-marbuta form, and the CAMeL gloss also lists a non-human 'motive' reading."
+  },
+  {
+   "noun": "الكاذب",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "المنتظر",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الصراف",
+   "wazn_tag": "faaal_or_fa33aal",
+   "note": "Human ('cashier, money changer') but competes with the very frequent الصراف الآلي 'ATM'."
+  },
+  {
+   "noun": "الكذاب",
+   "wazn_tag": "faaal_or_fa33aal",
+   "note": null
+  },
+  {
+   "noun": "الولي",
+   "wazn_tag": "other",
+   "note": "Human ('guardian, saint, patron') but also the divine name الولي and abstract 'authority' (ولي الأمر)."
+  },
+  {
+   "noun": "المجهول",
+   "wazn_tag": "mu_participle",
+   "note": "Human as 'unidentified person' but equally 'unknown quantity/thing' (ضد مجهول، المجهول)."
+  },
+  {
+   "noun": "القاطن",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "الاسباني",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "العميل",
+   "wazn_tag": "faiil",
+   "note": "Human, but note two live senses: 'client/customer' (commercial) and 'collaborator/agent' (political slur)."
+  },
+  {
+   "noun": "اليتيم",
+   "wazn_tag": "faiil",
+   "note": null
+  },
+  {
+   "noun": "الوصي",
+   "wazn_tag": "other",
+   "note": "Human ('guardian/trustee'); legal role term, and the Shia theological الوصي."
+  },
+  {
+   "noun": "الشحات",
+   "wazn_tag": "faaal_or_fa33aal",
+   "note": "Egyptian 'beggar' (human) and also a common Egyptian family name."
+  },
+  {
+   "noun": "الايطالي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "الابن",
+   "wazn_tag": "other",
+   "note": null
+  },
+  {
+   "noun": "المحب",
+   "wazn_tag": "other",
+   "note": null
+  },
+  {
+   "noun": "الحابل",
+   "wazn_tag": "faail",
+   "note": "Human only inside the frozen idiom اختلط الحابل بالنابل; no independent referential use."
+  },
+  {
+   "noun": "الراوي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "المنقذ",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "المبتدئ",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "المدقق",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الياباني",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "الراعي",
+   "wazn_tag": "nisba_yaa",
+   "note": "Human ('shepherd, patron, sponsor') but also a well-known Saudi dairy brand."
+  },
+  {
+   "noun": "النقيب",
+   "wazn_tag": "faiil",
+   "note": null
+  },
+  {
+   "noun": "البخيل",
+   "wazn_tag": "faiil",
+   "note": null
+  },
+  {
+   "noun": "الالماني",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "المساعد",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "السائح",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "الشيبان",
+   "wazn_tag": "other",
+   "note": "Gulf dialect plural/collective 'old men' as well as the tribal name شيبان; human but not a masculine singular."
+  },
+  {
+   "noun": "الثرثار",
+   "wazn_tag": "other",
+   "note": null
+  },
+  {
+   "noun": "الكرام",
+   "wazn_tag": "faiil",
+   "note": "Plural of كريم used of people (الضيوف الكرام) — human, but plural and formulaic."
+  },
+  {
+   "noun": "المهاجم",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الست",
+   "wazn_tag": "other",
+   "note": "Refers to a woman ('the lady', Egyptian ست); female referent despite the inventory's masculine convention, and also the fixed epithet of Umm Kulthum."
+  },
+  {
+   "noun": "الصيدلي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "الكفار",
+   "wazn_tag": "faaal_or_fa33aal",
+   "note": "Plural 'infidels' — human, but plural; heavily polemical register."
+  },
+  {
+   "noun": "الوارث",
+   "wazn_tag": "faail",
+   "note": "Also a divine name (al-Warith); the human 'heir' reading is live in legal and everyday talk."
+  },
+  {
+   "noun": "الشرير",
+   "wazn_tag": "faiil",
+   "note": null
+  },
+  {
+   "noun": "الالباني",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "البصري",
+   "wazn_tag": "nisba_yaa",
+   "note": "Family name and scholarly nisba (الحسن البصري), but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept (from Basra)."
+  },
+  {
+   "noun": "المستورد",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الافغاني",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "المحتاج",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "التركي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "العقيد",
+   "wazn_tag": "faiil",
+   "note": null
+  },
+  {
+   "noun": "القيادي",
+   "wazn_tag": "nisba_yaa",
+   "note": "Human ('a leading figure', قيادي في الحزب) but also an ordinary adjective 'leadership-related'."
+  },
+  {
+   "noun": "القيصر",
+   "wazn_tag": "other",
+   "note": "Human ('Caesar/tsar') but also an epithet (قيصر الغناء) and a codename (قانون قيصر)."
+  },
+  {
+   "noun": "الاخو",
+   "wazn_tag": "other",
+   "note": "Non-standard written form of الاخ (also in the inventory), from dialectal/construct spellings; human but orthographically defective."
+  },
+  {
+   "noun": "المبدع",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "المتشدد",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "البليغ",
+   "wazn_tag": "faiil",
+   "note": "Human as 'eloquent speaker', but the adjective mostly modifies speech and effects (الأثر البليغ)."
+  },
+  {
+   "noun": "المنافق",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الخال",
+   "wazn_tag": "other",
+   "note": "Human ('maternal uncle') but also 'mole/beauty spot' (خال) in poetry."
+  },
+  {
+   "noun": "الفتي",
+   "wazn_tag": "other",
+   "note": "Human (الفتى 'youth') but the alif-maqsura is written as ya, and فَتِيّ 'youthful/strong' is a homograph."
+  },
+  {
+   "noun": "الكافر",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "الساعي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "القاري",
+   "wazn_tag": "nisba_yaa",
+   "note": "Hamza-less spelling of القارئ 'reader' (also in the inventory); the CAMeL gloss 'villager' is a spurious قروي reading."
+  },
+  {
+   "noun": "الخراط",
+   "wazn_tag": "faaal_or_fa33aal",
+   "note": "Egyptian 'bullshitter/braggart' and the trade 'lathe turner'; human, colloquial."
+  },
+  {
+   "noun": "الحم",
+   "wazn_tag": "other",
+   "note": "Rare 'father-in-law'; the bare definite spelling is largely a fragment/noise on Twitter."
+  },
+  {
+   "noun": "الفذ",
+   "wazn_tag": "other",
+   "note": "Evaluative adjective 'peerless', used attributively of persons (قائد فذ); human-applying but not a referent noun on its own."
+  },
+  {
+   "noun": "الاصلع",
+   "wazn_tag": "other",
+   "note": null
+  },
+  {
+   "noun": "الحرامي",
+   "wazn_tag": "nisba_yaa",
+   "note": "Dialectal 'thief'; human, colloquial."
+  },
+  {
+   "noun": "الرفيق",
+   "wazn_tag": "faiil",
+   "note": null
+  },
+  {
+   "noun": "الداعي",
+   "wazn_tag": "nisba_yaa",
+   "note": "Human ('the one who calls/invites', الداعي إلى الله) with strong Quranic support; kept, but the abstract 'reason' sense exists (though the frequent لا داعي lacks the article)."
+  },
+  {
+   "noun": "العابد",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "البائع",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "الاعمي",
+   "wazn_tag": "other",
+   "note": "Alif-maqsura written as ya (الأعمى). Human, but the spelling is defective."
+  },
+  {
+   "noun": "البار",
+   "wazn_tag": "other",
+   "note": "Human as 'dutiful/pious' (الابن البار), but shares its spelling with the divine name البَرّ and with the loanword البار 'the bar'."
+  },
+  {
+   "noun": "الجاني",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "الخاسر",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "المفسر",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "المدخن",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "البرازيلي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "الفارس",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "الارهابي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "المادح",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "المدرس",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "المجوسي",
+   "wazn_tag": "mu_participle",
+   "note": "Human ('Magian/Zoroastrian') but almost entirely a sectarian slur in Gulf Twitter usage."
+  },
+  {
+   "noun": "القاضي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "الفاجر",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "المسكين",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الاوربي",
+   "wazn_tag": "nisba_yaa",
+   "note": "Orthographic duplicate of الاوروبي and الاروبي, both also in the inventory."
+  },
+  {
+   "noun": "المصور",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "المحترم",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "السنغالي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "الملحد",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "العشيق",
+   "wazn_tag": "faiil",
+   "note": null
+  },
+  {
+   "noun": "المفتي",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "السامع",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "المغتاب",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "القارئ",
+   "wazn_tag": "faail",
+   "note": "Hamza-variant duplicate of القاري (also in the inventory, mis-glossed there as 'villager')."
+  },
+  {
+   "noun": "العم",
+   "wazn_tag": "other",
+   "note": null
+  },
+  {
+   "noun": "المطرب",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "البروفسور",
+   "wazn_tag": "other",
+   "note": "Transliteration duplicate of البروفيسور (also in the inventory)."
+  },
+  {
+   "noun": "العشير",
+   "wazn_tag": "faiil",
+   "note": "Archaic 'companion/consort'; low currency."
+  },
+  {
+   "noun": "العروس",
+   "wazn_tag": "other",
+   "note": "In modern usage denotes the bride (female); the 'bridegroom' gloss is the classical sense. Female referent."
+  },
+  {
+   "noun": "الكتائبي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "الفلسطيني",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "المقيم",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "السجان",
+   "wazn_tag": "faaal_or_fa33aal",
+   "note": null
+  },
+  {
+   "noun": "الفلمنكي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "المهذب",
+   "wazn_tag": "mu_participle",
+   "note": "Human ('well-mannered'); the CAMeL gloss 'educator' is misleading."
+  },
+  {
+   "noun": "الصبي",
+   "wazn_tag": "other",
+   "note": null
+  },
+  {
+   "noun": "الهمج",
+   "wazn_tag": "other",
+   "note": "Collective plural 'riffraff/barbarians' — human referents, but plural and purely abusive."
+  },
+  {
+   "noun": "المقاوم",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الحافظ",
+   "wazn_tag": "faail",
+   "note": "Also a divine name and a family name; the human 'Quran memoriser / custodian' reading is live and frequent."
+  },
+  {
+   "noun": "الرقاص",
+   "wazn_tag": "faaal_or_fa33aal",
+   "note": "Human ('dancer', pejorative for a male dancer) but also 'pendulum'."
+  },
+  {
+   "noun": "العانس",
+   "wazn_tag": "faail",
+   "note": "Denotes an unmarried woman past the usual age; female referent and a pejorative."
+  },
+  {
+   "noun": "القبطان",
+   "wazn_tag": "other",
+   "note": null
+  },
+  {
+   "noun": "اللبناني",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "المتسابق",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "المتواجد",
+   "wazn_tag": "mu_participle",
+   "note": "Human-applying participle 'present/on hand' but freely applied to objects; also widely considered a usage error for الموجود."
+  },
+  {
+   "noun": "المكي",
+   "wazn_tag": "other",
+   "note": "Family name, but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept (Meccan; also modifies non-humans as in السور المكية)."
+  },
+  {
+   "noun": "السيناتور",
+   "wazn_tag": "other",
+   "note": null
+  },
+  {
+   "noun": "النظير",
+   "wazn_tag": "faiil",
+   "note": "Human ('counterpart') but heavily used in the idiom منقطع النظير."
+  },
+  {
+   "noun": "البريطاني",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "الجدع",
+   "wazn_tag": "other",
+   "note": "Egyptian dialect 'the decent/stand-up guy'; human, colloquial."
+  },
+  {
+   "noun": "النكات",
+   "wazn_tag": "faaal_or_fa33aal",
+   "note": "Dialectal 'joker'; human, but the plural النكات 'the jokes' is a homograph."
+  },
+  {
+   "noun": "الطاغي",
+   "wazn_tag": "nisba_yaa",
+   "note": "Variant of الطاغية / الطاغيه (also in the inventory)."
+  },
+  {
+   "noun": "الخب",
+   "wazn_tag": "other",
+   "note": "Rare classical 'deceiver'; low currency and easily confused with dialectal خب."
+  },
+  {
+   "noun": "المحترف",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "المفقود",
+   "wazn_tag": "mu_participle",
+   "note": "Human as 'the missing person' but equally applied to lost objects."
+  },
+  {
+   "noun": "السجين",
+   "wazn_tag": "faiil",
+   "note": null
+  },
+  {
+   "noun": "المليك",
+   "wazn_tag": "mu_participle",
+   "note": "Elevated 'king': divine in classical religious texts, human in the Saudi anthem and royal panegyric (عاش المليك). Human reading retained but register-bound."
+  },
+  {
+   "noun": "المحلل",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الخبير",
+   "wazn_tag": "faiil",
+   "note": null
+  },
+  {
+   "noun": "الهجان",
+   "wazn_tag": "faaal_or_fa33aal",
+   "note": "Family name and a famous drama title (رأفت الهجان), but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept (camel rider/border camel corps)."
+  },
+  {
+   "noun": "الحامي",
+   "wazn_tag": "nisba_yaa",
+   "note": "The 'Hamite' gloss is academic; the live readings are the participle 'protector' (human) and 'hot' (non-human). Ambiguous but a human reading survives."
+  },
+  {
+   "noun": "العباسي",
+   "wazn_tag": "nisba_yaa",
+   "note": "Denotes an Abbasid person, but dominant use is attributive (العصر/الخلافة العباسية); also a family name."
+  },
+  {
+   "noun": "المعرص",
+   "wazn_tag": "mu_participle",
+   "note": "Human (pimp/cuckold); among the most vulgar Levantine-Egyptian insults."
+  },
+  {
+   "noun": "المفتري",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الساجد",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "الزاني",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "المامور",
+   "wazn_tag": "mu_participle",
+   "note": "Human ('officer in charge'); Egyptian administrative term, and the passive participle 'the one ordered'."
+  },
+  {
+   "noun": "الخائن",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "الطيار",
+   "wazn_tag": "faaal_or_fa33aal",
+   "note": "Family name, but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept ('pilot' is fully live)."
+  },
+  {
+   "noun": "الاثيوبي",
+   "wazn_tag": "nisba_yaa",
+   "note": "Modern nationality form; الحبشي (also in the inventory) is the older/ethnic near-synonym."
+  },
+  {
+   "noun": "الضيف",
+   "wazn_tag": "other",
+   "note": null
+  },
+  {
+   "noun": "الرومي",
+   "wazn_tag": "nisba_yaa",
+   "note": "Human (Byzantine/Roman) but dominantly the poet جلال الدين الرومي and the historical adjective; also a family name."
+  },
+  {
+   "noun": "الكابتن",
+   "wazn_tag": "other",
+   "note": null
+  },
+  {
+   "noun": "الممثل",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "السباك",
+   "wazn_tag": "faaal_or_fa33aal",
+   "note": null
+  },
+  {
+   "noun": "السياح",
+   "wazn_tag": "faaal_or_fa33aal",
+   "note": null
+  },
+  {
+   "noun": "الرابح",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "المهتدي",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الامبراطور",
+   "wazn_tag": "other",
+   "note": "Human ('emperor') but also a common sports epithet."
+  },
+  {
+   "noun": "الصائغ",
+   "wazn_tag": "faail",
+   "note": "Family name, but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept (jeweller)."
+  },
+  {
+   "noun": "السويدي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "المناضل",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "المؤنس",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الاهتم",
+   "wazn_tag": "other",
+   "note": "Rare ('toothless'); also the classical name الأهتم. Human but very low currency."
+  },
+  {
+   "noun": "الدعي",
+   "wazn_tag": "other",
+   "note": null
+  },
+  {
+   "noun": "الافريقي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "العارف",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "المغلوب",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الفارسي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "الجنرال",
+   "wazn_tag": "other",
+   "note": null
+  },
+  {
+   "noun": "الزيات",
+   "wazn_tag": "faaal_or_fa33aal",
+   "note": "Family name, but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept (oil/oilseed merchant)."
+  },
+  {
+   "noun": "المشتكي",
+   "wazn_tag": "mu_participle",
+   "note": "Human ('complainant'); the CAMeL gloss 'defendant' is wrong (that is المشتكى عليه)."
+  },
+  {
+   "noun": "الحلاق",
+   "wazn_tag": "faaal_or_fa33aal",
+   "note": "Family name, but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept ('barber' is fully live)."
+  },
+  {
+   "noun": "الكاثوليكي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "الشيوعي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "البياع",
+   "wazn_tag": "faaal_or_fa33aal",
+   "note": "Dialectal 'salesman'; human, colloquial."
+  },
+  {
+   "noun": "الغنام",
+   "wazn_tag": "faaal_or_fa33aal",
+   "note": "Family name, but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept (shepherd)."
+  },
+  {
+   "noun": "المار",
+   "wazn_tag": "other",
+   "note": null
+  },
+  {
+   "noun": "الناظر",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "البربري",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "الزميل",
+   "wazn_tag": "faiil",
+   "note": null
+  },
+  {
+   "noun": "المنشد",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "المشبوه",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "البولندي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "القصاب",
+   "wazn_tag": "faaal_or_fa33aal",
+   "note": "Family name, but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept ('butcher'); the CAMeL gloss 'land surveyor' is wrong for modern usage."
+  },
+  {
+   "noun": "المرتزق",
+   "wazn_tag": "mu_participle",
+   "note": "Human singular of المرتزقة 'mercenary'; the CAMeL gloss 'means of subsistence' is the non-human homograph."
+  },
+  {
+   "noun": "الاردني",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "المستهلك",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "اليماني",
+   "wazn_tag": "nisba_yaa",
+   "note": "Classical/poetic variant of اليمني (also in the inventory); on Twitter also carries the eschatological figure اليماني."
+  },
+  {
+   "noun": "الباكستاني",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "الناطق",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "الفائز",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "المشجع",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الراكب",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "المهرج",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "القواد",
+   "wazn_tag": "faaal_or_fa33aal",
+   "note": "Human (pimp/procurer); vulgar."
+  },
+  {
+   "noun": "الصحابي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "القناص",
+   "wazn_tag": "faaal_or_fa33aal",
+   "note": null
+  },
+  {
+   "noun": "المولع",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "العاهل",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "السلفي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "المجدد",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الابتر",
+   "wazn_tag": "other",
+   "note": "Human ('amputee') but also Quranic polemic (إن شانئك هو الأبتر) and 'docked' of animals."
+  },
+  {
+   "noun": "المتعاطي",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الطفران",
+   "wazn_tag": "other",
+   "note": "Dialectal 'broke, penniless'; human but colloquial."
+  },
+  {
+   "noun": "المفكر",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الديوث",
+   "wazn_tag": "other",
+   "note": "Human (a man complicit in his womenfolk's dishonour); vulgar religious insult."
+  },
+  {
+   "noun": "الاواب",
+   "wazn_tag": "faaal_or_fa33aal",
+   "note": "Quranic epithet 'oft-repentant' (human referent) but confined to religious quotation."
+  },
+  {
+   "noun": "المقصر",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "المنسق",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الانقليزي",
+   "wazn_tag": "nisba_yaa",
+   "note": "Rare orthographic duplicate of الانجليزي / الانكليزي, both also in the inventory."
+  },
+  {
+   "noun": "الكفيل",
+   "wazn_tag": "faiil",
+   "note": "Human ('sponsor' in the Gulf kafala system); a legal role term, and also a divine-adjacent epithet in some religious usage."
+  },
+  {
+   "noun": "الدوق",
+   "wazn_tag": "other",
+   "note": null
+  },
+  {
+   "noun": "المجتهد",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "المتهم",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الشاهد",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "العطار",
+   "wazn_tag": "faaal_or_fa33aal",
+   "note": "Family name, but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept (herbalist/perfumer, fully live in the Gulf and Egypt)."
+  },
+  {
+   "noun": "العثماني",
+   "wazn_tag": "nisba_yaa",
+   "note": "Denotes an Ottoman person, but dominant use is attributive (الدولة/الخلافة العثمانية); also a family name."
+  },
+  {
+   "noun": "النحال",
+   "wazn_tag": "faaal_or_fa33aal",
+   "note": null
+  },
+  {
+   "noun": "الاخرس",
+   "wazn_tag": "other",
+   "note": null
+  },
+  {
+   "noun": "النقاد",
+   "wazn_tag": "faaal_or_fa33aal",
+   "note": null
+  },
+  {
+   "noun": "الجليس",
+   "wazn_tag": "faiil",
+   "note": "Human ('sitting companion'), literary/hadith register (الجليس الصالح)."
+  },
+  {
+   "noun": "الوالي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "الاندلسي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "المتفرج",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "المنغولي",
+   "wazn_tag": "mu_participle",
+   "note": "Nationality term (Mongolian) but on Twitter mostly a slur for a person with Down syndrome; human but abusive."
+  },
+  {
+   "noun": "العماني",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "العمدة",
+   "wazn_tag": "other",
+   "note": "Human (village headman); ta-marbuta form, Egyptian institutional term."
+  },
+  {
+   "noun": "الانيس",
+   "wazn_tag": "faiil",
+   "note": "Literary adjective 'affable'; also a given name أنيس."
+  },
+  {
+   "noun": "المجاهد",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الراهب",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "المالك",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "اللورد",
+   "wazn_tag": "other",
+   "note": null
+  },
+  {
+   "noun": "الفاعل",
+   "wazn_tag": "faail",
+   "note": "Human ('doer, perpetrator', فاعل خير) but also the grammatical term 'subject of a verb'."
+  },
+  {
+   "noun": "القنصل",
+   "wazn_tag": "other",
+   "note": null
+  },
+  {
+   "noun": "الصعلوك",
+   "wazn_tag": "other",
+   "note": null
+  },
+  {
+   "noun": "العيل",
+   "wazn_tag": "other",
+   "note": "Egyptian dialect 'the kid/child' (human); the CAMeL gloss 'family/household' reflects the classical collective sense."
+  },
+  {
+   "noun": "الحجار",
+   "wazn_tag": "faaal_or_fa33aal",
+   "note": "Family name (علي الحجار), but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept ('stone mason' remains a recognised trade term)."
+  },
+  {
+   "noun": "المحرض",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "النديم",
+   "wazn_tag": "faiil",
+   "note": null
+  },
+  {
+   "noun": "الموريتاني",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "السارق",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "الضحوك",
+   "wazn_tag": "other",
+   "note": "Rare intensive adjective 'much-laughing'; human-applying but low currency."
+  },
+  {
+   "noun": "الاشقر",
+   "wazn_tag": "other",
+   "note": null
+  },
+  {
+   "noun": "المسؤول",
+   "wazn_tag": "mu_participle",
+   "note": "Hamza-variant duplicate of المسئول (also in the inventory)."
+  },
+  {
+   "noun": "الشهم",
+   "wazn_tag": "other",
+   "note": null
+  },
+  {
+   "noun": "الكولونيل",
+   "wazn_tag": "other",
+   "note": null
+  },
+  {
+   "noun": "الساقي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "الصانع",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "العراب",
+   "wazn_tag": "faaal_or_fa33aal",
+   "note": null
+  },
+  {
+   "noun": "الملاكم",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "المتبرع",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الزائر",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "العلام",
+   "wazn_tag": "faaal_or_fa33aal",
+   "note": "Chiefly the divine formula علام الغيوب; the human 'great expert' reading is weak."
+  },
+  {
+   "noun": "الطحان",
+   "wazn_tag": "faaal_or_fa33aal",
+   "note": "Family name, but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept (miller)."
+  },
+  {
+   "noun": "العاقر",
+   "wazn_tag": "faail",
+   "note": "'Barren' — almost always predicated of a woman; female referent and highly marked."
+  },
+  {
+   "noun": "البشوش",
+   "wazn_tag": "other",
+   "note": "Adjective 'cheerful, smiling'; human-applying, evaluative rather than referential."
+  },
+  {
+   "noun": "الهداف",
+   "wazn_tag": "faaal_or_fa33aal",
+   "note": null
+  },
+  {
+   "noun": "الحمصي",
+   "wazn_tag": "nisba_yaa",
+   "note": "Family name, but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept (from Homs)."
+  },
+  {
+   "noun": "الشب",
+   "wazn_tag": "other",
+   "note": "Levantine dialect 'the young guy'; also the homograph الشب 'alum'. Human, colloquial."
+  },
+  {
+   "noun": "الارعن",
+   "wazn_tag": "other",
+   "note": null
+  },
+  {
+   "noun": "الخسيس",
+   "wazn_tag": "faiil",
+   "note": "Used as an insult for a person, but the CAMeL gloss ('mean trick, infamy') shows an abstract reading is also live."
+  },
+  {
+   "noun": "الواعظ",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "الشريك",
+   "wazn_tag": "faiil",
+   "note": null
+  },
+  {
+   "noun": "الصهيوني",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "الفاسق",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "الجزار",
+   "wazn_tag": "faaal_or_fa33aal",
+   "note": "Family name, but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept ('butcher' is fully live, including as a political epithet)."
+  },
+  {
+   "noun": "الحلاج",
+   "wazn_tag": "faaal_or_fa33aal",
+   "note": "Dominantly the Sufi al-Hallaj, but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept (cotton ginner) — weakest of this group."
+  },
+  {
+   "noun": "المغترب",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "القاصر",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "الارجنتيني",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "المتسبب",
+   "wazn_tag": "mu_participle",
+   "note": "Human as 'the one who caused it' but equally applied to non-human causes."
+  },
+  {
+   "noun": "الهولندي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "النسيب",
+   "wazn_tag": "faiil",
+   "note": "Human 'kinsman/in-law', but نسيب is also the amatory prelude of a qasida."
+  },
+  {
+   "noun": "التشيلي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "الناقد",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "المتالق",
+   "wazn_tag": "mu_participle",
+   "note": "Human-applying ('outstanding', of players and performers) but formally just an adjective."
+  },
+  {
+   "noun": "المفاوض",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الظهير",
+   "wazn_tag": "faiil",
+   "note": "Human, dominantly the football full-back (الظهير الأيمن); the 'supporter' sense is literary."
+  },
+  {
+   "noun": "البواب",
+   "wazn_tag": "faaal_or_fa33aal",
+   "note": "Family name, but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept ('doorman' is fully live)."
+  },
+  {
+   "noun": "المراهق",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "المتوج",
+   "wazn_tag": "mu_participle",
+   "note": "Human/team as 'the crowned champion'; often refers to a club rather than a person."
+  },
+  {
+   "noun": "المعيب",
+   "wazn_tag": "mu_participle",
+   "note": "The CAMeL gloss 'critic' is wrong for modern usage: المعيب normally means 'shameful/defective' of an act or thing. Kept only because a 'faultfinder' reading is formally available."
+  },
+  {
+   "noun": "الابكم",
+   "wazn_tag": "other",
+   "note": null
+  },
+  {
+   "noun": "الاقرع",
+   "wazn_tag": "other",
+   "note": null
+  },
+  {
+   "noun": "الدبلوماسي",
+   "wazn_tag": "nisba_yaa",
+   "note": "Human ('diplomat') but also 'diplomatic' modifying missions and language."
+  },
+  {
+   "noun": "المخاطب",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "المستمع",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الزبال",
+   "wazn_tag": "faaal_or_fa33aal",
+   "note": null
+  },
+  {
+   "noun": "الاديب",
+   "wazn_tag": "faiil",
+   "note": null
+  },
+  {
+   "noun": "الصبان",
+   "wazn_tag": "faaal_or_fa33aal",
+   "note": "Obsolete trade term 'soap boiler'; survives chiefly as a family name."
+  },
+  {
+   "noun": "البيطار",
+   "wazn_tag": "other",
+   "note": "Family name, but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept (veterinarian/farrier)."
+  },
+  {
+   "noun": "الايوبي",
+   "wazn_tag": "nisba_yaa",
+   "note": "Denotes an Ayyubid person, but dominant reference is صلاح الدين الأيوبي; also a family name."
+  },
+  {
+   "noun": "المشرك",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الانكليزي",
+   "wazn_tag": "nisba_yaa",
+   "note": "Orthographic duplicate of الانجليزي and الانقليزي, both also in the inventory."
+  },
+  {
+   "noun": "الخدم",
+   "wazn_tag": "other",
+   "note": "Plural 'servants/domestic workers' — human, but plural."
+  },
+  {
+   "noun": "السياف",
+   "wazn_tag": "faaal_or_fa33aal",
+   "note": null
+  },
+  {
+   "noun": "المياس",
+   "wazn_tag": "mu_participle",
+   "note": "Rare poetic 'swaggering'; also a given name."
+  },
+  {
+   "noun": "الوادع",
+   "wazn_tag": "faail",
+   "note": "Rare; effectively the literary الوديع 'gentle one'. The CAMeL gloss 'consignor' is legal jargon."
+  },
+  {
+   "noun": "الممرض",
+   "wazn_tag": "mu_participle",
+   "note": "Human ('male nurse'); strongly gendered counterpart of the far more frequent الممرضة."
+  },
+  {
+   "noun": "الملياردير",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الوهابي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "المبتدع",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "العاذل",
+   "wazn_tag": "faail",
+   "note": "Human ('the reproacher') but confined to classical love poetry."
+  },
+  {
+   "noun": "الكردستاني",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "المؤرخ",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الخريج",
+   "wazn_tag": "faiil",
+   "note": null
+  },
+  {
+   "noun": "المنصوري",
+   "wazn_tag": "mu_participle",
+   "note": "Family name, but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept (from Mansoura). Wazn tag mu_participle is an error; it is a nisba."
+  },
+  {
+   "noun": "البرتغالي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "الروماني",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "الباكي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "الشاكي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "الفاطمي",
+   "wazn_tag": "nisba_yaa",
+   "note": "Denotes a Fatimid person, but dominant use is attributive (الدولة الفاطمية); also a family name."
+  },
+  {
+   "noun": "الفلبيني",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "الفنزويلي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "المهووس",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "المعيد",
+   "wazn_tag": "mu_participle",
+   "note": "Human (university 'teaching assistant'); institutional jargon, and the participle 'the one who repeats'."
+  },
+  {
+   "noun": "البعل",
+   "wazn_tag": "other",
+   "note": "Human ('husband') only in classical/legal register; modern hits also include Baal and rain-fed agriculture (زراعة بعلية)."
+  },
+  {
+   "noun": "المختص",
+   "wazn_tag": "mu_participle",
+   "note": "Human ('specialist') but also 'competent' of authorities and bodies (الجهة المختصة)."
+  },
+  {
+   "noun": "المنادي",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "التبريزي",
+   "wazn_tag": "nisba_yaa",
+   "note": "Chiefly شمس التبريزي; surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept is only weakly satisfied (from Tabriz)."
+  },
+  {
+   "noun": "البقال",
+   "wazn_tag": "faaal_or_fa33aal",
+   "note": null
+  },
+  {
+   "noun": "الشاذ",
+   "wazn_tag": "other",
+   "note": "Human in the dominant Twitter usage (slur for a homosexual person); the neutral 'anomalous' adjective also exists."
+  },
+  {
+   "noun": "النزيل",
+   "wazn_tag": "faiil",
+   "note": null
+  },
+  {
+   "noun": "الاروبي",
+   "wazn_tag": "nisba_yaa",
+   "note": "Misspelled duplicate of الاوروبي / الاوربي, both also in the inventory."
+  },
+  {
+   "noun": "الكازخستاني",
+   "wazn_tag": "nisba_yaa",
+   "note": "Non-standard spelling of الكازاخستاني 'Kazakhstani'. Human nationality nisba."
+  },
+  {
+   "noun": "العازف",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "الغفير",
+   "wazn_tag": "other",
+   "note": "Human 'watchman' in Egyptian usage (خفير/غفير), but also the idiom الجم الغفير 'the multitude'."
+  },
+  {
+   "noun": "المكسيكي",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "المخرب",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "القبطي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "المتبلد",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "المتخرج",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الفاهم",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "المحنك",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الماركسي",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "المبجل",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الندمان",
+   "wazn_tag": "other",
+   "note": "Dialectal/classical 'repentant'; also the classical نديم 'drinking companion'. Human, marked register."
+  },
+  {
+   "noun": "البزار",
+   "wazn_tag": "faaal_or_fa33aal",
+   "note": "Obsolete trade term 'seed seller'; survives chiefly as the family name al-Bazzar (hadith transmitter)."
+  },
+  {
+   "noun": "الخضري",
+   "wazn_tag": "nisba_yaa",
+   "note": "Family name, but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept (greengrocer)."
+  },
+  {
+   "noun": "المصمم",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "اللائم",
+   "wazn_tag": "faail",
+   "note": "Human ('the blamer') but literary/Quranic register (لومة لائم)."
+  },
+  {
+   "noun": "المستشرق",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الديكتاتور",
+   "wazn_tag": "other",
+   "note": null
+  },
+  {
+   "noun": "الربان",
+   "wazn_tag": "faaal_or_fa33aal",
+   "note": null
+  },
+  {
+   "noun": "المعذب",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الحرار",
+   "wazn_tag": "faaal_or_fa33aal",
+   "note": "Obsolete trade term 'silk weaver'; survives chiefly as a family name."
+  },
+  {
+   "noun": "المعتدي",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الرائي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "الصارخ",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "المحتل",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الماسوني",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الناصح",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "المدعي",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الغاوي",
+   "wazn_tag": "nisba_yaa",
+   "note": "Human ('seducer' or dialectal 'enthusiast/amateur'), but the two senses pull apart sharply by register."
+  },
+  {
+   "noun": "البروفيسور",
+   "wazn_tag": "other",
+   "note": "Transliteration duplicate of البروفسور (also in the inventory)."
+  },
+  {
+   "noun": "العلوي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "الزنديق",
+   "wazn_tag": "other",
+   "note": null
+  },
+  {
+   "noun": "الكربلائي",
+   "wazn_tag": "nisba_yaa",
+   "note": "Family name and clerical title (عبد المهدي الكربلائي); surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept weakly satisfied (from Karbala)."
+  },
+  {
+   "noun": "التشيكي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "الدمث",
+   "wazn_tag": "other",
+   "note": "Literary adjective 'mild-mannered'; human-applying, low currency."
+  },
+  {
+   "noun": "السبئي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "الغاش",
+   "wazn_tag": "other",
+   "note": null
+  },
+  {
+   "noun": "اليزيدي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "اليوناني",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "المحرر",
+   "wazn_tag": "mu_participle",
+   "note": "Human as 'editor' (the dominant reading); the CAMeL gloss 'written/booked' reflects the non-human passive participle."
+  },
+  {
+   "noun": "المدمن",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "المراكشي",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "الموالي",
+   "wazn_tag": "mu_participle",
+   "note": "Plural — either the historical 'clients/mawali' (human) or 'lords/masters' with divine overtones; plural and ambiguous."
+  },
+  {
+   "noun": "الرامي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "المشارك",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "البحراني",
+   "wazn_tag": "nisba_yaa",
+   "note": "Confessional/regional near-duplicate of البحريني (also in the inventory)."
+  },
+  {
+   "noun": "القدسي",
+   "wazn_tag": "nisba_yaa",
+   "note": "Family name, but surname test applied: the definite form still has a live, frequent common-noun use on Twitter beyond the family name, so kept (Jerusalemite); note the very frequent non-human الحديث القدسي."
+  },
+  {
+   "noun": "المخرف",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "المرتد",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "المعاون",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "المساهم",
+   "wazn_tag": "mu_participle",
+   "note": "Human ('shareholder') but also 'contributing' of factors, and الشركة المساهمة."
+  },
+  {
+   "noun": "العبري",
+   "wazn_tag": "nisba_yaa",
+   "note": "Human (Hebrew person) but dominant use modifies language and media (الموقع العبري، اللغة العبرية)."
+  },
+  {
+   "noun": "البوسني",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "الحطاب",
+   "wazn_tag": "faaal_or_fa33aal",
+   "note": null
+  },
+  {
+   "noun": "العريف",
+   "wazn_tag": "faiil",
+   "note": null
+  },
+  {
+   "noun": "الضامن",
+   "wazn_tag": "faail",
+   "note": null
+  },
+  {
+   "noun": "المسيطر",
+   "wazn_tag": "mu_participle",
+   "note": "Human as 'the dominant one' but equally applied to teams, states and forces."
+  },
+  {
+   "noun": "الخراص",
+   "wazn_tag": "faaal_or_fa33aal",
+   "note": "Quranic 'liar/conjecturer' (قتل الخراصون); human but confined to quotation."
+  },
+  {
+   "noun": "السويسري",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "المعزي",
+   "wazn_tag": "mu_participle",
+   "note": null
+  },
+  {
+   "noun": "البوليفي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "الصربي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "القسيس",
+   "wazn_tag": "faiil",
+   "note": null
+  },
+  {
+   "noun": "الكندي",
+   "wazn_tag": "nisba_yaa",
+   "note": null
+  },
+  {
+   "noun": "الجاسوس",
+   "wazn_tag": "other",
+   "note": null
+  },
+  {
+   "noun": "الكهل",
+   "wazn_tag": "other",
+   "note": null
+  }
+ ]
+}

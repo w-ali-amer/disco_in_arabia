@@ -1,0 +1,375 @@
+{
+ "experiment": "exp55",
+ "spec": "qnlp_private_docs/39_exp55_referent_encoding.md (c410977, FROZEN)",
+ "platform": "macOS-26.5.2-arm64-arm-64bit",
+ "python": "3.12.13",
+ "torch": "2.13.0",
+ "dataset_sha256": "8aa71d1e286392ad96fe7a5f77dc8afb7998e5594b8abde67bbaef024e9d1064",
+ "embeddings_sha256": "00c1ecffcaf05b38df082f8a3cbed1d013bddb3e39bc00adf1c2513b4ea674ac",
+ "phi_artifact_sha256": "2cb5b3cb5feef3a41fbcc7249eccb20c0a0ac4d5ef2f43de5f96b83c37b33242",
+ "phi_artifact_meta": {
+  "experiment": "exp55",
+  "design_doc": "qnlp_private_docs/39 (c410977)",
+  "source": "aravec/full_uni_cbow_300_twitter.mdl + ta-marbuta normalization",
+  "recipe": "raw 300-d vectors (NOT unit-normed), mean-centred, SVD; theta = atan2(PC2, -PC1); phi = atan2(PC4, PC3)",
+  "theta_reproduces_frozen_exp42_angle": true,
+  "theta_max_circular_diff_rad": 4.440892098500626e-15,
+  "n_nouns": 44,
+  "warm_start_hits": 44,
+  "misses": [],
+  "explained_variance_ratio": [
+   0.12685513291325934,
+   0.08050060927190718,
+   0.06765674889989376,
+   0.055673549786301936
+  ]
+ },
+ "config": {
+  "lr": 0.02,
+  "batch": 8,
+  "epochs": 150,
+  "n_seeds": 5,
+  "arm": "A3"
+ },
+ "per_condition": {
+  "E1": [
+   {
+    "condition": "E1",
+    "seed": 0,
+    "val_acc": 0.7866666666666666,
+    "train_acc": 0.8441666666666666,
+    "test_acc": 0.75,
+    "gate_met": true
+   },
+   {
+    "condition": "E1",
+    "seed": 1,
+    "val_acc": 0.77,
+    "train_acc": 0.8091666666666667,
+    "test_acc": 0.7466666666666667,
+    "gate_met": true
+   },
+   {
+    "condition": "E1",
+    "seed": 2,
+    "val_acc": 0.78,
+    "train_acc": 0.8125,
+    "test_acc": 0.7233333333333334,
+    "gate_met": true
+   },
+   {
+    "condition": "E1",
+    "seed": 3,
+    "val_acc": 0.8066666666666666,
+    "train_acc": 0.7816666666666666,
+    "test_acc": 0.6933333333333334,
+    "gate_met": false
+   },
+   {
+    "condition": "E1",
+    "seed": 4,
+    "val_acc": 0.81,
+    "train_acc": 0.8191666666666667,
+    "test_acc": 0.7733333333333333,
+    "gate_met": true
+   }
+  ],
+  "EPw": [
+   {
+    "condition": "EPw",
+    "seed": 0,
+    "val_acc": 0.7266666666666667,
+    "train_acc": 0.7733333333333333,
+    "test_acc": 0.7,
+    "gate_met": false
+   },
+   {
+    "condition": "EPw",
+    "seed": 1,
+    "val_acc": 0.7533333333333333,
+    "train_acc": 0.8183333333333334,
+    "test_acc": 0.7866666666666666,
+    "gate_met": true
+   },
+   {
+    "condition": "EPw",
+    "seed": 2,
+    "val_acc": 0.7833333333333333,
+    "train_acc": 0.7983333333333333,
+    "test_acc": 0.74,
+    "gate_met": false
+   },
+   {
+    "condition": "EPw",
+    "seed": 3,
+    "val_acc": 0.7833333333333333,
+    "train_acc": 0.8,
+    "test_acc": 0.7566666666666667,
+    "gate_met": true
+   },
+   {
+    "condition": "EPw",
+    "seed": 4,
+    "val_acc": 0.7533333333333333,
+    "train_acc": 0.795,
+    "test_acc": 0.7366666666666667,
+    "gate_met": false
+   }
+  ],
+  "EC": [
+   {
+    "condition": "EC",
+    "seed": 0,
+    "val_acc": 0.75,
+    "train_acc": 0.8075,
+    "test_acc": 0.7033333333333334,
+    "gate_met": true
+   },
+   {
+    "condition": "EC",
+    "seed": 1,
+    "val_acc": 0.7566666666666667,
+    "train_acc": 0.805,
+    "test_acc": 0.7233333333333334,
+    "gate_met": true
+   },
+   {
+    "condition": "EC",
+    "seed": 2,
+    "val_acc": 0.7466666666666667,
+    "train_acc": 0.7883333333333333,
+    "test_acc": 0.6933333333333334,
+    "gate_met": false
+   },
+   {
+    "condition": "EC",
+    "seed": 3,
+    "val_acc": 0.7166666666666667,
+    "train_acc": 0.7808333333333334,
+    "test_acc": 0.7166666666666667,
+    "gate_met": false
+   },
+   {
+    "condition": "EC",
+    "seed": 4,
+    "val_acc": 0.7666666666666667,
+    "train_acc": 0.8216666666666667,
+    "test_acc": 0.73,
+    "gate_met": true
+   }
+  ],
+  "EG": [
+   {
+    "condition": "EG",
+    "seed": 0,
+    "val_acc": 0.5733333333333334,
+    "train_acc": 0.49916666666666665,
+    "test_acc": 0.4766666666666667,
+    "gate_met": false
+   },
+   {
+    "condition": "EG",
+    "seed": 1,
+    "val_acc": 0.57,
+    "train_acc": 0.5391666666666667,
+    "test_acc": 0.5166666666666667,
+    "gate_met": false
+   },
+   {
+    "condition": "EG",
+    "seed": 2,
+    "val_acc": 0.5766666666666667,
+    "train_acc": 0.5733333333333334,
+    "test_acc": 0.51,
+    "gate_met": false
+   },
+   {
+    "condition": "EG",
+    "seed": 3,
+    "val_acc": 0.5633333333333334,
+    "train_acc": 0.5208333333333334,
+    "test_acc": 0.5333333333333333,
+    "gate_met": false
+   },
+   {
+    "condition": "EG",
+    "seed": 4,
+    "val_acc": 0.5633333333333334,
+    "train_acc": 0.5833333333333334,
+    "test_acc": 0.46,
+    "gate_met": false
+   }
+  ],
+  "E0": [
+   {
+    "condition": "E0",
+    "seed": 0,
+    "val_acc": 0.5833333333333334,
+    "train_acc": 0.5491666666666667,
+    "test_acc": 0.5,
+    "gate_met": false
+   },
+   {
+    "condition": "E0",
+    "seed": 1,
+    "val_acc": 0.58,
+    "train_acc": 0.55,
+    "test_acc": 0.48,
+    "gate_met": false
+   },
+   {
+    "condition": "E0",
+    "seed": 2,
+    "val_acc": 0.6266666666666667,
+    "train_acc": 0.5391666666666667,
+    "test_acc": 0.5033333333333333,
+    "gate_met": false
+   },
+   {
+    "condition": "E0",
+    "seed": 3,
+    "val_acc": 0.57,
+    "train_acc": 0.545,
+    "test_acc": 0.54,
+    "gate_met": false
+   },
+   {
+    "condition": "E0",
+    "seed": 4,
+    "val_acc": 0.5933333333333334,
+    "train_acc": 0.5066666666666667,
+    "test_acc": 0.48333333333333334,
+    "gate_met": false
+   }
+  ],
+  "E2": [
+   {
+    "condition": "E2",
+    "seed": 0,
+    "val_acc": 0.7633333333333333,
+    "train_acc": 0.7666666666666667,
+    "test_acc": 0.6966666666666667,
+    "gate_met": false
+   },
+   {
+    "condition": "E2",
+    "seed": 1,
+    "val_acc": 0.7733333333333333,
+    "train_acc": 0.7941666666666667,
+    "test_acc": 0.7166666666666667,
+    "gate_met": false
+   },
+   {
+    "condition": "E2",
+    "seed": 2,
+    "val_acc": 0.75,
+    "train_acc": 0.7466666666666667,
+    "test_acc": 0.72,
+    "gate_met": false
+   },
+   {
+    "condition": "E2",
+    "seed": 3,
+    "val_acc": 0.7566666666666667,
+    "train_acc": 0.7941666666666667,
+    "test_acc": 0.7333333333333333,
+    "gate_met": false
+   },
+   {
+    "condition": "E2",
+    "seed": 4,
+    "val_acc": 0.75,
+    "train_acc": 0.7575,
+    "test_acc": 0.6633333333333333,
+    "gate_met": false
+   }
+  ],
+  "E2Pw": [
+   {
+    "condition": "E2Pw",
+    "seed": 0,
+    "val_acc": 0.7866666666666666,
+    "train_acc": 0.8141666666666667,
+    "test_acc": 0.78,
+    "gate_met": true
+   },
+   {
+    "condition": "E2Pw",
+    "seed": 1,
+    "val_acc": 0.7666666666666667,
+    "train_acc": 0.7883333333333333,
+    "test_acc": 0.72,
+    "gate_met": false
+   },
+   {
+    "condition": "E2Pw",
+    "seed": 2,
+    "val_acc": 0.8033333333333333,
+    "train_acc": 0.765,
+    "test_acc": 0.7333333333333333,
+    "gate_met": false
+   },
+   {
+    "condition": "E2Pw",
+    "seed": 3,
+    "val_acc": 0.7733333333333333,
+    "train_acc": 0.8033333333333333,
+    "test_acc": 0.7066666666666667,
+    "gate_met": true
+   },
+   {
+    "condition": "E2Pw",
+    "seed": 4,
+    "val_acc": 0.7666666666666667,
+    "train_acc": 0.7891666666666667,
+    "test_acc": 0.71,
+    "gate_met": false
+   }
+  ]
+ },
+ "primary_contrasts": {
+  "richness_helps__E2_vs_E1": {
+   "mean_x": 0.7060000000000001,
+   "mean_y": 0.7373333333333334,
+   "mean_paired_diff": -0.03133333333333333,
+   "one_sided_p": 0.9772022797720228,
+   "n_items": 300
+  },
+  "encoding_is_semantic__E1_vs_EPw": {
+   "mean_x": 0.7373333333333334,
+   "mean_y": 0.7440000000000001,
+   "mean_paired_diff": -0.00666666666666667,
+   "one_sided_p": 0.6797320267973203,
+   "n_items": 300
+  },
+  "random_encoding_fails__E1_vs_E0": {
+   "mean_x": 0.7373333333333334,
+   "mean_y": 0.5013333333333333,
+   "mean_paired_diff": 0.236,
+   "one_sided_p": 9.999000099990002e-05,
+   "n_items": 300
+  }
+ },
+ "verdicts": {
+  "richness_helps__E2_vs_E1": false,
+  "encoding_is_semantic__E1_vs_EPw": false,
+  "random_encoding_fails__E1_vs_E0": true,
+  "gate_rate_E1": "4/5",
+  "gate_rate_EPw": "2/5",
+  "gate_rate_EC": "3/5",
+  "gate_rate_EG": "0/5",
+  "gate_rate_E0": "0/5",
+  "gate_rate_E2": "0/5",
+  "gate_rate_E2Pw": "2/5"
+ },
+ "meta_notes": {
+  "confound_recorded": "the pilot permutation permuted over all 44 nouns and destroyed the human cluster; EPw here permutes WITHIN humans and is distribution-preserving for this rung",
+  "withdrawn_claim": "an earlier mechanism claim that referents near |1> suffer weak gradients is WITHDRAWN as backwards -- AraVec is the encoding closest to |1> and it is the one that works",
+  "scope": "one rung, one arm, one config, 44 nouns, simulation only; says nothing about RP, which is out of scope by construction; no quantum-advantage comparison is registered"
+ },
+ "git_note": {
+  "exp42_paths": [],
+  "n_untracked": 186
+ },
+ "wall_time_sec": 35959.849637031555
+}

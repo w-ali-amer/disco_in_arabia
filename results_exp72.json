@@ -1,0 +1,4550 @@
+{
+ "experiment": "exp72 -- doc 58, THE RESCUE RUNG: do the field's proposed trainability mitigations rescue instances whose information content is independently certified extractable?",
+ "spec": "qnlp_private_docs/58_exp72_rescue_rung.md (REGISTERED 2026-08-27, orchestrator rulings 1-6 in the status header, SS18 post-registration note on I2)",
+ "spec_commit_line": "f432b1f doc 56 SS18.3: confirm draw discharges the rider, headline stands (both draws -0.19); doc 58 SS18: I2 stands, gap reproduced, binds knife-edge noted",
+ "aggregator": "exp72_aggregate.py -- the ONLY results writer (doc 53 SS7.3)",
+ "platform": "macOS-26.5.2-arm64-arm-64bit",
+ "python": "3.12.13",
+ "torch": "2.13.0",
+ "numpy": "2.5.1",
+ "sd_convention": "sample sd, ddof = 1",
+ "dataset": {
+  "path": "stories_exp69_QA.json",
+  "sha256": "2b85822b544571969fd40cab12b03a4ac256b08aee914d2b9643b856a6308c96",
+  "no_datagen": "doc 58 SS16.1: exp72 generates NO Arabic and runs no V-suite; the dataset is exp69's Part A, byte-identical, sha-pinned and already V-suite-cleared, so doc 50 SS5.2's native-speaker gate does not reopen."
+ },
+ "instances": {
+  "I1": {
+   "arm": "A0-W-T2",
+   "committed_arm": "R2-W",
+   "source": "results_exp69.json",
+   "donor_arm": "A0-W-T1",
+   "donor_committed_arm": "R1-W",
+   "donor_source": "results_exp69.json",
+   "donor_ckpt": "exp69_ckpt/R1-W_s0.pt",
+   "donor_sha256": "0e2af9aee9ec2601f813326ebe1af3deb72a0bcacd256957cfdf0c0fe79d50d6",
+   "donor_seed": 0,
+   "donor_tie_break": "unique max on in-distribution val (0.95455)",
+   "committed_mean": 0.7293,
+   "committed_floor_mean": 0.502,
+   "committed_floor_sd": 0.0283,
+   "encoding": "F2 product register, old map (p+1)pi, 4 wires",
+   "n_params": 264
+  },
+  "I2": {
+   "arm": "N-in-T2",
+   "committed_arm": "N-in-T2",
+   "source": "results_exp70.json",
+   "donor_arm": "N-in-T1",
+   "donor_committed_arm": "N-in-T1",
+   "donor_source": "results_exp70.json",
+   "donor_ckpt": "exp70_ckpt/N-in-T1_s0.pt",
+   "donor_sha256": "08c943289ff56a619ae9ce4be6195a48b1573d318d82715d116437177a9c258f",
+   "donor_seed": 0,
+   "donor_tie_break": "four-way tie at 0.92424 on val across seeds 0, 1, 3, 4 -> LOWEST SEED INDEX (doc 58 SS6.4.1, orchestrator ruling 3, RATIFIED)",
+   "committed_mean": 0.6467,
+   "committed_floor_mean": 0.5,
+   "committed_floor_sd": 0.0564,
+   "encoding": "E-in entangled register, eps-map, 4 wires",
+   "n_params": 264
+  }
+ },
+ "committed_values": {
+  "I1": {
+   "per_seed": [
+    0.7166666666666667,
+    0.77,
+    0.7466666666666667,
+    0.7266666666666667,
+    0.6866666666666666
+   ],
+   "mean": 0.7293333333333334,
+   "sd": 0.03139355914125629,
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "floor_mean": 0.502,
+   "floor_sd": 0.028343135559308414,
+   "floor_per_seed": [
+    0.5066666666666667,
+    0.52,
+    0.4766666666666667,
+    0.5366666666666666,
+    0.47
+   ],
+   "source": "results_exp69.json :: arms['R2-W'] / floors['R2-W']"
+  },
+  "I2": {
+   "per_seed": [
+    0.65,
+    0.6233333333333333,
+    0.61,
+    0.6233333333333333,
+    0.7266666666666667
+   ],
+   "mean": 0.6466666666666666,
+   "sd": 0.04702245326555297,
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "floor_mean": 0.5,
+   "floor_sd": 0.05642103626603587,
+   "floor_per_seed": [
+    0.5733333333333334,
+    0.47,
+    0.5133333333333333,
+    0.52,
+    0.42333333333333334
+   ],
+   "source": "results_exp70.json :: arms['N-in-T2'] / floors['N-in-T2']"
+  },
+  "PC": {
+   "per_seed": [
+    0.9166666666666666,
+    0.9466666666666667,
+    0.8733333333333333,
+    0.9133333333333333,
+    0.9433333333333334
+   ],
+   "mean": 0.9186666666666666,
+   "sd": 0.02949576240750527,
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "source": "results_exp69.json :: arms['R2-A']"
+  }
+ },
+ "comparator_targets_doc58_SS3": {
+  "I1": {
+   "comparator": 1.0,
+   "sd": 0.0,
+   "per_seed": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "feature_dim": 81,
+   "source": "results_exp69.json :: comparator.arms['R2-W']",
+   "tier": "class (81-dim, doc 55 SS8)"
+  },
+  "I2": {
+   "comparator": 1.0,
+   "sd": 0.0,
+   "per_seed": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "feature_dim": 36,
+   "source": "results_exp70.json :: comparator.arms['N-in-T2']['class']",
+   "tier": "class (36-dim, doc 56 SS8.1 tier (ii))"
+  },
+  "note": "doc 58 SS3 / SS7.5: exp72 runs NO comparator. The dataset is byte-identical, the features are the same deterministic constants, the splits and fit seed are the same and the fit is deterministic; doc 47 SS14 is the standing reason not to re-run it. The values are imported and asserted == 1.0000, never re-typed."
+ },
+ "bars_doc58_SS9_2": {
+  "I1": {
+   "baseline": 0.7293333333333334,
+   "comparator": 1.0,
+   "gap": 0.2706666666666666,
+   "rescue_full_bar": 0.98,
+   "rescue_partial_bar": 0.8646666666666667,
+   "doc58_display": {
+    "full": 0.98,
+    "partial": 0.864667
+   }
+  },
+  "I2": {
+   "baseline": 0.6466666666666666,
+   "comparator": 1.0,
+   "gap": 0.3533333333333334,
+   "rescue_full_bar": 0.98,
+   "rescue_partial_bar": 0.8233333333333333,
+   "doc58_display": {
+    "full": 0.98,
+    "partial": 0.823333
+   }
+  }
+ },
+ "anchors_doc58_SS5": {
+  "component": "exp72 anchors -- doc 58 SS5.1, BLOCKING, READ FIRST",
+  "spec": "qnlp_private_docs/58_exp72_rescue_rung.md (REGISTERED 2026-08-27, orchestrator rulings 1-6 in the status header, SS18 post-registration note on I2)",
+  "spec_commit_line": "f432b1f doc 56 SS18.3: confirm draw discharges the rider, headline stands (both draws -0.19); doc 58 SS18: I2 stands, gap reproduced, binds knife-edge noted",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "python": "3.12.13",
+  "torch": "2.13.0",
+  "numpy": "2.5.1",
+  "dataset": "stories_exp69_QA.json",
+  "dataset_sha256": "2b85822b544571969fd40cab12b03a4ac256b08aee914d2b9643b856a6308c96",
+  "tolerance": 0.002,
+  "per_instance": {
+   "I1": {
+    "instance_arm": "A0-W-T2",
+    "committed_arm": "R2-W",
+    "committed_source": "results_exp69.json :: arms['R2-W'] / floors['R2-W']",
+    "committed_per_seed": [
+     0.7166666666666667,
+     0.77,
+     0.7466666666666667,
+     0.7266666666666667,
+     0.6866666666666666
+    ],
+    "committed_mean": 0.7293333333333334,
+    "exp72_per_seed": [
+     0.7166666666666667,
+     0.77,
+     0.7466666666666667,
+     0.7266666666666667,
+     0.6866666666666666
+    ],
+    "exp72_mean": 0.7293333333333333,
+    "exp72_sd": 0.03139355914125629,
+    "per_seed_delta": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "max_abs_per_seed_delta": 0.0,
+    "mean_delta_vs_committed": -1.1102230246251565e-16,
+    "mean_delta_vs_doc58": 3.333333333332966e-05,
+    "bit_exact": true,
+    "per_seed_within_tolerance": true,
+    "mean_within_tolerance": true,
+    "replicates": true,
+    "val_per_seed": [
+     0.7348484848484849,
+     0.7196969696969697,
+     0.7878787878787878,
+     0.7348484848484849,
+     0.7272727272727273
+    ],
+    "selected_epoch_per_seed": [
+     134,
+     124,
+     139,
+     17,
+     144
+    ],
+    "wall_sec_total": 5925.044400930405,
+    "ckpt_sha256": [
+     "8ab2a1a2d06eafa1159a9b0a3869b7f0ac8f09bf2ac49d740f391f96236300c7",
+     "0f38514a8d5738e69d198a8440b7f68cf60041ee4b37a366f2272d42f7f6b16a",
+     "2ba06fca2b6696d860fa125e44d4d53f556cfd8040a9c0aacfbe8958fa800f0f",
+     "414caf3f8425addfef556a853194716c64141fcdd04de336324657c630bbbf4f",
+     "e770dcfa378af9c584c1e5f291d1a23bb1900bcd67403a863ef01d381ec111ff"
+    ]
+   },
+   "I2": {
+    "instance_arm": "N-in-T2",
+    "committed_arm": "N-in-T2",
+    "committed_source": "results_exp70.json :: arms['N-in-T2'] / floors['N-in-T2']",
+    "committed_per_seed": [
+     0.65,
+     0.6233333333333333,
+     0.61,
+     0.6233333333333333,
+     0.7266666666666667
+    ],
+    "committed_mean": 0.6466666666666666,
+    "exp72_per_seed": [
+     0.65,
+     0.6233333333333333,
+     0.61,
+     0.6233333333333333,
+     0.7266666666666667
+    ],
+    "exp72_mean": 0.6466666666666667,
+    "exp72_sd": 0.04702245326555297,
+    "per_seed_delta": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "max_abs_per_seed_delta": 0.0,
+    "mean_delta_vs_committed": 1.1102230246251565e-16,
+    "mean_delta_vs_doc58": -3.333333333332966e-05,
+    "bit_exact": true,
+    "per_seed_within_tolerance": true,
+    "mean_within_tolerance": true,
+    "replicates": true,
+    "val_per_seed": [
+     0.7272727272727273,
+     0.7121212121212122,
+     0.7803030303030303,
+     0.6818181818181818,
+     0.7272727272727273
+    ],
+    "selected_epoch_per_seed": [
+     74,
+     113,
+     109,
+     144,
+     121
+    ],
+    "wall_sec_total": 6937.9305918216705,
+    "ckpt_sha256": [
+     "500c25bb9146971db11214d06e5fdba302c631c4afaa44265f35f808ac92b395",
+     "dec051756f14d745186b8ebc4772db24aa6773e282a5483b25497b874c70846a",
+     "18165bc0b7e52ca3b41062faaab1d0d099010a3e6736a683d0fd94e338b5518a",
+     "59215913045dcd2cb665585577a6f003ed55ed9d13e1b36dce380dbbdb5971d2",
+     "7b6137e4aeab835c0cecaf8ba72f1ae113e1e2fe4ab7e4d775bb109bb84476c2"
+    ]
+   }
+  },
+  "all_bit_exact": true,
+  "anchors_replicate_committed": true,
+  "codepath_assertion_doc58_SS7_3": "the unrescued anchors ran through exp72_run.train() -- THE SAME ENTRY POINT the rescue arms use, with the rescue options off -- not a separate legacy path. Otherwise SS5's bit-exactness would prove nothing about the rescue arms' pipeline.",
+  "honest_expectation": "BIT-EXACT, 10/10 seeds. Both runs are deterministic given their seeds; the 0.002 tolerance exists only to absorb a documented float/BLAS platform difference and ANY non-zero delta is reported with its cause identified (doc 58 SS5.1). This is the gate's THIRD enforced use; both previous uses returned bit-exact.",
+  "consequence_if_failed": "doc 58 SS10 row 1: THE RUN STOPS. The exp72 pipeline has drifted from the exp69/exp70 pipeline, every 'rescue' number would be a comparison against a moving baseline, SS5.2's floor-omission argument is VOID, and NOTHING ELSE IN THE RUN IS READ. Hunt the build; interpret nothing.",
+  "floors_omission_argument_doc58_SS5_2": "the anchors carry NO fresh floor. A gate that pins an arm to within 0.002 of a measurement that cleared its own matched floor by 8.02 SD (I1) and by a cleared doc 56 SS6.2 gate (I2) is TRANSITIVELY STRONGER than re-measuring the floor. IF EITHER ANCHOR FAILS, THIS ARGUMENT IS VOID ALONG WITH THE RUN.",
+  "git_note": {
+   "repo_head": "cc027c7 exp70 CONFIRM DRAW (seed+1000, all arms, fresh floors): THE HEADLINE STANDS -- entanglement_hurts_T2 TRUE on both draws (-0.1873/-0.1887); 13/14 booleans agree; the one flip is the binds_N-in_T2 knife-edge (0.6467->0.6647 across the 0.65 bar) while the instance's gap to its 1.0 comparator persists (0.335); per-arm deltas <=0.03",
+   "exp72_paths": [
+    "?? exp72_aggregate.py",
+    "?? exp72_ckpt/",
+    "?? exp72_run.py",
+    "?? results_exp72_smoke_validation.json"
+   ],
+   "n_untracked": 251,
+   "rule3_note": "exp72 writes ONLY exp72_ckpt/ and results_exp72* (through fresh_results_path). No exp68 / exp69 / exp70 artefact is modified; the donor checkpoints are READ-ONLY and sha-asserted before use."
+  }
+ },
+ "anchors_replicate_committed": true,
+ "gating_order_doc58_SS16_3_step10": "anchors -> floors -> rescue_full / rescue_partial per cell -> positive_control_degrades -> SS8's descriptives. NO CONTRAST IS READ PAST A MISSING OR FAILED FLOOR.",
+ "arms": {
+  "I1|R-budget": {
+   "mean": 0.794,
+   "sd": 0.038830114315795895,
+   "per_seed": [
+    0.79,
+    0.8266666666666667,
+    0.8333333333333334,
+    0.7833333333333333,
+    0.7366666666666667
+   ],
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_seeds": 5,
+   "val_per_seed": [
+    0.7803030303030303,
+    0.75,
+    0.7348484848484849,
+    0.803030303030303,
+    0.7803030303030303
+   ],
+   "train_per_seed": [
+    0.9943181818181818,
+    0.9924242424242424,
+    0.9924242424242424,
+    0.9810606060606061,
+    0.9185606060606061
+   ],
+   "selected_epoch_per_seed": [
+    352,
+    327,
+    273,
+    267,
+    73
+   ],
+   "selected_stage_per_seed": [
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "val_minus_heldout_per_seed": [
+    -0.00969696969696976,
+    -0.07666666666666666,
+    -0.09848484848484851,
+    0.019696969696969657,
+    0.043636363636363584
+   ],
+   "mean_val_minus_heldout": -0.024303030303030337,
+   "max_epochs": 450,
+   "n_params": 264,
+   "wires": 4,
+   "n_test": 300,
+   "wall_sec_total": 21597.25150203705,
+   "ckpt_sha256": [
+    "da1b4c4eeab140b4e00fde215205b69132f384674616f5df2be90efab2903660",
+    "8dbf8d7cf4b6a4ca2dc8cdb54876294d31fcf3265efe22d017da608f3d2a5e33",
+    "d5a42bcb662a5dad6008e1b8b66aa86237f7f1a3c8badf7081360d593d5253e8",
+    "d5b2a0166f56d0cde130879a29bee577865a2be5c8caf66153f6cc0cc15798a0",
+    "676978541f99511a41baf5a75dc79b86e471cba8195c4c5e0831b99e7f646aab"
+   ]
+  },
+  "I1|R-identity": {
+   "mean": 0.8860000000000001,
+   "sd": 0.046927840587674824,
+   "per_seed": [
+    0.9666666666666667,
+    0.8666666666666667,
+    0.8566666666666667,
+    0.8866666666666667,
+    0.8533333333333334
+   ],
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_seeds": 5,
+   "val_per_seed": [
+    0.8409090909090909,
+    0.803030303030303,
+    0.7954545454545454,
+    0.8333333333333334,
+    0.8106060606060606
+   ],
+   "train_per_seed": [
+    0.9867424242424242,
+    0.9431818181818182,
+    0.9621212121212122,
+    0.9507575757575758,
+    0.9223484848484849
+   ],
+   "selected_epoch_per_seed": [
+    39,
+    25,
+    39,
+    38,
+    31
+   ],
+   "selected_stage_per_seed": [
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "val_minus_heldout_per_seed": [
+    -0.12575757575757573,
+    -0.06363636363636371,
+    -0.06121212121212127,
+    -0.053333333333333344,
+    -0.042727272727272836
+   ],
+   "mean_val_minus_heldout": -0.06933333333333339,
+   "max_epochs": 150,
+   "n_params": 264,
+   "wires": 4,
+   "n_test": 300,
+   "wall_sec_total": 7448.472746133804,
+   "ckpt_sha256": [
+    "9382329476263e956052bf3c21787ebf2bc07755f6ed2bfc9e620311fb85fc13",
+    "7d735409d357f23abd5c73724271545df3134ec222699aefcbb5224cc73e8251",
+    "7664970a349de365a6ab71065179fd335caa6b6ad6d064fbd3322a69ab414c12",
+    "4c9811856e471d4887de8cb51b3e4e7c11cdcb40ab22e308c332ebe382bd61f6",
+    "9e7d56b4f17c81820bbc37f69d15f7f84fb0f8bfe78cc1d4e01b7ebe70de0b33"
+   ]
+  },
+  "I1|R-layerwise": {
+   "mean": 0.7126666666666666,
+   "sd": 0.04499382673705856,
+   "per_seed": [
+    0.7066666666666667,
+    0.6533333333333333,
+    0.71,
+    0.78,
+    0.7133333333333334
+   ],
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_seeds": 5,
+   "val_per_seed": [
+    0.7651515151515151,
+    0.7348484848484849,
+    0.7196969696969697,
+    0.7348484848484849,
+    0.7424242424242424
+   ],
+   "train_per_seed": [
+    0.8958333333333334,
+    0.875,
+    0.9337121212121212,
+    0.9602272727272727,
+    0.8257575757575758
+   ],
+   "selected_epoch_per_seed": [
+    205,
+    200,
+    187,
+    169,
+    186
+   ],
+   "selected_stage_per_seed": [
+    3,
+    3,
+    3,
+    3,
+    3
+   ],
+   "val_minus_heldout_per_seed": [
+    0.05848484848484847,
+    0.08151515151515154,
+    0.00969696969696976,
+    -0.045151515151515165,
+    0.029090909090909056
+   ],
+   "mean_val_minus_heldout": 0.02672727272727273,
+   "max_epochs": 225,
+   "n_params": 264,
+   "wires": 4,
+   "n_test": 300,
+   "wall_sec_total": 8753.45862197876,
+   "ckpt_sha256": [
+    "d5ff0030e563bc42b19f0a38b396a9c7c93c7085b659beaceded524b3802934d",
+    "7036ee922ab051fdfb9f3d380e2c849eed43d741747239c6c24ca2bfd7792174",
+    "d3861291956f44ba621a65fd46f31dd9ec48e89db0dc83c3b4844aefce131131",
+    "a2727e9ba52bd88b5aec818688a39a4905b4e4edcd461dfe98fc1de983885255",
+    "61415757f696d3903dc4d9d790daf60cc2e853175419fb58e48f8103a11dd633"
+   ]
+  },
+  "I1|R-warmstart": {
+   "mean": 0.7326666666666666,
+   "sd": 0.05272570530585628,
+   "per_seed": [
+    0.74,
+    0.64,
+    0.76,
+    0.7666666666666667,
+    0.7566666666666667
+   ],
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_seeds": 5,
+   "val_per_seed": [
+    0.7424242424242424,
+    0.7121212121212122,
+    0.7121212121212122,
+    0.7803030303030303,
+    0.7575757575757576
+   ],
+   "train_per_seed": [
+    0.9583333333333334,
+    0.7632575757575758,
+    0.946969696969697,
+    0.9678030303030303,
+    0.9109848484848485
+   ],
+   "selected_epoch_per_seed": [
+    41,
+    142,
+    72,
+    137,
+    37
+   ],
+   "selected_stage_per_seed": [
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "val_minus_heldout_per_seed": [
+    0.00242424242424244,
+    0.07212121212121214,
+    -0.047878787878787854,
+    0.013636363636363558,
+    0.0009090909090908594
+   ],
+   "mean_val_minus_heldout": 0.008242424242424228,
+   "max_epochs": 150,
+   "n_params": 264,
+   "wires": 4,
+   "n_test": 300,
+   "wall_sec_total": 7464.139676094055,
+   "ckpt_sha256": [
+    "1652c673891c8c0497a2bc0ede5e31df0e6fe0f8a073eddb58402fdcbd076ece",
+    "39ad36ea1e980972b2630e2c159d8fec5e1d2d3de36a0ea3add2aad41976d0b3",
+    "811badee5e1cc643a0a9414f752bf2f6a1c303f9afc4220978b09af39b72549f",
+    "f19db4fe169d65539462014ed31fd76e240c03caaa64a1032b0e713bfec7b74b",
+    "c79fee74d441cb1019984572e99a2f403310b6109824d0531f67bc2906a279ca"
+   ]
+  },
+  "I2|R-budget": {
+   "mean": 0.7813333333333332,
+   "sd": 0.04292111627418632,
+   "per_seed": [
+    0.7466666666666667,
+    0.8366666666666667,
+    0.7966666666666666,
+    0.73,
+    0.7966666666666666
+   ],
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_seeds": 5,
+   "val_per_seed": [
+    0.8333333333333334,
+    0.8484848484848485,
+    0.8560606060606061,
+    0.8333333333333334,
+    0.7803030303030303
+   ],
+   "train_per_seed": [
+    0.8882575757575758,
+    0.928030303030303,
+    0.9223484848484849,
+    0.8825757575757576,
+    0.8863636363636364
+   ],
+   "selected_epoch_per_seed": [
+    227,
+    306,
+    281,
+    282,
+    274
+   ],
+   "selected_stage_per_seed": [
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "val_minus_heldout_per_seed": [
+    0.08666666666666667,
+    0.011818181818181839,
+    0.05939393939393944,
+    0.10333333333333339,
+    -0.016363636363636358
+   ],
+   "mean_val_minus_heldout": 0.048969696969696996,
+   "max_epochs": 450,
+   "n_params": 264,
+   "wires": 4,
+   "n_test": 300,
+   "wall_sec_total": 22394.0570499897,
+   "ckpt_sha256": [
+    "e6201b5ed15576ab08b9618df5dec96d4e503bbbe81b149dd16d107261f9a5f8",
+    "79eaecbf802256ffb6e4e231cf5efc4274fcdfda79398f4cbcefbb69e7d2af0e",
+    "54582cc17aaec55c5bca66197580e4144146d3891e725459919b7acb9d19c582",
+    "26fa298cf14dd4f5ca3fab616866857d124c3f5c91d720a1f2130b45a0c4f173",
+    "c77f6bddef11ca546df8bbb6947097ef074980399dd6063556b8e0cbad849a89"
+   ]
+  },
+  "I2|R-identity": {
+   "mean": 0.7106666666666666,
+   "sd": 0.11277805145013316,
+   "per_seed": [
+    0.6366666666666667,
+    0.82,
+    0.5533333333333333,
+    0.7466666666666667,
+    0.7966666666666666
+   ],
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_seeds": 5,
+   "val_per_seed": [
+    0.7196969696969697,
+    0.7954545454545454,
+    0.6818181818181818,
+    0.7348484848484849,
+    0.8181818181818182
+   ],
+   "train_per_seed": [
+    0.7253787878787878,
+    0.8314393939393939,
+    0.6685606060606061,
+    0.7727272727272727,
+    0.8390151515151515
+   ],
+   "selected_epoch_per_seed": [
+    13,
+    23,
+    148,
+    13,
+    26
+   ],
+   "selected_stage_per_seed": [
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "val_minus_heldout_per_seed": [
+    0.08303030303030301,
+    -0.024545454545454537,
+    0.12848484848484842,
+    -0.011818181818181839,
+    0.021515151515151598
+   ],
+   "mean_val_minus_heldout": 0.03933333333333333,
+   "max_epochs": 150,
+   "n_params": 264,
+   "wires": 4,
+   "n_test": 300,
+   "wall_sec_total": 7542.4315097332,
+   "ckpt_sha256": [
+    "4f185b460937a92fb993994d0a29e5832fe014628a513453c929af61add53f89",
+    "60c31eda2a3f12110221838fe347577e00dba65320541af3a9f8f36fd7c0c2cc",
+    "082a5588942537bd68f4d1f0a0bc76ec916c549634fc52ef2e33964fa8846016",
+    "da96837937ead98eedd4f8c9bb22777cf1085959feed563bc9f88916aed26572",
+    "3f2956d390303b3fcc644ac0b49228033d9ca2b4e01e8d87dfce3045bbaa2cbb"
+   ]
+  },
+  "I2|R-layerwise": {
+   "mean": 0.6839999999999999,
+   "sd": 0.027628487713469468,
+   "per_seed": [
+    0.72,
+    0.6533333333333333,
+    0.68,
+    0.7033333333333334,
+    0.6633333333333333
+   ],
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_seeds": 5,
+   "val_per_seed": [
+    0.75,
+    0.696969696969697,
+    0.8106060606060606,
+    0.7575757575757576,
+    0.75
+   ],
+   "train_per_seed": [
+    0.8049242424242424,
+    0.7689393939393939,
+    0.7935606060606061,
+    0.7935606060606061,
+    0.7935606060606061
+   ],
+   "selected_epoch_per_seed": [
+    219,
+    181,
+    88,
+    188,
+    88
+   ],
+   "selected_stage_per_seed": [
+    3,
+    3,
+    2,
+    3,
+    2
+   ],
+   "val_minus_heldout_per_seed": [
+    0.030000000000000027,
+    0.043636363636363695,
+    0.1306060606060605,
+    0.0542424242424242,
+    0.08666666666666667
+   ],
+   "mean_val_minus_heldout": 0.06903030303030303,
+   "max_epochs": 225,
+   "n_params": 264,
+   "wires": 4,
+   "n_test": 300,
+   "wall_sec_total": 9240.459208488464,
+   "ckpt_sha256": [
+    "e17a26e7bdf614494c3b20a9cdbb9ac37d1c76bd708ce0b6e74fa43ca81c44f5",
+    "9badf930172598c6faa43e00bb831c56c4a95b5cf9b266d1773a9e50fe757641",
+    "b73d00f8f211639311b2c6fd24d9c5d9dcb29b67f65cd57b8e3b23b5f88addce",
+    "2d29df5afc1bd3cba0edcad37fa1986f9e7caeb9c49c513a732cd0c7e30ad931",
+    "e85ed10701b1466b02fb1d7266ff6a21be3919e1f716013812c57cdaa39c7959"
+   ]
+  },
+  "I2|R-warmstart": {
+   "mean": 0.6406666666666666,
+   "sd": 0.03839849534089123,
+   "per_seed": [
+    0.67,
+    0.6233333333333333,
+    0.5866666666666667,
+    0.64,
+    0.6833333333333333
+   ],
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_seeds": 5,
+   "val_per_seed": [
+    0.7045454545454546,
+    0.696969696969697,
+    0.696969696969697,
+    0.7121212121212122,
+    0.7727272727272727
+   ],
+   "train_per_seed": [
+    0.7651515151515151,
+    0.7462121212121212,
+    0.7178030303030303,
+    0.7462121212121212,
+    0.7765151515151515
+   ],
+   "selected_epoch_per_seed": [
+    90,
+    123,
+    109,
+    33,
+    95
+   ],
+   "selected_stage_per_seed": [
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "val_minus_heldout_per_seed": [
+    0.034545454545454546,
+    0.07363636363636372,
+    0.11030303030303035,
+    0.07212121212121214,
+    0.08939393939393936
+   ],
+   "mean_val_minus_heldout": 0.07600000000000003,
+   "max_epochs": 150,
+   "n_params": 264,
+   "wires": 4,
+   "n_test": 300,
+   "wall_sec_total": 7794.919600725174,
+   "ckpt_sha256": [
+    "9160ff97c4d86533010d78282a711491e0db122a5daef28f20efc5af7e969d80",
+    "a064e14ce3e80a0638aa38cf4f1ddb95247cb7df78f0b26379549bcf13ae9209",
+    "d862a15a8e2cf51019bdec68e3459cf61dcbea188c154e561c70e4d51697e13b",
+    "1684c157c5409d7e4ba7d68578b540caae0867092a9cdd2ccf5db5300a6d30a1",
+    "51da848f705009dd336df16c5788f3ddf18a8bbe0340333abbece5e517308aba"
+   ]
+  }
+ },
+ "positive_control": {
+  "arm": "EA-ctrl-T2",
+  "committed_arm": "R2-A",
+  "rescue": "R-budget",
+  "committed_mean": 0.9187,
+  "committed_mean_full_precision": 0.9186666666666666,
+  "exp72_mean": 0.898,
+  "exp72_sd": 0.02968351581452424,
+  "per_seed": [
+   0.9433333333333334,
+   0.9133333333333333,
+   0.8766666666666667,
+   0.88,
+   0.8766666666666667
+  ],
+  "degradation": 0.02069999999999994,
+  "bar_doc58_literal": 0.8587,
+  "bar_full_precision": 0.8587,
+  "positive_control_degrades": false,
+  "positive_control_degrades_full_precision_bar": false,
+  "knife_edge": false,
+  "selected_epoch_per_seed": [
+   125,
+   125,
+   54,
+   78,
+   52
+  ],
+  "committed_selected_epoch_per_seed": [
+   121,
+   121,
+   14,
+   99,
+   114
+  ],
+  "reading": "doc 58 SS9.4 / SS15.1: a rescue procedure that DEGRADES a healthy arm by more than 0.06 is FLAGGED, and every rescue read under that procedure is read with suspicion and reported WITH THE FLAG ATTACHED IN THE SAME SENTENCE. It is NOT a kill switch -- it is a warning that travels (exp43c precedent, doc 24 SS5.2: a control that cannot fail is not a control).",
+  "no_floor_doc58_SS15_2": "the control carries NO floor and that is a decision, not an omission: it is a DEGRADATION CHECK against a committed value, not a gain claim, and doc 52 SS3's 'a gain criterion needs a null' does not bind a loss check."
+ },
+ "runs_missing": [],
+ "floors_doc58_SS14": {
+  "stage1_committed_floors": {
+   "I1": {
+    "mean": 0.502,
+    "sd": 0.028343135559308414,
+    "per_seed": [
+     0.5066666666666667,
+     0.52,
+     0.4766666666666667,
+     0.5366666666666666,
+     0.47
+    ],
+    "source": "results_exp69.json :: arms['R2-W'] / floors['R2-W']"
+   },
+   "I2": {
+    "mean": 0.5,
+    "sd": 0.05642103626603587,
+    "per_seed": [
+     0.5733333333333334,
+     0.47,
+     0.5133333333333333,
+     0.52,
+     0.42333333333333334
+    ],
+    "source": "results_exp70.json :: arms['N-in-T2'] / floors['N-in-T2']"
+   }
+  },
+  "stage1_is_orientation_only": "doc 58 SS14.1: all rescue arms are compared FIRST to the committed matched floors. THIS COMPARISON CARRIES NO VERDICT. Its sole function is to decide which cells go to stage 2.",
+  "stage2_trigger_doc58_SS14_2": "any cell whose held-out mean reaches its rescue_partial bar (I1 >= 0.864667, I2 >= 0.823333) TRIGGERS a matched floor RE-RUN UNDER THAT RESCUE PROCEDURE. A cell that does not reach its partial bar cannot pass either boolean regardless of its floor.",
+  "stage2_floors": {
+   "I1|R-identity": {
+    "mean": 0.4913333333333334,
+    "sd": 0.047527769660366884,
+    "per_seed": [
+     0.55,
+     0.43666666666666665,
+     0.45,
+     0.5,
+     0.52
+    ],
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "n_seeds": 5,
+    "val_per_seed": [
+     0.6212121212121212,
+     0.5984848484848485,
+     0.5833333333333334,
+     0.6363636363636364,
+     0.6287878787878788
+    ],
+    "train_per_seed": [
+     0.4981060606060606,
+     0.5303030303030303,
+     0.5662878787878788,
+     0.5946969696969697,
+     0.6609848484848485
+    ],
+    "selected_epoch_per_seed": [
+     129,
+     104,
+     99,
+     139,
+     23
+    ],
+    "selected_stage_per_seed": [
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    "val_minus_heldout_per_seed": [
+     0.07121212121212117,
+     0.16181818181818186,
+     0.13333333333333336,
+     0.13636363636363635,
+     0.10878787878787877
+    ],
+    "mean_val_minus_heldout": 0.12230303030303029,
+    "max_epochs": 150,
+    "n_params": 264,
+    "wires": 4,
+    "n_test": 300,
+    "wall_sec_total": 7332.973573446274,
+    "ckpt_sha256": [
+     "d5692b28235eb7947c2747065b5863b3482e410761bf3ac148a59cf241c3e8b9",
+     "0d01494c3721266a06618ff495b7f7b01bf90c2a5199cca79b75604a2e42d2f1",
+     "c1cbd91452d3ca1036e35da55400948baa1791230061ec8441b60250568dfd22",
+     "4ba26ff285b1c5f959d06a92030dd7692d6414831c24c14de7fd300bf0dc1ab5",
+     "b59f93cd86e8c7a0d79c1d2c0a3adb628201540756cffc2db8b06875591bd8a2"
+    ],
+    "procedure_matched": true,
+    "rescue_procedure": "R-identity"
+   }
+  },
+  "triggered_cells": [
+   "I1|R-identity"
+  ],
+  "triggered_but_unfloored": [],
+  "severed_donor_protocol_doc58_SS14_4": {
+   "rule": "a warm start injects information through the INITIALISATION, so THE DONOR'S LABELS ARE SEVERED TOO: the T = 1 donor arm is retrained on the shuffled bearer designation at the committed T = 1 recipe (150 epochs), its checkpoint is selected on the SHUFFLED val accuracy, and the shuffled T = 2 run is warm-started from it.",
+   "seed_linkage": "REGISTERED: floor seed k's shuffle RNG seed drives BOTH the T = 1 donor's per-pair reassignment AND the T = 2 run's -- one seed, two item sets.",
+   "BUILD_LEVEL_OPERATIONALISATION_FLAGGED_FOR_THE_ORCHESTRATOR": "doc 58 SS14.4 registers BOTH a five-seed donor retraining AND seed linkage, and the two only close under one reading: the T = 2 floor run at seed k is warm-started from THE DONOR TRAINED AT SEED k UNDER SHUFFLE SEED k. That reading is the only one consistent with SS15.3's count of 5 donor runs per cell AND with the committed per-seed S-shuffle construction; under it, step 2's 'select the donor on the SHUFFLED val accuracy' is the WITHIN-RUN checkpoint selection (the content that matters: no true label reaches the initialisation) and the cross-seed lowest-index tie-break is inert. A cross-seed donor selection would either break the linkage or cost 25 donor runs per cell, neither of which is registered. THIS IS A BUILD-LEVEL RESOLUTION OF A REGISTERED AMBIGUITY AND IS REPORTED RATHER THAN BURIED."
+  },
+  "gating_order_doc58_SS14_5": "stage-1 mean -> trigger test -> stage-2 floor if triggered -> ONLY THEN the booleans. A TRIGGERED CELL WHOSE FLOOR HAS NOT BEEN RUN HAS NO VERDICT and its booleans are stored as null, NEVER FALSE.",
+  "sd_readings_doc58_SS9_3": "'clears its procedure-matched floor by >= 2 SD' uses the FLOOR'S OWN SD AS PRIMARY, with all three readings (floor SD, arm SD, pooled) computed and reported, and an arm whose readings DISAGREE reported as disagreeing rather than resolved silently."
+ },
+ "verdicts_per_cell": {
+  "I1|R-budget": {
+   "instance": "I1",
+   "rescue": "R-budget",
+   "heldout_mean": 0.794,
+   "heldout_sd": 0.038830114315795895,
+   "per_seed": [
+    0.79,
+    0.8266666666666667,
+    0.8333333333333334,
+    0.7833333333333333,
+    0.7366666666666667
+   ],
+   "baseline": 0.7293333333333334,
+   "comparator": 1.0,
+   "gap": 0.2706666666666666,
+   "rescue_full_bar": 0.98,
+   "rescue_partial_bar": 0.8646666666666667,
+   "reaches_full_bar": false,
+   "reaches_partial_bar": false,
+   "per_seed_rescue_delta": [
+    0.06066666666666665,
+    0.09733333333333327,
+    0.10399999999999998,
+    0.05399999999999994,
+    0.007333333333333303
+   ],
+   "mean_rescue_delta": 0.06466666666666665,
+   "stage2_triggered": false,
+   "floor_used": "committed matched floor (doc 58 SS14.1, ORIENTATION ONLY)",
+   "floor_status": "COMMITTED (orientation)",
+   "floor_clearance_orientation_only": {
+    "arm_mean": 0.794,
+    "floor_mean": 0.502,
+    "delta_over_floor": 0.29200000000000004,
+    "sd_units_over_floor_using_floor_sd": 10.30231815350796,
+    "readings": {
+     "floor_sd": {
+      "sd": 0.028343135559308414,
+      "bar": 0.5586862711186168,
+      "clears": true
+     },
+     "arm_sd": {
+      "sd": 0.038830114315795895,
+      "bar": 0.5796602286315918,
+      "clears": true
+     },
+     "pooled_sd": {
+      "sd": 0.033993463423951896,
+      "bar": 0.5699869268479038,
+      "clears": true
+     }
+    },
+    "primary_reading": "floor_sd",
+    "clears_floor": true,
+    "clears_under_all_readings": true,
+    "clears_under_any_reading": true,
+    "readings_agree": true
+   },
+   "rescue_full": false,
+   "rescue_partial": false,
+   "verdict": "NOT RESCUED. doc 58 SS14.2: a cell that does not reach its rescue_partial bar cannot pass either boolean regardless of its floor, so no procedure-matched floor is run and the stage-1 comparison against the COMMITTED floor is stated as ORIENTATION ONLY."
+  },
+  "I1|R-identity": {
+   "instance": "I1",
+   "rescue": "R-identity",
+   "heldout_mean": 0.8860000000000001,
+   "heldout_sd": 0.046927840587674824,
+   "per_seed": [
+    0.9666666666666667,
+    0.8666666666666667,
+    0.8566666666666667,
+    0.8866666666666667,
+    0.8533333333333334
+   ],
+   "baseline": 0.7293333333333334,
+   "comparator": 1.0,
+   "gap": 0.2706666666666666,
+   "rescue_full_bar": 0.98,
+   "rescue_partial_bar": 0.8646666666666667,
+   "reaches_full_bar": false,
+   "reaches_partial_bar": true,
+   "per_seed_rescue_delta": [
+    0.23733333333333329,
+    0.1373333333333333,
+    0.1273333333333333,
+    0.15733333333333333,
+    0.124
+   ],
+   "mean_rescue_delta": 0.15666666666666673,
+   "stage2_triggered": true,
+   "floor_used": "stage-2 procedure-matched floor",
+   "floor_status": "PROCEDURE-MATCHED (stage 2)",
+   "floor_mean": 0.4913333333333334,
+   "floor_sd": 0.047527769660366884,
+   "floor_per_seed": [
+    0.55,
+    0.43666666666666665,
+    0.45,
+    0.5,
+    0.52
+   ],
+   "floor_clearance": {
+    "arm_mean": 0.8860000000000001,
+    "floor_mean": 0.4913333333333334,
+    "delta_over_floor": 0.3946666666666667,
+    "sd_units_over_floor_using_floor_sd": 8.303917256941615,
+    "readings": {
+     "floor_sd": {
+      "sd": 0.047527769660366884,
+      "bar": 0.5863888726540671,
+      "clears": true
+     },
+     "arm_sd": {
+      "sd": 0.046927840587674824,
+      "bar": 0.5851890145086831,
+      "clears": true
+     },
+     "pooled_sd": {
+      "sd": 0.047228757717682514,
+      "bar": 0.5857908487686985,
+      "clears": true
+     }
+    },
+    "primary_reading": "floor_sd",
+    "clears_floor": true,
+    "clears_under_all_readings": true,
+    "clears_under_any_reading": true,
+    "readings_agree": true
+   },
+   "rescue_full": false,
+   "rescue_partial": true,
+   "floor_contaminated": false,
+   "verdict": "READ against a procedure-matched floor (doc 58 SS14.3)."
+  },
+  "I1|R-layerwise": {
+   "instance": "I1",
+   "rescue": "R-layerwise",
+   "heldout_mean": 0.7126666666666666,
+   "heldout_sd": 0.04499382673705856,
+   "per_seed": [
+    0.7066666666666667,
+    0.6533333333333333,
+    0.71,
+    0.78,
+    0.7133333333333334
+   ],
+   "baseline": 0.7293333333333334,
+   "comparator": 1.0,
+   "gap": 0.2706666666666666,
+   "rescue_full_bar": 0.98,
+   "rescue_partial_bar": 0.8646666666666667,
+   "reaches_full_bar": false,
+   "reaches_partial_bar": false,
+   "per_seed_rescue_delta": [
+    -0.022666666666666724,
+    -0.07600000000000007,
+    -0.019333333333333425,
+    0.05066666666666664,
+    -0.016000000000000014
+   ],
+   "mean_rescue_delta": -0.01666666666666683,
+   "stage2_triggered": false,
+   "floor_used": "committed matched floor (doc 58 SS14.1, ORIENTATION ONLY)",
+   "floor_status": "COMMITTED (orientation)",
+   "floor_clearance_orientation_only": {
+    "arm_mean": 0.7126666666666666,
+    "floor_mean": 0.502,
+    "delta_over_floor": 0.21066666666666656,
+    "sd_units_over_floor_using_floor_sd": 7.432722686092496,
+    "readings": {
+     "floor_sd": {
+      "sd": 0.028343135559308414,
+      "bar": 0.5586862711186168,
+      "clears": true
+     },
+     "arm_sd": {
+      "sd": 0.04499382673705856,
+      "bar": 0.5919876534741171,
+      "clears": true
+     },
+     "pooled_sd": {
+      "sd": 0.03760171390892827,
+      "bar": 0.5772034278178565,
+      "clears": true
+     }
+    },
+    "primary_reading": "floor_sd",
+    "clears_floor": true,
+    "clears_under_all_readings": true,
+    "clears_under_any_reading": true,
+    "readings_agree": true
+   },
+   "rescue_full": false,
+   "rescue_partial": false,
+   "verdict": "NOT RESCUED. doc 58 SS14.2: a cell that does not reach its rescue_partial bar cannot pass either boolean regardless of its floor, so no procedure-matched floor is run and the stage-1 comparison against the COMMITTED floor is stated as ORIENTATION ONLY."
+  },
+  "I1|R-warmstart": {
+   "instance": "I1",
+   "rescue": "R-warmstart",
+   "heldout_mean": 0.7326666666666666,
+   "heldout_sd": 0.05272570530585628,
+   "per_seed": [
+    0.74,
+    0.64,
+    0.76,
+    0.7666666666666667,
+    0.7566666666666667
+   ],
+   "baseline": 0.7293333333333334,
+   "comparator": 1.0,
+   "gap": 0.2706666666666666,
+   "rescue_full_bar": 0.98,
+   "rescue_partial_bar": 0.8646666666666667,
+   "reaches_full_bar": false,
+   "reaches_partial_bar": false,
+   "per_seed_rescue_delta": [
+    0.010666666666666602,
+    -0.08933333333333338,
+    0.03066666666666662,
+    0.03733333333333333,
+    0.02733333333333332
+   ],
+   "mean_rescue_delta": 0.0033333333333331883,
+   "stage2_triggered": false,
+   "floor_used": "committed matched floor (doc 58 SS14.1, ORIENTATION ONLY)",
+   "floor_status": "COMMITTED (orientation)",
+   "floor_clearance_orientation_only": {
+    "arm_mean": 0.7326666666666666,
+    "floor_mean": 0.502,
+    "delta_over_floor": 0.23066666666666658,
+    "sd_units_over_floor_using_floor_sd": 8.138360915784823,
+    "readings": {
+     "floor_sd": {
+      "sd": 0.028343135559308414,
+      "bar": 0.5586862711186168,
+      "clears": true
+     },
+     "arm_sd": {
+      "sd": 0.05272570530585628,
+      "bar": 0.6074514106117126,
+      "clears": true
+     },
+     "pooled_sd": {
+      "sd": 0.04232808366400099,
+      "bar": 0.586656167328002,
+      "clears": true
+     }
+    },
+    "primary_reading": "floor_sd",
+    "clears_floor": true,
+    "clears_under_all_readings": true,
+    "clears_under_any_reading": true,
+    "readings_agree": true
+   },
+   "rescue_full": false,
+   "rescue_partial": false,
+   "verdict": "NOT RESCUED. doc 58 SS14.2: a cell that does not reach its rescue_partial bar cannot pass either boolean regardless of its floor, so no procedure-matched floor is run and the stage-1 comparison against the COMMITTED floor is stated as ORIENTATION ONLY."
+  },
+  "I2|R-budget": {
+   "instance": "I2",
+   "rescue": "R-budget",
+   "heldout_mean": 0.7813333333333332,
+   "heldout_sd": 0.04292111627418632,
+   "per_seed": [
+    0.7466666666666667,
+    0.8366666666666667,
+    0.7966666666666666,
+    0.73,
+    0.7966666666666666
+   ],
+   "baseline": 0.6466666666666666,
+   "comparator": 1.0,
+   "gap": 0.3533333333333334,
+   "rescue_full_bar": 0.98,
+   "rescue_partial_bar": 0.8233333333333333,
+   "reaches_full_bar": false,
+   "reaches_partial_bar": false,
+   "per_seed_rescue_delta": [
+    0.10000000000000009,
+    0.19000000000000006,
+    0.15000000000000002,
+    0.08333333333333337,
+    0.15000000000000002
+   ],
+   "mean_rescue_delta": 0.1346666666666666,
+   "stage2_triggered": false,
+   "floor_used": "committed matched floor (doc 58 SS14.1, ORIENTATION ONLY)",
+   "floor_status": "COMMITTED (orientation)",
+   "floor_clearance_orientation_only": {
+    "arm_mean": 0.7813333333333332,
+    "floor_mean": 0.5,
+    "delta_over_floor": 0.2813333333333332,
+    "sd_units_over_floor_using_floor_sd": 4.986319854296778,
+    "readings": {
+     "floor_sd": {
+      "sd": 0.05642103626603587,
+      "bar": 0.6128420725320718,
+      "clears": true
+     },
+     "arm_sd": {
+      "sd": 0.04292111627418632,
+      "bar": 0.5858422325483726,
+      "clears": true
+     },
+     "pooled_sd": {
+      "sd": 0.050127614922094374,
+      "bar": 0.6002552298441888,
+      "clears": true
+     }
+    },
+    "primary_reading": "floor_sd",
+    "clears_floor": true,
+    "clears_under_all_readings": true,
+    "clears_under_any_reading": true,
+    "readings_agree": true
+   },
+   "rescue_full": false,
+   "rescue_partial": false,
+   "verdict": "NOT RESCUED. doc 58 SS14.2: a cell that does not reach its rescue_partial bar cannot pass either boolean regardless of its floor, so no procedure-matched floor is run and the stage-1 comparison against the COMMITTED floor is stated as ORIENTATION ONLY."
+  },
+  "I2|R-identity": {
+   "instance": "I2",
+   "rescue": "R-identity",
+   "heldout_mean": 0.7106666666666666,
+   "heldout_sd": 0.11277805145013316,
+   "per_seed": [
+    0.6366666666666667,
+    0.82,
+    0.5533333333333333,
+    0.7466666666666667,
+    0.7966666666666666
+   ],
+   "baseline": 0.6466666666666666,
+   "comparator": 1.0,
+   "gap": 0.3533333333333334,
+   "rescue_full_bar": 0.98,
+   "rescue_partial_bar": 0.8233333333333333,
+   "reaches_full_bar": false,
+   "reaches_partial_bar": false,
+   "per_seed_rescue_delta": [
+    -0.009999999999999898,
+    0.17333333333333334,
+    -0.09333333333333327,
+    0.10000000000000009,
+    0.15000000000000002
+   ],
+   "mean_rescue_delta": 0.06399999999999995,
+   "stage2_triggered": false,
+   "floor_used": "committed matched floor (doc 58 SS14.1, ORIENTATION ONLY)",
+   "floor_status": "COMMITTED (orientation)",
+   "floor_clearance_orientation_only": {
+    "arm_mean": 0.7106666666666666,
+    "floor_mean": 0.5,
+    "delta_over_floor": 0.21066666666666656,
+    "sd_units_over_floor_using_floor_sd": 3.7338319288099093,
+    "readings": {
+     "floor_sd": {
+      "sd": 0.05642103626603587,
+      "bar": 0.6128420725320718,
+      "clears": true
+     },
+     "arm_sd": {
+      "sd": 0.11277805145013316,
+      "bar": 0.7255561029002663,
+      "clears": false
+     },
+     "pooled_sd": {
+      "sd": 0.08916900308465442,
+      "bar": 0.6783380061693088,
+      "clears": true
+     }
+    },
+    "primary_reading": "floor_sd",
+    "clears_floor": true,
+    "clears_under_all_readings": false,
+    "clears_under_any_reading": true,
+    "readings_agree": false
+   },
+   "rescue_full": false,
+   "rescue_partial": false,
+   "verdict": "NOT RESCUED. doc 58 SS14.2: a cell that does not reach its rescue_partial bar cannot pass either boolean regardless of its floor, so no procedure-matched floor is run and the stage-1 comparison against the COMMITTED floor is stated as ORIENTATION ONLY."
+  },
+  "I2|R-layerwise": {
+   "instance": "I2",
+   "rescue": "R-layerwise",
+   "heldout_mean": 0.6839999999999999,
+   "heldout_sd": 0.027628487713469468,
+   "per_seed": [
+    0.72,
+    0.6533333333333333,
+    0.68,
+    0.7033333333333334,
+    0.6633333333333333
+   ],
+   "baseline": 0.6466666666666666,
+   "comparator": 1.0,
+   "gap": 0.3533333333333334,
+   "rescue_full_bar": 0.98,
+   "rescue_partial_bar": 0.8233333333333333,
+   "reaches_full_bar": false,
+   "reaches_partial_bar": false,
+   "per_seed_rescue_delta": [
+    0.07333333333333336,
+    0.00666666666666671,
+    0.03333333333333344,
+    0.056666666666666754,
+    0.01666666666666672
+   ],
+   "mean_rescue_delta": 0.03733333333333333,
+   "stage2_triggered": false,
+   "floor_used": "committed matched floor (doc 58 SS14.1, ORIENTATION ONLY)",
+   "floor_status": "COMMITTED (orientation)",
+   "floor_clearance_orientation_only": {
+    "arm_mean": 0.6839999999999999,
+    "floor_mean": 0.5,
+    "delta_over_floor": 0.18399999999999994,
+    "sd_units_over_floor_using_floor_sd": 3.2611949757959975,
+    "readings": {
+     "floor_sd": {
+      "sd": 0.05642103626603587,
+      "bar": 0.6128420725320718,
+      "clears": true
+     },
+     "arm_sd": {
+      "sd": 0.027628487713469468,
+      "bar": 0.555256975426939,
+      "clears": true
+     },
+     "pooled_sd": {
+      "sd": 0.04442221666388716,
+      "bar": 0.5888444333277744,
+      "clears": true
+     }
+    },
+    "primary_reading": "floor_sd",
+    "clears_floor": true,
+    "clears_under_all_readings": true,
+    "clears_under_any_reading": true,
+    "readings_agree": true
+   },
+   "rescue_full": false,
+   "rescue_partial": false,
+   "verdict": "NOT RESCUED. doc 58 SS14.2: a cell that does not reach its rescue_partial bar cannot pass either boolean regardless of its floor, so no procedure-matched floor is run and the stage-1 comparison against the COMMITTED floor is stated as ORIENTATION ONLY."
+  },
+  "I2|R-warmstart": {
+   "instance": "I2",
+   "rescue": "R-warmstart",
+   "heldout_mean": 0.6406666666666666,
+   "heldout_sd": 0.03839849534089123,
+   "per_seed": [
+    0.67,
+    0.6233333333333333,
+    0.5866666666666667,
+    0.64,
+    0.6833333333333333
+   ],
+   "baseline": 0.6466666666666666,
+   "comparator": 1.0,
+   "gap": 0.3533333333333334,
+   "rescue_full_bar": 0.98,
+   "rescue_partial_bar": 0.8233333333333333,
+   "reaches_full_bar": false,
+   "reaches_partial_bar": false,
+   "per_seed_rescue_delta": [
+    0.023333333333333428,
+    -0.023333333333333317,
+    -0.05999999999999994,
+    -0.006666666666666599,
+    0.036666666666666736
+   ],
+   "mean_rescue_delta": -0.006000000000000005,
+   "stage2_triggered": false,
+   "floor_used": "committed matched floor (doc 58 SS14.1, ORIENTATION ONLY)",
+   "floor_status": "COMMITTED (orientation)",
+   "floor_clearance_orientation_only": {
+    "arm_mean": 0.6406666666666666,
+    "floor_mean": 0.5,
+    "delta_over_floor": 0.1406666666666666,
+    "sd_units_over_floor_using_floor_sd": 2.493159927148389,
+    "readings": {
+     "floor_sd": {
+      "sd": 0.05642103626603587,
+      "bar": 0.6128420725320718,
+      "clears": true
+     },
+     "arm_sd": {
+      "sd": 0.03839849534089123,
+      "bar": 0.5767969906817825,
+      "clears": true
+     },
+     "pooled_sd": {
+      "sd": 0.048258562855610296,
+      "bar": 0.5965171257112206,
+      "clears": true
+     }
+    },
+    "primary_reading": "floor_sd",
+    "clears_floor": true,
+    "clears_under_all_readings": true,
+    "clears_under_any_reading": true,
+    "readings_agree": true
+   },
+   "rescue_full": false,
+   "rescue_partial": false,
+   "verdict": "NOT RESCUED. doc 58 SS14.2: a cell that does not reach its rescue_partial bar cannot pass either boolean regardless of its floor, so no procedure-matched floor is run and the stage-1 comparison against the COMMITTED floor is stated as ORIENTATION ONLY."
+  }
+ },
+ "the_16_booleans_doc58_SS9_2": {
+  "rescue_full(I1, R-budget)": false,
+  "rescue_partial(I1, R-budget)": false,
+  "rescue_full(I1, R-identity)": false,
+  "rescue_partial(I1, R-identity)": true,
+  "rescue_full(I1, R-layerwise)": false,
+  "rescue_partial(I1, R-layerwise)": false,
+  "rescue_full(I1, R-warmstart)": false,
+  "rescue_partial(I1, R-warmstart)": false,
+  "rescue_full(I2, R-budget)": false,
+  "rescue_partial(I2, R-budget)": false,
+  "rescue_full(I2, R-identity)": false,
+  "rescue_partial(I2, R-identity)": false,
+  "rescue_full(I2, R-layerwise)": false,
+  "rescue_partial(I2, R-layerwise)": false,
+  "rescue_full(I2, R-warmstart)": false,
+  "rescue_partial(I2, R-warmstart)": false,
+  "positive_control_degrades": false,
+  "bug_hunt_triggered": false
+ },
+ "directional_call_doc58_SS9_6": {
+  "cell": "rescue_partial(I1, R-warmstart)",
+  "registered_expectation": true,
+  "registered_before_the_run": true,
+  "outcome": false,
+  "heldout_mean": 0.7326666666666666,
+  "bar": 0.8646666666666667,
+  "lands": false,
+  "rationale_doc58_SS9_6": "the same-family T = 1 solution EXISTS, at 0.9820, on the identical features, identical architecture and identical 264-parameter set. If composition is a FINE-TUNING problem rather than a representation problem, the T = 1 optimum is the initialisation most likely to sit in the T = 2 basin's neighbourhood. External support: arXiv:2409.08777 reports avoiding barren plateaus in DisCoCirc by pretraining components. The call is CONFINED to the warm-start cell because the in-programme precedents cut the other way for budget-type levers (doc 38 / exp54: 2.5x budget did not rescue) and because doc 58 SS4.3's own literature registers the failure mode -- transfer into a dissimilar basin -- that SS6.4.3 shows this transfer is exposed to.",
+  "if_it_lands_doc58_SS10": "composition is a FINE-TUNING problem for the product register: the T = 1 solution is in the T = 2 basin's neighbourhood and standard training simply does not find it from a cold start. THIS WOULD BE THE RUN'S HEADLINE -- and it MAY NOT BE CLAIMED ON THE FIRST DRAW ALONE. The confirm draw at generator seed + 1000 with ALL ARMS OF I1 PRESENT (its anchor and all four rescues), plus doc 58 SS16.2's RETRAINED DONOR, is MANDATORY (doc 47 SS18, doc 58 SS16.3 step 11). Not a statement about DisCoCirc's expressive limits, and not about I2.",
+  "every_other_cell": "NO DIRECTION REGISTERED -- stated as ignorance, not as a hedge (doc 58 SS9.6). 15 booleans."
+ },
+ "bug_hunt_doc58_SS9_5": {
+  "bug_hunt_triggered": false,
+  "status": "STRUCTURALLY INERT, and registered as such",
+  "reason": "doc 58 SS9.5, orchestrator ruling 5 (KEPT and stored as inert -- a documented cannot-fire beats an absent row). The gate fires when an arm exceeds its context bound by > 0.06. BOTH instances' per-twin bounds are 1.0000 (doc 55 SS12 for F2, doc 56 SS10 for N-in), so bound + 0.06 > 1 and NO achievable accuracy can trigger it. The positive control's FA bound of record is 0.9625, so its gate would fire above 1.0225 -- also unreachable. Computed and stored for completeness; it is not evidence of anything and no reading depends on it.",
+  "bounds_context_only_doc58_SS11": {
+   "I1": {
+    "bound": 1.0,
+    "fraction": "160/160",
+    "source": "diagnostic_sb_bounds.json, doc 55 SS12"
+   },
+   "I2": {
+    "bound": 1.0,
+    "fraction": "160/160",
+    "source": "diagnostic_entangled_bounds.json, doc 56 SS10"
+   },
+   "PC": {
+    "bound": 0.9625,
+    "fraction": "154/160",
+    "source": "diagnostic_readout_arity_bounds_addendum.json"
+   },
+   "note": "NO CRITERION READS THESE. Both instance bounds are 1.0000 and IDENTICAL, so grade 1 discriminates nothing between them and cannot bound any rescue from above in a useful way. The experiment rests entirely on held-out measurement against the committed comparator."
+  }
+ },
+ "warmstart_spread_doc58_SS7_2": {
+  "I1": {
+   "pairwise": [
+    {
+     "seeds": [
+      0,
+      1
+     ],
+     "max_abs_diff": 5.653337478637695
+    },
+    {
+     "seeds": [
+      0,
+      2
+     ],
+     "max_abs_diff": 3.7170004844665527
+    },
+    {
+     "seeds": [
+      0,
+      3
+     ],
+     "max_abs_diff": 5.074838638305664
+    },
+    {
+     "seeds": [
+      0,
+      4
+     ],
+     "max_abs_diff": 4.067187309265137
+    },
+    {
+     "seeds": [
+      1,
+      2
+     ],
+     "max_abs_diff": 6.277365684509277
+    },
+    {
+     "seeds": [
+      1,
+      3
+     ],
+     "max_abs_diff": 5.390127658843994
+    },
+    {
+     "seeds": [
+      1,
+      4
+     ],
+     "max_abs_diff": 5.748257160186768
+    },
+    {
+     "seeds": [
+      2,
+      3
+     ],
+     "max_abs_diff": 4.54595947265625
+    },
+    {
+     "seeds": [
+      2,
+      4
+     ],
+     "max_abs_diff": 2.835667133331299
+    },
+    {
+     "seeds": [
+      3,
+      4
+     ],
+     "max_abs_diff": 4.567470073699951
+    }
+   ],
+   "max_abs_diff_over_pairs": 6.277365684509277,
+   "all_pairs_differ": true,
+   "verdict": "PASS -- the five seeds' FINAL parameter vectors differ, so the loaded donor is being trained rather than ignored (doc 58 SS6.0 / SS7.2's failing direction)",
+   "assertion_passed": true,
+   "note": "compared on the SELECTED checkpoints (the object every held-out number is read from). doc 58 SS6.0 / SS7.2's failing direction: `seed` reshuffles the training order every epoch, so five R-warmstart runs of a cell must NOT be bit-identical."
+  },
+  "I2": {
+   "pairwise": [
+    {
+     "seeds": [
+      0,
+      1
+     ],
+     "max_abs_diff": 4.969812870025635
+    },
+    {
+     "seeds": [
+      0,
+      2
+     ],
+     "max_abs_diff": 5.190037727355957
+    },
+    {
+     "seeds": [
+      0,
+      3
+     ],
+     "max_abs_diff": 4.063372611999512
+    },
+    {
+     "seeds": [
+      0,
+      4
+     ],
+     "max_abs_diff": 4.492585182189941
+    },
+    {
+     "seeds": [
+      1,
+      2
+     ],
+     "max_abs_diff": 5.906625747680664
+    },
+    {
+     "seeds": [
+      1,
+      3
+     ],
+     "max_abs_diff": 4.547152519226074
+    },
+    {
+     "seeds": [
+      1,
+      4
+     ],
+     "max_abs_diff": 4.21973991394043
+    },
+    {
+     "seeds": [
+      2,
+      3
+     ],
+     "max_abs_diff": 4.417952060699463
+    },
+    {
+     "seeds": [
+      2,
+      4
+     ],
+     "max_abs_diff": 4.947963714599609
+    },
+    {
+     "seeds": [
+      3,
+      4
+     ],
+     "max_abs_diff": 4.582806587219238
+    }
+   ],
+   "max_abs_diff_over_pairs": 5.906625747680664,
+   "all_pairs_differ": true,
+   "verdict": "PASS -- the five seeds' FINAL parameter vectors differ, so the loaded donor is being trained rather than ignored (doc 58 SS6.0 / SS7.2's failing direction)",
+   "assertion_passed": true,
+   "note": "compared on the SELECTED checkpoints (the object every held-out number is read from). doc 58 SS6.0 / SS7.2's failing direction: `seed` reshuffles the training order every epoch, so five R-warmstart runs of a cell must NOT be bit-identical."
+  }
+ },
+ "reported_not_registered_doc58_SS9_7": {
+  "I1|R-budget": {
+   "per_q_accuracy": {
+    "q1": {
+     "acc": 0.7466666666666667,
+     "n": 750
+    },
+    "q2": {
+     "acc": 0.8413333333333334,
+     "n": 750
+    }
+   },
+   "per_surface_order_accuracy": {
+    "SVO|SVO": {
+     "acc": 0.7973684210526316,
+     "n": 380
+    },
+    "SVO|VSO": {
+     "acc": 0.781578947368421,
+     "n": 380
+    },
+    "VSO|SVO": {
+     "acc": 0.8027027027027027,
+     "n": 370
+    },
+    "VSO|VSO": {
+     "acc": 0.7945945945945946,
+     "n": 370
+    }
+   },
+   "per_queried_verb_accuracy": {
+    "حمل": {
+     "acc": 0.8413793103448276,
+     "n": 290
+    },
+    "رفع": {
+     "acc": 0.7833333333333333,
+     "n": 180
+    },
+    "سأل": {
+     "acc": 0.6777777777777778,
+     "n": 270
+    },
+    "ساعد": {
+     "acc": 0.8785714285714286,
+     "n": 280
+    },
+    "ضرب": {
+     "acc": 0.8052631578947368,
+     "n": 190
+    },
+    "عالج": {
+     "acc": 0.7724137931034483,
+     "n": 290
+    }
+   },
+   "val_minus_heldout_per_seed": [
+    -0.00969696969696976,
+    -0.07666666666666666,
+    -0.09848484848484851,
+    0.019696969696969657,
+    0.043636363636363584
+   ],
+   "selected_epoch_per_seed": [
+    352,
+    327,
+    273,
+    267,
+    73
+   ],
+   "selected_fraction_of_budget": [
+    0.7822222222222223,
+    0.7266666666666667,
+    0.6066666666666667,
+    0.5933333333333334,
+    0.1622222222222222
+   ],
+   "per_seed_rescue_delta": [
+    0.06066666666666665,
+    0.09733333333333327,
+    0.10399999999999998,
+    0.05399999999999994,
+    0.007333333333333303
+   ],
+   "training_curves": [
+    {
+     "seed": 0,
+     "n_epochs": 450,
+     "val_at_epochs": {
+      "1": 0.5757575757575758,
+      "112": 0.5454545454545454,
+      "225": 0.7424242424242424,
+      "337": 0.7424242424242424,
+      "450": 0.7727272727272727
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "112": 0.017144726796328034,
+      "225": 0.010069812602979615,
+      "337": 0.0030033665948663445,
+      "450": 2.436929460525317e-07
+     },
+     "best_val": 0.7803030303030303,
+     "final_val": 0.7727272727272727,
+     "selected_epoch": 352,
+     "selected_stage": 1,
+     "selected_fraction_of_budget": 0.7822222222222223,
+     "epochs_after_selection": 98
+    },
+    {
+     "seed": 1,
+     "n_epochs": 450,
+     "val_at_epochs": {
+      "1": 0.5378787878787878,
+      "112": 0.7348484848484849,
+      "225": 0.6666666666666666,
+      "337": 0.7348484848484849,
+      "450": 0.7424242424242424
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "112": 0.017144726796328034,
+      "225": 0.010069812602979615,
+      "337": 0.0030033665948663445,
+      "450": 2.436929460525317e-07
+     },
+     "best_val": 0.75,
+     "final_val": 0.7424242424242424,
+     "selected_epoch": 327,
+     "selected_stage": 1,
+     "selected_fraction_of_budget": 0.7266666666666667,
+     "epochs_after_selection": 123
+    },
+    {
+     "seed": 2,
+     "n_epochs": 450,
+     "val_at_epochs": {
+      "1": 0.5454545454545454,
+      "112": 0.5606060606060606,
+      "225": 0.6515151515151515,
+      "337": 0.6818181818181818,
+      "450": 0.7121212121212122
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "112": 0.017144726796328034,
+      "225": 0.010069812602979615,
+      "337": 0.0030033665948663445,
+      "450": 2.436929460525317e-07
+     },
+     "best_val": 0.7348484848484849,
+     "final_val": 0.7121212121212122,
+     "selected_epoch": 273,
+     "selected_stage": 1,
+     "selected_fraction_of_budget": 0.6066666666666667,
+     "epochs_after_selection": 177
+    },
+    {
+     "seed": 3,
+     "n_epochs": 450,
+     "val_at_epochs": {
+      "1": 0.6060606060606061,
+      "112": 0.7121212121212122,
+      "225": 0.7045454545454546,
+      "337": 0.7651515151515151,
+      "450": 0.7424242424242424
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "112": 0.017144726796328034,
+      "225": 0.010069812602979615,
+      "337": 0.0030033665948663445,
+      "450": 2.436929460525317e-07
+     },
+     "best_val": 0.803030303030303,
+     "final_val": 0.7424242424242424,
+     "selected_epoch": 267,
+     "selected_stage": 1,
+     "selected_fraction_of_budget": 0.5933333333333334,
+     "epochs_after_selection": 183
+    },
+    {
+     "seed": 4,
+     "n_epochs": 450,
+     "val_at_epochs": {
+      "1": 0.5833333333333334,
+      "112": 0.5757575757575758,
+      "225": 0.6363636363636364,
+      "337": 0.7121212121212122,
+      "450": 0.7348484848484849
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "112": 0.017144726796328034,
+      "225": 0.010069812602979615,
+      "337": 0.0030033665948663445,
+      "450": 2.436929460525317e-07
+     },
+     "best_val": 0.7803030303030303,
+     "final_val": 0.7348484848484849,
+     "selected_epoch": 73,
+     "selected_stage": 1,
+     "selected_fraction_of_budget": 0.1622222222222222,
+     "epochs_after_selection": 377
+    }
+   ],
+   "purity_doc58_SS8": {
+    "cells": {
+     "q1_correct": {
+      "n": 128,
+      "mean_wire_purity": {
+       "after_event1": 0.6516492468072101,
+       "after_event2": 0.6071602200390771,
+       "after_intro": 0.9999999926658347,
+       "at_readout": 0.5962598720798269
+      }
+     },
+     "q1_incorrect": {
+      "n": 22,
+      "mean_wire_purity": {
+       "after_event1": 0.6391975960948251,
+       "after_event2": 0.5978729291395708,
+       "after_intro": 0.9999999695203521,
+       "at_readout": 0.6027704680507834
+      }
+     },
+     "q2_correct": {
+      "n": 132,
+      "mean_wire_purity": {
+       "after_event1": 0.6634828208973913,
+       "after_event2": 0.6082515925394766,
+       "after_intro": 0.999999983405525,
+       "at_readout": 0.6323384127833627
+      }
+     },
+     "q2_incorrect": {
+      "n": 18,
+      "mean_wire_purity": {
+       "after_event1": 0.6334386964639028,
+       "after_event2": 0.6015336770150397,
+       "after_intro": 1.000000014073319,
+       "at_readout": 0.5950157245000204
+      }
+     }
+    },
+    "restoration": {
+     "q1_correct": {
+      "n": 128,
+      "readout_vs_after_event1_mean_abs_gap": 0.06665415363386273,
+      "readout_vs_INTRO_mean_abs_gap": 0.40374012058600783,
+      "mean_readout_purity": 0.5962598720798269,
+      "mean_after_event1_purity": 0.6516492468072101,
+      "mean_intro_purity": 0.9999999926658347
+     },
+     "q1_incorrect": {
+      "n": 22,
+      "readout_vs_after_event1_mean_abs_gap": 0.05737547170032154,
+      "readout_vs_INTRO_mean_abs_gap": 0.39722950146956876,
+      "mean_readout_purity": 0.6027704680507834,
+      "mean_after_event1_purity": 0.6391975960948251,
+      "mean_intro_purity": 0.9999999695203521
+     },
+     "q2_correct": {
+      "n": 132,
+      "readout_vs_after_event1_mean_abs_gap": 0.03771046707124421,
+      "readout_vs_INTRO_mean_abs_gap": 0.36766157062216237,
+      "mean_readout_purity": 0.6323384127833627,
+      "mean_after_event1_purity": 0.6634828208973913,
+      "mean_intro_purity": 0.999999983405525
+     },
+     "q2_incorrect": {
+      "n": 18,
+      "readout_vs_after_event1_mean_abs_gap": 0.039640992879867554,
+      "readout_vs_INTRO_mean_abs_gap": 0.4049842895732986,
+      "mean_readout_purity": 0.5950157245000204,
+      "mean_after_event1_purity": 0.6334386964639028,
+      "mean_intro_purity": 1.000000014073319
+     }
+    },
+    "q_asymmetry_undo_gap_correct_items": [
+     0.06665415363386273,
+     0.03771046707124421
+    ],
+    "status": "DESCRIPTIVE -- doc 58 SS8.2 / SS8.3. No boolean, no criterion, and it MAY NOT be promoted onto a criterion after results exist (the exp44 no-promotion clause)."
+   }
+  },
+  "I1|R-identity": {
+   "per_q_accuracy": {
+    "q1": {
+     "acc": 0.8746666666666667,
+     "n": 750
+    },
+    "q2": {
+     "acc": 0.8973333333333333,
+     "n": 750
+    }
+   },
+   "per_surface_order_accuracy": {
+    "SVO|SVO": {
+     "acc": 0.8842105263157894,
+     "n": 380
+    },
+    "SVO|VSO": {
+     "acc": 0.8447368421052631,
+     "n": 380
+    },
+    "VSO|SVO": {
+     "acc": 0.8972972972972973,
+     "n": 370
+    },
+    "VSO|VSO": {
+     "acc": 0.918918918918919,
+     "n": 370
+    }
+   },
+   "per_queried_verb_accuracy": {
+    "حمل": {
+     "acc": 0.903448275862069,
+     "n": 290
+    },
+    "رفع": {
+     "acc": 0.8444444444444444,
+     "n": 180
+    },
+    "سأل": {
+     "acc": 0.8814814814814815,
+     "n": 270
+    },
+    "ساعد": {
+     "acc": 0.925,
+     "n": 280
+    },
+    "ضرب": {
+     "acc": 0.8578947368421053,
+     "n": 190
+    },
+    "عالج": {
+     "acc": 0.8793103448275862,
+     "n": 290
+    }
+   },
+   "val_minus_heldout_per_seed": [
+    -0.12575757575757573,
+    -0.06363636363636371,
+    -0.06121212121212127,
+    -0.053333333333333344,
+    -0.042727272727272836
+   ],
+   "selected_epoch_per_seed": [
+    39,
+    25,
+    39,
+    38,
+    31
+   ],
+   "selected_fraction_of_budget": [
+    0.26,
+    0.16666666666666666,
+    0.26,
+    0.25333333333333335,
+    0.20666666666666667
+   ],
+   "per_seed_rescue_delta": [
+    0.23733333333333329,
+    0.1373333333333333,
+    0.1273333333333333,
+    0.15733333333333333,
+    0.124
+   ],
+   "training_curves": [
+    {
+     "seed": 0,
+     "n_epochs": 150,
+     "val_at_epochs": {
+      "1": 0.6363636363636364,
+      "37": 0.8181818181818182,
+      "75": 0.6439393939393939,
+      "112": 0.6212121212121212,
+      "150": 0.6590909090909091
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "37": 0.02,
+      "75": 0.02,
+      "112": 0.02,
+      "150": 0.02
+     },
+     "best_val": 0.8409090909090909,
+     "final_val": 0.6590909090909091,
+     "selected_epoch": 39,
+     "selected_stage": 1,
+     "selected_fraction_of_budget": 0.26,
+     "epochs_after_selection": 111
+    },
+    {
+     "seed": 1,
+     "n_epochs": 150,
+     "val_at_epochs": {
+      "1": 0.6363636363636364,
+      "37": 0.7121212121212122,
+      "75": 0.5606060606060606,
+      "112": 0.5984848484848485,
+      "150": 0.5454545454545454
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "37": 0.02,
+      "75": 0.02,
+      "112": 0.02,
+      "150": 0.02
+     },
+     "best_val": 0.803030303030303,
+     "final_val": 0.5454545454545454,
+     "selected_epoch": 25,
+     "selected_stage": 1,
+     "selected_fraction_of_budget": 0.16666666666666666,
+     "epochs_after_selection": 125
+    },
+    {
+     "seed": 2,
+     "n_epochs": 150,
+     "val_at_epochs": {
+      "1": 0.6212121212121212,
+      "37": 0.75,
+      "75": 0.7045454545454546,
+      "112": 0.6742424242424242,
+      "150": 0.6060606060606061
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "37": 0.02,
+      "75": 0.02,
+      "112": 0.02,
+      "150": 0.02
+     },
+     "best_val": 0.7954545454545454,
+     "final_val": 0.6060606060606061,
+     "selected_epoch": 39,
+     "selected_stage": 1,
+     "selected_fraction_of_budget": 0.26,
+     "epochs_after_selection": 111
+    },
+    {
+     "seed": 3,
+     "n_epochs": 150,
+     "val_at_epochs": {
+      "1": 0.5303030303030303,
+      "37": 0.7803030303030303,
+      "75": 0.5606060606060606,
+      "112": 0.7196969696969697,
+      "150": 0.6287878787878788
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "37": 0.02,
+      "75": 0.02,
+      "112": 0.02,
+      "150": 0.02
+     },
+     "best_val": 0.8333333333333334,
+     "final_val": 0.6287878787878788,
+     "selected_epoch": 38,
+     "selected_stage": 1,
+     "selected_fraction_of_budget": 0.25333333333333335,
+     "epochs_after_selection": 112
+    },
+    {
+     "seed": 4,
+     "n_epochs": 150,
+     "val_at_epochs": {
+      "1": 0.6060606060606061,
+      "37": 0.7803030303030303,
+      "75": 0.6212121212121212,
+      "112": 0.6060606060606061,
+      "150": 0.6666666666666666
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "37": 0.02,
+      "75": 0.02,
+      "112": 0.02,
+      "150": 0.02
+     },
+     "best_val": 0.8106060606060606,
+     "final_val": 0.6666666666666666,
+     "selected_epoch": 31,
+     "selected_stage": 1,
+     "selected_fraction_of_budget": 0.20666666666666667,
+     "epochs_after_selection": 119
+    }
+   ],
+   "purity_doc58_SS8": {
+    "cells": {
+     "q1_correct": {
+      "n": 144,
+      "mean_wire_purity": {
+       "after_event1": 0.8681850012184845,
+       "after_event2": 0.8695207917028003,
+       "after_intro": 0.9999999855127599,
+       "at_readout": 0.8135259372906553
+      }
+     },
+     "q1_incorrect": {
+      "n": 6,
+      "mean_wire_purity": {
+       "after_event1": 0.8109763835867246,
+       "after_event2": 0.824793703854084,
+       "after_intro": 1.0000000794728596,
+       "at_readout": 0.825987346470356
+      }
+     },
+     "q2_correct": {
+      "n": 141,
+      "mean_wire_purity": {
+       "after_event1": 0.872052215092571,
+       "after_event2": 0.8721639463242065,
+       "after_intro": 0.999999981822697,
+       "at_readout": 0.8691102683755523
+      }
+     },
+     "q2_incorrect": {
+      "n": 9,
+      "mean_wire_purity": {
+       "after_event1": 0.8589972224500444,
+       "after_event2": 0.8766961180501514,
+       "after_intro": 1.0000000695387523,
+       "at_readout": 0.8704300887054868
+      }
+     }
+    },
+    "restoration": {
+     "q1_correct": {
+      "n": 144,
+      "readout_vs_after_event1_mean_abs_gap": 0.08605673609094487,
+      "readout_vs_INTRO_mean_abs_gap": 0.1864740482221047,
+      "mean_readout_purity": 0.8135259372906553,
+      "mean_after_event1_purity": 0.8681850012184845,
+      "mean_intro_purity": 0.9999999855127599
+     },
+     "q1_incorrect": {
+      "n": 6,
+      "readout_vs_after_event1_mean_abs_gap": 0.07518258194128673,
+      "readout_vs_INTRO_mean_abs_gap": 0.17401273300250372,
+      "mean_readout_purity": 0.825987346470356,
+      "mean_after_event1_purity": 0.8109763835867246,
+      "mean_intro_purity": 1.0000000794728596
+     },
+     "q2_correct": {
+      "n": 141,
+      "readout_vs_after_event1_mean_abs_gap": 0.016500953347124953,
+      "readout_vs_INTRO_mean_abs_gap": 0.1308897134471447,
+      "mean_readout_purity": 0.8691102683755523,
+      "mean_after_event1_purity": 0.872052215092571,
+      "mean_intro_purity": 0.999999981822697
+     },
+     "q2_incorrect": {
+      "n": 9,
+      "readout_vs_after_event1_mean_abs_gap": 0.0114328662554423,
+      "readout_vs_INTRO_mean_abs_gap": 0.1295699808332655,
+      "mean_readout_purity": 0.8704300887054868,
+      "mean_after_event1_purity": 0.8589972224500444,
+      "mean_intro_purity": 1.0000000695387523
+     }
+    },
+    "q_asymmetry_undo_gap_correct_items": [
+     0.08605673609094487,
+     0.016500953347124953
+    ],
+    "status": "DESCRIPTIVE -- doc 58 SS8.2 / SS8.3. No boolean, no criterion, and it MAY NOT be promoted onto a criterion after results exist (the exp44 no-promotion clause)."
+   }
+  },
+  "I1|R-layerwise": {
+   "per_q_accuracy": {
+    "q1": {
+     "acc": 0.6253333333333333,
+     "n": 750
+    },
+    "q2": {
+     "acc": 0.8,
+     "n": 750
+    }
+   },
+   "per_surface_order_accuracy": {
+    "SVO|SVO": {
+     "acc": 0.7447368421052631,
+     "n": 380
+    },
+    "SVO|VSO": {
+     "acc": 0.6789473684210526,
+     "n": 380
+    },
+    "VSO|SVO": {
+     "acc": 0.6891891891891891,
+     "n": 370
+    },
+    "VSO|VSO": {
+     "acc": 0.7378378378378379,
+     "n": 370
+    }
+   },
+   "per_queried_verb_accuracy": {
+    "حمل": {
+     "acc": 0.803448275862069,
+     "n": 290
+    },
+    "رفع": {
+     "acc": 0.7388888888888889,
+     "n": 180
+    },
+    "سأل": {
+     "acc": 0.6111111111111112,
+     "n": 270
+    },
+    "ساعد": {
+     "acc": 0.8357142857142857,
+     "n": 280
+    },
+    "ضرب": {
+     "acc": 0.6526315789473685,
+     "n": 190
+    },
+    "عالج": {
+     "acc": 0.6206896551724138,
+     "n": 290
+    }
+   },
+   "val_minus_heldout_per_seed": [
+    0.05848484848484847,
+    0.08151515151515154,
+    0.00969696969696976,
+    -0.045151515151515165,
+    0.029090909090909056
+   ],
+   "selected_epoch_per_seed": [
+    205,
+    200,
+    187,
+    169,
+    186
+   ],
+   "selected_fraction_of_budget": [
+    0.9111111111111111,
+    0.8888888888888888,
+    0.8311111111111111,
+    0.7511111111111111,
+    0.8266666666666667
+   ],
+   "per_seed_rescue_delta": [
+    -0.022666666666666724,
+    -0.07600000000000007,
+    -0.019333333333333425,
+    0.05066666666666664,
+    -0.016000000000000014
+   ],
+   "training_curves": [
+    {
+     "seed": 0,
+     "n_epochs": 225,
+     "val_at_epochs": {
+      "1": 0.5303030303030303,
+      "56": 0.5909090909090909,
+      "112": 0.5909090909090909,
+      "168": 0.6742424242424242,
+      "225": 0.5833333333333334
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "56": 0.02,
+      "112": 0.02,
+      "168": 0.02,
+      "225": 0.02
+     },
+     "best_val": 0.7651515151515151,
+     "final_val": 0.5833333333333334,
+     "selected_epoch": 205,
+     "selected_stage": 3,
+     "selected_fraction_of_budget": 0.9111111111111111,
+     "epochs_after_selection": 20
+    },
+    {
+     "seed": 1,
+     "n_epochs": 225,
+     "val_at_epochs": {
+      "1": 0.5,
+      "56": 0.696969696969697,
+      "112": 0.5454545454545454,
+      "168": 0.6666666666666666,
+      "225": 0.6590909090909091
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "56": 0.02,
+      "112": 0.02,
+      "168": 0.02,
+      "225": 0.02
+     },
+     "best_val": 0.7348484848484849,
+     "final_val": 0.6590909090909091,
+     "selected_epoch": 200,
+     "selected_stage": 3,
+     "selected_fraction_of_budget": 0.8888888888888888,
+     "epochs_after_selection": 25
+    },
+    {
+     "seed": 2,
+     "n_epochs": 225,
+     "val_at_epochs": {
+      "1": 0.5681818181818182,
+      "56": 0.6060606060606061,
+      "112": 0.6060606060606061,
+      "168": 0.6363636363636364,
+      "225": 0.6439393939393939
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "56": 0.02,
+      "112": 0.02,
+      "168": 0.02,
+      "225": 0.02
+     },
+     "best_val": 0.7196969696969697,
+     "final_val": 0.6439393939393939,
+     "selected_epoch": 187,
+     "selected_stage": 3,
+     "selected_fraction_of_budget": 0.8311111111111111,
+     "epochs_after_selection": 38
+    },
+    {
+     "seed": 3,
+     "n_epochs": 225,
+     "val_at_epochs": {
+      "1": 0.6060606060606061,
+      "56": 0.6515151515151515,
+      "112": 0.6136363636363636,
+      "168": 0.7045454545454546,
+      "225": 0.6666666666666666
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "56": 0.02,
+      "112": 0.02,
+      "168": 0.02,
+      "225": 0.02
+     },
+     "best_val": 0.7348484848484849,
+     "final_val": 0.6666666666666666,
+     "selected_epoch": 169,
+     "selected_stage": 3,
+     "selected_fraction_of_budget": 0.7511111111111111,
+     "epochs_after_selection": 56
+    },
+    {
+     "seed": 4,
+     "n_epochs": 225,
+     "val_at_epochs": {
+      "1": 0.553030303030303,
+      "56": 0.5303030303030303,
+      "112": 0.6287878787878788,
+      "168": 0.6742424242424242,
+      "225": 0.696969696969697
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "56": 0.02,
+      "112": 0.02,
+      "168": 0.02,
+      "225": 0.02
+     },
+     "best_val": 0.7424242424242424,
+     "final_val": 0.696969696969697,
+     "selected_epoch": 186,
+     "selected_stage": 3,
+     "selected_fraction_of_budget": 0.8266666666666667,
+     "epochs_after_selection": 39
+    }
+   ],
+   "purity_doc58_SS8": {
+    "cells": {
+     "q1_correct": {
+      "n": 109,
+      "mean_wire_purity": {
+       "after_event1": 0.7596489325029041,
+       "after_event2": 0.6226578004863283,
+       "after_intro": 0.9999999938481444,
+       "at_readout": 0.6098929267684254
+      }
+     },
+     "q1_incorrect": {
+      "n": 41,
+      "mean_wire_purity": {
+       "after_event1": 0.7681590856575384,
+       "after_event2": 0.6457995961352092,
+       "after_intro": 0.9999999771030937,
+       "at_readout": 0.6084337350798816
+      }
+     },
+     "q2_correct": {
+      "n": 133,
+      "mean_wire_purity": {
+       "after_event1": 0.7701164974754018,
+       "after_event2": 0.6222357179661443,
+       "after_intro": 0.9999999862192268,
+       "at_readout": 0.689737926860501
+      }
+     },
+     "q2_incorrect": {
+      "n": 17,
+      "mean_wire_purity": {
+       "after_event1": 0.7935391594381893,
+       "after_event2": 0.6206020905691034,
+       "after_intro": 0.9999999938642278,
+       "at_readout": 0.683332126806764
+      }
+     }
+    },
+    "restoration": {
+     "q1_correct": {
+      "n": 109,
+      "readout_vs_after_event1_mean_abs_gap": 0.15419490389320828,
+      "readout_vs_INTRO_mean_abs_gap": 0.39010706707971904,
+      "mean_readout_purity": 0.6098929267684254,
+      "mean_after_event1_purity": 0.7596489325029041,
+      "mean_intro_purity": 0.9999999938481444
+     },
+     "q1_incorrect": {
+      "n": 41,
+      "readout_vs_after_event1_mean_abs_gap": 0.15972535057765683,
+      "readout_vs_INTRO_mean_abs_gap": 0.39156624202321216,
+      "mean_readout_purity": 0.6084337350798816,
+      "mean_after_event1_purity": 0.7681590856575384,
+      "mean_intro_purity": 0.9999999771030937
+     },
+     "q2_correct": {
+      "n": 133,
+      "readout_vs_after_event1_mean_abs_gap": 0.08068338473488514,
+      "readout_vs_INTRO_mean_abs_gap": 0.31026205935872586,
+      "mean_readout_purity": 0.689737926860501,
+      "mean_after_event1_purity": 0.7701164974754018,
+      "mean_intro_purity": 0.9999999862192268
+     },
+     "q2_incorrect": {
+      "n": 17,
+      "readout_vs_after_event1_mean_abs_gap": 0.11020740077776067,
+      "readout_vs_INTRO_mean_abs_gap": 0.3166678670574637,
+      "mean_readout_purity": 0.683332126806764,
+      "mean_after_event1_purity": 0.7935391594381893,
+      "mean_intro_purity": 0.9999999938642278
+     }
+    },
+    "q_asymmetry_undo_gap_correct_items": [
+     0.15419490389320828,
+     0.08068338473488514
+    ],
+    "status": "DESCRIPTIVE -- doc 58 SS8.2 / SS8.3. No boolean, no criterion, and it MAY NOT be promoted onto a criterion after results exist (the exp44 no-promotion clause)."
+   }
+  },
+  "I1|R-warmstart": {
+   "per_q_accuracy": {
+    "q1": {
+     "acc": 0.6626666666666666,
+     "n": 750
+    },
+    "q2": {
+     "acc": 0.8026666666666666,
+     "n": 750
+    }
+   },
+   "per_surface_order_accuracy": {
+    "SVO|SVO": {
+     "acc": 0.7394736842105263,
+     "n": 380
+    },
+    "SVO|VSO": {
+     "acc": 0.7394736842105263,
+     "n": 380
+    },
+    "VSO|SVO": {
+     "acc": 0.727027027027027,
+     "n": 370
+    },
+    "VSO|VSO": {
+     "acc": 0.7243243243243244,
+     "n": 370
+    }
+   },
+   "per_queried_verb_accuracy": {
+    "حمل": {
+     "acc": 0.8206896551724138,
+     "n": 290
+    },
+    "رفع": {
+     "acc": 0.7222222222222222,
+     "n": 180
+    },
+    "سأل": {
+     "acc": 0.5925925925925926,
+     "n": 270
+    },
+    "ساعد": {
+     "acc": 0.8357142857142857,
+     "n": 280
+    },
+    "ضرب": {
+     "acc": 0.6473684210526316,
+     "n": 190
+    },
+    "عالج": {
+     "acc": 0.7379310344827587,
+     "n": 290
+    }
+   },
+   "val_minus_heldout_per_seed": [
+    0.00242424242424244,
+    0.07212121212121214,
+    -0.047878787878787854,
+    0.013636363636363558,
+    0.0009090909090908594
+   ],
+   "selected_epoch_per_seed": [
+    41,
+    142,
+    72,
+    137,
+    37
+   ],
+   "selected_fraction_of_budget": [
+    0.2733333333333333,
+    0.9466666666666667,
+    0.48,
+    0.9133333333333333,
+    0.24666666666666667
+   ],
+   "per_seed_rescue_delta": [
+    0.010666666666666602,
+    -0.08933333333333338,
+    0.03066666666666662,
+    0.03733333333333333,
+    0.02733333333333332
+   ],
+   "training_curves": [
+    {
+     "seed": 0,
+     "n_epochs": 150,
+     "val_at_epochs": {
+      "1": 0.45454545454545453,
+      "37": 0.7272727272727273,
+      "75": 0.6060606060606061,
+      "112": 0.6666666666666666,
+      "150": 0.6363636363636364
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "37": 0.02,
+      "75": 0.02,
+      "112": 0.02,
+      "150": 0.02
+     },
+     "best_val": 0.7424242424242424,
+     "final_val": 0.6363636363636364,
+     "selected_epoch": 41,
+     "selected_stage": 1,
+     "selected_fraction_of_budget": 0.2733333333333333,
+     "epochs_after_selection": 109
+    },
+    {
+     "seed": 1,
+     "n_epochs": 150,
+     "val_at_epochs": {
+      "1": 0.5227272727272727,
+      "37": 0.6136363636363636,
+      "75": 0.6363636363636364,
+      "112": 0.6893939393939394,
+      "150": 0.6363636363636364
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "37": 0.02,
+      "75": 0.02,
+      "112": 0.02,
+      "150": 0.02
+     },
+     "best_val": 0.7121212121212122,
+     "final_val": 0.6363636363636364,
+     "selected_epoch": 142,
+     "selected_stage": 1,
+     "selected_fraction_of_budget": 0.9466666666666667,
+     "epochs_after_selection": 8
+    },
+    {
+     "seed": 2,
+     "n_epochs": 150,
+     "val_at_epochs": {
+      "1": 0.6287878787878788,
+      "37": 0.6212121212121212,
+      "75": 0.6287878787878788,
+      "112": 0.6363636363636364,
+      "150": 0.5909090909090909
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "37": 0.02,
+      "75": 0.02,
+      "112": 0.02,
+      "150": 0.02
+     },
+     "best_val": 0.7121212121212122,
+     "final_val": 0.5909090909090909,
+     "selected_epoch": 72,
+     "selected_stage": 1,
+     "selected_fraction_of_budget": 0.48,
+     "epochs_after_selection": 78
+    },
+    {
+     "seed": 3,
+     "n_epochs": 150,
+     "val_at_epochs": {
+      "1": 0.5833333333333334,
+      "37": 0.6287878787878788,
+      "75": 0.5303030303030303,
+      "112": 0.6666666666666666,
+      "150": 0.5075757575757576
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "37": 0.02,
+      "75": 0.02,
+      "112": 0.02,
+      "150": 0.02
+     },
+     "best_val": 0.7803030303030303,
+     "final_val": 0.5075757575757576,
+     "selected_epoch": 137,
+     "selected_stage": 1,
+     "selected_fraction_of_budget": 0.9133333333333333,
+     "epochs_after_selection": 13
+    },
+    {
+     "seed": 4,
+     "n_epochs": 150,
+     "val_at_epochs": {
+      "1": 0.5833333333333334,
+      "37": 0.7575757575757576,
+      "75": 0.696969696969697,
+      "112": 0.553030303030303,
+      "150": 0.6287878787878788
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "37": 0.02,
+      "75": 0.02,
+      "112": 0.02,
+      "150": 0.02
+     },
+     "best_val": 0.7575757575757576,
+     "final_val": 0.6287878787878788,
+     "selected_epoch": 37,
+     "selected_stage": 1,
+     "selected_fraction_of_budget": 0.24666666666666667,
+     "epochs_after_selection": 113
+    }
+   ],
+   "purity_doc58_SS8": {
+    "cells": {
+     "q1_correct": {
+      "n": 114,
+      "mean_wire_purity": {
+       "after_event1": 0.7740292936040644,
+       "after_event2": 0.6291115727079543,
+       "after_intro": 0.9999999959479299,
+       "at_readout": 0.6016790763589374
+      }
+     },
+     "q1_incorrect": {
+      "n": 36,
+      "mean_wire_purity": {
+       "after_event1": 0.7492840877837605,
+       "after_event2": 0.6155493909286128,
+       "after_intro": 0.9999999681280719,
+       "at_readout": 0.6004915713436074
+      }
+     },
+     "q2_correct": {
+      "n": 135,
+      "mean_wire_purity": {
+       "after_event1": 0.7614701761139764,
+       "after_event2": 0.6293019589450625,
+       "after_intro": 0.9999999850988388,
+       "at_readout": 0.6810852290303618
+      }
+     },
+     "q2_incorrect": {
+      "n": 15,
+      "mean_wire_purity": {
+       "after_event1": 0.7590672194957733,
+       "after_event2": 0.6105662335952123,
+       "after_intro": 1.0000000049670537,
+       "at_readout": 0.6505898058414459
+      }
+     }
+    },
+    "restoration": {
+     "q1_correct": {
+      "n": 114,
+      "readout_vs_after_event1_mean_abs_gap": 0.1733165625156018,
+      "readout_vs_INTRO_mean_abs_gap": 0.39832091958899246,
+      "mean_readout_purity": 0.6016790763589374,
+      "mean_after_event1_purity": 0.7740292936040644,
+      "mean_intro_purity": 0.9999999959479299
+     },
+     "q1_incorrect": {
+      "n": 36,
+      "readout_vs_after_event1_mean_abs_gap": 0.14879251644015312,
+      "readout_vs_INTRO_mean_abs_gap": 0.39950839678446454,
+      "mean_readout_purity": 0.6004915713436074,
+      "mean_after_event1_purity": 0.7492840877837605,
+      "mean_intro_purity": 0.9999999681280719
+     },
+     "q2_correct": {
+      "n": 135,
+      "readout_vs_after_event1_mean_abs_gap": 0.08051850409419448,
+      "readout_vs_INTRO_mean_abs_gap": 0.3189147560684769,
+      "mean_readout_purity": 0.6810852290303618,
+      "mean_after_event1_purity": 0.7614701761139764,
+      "mean_intro_purity": 0.9999999850988388
+     },
+     "q2_incorrect": {
+      "n": 15,
+      "readout_vs_after_event1_mean_abs_gap": 0.10847762823104859,
+      "readout_vs_INTRO_mean_abs_gap": 0.34941019912560783,
+      "mean_readout_purity": 0.6505898058414459,
+      "mean_after_event1_purity": 0.7590672194957733,
+      "mean_intro_purity": 1.0000000049670537
+     }
+    },
+    "q_asymmetry_undo_gap_correct_items": [
+     0.1733165625156018,
+     0.08051850409419448
+    ],
+    "status": "DESCRIPTIVE -- doc 58 SS8.2 / SS8.3. No boolean, no criterion, and it MAY NOT be promoted onto a criterion after results exist (the exp44 no-promotion clause)."
+   }
+  },
+  "I2|R-budget": {
+   "per_q_accuracy": {
+    "q1": {
+     "acc": 0.744,
+     "n": 750
+    },
+    "q2": {
+     "acc": 0.8186666666666667,
+     "n": 750
+    }
+   },
+   "per_surface_order_accuracy": {
+    "SVO|SVO": {
+     "acc": 0.8368421052631579,
+     "n": 380
+    },
+    "SVO|VSO": {
+     "acc": 0.7289473684210527,
+     "n": 380
+    },
+    "VSO|SVO": {
+     "acc": 0.8054054054054054,
+     "n": 370
+    },
+    "VSO|VSO": {
+     "acc": 0.754054054054054,
+     "n": 370
+    }
+   },
+   "per_queried_verb_accuracy": {
+    "حمل": {
+     "acc": 0.7896551724137931,
+     "n": 290
+    },
+    "رفع": {
+     "acc": 0.7611111111111111,
+     "n": 180
+    },
+    "سأل": {
+     "acc": 0.7074074074074074,
+     "n": 270
+    },
+    "ساعد": {
+     "acc": 0.8857142857142857,
+     "n": 280
+    },
+    "ضرب": {
+     "acc": 0.7105263157894737,
+     "n": 190
+    },
+    "عالج": {
+     "acc": 0.8,
+     "n": 290
+    }
+   },
+   "val_minus_heldout_per_seed": [
+    0.08666666666666667,
+    0.011818181818181839,
+    0.05939393939393944,
+    0.10333333333333339,
+    -0.016363636363636358
+   ],
+   "selected_epoch_per_seed": [
+    227,
+    306,
+    281,
+    282,
+    274
+   ],
+   "selected_fraction_of_budget": [
+    0.5044444444444445,
+    0.68,
+    0.6244444444444445,
+    0.6266666666666667,
+    0.6088888888888889
+   ],
+   "per_seed_rescue_delta": [
+    0.10000000000000009,
+    0.19000000000000006,
+    0.15000000000000002,
+    0.08333333333333337,
+    0.15000000000000002
+   ],
+   "training_curves": [
+    {
+     "seed": 0,
+     "n_epochs": 450,
+     "val_at_epochs": {
+      "1": 0.5454545454545454,
+      "112": 0.6287878787878788,
+      "225": 0.7803030303030303,
+      "337": 0.7803030303030303,
+      "450": 0.7954545454545454
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "112": 0.017144726796328034,
+      "225": 0.010069812602979615,
+      "337": 0.0030033665948663445,
+      "450": 2.436929460525317e-07
+     },
+     "best_val": 0.8333333333333334,
+     "final_val": 0.7954545454545454,
+     "selected_epoch": 227,
+     "selected_stage": 1,
+     "selected_fraction_of_budget": 0.5044444444444445,
+     "epochs_after_selection": 223
+    },
+    {
+     "seed": 1,
+     "n_epochs": 450,
+     "val_at_epochs": {
+      "1": 0.5151515151515151,
+      "112": 0.6136363636363636,
+      "225": 0.7575757575757576,
+      "337": 0.7803030303030303,
+      "450": 0.7727272727272727
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "112": 0.017144726796328034,
+      "225": 0.010069812602979615,
+      "337": 0.0030033665948663445,
+      "450": 2.436929460525317e-07
+     },
+     "best_val": 0.8484848484848485,
+     "final_val": 0.7727272727272727,
+     "selected_epoch": 306,
+     "selected_stage": 1,
+     "selected_fraction_of_budget": 0.68,
+     "epochs_after_selection": 144
+    },
+    {
+     "seed": 2,
+     "n_epochs": 450,
+     "val_at_epochs": {
+      "1": 0.5833333333333334,
+      "112": 0.48484848484848486,
+      "225": 0.7651515151515151,
+      "337": 0.8181818181818182,
+      "450": 0.8257575757575758
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "112": 0.017144726796328034,
+      "225": 0.010069812602979615,
+      "337": 0.0030033665948663445,
+      "450": 2.436929460525317e-07
+     },
+     "best_val": 0.8560606060606061,
+     "final_val": 0.8257575757575758,
+     "selected_epoch": 281,
+     "selected_stage": 1,
+     "selected_fraction_of_budget": 0.6244444444444445,
+     "epochs_after_selection": 169
+    },
+    {
+     "seed": 3,
+     "n_epochs": 450,
+     "val_at_epochs": {
+      "1": 0.5151515151515151,
+      "112": 0.696969696969697,
+      "225": 0.7575757575757576,
+      "337": 0.7878787878787878,
+      "450": 0.7575757575757576
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "112": 0.017144726796328034,
+      "225": 0.010069812602979615,
+      "337": 0.0030033665948663445,
+      "450": 2.436929460525317e-07
+     },
+     "best_val": 0.8333333333333334,
+     "final_val": 0.7575757575757576,
+     "selected_epoch": 282,
+     "selected_stage": 1,
+     "selected_fraction_of_budget": 0.6266666666666667,
+     "epochs_after_selection": 168
+    },
+    {
+     "seed": 4,
+     "n_epochs": 450,
+     "val_at_epochs": {
+      "1": 0.553030303030303,
+      "112": 0.5606060606060606,
+      "225": 0.7424242424242424,
+      "337": 0.7424242424242424,
+      "450": 0.7424242424242424
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "112": 0.017144726796328034,
+      "225": 0.010069812602979615,
+      "337": 0.0030033665948663445,
+      "450": 2.436929460525317e-07
+     },
+     "best_val": 0.7803030303030303,
+     "final_val": 0.7424242424242424,
+     "selected_epoch": 274,
+     "selected_stage": 1,
+     "selected_fraction_of_budget": 0.6088888888888889,
+     "epochs_after_selection": 176
+    }
+   ],
+   "purity_doc58_SS8": {
+    "cells": {
+     "q1_correct": {
+      "n": 116,
+      "mean_wire_purity": {
+       "after_event1": 0.7096573289098411,
+       "after_event2": 0.6377603520864042,
+       "after_intro": 0.7701984411426659,
+       "at_readout": 0.6091951289824371
+      }
+     },
+     "q1_incorrect": {
+      "n": 34,
+      "mean_wire_purity": {
+       "after_event1": 0.711767200161429,
+       "after_event2": 0.657534127288005,
+       "after_intro": 0.7854288461453774,
+       "at_readout": 0.6067041636389845
+      }
+     },
+     "q2_correct": {
+      "n": 130,
+      "mean_wire_purity": {
+       "after_event1": 0.7108812505236038,
+       "after_event2": 0.6395483836531639,
+       "after_intro": 0.7772562383459165,
+       "at_readout": 0.6639684077638847
+      }
+     },
+     "q2_incorrect": {
+      "n": 20,
+      "mean_wire_purity": {
+       "after_event1": 0.7073970548808575,
+       "after_event2": 0.6428416639566421,
+       "after_intro": 0.750214483588934,
+       "at_readout": 0.655833850055933
+      }
+     }
+    },
+    "restoration": {
+     "q1_correct": {
+      "n": 116,
+      "readout_vs_after_event1_mean_abs_gap": 0.10267885144928406,
+      "readout_vs_INTRO_mean_abs_gap": 0.16659291319806,
+      "mean_readout_purity": 0.6091951289824371,
+      "mean_after_event1_purity": 0.7096573289098411,
+      "mean_intro_purity": 0.7701984411426659
+     },
+     "q1_incorrect": {
+      "n": 34,
+      "readout_vs_after_event1_mean_abs_gap": 0.10853598705109428,
+      "readout_vs_INTRO_mean_abs_gap": 0.18068192022688248,
+      "mean_readout_purity": 0.6067041636389845,
+      "mean_after_event1_purity": 0.711767200161429,
+      "mean_intro_purity": 0.7854288461453774
+     },
+     "q2_correct": {
+      "n": 130,
+      "readout_vs_after_event1_mean_abs_gap": 0.047311775042460515,
+      "readout_vs_INTRO_mean_abs_gap": 0.11915410252717826,
+      "mean_readout_purity": 0.6639684077638847,
+      "mean_after_event1_purity": 0.7108812505236038,
+      "mean_intro_purity": 0.7772562383459165
+     },
+     "q2_incorrect": {
+      "n": 20,
+      "readout_vs_after_event1_mean_abs_gap": 0.053079885244369504,
+      "readout_vs_INTRO_mean_abs_gap": 0.12390773296356201,
+      "mean_readout_purity": 0.655833850055933,
+      "mean_after_event1_purity": 0.7073970548808575,
+      "mean_intro_purity": 0.750214483588934
+     }
+    },
+    "q_asymmetry_undo_gap_correct_items": [
+     0.10267885144928406,
+     0.047311775042460515
+    ],
+    "status": "DESCRIPTIVE -- doc 58 SS8.2 / SS8.3. No boolean, no criterion, and it MAY NOT be promoted onto a criterion after results exist (the exp44 no-promotion clause)."
+   }
+  },
+  "I2|R-identity": {
+   "per_q_accuracy": {
+    "q1": {
+     "acc": 0.684,
+     "n": 750
+    },
+    "q2": {
+     "acc": 0.7373333333333333,
+     "n": 750
+    }
+   },
+   "per_surface_order_accuracy": {
+    "SVO|SVO": {
+     "acc": 0.7921052631578948,
+     "n": 380
+    },
+    "SVO|VSO": {
+     "acc": 0.6368421052631579,
+     "n": 380
+    },
+    "VSO|SVO": {
+     "acc": 0.745945945945946,
+     "n": 370
+    },
+    "VSO|VSO": {
+     "acc": 0.6675675675675675,
+     "n": 370
+    }
+   },
+   "per_queried_verb_accuracy": {
+    "حمل": {
+     "acc": 0.7586206896551724,
+     "n": 290
+    },
+    "رفع": {
+     "acc": 0.6888888888888889,
+     "n": 180
+    },
+    "سأل": {
+     "acc": 0.7,
+     "n": 270
+    },
+    "ساعد": {
+     "acc": 0.7464285714285714,
+     "n": 280
+    },
+    "ضرب": {
+     "acc": 0.6368421052631579,
+     "n": 190
+    },
+    "عالج": {
+     "acc": 0.7,
+     "n": 290
+    }
+   },
+   "val_minus_heldout_per_seed": [
+    0.08303030303030301,
+    -0.024545454545454537,
+    0.12848484848484842,
+    -0.011818181818181839,
+    0.021515151515151598
+   ],
+   "selected_epoch_per_seed": [
+    13,
+    23,
+    148,
+    13,
+    26
+   ],
+   "selected_fraction_of_budget": [
+    0.08666666666666667,
+    0.15333333333333332,
+    0.9866666666666667,
+    0.08666666666666667,
+    0.17333333333333334
+   ],
+   "per_seed_rescue_delta": [
+    -0.009999999999999898,
+    0.17333333333333334,
+    -0.09333333333333327,
+    0.10000000000000009,
+    0.15000000000000002
+   ],
+   "training_curves": [
+    {
+     "seed": 0,
+     "n_epochs": 150,
+     "val_at_epochs": {
+      "1": 0.6363636363636364,
+      "37": 0.5606060606060606,
+      "75": 0.5606060606060606,
+      "112": 0.5606060606060606,
+      "150": 0.6590909090909091
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "37": 0.02,
+      "75": 0.02,
+      "112": 0.02,
+      "150": 0.02
+     },
+     "best_val": 0.7196969696969697,
+     "final_val": 0.6590909090909091,
+     "selected_epoch": 13,
+     "selected_stage": 1,
+     "selected_fraction_of_budget": 0.08666666666666667,
+     "epochs_after_selection": 137
+    },
+    {
+     "seed": 1,
+     "n_epochs": 150,
+     "val_at_epochs": {
+      "1": 0.5757575757575758,
+      "37": 0.5681818181818182,
+      "75": 0.5909090909090909,
+      "112": 0.6212121212121212,
+      "150": 0.6060606060606061
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "37": 0.02,
+      "75": 0.02,
+      "112": 0.02,
+      "150": 0.02
+     },
+     "best_val": 0.7954545454545454,
+     "final_val": 0.6060606060606061,
+     "selected_epoch": 23,
+     "selected_stage": 1,
+     "selected_fraction_of_budget": 0.15333333333333332,
+     "epochs_after_selection": 127
+    },
+    {
+     "seed": 2,
+     "n_epochs": 150,
+     "val_at_epochs": {
+      "1": 0.48484848484848486,
+      "37": 0.5454545454545454,
+      "75": 0.5454545454545454,
+      "112": 0.5757575757575758,
+      "150": 0.6212121212121212
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "37": 0.02,
+      "75": 0.02,
+      "112": 0.02,
+      "150": 0.02
+     },
+     "best_val": 0.6818181818181818,
+     "final_val": 0.6212121212121212,
+     "selected_epoch": 148,
+     "selected_stage": 1,
+     "selected_fraction_of_budget": 0.9866666666666667,
+     "epochs_after_selection": 2
+    },
+    {
+     "seed": 3,
+     "n_epochs": 150,
+     "val_at_epochs": {
+      "1": 0.5984848484848485,
+      "37": 0.5378787878787878,
+      "75": 0.553030303030303,
+      "112": 0.5909090909090909,
+      "150": 0.5606060606060606
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "37": 0.02,
+      "75": 0.02,
+      "112": 0.02,
+      "150": 0.02
+     },
+     "best_val": 0.7348484848484849,
+     "final_val": 0.5606060606060606,
+     "selected_epoch": 13,
+     "selected_stage": 1,
+     "selected_fraction_of_budget": 0.08666666666666667,
+     "epochs_after_selection": 137
+    },
+    {
+     "seed": 4,
+     "n_epochs": 150,
+     "val_at_epochs": {
+      "1": 0.6439393939393939,
+      "37": 0.6363636363636364,
+      "75": 0.6439393939393939,
+      "112": 0.5454545454545454,
+      "150": 0.5757575757575758
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "37": 0.02,
+      "75": 0.02,
+      "112": 0.02,
+      "150": 0.02
+     },
+     "best_val": 0.8181818181818182,
+     "final_val": 0.5757575757575758,
+     "selected_epoch": 26,
+     "selected_stage": 1,
+     "selected_fraction_of_budget": 0.17333333333333334,
+     "epochs_after_selection": 124
+    }
+   ],
+   "purity_doc58_SS8": {
+    "cells": {
+     "q1_correct": {
+      "n": 116,
+      "mean_wire_purity": {
+       "after_event1": 0.7827717194269443,
+       "after_event2": 0.7819047039695854,
+       "after_intro": 0.770109638057906,
+       "at_readout": 0.7717838903953289
+      }
+     },
+     "q1_incorrect": {
+      "n": 34,
+      "mean_wire_purity": {
+       "after_event1": 0.7997466395883,
+       "after_event2": 0.8166719074634945,
+       "after_intro": 0.7857318213757347,
+       "at_readout": 0.8028356099829954
+      }
+     },
+     "q2_correct": {
+      "n": 122,
+      "mean_wire_purity": {
+       "after_event1": 0.7933484936346773,
+       "after_event2": 0.7827248860333786,
+       "after_intro": 0.7759254185146973,
+       "at_readout": 0.7954177951715031
+      }
+     },
+     "q2_incorrect": {
+      "n": 28,
+      "mean_wire_purity": {
+       "after_event1": 0.7672147186739104,
+       "after_event2": 0.7744040936231613,
+       "after_intro": 0.7637392713555268,
+       "at_readout": 0.782426334385361
+      }
+     }
+    },
+    "restoration": {
+     "q1_correct": {
+      "n": 116,
+      "readout_vs_after_event1_mean_abs_gap": 0.04789490098583287,
+      "readout_vs_INTRO_mean_abs_gap": 0.055773554177119815,
+      "mean_readout_purity": 0.7717838903953289,
+      "mean_after_event1_purity": 0.7827717194269443,
+      "mean_intro_purity": 0.770109638057906
+     },
+     "q1_incorrect": {
+      "n": 34,
+      "readout_vs_after_event1_mean_abs_gap": 0.06205806486746844,
+      "readout_vs_INTRO_mean_abs_gap": 0.07808428564492394,
+      "mean_readout_purity": 0.8028356099829954,
+      "mean_after_event1_purity": 0.7997466395883,
+      "mean_intro_purity": 0.7857318213757347
+     },
+     "q2_correct": {
+      "n": 122,
+      "readout_vs_after_event1_mean_abs_gap": 0.028761968505187113,
+      "readout_vs_INTRO_mean_abs_gap": 0.0477237275145093,
+      "mean_readout_purity": 0.7954177951715031,
+      "mean_after_event1_purity": 0.7933484936346773,
+      "mean_intro_purity": 0.7759254185146973
+     },
+     "q2_incorrect": {
+      "n": 28,
+      "readout_vs_after_event1_mean_abs_gap": 0.03635261793221746,
+      "readout_vs_INTRO_mean_abs_gap": 0.047254824212619236,
+      "mean_readout_purity": 0.782426334385361,
+      "mean_after_event1_purity": 0.7672147186739104,
+      "mean_intro_purity": 0.7637392713555268
+     }
+    },
+    "q_asymmetry_undo_gap_correct_items": [
+     0.04789490098583287,
+     0.028761968505187113
+    ],
+    "status": "DESCRIPTIVE -- doc 58 SS8.2 / SS8.3. No boolean, no criterion, and it MAY NOT be promoted onto a criterion after results exist (the exp44 no-promotion clause)."
+   }
+  },
+  "I2|R-layerwise": {
+   "per_q_accuracy": {
+    "q1": {
+     "acc": 0.6506666666666666,
+     "n": 750
+    },
+    "q2": {
+     "acc": 0.7173333333333334,
+     "n": 750
+    }
+   },
+   "per_surface_order_accuracy": {
+    "SVO|SVO": {
+     "acc": 0.7236842105263158,
+     "n": 380
+    },
+    "SVO|VSO": {
+     "acc": 0.6605263157894737,
+     "n": 380
+    },
+    "VSO|SVO": {
+     "acc": 0.6513513513513514,
+     "n": 370
+    },
+    "VSO|VSO": {
+     "acc": 0.7,
+     "n": 370
+    }
+   },
+   "per_queried_verb_accuracy": {
+    "حمل": {
+     "acc": 0.6931034482758621,
+     "n": 290
+    },
+    "رفع": {
+     "acc": 0.7222222222222222,
+     "n": 180
+    },
+    "سأل": {
+     "acc": 0.6407407407407407,
+     "n": 270
+    },
+    "ساعد": {
+     "acc": 0.7392857142857143,
+     "n": 280
+    },
+    "ضرب": {
+     "acc": 0.6157894736842106,
+     "n": 190
+    },
+    "عالج": {
+     "acc": 0.6827586206896552,
+     "n": 290
+    }
+   },
+   "val_minus_heldout_per_seed": [
+    0.030000000000000027,
+    0.043636363636363695,
+    0.1306060606060605,
+    0.0542424242424242,
+    0.08666666666666667
+   ],
+   "selected_epoch_per_seed": [
+    219,
+    181,
+    88,
+    188,
+    88
+   ],
+   "selected_fraction_of_budget": [
+    0.9733333333333334,
+    0.8044444444444444,
+    0.39111111111111113,
+    0.8355555555555556,
+    0.39111111111111113
+   ],
+   "per_seed_rescue_delta": [
+    0.07333333333333336,
+    0.00666666666666671,
+    0.03333333333333344,
+    0.056666666666666754,
+    0.01666666666666672
+   ],
+   "training_curves": [
+    {
+     "seed": 0,
+     "n_epochs": 225,
+     "val_at_epochs": {
+      "1": 0.5075757575757576,
+      "56": 0.5984848484848485,
+      "112": 0.5757575757575758,
+      "168": 0.6363636363636364,
+      "225": 0.5075757575757576
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "56": 0.02,
+      "112": 0.02,
+      "168": 0.02,
+      "225": 0.02
+     },
+     "best_val": 0.75,
+     "final_val": 0.5075757575757576,
+     "selected_epoch": 219,
+     "selected_stage": 3,
+     "selected_fraction_of_budget": 0.9733333333333334,
+     "epochs_after_selection": 6
+    },
+    {
+     "seed": 1,
+     "n_epochs": 225,
+     "val_at_epochs": {
+      "1": 0.5681818181818182,
+      "56": 0.6212121212121212,
+      "112": 0.5833333333333334,
+      "168": 0.5606060606060606,
+      "225": 0.6060606060606061
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "56": 0.02,
+      "112": 0.02,
+      "168": 0.02,
+      "225": 0.02
+     },
+     "best_val": 0.696969696969697,
+     "final_val": 0.6060606060606061,
+     "selected_epoch": 181,
+     "selected_stage": 3,
+     "selected_fraction_of_budget": 0.8044444444444444,
+     "epochs_after_selection": 44
+    },
+    {
+     "seed": 2,
+     "n_epochs": 225,
+     "val_at_epochs": {
+      "1": 0.5454545454545454,
+      "56": 0.553030303030303,
+      "112": 0.7121212121212122,
+      "168": 0.6212121212121212,
+      "225": 0.5151515151515151
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "56": 0.02,
+      "112": 0.02,
+      "168": 0.02,
+      "225": 0.02
+     },
+     "best_val": 0.8106060606060606,
+     "final_val": 0.5151515151515151,
+     "selected_epoch": 88,
+     "selected_stage": 2,
+     "selected_fraction_of_budget": 0.39111111111111113,
+     "epochs_after_selection": 137
+    },
+    {
+     "seed": 3,
+     "n_epochs": 225,
+     "val_at_epochs": {
+      "1": 0.49242424242424243,
+      "56": 0.6666666666666666,
+      "112": 0.5151515151515151,
+      "168": 0.6893939393939394,
+      "225": 0.5454545454545454
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "56": 0.02,
+      "112": 0.02,
+      "168": 0.02,
+      "225": 0.02
+     },
+     "best_val": 0.7575757575757576,
+     "final_val": 0.5454545454545454,
+     "selected_epoch": 188,
+     "selected_stage": 3,
+     "selected_fraction_of_budget": 0.8355555555555556,
+     "epochs_after_selection": 37
+    },
+    {
+     "seed": 4,
+     "n_epochs": 225,
+     "val_at_epochs": {
+      "1": 0.5227272727272727,
+      "56": 0.5378787878787878,
+      "112": 0.7272727272727273,
+      "168": 0.6666666666666666,
+      "225": 0.49242424242424243
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "56": 0.02,
+      "112": 0.02,
+      "168": 0.02,
+      "225": 0.02
+     },
+     "best_val": 0.75,
+     "final_val": 0.49242424242424243,
+     "selected_epoch": 88,
+     "selected_stage": 2,
+     "selected_fraction_of_budget": 0.39111111111111113,
+     "epochs_after_selection": 137
+    }
+   ],
+   "purity_doc58_SS8": {
+    "cells": {
+     "q1_correct": {
+      "n": 107,
+      "mean_wire_purity": {
+       "after_event1": 0.7852673743651292,
+       "after_event2": 0.6141850899591624,
+       "after_intro": 0.7768461574739385,
+       "at_readout": 0.6026688736175823
+      }
+     },
+     "q1_incorrect": {
+      "n": 43,
+      "mean_wire_purity": {
+       "after_event1": 0.7760025463825049,
+       "after_event2": 0.6217331297175829,
+       "after_intro": 0.7656990951576899,
+       "at_readout": 0.6051185314738473
+      }
+     },
+     "q2_correct": {
+      "n": 118,
+      "mean_wire_purity": {
+       "after_event1": 0.7799833399259438,
+       "after_event2": 0.6135305774919058,
+       "after_intro": 0.7769718310337955,
+       "at_readout": 0.6968123281406144
+      }
+     },
+     "q2_incorrect": {
+      "n": 32,
+      "mean_wire_purity": {
+       "after_event1": 0.7802203353494406,
+       "after_event2": 0.6060452880337834,
+       "after_intro": 0.7614038935862482,
+       "at_readout": 0.6878886562772095
+      }
+     }
+    },
+    "restoration": {
+     "q1_correct": {
+      "n": 107,
+      "readout_vs_after_event1_mean_abs_gap": 0.18259850074754697,
+      "readout_vs_INTRO_mean_abs_gap": 0.1754736021578869,
+      "mean_readout_purity": 0.6026688736175823,
+      "mean_after_event1_purity": 0.7852673743651292,
+      "mean_intro_purity": 0.7768461574739385
+     },
+     "q1_incorrect": {
+      "n": 43,
+      "readout_vs_after_event1_mean_abs_gap": 0.1708840149086575,
+      "readout_vs_INTRO_mean_abs_gap": 0.16059207916259766,
+      "mean_readout_purity": 0.6051185314738473,
+      "mean_after_event1_purity": 0.7760025463825049,
+      "mean_intro_purity": 0.7656990951576899
+     },
+     "q2_correct": {
+      "n": 118,
+      "readout_vs_after_event1_mean_abs_gap": 0.0831716113676459,
+      "readout_vs_INTRO_mean_abs_gap": 0.13588194536455608,
+      "mean_readout_purity": 0.6968123281406144,
+      "mean_after_event1_purity": 0.7799833399259438,
+      "mean_intro_purity": 0.7769718310337955
+     },
+     "q2_incorrect": {
+      "n": 32,
+      "readout_vs_after_event1_mean_abs_gap": 0.09233246045187116,
+      "readout_vs_INTRO_mean_abs_gap": 0.12282868102192879,
+      "mean_readout_purity": 0.6878886562772095,
+      "mean_after_event1_purity": 0.7802203353494406,
+      "mean_intro_purity": 0.7614038935862482
+     }
+    },
+    "q_asymmetry_undo_gap_correct_items": [
+     0.18259850074754697,
+     0.0831716113676459
+    ],
+    "status": "DESCRIPTIVE -- doc 58 SS8.2 / SS8.3. No boolean, no criterion, and it MAY NOT be promoted onto a criterion after results exist (the exp44 no-promotion clause)."
+   }
+  },
+  "I2|R-warmstart": {
+   "per_q_accuracy": {
+    "q1": {
+     "acc": 0.5933333333333334,
+     "n": 750
+    },
+    "q2": {
+     "acc": 0.688,
+     "n": 750
+    }
+   },
+   "per_surface_order_accuracy": {
+    "SVO|SVO": {
+     "acc": 0.6815789473684211,
+     "n": 380
+    },
+    "SVO|VSO": {
+     "acc": 0.5631578947368421,
+     "n": 380
+    },
+    "VSO|SVO": {
+     "acc": 0.654054054054054,
+     "n": 370
+    },
+    "VSO|VSO": {
+     "acc": 0.6648648648648648,
+     "n": 370
+    }
+   },
+   "per_queried_verb_accuracy": {
+    "حمل": {
+     "acc": 0.7310344827586207,
+     "n": 290
+    },
+    "رفع": {
+     "acc": 0.6888888888888889,
+     "n": 180
+    },
+    "سأل": {
+     "acc": 0.5370370370370371,
+     "n": 270
+    },
+    "ساعد": {
+     "acc": 0.6428571428571429,
+     "n": 280
+    },
+    "ضرب": {
+     "acc": 0.5578947368421052,
+     "n": 190
+    },
+    "عالج": {
+     "acc": 0.6689655172413793,
+     "n": 290
+    }
+   },
+   "val_minus_heldout_per_seed": [
+    0.034545454545454546,
+    0.07363636363636372,
+    0.11030303030303035,
+    0.07212121212121214,
+    0.08939393939393936
+   ],
+   "selected_epoch_per_seed": [
+    90,
+    123,
+    109,
+    33,
+    95
+   ],
+   "selected_fraction_of_budget": [
+    0.6,
+    0.82,
+    0.7266666666666667,
+    0.22,
+    0.6333333333333333
+   ],
+   "per_seed_rescue_delta": [
+    0.023333333333333428,
+    -0.023333333333333317,
+    -0.05999999999999994,
+    -0.006666666666666599,
+    0.036666666666666736
+   ],
+   "training_curves": [
+    {
+     "seed": 0,
+     "n_epochs": 150,
+     "val_at_epochs": {
+      "1": 0.553030303030303,
+      "37": 0.5909090909090909,
+      "75": 0.5227272727272727,
+      "112": 0.6666666666666666,
+      "150": 0.6818181818181818
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "37": 0.02,
+      "75": 0.02,
+      "112": 0.02,
+      "150": 0.02
+     },
+     "best_val": 0.7045454545454546,
+     "final_val": 0.6818181818181818,
+     "selected_epoch": 90,
+     "selected_stage": 1,
+     "selected_fraction_of_budget": 0.6,
+     "epochs_after_selection": 60
+    },
+    {
+     "seed": 1,
+     "n_epochs": 150,
+     "val_at_epochs": {
+      "1": 0.5909090909090909,
+      "37": 0.6212121212121212,
+      "75": 0.5454545454545454,
+      "112": 0.5909090909090909,
+      "150": 0.5303030303030303
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "37": 0.02,
+      "75": 0.02,
+      "112": 0.02,
+      "150": 0.02
+     },
+     "best_val": 0.696969696969697,
+     "final_val": 0.5303030303030303,
+     "selected_epoch": 123,
+     "selected_stage": 1,
+     "selected_fraction_of_budget": 0.82,
+     "epochs_after_selection": 27
+    },
+    {
+     "seed": 2,
+     "n_epochs": 150,
+     "val_at_epochs": {
+      "1": 0.5378787878787878,
+      "37": 0.6212121212121212,
+      "75": 0.4621212121212121,
+      "112": 0.6060606060606061,
+      "150": 0.6666666666666666
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "37": 0.02,
+      "75": 0.02,
+      "112": 0.02,
+      "150": 0.02
+     },
+     "best_val": 0.696969696969697,
+     "final_val": 0.6666666666666666,
+     "selected_epoch": 109,
+     "selected_stage": 1,
+     "selected_fraction_of_budget": 0.7266666666666667,
+     "epochs_after_selection": 41
+    },
+    {
+     "seed": 3,
+     "n_epochs": 150,
+     "val_at_epochs": {
+      "1": 0.553030303030303,
+      "37": 0.5151515151515151,
+      "75": 0.5,
+      "112": 0.6818181818181818,
+      "150": 0.49242424242424243
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "37": 0.02,
+      "75": 0.02,
+      "112": 0.02,
+      "150": 0.02
+     },
+     "best_val": 0.7121212121212122,
+     "final_val": 0.49242424242424243,
+     "selected_epoch": 33,
+     "selected_stage": 1,
+     "selected_fraction_of_budget": 0.22,
+     "epochs_after_selection": 117
+    },
+    {
+     "seed": 4,
+     "n_epochs": 150,
+     "val_at_epochs": {
+      "1": 0.6060606060606061,
+      "37": 0.6136363636363636,
+      "75": 0.5606060606060606,
+      "112": 0.5606060606060606,
+      "150": 0.6439393939393939
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "37": 0.02,
+      "75": 0.02,
+      "112": 0.02,
+      "150": 0.02
+     },
+     "best_val": 0.7727272727272727,
+     "final_val": 0.6439393939393939,
+     "selected_epoch": 95,
+     "selected_stage": 1,
+     "selected_fraction_of_budget": 0.6333333333333333,
+     "epochs_after_selection": 55
+    }
+   ],
+   "purity_doc58_SS8": {
+    "cells": {
+     "q1_correct": {
+      "n": 94,
+      "mean_wire_purity": {
+       "after_event1": 0.6059122375668363,
+       "after_event2": 0.6012423978524005,
+       "after_intro": 0.7742718017481743,
+       "at_readout": 0.5961961354664032
+      }
+     },
+     "q1_incorrect": {
+      "n": 56,
+      "mean_wire_purity": {
+       "after_event1": 0.6074457432010344,
+       "after_event2": 0.6086968787546668,
+       "after_intro": 0.7726080460207803,
+       "at_readout": 0.5947146021894046
+      }
+     },
+     "q2_correct": {
+      "n": 110,
+      "mean_wire_purity": {
+       "after_event1": 0.6036165004426782,
+       "after_event2": 0.5911582437428561,
+       "after_intro": 0.7771388072859157,
+       "at_readout": 0.5982437574050643
+      }
+     },
+     "q2_incorrect": {
+      "n": 40,
+      "mean_wire_purity": {
+       "after_event1": 0.6022321105003356,
+       "after_event2": 0.5985591720789671,
+       "after_intro": 0.7640582963824272,
+       "at_readout": 0.5961203161627054
+      }
+     }
+    },
+    "restoration": {
+     "q1_correct": {
+      "n": 94,
+      "readout_vs_after_event1_mean_abs_gap": 0.03885167266460175,
+      "readout_vs_INTRO_mean_abs_gap": 0.17807566628177116,
+      "mean_readout_purity": 0.5961961354664032,
+      "mean_after_event1_purity": 0.6059122375668363,
+      "mean_intro_purity": 0.7742718017481743
+     },
+     "q1_incorrect": {
+      "n": 56,
+      "readout_vs_after_event1_mean_abs_gap": 0.04273522352533681,
+      "readout_vs_INTRO_mean_abs_gap": 0.17789344383137567,
+      "mean_readout_purity": 0.5947146021894046,
+      "mean_after_event1_purity": 0.6074457432010344,
+      "mean_intro_purity": 0.7726080460207803
+     },
+     "q2_correct": {
+      "n": 110,
+      "readout_vs_after_event1_mean_abs_gap": 0.023687698759815908,
+      "readout_vs_INTRO_mean_abs_gap": 0.18354686214165253,
+      "mean_readout_purity": 0.5982437574050643,
+      "mean_after_event1_purity": 0.6036165004426782,
+      "mean_intro_purity": 0.7771388072859157
+     },
+     "q2_incorrect": {
+      "n": 40,
+      "readout_vs_after_event1_mean_abs_gap": 0.029431663826107977,
+      "readout_vs_INTRO_mean_abs_gap": 0.16898988299071788,
+      "mean_readout_purity": 0.5961203161627054,
+      "mean_after_event1_purity": 0.6022321105003356,
+      "mean_intro_purity": 0.7640582963824272
+     }
+    },
+    "q_asymmetry_undo_gap_correct_items": [
+     0.03885167266460175,
+     0.023687698759815908
+    ],
+    "status": "DESCRIPTIVE -- doc 58 SS8.2 / SS8.3. No boolean, no criterion, and it MAY NOT be promoted onto a criterion after results exist (the exp44 no-promotion clause)."
+   }
+  },
+  "I1|anchor": {
+   "purity_doc58_SS8": {
+    "cells": {
+     "q1_correct": {
+      "n": 110,
+      "mean_wire_purity": {
+       "after_event1": 0.7740276734937321,
+       "after_event2": 0.6456800688396801,
+       "after_intro": 0.9999999936331402,
+       "at_readout": 0.6223768988793547
+      }
+     },
+     "q1_incorrect": {
+      "n": 40,
+      "mean_wire_purity": {
+       "after_event1": 0.7619139656424523,
+       "after_event2": 0.633651290461421,
+       "after_intro": 0.9999999772757292,
+       "at_readout": 0.6049253910779953
+      }
+     },
+     "q2_correct": {
+      "n": 134,
+      "mean_wire_purity": {
+       "after_event1": 0.7690551391066011,
+       "after_event2": 0.6372017425610058,
+       "after_intro": 0.9999999867668793,
+       "at_readout": 0.6894273725685789
+      }
+     },
+     "q2_incorrect": {
+      "n": 16,
+      "mean_wire_purity": {
+       "after_event1": 0.730527033098042,
+       "after_event2": 0.6218650303781033,
+       "after_intro": 0.9999999897554517,
+       "at_readout": 0.6453663278371096
+      }
+     }
+    },
+    "restoration": {
+     "q1_correct": {
+      "n": 110,
+      "readout_vs_after_event1_mean_abs_gap": 0.15812069272453136,
+      "readout_vs_INTRO_mean_abs_gap": 0.3776230947537856,
+      "mean_readout_purity": 0.6223768988793547,
+      "mean_after_event1_purity": 0.7740276734937321,
+      "mean_intro_purity": 0.9999999936331402
+     },
+     "q1_incorrect": {
+      "n": 40,
+      "readout_vs_after_event1_mean_abs_gap": 0.1619198016822338,
+      "readout_vs_INTRO_mean_abs_gap": 0.3950745861977339,
+      "mean_readout_purity": 0.6049253910779953,
+      "mean_after_event1_purity": 0.7619139656424523,
+      "mean_intro_purity": 0.9999999772757292
+     },
+     "q2_correct": {
+      "n": 134,
+      "readout_vs_after_event1_mean_abs_gap": 0.08120248233204458,
+      "readout_vs_INTRO_mean_abs_gap": 0.3105726141983004,
+      "mean_readout_purity": 0.6894273725685789,
+      "mean_after_event1_purity": 0.7690551391066011,
+      "mean_intro_purity": 0.9999999867668793
+     },
+     "q2_incorrect": {
+      "n": 16,
+      "readout_vs_after_event1_mean_abs_gap": 0.08516091760247946,
+      "readout_vs_INTRO_mean_abs_gap": 0.3546336619183421,
+      "mean_readout_purity": 0.6453663278371096,
+      "mean_after_event1_purity": 0.730527033098042,
+      "mean_intro_purity": 0.9999999897554517
+     }
+    },
+    "q_asymmetry_undo_gap_correct_items": [
+     0.15812069272453136,
+     0.08120248233204458
+    ],
+    "status": "DESCRIPTIVE -- doc 58 SS8.2 / SS8.3. No boolean, no criterion, and it MAY NOT be promoted onto a criterion after results exist (the exp44 no-promotion clause)."
+   },
+   "training_curves": [
+    {
+     "seed": 0,
+     "n_epochs": 150,
+     "val_at_epochs": {
+      "1": 0.5757575757575758,
+      "37": 0.6818181818181818,
+      "75": 0.6060606060606061,
+      "112": 0.6818181818181818,
+      "150": 0.6060606060606061
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "37": 0.02,
+      "75": 0.02,
+      "112": 0.02,
+      "150": 0.02
+     },
+     "best_val": 0.7348484848484849,
+     "final_val": 0.6060606060606061,
+     "selected_epoch": 134,
+     "selected_stage": 1,
+     "selected_fraction_of_budget": 0.8933333333333333,
+     "epochs_after_selection": 16
+    },
+    {
+     "seed": 1,
+     "n_epochs": 150,
+     "val_at_epochs": {
+      "1": 0.5378787878787878,
+      "37": 0.6818181818181818,
+      "75": 0.5606060606060606,
+      "112": 0.5909090909090909,
+      "150": 0.6515151515151515
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "37": 0.02,
+      "75": 0.02,
+      "112": 0.02,
+      "150": 0.02
+     },
+     "best_val": 0.7196969696969697,
+     "final_val": 0.6515151515151515,
+     "selected_epoch": 124,
+     "selected_stage": 1,
+     "selected_fraction_of_budget": 0.8266666666666667,
+     "epochs_after_selection": 26
+    },
+    {
+     "seed": 2,
+     "n_epochs": 150,
+     "val_at_epochs": {
+      "1": 0.5454545454545454,
+      "37": 0.7272727272727273,
+      "75": 0.5984848484848485,
+      "112": 0.5757575757575758,
+      "150": 0.7348484848484849
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "37": 0.02,
+      "75": 0.02,
+      "112": 0.02,
+      "150": 0.02
+     },
+     "best_val": 0.7878787878787878,
+     "final_val": 0.7348484848484849,
+     "selected_epoch": 139,
+     "selected_stage": 1,
+     "selected_fraction_of_budget": 0.9266666666666666,
+     "epochs_after_selection": 11
+    },
+    {
+     "seed": 3,
+     "n_epochs": 150,
+     "val_at_epochs": {
+      "1": 0.6060606060606061,
+      "37": 0.6439393939393939,
+      "75": 0.5303030303030303,
+      "112": 0.6439393939393939,
+      "150": 0.5606060606060606
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "37": 0.02,
+      "75": 0.02,
+      "112": 0.02,
+      "150": 0.02
+     },
+     "best_val": 0.7348484848484849,
+     "final_val": 0.5606060606060606,
+     "selected_epoch": 17,
+     "selected_stage": 1,
+     "selected_fraction_of_budget": 0.11333333333333333,
+     "epochs_after_selection": 133
+    },
+    {
+     "seed": 4,
+     "n_epochs": 150,
+     "val_at_epochs": {
+      "1": 0.5833333333333334,
+      "37": 0.5909090909090909,
+      "75": 0.6818181818181818,
+      "112": 0.5909090909090909,
+      "150": 0.6363636363636364
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "37": 0.02,
+      "75": 0.02,
+      "112": 0.02,
+      "150": 0.02
+     },
+     "best_val": 0.7272727272727273,
+     "final_val": 0.6363636363636364,
+     "selected_epoch": 144,
+     "selected_stage": 1,
+     "selected_fraction_of_budget": 0.96,
+     "epochs_after_selection": 6
+    }
+   ],
+   "per_q_accuracy": {
+    "q1": {
+     "acc": 0.6533333333333333,
+     "n": 750
+    },
+    "q2": {
+     "acc": 0.8053333333333333,
+     "n": 750
+    }
+   }
+  },
+  "I2|anchor": {
+   "purity_doc58_SS8": {
+    "cells": {
+     "q1_correct": {
+      "n": 95,
+      "mean_wire_purity": {
+       "after_event1": 0.6859687483624408,
+       "after_event2": 0.6007202971922724,
+       "after_intro": 0.7740812270264876,
+       "at_readout": 0.5882518666355233
+      }
+     },
+     "q1_incorrect": {
+      "n": 55,
+      "mean_wire_purity": {
+       "after_event1": 0.6982920874248851,
+       "after_event2": 0.6023551526394757,
+       "after_intro": 0.7729069704359228,
+       "at_readout": 0.5869699854742397
+      }
+     },
+     "q2_correct": {
+      "n": 116,
+      "mean_wire_purity": {
+       "after_event1": 0.6957100295814974,
+       "after_event2": 0.6114455968912306,
+       "after_intro": 0.7781940947832733,
+       "at_readout": 0.6432476551111402
+      }
+     },
+     "q2_incorrect": {
+      "n": 34,
+      "mean_wire_purity": {
+       "after_event1": 0.7025706084335551,
+       "after_event2": 0.5975431510630775,
+       "after_intro": 0.7581495782908272,
+       "at_readout": 0.6412121500162518
+      }
+     }
+    },
+    "restoration": {
+     "q1_correct": {
+      "n": 95,
+      "readout_vs_after_event1_mean_abs_gap": 0.10447808692329809,
+      "readout_vs_INTRO_mean_abs_gap": 0.18582936039096432,
+      "mean_readout_purity": 0.5882518666355233,
+      "mean_after_event1_purity": 0.6859687483624408,
+      "mean_intro_purity": 0.7740812270264876
+     },
+     "q1_incorrect": {
+      "n": 55,
+      "readout_vs_after_event1_mean_abs_gap": 0.1157951525666497,
+      "readout_vs_INTRO_mean_abs_gap": 0.1859369849616831,
+      "mean_readout_purity": 0.5869699854742397,
+      "mean_after_event1_purity": 0.6982920874248851,
+      "mean_intro_purity": 0.7729069704359228
+     },
+     "q2_correct": {
+      "n": 116,
+      "readout_vs_after_event1_mean_abs_gap": 0.05448894600929885,
+      "readout_vs_INTRO_mean_abs_gap": 0.14067086333344722,
+      "mean_readout_purity": 0.6432476551111402,
+      "mean_after_event1_purity": 0.6957100295814974,
+      "mean_intro_purity": 0.7781940947832733
+     },
+     "q2_incorrect": {
+      "n": 34,
+      "readout_vs_after_event1_mean_abs_gap": 0.06206696480512619,
+      "readout_vs_INTRO_mean_abs_gap": 0.12650665158734603,
+      "mean_readout_purity": 0.6412121500162518,
+      "mean_after_event1_purity": 0.7025706084335551,
+      "mean_intro_purity": 0.7581495782908272
+     }
+    },
+    "q_asymmetry_undo_gap_correct_items": [
+     0.10447808692329809,
+     0.05448894600929885
+    ],
+    "status": "DESCRIPTIVE -- doc 58 SS8.2 / SS8.3. No boolean, no criterion, and it MAY NOT be promoted onto a criterion after results exist (the exp44 no-promotion clause)."
+   },
+   "training_curves": [
+    {
+     "seed": 0,
+     "n_epochs": 150,
+     "val_at_epochs": {
+      "1": 0.5454545454545454,
+      "37": 0.6893939393939394,
+      "75": 0.6590909090909091,
+      "112": 0.4621212121212121,
+      "150": 0.6363636363636364
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "37": 0.02,
+      "75": 0.02,
+      "112": 0.02,
+      "150": 0.02
+     },
+     "best_val": 0.7272727272727273,
+     "final_val": 0.6363636363636364,
+     "selected_epoch": 74,
+     "selected_stage": 1,
+     "selected_fraction_of_budget": 0.49333333333333335,
+     "epochs_after_selection": 76
+    },
+    {
+     "seed": 1,
+     "n_epochs": 150,
+     "val_at_epochs": {
+      "1": 0.5151515151515151,
+      "37": 0.5606060606060606,
+      "75": 0.6439393939393939,
+      "112": 0.6287878787878788,
+      "150": 0.5227272727272727
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "37": 0.02,
+      "75": 0.02,
+      "112": 0.02,
+      "150": 0.02
+     },
+     "best_val": 0.7121212121212122,
+     "final_val": 0.5227272727272727,
+     "selected_epoch": 113,
+     "selected_stage": 1,
+     "selected_fraction_of_budget": 0.7533333333333333,
+     "epochs_after_selection": 37
+    },
+    {
+     "seed": 2,
+     "n_epochs": 150,
+     "val_at_epochs": {
+      "1": 0.5833333333333334,
+      "37": 0.5075757575757576,
+      "75": 0.6060606060606061,
+      "112": 0.553030303030303,
+      "150": 0.5303030303030303
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "37": 0.02,
+      "75": 0.02,
+      "112": 0.02,
+      "150": 0.02
+     },
+     "best_val": 0.7803030303030303,
+     "final_val": 0.5303030303030303,
+     "selected_epoch": 109,
+     "selected_stage": 1,
+     "selected_fraction_of_budget": 0.7266666666666667,
+     "epochs_after_selection": 41
+    },
+    {
+     "seed": 3,
+     "n_epochs": 150,
+     "val_at_epochs": {
+      "1": 0.5151515151515151,
+      "37": 0.6590909090909091,
+      "75": 0.6060606060606061,
+      "112": 0.5833333333333334,
+      "150": 0.5681818181818182
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "37": 0.02,
+      "75": 0.02,
+      "112": 0.02,
+      "150": 0.02
+     },
+     "best_val": 0.6818181818181818,
+     "final_val": 0.5681818181818182,
+     "selected_epoch": 144,
+     "selected_stage": 1,
+     "selected_fraction_of_budget": 0.96,
+     "epochs_after_selection": 6
+    },
+    {
+     "seed": 4,
+     "n_epochs": 150,
+     "val_at_epochs": {
+      "1": 0.553030303030303,
+      "37": 0.6136363636363636,
+      "75": 0.6287878787878788,
+      "112": 0.6287878787878788,
+      "150": 0.6590909090909091
+     },
+     "lr_at_epochs": {
+      "1": 0.02,
+      "37": 0.02,
+      "75": 0.02,
+      "112": 0.02,
+      "150": 0.02
+     },
+     "best_val": 0.7272727272727273,
+     "final_val": 0.6590909090909091,
+     "selected_epoch": 121,
+     "selected_stage": 1,
+     "selected_fraction_of_budget": 0.8066666666666666,
+     "epochs_after_selection": 29
+    }
+   ],
+   "per_q_accuracy": {
+    "q1": {
+     "acc": 0.596,
+     "n": 750
+    },
+    "q2": {
+     "acc": 0.6973333333333334,
+     "n": 750
+    }
+   }
+  }
+ },
+ "mechanism_question_doc58_SS8_2": "DOES A SUCCESSFUL RESCUE RESTORE THE q-ASYMMETRY UNDO SIGNATURE TO THE HEALTHY ARMS' PROFILE? Descriptive, NO boolean, NO criterion, and it may NOT be promoted onto a criterion after results exist (the exp44 no-promotion clause). The healthy profile is committed (doc 55 SS20.5): on correct q = 2 items the readout restores per-wire purity to its post-event-1 level (R2-A 0.8755 vs 0.8751); on q = 1 items it does not (0.8017 vs 0.8953). doc 56 SS15.2's amendment applies to I2: for the ENTANGLED arms the restoration target is the INTRO purity, not 1. Reported per arm, stratified by q and by correctness, in `reported_not_registered_doc58_SS9_7[<cell>].purity_doc58_SS8`, on every rescue arm AND both anchors.",
+ "outcome_rows_doc58_SS10": [
+  {
+   "branch": "either anchor fails |delta| <= 0.002",
+   "applies": false,
+   "registered_reading": "THE RUN STOPS. The exp72 pipeline has drifted; SS5.2's floor-omission argument is void. Hunt the build; interpret nothing.",
+   "may_not_be_claimed": "Nothing, from any arm."
+  },
+  {
+   "branch": "R-budget rescues (either instance, full or partial)",
+   "applies": false,
+   "registered_reading": "DEFLATIONARY AND IMPORTANT: 'UNDERTRAINED, NOT UNTRAINABLE.' The sophisticated fixes are unnecessary for that instance, doc 56 SS18.2's ledger sentence is amended IN PUBLIC, and the programme's four supply-without-conversion verdicts are re-read as statements about the committed 150-epoch recipe. The follow-up is doc 58 SS13 item 3's budget/schedule decomposition, and it becomes worth running.",
+   "may_not_be_claimed": "NOT that the earlier experiments were wrong -- they measured what they registered at the budget they registered. NOT a decomposition into budget vs schedule (SS6.1.1). NOT a claim about any instance not run here."
+  },
+  {
+   "branch": "rescue_partial(I1, R-warmstart) TRUE -- the registered call lands",
+   "applies": false,
+   "registered_reading": "COMPOSITION IS A FINE-TUNING PROBLEM FOR THE PRODUCT REGISTER: the T = 1 solution is in the T = 2 basin's neighbourhood and standard training simply does not find it from a cold start. This would be the run's headline.",
+   "may_not_be_claimed": "MAY NOT BE CLAIMED ON THE FIRST DRAW ALONE -- the confirm draw at generator seed + 1000 with ALL ARMS OF I1 PRESENT, plus SS16.2's RETRAINED DONOR, is MANDATORY. Not a statement about DisCoCirc's expressive limits, and not about I2."
+  },
+  {
+   "branch": "warm-start rescues I1 but NOT I2",
+   "applies": false,
+   "registered_reading": "THE ENTANGLEMENT FAILURE IS DEEPER THAN COMPOSITION WARM-UP. Two encodings, same warm-start intervention, opposite outcomes => I2's failure is not merely 'the T = 2 basin is hard to reach from cold'. Reads onto doc 58 SS4.4's entanglement-induced-plateau mechanism and is exactly the branch doc 56 SS2 query 1 predicted would be different in kind.",
+   "may_not_be_claimed": "may NOT be reported as 'entanglement causes barren plateaus' -- one encoding, one gate, one inventory, 4 qubits."
+  },
+  {
+   "branch": "R-layerwise rescues while R-budget does not",
+   "applies": false,
+   "registered_reading": "STAGED OPTIMISATION FINDS WHAT FULL-PARAMETER OPTIMISATION DOES NOT, and the raw 1.5x epoch excess is NOT the explanation because 3.0x did not rescue (SS6.3.2's guard, registered in advance).",
+   "may_not_be_claimed": "not a result about Skolik et al.'s published circuit-GROWING procedure (SS4.2's adaptation clause)."
+  },
+  {
+   "branch": "R-identity rescues while others do not",
+   "applies": true,
+   "registered_reading": "THE FAILURE IS AN INITIALISATION-BASIN FAILURE: the committed uniform-[0, 2pi) init lands the optimiser somewhere it cannot leave, and limiting effective depth at the first update is sufficient.",
+   "may_not_be_claimed": "not a claim that the instance was in a barren plateau -- this is a 4-qubit circuit and no gradient-variance scaling was measured."
+  },
+  {
+   "branch": "NOTHING RESCUES (all 16 booleans FALSE, floors matched)",
+   "applies": false,
+   "registered_reading": "THE WALLS ARE OPTIMISER-ROBUST AT THIS BUDGET CLASS. Four independent mitigations, one of them a 3x budget with a decay schedule, all fail on instances whose information content is CERTIFIED EXTRACTABLE. THIS STRENGTHENS THE TESTBED'S VALUE: exp72 becomes an instance the mitigation literature does not have (SS4.6), and the honest write-up sentence is 'these four operationalisations, at this budget class, on these two instances, did not convert certified-extractable information.'",
+   "may_not_be_claimed": "MAY NOT BE REPORTED AS AN IMPOSSIBILITY. Not 'the circuit cannot learn this'; not 'trainability mitigations do not work'; not 'barren plateaus are unfixable'. Four procedures at one budget class on two instances is A RECORD, NOT A THEOREM, and doc 54 SS17.3's language binds."
+  },
+  {
+   "branch": "a rescue lands but the procedure-matched floor rises to meet it",
+   "applies": false,
+   "cells": [],
+   "registered_reading": "THE PROCEDURE IS FITTING THE SPLIT, NOT THE LABELS. The rescue is NOT READ; the cell is reported as FLOOR-CONTAMINATED with both numbers.",
+   "may_not_be_claimed": "no rescue claim of any kind from that cell."
+  },
+  {
+   "branch": "positive_control_degrades TRUE",
+   "applies": false,
+   "registered_reading": "the procedure DAMAGES a healthy arm. Every rescue under that procedure is reported WITH THE FLAG ATTACHED and read with suspicion (exp43c precedent, doc 24 SS5.2: a control that cannot fail is not a control).",
+   "may_not_be_claimed": "a rescue under a flagged procedure may not be reported without the flag in the same sentence."
+  },
+  {
+   "branch": "rescues split across instances with no pattern",
+   "applies": true,
+   "registered_reading": "reported as NO PATTERN FOUND, with all 16 booleans and their per-seed values. At 5 seeds and 8 cells this is a genuinely likely outcome and is registered as an outcome, not as a failure of the experiment.",
+   "may_not_be_claimed": "no post-hoc narrative may be constructed over the pattern (SS9.8c: no ranking of the four procedures as a criterion)."
+  }
+ ],
+ "scope_doc58_SS12": [
+  "NO QUANTUM READING OF ANY KIND. The comparators are already at 1.0000 on both instances; there is nothing for a circuit to win. exp72 is about OPTIMISATION and only optimisation, and NO EXP72 NUMBER MAY APPEAR IN A SENTENCE CONTAINING 'ADVANTAGE'.",
+  "NOT A STATEMENT ABOUT BARREN PLATEAUS. These are 4-qubit circuits. No gradient-variance-versus-qubit-count scaling is measured, and doc 58 SS4.4 / SS4.5's asymptotic results are cited as MECHANISM LANGUAGE, never as diagnoses of these instances.",
+  "'THE FIELD'S MITIGATIONS' MEANS EXACTLY THESE FOUR OPERATIONALISATIONS, not the literature's every variant. Noted, not run: full barren-plateau-aware initialisation schemes (beta / Gaussian / reduced-domain / He / Xavier, and the CNN- and RL-based initialisers); quantum natural gradient; SGLD and other noisy/stochastic-gradient optimisers; encoding-entanglement reduction; cost-function locality; circuit-growing layerwise learning in Skolik et al.'s published form; the R-budget budget/schedule decomposition. A NULL ON THESE FOUR IS NOT A NULL ON THOSE.",
+  "One dataset, one task family, one category, one surface, two referents, two events, 24 nouns, simulation. doc 50 SS7's ceiling stands.",
+  "NOT 'MEANING', not composition-in-general, not DisCoCirc's expressive limits. A rescue relocates a failure from 'training' to 'training with a better recipe'; a null relocates nothing. Neither touches representability -- the bounds are 1.0000 in both cases and always were.",
+  "Not novel-filler generalisation; exp69's held-out-PAIRING split, inherited.",
+  "Not a statement about AraVec.",
+  "R-layerwise is an ADAPTATION of arXiv:2006.14904, not a replication (SS4.2). A null on it says NOTHING about their published circuit-growing method."
+ ],
+ "what_this_could_not_resolve_doc58_SS19": [
+  "The four procedures are not exhaustive and are not a random sample of the literature. exp72 runs one initialisation strategy, one staging strategy, one transfer strategy and one budget control.",
+  "R-layerwise is an adaptation, not a replication -- stated twice because it is the easiest sentence in the write-up to get wrong.",
+  "The one directional call rests on an EXISTENCE argument, not a precedent. This programme has never run a warm start; doc 38 / exp54's budget extension is the only in-programme rescue-shaped intervention and IT FAILED.",
+  "Stage 2's cost is conditional and could be zero. If no cell reaches its partial bar, no procedure-matched floor is ever run and doc 58's most careful section is never exercised.",
+  "The purity signature is DESCRIPTIVE and under-powered as a mechanism: with 5 seeds and two instances a restored q-asymmetry would be suggestive and nothing more.",
+  "What a null actually bounds is hard to state precisely. 'Optimiser-robust at this budget class' means four procedures, one of them 3x the budget with a decay schedule, on two instances, at 5 seeds, at n_test = 300. IT IS A RECORD. IT IS NOT A THEOREM.",
+  "doc 58 SS14.4's severed-donor protocol carried a registered ambiguity between cross-seed donor selection and seed linkage; the build resolved it in the only way consistent with SS15.3's run count and flagged the resolution in `floors_doc58_SS14`."
+ ],
+ "I2_standing_doc58_SS18": "doc 58's SS18 POST-REGISTRATION NOTE (2026-08-27). SS1.2's registered branch RESOLVES: the exp70 confirm draw REPRODUCED the failure that defines I2 (gap to the class-comparator 0.353 -> 0.335) while the `binds_N-in_T2` knife-edge flipped (0.6467 -> 0.6647 across the 0.65 bar). I2 STANDS EXACTLY AS REGISTERED -- the instance is the first-draw measurement on the frozen dataset, its baseline and bars unchanged -- and any quotation of the binds boolean carries the knife-edge note. No criterion moves.",
+ "git_note": {
+  "repo_head": "cc027c7 exp70 CONFIRM DRAW (seed+1000, all arms, fresh floors): THE HEADLINE STANDS -- entanglement_hurts_T2 TRUE on both draws (-0.1873/-0.1887); 13/14 booleans agree; the one flip is the binds_N-in_T2 knife-edge (0.6467->0.6647 across the 0.65 bar) while the instance's gap to its 1.0 comparator persists (0.335); per-arm deltas <=0.03",
+  "exp72_paths": [
+   "?? exp72_aggregate.py",
+   "?? exp72_ckpt/",
+   "?? exp72_run.py",
+   "?? results_exp72_anchors.json",
+   "?? results_exp72_smoke_validation.json"
+  ],
+  "n_untracked": 252,
+  "rule3_note": "exp72 writes ONLY exp72_ckpt/ and results_exp72* (through fresh_results_path). No exp68 / exp69 / exp70 artefact is modified; the donor checkpoints are READ-ONLY and sha-asserted before use."
+ },
+ "wall_time_sec": 0.2572190761566162
+}

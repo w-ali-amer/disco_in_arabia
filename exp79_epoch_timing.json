@@ -1,0 +1,36 @@
+{
+ "derived_from": "measured first-epoch times (doc 71 SS4: derived, not guessed)",
+ "n_items_measured": 50,
+ "A2_committed_reference": {
+  "wall_time_sec_30epochs_full": 526.7,
+  "n_train_items": 2000,
+  "sec_per_item_per_epoch": 0.00878
+ },
+ "arms": {
+  "C-DISCARD": {
+   "n_items_measured": 50,
+   "wall_sec_for_n_items": 0.29,
+   "sec_per_item": 0.0058,
+   "sec_per_item_measured": 0.0058,
+   "estimated_sec_per_seed": 350.0,
+   "estimated_hours_per_seed": 0.1,
+   "n_seeds": 5,
+   "estimated_total_wall_hours_5workers": 0.1
+  },
+  "C-RESET": {
+   "n_items_measured": 50,
+   "wall_sec_for_n_items": 21.96,
+   "sec_per_item": 0.4391,
+   "sec_per_item_measured": 0.4391,
+   "estimated_sec_per_seed": 26478.0,
+   "estimated_hours_per_seed": 7.35,
+   "n_seeds": 5,
+   "estimated_total_wall_hours_5workers": 7.35
+  }
+ },
+ "C_DISCARD_vs_A2_ratio": 0.66,
+ "C_RESET_vs_A2_ratio": 50.01,
+ "n_workers": 5,
+ "threads_per_worker": 2,
+ "note": "C-FLOOR arms train identically to C-DISCARD. A2 and B1 are loaded from committed exp42r_ckpt/ (no training). Total trainable units: 15 (3 arms × 5 seeds). Purity logged for all arms at eval time."
+}

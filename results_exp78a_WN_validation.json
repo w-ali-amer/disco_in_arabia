@@ -1,0 +1,1447 @@
+{
+ "component": "exp76_datagen -- the Q76 generator and its V-suite",
+ "spec": "qnlp_private_docs/63_exp76_scaling.md (REGISTERED 2026-08-29, orchestrator rulings in the status header, BINDING over the body)",
+ "platform": "macOS-26.5.2-arm64-arm-64bit",
+ "python": "3.12.13",
+ "numpy": "2.5.1",
+ "generator_seed": 77000,
+ "script_sha256": "414ff639146e2cc2a884eae50d7e0c5c5cbfc01ba848ac52f71b0e1177f3278f",
+ "inventory_file": "d4_confirmed_inventory.json",
+ "inventory_file_sha256": "f7a8cb9f7d296f810131a0a37f9380daa514680c69e8935be287c91a759b536f",
+ "nouns_sha256": "34e95fc6e0429ecb9284f825e5ac411eba48865db3a3ce585aaf6d6aa26328f0",
+ "features_provenance_matches_prework": true,
+ "memberships": {
+  "faail_camel": 81,
+  "faail_surface": 63,
+  "faail_intersection": 62,
+  "band_32arc": 81
+ },
+ "grade1_bounds_doc63_SS2_6": {
+  "faail_camel": 0.6425672247590056,
+  "band_32arc": 0.5297931112238571
+ },
+ "grid_doc63_SS6_2": {
+  "2": [
+   2,
+   3
+  ],
+  "4": [
+   2,
+   4,
+   5
+  ],
+  "6": [
+   2,
+   4,
+   7
+  ]
+ },
+ "cells": {
+  "n2_T2": {
+   "cell": "n2_T2",
+   "path": "stories_exp78a_confirm_n2_T2.json",
+   "dataset_sha256": "759a9477d80a999574defc7e99b42fff16017052b8f5e76783aa80b5a6313762",
+   "n": 2,
+   "T": 2,
+   "inventory_level": "I519",
+   "category": "faail_camel",
+   "split_counts": {
+    "train": 528,
+    "val": 132,
+    "test": 300
+   },
+   "answer_balance": {
+    "yes": 480,
+    "no": 480
+   },
+   "V1_bag": {
+    "test_acc": 0.5,
+    "exactly_half": true,
+    "twin_feature_max_abs_diff": 0.0,
+    "bit_identical_twins": true
+   },
+   "V2_ngram": {
+    "gated": false,
+    "T": 2,
+    "exp60_V2H_bar_not_inherited": 0.55,
+    "seen_pairings_val_accuracy": 0.6212121212121212,
+    "unseen_pairings_test_accuracy": 0.62,
+    "n_features": 2452
+   },
+   "V2_note": "doc 63 SS8.2 V2: RE-DERIVED AND REPORTED UN-GATED, exactly as exp68 and exp69 did. The split is over unseen pairings/casts, not unseen nouns, so token identity transfers BY DESIGN. The price is paid in the CLAIM (SS16), not in the gate.",
+   "V3n_balance": {
+    "queried_verb": {
+     "حمل": 80,
+     "رفع": 80,
+     "سأل": 80,
+     "ساعد": 80,
+     "ضرب": 80,
+     "عالج": 80
+    },
+    "query_index": {
+     "1": 240,
+     "2": 240
+    },
+    "surface_order_per_slot": [
+     {
+      "SVO": 241,
+      "VSO": 239
+     },
+     {
+      "VSO": 235,
+      "SVO": 245
+     }
+    ],
+    "bearer_wire_index": {
+     "0": 240,
+     "1": 240
+    },
+    "wire_index_spread": 0,
+    "degree_bearer_mean": 2.0,
+    "degree_queried_nonbearer_mean": 2.0,
+    "degree_paired_delta_mean": 0.0,
+    "degree_paired_delta_sd": 0.0,
+    "degree_paired_delta_z": 0.0,
+    "degree_distractor_mean": null,
+    "degree_balance_z_bar": 4.0,
+    "degree_balance_abs_bar": 0.25,
+    "note": "SS4.5 L2's leak is a POPULATION-level bearer/non-bearer degree correlation. The reported contrast is bearer vs QUERIED non-bearer because those two are the pair a model must separate; distractor degree is reported, not gated, because a distractor is never a label candidate."
+   },
+   "V4_dedup": {
+    "n_items": 960,
+    "n_distinct_circuits": 960,
+    "contradictory_pairs": 0
+   },
+   "V5_split": {
+    "n_pairings": {
+     "train": 264,
+     "val": 66,
+     "test": 150
+    },
+    "n_nouns": {
+     "train": 345,
+     "val": 102,
+     "test": 183
+    },
+    "test_disjoint_from_train_and_val": true,
+    "every_heldout_noun_seen_in_train": true,
+    "n_verbs_in_train": 6
+   },
+   "V7_label": {
+    "n_checked": 960,
+    "mismatches": 0,
+    "definition": "label = yes iff agent(event q) is the bearer"
+   },
+   "V8_query": {
+    "n_checked": 960,
+    "violations": 0,
+    "assertion": "the queried verb occurs in exactly one of the T events"
+   },
+   "V9_active": {
+    "n_checked": 960,
+    "n_active": 2,
+    "n_active_expected": 2,
+    "all_events_reverse_reachable": true,
+    "inert_events": 0
+   }
+  },
+  "n3_T2": {
+   "cell": "n3_T2",
+   "path": "stories_exp78a_confirm_n3_T2.json",
+   "dataset_sha256": "a7fabb683da829bfb471d30f4994c41e868697e545d4a5cde195ce49cd02a366",
+   "n": 3,
+   "T": 2,
+   "inventory_level": "I519",
+   "category": "faail_camel",
+   "split_counts": {
+    "train": 528,
+    "val": 132,
+    "test": 300
+   },
+   "answer_balance": {
+    "yes": 480,
+    "no": 480
+   },
+   "V1_bag": {
+    "test_acc": 0.5,
+    "exactly_half": true,
+    "twin_feature_max_abs_diff": 0.0,
+    "bit_identical_twins": true
+   },
+   "V2_ngram": {
+    "gated": false,
+    "T": 2,
+    "exp60_V2H_bar_not_inherited": 0.55,
+    "seen_pairings_val_accuracy": 0.6287878787878788,
+    "unseen_pairings_test_accuracy": 0.6633333333333333,
+    "n_features": 2533
+   },
+   "V2_note": "doc 63 SS8.2 V2: RE-DERIVED AND REPORTED UN-GATED, exactly as exp68 and exp69 did. The split is over unseen pairings/casts, not unseen nouns, so token identity transfers BY DESIGN. The price is paid in the CLAIM (SS16), not in the gate.",
+   "V3n_balance": {
+    "queried_verb": {
+     "حمل": 80,
+     "رفع": 80,
+     "سأل": 80,
+     "ساعد": 80,
+     "ضرب": 80,
+     "عالج": 80
+    },
+    "query_index": {
+     "1": 240,
+     "2": 240
+    },
+    "surface_order_per_slot": [
+     {
+      "SVO": 241,
+      "VSO": 239
+     },
+     {
+      "VSO": 235,
+      "SVO": 245
+     }
+    ],
+    "bearer_wire_index": {
+     "0": 160,
+     "1": 160,
+     "2": 160
+    },
+    "wire_index_spread": 0,
+    "degree_bearer_mean": 1.5,
+    "degree_queried_nonbearer_mean": 1.5,
+    "degree_paired_delta_mean": 0.0,
+    "degree_paired_delta_sd": 1.0010432971016956,
+    "degree_paired_delta_z": 0.0,
+    "degree_distractor_mean": 1.0,
+    "degree_balance_z_bar": 4.0,
+    "degree_balance_abs_bar": 0.25,
+    "note": "SS4.5 L2's leak is a POPULATION-level bearer/non-bearer degree correlation. The reported contrast is bearer vs QUERIED non-bearer because those two are the pair a model must separate; distractor degree is reported, not gated, because a distractor is never a label candidate."
+   },
+   "V4_dedup": {
+    "n_items": 960,
+    "n_distinct_circuits": 960,
+    "contradictory_pairs": 0
+   },
+   "V5_split": {
+    "n_pairings": {
+     "train": 264,
+     "val": 66,
+     "test": 150
+    },
+    "n_nouns": {
+     "train": 345,
+     "val": 150,
+     "test": 243
+    },
+    "test_disjoint_from_train_and_val": true,
+    "every_heldout_noun_seen_in_train": true,
+    "n_verbs_in_train": 6
+   },
+   "V7_label": {
+    "n_checked": 960,
+    "mismatches": 0,
+    "definition": "label = yes iff agent(event q) is the bearer"
+   },
+   "V8_query": {
+    "n_checked": 960,
+    "violations": 0,
+    "assertion": "the queried verb occurs in exactly one of the T events"
+   },
+   "V9_active": {
+    "n_checked": 960,
+    "n_active": 3,
+    "n_active_expected": 3,
+    "all_events_reverse_reachable": true,
+    "inert_events": 0
+   }
+  },
+  "n2_T4": {
+   "cell": "n2_T4",
+   "path": "stories_exp78a_confirm_n2_T4.json",
+   "dataset_sha256": "d814fc9b82a5013bd658d2f7e57d84b5fb1818c47d97d57ed95713cea0099f98",
+   "n": 2,
+   "T": 4,
+   "inventory_level": "I519",
+   "category": "faail_camel",
+   "split_counts": {
+    "train": 528,
+    "val": 132,
+    "test": 300
+   },
+   "answer_balance": {
+    "yes": 480,
+    "no": 480
+   },
+   "V1_bag": {
+    "test_acc": 0.5,
+    "exactly_half": true,
+    "twin_feature_max_abs_diff": 0.0,
+    "bit_identical_twins": true
+   },
+   "V2_ngram": {
+    "gated": false,
+    "T": 4,
+    "exp60_V2H_bar_not_inherited": 0.55,
+    "seen_pairings_val_accuracy": 0.5303030303030303,
+    "unseen_pairings_test_accuracy": 0.5033333333333333,
+    "n_features": 3361
+   },
+   "V2_note": "doc 63 SS8.2 V2: RE-DERIVED AND REPORTED UN-GATED, exactly as exp68 and exp69 did. The split is over unseen pairings/casts, not unseen nouns, so token identity transfers BY DESIGN. The price is paid in the CLAIM (SS16), not in the gate.",
+   "V3n_balance": {
+    "queried_verb": {
+     "حمل": 80,
+     "رفع": 80,
+     "سأل": 80,
+     "ساعد": 80,
+     "ضرب": 80,
+     "عالج": 80
+    },
+    "query_index": {
+     "1": 120,
+     "2": 120,
+     "3": 120,
+     "4": 120
+    },
+    "surface_order_per_slot": [
+     {
+      "SVO": 257,
+      "VSO": 223
+     },
+     {
+      "SVO": 236,
+      "VSO": 244
+     },
+     {
+      "VSO": 243,
+      "SVO": 237
+     },
+     {
+      "VSO": 219,
+      "SVO": 261
+     }
+    ],
+    "bearer_wire_index": {
+     "0": 240,
+     "1": 240
+    },
+    "wire_index_spread": 0,
+    "degree_bearer_mean": 4.0,
+    "degree_queried_nonbearer_mean": 4.0,
+    "degree_paired_delta_mean": 0.0,
+    "degree_paired_delta_sd": 0.0,
+    "degree_paired_delta_z": 0.0,
+    "degree_distractor_mean": null,
+    "degree_balance_z_bar": 4.0,
+    "degree_balance_abs_bar": 0.25,
+    "note": "SS4.5 L2's leak is a POPULATION-level bearer/non-bearer degree correlation. The reported contrast is bearer vs QUERIED non-bearer because those two are the pair a model must separate; distractor degree is reported, not gated, because a distractor is never a label candidate."
+   },
+   "V4_dedup": {
+    "n_items": 960,
+    "n_distinct_circuits": 960,
+    "contradictory_pairs": 0
+   },
+   "V5_split": {
+    "n_pairings": {
+     "train": 264,
+     "val": 66,
+     "test": 150
+    },
+    "n_nouns": {
+     "train": 345,
+     "val": 102,
+     "test": 186
+    },
+    "test_disjoint_from_train_and_val": true,
+    "every_heldout_noun_seen_in_train": true,
+    "n_verbs_in_train": 6
+   },
+   "V7_label": {
+    "n_checked": 960,
+    "mismatches": 0,
+    "definition": "label = yes iff agent(event q) is the bearer"
+   },
+   "V8_query": {
+    "n_checked": 960,
+    "violations": 0,
+    "assertion": "the queried verb occurs in exactly one of the T events"
+   },
+   "V9_active": {
+    "n_checked": 960,
+    "n_active": 2,
+    "n_active_expected": 2,
+    "all_events_reverse_reachable": true,
+    "inert_events": 0
+   }
+  },
+  "n4_T4": {
+   "cell": "n4_T4",
+   "path": "stories_exp78a_confirm_n4_T4.json",
+   "dataset_sha256": "070c71dc424db2457c894b3d93bae0444c6d651cc3c1219f61fabf612ce1ef68",
+   "n": 4,
+   "T": 4,
+   "inventory_level": "I519",
+   "category": "faail_camel",
+   "split_counts": {
+    "train": 528,
+    "val": 132,
+    "test": 300
+   },
+   "answer_balance": {
+    "yes": 480,
+    "no": 480
+   },
+   "V1_bag": {
+    "test_acc": 0.5,
+    "exactly_half": true,
+    "twin_feature_max_abs_diff": 0.0,
+    "bit_identical_twins": true
+   },
+   "V2_ngram": {
+    "gated": false,
+    "T": 4,
+    "exp60_V2H_bar_not_inherited": 0.55,
+    "seen_pairings_val_accuracy": 0.5378787878787878,
+    "unseen_pairings_test_accuracy": 0.5133333333333333,
+    "n_features": 3730
+   },
+   "V2_note": "doc 63 SS8.2 V2: RE-DERIVED AND REPORTED UN-GATED, exactly as exp68 and exp69 did. The split is over unseen pairings/casts, not unseen nouns, so token identity transfers BY DESIGN. The price is paid in the CLAIM (SS16), not in the gate.",
+   "V3n_balance": {
+    "queried_verb": {
+     "حمل": 80,
+     "رفع": 80,
+     "سأل": 80,
+     "ساعد": 80,
+     "ضرب": 80,
+     "عالج": 80
+    },
+    "query_index": {
+     "1": 120,
+     "2": 120,
+     "3": 120,
+     "4": 120
+    },
+    "surface_order_per_slot": [
+     {
+      "SVO": 257,
+      "VSO": 223
+     },
+     {
+      "SVO": 236,
+      "VSO": 244
+     },
+     {
+      "VSO": 243,
+      "SVO": 237
+     },
+     {
+      "VSO": 219,
+      "SVO": 261
+     }
+    ],
+    "bearer_wire_index": {
+     "0": 120,
+     "1": 120,
+     "2": 120,
+     "3": 120
+    },
+    "wire_index_spread": 0,
+    "degree_bearer_mean": 2.5770833333333334,
+    "degree_queried_nonbearer_mean": 2.560416666666667,
+    "degree_paired_delta_mean": 0.016666666666666666,
+    "degree_paired_delta_sd": 1.4258767706453843,
+    "degree_paired_delta_z": 0.2560869067982896,
+    "degree_distractor_mean": 1.43125,
+    "degree_balance_z_bar": 4.0,
+    "degree_balance_abs_bar": 0.25,
+    "note": "SS4.5 L2's leak is a POPULATION-level bearer/non-bearer degree correlation. The reported contrast is bearer vs QUERIED non-bearer because those two are the pair a model must separate; distractor degree is reported, not gated, because a distractor is never a label candidate."
+   },
+   "V4_dedup": {
+    "n_items": 960,
+    "n_distinct_circuits": 960,
+    "contradictory_pairs": 0
+   },
+   "V5_split": {
+    "n_pairings": {
+     "train": 264,
+     "val": 66,
+     "test": 150
+    },
+    "n_nouns": {
+     "train": 345,
+     "val": 192,
+     "test": 282
+    },
+    "test_disjoint_from_train_and_val": true,
+    "every_heldout_noun_seen_in_train": true,
+    "n_verbs_in_train": 6
+   },
+   "V7_label": {
+    "n_checked": 960,
+    "mismatches": 0,
+    "definition": "label = yes iff agent(event q) is the bearer"
+   },
+   "V8_query": {
+    "n_checked": 960,
+    "violations": 0,
+    "assertion": "the queried verb occurs in exactly one of the T events"
+   },
+   "V9_active": {
+    "n_checked": 960,
+    "n_active": 4,
+    "n_active_expected": 4,
+    "all_events_reverse_reachable": true,
+    "inert_events": 0
+   }
+  },
+  "n5_T4": {
+   "cell": "n5_T4",
+   "path": "stories_exp78a_confirm_n5_T4.json",
+   "dataset_sha256": "68b405acdfb0bedfddcabeed5597c2def38e1c14bb76d19e7d4483f78ec436de",
+   "n": 5,
+   "T": 4,
+   "inventory_level": "I519",
+   "category": "faail_camel",
+   "split_counts": {
+    "train": 528,
+    "val": 132,
+    "test": 300
+   },
+   "answer_balance": {
+    "yes": 480,
+    "no": 480
+   },
+   "V1_bag": {
+    "test_acc": 0.5,
+    "exactly_half": true,
+    "twin_feature_max_abs_diff": 0.0,
+    "bit_identical_twins": true
+   },
+   "V2_ngram": {
+    "gated": false,
+    "T": 4,
+    "exp60_V2H_bar_not_inherited": 0.55,
+    "seen_pairings_val_accuracy": 0.5378787878787878,
+    "unseen_pairings_test_accuracy": 0.5133333333333333,
+    "n_features": 3770
+   },
+   "V2_note": "doc 63 SS8.2 V2: RE-DERIVED AND REPORTED UN-GATED, exactly as exp68 and exp69 did. The split is over unseen pairings/casts, not unseen nouns, so token identity transfers BY DESIGN. The price is paid in the CLAIM (SS16), not in the gate.",
+   "V3n_balance": {
+    "queried_verb": {
+     "حمل": 80,
+     "رفع": 80,
+     "سأل": 80,
+     "ساعد": 80,
+     "ضرب": 80,
+     "عالج": 80
+    },
+    "query_index": {
+     "1": 120,
+     "2": 120,
+     "3": 120,
+     "4": 120
+    },
+    "surface_order_per_slot": [
+     {
+      "SVO": 257,
+      "VSO": 223
+     },
+     {
+      "SVO": 236,
+      "VSO": 244
+     },
+     {
+      "VSO": 243,
+      "SVO": 237
+     },
+     {
+      "VSO": 219,
+      "SVO": 261
+     }
+    ],
+    "bearer_wire_index": {
+     "0": 96,
+     "1": 96,
+     "2": 96,
+     "3": 96,
+     "4": 96
+    },
+    "wire_index_spread": 0,
+    "degree_bearer_mean": 2.0625,
+    "degree_queried_nonbearer_mean": 2.0416666666666665,
+    "degree_paired_delta_mean": 0.020833333333333332,
+    "degree_paired_delta_sd": 1.4591097942884381,
+    "degree_paired_delta_z": 0.31281776489631996,
+    "degree_distractor_mean": 1.2986111111111112,
+    "degree_balance_z_bar": 4.0,
+    "degree_balance_abs_bar": 0.25,
+    "note": "SS4.5 L2's leak is a POPULATION-level bearer/non-bearer degree correlation. The reported contrast is bearer vs QUERIED non-bearer because those two are the pair a model must separate; distractor degree is reported, not gated, because a distractor is never a label candidate."
+   },
+   "V4_dedup": {
+    "n_items": 960,
+    "n_distinct_circuits": 960,
+    "contradictory_pairs": 0
+   },
+   "V5_split": {
+    "n_pairings": {
+     "train": 264,
+     "val": 66,
+     "test": 150
+    },
+    "n_nouns": {
+     "train": 345,
+     "val": 216,
+     "test": 302
+    },
+    "test_disjoint_from_train_and_val": true,
+    "every_heldout_noun_seen_in_train": true,
+    "n_verbs_in_train": 6
+   },
+   "V7_label": {
+    "n_checked": 960,
+    "mismatches": 0,
+    "definition": "label = yes iff agent(event q) is the bearer"
+   },
+   "V8_query": {
+    "n_checked": 960,
+    "violations": 0,
+    "assertion": "the queried verb occurs in exactly one of the T events"
+   },
+   "V9_active": {
+    "n_checked": 960,
+    "n_active": 5,
+    "n_active_expected": 5,
+    "all_events_reverse_reachable": true,
+    "inert_events": 0
+   }
+  },
+  "n2_T6": {
+   "cell": "n2_T6",
+   "path": "stories_exp78a_confirm_n2_T6.json",
+   "dataset_sha256": "406361e2905e985ed9dc26c2be4fb716c3a41fd4bf817bd83ba9089c5cbcaea4",
+   "n": 2,
+   "T": 6,
+   "inventory_level": "I519",
+   "category": "faail_camel",
+   "split_counts": {
+    "train": 528,
+    "val": 132,
+    "test": 300
+   },
+   "answer_balance": {
+    "yes": 480,
+    "no": 480
+   },
+   "V1_bag": {
+    "test_acc": 0.5,
+    "exactly_half": true,
+    "twin_feature_max_abs_diff": 0.0,
+    "bit_identical_twins": true
+   },
+   "V2_ngram": {
+    "gated": false,
+    "T": 6,
+    "exp60_V2H_bar_not_inherited": 0.55,
+    "seen_pairings_val_accuracy": 0.5075757575757576,
+    "unseen_pairings_test_accuracy": 0.48333333333333334,
+    "n_features": 4032
+   },
+   "V2_note": "doc 63 SS8.2 V2: RE-DERIVED AND REPORTED UN-GATED, exactly as exp68 and exp69 did. The split is over unseen pairings/casts, not unseen nouns, so token identity transfers BY DESIGN. The price is paid in the CLAIM (SS16), not in the gate.",
+   "V3n_balance": {
+    "queried_verb": {
+     "حمل": 84,
+     "رفع": 84,
+     "سأل": 78,
+     "ساعد": 78,
+     "ضرب": 78,
+     "عالج": 78
+    },
+    "query_index": {
+     "1": 80,
+     "2": 80,
+     "3": 80,
+     "4": 80,
+     "5": 80,
+     "6": 80
+    },
+    "surface_order_per_slot": [
+     {
+      "SVO": 236,
+      "VSO": 244
+     },
+     {
+      "SVO": 233,
+      "VSO": 247
+     },
+     {
+      "VSO": 230,
+      "SVO": 250
+     },
+     {
+      "VSO": 253,
+      "SVO": 227
+     },
+     {
+      "SVO": 248,
+      "VSO": 232
+     },
+     {
+      "SVO": 251,
+      "VSO": 229
+     }
+    ],
+    "bearer_wire_index": {
+     "0": 240,
+     "1": 240
+    },
+    "wire_index_spread": 0,
+    "degree_bearer_mean": 6.0,
+    "degree_queried_nonbearer_mean": 6.0,
+    "degree_paired_delta_mean": 0.0,
+    "degree_paired_delta_sd": 0.0,
+    "degree_paired_delta_z": 0.0,
+    "degree_distractor_mean": null,
+    "degree_balance_z_bar": 4.0,
+    "degree_balance_abs_bar": 0.25,
+    "note": "SS4.5 L2's leak is a POPULATION-level bearer/non-bearer degree correlation. The reported contrast is bearer vs QUERIED non-bearer because those two are the pair a model must separate; distractor degree is reported, not gated, because a distractor is never a label candidate."
+   },
+   "V4_dedup": {
+    "n_items": 960,
+    "n_distinct_circuits": 960,
+    "contradictory_pairs": 0
+   },
+   "V5_split": {
+    "n_pairings": {
+     "train": 264,
+     "val": 66,
+     "test": 150
+    },
+    "n_nouns": {
+     "train": 345,
+     "val": 99,
+     "test": 189
+    },
+    "test_disjoint_from_train_and_val": true,
+    "every_heldout_noun_seen_in_train": true,
+    "n_verbs_in_train": 6
+   },
+   "V7_label": {
+    "n_checked": 960,
+    "mismatches": 0,
+    "definition": "label = yes iff agent(event q) is the bearer"
+   },
+   "V8_query": {
+    "n_checked": 960,
+    "violations": 0,
+    "assertion": "the queried verb occurs in exactly one of the T events"
+   },
+   "V9_active": {
+    "n_checked": 960,
+    "n_active": 2,
+    "n_active_expected": 2,
+    "all_events_reverse_reachable": true,
+    "inert_events": 0
+   }
+  },
+  "n4_T6": {
+   "cell": "n4_T6",
+   "path": "stories_exp78a_confirm_n4_T6.json",
+   "dataset_sha256": "d765ce8d3bcbea197fff33fc59a21aac606342308eb2105e5d9393a24fd039f6",
+   "n": 4,
+   "T": 6,
+   "inventory_level": "I519",
+   "category": "faail_camel",
+   "split_counts": {
+    "train": 528,
+    "val": 132,
+    "test": 300
+   },
+   "answer_balance": {
+    "yes": 480,
+    "no": 480
+   },
+   "V1_bag": {
+    "test_acc": 0.5,
+    "exactly_half": true,
+    "twin_feature_max_abs_diff": 0.0,
+    "bit_identical_twins": true
+   },
+   "V2_ngram": {
+    "gated": false,
+    "T": 6,
+    "exp60_V2H_bar_not_inherited": 0.55,
+    "seen_pairings_val_accuracy": 0.5378787878787878,
+    "unseen_pairings_test_accuracy": 0.49666666666666665,
+    "n_features": 4586
+   },
+   "V2_note": "doc 63 SS8.2 V2: RE-DERIVED AND REPORTED UN-GATED, exactly as exp68 and exp69 did. The split is over unseen pairings/casts, not unseen nouns, so token identity transfers BY DESIGN. The price is paid in the CLAIM (SS16), not in the gate.",
+   "V3n_balance": {
+    "queried_verb": {
+     "حمل": 84,
+     "رفع": 84,
+     "سأل": 78,
+     "ساعد": 78,
+     "ضرب": 78,
+     "عالج": 78
+    },
+    "query_index": {
+     "1": 80,
+     "2": 80,
+     "3": 80,
+     "4": 80,
+     "5": 80,
+     "6": 80
+    },
+    "surface_order_per_slot": [
+     {
+      "SVO": 236,
+      "VSO": 244
+     },
+     {
+      "SVO": 233,
+      "VSO": 247
+     },
+     {
+      "VSO": 230,
+      "SVO": 250
+     },
+     {
+      "VSO": 253,
+      "SVO": 227
+     },
+     {
+      "SVO": 248,
+      "VSO": 232
+     },
+     {
+      "SVO": 251,
+      "VSO": 229
+     }
+    ],
+    "bearer_wire_index": {
+     "0": 120,
+     "1": 120,
+     "2": 120,
+     "3": 120
+    },
+    "wire_index_spread": 0,
+    "degree_bearer_mean": 3.9520833333333334,
+    "degree_queried_nonbearer_mean": 4.054166666666666,
+    "degree_paired_delta_mean": -0.10208333333333333,
+    "degree_paired_delta_sd": 1.6924231967702112,
+    "degree_paired_delta_z": -1.3214979449274789,
+    "degree_distractor_mean": 1.996875,
+    "degree_balance_z_bar": 4.0,
+    "degree_balance_abs_bar": 0.25,
+    "note": "SS4.5 L2's leak is a POPULATION-level bearer/non-bearer degree correlation. The reported contrast is bearer vs QUERIED non-bearer because those two are the pair a model must separate; distractor degree is reported, not gated, because a distractor is never a label candidate."
+   },
+   "V4_dedup": {
+    "n_items": 960,
+    "n_distinct_circuits": 960,
+    "contradictory_pairs": 0
+   },
+   "V5_split": {
+    "n_pairings": {
+     "train": 264,
+     "val": 66,
+     "test": 150
+    },
+    "n_nouns": {
+     "train": 345,
+     "val": 188,
+     "test": 294
+    },
+    "test_disjoint_from_train_and_val": true,
+    "every_heldout_noun_seen_in_train": true,
+    "n_verbs_in_train": 6
+   },
+   "V7_label": {
+    "n_checked": 960,
+    "mismatches": 0,
+    "definition": "label = yes iff agent(event q) is the bearer"
+   },
+   "V8_query": {
+    "n_checked": 960,
+    "violations": 0,
+    "assertion": "the queried verb occurs in exactly one of the T events"
+   },
+   "V9_active": {
+    "n_checked": 960,
+    "n_active": 4,
+    "n_active_expected": 4,
+    "all_events_reverse_reachable": true,
+    "inert_events": 0
+   }
+  },
+  "n7_T6": {
+   "cell": "n7_T6",
+   "path": "stories_exp78a_confirm_n7_T6.json",
+   "dataset_sha256": "ae84cf6b0a16d541c9778e40a78d9073a224f7fa5f3d501459a0a1e94cfa7147",
+   "n": 7,
+   "T": 6,
+   "inventory_level": "I519",
+   "category": "faail_camel",
+   "split_counts": {
+    "train": 528,
+    "val": 132,
+    "test": 300
+   },
+   "answer_balance": {
+    "yes": 480,
+    "no": 480
+   },
+   "V1_bag": {
+    "test_acc": 0.5,
+    "exactly_half": true,
+    "twin_feature_max_abs_diff": 0.0,
+    "bit_identical_twins": true
+   },
+   "V2_ngram": {
+    "gated": false,
+    "T": 6,
+    "exp60_V2H_bar_not_inherited": 0.55,
+    "seen_pairings_val_accuracy": 0.5151515151515151,
+    "unseen_pairings_test_accuracy": 0.5033333333333333,
+    "n_features": 4841
+   },
+   "V2_note": "doc 63 SS8.2 V2: RE-DERIVED AND REPORTED UN-GATED, exactly as exp68 and exp69 did. The split is over unseen pairings/casts, not unseen nouns, so token identity transfers BY DESIGN. The price is paid in the CLAIM (SS16), not in the gate.",
+   "V3n_balance": {
+    "queried_verb": {
+     "حمل": 84,
+     "رفع": 84,
+     "سأل": 78,
+     "ساعد": 78,
+     "ضرب": 78,
+     "عالج": 78
+    },
+    "query_index": {
+     "1": 80,
+     "2": 80,
+     "3": 80,
+     "4": 80,
+     "5": 80,
+     "6": 80
+    },
+    "surface_order_per_slot": [
+     {
+      "SVO": 236,
+      "VSO": 244
+     },
+     {
+      "SVO": 233,
+      "VSO": 247
+     },
+     {
+      "VSO": 230,
+      "SVO": 250
+     },
+     {
+      "VSO": 253,
+      "SVO": 227
+     },
+     {
+      "SVO": 248,
+      "VSO": 232
+     },
+     {
+      "SVO": 251,
+      "VSO": 229
+     }
+    ],
+    "bearer_wire_index": {
+     "0": 69,
+     "1": 69,
+     "2": 69,
+     "3": 69,
+     "4": 68,
+     "5": 68,
+     "6": 68
+    },
+    "wire_index_spread": 1,
+    "degree_bearer_mean": 2.3979166666666667,
+    "degree_queried_nonbearer_mean": 2.475,
+    "degree_paired_delta_mean": -0.07708333333333334,
+    "degree_paired_delta_sd": 1.7035808514616926,
+    "degree_paired_delta_z": -0.9913302427209382,
+    "degree_distractor_mean": 1.4254166666666668,
+    "degree_balance_z_bar": 4.0,
+    "degree_balance_abs_bar": 0.25,
+    "note": "SS4.5 L2's leak is a POPULATION-level bearer/non-bearer degree correlation. The reported contrast is bearer vs QUERIED non-bearer because those two are the pair a model must separate; distractor degree is reported, not gated, because a distractor is never a label candidate."
+   },
+   "V4_dedup": {
+    "n_items": 960,
+    "n_distinct_circuits": 960,
+    "contradictory_pairs": 0
+   },
+   "V5_split": {
+    "n_pairings": {
+     "train": 264,
+     "val": 66,
+     "test": 150
+    },
+    "n_nouns": {
+     "train": 345,
+     "val": 248,
+     "test": 333
+    },
+    "test_disjoint_from_train_and_val": true,
+    "every_heldout_noun_seen_in_train": true,
+    "n_verbs_in_train": 6
+   },
+   "V7_label": {
+    "n_checked": 960,
+    "mismatches": 0,
+    "definition": "label = yes iff agent(event q) is the bearer"
+   },
+   "V8_query": {
+    "n_checked": 960,
+    "violations": 0,
+    "assertion": "the queried verb occurs in exactly one of the T events"
+   },
+   "V9_active": {
+    "n_checked": 960,
+    "n_active": 7,
+    "n_active_expected": 7,
+    "all_events_reverse_reachable": true,
+    "inert_events": 0
+   }
+  },
+  "band32_n2_T2": {
+   "cell": "band32_n2_T2",
+   "path": "stories_exp78a_confirm_band32_n2_T2.json",
+   "dataset_sha256": "128e86d5f96efdb8ea7ea2dc297d7ee6b6147958b423ae7b43c16c90a27c2510",
+   "n": 2,
+   "T": 2,
+   "inventory_level": "I519",
+   "category": "band_32arc",
+   "split_counts": {
+    "train": 528,
+    "val": 132,
+    "test": 300
+   },
+   "answer_balance": {
+    "yes": 480,
+    "no": 480
+   },
+   "V1_bag": {
+    "test_acc": 0.5,
+    "exactly_half": true,
+    "twin_feature_max_abs_diff": 0.0,
+    "bit_identical_twins": true
+   },
+   "V2_ngram": {
+    "gated": false,
+    "T": 2,
+    "exp60_V2H_bar_not_inherited": 0.55,
+    "seen_pairings_val_accuracy": 0.6439393939393939,
+    "unseen_pairings_test_accuracy": 0.6166666666666667,
+    "n_features": 2460
+   },
+   "V2_note": "doc 63 SS8.2 V2: RE-DERIVED AND REPORTED UN-GATED, exactly as exp68 and exp69 did. The split is over unseen pairings/casts, not unseen nouns, so token identity transfers BY DESIGN. The price is paid in the CLAIM (SS16), not in the gate.",
+   "V3n_balance": {
+    "queried_verb": {
+     "حمل": 80,
+     "رفع": 80,
+     "سأل": 80,
+     "ساعد": 80,
+     "ضرب": 80,
+     "عالج": 80
+    },
+    "query_index": {
+     "1": 240,
+     "2": 240
+    },
+    "surface_order_per_slot": [
+     {
+      "SVO": 242,
+      "VSO": 238
+     },
+     {
+      "SVO": 235,
+      "VSO": 245
+     }
+    ],
+    "bearer_wire_index": {
+     "0": 240,
+     "1": 240
+    },
+    "wire_index_spread": 0,
+    "degree_bearer_mean": 2.0,
+    "degree_queried_nonbearer_mean": 2.0,
+    "degree_paired_delta_mean": 0.0,
+    "degree_paired_delta_sd": 0.0,
+    "degree_paired_delta_z": 0.0,
+    "degree_distractor_mean": null,
+    "degree_balance_z_bar": 4.0,
+    "degree_balance_abs_bar": 0.25,
+    "note": "SS4.5 L2's leak is a POPULATION-level bearer/non-bearer degree correlation. The reported contrast is bearer vs QUERIED non-bearer because those two are the pair a model must separate; distractor degree is reported, not gated, because a distractor is never a label candidate."
+   },
+   "V4_dedup": {
+    "n_items": 960,
+    "n_distinct_circuits": 960,
+    "contradictory_pairs": 0
+   },
+   "V5_split": {
+    "n_pairings": {
+     "train": 264,
+     "val": 66,
+     "test": 150
+    },
+    "n_nouns": {
+     "train": 345,
+     "val": 107,
+     "test": 187
+    },
+    "test_disjoint_from_train_and_val": true,
+    "every_heldout_noun_seen_in_train": true,
+    "n_verbs_in_train": 6
+   },
+   "V7_label": {
+    "n_checked": 960,
+    "mismatches": 0,
+    "definition": "label = yes iff agent(event q) is the bearer"
+   },
+   "V8_query": {
+    "n_checked": 960,
+    "violations": 0,
+    "assertion": "the queried verb occurs in exactly one of the T events"
+   },
+   "V9_active": {
+    "n_checked": 960,
+    "n_active": 2,
+    "n_active_expected": 2,
+    "all_events_reverse_reachable": true,
+    "inert_events": 0
+   }
+  },
+  "I24_n2_T2": {
+   "cell": "I24_n2_T2",
+   "path": "stories_exp78a_confirm_I24_n2_T2.json",
+   "dataset_sha256": "ed7d5458f076d7f6316d0ba62f8f5d4e05004809e4f27850fb455137fca73768",
+   "n": 2,
+   "T": 2,
+   "inventory_level": "I24",
+   "category": "faail_camel",
+   "split_counts": {
+    "train": 528,
+    "val": 132,
+    "test": 300
+   },
+   "answer_balance": {
+    "yes": 480,
+    "no": 480
+   },
+   "V1_bag": {
+    "test_acc": 0.5,
+    "exactly_half": true,
+    "twin_feature_max_abs_diff": 0.0,
+    "bit_identical_twins": true
+   },
+   "V2_ngram": {
+    "gated": false,
+    "T": 2,
+    "exp60_V2H_bar_not_inherited": 0.55,
+    "seen_pairings_val_accuracy": 0.7196969696969697,
+    "unseen_pairings_test_accuracy": 0.7133333333333334,
+    "n_features": 447
+   },
+   "V2_note": "doc 63 SS8.2 V2: RE-DERIVED AND REPORTED UN-GATED, exactly as exp68 and exp69 did. The split is over unseen pairings/casts, not unseen nouns, so token identity transfers BY DESIGN. The price is paid in the CLAIM (SS16), not in the gate.",
+   "V3n_balance": {
+    "queried_verb": {
+     "حمل": 80,
+     "رفع": 80,
+     "سأل": 80,
+     "ساعد": 80,
+     "ضرب": 80,
+     "عالج": 80
+    },
+    "query_index": {
+     "1": 240,
+     "2": 240
+    },
+    "surface_order_per_slot": [
+     {
+      "SVO": 253,
+      "VSO": 227
+     },
+     {
+      "SVO": 247,
+      "VSO": 233
+     }
+    ],
+    "bearer_wire_index": {
+     "0": 240,
+     "1": 240
+    },
+    "wire_index_spread": 0,
+    "degree_bearer_mean": 2.0,
+    "degree_queried_nonbearer_mean": 2.0,
+    "degree_paired_delta_mean": 0.0,
+    "degree_paired_delta_sd": 0.0,
+    "degree_paired_delta_z": 0.0,
+    "degree_distractor_mean": null,
+    "degree_balance_z_bar": 4.0,
+    "degree_balance_abs_bar": 0.25,
+    "note": "SS4.5 L2's leak is a POPULATION-level bearer/non-bearer degree correlation. The reported contrast is bearer vs QUERIED non-bearer because those two are the pair a model must separate; distractor degree is reported, not gated, because a distractor is never a label candidate."
+   },
+   "V4_dedup": {
+    "n_items": 960,
+    "n_distinct_circuits": 960,
+    "contradictory_pairs": 0
+   },
+   "V5_split": {
+    "n_pairings": {
+     "train": 44,
+     "val": 11,
+     "test": 25
+    },
+    "n_nouns": {
+     "train": 24,
+     "val": 14,
+     "test": 21
+    },
+    "test_disjoint_from_train_and_val": true,
+    "every_heldout_noun_seen_in_train": true,
+    "n_verbs_in_train": 6
+   },
+   "V7_label": {
+    "n_checked": 960,
+    "mismatches": 0,
+    "definition": "label = yes iff agent(event q) is the bearer"
+   },
+   "V8_query": {
+    "n_checked": 960,
+    "violations": 0,
+    "assertion": "the queried verb occurs in exactly one of the T events"
+   },
+   "V9_active": {
+    "n_checked": 960,
+    "n_active": 2,
+    "n_active_expected": 2,
+    "all_events_reverse_reachable": true,
+    "inert_events": 0
+   }
+  },
+  "I24_n4_T4": {
+   "cell": "I24_n4_T4",
+   "path": "stories_exp78a_confirm_I24_n4_T4.json",
+   "dataset_sha256": "92aac330200bef5ee7dec56b22a8701880f7195e6ba6f79dd15c1a4b0807fc06",
+   "n": 4,
+   "T": 4,
+   "inventory_level": "I24",
+   "category": "faail_camel",
+   "split_counts": {
+    "train": 528,
+    "val": 132,
+    "test": 300
+   },
+   "answer_balance": {
+    "yes": 480,
+    "no": 480
+   },
+   "V1_bag": {
+    "test_acc": 0.5,
+    "exactly_half": true,
+    "twin_feature_max_abs_diff": 0.0,
+    "bit_identical_twins": true
+   },
+   "V2_ngram": {
+    "gated": false,
+    "T": 4,
+    "exp60_V2H_bar_not_inherited": 0.55,
+    "seen_pairings_val_accuracy": 0.5,
+    "unseen_pairings_test_accuracy": 0.5433333333333333,
+    "n_features": 757
+   },
+   "V2_note": "doc 63 SS8.2 V2: RE-DERIVED AND REPORTED UN-GATED, exactly as exp68 and exp69 did. The split is over unseen pairings/casts, not unseen nouns, so token identity transfers BY DESIGN. The price is paid in the CLAIM (SS16), not in the gate.",
+   "V3n_balance": {
+    "queried_verb": {
+     "حمل": 80,
+     "رفع": 80,
+     "سأل": 80,
+     "ساعد": 80,
+     "ضرب": 80,
+     "عالج": 80
+    },
+    "query_index": {
+     "1": 120,
+     "2": 120,
+     "3": 120,
+     "4": 120
+    },
+    "surface_order_per_slot": [
+     {
+      "SVO": 246,
+      "VSO": 234
+     },
+     {
+      "SVO": 249,
+      "VSO": 231
+     },
+     {
+      "SVO": 236,
+      "VSO": 244
+     },
+     {
+      "SVO": 257,
+      "VSO": 223
+     }
+    ],
+    "bearer_wire_index": {
+     "0": 120,
+     "1": 120,
+     "2": 120,
+     "3": 120
+    },
+    "wire_index_spread": 0,
+    "degree_bearer_mean": 2.6041666666666665,
+    "degree_queried_nonbearer_mean": 2.4833333333333334,
+    "degree_paired_delta_mean": 0.12083333333333333,
+    "degree_paired_delta_sd": 1.4090311649991143,
+    "degree_paired_delta_z": 1.8788269275860674,
+    "degree_distractor_mean": 1.45625,
+    "degree_balance_z_bar": 4.0,
+    "degree_balance_abs_bar": 0.25,
+    "note": "SS4.5 L2's leak is a POPULATION-level bearer/non-bearer degree correlation. The reported contrast is bearer vs QUERIED non-bearer because those two are the pair a model must separate; distractor degree is reported, not gated, because a distractor is never a label candidate."
+   },
+   "V4_dedup": {
+    "n_items": 960,
+    "n_distinct_circuits": 960,
+    "contradictory_pairs": 0
+   },
+   "V5_split": {
+    "n_pairings": {
+     "train": 44,
+     "val": 11,
+     "test": 25
+    },
+    "n_nouns": {
+     "train": 24,
+     "val": 23,
+     "test": 24
+    },
+    "test_disjoint_from_train_and_val": true,
+    "every_heldout_noun_seen_in_train": true,
+    "n_verbs_in_train": 6
+   },
+   "V7_label": {
+    "n_checked": 960,
+    "mismatches": 0,
+    "definition": "label = yes iff agent(event q) is the bearer"
+   },
+   "V8_query": {
+    "n_checked": 960,
+    "violations": 0,
+    "assertion": "the queried verb occurs in exactly one of the T events"
+   },
+   "V9_active": {
+    "n_checked": 960,
+    "n_active": 4,
+    "n_active_expected": 4,
+    "all_events_reverse_reachable": true,
+    "inert_events": 0
+   }
+  }
+ },
+ "shared_core_doc63_SS6_2_1": {
+  "I24|faail_camel|T2": {
+   "cells": [
+    "I24_n2_T2"
+   ],
+   "n_cells": 1,
+   "assertion": null,
+   "why_null": "doc 63 SS10.4's scope: the assertion runs across n WITHIN one inventory. This group carries one n, so it is VACUOUS and is stored as null, NOT as TRUE -- a vacuous assertion is not a passed one."
+  },
+  "I24|faail_camel|T4": {
+   "cells": [
+    "I24_n4_T4"
+   ],
+   "n_cells": 1,
+   "assertion": null,
+   "why_null": "doc 63 SS10.4's scope: the assertion runs across n WITHIN one inventory. This group carries one n, so it is VACUOUS and is stored as null, NOT as TRUE -- a vacuous assertion is not a passed one."
+  },
+  "I519|band_32arc|T2": {
+   "cells": [
+    "band32_n2_T2"
+   ],
+   "n_cells": 1,
+   "assertion": null,
+   "why_null": "doc 63 SS10.4's scope: the assertion runs across n WITHIN one inventory. This group carries one n, so it is VACUOUS and is stored as null, NOT as TRUE -- a vacuous assertion is not a passed one."
+  },
+  "I519|faail_camel|T2": {
+   "cells": [
+    "n2_T2",
+    "n3_T2"
+   ],
+   "n_cells": 2,
+   "max_abs_feature_diff": 0.0,
+   "max_abs_label_diff": 0.0,
+   "bit_identical": true,
+   "assertion": true
+  },
+  "I519|faail_camel|T4": {
+   "cells": [
+    "n2_T4",
+    "n4_T4",
+    "n5_T4"
+   ],
+   "n_cells": 3,
+   "max_abs_feature_diff": 0.0,
+   "max_abs_label_diff": 0.0,
+   "bit_identical": true,
+   "assertion": true
+  },
+  "I519|faail_camel|T6": {
+   "cells": [
+    "n2_T6",
+    "n4_T6",
+    "n7_T6"
+   ],
+   "n_cells": 3,
+   "max_abs_feature_diff": 0.0,
+   "max_abs_label_diff": 0.0,
+   "bit_identical": true,
+   "assertion": true
+  },
+  "_failing_direction": {
+   "construction": "the T = 4 core re-drawn at SEED + 999, n = 2 rebuilt",
+   "max_abs_feature_diff": 1.9878136854293356,
+   "fires": true,
+   "reading": "doc 63 SS10.4: a build in which the queried core is RE-DRAWN per n must FAIL this assertion. A pipeline that passes both is actually sharing the core."
+  }
+ },
+ "flagged_ambiguities": [
+  {
+   "id": "F1",
+   "sections": [
+    "SS4.2 C4",
+    "SS6.2.1",
+    "SS4.5 L3",
+    "SS8.2 V3-n"
+   ],
+   "conflict": "SS4.2's C4 puts the queried referents' WIRE SLOTS in the shared core; SS6.2.1's enumeration of the same core does not. Byte-identical wire slots across n would pin the queried pair to slots {0,1} at every n, which contradicts SS4.5 L3's uniform bearer wire-index marginal and V3-n's assertion of it.",
+   "resolution": "toward SS6.2.1, which is the section whose consequence SS10.4 actually reads: tier (ii) is u(theta_agent(q)) (x) u(theta_patient(q)) and does not read a wire index. Wire slots are drawn per (cell, pair); the bearer's slot is an exact deterministic cycle so V3-n holds by construction.",
+   "status": "FLAGGED FOR THE ORCHESTRATOR, not invented"
+  },
+  {
+   "id": "F2",
+   "sections": [
+    "SS8.2 V5",
+    "SS6.1",
+    "SS16"
+   ],
+   "conflict": "V5 inherits exp69's 'every bearer and non-bearer in >= 1 TRAIN cast' over 24 nouns. At 519 nouns under SS6.1's frozen 960-item budget it is arithmetically impossible: 264 train pairs host at most 264 distinct non-bearers at n = 2.",
+   "resolution": "the CORE NON-BEARER POOL is 264 nouns drawn at the registered seed and held FIXED ACROSS EVERY CELL. V5 then holds exactly as written over the population the dataset uses; SS16's 'the split is over unseen pairings/casts, not unseen nouns' stays literally true; and the noun population does not move along the n axis. The I519 working core pool is 345 of the 519; the category, the feature map and every SS2.6 bound remain defined over all 519.",
+   "status": "FLAGGED FOR THE ORCHESTRATOR, not invented"
+  },
+  {
+   "id": "F3",
+   "sections": [
+    "SS6.3",
+    "SS12.7"
+   ],
+   "conflict": "the I24 level has only 4 x 20 = 80 distinct pairings, so the 480-pair budget forces 6 pairs per pairing (exp69's shape); the I519 level has 480 distinct pairings, one pair each. The two levels therefore differ in split GRANULARITY as well as in inventory.",
+   "resolution": "kept, because the alternative -- repeating I519 pairings six times -- would shrink the I519 pairing pool to 80 and destroy the very axis SS12.7 measures. `inventory_costs` is read together with the two levels' pre-work bounds (SS12.7) and this note travels with it.",
+   "status": "FLAGGED FOR THE ORCHESTRATOR, not invented"
+  }
+ ],
+ "kill_gate_passed": true
+}

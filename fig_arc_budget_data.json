@@ -1,0 +1,308 @@
+{
+  "figure": "fig_arc_budget.svg",
+  "source": "diagnostic_readout_arity_bounds.json",
+  "what_is_plotted": "panel 1: the Part A found-arc table (best found here, doc 50 SSC2 as published, the proved maximum 2M-2 and the Davenport-Schinzel bound 2M-1) for every M in the table. panel 2: the Part B per-twin M-ary ceilings for all four doc 47 SS13 categories at M in {2,4,8,12}, the doc 50 SSC3 published value of each cell, the doc 47 SS13 pair-level binary anchor, and the one K=2 cross-term.",
+  "encoding": {
+    "panel1_x": "readout arity M, evenly spaced categorical positions",
+    "panel1_y": "decision arcs carved on the circle at K=1 (integer count)",
+    "panel1_bars": "filled = recomputed here; hollow with ink edge = doc 50 SSC2",
+    "panel1_rules": "solid mid-ink = achievable maximum 2M-2; dashed muted = DS 2M-1",
+    "panel2_x": "readout arity M in {2,4,8,12} on EVENLY SPACED categorical positions -- arity steps are a design choice, not a measured interval, so a linear numeric axis would invent a slope",
+    "panel2_y": "reachable per-twin accuracy (constructive lower bound)",
+    "colour": "categorical, one slot per doc 47 SS13 category, in the same four validated slots and the same order as fig_capacity_validation, so the two figures read as one system",
+    "secondary_encoding": "filled marker + solid line = recomputed here; hollow marker, no line = doc 50 SSC3 as published; tick = doc 47 SS13 pair-level binary anchor; diamond = K=2 cross-term. Source is therefore never carried by colour alone."
+  },
+  "palette": {
+    "surface": "#fcfcfb",
+    "categories": {
+      "tertiary": "#2a78d6",
+      "uniformed": "#eb6834",
+      "manual": "#1baf7a",
+      "nonoccupational": "#4a3aa7"
+    },
+    "reference_series": {
+      "doc50_C2_bars": "hollow, ink edge #0b0b0b",
+      "exact_maximum_rule": "#52514e",
+      "ds_bound_rule": "#898781"
+    },
+    "validator": "node scripts/validate_palette.js \"#2a78d6,#eb6834,#1baf7a,#4a3aa7\" --mode light --pairs all -> ALL CHECKS PASS (CVD dE 9.2 deutan, normal-vision dE 16.3); aqua contrast WARN 2.74, relief = every line direct-labelled + this table view"
+  },
+  "panel1_points": [
+    {
+      "M": 2,
+      "arcs_best_found_here": 2,
+      "arcs_from_construction": 2,
+      "arcs_from_random_search": 2,
+      "doc50_C2_published": 2,
+      "exact_maximum_2M_minus_2": 2,
+      "ds_bound_2M_minus_1": 3,
+      "reconciliation": "MATCH"
+    },
+    {
+      "M": 3,
+      "arcs_best_found_here": 4,
+      "arcs_from_construction": 4,
+      "arcs_from_random_search": 4,
+      "doc50_C2_published": 4,
+      "exact_maximum_2M_minus_2": 4,
+      "ds_bound_2M_minus_1": 5,
+      "reconciliation": "MATCH"
+    },
+    {
+      "M": 4,
+      "arcs_best_found_here": 6,
+      "arcs_from_construction": 6,
+      "arcs_from_random_search": 6,
+      "doc50_C2_published": 6,
+      "exact_maximum_2M_minus_2": 6,
+      "ds_bound_2M_minus_1": 7,
+      "reconciliation": "MATCH"
+    },
+    {
+      "M": 6,
+      "arcs_best_found_here": 10,
+      "arcs_from_construction": 10,
+      "arcs_from_random_search": 10,
+      "doc50_C2_published": 8,
+      "exact_maximum_2M_minus_2": 10,
+      "ds_bound_2M_minus_1": 11,
+      "reconciliation": "OVER -- doc 50 SSC2's value is confirmed as an UNDERESTIMATE"
+    },
+    {
+      "M": 8,
+      "arcs_best_found_here": 14,
+      "arcs_from_construction": 14,
+      "arcs_from_random_search": 10,
+      "doc50_C2_published": 10,
+      "exact_maximum_2M_minus_2": 14,
+      "ds_bound_2M_minus_1": 15,
+      "reconciliation": "OVER -- doc 50 SSC2's value is confirmed as an UNDERESTIMATE"
+    }
+  ],
+  "panel2_points": [
+    {
+      "category": "tertiary",
+      "gloss": "tertiary-educated profession",
+      "colour": "#2a78d6",
+      "category_arcs": 8,
+      "binary_pair_level_anchor": 0.8526315789473684,
+      "binary_pair_level_fraction": "81/95",
+      "M": 2,
+      "y_recomputed": 0.8789473684210526,
+      "fraction": "167/190",
+      "y_doc50_C3": 0.8526,
+      "reconciliation": "doc 50 SSC3's binary column is doc 47 SS13's PAIR-LEVEL value (0.8526); this cell is the PER-TWIN argmax-2 value. Different populations, not a discrepancy -- per-twin >= pair-level always."
+    },
+    {
+      "category": "tertiary",
+      "gloss": "tertiary-educated profession",
+      "colour": "#2a78d6",
+      "category_arcs": 8,
+      "binary_pair_level_anchor": 0.8526315789473684,
+      "binary_pair_level_fraction": "81/95",
+      "M": 4,
+      "y_recomputed": 0.9263157894736842,
+      "fraction": "176/190",
+      "y_doc50_C3": 0.9053,
+      "reconciliation": "OVER by +0.0210 -- doc 50 SSC3's cell is confirmed as an UNDERESTIMATE (both are constructive lower bounds; a higher one supersedes)"
+    },
+    {
+      "category": "tertiary",
+      "gloss": "tertiary-educated profession",
+      "colour": "#2a78d6",
+      "category_arcs": 8,
+      "binary_pair_level_anchor": 0.8526315789473684,
+      "binary_pair_level_fraction": "81/95",
+      "M": 8,
+      "y_recomputed": 0.9736842105263158,
+      "fraction": "185/190",
+      "y_doc50_C3": 0.9105,
+      "reconciliation": "OVER by +0.0632 -- doc 50 SSC3's cell is confirmed as an UNDERESTIMATE (both are constructive lower bounds; a higher one supersedes)"
+    },
+    {
+      "category": "tertiary",
+      "gloss": "tertiary-educated profession",
+      "colour": "#2a78d6",
+      "category_arcs": 8,
+      "binary_pair_level_anchor": 0.8526315789473684,
+      "binary_pair_level_fraction": "81/95",
+      "M": 12,
+      "y_recomputed": 0.9736842105263158,
+      "fraction": "185/190",
+      "y_doc50_C3": 0.9053,
+      "reconciliation": "OVER by +0.0684 -- doc 50 SSC3's cell is confirmed as an UNDERESTIMATE (both are constructive lower bounds; a higher one supersedes)"
+    },
+    {
+      "category": "uniformed",
+      "gloss": "uniformed / disciplined service",
+      "colour": "#eb6834",
+      "category_arcs": 6,
+      "binary_pair_level_anchor": 0.875,
+      "binary_pair_level_fraction": "70/80",
+      "M": 2,
+      "y_recomputed": 0.875,
+      "fraction": "140/160",
+      "y_doc50_C3": 0.875,
+      "reconciliation": "doc 50 SSC3's binary column is doc 47 SS13's PAIR-LEVEL value (0.8750); this cell is the PER-TWIN argmax-2 value. Different populations, not a discrepancy -- per-twin >= pair-level always."
+    },
+    {
+      "category": "uniformed",
+      "gloss": "uniformed / disciplined service",
+      "colour": "#eb6834",
+      "category_arcs": 6,
+      "binary_pair_level_anchor": 0.875,
+      "binary_pair_level_fraction": "70/80",
+      "M": 4,
+      "y_recomputed": 0.975,
+      "fraction": "156/160",
+      "y_doc50_C3": 0.8375,
+      "reconciliation": "OVER by +0.1375 -- doc 50 SSC3's cell is confirmed as an UNDERESTIMATE (both are constructive lower bounds; a higher one supersedes)"
+    },
+    {
+      "category": "uniformed",
+      "gloss": "uniformed / disciplined service",
+      "colour": "#eb6834",
+      "category_arcs": 6,
+      "binary_pair_level_anchor": 0.875,
+      "binary_pair_level_fraction": "70/80",
+      "M": 8,
+      "y_recomputed": 0.975,
+      "fraction": "156/160",
+      "y_doc50_C3": 0.9125,
+      "reconciliation": "OVER by +0.0625 -- doc 50 SSC3's cell is confirmed as an UNDERESTIMATE (both are constructive lower bounds; a higher one supersedes)"
+    },
+    {
+      "category": "uniformed",
+      "gloss": "uniformed / disciplined service",
+      "colour": "#eb6834",
+      "category_arcs": 6,
+      "binary_pair_level_anchor": 0.875,
+      "binary_pair_level_fraction": "70/80",
+      "M": 12,
+      "y_recomputed": 0.975,
+      "fraction": "156/160",
+      "y_doc50_C3": 0.95,
+      "reconciliation": "OVER by +0.0250 -- doc 50 SSC3's cell is confirmed as an UNDERESTIMATE (both are constructive lower bounds; a higher one supersedes)"
+    },
+    {
+      "category": "manual",
+      "gloss": "manual / skilled trade",
+      "colour": "#1baf7a",
+      "category_arcs": 8,
+      "binary_pair_level_anchor": 0.8421052631578947,
+      "binary_pair_level_fraction": "80/95",
+      "M": 2,
+      "y_recomputed": 0.8578947368421053,
+      "fraction": "163/190",
+      "y_doc50_C3": 0.8421,
+      "reconciliation": "doc 50 SSC3's binary column is doc 47 SS13's PAIR-LEVEL value (0.8421); this cell is the PER-TWIN argmax-2 value. Different populations, not a discrepancy -- per-twin >= pair-level always."
+    },
+    {
+      "category": "manual",
+      "gloss": "manual / skilled trade",
+      "colour": "#1baf7a",
+      "category_arcs": 8,
+      "binary_pair_level_anchor": 0.8421052631578947,
+      "binary_pair_level_fraction": "80/95",
+      "M": 4,
+      "y_recomputed": 0.8947368421052632,
+      "fraction": "170/190",
+      "y_doc50_C3": 0.8421,
+      "reconciliation": "OVER by +0.0526 -- doc 50 SSC3's cell is confirmed as an UNDERESTIMATE (both are constructive lower bounds; a higher one supersedes)"
+    },
+    {
+      "category": "manual",
+      "gloss": "manual / skilled trade",
+      "colour": "#1baf7a",
+      "category_arcs": 8,
+      "binary_pair_level_anchor": 0.8421052631578947,
+      "binary_pair_level_fraction": "80/95",
+      "M": 8,
+      "y_recomputed": 0.9263157894736842,
+      "fraction": "176/190",
+      "y_doc50_C3": 0.8842,
+      "reconciliation": "OVER by +0.0421 -- doc 50 SSC3's cell is confirmed as an UNDERESTIMATE (both are constructive lower bounds; a higher one supersedes)"
+    },
+    {
+      "category": "manual",
+      "gloss": "manual / skilled trade",
+      "colour": "#1baf7a",
+      "category_arcs": 8,
+      "binary_pair_level_anchor": 0.8421052631578947,
+      "binary_pair_level_fraction": "80/95",
+      "M": 12,
+      "y_recomputed": 0.9736842105263158,
+      "fraction": "185/190",
+      "y_doc50_C3": 0.9,
+      "reconciliation": "OVER by +0.0737 -- doc 50 SSC3's cell is confirmed as an UNDERESTIMATE (both are constructive lower bounds; a higher one supersedes)"
+    },
+    {
+      "category": "nonoccupational",
+      "gloss": "non-occupational state",
+      "colour": "#4a3aa7",
+      "category_arcs": 4,
+      "binary_pair_level_anchor": 0.925,
+      "binary_pair_level_fraction": "74/80",
+      "M": 2,
+      "y_recomputed": 0.9625,
+      "fraction": "154/160",
+      "y_doc50_C3": 0.925,
+      "reconciliation": "doc 50 SSC3's binary column is doc 47 SS13's PAIR-LEVEL value (0.9250); this cell is the PER-TWIN argmax-2 value. Different populations, not a discrepancy -- per-twin >= pair-level always."
+    },
+    {
+      "category": "nonoccupational",
+      "gloss": "non-occupational state",
+      "colour": "#4a3aa7",
+      "category_arcs": 4,
+      "binary_pair_level_anchor": 0.925,
+      "binary_pair_level_fraction": "74/80",
+      "M": 4,
+      "y_recomputed": 1.0,
+      "fraction": "160/160",
+      "y_doc50_C3": 1.0,
+      "reconciliation": "MATCH (|delta| < 5e-5)"
+    },
+    {
+      "category": "nonoccupational",
+      "gloss": "non-occupational state",
+      "colour": "#4a3aa7",
+      "category_arcs": 4,
+      "binary_pair_level_anchor": 0.925,
+      "binary_pair_level_fraction": "74/80",
+      "M": 8,
+      "y_recomputed": 1.0,
+      "fraction": "160/160",
+      "y_doc50_C3": 1.0,
+      "reconciliation": "MATCH (|delta| < 5e-5)"
+    },
+    {
+      "category": "nonoccupational",
+      "gloss": "non-occupational state",
+      "colour": "#4a3aa7",
+      "category_arcs": 4,
+      "binary_pair_level_anchor": 0.925,
+      "binary_pair_level_fraction": "74/80",
+      "M": 12,
+      "y_recomputed": 1.0,
+      "fraction": "160/160",
+      "y_doc50_C3": 1.0,
+      "reconciliation": "MATCH (|delta| < 5e-5)"
+    }
+  ],
+  "k2_cross_term_point": {
+    "category": "uniformed",
+    "M": 8,
+    "K": 2,
+    "y_recomputed": 0.98125,
+    "fraction": "157/160",
+    "y_doc50_C3": 0.9688,
+    "reconciliation": "OVER by +0.0124 -- doc 50 SSC3's K=2 cell confirmed as an UNDERESTIMATE"
+  },
+  "caveats_shipped_on_the_figure": [
+    "arcs counted exactly, never on a grid",
+    "hard argmax, fixed alternating grouping (doc 53 SS3.1)",
+    "M-ladder nested by construction, so no cell can dip",
+    "binary anchors are PAIR-LEVEL over casts; M-ary cells are PER-TWIN over 2|B||N| -- two populations, both stated (doc 47 SS18.5)",
+    "representational bounds only; exp67 measured conversion and it failed for the circuit"
+  ]
+}

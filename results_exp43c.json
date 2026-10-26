@@ -1,0 +1,811 @@
+{
+ "experiment": "exp43c arm validity (memorisation control + matched-initialisation B1)",
+ "spec": "doc 24 SS5 (qnlp_private_docs/24, commit c6099b0, FROZEN): SS5.2 memorisation control, fixed 64-item L1 subset (first 32 twin pairs by sorted pair_id), grid {lr 0.005, 0.02} x {batch 1, 8}, 2 seeds, <=300 epochs, arm_trainable iff any config reaches train>=0.95; SS5.3 matched-init B1 on the exact frozen L1 Phase-1 grid, <=60 epochs, gate train>=0.8 AND val>=0.7; consequences frozen in SS5.4",
+ "platform": "macOS-26.5.2-arm64-arm-64bit",
+ "python": "3.12.13",
+ "torch": "2.13.0",
+ "dataset_sha256": "88cd70ad530356911c17f18d0b42de3edf3c956324513a1455c9548aaef15534",
+ "embeddings_sha256": "00c1ecffcaf05b38df082f8a3cbed1d013bddb3e39bc00adf1c2513b4ea674ac",
+ "meta": {
+  "additive_amendment_A2": "ADDITIVE AMENDMENT: A2 is included in the SS5.2 memorisation control although doc 24 SS5.2 lists {A1, A3, B1, B2, B3}. Reason: F5 (doc 24 SS6) requires every arm entering a comparison to have passed SS5.2, and A2 is the frozen tier-q comparator (doc 23 / doc 24 SS7); without this control A2 could not enter Phase 2 at all. The amendment is additive in the doc 24 SS3 sense: it adds a control our own comparator must pass, which can only make our own claim strictly harder to establish, never easier.",
+  "b2_name_augmentation": "Name augmentation (an exp42 training-protocol feature for B2's generalisation) is DISABLED in the memorisation control: the control measures pure fitting/optimisation capacity on a fixed 64-item set, and per-presentation name resampling changes the target being fit. Flagged as an execution resolution; doc 24 SS5.2 does not mention augmentation.",
+  "matched_init_scheme": "Execution resolution of SS5.3 'q_pos, q_neg drawn generically': each readout matrix is initialised at a generic SO(4) rotation built as the ordered product of 6 Givens rotations over index pairs (0,1),(0,2),(0,3),(1,2),(1,3),(2,3), each angle uniform on [0, 2pi) via torch.rand -- the real analogue of the A arms' generic uniform-angle init, far from identity, symmetry-breaking, and F4-compliant (torch.rand only). The PARAMETERISATION is unchanged (full 4x4 real matrix, 16 trained entries); only initial values differ. Dressing factors are 2x2 rotations R(theta), theta uniform on [0, 2pi), per the doc's explicit wording. Draws use a fresh generator seeded 51000+seed so the matched draws are a recorded, independent stream; the symmetric-core init is inherited unchanged from B1-as-shipped (torch.rand(2)*2pi, generator seeded with the run seed).",
+  "vocab_note": "B2/B3 vocab built over all L1 splits (train+val+test), size 43",
+  "memo_subset": {
+   "n_items": 64,
+   "n_pairs": 32,
+   "pair_ids_first_last": [
+    "p00001",
+    "p00032"
+   ],
+   "n_yes": 32
+  },
+  "control_of_the_control": "A1 is the leak sentinel; Lemma 1 pins it to <=0.5 on twins, so it MUST fail SS5.2. If A1 passes, exp43c is INCONCLUSIVE and is acted on in no way (doc 24 SS5.2)."
+ },
+ "frozen_grid": {
+  "lrs": [
+   0.005,
+   0.02
+  ],
+  "batches": [
+   1,
+   8
+  ],
+  "seeds": [
+   0,
+   1
+  ],
+  "memo_max_epochs": 300,
+  "memo_gate_train": 0.95,
+  "grid_max_epochs": 60,
+  "gate_train": 0.8,
+  "gate_val": 0.7
+ },
+ "memorisation_runs": {
+  "A1": [
+   {
+    "arm": "A1",
+    "lr": 0.005,
+    "batch": 1,
+    "seed": 0,
+    "n_items": 64,
+    "reached_0.95": false,
+    "reach_epoch": null,
+    "epochs_run": 300,
+    "best_clean_train_acc": 0.5
+   },
+   {
+    "arm": "A1",
+    "lr": 0.005,
+    "batch": 1,
+    "seed": 1,
+    "n_items": 64,
+    "reached_0.95": false,
+    "reach_epoch": null,
+    "epochs_run": 300,
+    "best_clean_train_acc": 0.5
+   },
+   {
+    "arm": "A1",
+    "lr": 0.005,
+    "batch": 8,
+    "seed": 0,
+    "n_items": 64,
+    "reached_0.95": false,
+    "reach_epoch": null,
+    "epochs_run": 300,
+    "best_clean_train_acc": 0.5
+   },
+   {
+    "arm": "A1",
+    "lr": 0.005,
+    "batch": 8,
+    "seed": 1,
+    "n_items": 64,
+    "reached_0.95": false,
+    "reach_epoch": null,
+    "epochs_run": 300,
+    "best_clean_train_acc": 0.5
+   },
+   {
+    "arm": "A1",
+    "lr": 0.02,
+    "batch": 1,
+    "seed": 0,
+    "n_items": 64,
+    "reached_0.95": false,
+    "reach_epoch": null,
+    "epochs_run": 300,
+    "best_clean_train_acc": 0.5
+   },
+   {
+    "arm": "A1",
+    "lr": 0.02,
+    "batch": 1,
+    "seed": 1,
+    "n_items": 64,
+    "reached_0.95": false,
+    "reach_epoch": null,
+    "epochs_run": 300,
+    "best_clean_train_acc": 0.5
+   },
+   {
+    "arm": "A1",
+    "lr": 0.02,
+    "batch": 8,
+    "seed": 0,
+    "n_items": 64,
+    "reached_0.95": false,
+    "reach_epoch": null,
+    "epochs_run": 300,
+    "best_clean_train_acc": 0.5
+   },
+   {
+    "arm": "A1",
+    "lr": 0.02,
+    "batch": 8,
+    "seed": 1,
+    "n_items": 64,
+    "reached_0.95": false,
+    "reach_epoch": null,
+    "epochs_run": 300,
+    "best_clean_train_acc": 0.5
+   }
+  ],
+  "A2": [
+   {
+    "arm": "A2",
+    "lr": 0.005,
+    "batch": 1,
+    "seed": 0,
+    "n_items": 64,
+    "reached_0.95": true,
+    "reach_epoch": 23,
+    "epochs_run": 23,
+    "best_clean_train_acc": 0.953125
+   },
+   {
+    "arm": "A2",
+    "lr": 0.005,
+    "batch": 1,
+    "seed": 1,
+    "n_items": 64,
+    "reached_0.95": true,
+    "reach_epoch": 19,
+    "epochs_run": 19,
+    "best_clean_train_acc": 0.953125
+   },
+   {
+    "arm": "A2",
+    "lr": 0.005,
+    "batch": 8,
+    "seed": 0,
+    "n_items": 64,
+    "reached_0.95": true,
+    "reach_epoch": 66,
+    "epochs_run": 66,
+    "best_clean_train_acc": 0.953125
+   },
+   {
+    "arm": "A2",
+    "lr": 0.005,
+    "batch": 8,
+    "seed": 1,
+    "n_items": 64,
+    "reached_0.95": true,
+    "reach_epoch": 42,
+    "epochs_run": 42,
+    "best_clean_train_acc": 0.953125
+   },
+   {
+    "arm": "A2",
+    "lr": 0.02,
+    "batch": 1,
+    "seed": 0,
+    "n_items": 64,
+    "reached_0.95": true,
+    "reach_epoch": 6,
+    "epochs_run": 6,
+    "best_clean_train_acc": 0.984375
+   },
+   {
+    "arm": "A2",
+    "lr": 0.02,
+    "batch": 1,
+    "seed": 1,
+    "n_items": 64,
+    "reached_0.95": true,
+    "reach_epoch": 9,
+    "epochs_run": 9,
+    "best_clean_train_acc": 0.953125
+   },
+   {
+    "arm": "A2",
+    "lr": 0.02,
+    "batch": 8,
+    "seed": 0,
+    "n_items": 64,
+    "reached_0.95": true,
+    "reach_epoch": 13,
+    "epochs_run": 13,
+    "best_clean_train_acc": 0.953125
+   },
+   {
+    "arm": "A2",
+    "lr": 0.02,
+    "batch": 8,
+    "seed": 1,
+    "n_items": 64,
+    "reached_0.95": true,
+    "reach_epoch": 10,
+    "epochs_run": 10,
+    "best_clean_train_acc": 0.953125
+   }
+  ],
+  "A3": [
+   {
+    "arm": "A3",
+    "lr": 0.005,
+    "batch": 1,
+    "seed": 0,
+    "n_items": 64,
+    "reached_0.95": true,
+    "reach_epoch": 8,
+    "epochs_run": 8,
+    "best_clean_train_acc": 0.96875
+   },
+   {
+    "arm": "A3",
+    "lr": 0.005,
+    "batch": 1,
+    "seed": 1,
+    "n_items": 64,
+    "reached_0.95": true,
+    "reach_epoch": 22,
+    "epochs_run": 22,
+    "best_clean_train_acc": 0.96875
+   },
+   {
+    "arm": "A3",
+    "lr": 0.005,
+    "batch": 8,
+    "seed": 0,
+    "n_items": 64,
+    "reached_0.95": true,
+    "reach_epoch": 18,
+    "epochs_run": 18,
+    "best_clean_train_acc": 0.953125
+   },
+   {
+    "arm": "A3",
+    "lr": 0.005,
+    "batch": 8,
+    "seed": 1,
+    "n_items": 64,
+    "reached_0.95": true,
+    "reach_epoch": 46,
+    "epochs_run": 46,
+    "best_clean_train_acc": 0.953125
+   },
+   {
+    "arm": "A3",
+    "lr": 0.02,
+    "batch": 1,
+    "seed": 0,
+    "n_items": 64,
+    "reached_0.95": true,
+    "reach_epoch": 5,
+    "epochs_run": 5,
+    "best_clean_train_acc": 0.953125
+   },
+   {
+    "arm": "A3",
+    "lr": 0.02,
+    "batch": 1,
+    "seed": 1,
+    "n_items": 64,
+    "reached_0.95": true,
+    "reach_epoch": 5,
+    "epochs_run": 5,
+    "best_clean_train_acc": 0.953125
+   },
+   {
+    "arm": "A3",
+    "lr": 0.02,
+    "batch": 8,
+    "seed": 0,
+    "n_items": 64,
+    "reached_0.95": true,
+    "reach_epoch": 6,
+    "epochs_run": 6,
+    "best_clean_train_acc": 0.96875
+   },
+   {
+    "arm": "A3",
+    "lr": 0.02,
+    "batch": 8,
+    "seed": 1,
+    "n_items": 64,
+    "reached_0.95": true,
+    "reach_epoch": 12,
+    "epochs_run": 12,
+    "best_clean_train_acc": 0.953125
+   }
+  ],
+  "B1": [
+   {
+    "arm": "B1",
+    "lr": 0.005,
+    "batch": 1,
+    "seed": 0,
+    "n_items": 64,
+    "reached_0.95": true,
+    "reach_epoch": 28,
+    "epochs_run": 28,
+    "best_clean_train_acc": 0.953125
+   },
+   {
+    "arm": "B1",
+    "lr": 0.005,
+    "batch": 1,
+    "seed": 1,
+    "n_items": 64,
+    "reached_0.95": false,
+    "reach_epoch": null,
+    "epochs_run": 300,
+    "best_clean_train_acc": 0.9375
+   },
+   {
+    "arm": "B1",
+    "lr": 0.005,
+    "batch": 8,
+    "seed": 0,
+    "n_items": 64,
+    "reached_0.95": true,
+    "reach_epoch": 64,
+    "epochs_run": 64,
+    "best_clean_train_acc": 0.953125
+   },
+   {
+    "arm": "B1",
+    "lr": 0.005,
+    "batch": 8,
+    "seed": 1,
+    "n_items": 64,
+    "reached_0.95": false,
+    "reach_epoch": null,
+    "epochs_run": 300,
+    "best_clean_train_acc": 0.859375
+   },
+   {
+    "arm": "B1",
+    "lr": 0.02,
+    "batch": 1,
+    "seed": 0,
+    "n_items": 64,
+    "reached_0.95": false,
+    "reach_epoch": null,
+    "epochs_run": 300,
+    "best_clean_train_acc": 0.6875
+   },
+   {
+    "arm": "B1",
+    "lr": 0.02,
+    "batch": 1,
+    "seed": 1,
+    "n_items": 64,
+    "reached_0.95": false,
+    "reach_epoch": null,
+    "epochs_run": 300,
+    "best_clean_train_acc": 0.75
+   },
+   {
+    "arm": "B1",
+    "lr": 0.02,
+    "batch": 8,
+    "seed": 0,
+    "n_items": 64,
+    "reached_0.95": true,
+    "reach_epoch": 31,
+    "epochs_run": 31,
+    "best_clean_train_acc": 0.953125
+   },
+   {
+    "arm": "B1",
+    "lr": 0.02,
+    "batch": 8,
+    "seed": 1,
+    "n_items": 64,
+    "reached_0.95": false,
+    "reach_epoch": null,
+    "epochs_run": 300,
+    "best_clean_train_acc": 0.78125
+   }
+  ],
+  "B2": [
+   {
+    "arm": "B2",
+    "lr": 0.005,
+    "batch": 1,
+    "seed": 0,
+    "n_items": 64,
+    "reached_0.95": false,
+    "reach_epoch": null,
+    "epochs_run": 300,
+    "best_clean_train_acc": 0.53125
+   },
+   {
+    "arm": "B2",
+    "lr": 0.005,
+    "batch": 1,
+    "seed": 1,
+    "n_items": 64,
+    "reached_0.95": false,
+    "reach_epoch": null,
+    "epochs_run": 300,
+    "best_clean_train_acc": 0.71875
+   },
+   {
+    "arm": "B2",
+    "lr": 0.005,
+    "batch": 8,
+    "seed": 0,
+    "n_items": 64,
+    "reached_0.95": true,
+    "reach_epoch": 242,
+    "epochs_run": 242,
+    "best_clean_train_acc": 0.953125
+   },
+   {
+    "arm": "B2",
+    "lr": 0.005,
+    "batch": 8,
+    "seed": 1,
+    "n_items": 64,
+    "reached_0.95": true,
+    "reach_epoch": 188,
+    "epochs_run": 188,
+    "best_clean_train_acc": 0.953125
+   },
+   {
+    "arm": "B2",
+    "lr": 0.02,
+    "batch": 1,
+    "seed": 0,
+    "n_items": 64,
+    "reached_0.95": false,
+    "reach_epoch": null,
+    "epochs_run": 300,
+    "best_clean_train_acc": 0.546875
+   },
+   {
+    "arm": "B2",
+    "lr": 0.02,
+    "batch": 1,
+    "seed": 1,
+    "n_items": 64,
+    "reached_0.95": false,
+    "reach_epoch": null,
+    "epochs_run": 300,
+    "best_clean_train_acc": 0.515625
+   },
+   {
+    "arm": "B2",
+    "lr": 0.02,
+    "batch": 8,
+    "seed": 0,
+    "n_items": 64,
+    "reached_0.95": false,
+    "reach_epoch": null,
+    "epochs_run": 300,
+    "best_clean_train_acc": 0.5
+   },
+   {
+    "arm": "B2",
+    "lr": 0.02,
+    "batch": 8,
+    "seed": 1,
+    "n_items": 64,
+    "reached_0.95": false,
+    "reach_epoch": null,
+    "epochs_run": 300,
+    "best_clean_train_acc": 0.515625
+   }
+  ],
+  "B3": [
+   {
+    "arm": "B3",
+    "lr": 0.005,
+    "batch": 1,
+    "seed": 0,
+    "n_items": 64,
+    "reached_0.95": false,
+    "reach_epoch": null,
+    "epochs_run": 300,
+    "best_clean_train_acc": 0.5
+   },
+   {
+    "arm": "B3",
+    "lr": 0.005,
+    "batch": 1,
+    "seed": 1,
+    "n_items": 64,
+    "reached_0.95": false,
+    "reach_epoch": null,
+    "epochs_run": 300,
+    "best_clean_train_acc": 0.5
+   },
+   {
+    "arm": "B3",
+    "lr": 0.005,
+    "batch": 8,
+    "seed": 0,
+    "n_items": 64,
+    "reached_0.95": false,
+    "reach_epoch": null,
+    "epochs_run": 300,
+    "best_clean_train_acc": 0.5
+   },
+   {
+    "arm": "B3",
+    "lr": 0.005,
+    "batch": 8,
+    "seed": 1,
+    "n_items": 64,
+    "reached_0.95": false,
+    "reach_epoch": null,
+    "epochs_run": 300,
+    "best_clean_train_acc": 0.5
+   },
+   {
+    "arm": "B3",
+    "lr": 0.02,
+    "batch": 1,
+    "seed": 0,
+    "n_items": 64,
+    "reached_0.95": false,
+    "reach_epoch": null,
+    "epochs_run": 300,
+    "best_clean_train_acc": 0.5
+   },
+   {
+    "arm": "B3",
+    "lr": 0.02,
+    "batch": 1,
+    "seed": 1,
+    "n_items": 64,
+    "reached_0.95": false,
+    "reach_epoch": null,
+    "epochs_run": 300,
+    "best_clean_train_acc": 0.5
+   },
+   {
+    "arm": "B3",
+    "lr": 0.02,
+    "batch": 8,
+    "seed": 0,
+    "n_items": 64,
+    "reached_0.95": false,
+    "reach_epoch": null,
+    "epochs_run": 300,
+    "best_clean_train_acc": 0.5
+   },
+   {
+    "arm": "B3",
+    "lr": 0.02,
+    "batch": 8,
+    "seed": 1,
+    "n_items": 64,
+    "reached_0.95": false,
+    "reach_epoch": null,
+    "epochs_run": 300,
+    "best_clean_train_acc": 0.5
+   }
+  ]
+ },
+ "matched_init_audit": {
+  "n_twin_pairs_audited": 200,
+  "per_seed": {
+   "0": {
+    "rel_commutator_with_SWAP_per_verb": {
+     "حمل": 1.136617,
+     "رفع": 1.249644,
+     "سأل": 1.350118,
+     "ساعد": 0.537941,
+     "ضرب": 1.159479,
+     "عالج": 1.094305
+    },
+    "rel_commutator_max": 1.350118,
+    "rel_commutator_mean": 1.088017,
+    "twin_value_L1_gap": {
+     "min": 0.00774148,
+     "p25": 0.22478575,
+     "median": 0.49113083,
+     "p75": 0.86165994,
+     "max": 1.88469076,
+     "n": 200
+    },
+    "frac_twin_pairs_predicting_identically": 0.555,
+    "init_accuracy_on_audited_items": 0.5075,
+    "grad_global_norm_at_init": 2.932097121645309,
+    "grad_norm_dress_only_at_init": 2.622735909032599,
+    "grad_frac_in_dress": 0.800115017059573
+   },
+   "1": {
+    "rel_commutator_with_SWAP_per_verb": {
+     "حمل": 1.226927,
+     "رفع": 0.61853,
+     "سأل": 0.626775,
+     "ساعد": 1.365894,
+     "ضرب": 1.351323,
+     "عالج": 0.895216
+    },
+    "rel_commutator_max": 1.365894,
+    "rel_commutator_mean": 1.014111,
+    "twin_value_L1_gap": {
+     "min": 0.00378903,
+     "p25": 0.23316611,
+     "median": 0.46590441,
+     "p75": 0.94888568,
+     "max": 1.81961584,
+     "n": 200
+    },
+    "frac_twin_pairs_predicting_identically": 0.58,
+    "init_accuracy_on_audited_items": 0.535,
+    "grad_global_norm_at_init": 1.5319989173882573,
+    "grad_norm_dress_only_at_init": 1.2775927368048823,
+    "grad_frac_in_dress": 0.6954532667920607
+   }
+  },
+  "f3_bar": 0.6,
+  "b1_as_shipped_reference": "results_exp43b_b1_init_audit.json (0.860 / 0.865)"
+ },
+ "b1_matched_grid_runs": [
+  {
+   "rung": "L1",
+   "arm": "B1M",
+   "lr": 0.005,
+   "batch": 1,
+   "seed": 0,
+   "gate_met": false,
+   "gate_epoch": null,
+   "gate_train_acc": null,
+   "gate_val_acc": null,
+   "epochs_run": 60,
+   "best_val_acc": 0.5633333333333334,
+   "best_val_epoch": 29,
+   "bestval_clean_train_acc": 0.5333333333333333,
+   "bestval_test_acc": 0.5
+  },
+  {
+   "rung": "L1",
+   "arm": "B1M",
+   "lr": 0.005,
+   "batch": 1,
+   "seed": 1,
+   "gate_met": false,
+   "gate_epoch": null,
+   "gate_train_acc": null,
+   "gate_val_acc": null,
+   "epochs_run": 60,
+   "best_val_acc": 0.5533333333333333,
+   "best_val_epoch": 8,
+   "bestval_clean_train_acc": 0.5375,
+   "bestval_test_acc": 0.5166666666666667
+  },
+  {
+   "rung": "L1",
+   "arm": "B1M",
+   "lr": 0.005,
+   "batch": 8,
+   "seed": 0,
+   "gate_met": false,
+   "gate_epoch": null,
+   "gate_train_acc": null,
+   "gate_val_acc": null,
+   "epochs_run": 60,
+   "best_val_acc": 0.5966666666666667,
+   "best_val_epoch": 26,
+   "bestval_clean_train_acc": 0.5966666666666667,
+   "bestval_test_acc": 0.5533333333333333
+  },
+  {
+   "rung": "L1",
+   "arm": "B1M",
+   "lr": 0.005,
+   "batch": 8,
+   "seed": 1,
+   "gate_met": false,
+   "gate_epoch": null,
+   "gate_train_acc": null,
+   "gate_val_acc": null,
+   "epochs_run": 60,
+   "best_val_acc": 0.6033333333333334,
+   "best_val_epoch": 19,
+   "bestval_clean_train_acc": 0.5625,
+   "bestval_test_acc": 0.5433333333333333
+  },
+  {
+   "rung": "L1",
+   "arm": "B1M",
+   "lr": 0.02,
+   "batch": 1,
+   "seed": 0,
+   "gate_met": false,
+   "gate_epoch": null,
+   "gate_train_acc": null,
+   "gate_val_acc": null,
+   "epochs_run": 60,
+   "best_val_acc": 0.5466666666666666,
+   "best_val_epoch": 2,
+   "bestval_clean_train_acc": 0.5275,
+   "bestval_test_acc": 0.55
+  },
+  {
+   "rung": "L1",
+   "arm": "B1M",
+   "lr": 0.02,
+   "batch": 1,
+   "seed": 1,
+   "gate_met": false,
+   "gate_epoch": null,
+   "gate_train_acc": null,
+   "gate_val_acc": null,
+   "epochs_run": 60,
+   "best_val_acc": 0.6033333333333334,
+   "best_val_epoch": 46,
+   "bestval_clean_train_acc": 0.5741666666666667,
+   "bestval_test_acc": 0.5733333333333334
+  },
+  {
+   "rung": "L1",
+   "arm": "B1M",
+   "lr": 0.02,
+   "batch": 8,
+   "seed": 0,
+   "gate_met": false,
+   "gate_epoch": null,
+   "gate_train_acc": null,
+   "gate_val_acc": null,
+   "epochs_run": 60,
+   "best_val_acc": 0.5633333333333334,
+   "best_val_epoch": 1,
+   "bestval_clean_train_acc": 0.5833333333333334,
+   "bestval_test_acc": 0.55
+  },
+  {
+   "rung": "L1",
+   "arm": "B1M",
+   "lr": 0.02,
+   "batch": 8,
+   "seed": 1,
+   "gate_met": false,
+   "gate_epoch": null,
+   "gate_train_acc": null,
+   "gate_val_acc": null,
+   "epochs_run": 60,
+   "best_val_acc": 0.5566666666666666,
+   "best_val_epoch": 40,
+   "bestval_clean_train_acc": 0.5116666666666667,
+   "bestval_test_acc": 0.5066666666666667
+  }
+ ],
+ "verdicts": {
+  "arm_trainable_A1": false,
+  "arm_trainable_A2": true,
+  "arm_trainable_A3": true,
+  "arm_trainable_B1": true,
+  "arm_trainable_B2": true,
+  "arm_trainable_B3": false,
+  "a1_fails_memorisation": true,
+  "exp43c_inconclusive": false,
+  "b1_matched_init_twin_collapse_at_init": {
+   "0": 0.555,
+   "1": 0.58
+  },
+  "b1_matched_init_f3_pass": true,
+  "b1_matched_init_learnable_L1": false
+ },
+ "consequence_5_4": {
+  "row": {
+   "b1_matched_init_learnable_L1": false,
+   "arm_trainable_B1": true
+  },
+  "text_verbatim": "The asymmetry survives its strongest challenge. Phase 2 proceeds; the audit and this control are reported alongside every comparative number as the reason a reader should believe it.",
+  "applies": true,
+  "note": null
+ },
+ "git_note": {
+  "exp42_paths": [
+   "?? exp42_ckpt_A1.pt",
+   "?? exp42_ckpt_A2.pt",
+   "?? exp42_ckpt_A3.pt",
+   "?? exp42_ckpt_B1.pt",
+   "?? exp42_ckpt_B2.pt",
+   "?? exp42_ckpt_B2_generous.pt",
+   "?? exp42_ckpt_B3.pt"
+  ],
+  "n_untracked": 52
+ },
+ "wall_time_sec": 3556.8
+}

@@ -1,0 +1,1349 @@
+{
+ "component": "exp73 procedure-matched floors (doc 61 SS15)",
+ "spec": "qnlp_private_docs/61_exp73_amplitude.md (REGISTERED 2026-08-28, orchestrator rulings 1-5 in the status header, BINDING over the body)",
+ "aggregated_from": "exp73_ckpt",
+ "dataset_sha256": "2b85822b544571969fd40cab12b03a4ac256b08aee914d2b9643b856a6308c96",
+ "floors": {
+  "A3-T1-uniform": {
+   "complete": true,
+   "arm": "S-shuffle-A3-T1-uniform",
+   "base_arm": "A3-T1-uniform",
+   "is_floor": true,
+   "rung": "A3",
+   "T": 1,
+   "init": "uniform",
+   "encoding": "amplitude",
+   "role": "amplitude arm, uniform init (doc 61 SS5.1)",
+   "mean": 0.4826666666666667,
+   "sd": 0.019493588689617924,
+   "per_seed": [
+    0.5033333333333333,
+    0.4766666666666667,
+    0.48333333333333334,
+    0.4533333333333333,
+    0.49666666666666665
+   ],
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_seeds": 5,
+   "val_per_seed": [
+    0.6212121212121212,
+    0.6060606060606061,
+    0.5833333333333334,
+    0.5757575757575758,
+    0.553030303030303
+   ],
+   "train_per_seed": [
+    0.7064393939393939,
+    0.7291666666666666,
+    0.6401515151515151,
+    0.6477272727272727,
+    0.5909090909090909
+   ],
+   "selected_epoch_per_seed": [
+    146,
+    67,
+    52,
+    107,
+    5
+   ],
+   "val_minus_heldout_per_seed": [
+    0.11787878787878792,
+    0.1293939393939394,
+    0.10000000000000003,
+    0.12242424242424249,
+    0.05636363636363634
+   ],
+   "mean_val_minus_heldout": 0.10521212121212123,
+   "gate_met_per_seed": [
+    false,
+    false,
+    false,
+    false,
+    false
+   ],
+   "n_params": 408,
+   "wires": 6,
+   "qubits_per_referent": 3,
+   "d_truncated": 8,
+   "init_scheme": "uniform",
+   "dataset_sha256": "2b85822b544571969fd40cab12b03a4ac256b08aee914d2b9643b856a6308c96",
+   "ckpt_sha256": [
+    "5507ba5a9c3a232ad58a95046081dd107d67570bd636dc2e5babd63e279731a5",
+    "a78a325262dc97dff2c82e73967dbfc4e923262c0eb673ec1434919166fa9787",
+    "299d155b1eee38a2a1422a94f6b14b9837efdc4012c2b8d90183e7439f27ab64",
+    "857ea877fc84792fa274279e8c070530c8a9d25e7ae45308fd763470979729b6",
+    "9c1d2daf3469b149c234c8bdeff1dc8f3e3994132861d02f44fac7031858f318"
+   ],
+   "wall_sec_total": 13092.077251911163,
+   "per_q_accuracy": {
+    "q1": {
+     "acc": 0.4826666666666667,
+     "n": 1500
+    }
+   },
+   "per_surface_order_accuracy": {
+    "SVO": {
+     "acc": 0.48533333333333334,
+     "n": 750
+    },
+    "VSO": {
+     "acc": 0.48,
+     "n": 750
+    }
+   },
+   "per_queried_verb_accuracy": {
+    "حمل": {
+     "acc": 0.44,
+     "n": 250
+    },
+    "رفع": {
+     "acc": 0.432,
+     "n": 250
+    },
+    "سأل": {
+     "acc": 0.52,
+     "n": 250
+    },
+    "ساعد": {
+     "acc": 0.524,
+     "n": 250
+    },
+    "ضرب": {
+     "acc": 0.46,
+     "n": 250
+    },
+    "عالج": {
+     "acc": 0.52,
+     "n": 250
+    }
+   },
+   "purity_traces_doc61_SS9_3": {
+    "by_q_and_correctness": {
+     "q1/wrong": {
+      "after_intro": {
+       "wire": {
+        "mean": 0.7254236105867883,
+        "min": 0.5036237239837646,
+        "max": 0.9758152961730957,
+        "n": 4656
+       },
+       "register": {
+        "mean": 1.000000033105157,
+        "min": 0.9999996423721313,
+        "max": 1.0000003576278687,
+        "n": 1552
+       }
+      },
+      "after_event1": {
+       "wire": {
+        "mean": 0.6155469192006334,
+        "min": 0.5003188252449036,
+        "max": 0.9728237390518188,
+        "n": 4656
+       },
+       "register": {
+        "mean": 0.5452322709114895,
+        "min": 0.28897958993911743,
+        "max": 0.9669913053512573,
+        "n": 1552
+       }
+      },
+      "at_readout": {
+       "wire": {
+        "mean": 0.641524659335306,
+        "min": 0.5000528693199158,
+        "max": 0.9758167266845703,
+        "n": 4656
+       },
+       "register": {
+        "mean": 0.683108955064846,
+        "min": 0.21867477893829346,
+        "max": 1.0000022649765015,
+        "n": 1552
+       }
+      }
+     },
+     "q1/correct": {
+      "after_intro": {
+       "wire": {
+        "mean": 0.7227251585264233,
+        "min": 0.5036237239837646,
+        "max": 0.9758152961730957,
+        "n": 4344
+       },
+       "register": {
+        "mean": 1.0000000349065876,
+        "min": 0.9999996423721313,
+        "max": 1.0000003576278687,
+        "n": 1448
+       }
+      },
+      "after_event1": {
+       "wire": {
+        "mean": 0.6172608580872498,
+        "min": 0.5002613067626953,
+        "max": 0.9711374044418335,
+        "n": 4344
+       },
+       "register": {
+        "mean": 0.5574913859490861,
+        "min": 0.29183855652809143,
+        "max": 0.9916841387748718,
+        "n": 1448
+       }
+      },
+      "at_readout": {
+       "wire": {
+        "mean": 0.6390057313315995,
+        "min": 0.5000119805335999,
+        "max": 0.9758166074752808,
+        "n": 4344
+       },
+       "register": {
+        "mean": 0.685003661185256,
+        "min": 0.23122002184391022,
+        "max": 1.0000025033950806,
+        "n": 1448
+       }
+      }
+     }
+    },
+    "reading_doc61_SS9_2": "the per-WIRE trace is read against doc 61 SS9.2's PRE-COMPUTED INVENTORY as its baseline, NOT against 1: a generic unit vector in R^{2^q} is not a product of q single-qubit states, so the intro per-wire purity is below 1 BY CONSTRUCTION and is a DATA-DETERMINED CONSTANT OF THE ENCODING, not a circuit effect. A3 min/median/max 0.5036/0.6660/0.9693; A4 0.5046/0.5299/0.7924; NO NOUN IS WITHIN 0.05 OF A PRODUCT STATE at either rung. Here the mechanism is MAXIMAL AND UNAVOIDABLE, and it is the ENCODING, not a gate.",
+    "registered_question_doc61_SS9_4": "does the readout restore the per-REGISTER purity to its INTRO value (1.0, by construction) on correct q = 2 items and fail to on q = 1 items -- the q-asymmetry undo signature (doc 55 SS20.5) transposed from wires to registers? DESCRIPTIVE, NO BOOLEAN, NO CRITERION. The healthy committed profile is the wire-level one (R2-A: 0.8755 vs 0.8751 on correct q = 2; 0.8017 vs 0.8953 on q = 1).",
+    "no_promotion_doc61_SS9_5": "these traces MAY describe how an arm succeeds or fails. They MAY NOT be promoted onto a criterion after results exist (the exp44 no-promotion clause), and NO VERDICT READS THEM."
+   },
+   "reported_not_registered_doc61_SS10_6": "per-q held-out accuracy; per-surface-order accuracy; the val-minus-held-out selection gap per seed (THE LIVE OVERFITTING EXPOSURE at 408 parameters against 528 items, doc 61 SS6.5 / SS19 row 2 -- comparison points: exp69 F2 gap 0.0353, FA 0.0813); selected epoch per seed; per-verb accuracy; SS9's two purity traces; per-seed deltas. NO VERDICT READS ANY OF THESE AND NONE MAY BE PROMOTED ONTO A CRITERION AFTER RESULTS EXIST."
+  },
+  "A3-T1-identity": {
+   "complete": true,
+   "arm": "S-shuffle-A3-T1-identity",
+   "base_arm": "A3-T1-identity",
+   "is_floor": true,
+   "rung": "A3",
+   "T": 1,
+   "init": "identity",
+   "encoding": "amplitude",
+   "role": "amplitude arm, identity init (doc 61 SS5.1)",
+   "mean": 0.5166666666666667,
+   "sd": 0.03018461712712473,
+   "per_seed": [
+    0.5333333333333333,
+    0.5266666666666666,
+    0.5,
+    0.55,
+    0.47333333333333333
+   ],
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_seeds": 5,
+   "val_per_seed": [
+    0.6060606060606061,
+    0.6212121212121212,
+    0.5909090909090909,
+    0.6060606060606061,
+    0.5833333333333334
+   ],
+   "train_per_seed": [
+    0.6590909090909091,
+    0.678030303030303,
+    0.5511363636363636,
+    0.5700757575757576,
+    0.6458333333333334
+   ],
+   "selected_epoch_per_seed": [
+    6,
+    30,
+    10,
+    37,
+    110
+   ],
+   "val_minus_heldout_per_seed": [
+    0.07272727272727275,
+    0.0945454545454546,
+    0.09090909090909094,
+    0.05606060606060603,
+    0.11000000000000004
+   ],
+   "mean_val_minus_heldout": 0.08484848484848487,
+   "gate_met_per_seed": [
+    false,
+    false,
+    false,
+    false,
+    false
+   ],
+   "n_params": 408,
+   "wires": 6,
+   "qubits_per_referent": 3,
+   "d_truncated": 8,
+   "init_scheme": "identity",
+   "dataset_sha256": "2b85822b544571969fd40cab12b03a4ac256b08aee914d2b9643b856a6308c96",
+   "ckpt_sha256": [
+    "48cc813539c88c625b803f8f4cabb14edcec5be7db27cd50957b612ce44ab78a",
+    "605d22683be196a5459dc2150404adf89135c5a4936982720ed450f0d3970603",
+    "cfbfc9083537ff1b195d1de6220934055fa14163f7b17b68156eabc40f292f95",
+    "c72035071d0d34884ecf7a2d3584f18476689386045bdf2d34520d4ae2da7b2e",
+    "c13b2a7b07688f9df6f3fb34f059e3f2dfab7aa8e944d08b94f5024b48ba2a4e"
+   ],
+   "wall_sec_total": 12943.056123256683,
+   "per_q_accuracy": {
+    "q1": {
+     "acc": 0.5166666666666667,
+     "n": 1500
+    }
+   },
+   "per_surface_order_accuracy": {
+    "SVO": {
+     "acc": 0.5226666666666666,
+     "n": 750
+    },
+    "VSO": {
+     "acc": 0.5106666666666667,
+     "n": 750
+    }
+   },
+   "per_queried_verb_accuracy": {
+    "حمل": {
+     "acc": 0.484,
+     "n": 250
+    },
+    "رفع": {
+     "acc": 0.548,
+     "n": 250
+    },
+    "سأل": {
+     "acc": 0.544,
+     "n": 250
+    },
+    "ساعد": {
+     "acc": 0.508,
+     "n": 250
+    },
+    "ضرب": {
+     "acc": 0.472,
+     "n": 250
+    },
+    "عالج": {
+     "acc": 0.544,
+     "n": 250
+    }
+   },
+   "purity_traces_doc61_SS9_3": {
+    "by_q_and_correctness": {
+     "q1/wrong": {
+      "after_intro": {
+       "wire": {
+        "mean": 0.7285008434317578,
+        "min": 0.5036237239837646,
+        "max": 0.9758152961730957,
+        "n": 4350
+       },
+       "register": {
+        "mean": 1.0000000347351206,
+        "min": 0.9999996423721313,
+        "max": 1.0000003576278687,
+        "n": 1450
+       }
+      },
+      "after_event1": {
+       "wire": {
+        "mean": 0.6966465086224436,
+        "min": 0.5003234148025513,
+        "max": 0.9789159893989563,
+        "n": 4350
+       },
+       "register": {
+        "mean": 0.8367697182606006,
+        "min": 0.42994898557662964,
+        "max": 0.9983847141265869,
+        "n": 1450
+       }
+      },
+      "at_readout": {
+       "wire": {
+        "mean": 0.6959678164706833,
+        "min": 0.5004318952560425,
+        "max": 0.9766919612884521,
+        "n": 4350
+       },
+       "register": {
+        "mean": 0.8595325870143956,
+        "min": 0.28512024879455566,
+        "max": 1.0000029802322388,
+        "n": 1450
+       }
+      }
+     },
+     "q1/correct": {
+      "after_intro": {
+       "wire": {
+        "mean": 0.7200240323876822,
+        "min": 0.5036237239837646,
+        "max": 0.9758152961730957,
+        "n": 4650
+       },
+       "register": {
+        "mean": 1.0000000332632373,
+        "min": 0.9999996423721313,
+        "max": 1.0000003576278687,
+        "n": 1550
+       }
+      },
+      "after_event1": {
+       "wire": {
+        "mean": 0.6913080068813857,
+        "min": 0.5016466379165649,
+        "max": 0.9785814881324768,
+        "n": 4650
+       },
+       "register": {
+        "mean": 0.8497134961812727,
+        "min": 0.4377540349960327,
+        "max": 0.998826265335083,
+        "n": 1550
+       }
+      },
+      "at_readout": {
+       "wire": {
+        "mean": 0.6917695519488345,
+        "min": 0.5002642869949341,
+        "max": 0.9830902814865112,
+        "n": 4650
+       },
+       "register": {
+        "mean": 0.8847176566623872,
+        "min": 0.2802490293979645,
+        "max": 1.0000030994415283,
+        "n": 1550
+       }
+      }
+     }
+    },
+    "reading_doc61_SS9_2": "the per-WIRE trace is read against doc 61 SS9.2's PRE-COMPUTED INVENTORY as its baseline, NOT against 1: a generic unit vector in R^{2^q} is not a product of q single-qubit states, so the intro per-wire purity is below 1 BY CONSTRUCTION and is a DATA-DETERMINED CONSTANT OF THE ENCODING, not a circuit effect. A3 min/median/max 0.5036/0.6660/0.9693; A4 0.5046/0.5299/0.7924; NO NOUN IS WITHIN 0.05 OF A PRODUCT STATE at either rung. Here the mechanism is MAXIMAL AND UNAVOIDABLE, and it is the ENCODING, not a gate.",
+    "registered_question_doc61_SS9_4": "does the readout restore the per-REGISTER purity to its INTRO value (1.0, by construction) on correct q = 2 items and fail to on q = 1 items -- the q-asymmetry undo signature (doc 55 SS20.5) transposed from wires to registers? DESCRIPTIVE, NO BOOLEAN, NO CRITERION. The healthy committed profile is the wire-level one (R2-A: 0.8755 vs 0.8751 on correct q = 2; 0.8017 vs 0.8953 on q = 1).",
+    "no_promotion_doc61_SS9_5": "these traces MAY describe how an arm succeeds or fails. They MAY NOT be promoted onto a criterion after results exist (the exp44 no-promotion clause), and NO VERDICT READS THEM."
+   },
+   "reported_not_registered_doc61_SS10_6": "per-q held-out accuracy; per-surface-order accuracy; the val-minus-held-out selection gap per seed (THE LIVE OVERFITTING EXPOSURE at 408 parameters against 528 items, doc 61 SS6.5 / SS19 row 2 -- comparison points: exp69 F2 gap 0.0353, FA 0.0813); selected epoch per seed; per-verb accuracy; SS9's two purity traces; per-seed deltas. NO VERDICT READS ANY OF THESE AND NONE MAY BE PROMOTED ONTO A CRITERION AFTER RESULTS EXIST."
+  },
+  "A3-T2-uniform": {
+   "complete": true,
+   "arm": "S-shuffle-A3-T2-uniform",
+   "base_arm": "A3-T2-uniform",
+   "is_floor": true,
+   "rung": "A3",
+   "T": 2,
+   "init": "uniform",
+   "encoding": "amplitude",
+   "role": "amplitude arm, uniform init (doc 61 SS5.1)",
+   "mean": 0.5120000000000001,
+   "sd": 0.03132269322888936,
+   "per_seed": [
+    0.5033333333333333,
+    0.54,
+    0.5433333333333333,
+    0.4666666666666667,
+    0.5066666666666667
+   ],
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_seeds": 5,
+   "val_per_seed": [
+    0.6136363636363636,
+    0.5833333333333334,
+    0.5757575757575758,
+    0.5833333333333334,
+    0.6212121212121212
+   ],
+   "train_per_seed": [
+    0.6231060606060606,
+    0.6988636363636364,
+    0.6931818181818182,
+    0.6193181818181818,
+    0.6439393939393939
+   ],
+   "selected_epoch_per_seed": [
+    93,
+    56,
+    8,
+    64,
+    22
+   ],
+   "val_minus_heldout_per_seed": [
+    0.11030303030303035,
+    0.043333333333333335,
+    0.032424242424242466,
+    0.1166666666666667,
+    0.1145454545454545
+   ],
+   "mean_val_minus_heldout": 0.08345454545454548,
+   "gate_met_per_seed": [
+    false,
+    false,
+    false,
+    false,
+    false
+   ],
+   "n_params": 408,
+   "wires": 6,
+   "qubits_per_referent": 3,
+   "d_truncated": 8,
+   "init_scheme": "uniform",
+   "dataset_sha256": "2b85822b544571969fd40cab12b03a4ac256b08aee914d2b9643b856a6308c96",
+   "ckpt_sha256": [
+    "c55a2520c346e9c4b2e6217c99f787f1d3161f35157b9c887324179a00e37254",
+    "834f1a8b77768f1cdeb4fd672391259d02e1a4e8514e6c4cafae7b9f32f7a8f7",
+    "ab8a9c832fa7841cf3c478ccebe840a79b661cdc36344e85852aefdf6ecc64b5",
+    "bbb3887fd31ea8e3b2058168776567d43b66e574994b62dcf812b976740dea06",
+    "f3253bcc871d6b4f3941ce0f4c2f01171be68b55341c4215d7f6b06053758d57"
+   ],
+   "wall_sec_total": 17199.414422035217,
+   "per_q_accuracy": {
+    "q1": {
+     "acc": 0.508,
+     "n": 750
+    },
+    "q2": {
+     "acc": 0.516,
+     "n": 750
+    }
+   },
+   "per_surface_order_accuracy": {
+    "SVO/SVO": {
+     "acc": 0.5105263157894737,
+     "n": 380
+    },
+    "SVO/VSO": {
+     "acc": 0.48157894736842105,
+     "n": 380
+    },
+    "VSO/SVO": {
+     "acc": 0.527027027027027,
+     "n": 370
+    },
+    "VSO/VSO": {
+     "acc": 0.5297297297297298,
+     "n": 370
+    }
+   },
+   "per_queried_verb_accuracy": {
+    "حمل": {
+     "acc": 0.5,
+     "n": 290
+    },
+    "رفع": {
+     "acc": 0.5555555555555556,
+     "n": 180
+    },
+    "سأل": {
+     "acc": 0.5074074074074074,
+     "n": 270
+    },
+    "ساعد": {
+     "acc": 0.5071428571428571,
+     "n": 280
+    },
+    "ضرب": {
+     "acc": 0.5526315789473685,
+     "n": 190
+    },
+    "عالج": {
+     "acc": 0.4793103448275862,
+     "n": 290
+    }
+   },
+   "purity_traces_doc61_SS9_3": {
+    "by_q_and_correctness": {
+     "q1/wrong": {
+      "after_intro": {
+       "wire": {
+        "mean": 0.7205597890478701,
+        "min": 0.5036237239837646,
+        "max": 0.9758152961730957,
+        "n": 2214
+       },
+       "register": {
+        "mean": 1.000000038201893,
+        "min": 0.9999996423721313,
+        "max": 1.0000003576278687,
+        "n": 738
+       }
+      },
+      "after_event1": {
+       "wire": {
+        "mean": 0.6196922875786,
+        "min": 0.5005264282226562,
+        "max": 0.9525009989738464,
+        "n": 2214
+       },
+       "register": {
+        "mean": 0.5617841370706635,
+        "min": 0.2948724627494812,
+        "max": 0.9123830795288086,
+        "n": 738
+       }
+      },
+      "after_event2": {
+       "wire": {
+        "mean": 0.5704901143841197,
+        "min": 0.5002338290214539,
+        "max": 0.9072718024253845,
+        "n": 2214
+       },
+       "register": {
+        "mean": 0.39816421684291625,
+        "min": 0.23541724681854248,
+        "max": 0.6984301209449768,
+        "n": 738
+       }
+      },
+      "at_readout": {
+       "wire": {
+        "mean": 0.5451301222140442,
+        "min": 0.5000147819519043,
+        "max": 0.8348541855812073,
+        "n": 2214
+       },
+       "register": {
+        "mean": 0.3215686473137318,
+        "min": 0.21646930277347565,
+        "max": 0.6412941217422485,
+        "n": 738
+       }
+      }
+     },
+     "q1/correct": {
+      "after_intro": {
+       "wire": {
+        "mean": 0.7275703773880255,
+        "min": 0.5036237239837646,
+        "max": 0.9758152961730957,
+        "n": 2286
+       },
+       "register": {
+        "mean": 1.000000045915914,
+        "min": 0.9999996423721313,
+        "max": 1.0000003576278687,
+        "n": 762
+       }
+      },
+      "after_event1": {
+       "wire": {
+        "mean": 0.6194147172718849,
+        "min": 0.5002886056900024,
+        "max": 0.9525011777877808,
+        "n": 2286
+       },
+       "register": {
+        "mean": 0.5586162105085343,
+        "min": 0.2932037115097046,
+        "max": 0.9123830795288086,
+        "n": 762
+       }
+      },
+      "after_event2": {
+       "wire": {
+        "mean": 0.5728698832782235,
+        "min": 0.5003976821899414,
+        "max": 0.9715121984481812,
+        "n": 2286
+       },
+       "register": {
+        "mean": 0.39514117822872374,
+        "min": 0.23724669218063354,
+        "max": 0.6347132325172424,
+        "n": 762
+       }
+      },
+      "at_readout": {
+       "wire": {
+        "mean": 0.5457478126255129,
+        "min": 0.5002298355102539,
+        "max": 0.8000989556312561,
+        "n": 2286
+       },
+       "register": {
+        "mean": 0.32099869250860114,
+        "min": 0.21436333656311035,
+        "max": 0.6247438192367554,
+        "n": 762
+       }
+      }
+     },
+     "q2/correct": {
+      "after_intro": {
+       "wire": {
+        "mean": 0.72794859140829,
+        "min": 0.5036237239837646,
+        "max": 0.9758152961730957,
+        "n": 2322
+       },
+       "register": {
+        "mean": 1.00000003211258,
+        "min": 0.9999996423721313,
+        "max": 1.0000003576278687,
+        "n": 774
+       }
+      },
+      "after_event1": {
+       "wire": {
+        "mean": 0.6201884200560647,
+        "min": 0.5002886056900024,
+        "max": 0.9525011777877808,
+        "n": 2322
+       },
+       "register": {
+        "mean": 0.5605901195174348,
+        "min": 0.2948724627494812,
+        "max": 0.884998083114624,
+        "n": 774
+       }
+      },
+      "after_event2": {
+       "wire": {
+        "mean": 0.5751768576749741,
+        "min": 0.5001522302627563,
+        "max": 0.900324285030365,
+        "n": 2322
+       },
+       "register": {
+        "mean": 0.40286647353215427,
+        "min": 0.23578256368637085,
+        "max": 0.7307246923446655,
+        "n": 774
+       }
+      },
+      "at_readout": {
+       "wire": {
+        "mean": 0.5821812073543706,
+        "min": 0.5002893209457397,
+        "max": 0.9476693272590637,
+        "n": 2322
+       },
+       "register": {
+        "mean": 0.4358237283905963,
+        "min": 0.23272830247879028,
+        "max": 0.8849966526031494,
+        "n": 774
+       }
+      }
+     },
+     "q2/wrong": {
+      "after_intro": {
+       "wire": {
+        "mean": 0.7200406588087178,
+        "min": 0.5036237239837646,
+        "max": 0.9758152961730957,
+        "n": 2178
+       },
+       "register": {
+        "mean": 1.0000000150243114,
+        "min": 0.9999996423721313,
+        "max": 1.0000003576278687,
+        "n": 726
+       }
+      },
+      "after_event1": {
+       "wire": {
+        "mean": 0.6184155746432375,
+        "min": 0.500469982624054,
+        "max": 0.9525011777877808,
+        "n": 2178
+       },
+       "register": {
+        "mean": 0.5627592293437848,
+        "min": 0.2948724627494812,
+        "max": 0.884998083114624,
+        "n": 726
+       }
+      },
+      "after_event2": {
+       "wire": {
+        "mean": 0.5717108053171492,
+        "min": 0.5003021955490112,
+        "max": 0.8776934146881104,
+        "n": 2178
+       },
+       "register": {
+        "mean": 0.3990477574142543,
+        "min": 0.23725929856300354,
+        "max": 0.8337869644165039,
+        "n": 726
+       }
+      },
+      "at_readout": {
+       "wire": {
+        "mean": 0.5832494581862258,
+        "min": 0.500254213809967,
+        "max": 0.9525002837181091,
+        "n": 2178
+       },
+       "register": {
+        "mean": 0.4412278179541107,
+        "min": 0.22206278145313263,
+        "max": 0.8803989291191101,
+        "n": 726
+       }
+      }
+     }
+    },
+    "reading_doc61_SS9_2": "the per-WIRE trace is read against doc 61 SS9.2's PRE-COMPUTED INVENTORY as its baseline, NOT against 1: a generic unit vector in R^{2^q} is not a product of q single-qubit states, so the intro per-wire purity is below 1 BY CONSTRUCTION and is a DATA-DETERMINED CONSTANT OF THE ENCODING, not a circuit effect. A3 min/median/max 0.5036/0.6660/0.9693; A4 0.5046/0.5299/0.7924; NO NOUN IS WITHIN 0.05 OF A PRODUCT STATE at either rung. Here the mechanism is MAXIMAL AND UNAVOIDABLE, and it is the ENCODING, not a gate.",
+    "registered_question_doc61_SS9_4": "does the readout restore the per-REGISTER purity to its INTRO value (1.0, by construction) on correct q = 2 items and fail to on q = 1 items -- the q-asymmetry undo signature (doc 55 SS20.5) transposed from wires to registers? DESCRIPTIVE, NO BOOLEAN, NO CRITERION. The healthy committed profile is the wire-level one (R2-A: 0.8755 vs 0.8751 on correct q = 2; 0.8017 vs 0.8953 on q = 1).",
+    "no_promotion_doc61_SS9_5": "these traces MAY describe how an arm succeeds or fails. They MAY NOT be promoted onto a criterion after results exist (the exp44 no-promotion clause), and NO VERDICT READS THEM."
+   },
+   "reported_not_registered_doc61_SS10_6": "per-q held-out accuracy; per-surface-order accuracy; the val-minus-held-out selection gap per seed (THE LIVE OVERFITTING EXPOSURE at 408 parameters against 528 items, doc 61 SS6.5 / SS19 row 2 -- comparison points: exp69 F2 gap 0.0353, FA 0.0813); selected epoch per seed; per-verb accuracy; SS9's two purity traces; per-seed deltas. NO VERDICT READS ANY OF THESE AND NONE MAY BE PROMOTED ONTO A CRITERION AFTER RESULTS EXIST."
+  },
+  "A3-T2-identity": {
+   "complete": true,
+   "arm": "S-shuffle-A3-T2-identity",
+   "base_arm": "A3-T2-identity",
+   "is_floor": true,
+   "rung": "A3",
+   "T": 2,
+   "init": "identity",
+   "encoding": "amplitude",
+   "role": "amplitude arm, identity init (doc 61 SS5.1)",
+   "mean": 0.49066666666666664,
+   "sd": 0.025429641497014207,
+   "per_seed": [
+    0.49,
+    0.4766666666666667,
+    0.51,
+    0.52,
+    0.45666666666666667
+   ],
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_seeds": 5,
+   "val_per_seed": [
+    0.6212121212121212,
+    0.6136363636363636,
+    0.6060606060606061,
+    0.6212121212121212,
+    0.6287878787878788
+   ],
+   "train_per_seed": [
+    0.8863636363636364,
+    0.634469696969697,
+    0.6306818181818182,
+    0.6420454545454546,
+    0.5700757575757576
+   ],
+   "selected_epoch_per_seed": [
+    74,
+    70,
+    65,
+    50,
+    46
+   ],
+   "val_minus_heldout_per_seed": [
+    0.13121212121212122,
+    0.13696969696969696,
+    0.09606060606060607,
+    0.1012121212121212,
+    0.17212121212121212
+   ],
+   "mean_val_minus_heldout": 0.12751515151515153,
+   "gate_met_per_seed": [
+    false,
+    false,
+    false,
+    false,
+    false
+   ],
+   "n_params": 408,
+   "wires": 6,
+   "qubits_per_referent": 3,
+   "d_truncated": 8,
+   "init_scheme": "identity",
+   "dataset_sha256": "2b85822b544571969fd40cab12b03a4ac256b08aee914d2b9643b856a6308c96",
+   "ckpt_sha256": [
+    "94faa00a85b3b4c540268c1c515e859af68b6ca38df235a120ccbafa156b744c",
+    "954589fafd54dfd67d515a5b7473b08d929fd2d607cfb099d255a401a2b3820e",
+    "46b58307f68b9ebc0716334f71004764d7a0e33159ea33ac70c5c2be78256a80",
+    "b63b979886281c21e78a086765ede5c36d3081503241541879fc8567fb8013d7",
+    "fe909771b5b9b7a9620168116fea29b42f5ac96289d178aaf490532a1bfadac9"
+   ],
+   "wall_sec_total": 18186.33363008499,
+   "per_q_accuracy": {
+    "q1": {
+     "acc": 0.49733333333333335,
+     "n": 750
+    },
+    "q2": {
+     "acc": 0.484,
+     "n": 750
+    }
+   },
+   "per_surface_order_accuracy": {
+    "SVO/SVO": {
+     "acc": 0.5026315789473684,
+     "n": 380
+    },
+    "SVO/VSO": {
+     "acc": 0.5157894736842106,
+     "n": 380
+    },
+    "VSO/SVO": {
+     "acc": 0.4702702702702703,
+     "n": 370
+    },
+    "VSO/VSO": {
+     "acc": 0.47297297297297297,
+     "n": 370
+    }
+   },
+   "per_queried_verb_accuracy": {
+    "حمل": {
+     "acc": 0.46551724137931033,
+     "n": 290
+    },
+    "رفع": {
+     "acc": 0.5444444444444444,
+     "n": 180
+    },
+    "سأل": {
+     "acc": 0.5185185185185185,
+     "n": 270
+    },
+    "ساعد": {
+     "acc": 0.4642857142857143,
+     "n": 280
+    },
+    "ضرب": {
+     "acc": 0.48947368421052634,
+     "n": 190
+    },
+    "عالج": {
+     "acc": 0.4827586206896552,
+     "n": 290
+    }
+   },
+   "purity_traces_doc61_SS9_3": {
+    "by_q_and_correctness": {
+     "q1/wrong": {
+      "after_intro": {
+       "wire": {
+        "mean": 0.7242594321252602,
+        "min": 0.5036237239837646,
+        "max": 0.9758152961730957,
+        "n": 2262
+       },
+       "register": {
+        "mean": 1.000000038418909,
+        "min": 0.9999996423721313,
+        "max": 1.0000003576278687,
+        "n": 754
+       }
+      },
+      "after_event1": {
+       "wire": {
+        "mean": 0.6637366649906368,
+        "min": 0.5000607967376709,
+        "max": 0.9764364957809448,
+        "n": 2262
+       },
+       "register": {
+        "mean": 0.7319190273708627,
+        "min": 0.4561283588409424,
+        "max": 0.9803499579429626,
+        "n": 754
+       }
+      },
+      "after_event2": {
+       "wire": {
+        "mean": 0.6182314274218312,
+        "min": 0.5006310939788818,
+        "max": 0.9644959568977356,
+        "n": 2262
+       },
+       "register": {
+        "mean": 0.5770422309558019,
+        "min": 0.2526269257068634,
+        "max": 0.9230843782424927,
+        "n": 754
+       }
+      },
+      "at_readout": {
+       "wire": {
+        "mean": 0.5936233933049951,
+        "min": 0.5003546476364136,
+        "max": 0.9143688082695007,
+        "n": 2262
+       },
+       "register": {
+        "mean": 0.48428125837595454,
+        "min": 0.24553868174552917,
+        "max": 0.9499160647392273,
+        "n": 754
+       }
+      }
+     },
+     "q2/correct": {
+      "after_intro": {
+       "wire": {
+        "mean": 0.7235959808250652,
+        "min": 0.5036237239837646,
+        "max": 0.9758152961730957,
+        "n": 2178
+       },
+       "register": {
+        "mean": 1.0000000243837184,
+        "min": 0.9999996423721313,
+        "max": 1.0000003576278687,
+        "n": 726
+       }
+      },
+      "after_event1": {
+       "wire": {
+        "mean": 0.6643842543835373,
+        "min": 0.5000607967376709,
+        "max": 0.9819384813308716,
+        "n": 2178
+       },
+       "register": {
+        "mean": 0.7439964241643254,
+        "min": 0.46990689635276794,
+        "max": 0.9839351177215576,
+        "n": 726
+       }
+      },
+      "after_event2": {
+       "wire": {
+        "mean": 0.6253330288018734,
+        "min": 0.5011800527572632,
+        "max": 0.9780803918838501,
+        "n": 2178
+       },
+       "register": {
+        "mean": 0.5946516627779348,
+        "min": 0.2836446464061737,
+        "max": 0.9097794890403748,
+        "n": 726
+       }
+      },
+      "at_readout": {
+       "wire": {
+        "mean": 0.6251055625078326,
+        "min": 0.5000608563423157,
+        "max": 0.9819399118423462,
+        "n": 2178
+       },
+       "register": {
+        "mean": 0.605554770298569,
+        "min": 0.25933974981307983,
+        "max": 0.9839364886283875,
+        "n": 726
+       }
+      }
+     },
+     "q2/wrong": {
+      "after_intro": {
+       "wire": {
+        "mean": 0.7246137544782278,
+        "min": 0.5036237239837646,
+        "max": 0.9758152961730957,
+        "n": 2322
+       },
+       "register": {
+        "mean": 1.0000000233336013,
+        "min": 0.9999996423721313,
+        "max": 1.0000003576278687,
+        "n": 774
+       }
+      },
+      "after_event1": {
+       "wire": {
+        "mean": 0.6584270730755845,
+        "min": 0.5001063942909241,
+        "max": 0.9772706627845764,
+        "n": 2322
+       },
+       "register": {
+        "mean": 0.7233072480413033,
+        "min": 0.46990689635276794,
+        "max": 0.9839354753494263,
+        "n": 774
+       }
+      },
+      "after_event2": {
+       "wire": {
+        "mean": 0.6183087760317849,
+        "min": 0.5003941059112549,
+        "max": 0.9687244892120361,
+        "n": 2322
+       },
+       "register": {
+        "mean": 0.5738217772516477,
+        "min": 0.2773725092411041,
+        "max": 0.9116007089614868,
+        "n": 774
+       }
+      },
+      "at_readout": {
+       "wire": {
+        "mean": 0.624588291363712,
+        "min": 0.5001065135002136,
+        "max": 0.9772695899009705,
+        "n": 2322
+       },
+       "register": {
+        "mean": 0.6045413653941426,
+        "min": 0.24575106799602509,
+        "max": 0.9839377403259277,
+        "n": 774
+       }
+      }
+     },
+     "q1/correct": {
+      "after_intro": {
+       "wire": {
+        "mean": 0.7239814209980662,
+        "min": 0.5036237239837646,
+        "max": 0.9758152961730957,
+        "n": 2238
+       },
+       "register": {
+        "mean": 1.0000000458620188,
+        "min": 0.9999996423721313,
+        "max": 1.0000003576278687,
+        "n": 746
+       }
+      },
+      "after_event1": {
+       "wire": {
+        "mean": 0.6599953821772865,
+        "min": 0.5001064538955688,
+        "max": 0.9764364957809448,
+        "n": 2238
+       },
+       "register": {
+        "mean": 0.7246600368706854,
+        "min": 0.45612841844558716,
+        "max": 0.9839354753494263,
+        "n": 746
+       }
+      },
+      "after_event2": {
+       "wire": {
+        "mean": 0.619339922344823,
+        "min": 0.50063157081604,
+        "max": 0.9527289271354675,
+        "n": 2238
+       },
+       "register": {
+        "mean": 0.5800554481891781,
+        "min": 0.2943897247314453,
+        "max": 0.889833927154541,
+        "n": 746
+       }
+      },
+      "at_readout": {
+       "wire": {
+        "mean": 0.5933987165903598,
+        "min": 0.5003560185432434,
+        "max": 0.9439274072647095,
+        "n": 2238
+       },
+       "register": {
+        "mean": 0.4876940460131571,
+        "min": 0.245256245136261,
+        "max": 0.9177021980285645,
+        "n": 746
+       }
+      }
+     }
+    },
+    "reading_doc61_SS9_2": "the per-WIRE trace is read against doc 61 SS9.2's PRE-COMPUTED INVENTORY as its baseline, NOT against 1: a generic unit vector in R^{2^q} is not a product of q single-qubit states, so the intro per-wire purity is below 1 BY CONSTRUCTION and is a DATA-DETERMINED CONSTANT OF THE ENCODING, not a circuit effect. A3 min/median/max 0.5036/0.6660/0.9693; A4 0.5046/0.5299/0.7924; NO NOUN IS WITHIN 0.05 OF A PRODUCT STATE at either rung. Here the mechanism is MAXIMAL AND UNAVOIDABLE, and it is the ENCODING, not a gate.",
+    "registered_question_doc61_SS9_4": "does the readout restore the per-REGISTER purity to its INTRO value (1.0, by construction) on correct q = 2 items and fail to on q = 1 items -- the q-asymmetry undo signature (doc 55 SS20.5) transposed from wires to registers? DESCRIPTIVE, NO BOOLEAN, NO CRITERION. The healthy committed profile is the wire-level one (R2-A: 0.8755 vs 0.8751 on correct q = 2; 0.8017 vs 0.8953 on q = 1).",
+    "no_promotion_doc61_SS9_5": "these traces MAY describe how an arm succeeds or fails. They MAY NOT be promoted onto a criterion after results exist (the exp44 no-promotion clause), and NO VERDICT READS THEM."
+   },
+   "reported_not_registered_doc61_SS10_6": "per-q held-out accuracy; per-surface-order accuracy; the val-minus-held-out selection gap per seed (THE LIVE OVERFITTING EXPOSURE at 408 parameters against 528 items, doc 61 SS6.5 / SS19 row 2 -- comparison points: exp69 F2 gap 0.0353, FA 0.0813); selected epoch per seed; per-verb accuracy; SS9's two purity traces; per-seed deltas. NO VERDICT READS ANY OF THESE AND NONE MAY BE PROMOTED ONTO A CRITERION AFTER RESULTS EXIST."
+  },
+  "A4-T1-uniform": {
+   "complete": false,
+   "n_runs": 0,
+   "seeds_present": [],
+   "n_seeds_registered": 5,
+   "note": "INCOMPLETE -- doc 61 SS15.4: a cell without its full seed set has NO verdict and its booleans are stored as null, never as false"
+  },
+  "A4-T1-identity": {
+   "complete": false,
+   "n_runs": 0,
+   "seeds_present": [],
+   "n_seeds_registered": 5,
+   "note": "INCOMPLETE -- doc 61 SS15.4: a cell without its full seed set has NO verdict and its booleans are stored as null, never as false"
+  },
+  "A4-T2-uniform": {
+   "complete": false,
+   "n_runs": 0,
+   "seeds_present": [],
+   "n_seeds_registered": 5,
+   "note": "INCOMPLETE -- doc 61 SS15.4: a cell without its full seed set has NO verdict and its booleans are stored as null, never as false"
+  },
+  "A4-T2-identity": {
+   "complete": false,
+   "n_runs": 0,
+   "seeds_present": [],
+   "n_seeds_registered": 5,
+   "note": "INCOMPLETE -- doc 61 SS15.4: a cell without its full seed set has NO verdict and its booleans are stored as null, never as false"
+  }
+ },
+ "floor_clearance": {
+  "A3-T1-uniform": {
+   "arm_mean": 0.9713333333333333,
+   "floor_mean": 0.4826666666666667,
+   "delta": 0.4886666666666666,
+   "readings": {
+    "floor_sd_PRIMARY": {
+     "sd": 0.019493588689617924,
+     "bar": 0.5216538440459025,
+     "clears": true,
+     "margin_in_sd": 25.0680710692806
+    },
+    "arm_sd": {
+     "sd": 0.02062899792902106,
+     "bar": 0.5239246625247088,
+     "clears": true,
+     "margin_in_sd": 23.68833756966963
+    },
+    "pooled_sd": {
+     "sd": 0.020069324297987152,
+     "bar": 0.522805315262641,
+     "clears": true,
+     "margin_in_sd": 24.348934693116565
+    }
+   },
+   "primary": "floor_sd_PRIMARY",
+   "clears_floor": true,
+   "readings_agree": true,
+   "disagreement_note": null,
+   "floor_contaminated_doc61_SS15_5": false,
+   "contamination_rule": "doc 61 SS15.5: if a floor RISES TO MEET ITS ARM the cell is reported as floor-contaminated with BOTH numbers and IS NOT READ. Operationalised here, transparently, as floor_mean >= 0.65 (the floor itself reaches the binding bar) OR arm_mean - floor_mean < 0.06 (the separation is inside the registered resolution). At 408 parameters against 528 items this is A LIVE RISK AND NOT A FORMALITY.",
+   "floor_construction": "doc 61 SS15.1: the committed S-shuffle (`exp69_run.relabel_shuffle_q`, imported unchanged) -- bearer designation reassigned PER PAIR, independently of the features -- same items, same splits, same 5 seeds, run under the IDENTICAL ARM PROCEDURE. **THE INIT IS PART OF THE PROCEDURE, so each cell carries its OWN floor** (doc 58 SS14's argument, inherited: a floor measured under one optimisation procedure does not bound what another can achieve on severed labels)."
+  },
+  "A3-T1-identity": {
+   "arm_mean": 0.9873333333333333,
+   "floor_mean": 0.5166666666666667,
+   "delta": 0.47066666666666657,
+   "readings": {
+    "floor_sd_PRIMARY": {
+     "sd": 0.03018461712712473,
+     "bar": 0.5770359009209162,
+     "clears": true,
+     "margin_in_sd": 15.592931481768323
+    },
+    "arm_sd": {
+     "sd": 0.012110601416389968,
+     "bar": 0.5408878694994467,
+     "clears": true,
+     "margin_in_sd": 38.86402090896052
+    },
+    "pooled_sd": {
+     "sd": 0.022997584414213793,
+     "bar": 0.5626618354950943,
+     "clears": true,
+     "margin_in_sd": 20.46591755853142
+    }
+   },
+   "primary": "floor_sd_PRIMARY",
+   "clears_floor": true,
+   "readings_agree": true,
+   "disagreement_note": null,
+   "floor_contaminated_doc61_SS15_5": false,
+   "contamination_rule": "doc 61 SS15.5: if a floor RISES TO MEET ITS ARM the cell is reported as floor-contaminated with BOTH numbers and IS NOT READ. Operationalised here, transparently, as floor_mean >= 0.65 (the floor itself reaches the binding bar) OR arm_mean - floor_mean < 0.06 (the separation is inside the registered resolution). At 408 parameters against 528 items this is A LIVE RISK AND NOT A FORMALITY.",
+   "floor_construction": "doc 61 SS15.1: the committed S-shuffle (`exp69_run.relabel_shuffle_q`, imported unchanged) -- bearer designation reassigned PER PAIR, independently of the features -- same items, same splits, same 5 seeds, run under the IDENTICAL ARM PROCEDURE. **THE INIT IS PART OF THE PROCEDURE, so each cell carries its OWN floor** (doc 58 SS14's argument, inherited: a floor measured under one optimisation procedure does not bound what another can achieve on severed labels)."
+  },
+  "A3-T2-uniform": {
+   "arm_mean": 0.6266666666666667,
+   "floor_mean": 0.5120000000000001,
+   "delta": 0.11466666666666658,
+   "readings": {
+    "floor_sd_PRIMARY": {
+     "sd": 0.03132269322888936,
+     "bar": 0.5746453864577789,
+     "clears": true,
+     "margin_in_sd": 3.660817600477213
+    },
+    "arm_sd": {
+     "sd": 0.03696845502136473,
+     "bar": 0.5859369100427296,
+     "clears": true,
+     "margin_in_sd": 3.1017435432559646
+    },
+    "pooled_sd": {
+     "sd": 0.03426206194742063,
+     "bar": 0.5805241238948414,
+     "clears": true,
+     "margin_in_sd": 3.3467532351858087
+    }
+   },
+   "primary": "floor_sd_PRIMARY",
+   "clears_floor": true,
+   "readings_agree": true,
+   "disagreement_note": null,
+   "floor_contaminated_doc61_SS15_5": false,
+   "contamination_rule": "doc 61 SS15.5: if a floor RISES TO MEET ITS ARM the cell is reported as floor-contaminated with BOTH numbers and IS NOT READ. Operationalised here, transparently, as floor_mean >= 0.65 (the floor itself reaches the binding bar) OR arm_mean - floor_mean < 0.06 (the separation is inside the registered resolution). At 408 parameters against 528 items this is A LIVE RISK AND NOT A FORMALITY.",
+   "floor_construction": "doc 61 SS15.1: the committed S-shuffle (`exp69_run.relabel_shuffle_q`, imported unchanged) -- bearer designation reassigned PER PAIR, independently of the features -- same items, same splits, same 5 seeds, run under the IDENTICAL ARM PROCEDURE. **THE INIT IS PART OF THE PROCEDURE, so each cell carries its OWN floor** (doc 58 SS14's argument, inherited: a floor measured under one optimisation procedure does not bound what another can achieve on severed labels)."
+  },
+  "A3-T2-identity": {
+   "arm_mean": 0.7246666666666666,
+   "floor_mean": 0.49066666666666664,
+   "delta": 0.23399999999999993,
+   "readings": {
+    "floor_sd_PRIMARY": {
+     "sd": 0.025429641497014207,
+     "bar": 0.541525949660695,
+     "clears": true,
+     "margin_in_sd": 9.201859964383484
+    },
+    "arm_sd": {
+     "sd": 0.03990265933772111,
+     "bar": 0.5704719853421089,
+     "clears": true,
+     "margin_in_sd": 5.864270800086578
+    },
+    "pooled_sd": {
+     "sd": 0.033458099833141214,
+     "bar": 0.5575828663329491,
+     "clears": true,
+     "margin_in_sd": 6.993822158669518
+    }
+   },
+   "primary": "floor_sd_PRIMARY",
+   "clears_floor": true,
+   "readings_agree": true,
+   "disagreement_note": null,
+   "floor_contaminated_doc61_SS15_5": false,
+   "contamination_rule": "doc 61 SS15.5: if a floor RISES TO MEET ITS ARM the cell is reported as floor-contaminated with BOTH numbers and IS NOT READ. Operationalised here, transparently, as floor_mean >= 0.65 (the floor itself reaches the binding bar) OR arm_mean - floor_mean < 0.06 (the separation is inside the registered resolution). At 408 parameters against 528 items this is A LIVE RISK AND NOT A FORMALITY.",
+   "floor_construction": "doc 61 SS15.1: the committed S-shuffle (`exp69_run.relabel_shuffle_q`, imported unchanged) -- bearer designation reassigned PER PAIR, independently of the features -- same items, same splits, same 5 seeds, run under the IDENTICAL ARM PROCEDURE. **THE INIT IS PART OF THE PROCEDURE, so each cell carries its OWN floor** (doc 58 SS14's argument, inherited: a floor measured under one optimisation procedure does not bound what another can achieve on severed labels)."
+  },
+  "A4-T1-uniform": null,
+  "A4-T1-identity": null,
+  "A4-T2-uniform": null,
+  "A4-T2-identity": null
+ },
+ "construction": "the committed S-shuffle (`exp69_run.relabel_shuffle_q`, imported unchanged), bearer designation reassigned PER PAIR independently of the features, same items, same splits, same 5 seeds, run under the IDENTICAL ARM PROCEDURE. THE INIT IS PART OF THE PROCEDURE, so each cell carries its OWN floor (doc 61 SS15.1).",
+ "rule3_note": "separate file because stage 2 may run later than stage 1 and Rule 3 forbids overwriting (doc 61 SS16.5)",
+ "wall_time_sec": 0.3821539878845215
+}

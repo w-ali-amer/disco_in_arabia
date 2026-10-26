@@ -1,0 +1,296 @@
+{
+ "doc": "132 (exp132)",
+ "git_head": "04a523c86023c9be662e46dbf3b477e1a5094d7a",
+ "src_sha256": "793e02a6baa33f3294d70e3fd0e75afe3d49520e1f6e93881e96124967f8c87d",
+ "runner_sha256": "beef211aecd5d175c40665242aa2c54aa4e9b299d56d2199fccc42e4a9547067",
+ "gates": {
+  "G_CAL": true,
+  "G_SYM3": true,
+  "G_COVER_small": true,
+  "G_EVAL_K3": true,
+  "G_COVER_K4": true,
+  "G_EVAL_K4": true,
+  "G_BRACKET": true
+ },
+ "calibrations": [
+  {
+   "K": 2,
+   "C": 2,
+   "M": 2,
+   "mode": 0,
+   "T": 4,
+   "value": 1.0,
+   "argmax": [
+    2,
+    1
+   ],
+   "N": 2,
+   "L": 4,
+   "count": 12,
+   "count_expected": 12,
+   "G_COVER": true,
+   "known": 1.0,
+   "ok": true
+  },
+  {
+   "K": 2,
+   "C": 2,
+   "M": 4,
+   "mode": 0,
+   "T": 4,
+   "value": 1.0,
+   "argmax": [
+    0,
+    0,
+    1,
+    2
+   ],
+   "N": 2,
+   "L": 4,
+   "count": 60,
+   "count_expected": 60,
+   "G_COVER": true,
+   "known": 1.0,
+   "ok": true
+  },
+  {
+   "K": 2,
+   "C": 3,
+   "M": 2,
+   "mode": 0,
+   "T": 10,
+   "value": 0.8333333333333334,
+   "argmax": [
+    4,
+    1
+   ],
+   "N": 6,
+   "L": 8,
+   "count": 32,
+   "count_expected": 32,
+   "G_COVER": true,
+   "known": 0.8333333333333333,
+   "ok": true
+  },
+  {
+   "K": 2,
+   "C": 3,
+   "M": 4,
+   "mode": 0,
+   "T": 12,
+   "value": 1.0,
+   "argmax": [
+    0,
+    1,
+    2,
+    4
+   ],
+   "N": 6,
+   "L": 8,
+   "count": 480,
+   "count_expected": 480,
+   "G_COVER": true,
+   "known": 1.0,
+   "ok": true
+  },
+  {
+   "K": 2,
+   "C": 4,
+   "M": 2,
+   "mode": 0,
+   "T": 20,
+   "value": 0.8333333333333334,
+   "argmax": [
+    12,
+    3
+   ],
+   "N": 12,
+   "L": 16,
+   "count": 80,
+   "count_expected": 80,
+   "G_COVER": true,
+   "known": 0.8333333333333333,
+   "ok": true
+  },
+  {
+   "K": 2,
+   "C": 4,
+   "M": 4,
+   "mode": 0,
+   "T": 24,
+   "value": 1.0,
+   "argmax": [
+    8,
+    1,
+    2,
+    4
+   ],
+   "N": 12,
+   "L": 16,
+   "count": 4080,
+   "count_expected": 4080,
+   "G_COVER": true,
+   "known": 1.0,
+   "ok": true
+  },
+  {
+   "K": 2,
+   "C": 5,
+   "M": 2,
+   "mode": 0,
+   "T": 32,
+   "value": 0.8,
+   "argmax": [
+    24,
+    3
+   ],
+   "N": 20,
+   "L": 32,
+   "count": 192,
+   "count_expected": 192,
+   "G_COVER": true,
+   "known": 0.8,
+   "ok": true
+  },
+  {
+   "K": 2,
+   "C": 5,
+   "M": 4,
+   "mode": 0,
+   "T": 40,
+   "value": 1.0,
+   "argmax": [
+    24,
+    3,
+    13,
+    22
+   ],
+   "N": 20,
+   "L": 32,
+   "count": 35904,
+   "count_expected": 35904,
+   "G_COVER": true,
+   "known": 1.0,
+   "ok": true
+  },
+  {
+   "K": 2,
+   "C": 6,
+   "M": 2,
+   "mode": 0,
+   "T": 48,
+   "value": 0.8,
+   "argmax": [
+    56,
+    7
+   ],
+   "N": 30,
+   "L": 64,
+   "count": 448,
+   "count_expected": 448,
+   "G_COVER": true,
+   "known": 0.8,
+   "ok": true
+  },
+  {
+   "K": 2,
+   "C": 6,
+   "M": 4,
+   "mode": 0,
+   "T": 60,
+   "value": 1.0,
+   "argmax": [
+    56,
+    11,
+    21,
+    38
+   ],
+   "N": 30,
+   "L": 64,
+   "count": 320320,
+   "count_expected": 320320,
+   "G_COVER": true,
+   "known": 1.0,
+   "ok": true
+  },
+  {
+   "K": 3,
+   "C": 6,
+   "M": 4,
+   "mode": 0,
+   "T": 260,
+   "value": 0.7222222222222222,
+   "argmax": [
+    594,
+    16,
+    23,
+    459
+   ],
+   "N": 120,
+   "L": 729,
+   "count": 1815409260,
+   "count_expected": 1815409260,
+   "G_COVER": true,
+   "known": 0.7222222222222222,
+   "ok": true
+  }
+ ],
+ "k3_unreduced": {
+  "K": 3,
+  "C": 6,
+  "M": 4,
+  "mode": 1,
+  "T": 260,
+  "value": 0.7222222222222222,
+  "argmax": [
+   14,
+   25,
+   378,
+   675
+  ],
+  "N": 120,
+  "L": 729,
+  "count": 11864996235,
+  "count_expected": 11864996235,
+  "G_COVER": true
+ },
+ "k3_py_value": 0.7222222222222222,
+ "k4_pilot": {
+  "batch_s": 15.641468048095703,
+  "jobs": 672,
+  "projected_h": 0.32441563359013315
+ },
+ "k4": {
+  "K": 4,
+  "C": 6,
+  "M": 4,
+  "mode": 0,
+  "T": 812,
+  "value": 0.5638888888888889,
+  "argmax": [
+   3664,
+   185,
+   1831,
+   2510
+  ],
+  "N": 360,
+  "L": 4096,
+  "count": 962777432064,
+  "count_expected": 962777432064,
+  "G_COVER": true
+ },
+ "k4_wall_s": 1667.6634340286255,
+ "k4_py_value": 0.5638888888888889,
+ "all_gates_pass": true,
+ "reading": {
+  "T": 812,
+  "V": 0.5638888888888889,
+  "multi_referent_2q": "TRUE",
+  "margin_vs_quantum_LB": 0.06754064663925652,
+  "max_margin_vs_quantum_UB": 0.09690304950409367,
+  "strict_advantage_certified": true,
+  "two_bits_beat_two_qubits": false,
+  "prediction_T812": true
+ },
+ "wall_s": 1680.3475799560547
+}

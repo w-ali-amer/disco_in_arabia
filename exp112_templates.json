@@ -1,0 +1,212 @@
+{
+ "doc": "112 (A1) templates FROZEN after reviewer-as-judge review (doc 112 §7)",
+ "frames": [
+  {
+   "id": "F1_clocks",
+   "B": {
+    "AR-DEFL": "ساعات الحائط",
+    "AR-AGREE": "الرجال",
+    "AR-SAME": "الفتاة",
+    "EN-SAME": "the girl",
+    "EN-DEFL": "the wall clocks"
+   },
+   "A": {
+    "AR": "المرأة",
+    "EN": "the woman"
+   },
+   "intro": {
+    "AR": "كانت {A} و{B} في الغرفة طوال الليل.",
+    "EN": "{A} and {B} were in the room all night."
+   },
+   "slot1": {
+    "AR": [
+     "توقفت فجأة.",
+     "تأخرت قليلاً."
+    ],
+    "EN": [
+     "Suddenly {P} stopped.",
+     "{P} was a little late."
+    ]
+   },
+   "slot2": {
+    "AR": [
+     "وفي الصباح عادت تعمل من جديد.",
+     "وفي الصباح سقطت على الأرض."
+    ],
+    "EN": [
+     "In the morning {P} started working again.",
+     "In the morning {P} fell to the floor."
+    ]
+   }
+  },
+  {
+   "id": "F2_cars",
+   "B": {
+    "AR-DEFL": "السيارات",
+    "AR-AGREE": "الرجال",
+    "AR-SAME": "الفتاة",
+    "EN-SAME": "the girl",
+    "EN-DEFL": "the cars"
+   },
+   "A": {
+    "AR": "المرأة",
+    "EN": "the woman"
+   },
+   "intro": {
+    "AR": "كانت {A} و{B} في الشارع عند الإشارة.",
+    "EN": "{A} and {B} were in the street at the traffic light."
+   },
+   "slot1": {
+    "AR": [
+     "انطلقت مسرعة.",
+     "بقيت واقفة في مكانها."
+    ],
+    "EN": [
+     "{P} sped off.",
+     "{P} stayed standing where {P} was."
+    ]
+   },
+   "slot2": {
+    "AR": [
+     "ثم وصلت أولاً إلى نهاية الشارع.",
+     "ثم اصطدمت بالجدار."
+    ],
+    "EN": [
+     "Then {P} reached the end of the street first.",
+     "Then {P} hit the wall."
+    ]
+   }
+  },
+  {
+   "id": "F3_ships",
+   "B": {
+    "AR-DEFL": "السفن",
+    "AR-AGREE": "الرجال",
+    "AR-SAME": "الفتاة",
+    "EN-SAME": "the girl",
+    "EN-DEFL": "the ships"
+   },
+   "A": {
+    "AR": "المرأة",
+    "EN": "the woman"
+   },
+   "intro": {
+    "AR": "كانت {A} و{B} في الميناء قبل العاصفة.",
+    "EN": "{A} and {B} were in the harbour before the storm."
+   },
+   "slot1": {
+    "AR": [
+     "غادرت الميناء مبكراً.",
+     "انتظرت حتى هدأ البحر."
+    ],
+    "EN": [
+     "{P} left the harbour early.",
+     "{P} waited until the sea calmed."
+    ]
+   },
+   "slot2": {
+    "AR": [
+     "ثم عادت سالمة في المساء.",
+     "ثم غرقت قرب الشاطئ."
+    ],
+    "EN": [
+     "Then {P} came back safely in the evening.",
+     "Then {P} sank near the shore."
+    ]
+   }
+  },
+  {
+   "id": "F4_horses",
+   "B": {
+    "AR-DEFL": "الخيول",
+    "AR-AGREE": "الرجال",
+    "AR-SAME": "الفتاة",
+    "EN-SAME": "the girl",
+    "EN-DEFL": "the horses"
+   },
+   "A": {
+    "AR": "المرأة",
+    "EN": "the woman"
+   },
+   "intro": {
+    "AR": "كانت {A} و{B} في الميدان صباح السباق.",
+    "EN": "{A} and {B} were in the field on the morning of the race."
+   },
+   "slot1": {
+    "AR": [
+     "تعبت بسرعة.",
+     "ركضت بكل قوتها."
+    ],
+    "EN": [
+     "{P} got tired quickly.",
+     "{P} ran with all {PP} strength."
+    ]
+   },
+   "slot2": {
+    "AR": [
+     "وفي النهاية فازت بالسباق.",
+     "وفي النهاية سقطت قبل خط النهاية."
+    ],
+    "EN": [
+     "In the end {P} won the race.",
+     "In the end {P} fell before the finish line."
+    ]
+   }
+  }
+ ],
+ "pronouns": {
+  "EN-SAME": {
+   "P": "she",
+   "PP": "her"
+  },
+  "EN-DEFL": {
+   "P": "she",
+   "PP": "her"
+  }
+ },
+ "question": {
+  "AR": [
+   "سؤال: أيهما المقصود في الجملة الثانية، وأيهما المقصود في الجملة الثالثة؟ الجواب: في الثانية {X}، وفي الثالثة {Y}.",
+   "سؤال: إلى أيهما يعود الفعل في الجملة الثانية، وإلى أيهما يعود في الجملة الثالثة؟ الجواب: في الثانية {X}، وفي الثالثة {Y}.",
+   "سؤال: أيهما فعل ذلك في الجملة الثانية، وأيهما فعله في الجملة الثالثة؟ الجواب: {X} في الثانية، و{Y} في الثالثة.",
+   "سؤال: حدد أيهما المقصود في الجملتين الثانية والثالثة. الجواب: {X} ثم {Y}.",
+   "سؤال: أيهما المقصودة في الجملة الثانية، وأيهما في الجملة الثالثة؟ الجواب: {X}، ثم {Y}."
+  ],
+  "EN": [
+   "Question: which of the two is meant in the second sentence, and which in the third? Answer: in the second {X}, in the third {Y}.",
+   "Question: which of the two does the second sentence refer to, and which does the third refer to? Answer: second {X}, third {Y}.",
+   "Question: which of the two did it in the second sentence, and which in the third? Answer: {X}, then {Y}.",
+   "Question: identify which of the two is meant in the second and third sentences. Answer: {X} and then {Y}.",
+   "Question: which of the two is it in the second sentence, and which in the third? Answer: {X}, then {Y}."
+  ]
+ },
+ "mapping": {
+  "contents": {
+   "X1": "R1 | slot1 word index 0 (special)",
+   "X2": "R1 | slot1 word index 1 (alternate)",
+   "Y1": "R2 | slot2 word index 0",
+   "Y2": "R2 | slot2 word index 1"
+  },
+  "contexts": {
+   "c1": [
+    0,
+    0
+   ],
+   "c2": [
+    1,
+    0
+   ],
+   "c3": [
+    1,
+    1
+   ],
+   "c4": [
+    0,
+    1
+   ]
+  },
+  "order": "X1-Y1-X2-Y2 (exp109)",
+  "outcome": "+1 = referent A (المرأة / the woman), -1 = B",
+  "table": "t[a][b]: a = R1 referent (0=A,1=B), b = R2 referent (0=A,1=B)"
+ }
+}

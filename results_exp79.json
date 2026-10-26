@@ -1,0 +1,460 @@
+{
+ "component": "results_exp79 -- channel composition (doc 71)",
+ "written_by": "exp79_aggregate.py (sole writer)",
+ "registration": "qnlp_private_docs/71_exp79_channel_composition.md",
+ "smoke_gate_passed": true,
+ "drift_anchor_present": true,
+ "missing_units": {},
+ "bar_provenance": {
+  "chance_level": 0.5,
+  "reason": "balanced yes/no task (exp41r)",
+  "ceiling_comparator": "B1 (structure-matched classical baseline, ~0.50 union)",
+  "bars_are_differential": "vs B1 and vs A2; NO 0.65 bar (doc 70 B1 correction)",
+  "significance_primary": "seed-level paired t, df=4, one-sided p<0.05 (doc 70 B2 correction)",
+  "significance_descriptive": "item-level sign-flip permutation (reported, not decision-making)",
+  "doc_70_b1_b2_b3": true
+ },
+ "best_channel_arm": "C-DISCARD",
+ "channel_arms_seed_mean_union_acc": {
+  "C-DISCARD": 0.5173,
+  "C-RESET": 0.5099
+ },
+ "A2_seed_mean_union_acc": 0.5167,
+ "B1_seed_mean_union_acc": 0.4999,
+ "significance": {
+  "primary_test": "seed-level paired t (doc 70 B2, df=4, one-sided)",
+  "best_vs_B1": {
+   "t": 2.9831,
+   "p": 0.02031,
+   "n": 5,
+   "mean_diff": 0.0175,
+   "se": 0.0059,
+   "df": 4
+  },
+  "best_vs_A2": {
+   "t": 0.0867,
+   "p": 0.46755,
+   "n": 5,
+   "mean_diff": 0.0007,
+   "se": 0.0077,
+   "df": 4
+  },
+  "descriptive_sign_flip_best_vs_B1": {
+   "p": 0.023,
+   "observed_delta": 0.0175,
+   "n_items": 1500,
+   "n_perm": 1000,
+   "note": "DESCRIPTIVE ONLY (doc 70 B2): primary is seed-level t"
+  },
+  "descriptive_sign_flip_best_vs_A2": {
+   "p": 0.4685,
+   "observed_delta": 0.0007,
+   "n_items": 1500,
+   "n_perm": 1000,
+   "note": "DESCRIPTIVE ONLY (doc 70 B2): primary is seed-level t"
+  }
+ },
+ "content_earned_c1": {
+  "content_earned": true,
+  "best_arm_seed_mean_union_acc": 0.5173,
+  "c1_95th_percentile": 0.5129,
+  "n_permutations": 1000,
+  "note": "C1 shards from exp42r A2; same permutation distribution applied to best channel arm (pre-registered)"
+ },
+ "bars": {
+  "tier_q_channel": {
+   "value": true,
+   "legs": {
+    "t_vs_B1_pass": true,
+    "content_earned": true
+   },
+   "definition": "best channel arm beats B1 (t p<0.05) AND content_earned (C1 dial-swap 95th pct)"
+  },
+  "channel_beats_unitary": {
+   "value": false,
+   "legs": {
+    "t_vs_A2_pass": false,
+    "content_earned": true
+   },
+   "definition": "best channel arm beats A2 (t p<0.05) AND content_earned"
+  },
+  "channel_preserves_purity": {
+   "value": false,
+   "best_arm": "C-DISCARD",
+   "bar": 0.75,
+   "definition": "mean queried-pair purity > 0.75 at T=5-10"
+  }
+ },
+ "purity_by_arm": {
+  "C-DISCARD": {
+   "arm": "C-DISCARD",
+   "n_rows": 7500,
+   "purity_bar": 0.75,
+   "T_range_for_gate": [
+    5,
+    10
+   ],
+   "n_items_in_T_range": 5000,
+   "mean_purity_in_T_range": 0.5541,
+   "all_above_bar": false,
+   "channel_preserves_purity": false,
+   "per_T": {
+    "5": {
+     "n": 280,
+     "mean": 0.594,
+     "min": 0.3362,
+     "max": 0.9282
+    },
+    "6": {
+     "n": 440,
+     "mean": 0.5694,
+     "min": 0.3152,
+     "max": 0.9007
+    },
+    "7": {
+     "n": 510,
+     "mean": 0.5624,
+     "min": 0.2764,
+     "max": 0.9427
+    },
+    "8": {
+     "n": 660,
+     "mean": 0.562,
+     "min": 0.2969,
+     "max": 0.9699
+    },
+    "9": {
+     "n": 1380,
+     "mean": 0.5482,
+     "min": 0.2584,
+     "max": 0.9698
+    },
+    "10": {
+     "n": 1730,
+     "mean": 0.5429,
+     "min": 0.2817,
+     "max": 0.9661
+    },
+    "12": {
+     "n": 200,
+     "mean": 0.4476,
+     "min": 0.2964,
+     "max": 0.7131
+    },
+    "13": {
+     "n": 300,
+     "mean": 0.4501,
+     "min": 0.2579,
+     "max": 0.7476
+    },
+    "14": {
+     "n": 320,
+     "mean": 0.4339,
+     "min": 0.291,
+     "max": 0.7781
+    },
+    "15": {
+     "n": 240,
+     "mean": 0.4236,
+     "min": 0.278,
+     "max": 0.8165
+    },
+    "16": {
+     "n": 250,
+     "mean": 0.4069,
+     "min": 0.2753,
+     "max": 0.6228
+    },
+    "17": {
+     "n": 220,
+     "mean": 0.4104,
+     "min": 0.2838,
+     "max": 0.6386
+    },
+    "18": {
+     "n": 400,
+     "mean": 0.388,
+     "min": 0.2738,
+     "max": 0.6751
+    },
+    "19": {
+     "n": 330,
+     "mean": 0.4103,
+     "min": 0.2771,
+     "max": 0.7003
+    },
+    "20": {
+     "n": 240,
+     "mean": 0.3832,
+     "min": 0.2772,
+     "max": 0.6241
+    }
+   },
+   "bar_provenance": "doc 71 SS1: registered prediction purity > 0.75 at T=5-10 where A2 measured ~0.50-0.68"
+  },
+  "C-RESET": {
+   "arm": "C-RESET",
+   "n_rows": 7500,
+   "purity_bar": 0.75,
+   "T_range_for_gate": [
+    5,
+    10
+   ],
+   "n_items_in_T_range": 5000,
+   "mean_purity_in_T_range": 0.654,
+   "all_above_bar": false,
+   "channel_preserves_purity": false,
+   "per_T": {
+    "5": {
+     "n": 280,
+     "mean": 0.6861,
+     "min": 0.3238,
+     "max": 0.9392
+    },
+    "6": {
+     "n": 440,
+     "mean": 0.6738,
+     "min": 0.2984,
+     "max": 0.9718
+    },
+    "7": {
+     "n": 510,
+     "mean": 0.6527,
+     "min": 0.268,
+     "max": 0.9657
+    },
+    "8": {
+     "n": 660,
+     "mean": 0.6556,
+     "min": 0.2845,
+     "max": 0.9673
+    },
+    "9": {
+     "n": 1380,
+     "mean": 0.6464,
+     "min": 0.2709,
+     "max": 0.9669
+    },
+    "10": {
+     "n": 1730,
+     "mean": 0.6495,
+     "min": 0.2777,
+     "max": 0.9794
+    },
+    "12": {
+     "n": 200,
+     "mean": 0.5447,
+     "min": 0.2694,
+     "max": 0.8731
+    },
+    "13": {
+     "n": 300,
+     "mean": 0.5291,
+     "min": 0.2854,
+     "max": 0.8587
+    },
+    "14": {
+     "n": 320,
+     "mean": 0.5393,
+     "min": 0.2605,
+     "max": 0.9438
+    },
+    "15": {
+     "n": 240,
+     "mean": 0.5165,
+     "min": 0.2765,
+     "max": 0.8982
+    },
+    "16": {
+     "n": 250,
+     "mean": 0.5014,
+     "min": 0.2641,
+     "max": 0.8448
+    },
+    "17": {
+     "n": 220,
+     "mean": 0.4923,
+     "min": 0.2878,
+     "max": 0.8403
+    },
+    "18": {
+     "n": 400,
+     "mean": 0.473,
+     "min": 0.2544,
+     "max": 0.8911
+    },
+    "19": {
+     "n": 330,
+     "mean": 0.4915,
+     "min": 0.2581,
+     "max": 0.8365
+    },
+    "20": {
+     "n": 240,
+     "mean": 0.4797,
+     "min": 0.2666,
+     "max": 0.8498
+    }
+   },
+   "bar_provenance": "doc 71 SS1: registered prediction purity > 0.75 at T=5-10 where A2 measured ~0.50-0.68"
+  }
+ },
+ "floor": {
+  "arm": "C-FLOOR",
+  "units": 5,
+  "seed_accs": [
+   0.4927,
+   0.4993,
+   0.4787,
+   0.4933,
+   0.4947
+  ],
+  "seed_mean": 0.4917,
+  "admissibility_gate": {
+   "accuracy": 0.49173333333333336,
+   "n": 1500,
+   "sd": 0.0129,
+   "deviation_from_chance": 0.008266666666666644,
+   "within_2sd": true,
+   "admissible": true,
+   "t_prediction_bound_95": {
+    "lo": 0.4843,
+    "hi": 0.4991,
+    "alpha": 0.05,
+    "t_crit": 2.132
+   }
+  }
+ },
+ "power": {
+  "mde_best_vs_B1": {
+   "paired_null_se": 0.00586,
+   "observed_mean_diff": 0.01747,
+   "mde_note": "Paired null SD (SE of differences) = 0.0059; observed mean diff = 0.0175; to achieve p<0.05 (one-sided, df=4) with SE=0.0059 requires effect >= ~0.0117"
+  },
+  "mde_best_vs_A2": {
+   "paired_null_se": 0.00769,
+   "observed_mean_diff": 0.00067,
+   "mde_note": "Paired null SD (SE of differences) = 0.0077; observed mean diff = 0.0007; to achieve p<0.05 (one-sided, df=4) with SE=0.0077 requires effect >= ~0.0154"
+  },
+  "n_seeds": 5,
+  "n_union_items": 1500
+ },
+ "near_miss_symmetry": {
+  "owes_confirm": true,
+  "owes_confirm_vs_B1": false,
+  "owes_confirm_vs_A2": false,
+  "confirm_scope": "winning arm + B1 + A2 + A1 (doc 71 SS3, doc 70 rule 5), generator seed 43000, confirm verdict on CONFIRM DRAW ALONE",
+  "rule": "doc 70 rule 2: negative missing bar by < 1 test item owes same confirm as a positive"
+ },
+ "per_arm_detail": {
+  "C-DISCARD": {
+   "n_units": 5,
+   "seed_union_accs": [
+    0.512,
+    0.5347,
+    0.5067,
+    0.5053,
+    0.528
+   ],
+   "seed_val_accs": [
+    0.562,
+    0.572,
+    0.546,
+    0.59,
+    0.588
+   ],
+   "seed_wall_times": [
+    905.5,
+    925.7,
+    817.3,
+    814.8,
+    762.5
+   ]
+  },
+  "C-RESET": {
+   "n_units": 5,
+   "seed_union_accs": [
+    0.5167,
+    0.5067,
+    0.4993,
+    0.5073,
+    0.5193
+   ],
+   "seed_val_accs": [
+    0.574,
+    0.55,
+    0.584,
+    0.542,
+    0.58
+   ],
+   "seed_wall_times": [
+    49647.0,
+    28591.7,
+    36402.2,
+    36499.7,
+    37211.8
+   ]
+  },
+  "C-FLOOR": {
+   "n_units": 5,
+   "seed_union_accs": [
+    0.4927,
+    0.4993,
+    0.4787,
+    0.4933,
+    0.4947
+   ],
+   "seed_val_accs": [
+    0.562,
+    0.57,
+    0.532,
+    0.544,
+    0.532
+   ],
+   "seed_wall_times": [
+    893.2,
+    849.9,
+    810.9,
+    875.6,
+    620.9
+   ]
+  }
+ },
+ "A2_detail": {
+  "n_units": 5,
+  "seed_union_accs": [
+   0.5327,
+   0.5227,
+   0.4873,
+   0.5193,
+   0.5213
+  ]
+ },
+ "B1_detail": {
+  "n_units": 5,
+  "seed_union_accs": [
+   0.5033,
+   0.498,
+   0.496,
+   0.4993,
+   0.5027
+  ]
+ },
+ "third_outcomes": {
+  "purity_up_accuracy_at_chance": "channel_preserves_purity TRUE but tier_q_channel FALSE -- bottleneck is not mixedness alone (doc 71 SS3)",
+  "accuracy_up_purity_unchanged": "tier_q_channel TRUE but channel_preserves_purity FALSE -- mechanism story is wrong even if engineering works",
+  "reading": "both are findings, neither is FALSE-by-collapse"
+ },
+ "doc_70_compliance": {
+  "B1_bar_provenance_block": true,
+  "B2_seed_level_t_primary": true,
+  "B3_floor_admissibility_gate": true,
+  "rule2_near_miss_symmetry": true,
+  "rule3_seed_level_primary": true,
+  "rule4_power_at_bar_mde": true,
+  "rule5_confirm_scope_includes_A1": true,
+  "rule6_self_emitting_gate_artifacts": "in exp79_run.py smoke battery",
+  "rule7_floor_t_prediction_bound": "floor_admissibility_gate above"
+ },
+ "when": "2026-09-09T19:39:02Z"
+}

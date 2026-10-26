@@ -1,0 +1,919 @@
+{
+ "experiment": "exp51",
+ "spec": "qnlp_private_docs/35_exp51_verb_twin_rung.md (commit 6101ffe, FROZEN)",
+ "question": "does any arm learn a rung that REQUIRES verb identity?",
+ "platform": "macOS-26.5.2-arm64-arm-64bit",
+ "python": "3.12.13",
+ "torch": "2.13.0",
+ "rung": "VT",
+ "dataset_sha256": "8aa71d1e286392ad96fe7a5f77dc8afb7998e5594b8abde67bbaef024e9d1064",
+ "embeddings_sha256": "00c1ecffcaf05b38df082f8a3cbed1d013bddb3e39bc00adf1c2513b4ea674ac",
+ "grid": [
+  {
+   "lr": 0.005,
+   "batch": 1
+  },
+  {
+   "lr": 0.005,
+   "batch": 8
+  },
+  {
+   "lr": 0.02,
+   "batch": 1
+  },
+  {
+   "lr": 0.02,
+   "batch": 8
+  }
+ ],
+ "n_seeds": 2,
+ "max_epochs": 60,
+ "gate": {
+  "train": 0.8,
+  "val": 0.7
+ },
+ "tied_sentinel": {
+  "n_pairs": 100,
+  "n_models": 5,
+  "max_statevector_delta": 0.0,
+  "delta_bar": 1e-12,
+  "frac_identical": 1.0,
+  "tied_accuracy": 0.5,
+  "tied_sentinel_ok": true
+ },
+ "init_audits_f3": {
+  "A1": {
+   "per_seed": [
+    0.76,
+    0.62
+   ],
+   "frac": 0.69,
+   "f3_bar": 0.6,
+   "f3_pass": false
+  },
+  "A2": {
+   "per_seed": [
+    0.49,
+    0.56
+   ],
+   "frac": 0.525,
+   "f3_bar": 0.6,
+   "f3_pass": true
+  },
+  "A3": {
+   "per_seed": [
+    0.51,
+    0.41
+   ],
+   "frac": 0.45999999999999996,
+   "f3_bar": 0.6,
+   "f3_pass": true
+  },
+  "B1": {
+   "per_seed": [
+    0.56,
+    0.57
+   ],
+   "frac": 0.565,
+   "f3_bar": 0.6,
+   "f3_pass": true
+  }
+ },
+ "memorisation_controls": {
+  "A1": {
+   "runs": [
+    {
+     "lr": 0.005,
+     "batch": 1,
+     "seed": 0,
+     "best_train_acc": 0.859375
+    },
+    {
+     "lr": 0.005,
+     "batch": 1,
+     "seed": 1,
+     "best_train_acc": 0.875
+    },
+    {
+     "lr": 0.005,
+     "batch": 8,
+     "seed": 0,
+     "best_train_acc": 0.75
+    },
+    {
+     "lr": 0.005,
+     "batch": 8,
+     "seed": 1,
+     "best_train_acc": 0.8125
+    },
+    {
+     "lr": 0.02,
+     "batch": 1,
+     "seed": 0,
+     "best_train_acc": 0.9375
+    },
+    {
+     "lr": 0.02,
+     "batch": 1,
+     "seed": 1,
+     "best_train_acc": 0.859375
+    },
+    {
+     "lr": 0.02,
+     "batch": 8,
+     "seed": 0,
+     "best_train_acc": 0.890625
+    },
+    {
+     "lr": 0.02,
+     "batch": 8,
+     "seed": 1,
+     "best_train_acc": 0.96875
+    }
+   ],
+   "best_train_acc": 0.96875,
+   "arm_trainable": true
+  },
+  "A2": {
+   "runs": [
+    {
+     "lr": 0.005,
+     "batch": 1,
+     "seed": 0,
+     "best_train_acc": 1.0
+    },
+    {
+     "lr": 0.005,
+     "batch": 1,
+     "seed": 1,
+     "best_train_acc": 1.0
+    },
+    {
+     "lr": 0.005,
+     "batch": 8,
+     "seed": 0,
+     "best_train_acc": 1.0
+    },
+    {
+     "lr": 0.005,
+     "batch": 8,
+     "seed": 1,
+     "best_train_acc": 1.0
+    },
+    {
+     "lr": 0.02,
+     "batch": 1,
+     "seed": 0,
+     "best_train_acc": 1.0
+    },
+    {
+     "lr": 0.02,
+     "batch": 1,
+     "seed": 1,
+     "best_train_acc": 1.0
+    },
+    {
+     "lr": 0.02,
+     "batch": 8,
+     "seed": 0,
+     "best_train_acc": 1.0
+    },
+    {
+     "lr": 0.02,
+     "batch": 8,
+     "seed": 1,
+     "best_train_acc": 1.0
+    }
+   ],
+   "best_train_acc": 1.0,
+   "arm_trainable": true
+  },
+  "A3": {
+   "runs": [
+    {
+     "lr": 0.005,
+     "batch": 1,
+     "seed": 0,
+     "best_train_acc": 1.0
+    },
+    {
+     "lr": 0.005,
+     "batch": 1,
+     "seed": 1,
+     "best_train_acc": 1.0
+    },
+    {
+     "lr": 0.005,
+     "batch": 8,
+     "seed": 0,
+     "best_train_acc": 1.0
+    },
+    {
+     "lr": 0.005,
+     "batch": 8,
+     "seed": 1,
+     "best_train_acc": 1.0
+    },
+    {
+     "lr": 0.02,
+     "batch": 1,
+     "seed": 0,
+     "best_train_acc": 1.0
+    },
+    {
+     "lr": 0.02,
+     "batch": 1,
+     "seed": 1,
+     "best_train_acc": 1.0
+    },
+    {
+     "lr": 0.02,
+     "batch": 8,
+     "seed": 0,
+     "best_train_acc": 1.0
+    },
+    {
+     "lr": 0.02,
+     "batch": 8,
+     "seed": 1,
+     "best_train_acc": 1.0
+    }
+   ],
+   "best_train_acc": 1.0,
+   "arm_trainable": true
+  },
+  "B1": {
+   "runs": [
+    {
+     "lr": 0.005,
+     "batch": 1,
+     "seed": 0,
+     "best_train_acc": 0.96875
+    },
+    {
+     "lr": 0.005,
+     "batch": 1,
+     "seed": 1,
+     "best_train_acc": 1.0
+    },
+    {
+     "lr": 0.005,
+     "batch": 8,
+     "seed": 0,
+     "best_train_acc": 0.9375
+    },
+    {
+     "lr": 0.005,
+     "batch": 8,
+     "seed": 1,
+     "best_train_acc": 0.984375
+    },
+    {
+     "lr": 0.02,
+     "batch": 1,
+     "seed": 0,
+     "best_train_acc": 0.890625
+    },
+    {
+     "lr": 0.02,
+     "batch": 1,
+     "seed": 1,
+     "best_train_acc": 0.78125
+    },
+    {
+     "lr": 0.02,
+     "batch": 8,
+     "seed": 0,
+     "best_train_acc": 0.984375
+    },
+    {
+     "lr": 0.02,
+     "batch": 8,
+     "seed": 1,
+     "best_train_acc": 1.0
+    }
+   ],
+   "best_train_acc": 1.0,
+   "arm_trainable": true
+  },
+  "T": {
+   "runs": [
+    {
+     "lr": 0.005,
+     "batch": 1,
+     "seed": 0,
+     "best_train_acc": 0.5
+    },
+    {
+     "lr": 0.005,
+     "batch": 1,
+     "seed": 1,
+     "best_train_acc": 0.5
+    },
+    {
+     "lr": 0.005,
+     "batch": 8,
+     "seed": 0,
+     "best_train_acc": 0.5
+    },
+    {
+     "lr": 0.005,
+     "batch": 8,
+     "seed": 1,
+     "best_train_acc": 0.5
+    },
+    {
+     "lr": 0.02,
+     "batch": 1,
+     "seed": 0,
+     "best_train_acc": 0.5
+    },
+    {
+     "lr": 0.02,
+     "batch": 1,
+     "seed": 1,
+     "best_train_acc": 0.5
+    },
+    {
+     "lr": 0.02,
+     "batch": 8,
+     "seed": 0,
+     "best_train_acc": 0.5
+    },
+    {
+     "lr": 0.02,
+     "batch": 8,
+     "seed": 1,
+     "best_train_acc": 0.5
+    }
+   ],
+   "best_train_acc": 0.5,
+   "arm_trainable": false
+  }
+ },
+ "per_arm": {
+  "A1": [
+   {
+    "arm": "A1",
+    "seed": 0,
+    "lr": 0.005,
+    "batch": 1,
+    "steps_taken": 72000,
+    "best_epoch": 30,
+    "val_acc": 0.6866666666666666,
+    "train_acc": 0.7041666666666667,
+    "test_acc": 0.7,
+    "gate_met": false
+   },
+   {
+    "arm": "A1",
+    "seed": 1,
+    "lr": 0.005,
+    "batch": 1,
+    "steps_taken": 72000,
+    "best_epoch": 59,
+    "val_acc": 0.66,
+    "train_acc": 0.6866666666666666,
+    "test_acc": 0.6733333333333333,
+    "gate_met": false
+   },
+   {
+    "arm": "A1",
+    "seed": 0,
+    "lr": 0.005,
+    "batch": 8,
+    "steps_taken": 9000,
+    "best_epoch": 26,
+    "val_acc": 0.6833333333333333,
+    "train_acc": 0.6775,
+    "test_acc": 0.6566666666666666,
+    "gate_met": false
+   },
+   {
+    "arm": "A1",
+    "seed": 1,
+    "lr": 0.005,
+    "batch": 8,
+    "steps_taken": 9000,
+    "best_epoch": 16,
+    "val_acc": 0.63,
+    "train_acc": 0.6833333333333333,
+    "test_acc": 0.67,
+    "gate_met": false
+   },
+   {
+    "arm": "A1",
+    "seed": 0,
+    "lr": 0.02,
+    "batch": 1,
+    "steps_taken": 72000,
+    "best_epoch": 42,
+    "val_acc": 0.7266666666666667,
+    "train_acc": 0.7216666666666667,
+    "test_acc": 0.67,
+    "gate_met": false
+   },
+   {
+    "arm": "A1",
+    "seed": 1,
+    "lr": 0.02,
+    "batch": 1,
+    "steps_taken": 72000,
+    "best_epoch": 47,
+    "val_acc": 0.72,
+    "train_acc": 0.6933333333333334,
+    "test_acc": 0.6466666666666666,
+    "gate_met": false
+   },
+   {
+    "arm": "A1",
+    "seed": 0,
+    "lr": 0.02,
+    "batch": 8,
+    "steps_taken": 9000,
+    "best_epoch": 6,
+    "val_acc": 0.67,
+    "train_acc": 0.66,
+    "test_acc": 0.6433333333333333,
+    "gate_met": false
+   },
+   {
+    "arm": "A1",
+    "seed": 1,
+    "lr": 0.02,
+    "batch": 8,
+    "steps_taken": 9000,
+    "best_epoch": 56,
+    "val_acc": 0.68,
+    "train_acc": 0.6908333333333333,
+    "test_acc": 0.64,
+    "gate_met": false
+   }
+  ],
+  "A2": [
+   {
+    "arm": "A2",
+    "seed": 0,
+    "lr": 0.005,
+    "batch": 1,
+    "steps_taken": 72000,
+    "best_epoch": 56,
+    "val_acc": 0.7333333333333333,
+    "train_acc": 0.75,
+    "test_acc": 0.6433333333333333,
+    "gate_met": false
+   },
+   {
+    "arm": "A2",
+    "seed": 1,
+    "lr": 0.005,
+    "batch": 1,
+    "steps_taken": 72000,
+    "best_epoch": 59,
+    "val_acc": 0.71,
+    "train_acc": 0.7658333333333334,
+    "test_acc": 0.6333333333333333,
+    "gate_met": false
+   },
+   {
+    "arm": "A2",
+    "seed": 0,
+    "lr": 0.005,
+    "batch": 8,
+    "steps_taken": 9000,
+    "best_epoch": 43,
+    "val_acc": 0.72,
+    "train_acc": 0.7533333333333333,
+    "test_acc": 0.67,
+    "gate_met": false
+   },
+   {
+    "arm": "A2",
+    "seed": 1,
+    "lr": 0.005,
+    "batch": 8,
+    "steps_taken": 9000,
+    "best_epoch": 4,
+    "val_acc": 0.6066666666666667,
+    "train_acc": 0.57,
+    "test_acc": 0.5133333333333333,
+    "gate_met": false
+   },
+   {
+    "arm": "A2",
+    "seed": 0,
+    "lr": 0.02,
+    "batch": 1,
+    "steps_taken": 72000,
+    "best_epoch": 38,
+    "val_acc": 0.62,
+    "train_acc": 0.6191666666666666,
+    "test_acc": 0.59,
+    "gate_met": false
+   },
+   {
+    "arm": "A2",
+    "seed": 1,
+    "lr": 0.02,
+    "batch": 1,
+    "steps_taken": 72000,
+    "best_epoch": 26,
+    "val_acc": 0.5933333333333334,
+    "train_acc": 0.6041666666666666,
+    "test_acc": 0.5633333333333334,
+    "gate_met": false
+   },
+   {
+    "arm": "A2",
+    "seed": 0,
+    "lr": 0.02,
+    "batch": 8,
+    "steps_taken": 9000,
+    "best_epoch": 18,
+    "val_acc": 0.7166666666666667,
+    "train_acc": 0.7558333333333334,
+    "test_acc": 0.68,
+    "gate_met": false
+   },
+   {
+    "arm": "A2",
+    "seed": 1,
+    "lr": 0.02,
+    "batch": 8,
+    "steps_taken": 9000,
+    "best_epoch": 29,
+    "val_acc": 0.7833333333333333,
+    "train_acc": 0.7741666666666667,
+    "test_acc": 0.7333333333333333,
+    "gate_met": false
+   }
+  ],
+  "A3": [
+   {
+    "arm": "A3",
+    "seed": 0,
+    "lr": 0.005,
+    "batch": 1,
+    "steps_taken": 72000,
+    "best_epoch": 30,
+    "val_acc": 0.72,
+    "train_acc": 0.7658333333333334,
+    "test_acc": 0.6733333333333333,
+    "gate_met": false
+   },
+   {
+    "arm": "A3",
+    "seed": 1,
+    "lr": 0.005,
+    "batch": 1,
+    "steps_taken": 72000,
+    "best_epoch": 50,
+    "val_acc": 0.71,
+    "train_acc": 0.7708333333333334,
+    "test_acc": 0.6666666666666666,
+    "gate_met": false
+   },
+   {
+    "arm": "A3",
+    "seed": 0,
+    "lr": 0.005,
+    "batch": 8,
+    "steps_taken": 9000,
+    "best_epoch": 56,
+    "val_acc": 0.6666666666666666,
+    "train_acc": 0.7566666666666667,
+    "test_acc": 0.6833333333333333,
+    "gate_met": false
+   },
+   {
+    "arm": "A3",
+    "seed": 1,
+    "lr": 0.005,
+    "batch": 8,
+    "steps_taken": 9000,
+    "best_epoch": 39,
+    "val_acc": 0.62,
+    "train_acc": 0.68,
+    "test_acc": 0.5266666666666666,
+    "gate_met": false
+   },
+   {
+    "arm": "A3",
+    "seed": 0,
+    "lr": 0.02,
+    "batch": 1,
+    "steps_taken": 72000,
+    "best_epoch": 26,
+    "val_acc": 0.6733333333333333,
+    "train_acc": 0.6391666666666667,
+    "test_acc": 0.6033333333333334,
+    "gate_met": false
+   },
+   {
+    "arm": "A3",
+    "seed": 1,
+    "lr": 0.02,
+    "batch": 1,
+    "steps_taken": 72000,
+    "best_epoch": 44,
+    "val_acc": 0.65,
+    "train_acc": 0.6183333333333333,
+    "test_acc": 0.6266666666666667,
+    "gate_met": false
+   },
+   {
+    "arm": "A3",
+    "seed": 0,
+    "lr": 0.02,
+    "batch": 8,
+    "steps_taken": 9000,
+    "best_epoch": 54,
+    "val_acc": 0.7633333333333333,
+    "train_acc": 0.77,
+    "test_acc": 0.7266666666666667,
+    "gate_met": false
+   },
+   {
+    "arm": "A3",
+    "seed": 1,
+    "lr": 0.02,
+    "batch": 8,
+    "steps_taken": 9000,
+    "best_epoch": 59,
+    "val_acc": 0.7033333333333334,
+    "train_acc": 0.8008333333333333,
+    "test_acc": 0.72,
+    "gate_met": true
+   }
+  ],
+  "B1": [
+   {
+    "arm": "B1",
+    "seed": 0,
+    "lr": 0.005,
+    "batch": 1,
+    "steps_taken": 72000,
+    "best_epoch": 2,
+    "val_acc": 0.5733333333333334,
+    "train_acc": 0.5766666666666667,
+    "test_acc": 0.58,
+    "gate_met": false
+   },
+   {
+    "arm": "B1",
+    "seed": 1,
+    "lr": 0.005,
+    "batch": 1,
+    "steps_taken": 72000,
+    "best_epoch": 1,
+    "val_acc": 0.5933333333333334,
+    "train_acc": 0.555,
+    "test_acc": 0.5166666666666667,
+    "gate_met": false
+   },
+   {
+    "arm": "B1",
+    "seed": 0,
+    "lr": 0.005,
+    "batch": 8,
+    "steps_taken": 9000,
+    "best_epoch": 8,
+    "val_acc": 0.63,
+    "train_acc": 0.6125,
+    "test_acc": 0.5566666666666666,
+    "gate_met": false
+   },
+   {
+    "arm": "B1",
+    "seed": 1,
+    "lr": 0.005,
+    "batch": 8,
+    "steps_taken": 9000,
+    "best_epoch": 13,
+    "val_acc": 0.7166666666666667,
+    "train_acc": 0.6875,
+    "test_acc": 0.65,
+    "gate_met": false
+   },
+   {
+    "arm": "B1",
+    "seed": 0,
+    "lr": 0.02,
+    "batch": 1,
+    "steps_taken": 72000,
+    "best_epoch": 3,
+    "val_acc": 0.56,
+    "train_acc": 0.5375,
+    "test_acc": 0.5333333333333333,
+    "gate_met": false
+   },
+   {
+    "arm": "B1",
+    "seed": 1,
+    "lr": 0.02,
+    "batch": 1,
+    "steps_taken": 72000,
+    "best_epoch": 4,
+    "val_acc": 0.5466666666666666,
+    "train_acc": 0.5358333333333334,
+    "test_acc": 0.5433333333333333,
+    "gate_met": false
+   },
+   {
+    "arm": "B1",
+    "seed": 0,
+    "lr": 0.02,
+    "batch": 8,
+    "steps_taken": 9000,
+    "best_epoch": 49,
+    "val_acc": 0.5466666666666666,
+    "train_acc": 0.5283333333333333,
+    "test_acc": 0.51,
+    "gate_met": false
+   },
+   {
+    "arm": "B1",
+    "seed": 1,
+    "lr": 0.02,
+    "batch": 8,
+    "steps_taken": 9000,
+    "best_epoch": 14,
+    "val_acc": 0.5466666666666666,
+    "train_acc": 0.5308333333333334,
+    "test_acc": 0.5233333333333333,
+    "gate_met": false
+   }
+  ],
+  "T": [
+   {
+    "arm": "T",
+    "seed": 0,
+    "lr": 0.005,
+    "batch": 1,
+    "steps_taken": 72000,
+    "best_epoch": 1,
+    "val_acc": 0.5,
+    "train_acc": 0.5,
+    "test_acc": 0.5,
+    "gate_met": false
+   },
+   {
+    "arm": "T",
+    "seed": 1,
+    "lr": 0.005,
+    "batch": 1,
+    "steps_taken": 72000,
+    "best_epoch": 1,
+    "val_acc": 0.5,
+    "train_acc": 0.5,
+    "test_acc": 0.5,
+    "gate_met": false
+   },
+   {
+    "arm": "T",
+    "seed": 0,
+    "lr": 0.005,
+    "batch": 8,
+    "steps_taken": 9000,
+    "best_epoch": 1,
+    "val_acc": 0.5,
+    "train_acc": 0.5,
+    "test_acc": 0.5,
+    "gate_met": false
+   },
+   {
+    "arm": "T",
+    "seed": 1,
+    "lr": 0.005,
+    "batch": 8,
+    "steps_taken": 9000,
+    "best_epoch": 1,
+    "val_acc": 0.5,
+    "train_acc": 0.5,
+    "test_acc": 0.5,
+    "gate_met": false
+   },
+   {
+    "arm": "T",
+    "seed": 0,
+    "lr": 0.02,
+    "batch": 1,
+    "steps_taken": 72000,
+    "best_epoch": 1,
+    "val_acc": 0.5,
+    "train_acc": 0.5,
+    "test_acc": 0.5,
+    "gate_met": false
+   },
+   {
+    "arm": "T",
+    "seed": 1,
+    "lr": 0.02,
+    "batch": 1,
+    "steps_taken": 72000,
+    "best_epoch": 1,
+    "val_acc": 0.5,
+    "train_acc": 0.5,
+    "test_acc": 0.5,
+    "gate_met": false
+   },
+   {
+    "arm": "T",
+    "seed": 0,
+    "lr": 0.02,
+    "batch": 8,
+    "steps_taken": 9000,
+    "best_epoch": 1,
+    "val_acc": 0.5,
+    "train_acc": 0.5,
+    "test_acc": 0.5,
+    "gate_met": false
+   },
+   {
+    "arm": "T",
+    "seed": 1,
+    "lr": 0.02,
+    "batch": 8,
+    "steps_taken": 9000,
+    "best_epoch": 1,
+    "val_acc": 0.5,
+    "train_acc": 0.5,
+    "test_acc": 0.5,
+    "gate_met": false
+   }
+  ]
+ },
+ "question_only_permutation": {
+  "A1": {
+   "base_acc": 0.67,
+   "mean_question_only_acc": 0.49373333333333336,
+   "min": 0.41333333333333333,
+   "max": 0.6666666666666666,
+   "binder_expectation": 0.4993045897079277,
+   "collapses": true
+  },
+  "A2": {
+   "base_acc": 0.7333333333333333,
+   "mean_question_only_acc": 0.49526666666666663,
+   "min": 0.38666666666666666,
+   "max": 0.71,
+   "binder_expectation": 0.4993045897079277,
+   "collapses": true
+  },
+  "A3": {
+   "base_acc": 0.7266666666666667,
+   "mean_question_only_acc": 0.498,
+   "min": 0.36333333333333334,
+   "max": 0.66,
+   "binder_expectation": 0.4993045897079277,
+   "collapses": true
+  },
+  "B1": {
+   "base_acc": 0.65,
+   "mean_question_only_acc": 0.5076666666666667,
+   "min": 0.42,
+   "max": 0.67,
+   "binder_expectation": 0.4993045897079277,
+   "collapses": true
+  },
+  "T": {
+   "base_acc": 0.5,
+   "mean_question_only_acc": 0.5,
+   "min": 0.5,
+   "max": 0.5,
+   "binder_expectation": 0.4993045897079277,
+   "collapses": true
+  }
+ },
+ "verdicts": {
+  "tied_sentinel_ok": true,
+  "t_fails_memorisation": true,
+  "vt_learnable_A1": "UNDECIDABLE",
+  "arm_trainable_A1": true,
+  "f3_pass_A1": false,
+  "question_only_collapses_A1": true,
+  "vt_learnable_A2": false,
+  "arm_trainable_A2": true,
+  "f3_pass_A2": true,
+  "question_only_collapses_A2": true,
+  "vt_learnable_A3": true,
+  "arm_trainable_A3": true,
+  "f3_pass_A3": true,
+  "question_only_collapses_A3": true,
+  "vt_learnable_B1": false,
+  "arm_trainable_B1": true,
+  "f3_pass_B1": true,
+  "question_only_collapses_B1": true,
+  "verb_binding_learnable": true
+ },
+ "meta_notes": {
+  "scope": "doc 35 SS8: no quantum-advantage reading in any outcome -- no comparison criterion is registered, B1 runs for information only, simulation only, 6 verbs, 2 seeds, one rung. VT tests BINDING, not composition: attaching a verb to an argument pair is necessary for compositional semantics and nowhere near sufficient, and the write-up must not blur them. It does NOT retract exp49 -- L1 and L2 remain solvable verb-blind as computed; VT is a NEW rung, not a reinterpretation.",
+  "c1_not_run": "doc 35 SS5.1: C1 is deliberately NOT run. A relabeling applied consistently to story AND question maps a VT dataset onto itself (the task is verb-relational, not verb-absolute), so a perfect binder scores its BASE accuracy under it -- zero power by construction. Verified by direct computation while drafting doc 35.",
+  "binder_expectation_derivation": "doc 35 SS5.2, derived before data existed: over 719 non-identity permutations of 6 verbs, twin YES is right only if pi(v1)=v1 (119/719) and twin NO only if pi(v1)!=v2 (1-120/719), giving 359/719 = 0.4993 -- a perfect binder collapses to CHANCE."
+ },
+ "git_note": {
+  "exp42_paths": [],
+  "n_untracked": 114
+ },
+ "wall_time_sec": 23570.70423913002
+}

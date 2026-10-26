@@ -1,0 +1,424 @@
+{
+  "purpose": "doc 57 / exp71 feasibility spike: can neutral-atom ANALOG control express the programme's intro-state family, and what does the realistic device model allow",
+  "boundedness": "four questions, no verb block compiled, no exp71 file written, no committed artefact modified",
+  "Q1_environment": {
+    "pulser": "1.9.0",
+    "pulser_simulation": "1.9.0",
+    "import_ok": true,
+    "torch": "2.13.0",
+    "numpy": "2.5.1",
+    "scipy": "1.18.0",
+    "qutip": "5.3.1"
+  },
+  "Q3_devices": {
+    "AnalogDevice": {
+      "name": "AnalogDevice",
+      "channels": [
+        "rydberg_global"
+      ],
+      "has_local_addressing": false,
+      "n_dmm_objects": 0,
+      "supports_slm_mask": false,
+      "max_atom_num": 80,
+      "min_atom_distance_um": 5,
+      "max_sequence_duration_ns": 6000,
+      "max_runs": 2000,
+      "interaction_coeff_rad_um6_per_us": 865723.02,
+      "rydberg_global_max_amp_rad_per_us": 12.566370614359172,
+      "rydberg_global_max_abs_detuning_rad_per_us": 125.66370614359172
+    },
+    "DigitalAnalogDevice": {
+      "name": "DigitalAnalogDevice",
+      "channels": [
+        "raman_local",
+        "rydberg_global",
+        "rydberg_local"
+      ],
+      "has_local_addressing": true,
+      "n_dmm_objects": 1,
+      "supports_slm_mask": true,
+      "max_atom_num": 100,
+      "min_atom_distance_um": 4,
+      "max_sequence_duration_ns": null,
+      "max_runs": null,
+      "interaction_coeff_rad_um6_per_us": 5420158.53,
+      "rydberg_global_max_amp_rad_per_us": 15.707963267948966,
+      "rydberg_global_max_abs_detuning_rad_per_us": 125.66370614359172
+    },
+    "MockDevice": {
+      "name": "MockDevice",
+      "channels": [
+        "mw_global",
+        "raman_global",
+        "raman_local",
+        "rydberg_global",
+        "rydberg_local"
+      ],
+      "has_local_addressing": true,
+      "n_dmm_objects": 1,
+      "supports_slm_mask": true,
+      "max_atom_num": null,
+      "min_atom_distance_um": 0.0,
+      "max_sequence_duration_ns": null,
+      "max_runs": null,
+      "interaction_coeff_rad_um6_per_us": 5420158.53,
+      "rydberg_global_max_amp_rad_per_us": null,
+      "rydberg_global_max_abs_detuning_rad_per_us": null
+    }
+  },
+  "Q3_finding": "AnalogDevice -- Pulser's model of the realistic analog QPU -- exposes rydberg_global ONLY: no local addressing channel, NO detuning-map modulator, no SLM mask. DigitalAnalogDevice and MockDevice do carry local channels and DMMs, but neither is the analog QPU. Any exp71 design that needs per-atom differentiated control on the analog machine must therefore break the permutation symmetry with GEOMETRY, or move to a device class the programme has not been offered.",
+  "Q1_minimal_sequence": {
+    "device": "AnalogDevice",
+    "atoms": 2,
+    "distance_um": 8.0,
+    "pulse_rad_per_us_and_ns": {
+      "Omega": 4.0,
+      "delta": 1.5,
+      "phase": 0.3,
+      "duration_ns": 400
+    },
+    "emulator_ran": true,
+    "emulator_final_state_norm": 0.9999999997529178,
+    "rydberg_populations_per_atom": [
+      0.49851256392765886,
+      0.49851256392765886
+    ],
+    "numpy_model_vs_pulser_emulator_overlap": 0.99999938589438,
+    "convention_asserted": true,
+    "convention_determined_empirically": "H = sum_i (Omega/2)(cos(phase) X_i + sin(phase) Y_i) - delta n_i + sum_{i<j} (C6/r_ij^6) n_i n_j, with |0> = ground and |1> = Rydberg; Pulser's emulator returns the state in the REVERSED per-atom basis. All four sign/ordering variants were tried and exactly one matched, so the convention is measured rather than quoted",
+    "note": "the in-house expm model is used for the search below ONLY because it agrees with Pulser's emulator to the figure above; every reported reachability number is therefore a Pulser-consistent number, and the emulator re-verifies the best solutions at the end"
+  },
+  "Q2a_symmetry_control": {
+    "statement": "two identical atoms, one GLOBAL drive, a geometry invariant under their exchange: [H(t), SWAP] = 0 for every t and the initial state |00> is SWAP-even, so the evolved state is SWAP-even at all times and the two atoms' reduced states are IDENTICAL. Distinct per-referent angles are unreachable, and this is a theorem, not an optimisation failure.",
+    "draws": 64,
+    "max_population_difference": 5.828670879282072e-16,
+    "confirmed": true
+  },
+  "Q2b_routes": {
+    "r1_analog_global_only_2atom_symmetric": {
+      "device": "AnalogDevice",
+      "atoms": 2,
+      "symmetry_broken_by": null,
+      "note": "this is the SYMMETRIC CEILING: the best a global drive can do when the target asks for two different angles and the dynamics cannot tell the two atoms apart. It is not zero, because a symmetric state still overlaps an asymmetric target, and reading it as partial success would be the error the (a) theorem exists to prevent",
+      "results": {
+        "الطالب|الرجل": {
+          "theta": [
+            2.9193353486066616,
+            2.3589839892285855
+          ],
+          "best_fidelity": 0.9617671053668189
+        },
+        "الولد|المدير": {
+          "theta": [
+            1.9006956253446787,
+            -2.880858229204074
+          ],
+          "best_fidelity": 0.8892218743313454
+        },
+        "الطالب|الولد": {
+          "theta": [
+            2.9193353486066616,
+            1.9006956253446787
+          ],
+          "best_fidelity": 0.881131142352265
+        }
+      }
+    },
+    "r2_analog_global_only_asymmetric_geometry": {
+      "device": "AnalogDevice",
+      "atoms": 3,
+      "symmetry_broken_by": "geometry -- a third, undriven-by-design spectator atom placed so the two data atoms sit in DIFFERENT interaction environments; the atom positions are searched, subject to the device's own min separation (5.0 um) and max radius (38 um)",
+      "note": "the spectator is TRACED OUT, so the reported number is the mixed-state fidelity of the two-wire register -- an UPPER bound on what a pure two-wire preparation could deliver, and the residual entanglement with the spectator is a cost the doc must account for",
+      "results": {
+        "الطالب|الرجل": {
+          "theta": [
+            2.9193353486066616,
+            2.3589839892285855
+          ],
+          "best_fidelity": 0.9998310240903492,
+          "coords_um": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              16.298,
+              0.0
+            ],
+            [
+              5.218,
+              8.128
+            ]
+          ],
+          "blocks_Omega_delta_phase_tau_us": [
+            [
+              12.083578,
+              15.168491,
+              0.859209,
+              1.910967
+            ],
+            [
+              10.326914,
+              3.287949,
+              -0.34211,
+              0.968309
+            ],
+            [
+              11.209684,
+              72.608114,
+              -1.073344,
+              1.882828
+            ]
+          ],
+          "total_duration_us": 4.7621
+        },
+        "الولد|المدير": {
+          "theta": [
+            1.9006956253446787,
+            -2.880858229204074
+          ],
+          "best_fidelity": 0.9999799580835698,
+          "coords_um": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              20.092,
+              0.0
+            ],
+            [
+              -6.919,
+              5.606
+            ]
+          ],
+          "blocks_Omega_delta_phase_tau_us": [
+            [
+              12.550526,
+              0.682249,
+              2.035196,
+              1.213917
+            ],
+            [
+              2.574004,
+              27.134261,
+              -0.042733,
+              1.83213
+            ],
+            [
+              11.995812,
+              -41.115702,
+              0.61884,
+              0.762417
+            ]
+          ],
+          "total_duration_us": 3.8085
+        },
+        "الطالب|الولد": {
+          "theta": [
+            2.9193353486066616,
+            1.9006956253446787
+          ],
+          "best_fidelity": 0.9999995386988885,
+          "coords_um": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              25.715,
+              0.0
+            ],
+            [
+              -6.223,
+              5.628
+            ]
+          ],
+          "blocks_Omega_delta_phase_tau_us": [
+            [
+              7.200102,
+              -1.944869,
+              1.309711,
+              1.153474
+            ],
+            [
+              12.499149,
+              -56.588068,
+              0.176781,
+              0.224017
+            ],
+            [
+              12.562633,
+              39.262966,
+              -0.030185,
+              1.341436
+            ]
+          ],
+          "total_duration_us": 2.7189
+        }
+      }
+    },
+    "r3_local_detuning_idealised": {
+      "device": "NOT AnalogDevice -- AnalogDevice carries NO DMM (Q3). This is an IDEALISED local-detuning capability: sign-unconstrained, weight-unconstrained, constant over the sequence. The number is therefore an UPPER bound on any real DMM, whose detuning is negative-only, weight-limited to [0,1] and bottom-capped",
+      "atoms": 2,
+      "symmetry_broken_by": "per-atom detuning offset",
+      "results": {
+        "الطالب|الرجل": {
+          "theta": [
+            2.9193353486066616,
+            2.3589839892285855
+          ],
+          "best_fidelity": 1.0000000000000147,
+          "local_detuning_rad_per_us": [
+            22.6953,
+            10.7752
+          ],
+          "coords_um": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              8.824,
+              0.0
+            ]
+          ],
+          "total_duration_us": 3.8596
+        },
+        "الولد|المدير": {
+          "theta": [
+            1.9006956253446787,
+            -2.880858229204074
+          ],
+          "best_fidelity": 0.9999999747589761,
+          "local_detuning_rad_per_us": [
+            97.3257,
+            102.6115
+          ],
+          "coords_um": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              28.706,
+              0.0
+            ]
+          ],
+          "total_duration_us": 2.2891
+        },
+        "الطالب|الولد": {
+          "theta": [
+            2.9193353486066616,
+            1.9006956253446787
+          ],
+          "best_fidelity": 0.9999999917925422,
+          "local_detuning_rad_per_us": [
+            4.7315,
+            12.3027
+          ],
+          "coords_um": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              26.659,
+              0.0
+            ]
+          ],
+          "total_duration_us": 2.5092
+        }
+      }
+    },
+    "r4_local_addressing_channel": {
+      "expressible_by_construction": true,
+      "reason": "a rydberg_local channel addresses one atom at a time, so RY(theta_A) (x) RY(theta_B) is two targeted pulses and the preparation is exact up to pulse calibration",
+      "devices_offering_it": [
+        "DigitalAnalogDevice",
+        "MockDevice"
+      ],
+      "caveat": "this is the DIGITAL-analog / mock class, not the analog QPU the collaboration would target; recording it keeps the distinction visible rather than letting a MockDevice success stand in for an AnalogDevice capability"
+    }
+  },
+  "Q2_verdict": {
+    "global_only_symmetric_ceiling": [
+      0.881131,
+      0.961767
+    ],
+    "global_only_asymmetric_geometry": [
+      0.999831,
+      1.0
+    ],
+    "idealised_local_detuning": [
+      1.0,
+      1.0
+    ],
+    "local_addressing_channel": "exact, but not on AnalogDevice",
+    "reading": "Two findings, and they point opposite ways. (1) Distinct per-referent angles are UNREACHABLE by symmetry under a global drive in a symmetric register -- proved, then confirmed to 5.8e-16. (2) Breaking that symmetry with GEOMETRY works, and works well: with a third atom placed asymmetrically and the positions searched under the device's own min-separation and max-radius limits, three real noun pairs reach F >= 0.9998 in the continuous-time propagator, inside the 6 us budget. So the intro-state family IS expressible on the analog device, and the route is geometric rather than pulse-clever. THE CATCH IS IN Q5: those solutions lose up to 0.14 fidelity when their pulse train is placed on the device's 4 ns clock. The expressibility question is answered YES; the ROBUSTNESS question is answered 'not by this search', and that is exp71's to fix by optimising on the device timebase.",
+    "honest_caveat": "a search failure is never a proof of unreachability. Only the symmetric case (Q2a) is proved; every other number here is a LOWER bound on what better waveforms could reach."
+  },
+  "Q4_duration_budget": {
+    "device_max_sequence_duration_ns": 6000,
+    "device_max_sequence_duration_us": 6.0,
+    "exp37_per_block_total_tau_us": {
+      "يحمل": 0.9681516907247766,
+      "فتح": 3.9461774530484,
+      "رفع": 4.659562008297661,
+      "قطع": 10.190410249772563,
+      "ضرب": 4.08242005850746,
+      "حمل": 8.05419519844221
+    },
+    "exp37_median_per_block_us": 4.370991033402561,
+    "item_needs_n_blocks_at_T1": "intro + 1 verb block + 1 inverse block + 1 question effect = 4 compiled segments",
+    "arithmetic": "4 segments at exp37's UNCONSTRAINED median already exceeds the 6.0 us budget; exp37's solutions were found with the interaction strength V free and with no amplitude ceiling, so exp71's targets must be RE-SOLVED under Omega <= 12.566 rad/us, |delta| <= 125.664 rad/us and a total <= 6000 ns, at ONE fixed geometry. The budget is a live design constraint, not a formality.",
+    "caveat": "exp37's taus are in the same rad/us convention but were solved against a FREE V; they are an order-of-magnitude reference, not a prediction of the constrained solution's duration",
+    "intro_alone_consumes_us": {
+      "الطالب|الرجل": 4.7621,
+      "الولد|المدير": 3.8085,
+      "الطالب|الولد": 2.7189
+    },
+    "consequence": "the INTRO ALONE, solved to F ~ 1 by the geometry route, already spends the fraction of the 6.0 us budget recorded above. Everything else on an item -- verb block, its inverse, the question effect -- must fit in what remains, AT THE SAME GEOMETRY, because the interaction is always on and the atoms do not move mid-sequence. That joint feasibility is exp71's first real question and this spike deliberately does not answer it."
+  },
+  "Q5_pulser_reverification": {
+    "what": "the best route-2 solutions rebuilt as real Pulser Sequences on AnalogDevice and re-run through Pulser's own emulator TWICE: once with ideal square pulses quantised to the channel's 4 ns clock, and once with `with_modulation=True`, which applies the channel's 8 MHz modulation bandwidth to the waveform",
+    "results": {
+      "الطالب|الرجل": {
+        "searched_fidelity": 0.999831,
+        "pulser_ideal_fidelity": 0.996019,
+        "pulser_modulated_fidelity": 0.994317,
+        "quantised_duration_ns": 4764,
+        "cost_of_clock_quantisation": 0.003812,
+        "cost_of_hardware_modulation": 0.001702
+      },
+      "الولد|المدير": {
+        "searched_fidelity": 0.99998,
+        "pulser_ideal_fidelity": 0.968685,
+        "pulser_modulated_fidelity": 0.96405,
+        "quantised_duration_ns": 3808,
+        "cost_of_clock_quantisation": 0.031295,
+        "cost_of_hardware_modulation": 0.004635
+      },
+      "الطالب|الولد": {
+        "searched_fidelity": 1.0,
+        "pulser_ideal_fidelity": 0.858962,
+        "pulser_modulated_fidelity": 0.855602,
+        "quantised_duration_ns": 2716,
+        "cost_of_clock_quantisation": 0.141038,
+        "cost_of_hardware_modulation": 0.00336
+      }
+    },
+    "worst_cost_of_clock_quantisation": 0.141038,
+    "worst_cost_of_hardware_modulation": 0.004635,
+    "reading": "THIS IS THE SPIKE'S MOST CONSEQUENTIAL RESULT AND IT IS A WARNING. The searched solutions are near-unit fidelity in the continuous-time propagator and degrade once the pulse train is put on the device's real timebase. The two costs separate cleanly and the ORDER is the finding: the 4 ns CLOCK QUANTISATION dominates (worst case recorded above), while the channel's 8 MHz modulation bandwidth costs roughly an order of magnitude less. The damage tracks the shortest block in the solution -- a sub-300 ns segment driven at large detuning is where the worst case comes from -- so it is a property of the SEARCH's output, not an inherent hardware limit. The design consequence is not 'analog is infeasible': it is that exp71 must optimise ON THE DEVICE CLOCK, with a minimum-segment-length constraint, from the first iteration -- never a continuous-time idealisation re-checked afterwards. exp37/exp37b's free-V, square-pulse, decay-free model never had to face this, which is precisely why its F = 1 does not transfer."
+  },
+  "runtime_seconds": 245.4,
+  "limitations": [
+    "3 square pulse blocks only; smooth or EOM-shaped waveforms are not searched",
+    "unitary, decay-free: no spontaneous emission, no laser noise, no atom loss, no shot noise, no finite-sampling error -- Pulser's NoiseModel exists and is deliberately NOT used here",
+    "Nelder-Mead from 16 seeds; a reported fidelity is a LOWER bound on the family's reachability, never a proof of unreachability (except Q2a, which is a symmetry proof and does not depend on the search)",
+    "3 noun pairs out of 24 nouns, and their frozen angles happen to cluster in |theta|, which inflates the route-1 symmetric ceiling; a sweep would report a lower ceiling and the doc must not quote route 1 as if it were general",
+    "no verb block, no question effect and no trained parameter is compiled here",
+    "route 2 traces out a spectator atom; residual data-spectator entanglement is absorbed into the mixed-state fidelity rather than charged separately"
+  ]
+}

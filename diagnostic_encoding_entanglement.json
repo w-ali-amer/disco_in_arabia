@@ -1,0 +1,199 @@
+{
+ "purpose": "doc 56 pre-registration degeneracy check (reviewer-required): is encoding entanglement nonvanishing over the REAL inventory?",
+ "e_in_form": "|psi> = cos(t1/2)|00> + sin(t1/2)cos(t2/2)|10> + sin(t1/2)sin(t2/2)|11> (RY(t1) on q0, CRY(t2) q0->q1); concurrence = |sin t1|*|sin(t2/2)| (closed form)",
+ "registered_map": "theta=(p+1)pi (exp68 F2 convention)",
+ "eps_map": "theta = p*(pi-2*eps)/2 + pi/2, eps=pi/6 -> theta in [pi/6, 5pi/6]; provable floor sin(eps)*sin(eps/2)... computed per-noun below",
+ "finding": {
+  "registered_map": {
+   "min": 2.133677516132565e-08,
+   "median": 0.46165484978716037,
+   "max": 0.9868372414454107,
+   "n_below_0.05": 4,
+   "mechanism": "normalisation extremes (|p|=1) land exactly on sin dead zones; structural, not semantic"
+  },
+  "eps_map": {
+   "min": 0.18983489181010252,
+   "median": 0.5183987184933675,
+   "max": 0.8818824613477051,
+   "n_below_0.05": 0
+  }
+ },
+ "design_consequence": "E-in must run on the eps-map, WITH a map-matched product twin arm (same eps-map, no entangler) so the entanglement contrast is not confounded with the angle map; A0 anchors tie exp70 to exp69 on the old map",
+ "e_across_intro_purity": {
+  "form": "RY⊗RY then CZ on the frozen single-angle map",
+  "min": 0.5764454752305193,
+  "median": 0.982917860424884,
+  "max": 0.9998563458804479,
+  "note": "purity < 1 by construction for generic pairs; smoke gate must assert the COMPUTED value per item, not merely <1"
+ },
+ "per_noun": {
+  "الطالب": {
+   "p1": -0.9308603981235838,
+   "p2": 0.17949739420851907,
+   "concurrence_registered_map": 0.2069950371144542,
+   "concurrence_eps_map": 0.4324241422860955,
+   "frozen_angle": 2.9193353486066616
+  },
+  "الرجل": {
+   "p1": -0.9372212871519693,
+   "p2": 0.7952469775983478,
+   "concurrence_registered_map": 0.061941237087596086,
+   "concurrence_eps_map": 0.5183987184933675,
+   "frozen_angle": 2.3589839892285855
+  },
+  "الولد": {
+   "p1": -0.4012976435678019,
+   "p2": 1.0000000142636707,
+   "concurrence_registered_map": 2.133677516132565e-08,
+   "concurrence_eps_map": 0.8818824613477051,
+   "frozen_angle": 1.9006956253446787
+  },
+  "المدير": {
+   "p1": -0.8224030109995552,
+   "p2": -0.1872261533334557,
+   "concurrence_registered_map": 0.5067061786321311,
+   "concurrence_eps_map": 0.41338807004463546,
+   "frozen_angle": -2.880858229204074
+  },
+  "المعلم": {
+   "p1": -0.9469518820576186,
+   "p2": -0.14610335675669303,
+   "concurrence_registered_map": 0.161535783111057,
+   "concurrence_eps_map": 0.3562999224350096,
+   "frozen_angle": -2.962704356198908
+  },
+  "الطبيب": {
+   "p1": -0.8598313733140952,
+   "p2": 0.2068995480061164,
+   "concurrence_registered_map": 0.403944644712245,
+   "concurrence_eps_map": 0.48423935741952134,
+   "frozen_angle": 2.8667217007979224
+  },
+  "العامل": {
+   "p1": -0.4833086346707837,
+   "p2": 0.29346146563954445,
+   "concurrence_registered_map": 0.8943911915815815,
+   "concurrence_eps_map": 0.7058281649267004,
+   "frozen_angle": 2.523115359874012
+  },
+  "المهندس": {
+   "p1": -0.7330468537391569,
+   "p2": -0.4317864044488737,
+   "concurrence_registered_map": 0.5791354020987955,
+   "concurrence_eps_map": 0.38179656257958716,
+   "frozen_angle": -2.5373886680819235
+  },
+  "الشرطي": {
+   "p1": -0.5334203741483019,
+   "p2": 0.6169832219410445,
+   "concurrence_registered_map": 0.5628795889624552,
+   "concurrence_eps_map": 0.7589668562169954,
+   "frozen_angle": 2.2063780631352197
+  },
+  "الكاتب": {
+   "p1": -0.9173395011331273,
+   "p2": -0.7150221438138392,
+   "concurrence_registered_map": 0.11114355088633543,
+   "concurrence_eps_map": 0.22893525421497665,
+   "frozen_angle": -2.401371125520481
+  },
+  "الطباخ": {
+   "p1": -0.3349717305391408,
+   "p2": 0.22332517022745052,
+   "concurrence_registered_map": 0.8156893643785113,
+   "concurrence_eps_map": 0.7369844746811284,
+   "frozen_angle": 2.478326362944799
+  },
+  "الجندي": {
+   "p1": -0.9910980683380753,
+   "p2": -0.1423452106601229,
+   "concurrence_registered_map": 0.02726651186038023,
+   "concurrence_eps_map": 0.33149868826073203,
+   "frozen_angle": -2.9748328641527593
+  },
+  "الفلاح": {
+   "p1": -0.5199381054039569,
+   "p2": 0.5235993618825159,
+   "concurrence_registered_map": 0.6790803486321565,
+   "concurrence_eps_map": 0.7460244701893285,
+   "frozen_angle": 2.2737187177748557
+  },
+  "الحارس": {
+   "p1": -0.4553373105122751,
+   "p2": -0.05226618784795339,
+   "concurrence_registered_map": 0.9868372414454107,
+   "concurrence_eps_map": 0.6108070478568408,
+   "frozen_angle": -3.007869916786299
+  },
+  "اللاعب": {
+   "p1": -0.9236916037746976,
+   "p2": -0.34698041538768487,
+   "concurrence_registered_map": 0.2030372656497307,
+   "concurrence_eps_map": 0.322194383753531,
+   "frozen_angle": -2.7268799326585578
+  },
+  "الموظف": {
+   "p1": -0.5322936097658126,
+   "p2": 0.41128118119573237,
+   "concurrence_registered_map": 0.7943689682950265,
+   "concurrence_eps_map": 0.71443410972747,
+   "frozen_angle": 2.405728492100894
+  },
+  "الصحفي": {
+   "p1": -0.890210201317719,
+   "p2": -0.8809472581587713,
+   "concurrence_registered_map": 0.06286245896626977,
+   "concurrence_eps_map": 0.18983489181010252,
+   "frozen_angle": -2.2823505050786133
+  },
+  "السائق": {
+   "p1": -0.4476011515090463,
+   "p2": 0.6094946665018375,
+   "concurrence_registered_map": 0.5678724452577245,
+   "concurrence_eps_map": 0.7969099813211796,
+   "frozen_angle": 2.1305595896563645
+  },
+  "المسافر": {
+   "p1": -0.16898674386735085,
+   "p2": 0.606060878439962,
+   "concurrence_registered_map": 0.2936819956505439,
+   "concurrence_eps_map": 0.8785054408419388,
+   "frozen_angle": 1.8043675769528034
+  },
+  "الضابط": {
+   "p1": -0.7927718736003513,
+   "p2": 0.14880196335459084,
+   "concurrence_registered_map": 0.5895244218211636,
+   "concurrence_eps_map": 0.5127986402427052,
+   "frozen_angle": 2.925064127816676
+  },
+  "الباحث": {
+   "p1": -0.9999999441979489,
+   "p2": -0.7395357545345439,
+   "concurrence_registered_map": 6.974023732419556e-08,
+   "concurrence_eps_map": 0.1938698496132106,
+   "frozen_angle": -2.4274742817340624
+  },
+  "القائد": {
+   "p1": -0.9819531845496421,
+   "p2": -0.4325532722008253,
+   "concurrence_registered_map": 0.044080929011910686,
+   "concurrence_eps_map": 0.27376360792094256,
+   "frozen_angle": -2.6650241508676973
+  },
+  "الصياد": {
+   "p1": -0.4166803280825921,
+   "p2": -0.045570959715705725,
+   "concurrence_registered_map": 0.9634632199016896,
+   "concurrence_eps_map": 0.6253798270172174,
+   "frozen_angle": -3.0141130188409875
+  },
+  "المريض": {
+   "p1": -0.7183416873809556,
+   "p2": 0.5930443245983612,
+   "concurrence_registered_map": 0.46165484978716037,
+   "concurrence_eps_map": 0.6493624549953257,
+   "frozen_angle": 2.3726857684351157
+  }
+ }
+}

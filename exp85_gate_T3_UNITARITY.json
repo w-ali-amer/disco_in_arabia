@@ -1,0 +1,38 @@
+{
+ "gate": "GATE_T3_UNITARITY",
+ "spec": "qnlp_private_docs/77_exp85_identity_T3.md (FROZEN 2026-09-17)",
+ "passed": true,
+ "seed": 85000,
+ "arm": "A3-T3-identity",
+ "rung": "A3",
+ "q_per_referent": 3,
+ "matrix_dim": 64,
+ "drift_threshold": 1e-06,
+ "per_block_drift": {
+  "حمل": 5.962384079793992e-07,
+  "رفع": 4.797565793523972e-07,
+  "سأل": 4.768621693074238e-07,
+  "ساعد": 3.5765833672485314e-07,
+  "ضرب": 4.17255336060407e-07,
+  "عالج": 5.964096772004268e-07
+ },
+ "max_per_block_drift": 5.964096772004268e-07,
+ "all_per_block_within_threshold": true,
+ "representative_triple": [
+  "سأل",
+  "حمل",
+  "رفع"
+ ],
+ "depth3_composition": {
+  "formula": "U3 @ U2 @ U1",
+  "composed_drift": 7.153095111789298e-07,
+  "within_threshold": true
+ },
+ "raw_composition_descriptive": {
+  "raw_composed_drift": 3.576638221147732e-07,
+  "exceeds_threshold": false,
+  "note": "raw (non-unitarized) 3-block composition drift, recorded descriptively to show what unitarization fixes"
+ },
+ "dtf_perturbed_block": "OK: designed-to-fail fired: dtf_perturbed: drift=2.100e-01 > threshold=1.0e-06 for ×1.1-scaled matrix",
+ "note": "QR-unitarization path exercised at depth 3 (doc 77 §0). Post-fix drift <= 1e-6 for all 6 verb blocks and the composed product. sim.unitarize() projects via Q*phase from torch.linalg.qr."
+}

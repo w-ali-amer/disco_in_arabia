@@ -1,0 +1,623 @@
+{
+ "experiment": "exp69 V-suite kill-gate (doc 55 SS7.5)",
+ "spec": "qnlp_private_docs/55_exp69_reunion.md (da4b8fe, REGISTERED through SS19.7)",
+ "rederivation_note": "RE-DERIVED AT MULTI-EVENT SCALE, NOT INHERITED -- doc 55 SS7.5, doc 50 SS5.1's first requirement and doc 46 SS8's lesson that assuming a V-suite transfers is the doc-42 failure class. V1 is RE-MEASURED at both T with twin features checked BIT-identical; V2 is re-derived and reported UN-GATED with its reason; V3 adds verb-pair, per-event surface order and query index; V4 dedups on the full ORDERED event list; V5 adds the T1/T2 shared-split invariant; V8 is NEW.",
+ "parts": {
+  "A": {
+   "dataset": "stories_exp69_QA.json",
+   "part": "A",
+   "dataset_sha256": "2b85822b544571969fd40cab12b03a4ac256b08aee914d2b9643b856a6308c96",
+   "dataset_seed": 69000,
+   "category": {
+    "key": "nonoccupational",
+    "gloss": "non-occupational state",
+    "source": "instrument_sb_bounds.CATEGORIES -- doc 54 SS5.2, user-confirmed 2026-08-23; imported, never retyped",
+    "glosses": {
+     "الرجل": "man",
+     "المريض": "patient",
+     "المسافر": "traveller",
+     "الولد": "boy"
+    },
+    "feature_family": "raw AraVec PCA plane (FA angle / F2 register)"
+   },
+   "bearers": [
+    "الرجل",
+    "المريض",
+    "المسافر",
+    "الولد"
+   ],
+   "verb_slots": {
+    "V_A": [
+     "سأل",
+     "ضرب",
+     "عالج"
+    ],
+    "V_B": [
+     "حمل",
+     "رفع",
+     "ساعد"
+    ],
+    "rule": "the 6-verb exp51 inventory split 3/3 into DISJOINT slots at the registered generator seed; event 1 draws from V_A, event 2 from V_B (doc 55 SS4.2). Disjointness is what makes the verb-indexed query well-posed and is what costs exp69 any claim about discourse-position resolution (doc 55 SS11)."
+   },
+   "split_counts": {
+    "1": {
+     "train": 528,
+     "val": 132,
+     "test": 300
+    },
+    "2": {
+     "train": 528,
+     "val": 132,
+     "test": 300
+    }
+   },
+   "split_unit": "CAST -- a (bearer, non-bearer) pairing; never within a pair, and SHARED between the T = 1 and T = 2 item sets so doc 55 SS6.10(b)'s qualitative control compares like with like",
+   "V1_bag_of_embeddings": {
+    "angle_source": "exp42_noun_embeddings (FA)",
+    "T1": {
+     "test_accuracy": 0.5,
+     "twin_features_bit_identical": true,
+     "n_twin_pairs_checked": 150,
+     "passed": true
+    },
+    "T2": {
+     "test_accuracy": 0.5,
+     "twin_features_bit_identical": true,
+     "n_twin_pairs_checked": 150,
+     "passed": true
+    },
+    "passed": true
+   },
+   "V2_ngram": {
+    "gated": false,
+    "exp60_V2H_bar_not_inherited": 0.55,
+    "why_no_bar": "doc 55 SS7.5, inherited from exp68's rederivation_note: a pairing split shares the noun inventory across splits and the surface names both referents, so an n-gram model transfers to unseen pairings by design. The compiled circuit consumes per-referent angles only and never sees a token, so the shortcut is available to surface baselines and to nothing exp69 measures.",
+    "T1": {
+     "seen_pairings_val_accuracy": 1.0,
+     "unseen_pairings_test_accuracy": 1.0,
+     "n_features": 388
+    },
+    "T2": {
+     "seen_pairings_val_accuracy": 0.9621212121212122,
+     "unseen_pairings_test_accuracy": 0.9566666666666667,
+     "n_features": 450
+    }
+   },
+   "V3_balance": {
+    "T1": {
+     "queried_verb_p": 1.0,
+     "event1_verb_p": 1.0,
+     "bearer_wire_p": 1.0,
+     "order_event1_p": 1.0,
+     "wire0_noun_p": 1.0,
+     "agent_noun_p_DESCRIPTIVE": 4.2241644402759876e-188,
+     "n_yes": 480,
+     "n_no": 480,
+     "classes_balanced": true
+    },
+    "T2": {
+     "queried_verb_p": 1.0,
+     "event1_verb_p": 1.0,
+     "bearer_wire_p": 1.0,
+     "order_event1_p": 1.0,
+     "wire0_noun_p": 1.0,
+     "event2_verb_p": 1.0,
+     "verb_pair_p": 1.0,
+     "order_event2_p": 1.0,
+     "order_pair_p": 1.0,
+     "query_index_p": 1.0,
+     "unqueried_roles_p": 1.0,
+     "agent_noun_p_DESCRIPTIVE": 4.2241644402759876e-188,
+     "n_yes": 480,
+     "n_no": 480,
+     "classes_balanced": true
+    },
+    "min_p": 1.0,
+    "marginal_counts": {
+     "verb_pair": {
+      "سأل|حمل": 106,
+      "سأل|رفع": 108,
+      "سأل|ساعد": 108,
+      "ضرب|حمل": 108,
+      "ضرب|رفع": 106,
+      "ضرب|ساعد": 106,
+      "عالج|حمل": 106,
+      "عالج|رفع": 106,
+      "عالج|ساعد": 106
+     },
+     "order_pair": {
+      "SVO|SVO": 240,
+      "SVO|VSO": 240,
+      "VSO|SVO": 240,
+      "VSO|VSO": 240
+     },
+     "query_index": {
+      "1": 480,
+      "2": 480
+     },
+     "unqueried_bearer_is_agent": {
+      "True": 480,
+      "False": 480
+     },
+     "T1_verb": {
+      "حمل": 160,
+      "رفع": 160,
+      "سأل": 160,
+      "ساعد": 160,
+      "ضرب": 160,
+      "عالج": 160
+     },
+     "T1_order": {
+      "SVO": 480,
+      "VSO": 480
+     }
+    },
+    "passed": true
+   },
+   "V4_dedup_on_circuits": {
+    "T1": {
+     "n_distinct_circuits": 960,
+     "n_items": 960,
+     "n_contradictory": 0,
+     "all_circuits_distinct": true,
+     "passed": true
+    },
+    "T2": {
+     "n_distinct_circuits": 960,
+     "n_items": 960,
+     "n_contradictory": 0,
+     "all_circuits_distinct": true,
+     "passed": true
+    },
+    "passed": true
+   },
+   "V5_split_integrity": {
+    "n_train_casts": 44,
+    "n_val_casts": 11,
+    "n_test_casts": 25,
+    "casts_disjoint_across_splits": true,
+    "bearers_covered_in_train": true,
+    "nonbearers_covered_in_train": true,
+    "referents_missing_from_train_casts": [],
+    "n_test_items": {
+     "1": 300,
+     "2": 300
+    },
+    "n_test_items_is_registered_300": true,
+    "T1_and_T2_share_one_split": true,
+    "coverage_of_the_design": {
+     "verbs_VA_in_train": [
+      "سأل",
+      "ضرب",
+      "عالج"
+     ],
+     "verbs_VB_in_train": [
+      "حمل",
+      "رفع",
+      "ساعد"
+     ],
+     "orders_event1_in_train": [
+      "SVO",
+      "VSO"
+     ],
+     "orders_event2_in_train": [
+      "SVO",
+      "VSO"
+     ],
+     "query_values_in_train": [
+      1,
+      2
+     ],
+     "query_values_in_test": [
+      1,
+      2
+     ],
+     "verbs_T1_in_train": [
+      "حمل",
+      "رفع",
+      "سأل",
+      "ساعد",
+      "ضرب",
+      "عالج"
+     ]
+    },
+    "why_coverage_matters": "without it, 'unseen pairing' degenerates into 'unseen noun' for any referent absent from every train cast, and the split stops measuring what doc 55 SS4.5 says it measures",
+    "passed": true
+   },
+   "V6_token_identity_probe": {
+    "heldout_gated": false,
+    "train_bar": 0.8,
+    "exp60_heldout_bar_not_inherited": 0.55,
+    "why_heldout_not_gated": "the noun inventory is shared across splits by construction, so a noun-identity probe transfers to unseen PAIRINGS. That is a property of the registered split, not a defect, and it is exactly why doc 55 SS11 forbids the novel-filler reading.",
+    "T1": {
+     "seen_pairings_val_accuracy": 1.0,
+     "unseen_pairings_test_accuracy": 1.0,
+     "must_succeed_on_seen_pairings": true
+    },
+    "T2": {
+     "seen_pairings_val_accuracy": 1.0,
+     "unseen_pairings_test_accuracy": 1.0,
+     "must_succeed_on_seen_pairings": true
+    },
+    "passed": true
+   },
+   "V7_label_definition": {
+    "rule": "answer == yes iff the agent of the QUERIED event is a bearer",
+    "items_violating_label_rule": [],
+    "n_violations": 0,
+    "items_without_exactly_one_bearer": [],
+    "n_cast_violations": 0,
+    "per_split_balance": {
+     "T1": {
+      "train": {
+       "yes": 264,
+       "no": 264
+      },
+      "val": {
+       "yes": 66,
+       "no": 66
+      },
+      "test": {
+       "yes": 150,
+       "no": 150
+      }
+     },
+     "T2": {
+      "train": {
+       "yes": 264,
+       "no": 264
+      },
+      "val": {
+       "yes": 66,
+       "no": 66
+      },
+      "test": {
+       "yes": 150,
+       "no": 150
+      }
+     }
+    },
+    "balanced_in_every_split": true,
+    "passed": true
+   },
+   "V8_query_resolvability": {
+    "n_items": 1920,
+    "n_queried_verb_not_unique": 0,
+    "n_queried_verb_in_wrong_event": 0,
+    "n_slot_violations": 0,
+    "examples": [],
+    "slots_disjoint": true,
+    "why": "with DISJOINT slot inventories the query resolves by VERB IDENTITY, not by discourse position (doc 55 SS4.2). That is what makes Q69 well-posed and what costs exp69 any claim about discourse-position resolution, anaphora or multi-hop reasoning (doc 55 SS11).",
+    "passed": true
+   },
+   "gates": {
+    "V1": true,
+    "V3": true,
+    "V4": true,
+    "V5": true,
+    "V6": true,
+    "V7": true,
+    "V8": true
+   },
+   "ungated_recorded": [
+    "V2 (both halves, both T)",
+    "V6 unseen-pairings half (both T)"
+   ],
+   "kill_gate_passed": true
+  },
+  "B": {
+   "dataset": "stories_exp69_QB.json",
+   "part": "B",
+   "dataset_sha256": "9fc33eb851397a82957ec16e9e90c52228a1cf2aad109fff6b3f164ff7d87b01",
+   "dataset_seed": 69000,
+   "category": {
+    "key": "wazn_faail",
+    "gloss": "faail (CaaCiC) wazn vs non-faail",
+    "source": "exp65_featurizer.FAAIL -- doc 51 SS7, user-confirmed; imported, never retyped",
+    "glosses": {
+     "الباحث": "researcher",
+     "الحارس": "guard",
+     "السائق": "driver",
+     "الضابط": "officer",
+     "الطالب": "student",
+     "العامل": "worker",
+     "القائد": "leader/commander",
+     "الكاتب": "writer/clerk",
+     "اللاعب": "player"
+    },
+    "feature_family": "exp65 POSITIONAL featurizer angle, fit INVENTORY-WIDE (doc 55 SS18.4: not leakage here because exp69 holds out PAIRINGS, not nouns)"
+   },
+   "bearers": [
+    "الباحث",
+    "الحارس",
+    "السائق",
+    "الضابط",
+    "الطالب",
+    "العامل",
+    "القائد",
+    "الكاتب",
+    "اللاعب"
+   ],
+   "verb_slots": {
+    "V_A": [
+     "حمل",
+     "رفع",
+     "ضرب"
+    ],
+    "V_B": [
+     "سأل",
+     "ساعد",
+     "عالج"
+    ],
+    "rule": "the 6-verb exp51 inventory split 3/3 into DISJOINT slots at the registered generator seed; event 1 draws from V_A, event 2 from V_B (doc 55 SS4.2). Disjointness is what makes the verb-indexed query well-posed and is what costs exp69 any claim about discourse-position resolution (doc 55 SS11)."
+   },
+   "split_counts": {
+    "1": {
+     "train": 528,
+     "val": 132,
+     "test": 300
+    },
+    "2": {
+     "train": 528,
+     "val": 132,
+     "test": 300
+    }
+   },
+   "split_unit": "CAST -- a (bearer, non-bearer) pairing; never within a pair, and SHARED between the T = 1 and T = 2 item sets so doc 55 SS6.10(b)'s qualitative control compares like with like",
+   "V1_bag_of_embeddings": {
+    "angle_source": "exp65_featurizer positional angle, inventory-wide fit",
+    "T1": {
+     "test_accuracy": 0.5,
+     "twin_features_bit_identical": true,
+     "n_twin_pairs_checked": 150,
+     "passed": true
+    },
+    "T2": {
+     "test_accuracy": 0.5,
+     "twin_features_bit_identical": true,
+     "n_twin_pairs_checked": 150,
+     "passed": true
+    },
+    "passed": true
+   },
+   "V2_ngram": {
+    "gated": false,
+    "exp60_V2H_bar_not_inherited": 0.55,
+    "why_no_bar": "doc 55 SS7.5, inherited from exp68's rederivation_note: a pairing split shares the noun inventory across splits and the surface names both referents, so an n-gram model transfers to unseen pairings by design. The compiled circuit consumes per-referent angles only and never sees a token, so the shortcut is available to surface baselines and to nothing exp69 measures.",
+    "T1": {
+     "seen_pairings_val_accuracy": 1.0,
+     "unseen_pairings_test_accuracy": 1.0,
+     "n_features": 421
+    },
+    "T2": {
+     "seen_pairings_val_accuracy": 0.9090909090909091,
+     "unseen_pairings_test_accuracy": 0.8966666666666666,
+     "n_features": 455
+    }
+   },
+   "V3_balance": {
+    "T1": {
+     "queried_verb_p": 1.0,
+     "event1_verb_p": 1.0,
+     "bearer_wire_p": 1.0,
+     "order_event1_p": 1.0,
+     "wire0_noun_p": 1.0,
+     "agent_noun_p_DESCRIPTIVE": 4.2241644402759876e-188,
+     "n_yes": 480,
+     "n_no": 480,
+     "classes_balanced": true
+    },
+    "T2": {
+     "queried_verb_p": 1.0,
+     "event1_verb_p": 1.0,
+     "bearer_wire_p": 1.0,
+     "order_event1_p": 1.0,
+     "wire0_noun_p": 1.0,
+     "event2_verb_p": 1.0,
+     "verb_pair_p": 1.0,
+     "order_event2_p": 1.0,
+     "order_pair_p": 1.0,
+     "query_index_p": 1.0,
+     "unqueried_roles_p": 1.0,
+     "agent_noun_p_DESCRIPTIVE": 4.2241644402759876e-188,
+     "n_yes": 480,
+     "n_no": 480,
+     "classes_balanced": true
+    },
+    "min_p": 1.0,
+    "marginal_counts": {
+     "verb_pair": {
+      "حمل|سأل": 106,
+      "حمل|ساعد": 108,
+      "حمل|عالج": 108,
+      "رفع|سأل": 108,
+      "رفع|ساعد": 106,
+      "رفع|عالج": 106,
+      "ضرب|سأل": 106,
+      "ضرب|ساعد": 106,
+      "ضرب|عالج": 106
+     },
+     "order_pair": {
+      "SVO|SVO": 240,
+      "SVO|VSO": 240,
+      "VSO|SVO": 240,
+      "VSO|VSO": 240
+     },
+     "query_index": {
+      "2": 480,
+      "1": 480
+     },
+     "unqueried_bearer_is_agent": {
+      "True": 480,
+      "False": 480
+     },
+     "T1_verb": {
+      "حمل": 160,
+      "رفع": 160,
+      "سأل": 160,
+      "ساعد": 160,
+      "ضرب": 160,
+      "عالج": 160
+     },
+     "T1_order": {
+      "SVO": 480,
+      "VSO": 480
+     }
+    },
+    "passed": true
+   },
+   "V4_dedup_on_circuits": {
+    "T1": {
+     "n_distinct_circuits": 960,
+     "n_items": 960,
+     "n_contradictory": 0,
+     "all_circuits_distinct": true,
+     "passed": true
+    },
+    "T2": {
+     "n_distinct_circuits": 960,
+     "n_items": 960,
+     "n_contradictory": 0,
+     "all_circuits_distinct": true,
+     "passed": true
+    },
+    "passed": true
+   },
+   "V5_split_integrity": {
+    "n_train_casts": 44,
+    "n_val_casts": 11,
+    "n_test_casts": 25,
+    "casts_disjoint_across_splits": true,
+    "bearers_covered_in_train": true,
+    "nonbearers_covered_in_train": true,
+    "referents_missing_from_train_casts": [],
+    "n_test_items": {
+     "1": 300,
+     "2": 300
+    },
+    "n_test_items_is_registered_300": true,
+    "T1_and_T2_share_one_split": true,
+    "coverage_of_the_design": {
+     "verbs_VA_in_train": [
+      "حمل",
+      "رفع",
+      "ضرب"
+     ],
+     "verbs_VB_in_train": [
+      "سأل",
+      "ساعد",
+      "عالج"
+     ],
+     "orders_event1_in_train": [
+      "SVO",
+      "VSO"
+     ],
+     "orders_event2_in_train": [
+      "SVO",
+      "VSO"
+     ],
+     "query_values_in_train": [
+      1,
+      2
+     ],
+     "query_values_in_test": [
+      1,
+      2
+     ],
+     "verbs_T1_in_train": [
+      "حمل",
+      "رفع",
+      "سأل",
+      "ساعد",
+      "ضرب",
+      "عالج"
+     ]
+    },
+    "why_coverage_matters": "without it, 'unseen pairing' degenerates into 'unseen noun' for any referent absent from every train cast, and the split stops measuring what doc 55 SS4.5 says it measures",
+    "passed": true
+   },
+   "V6_token_identity_probe": {
+    "heldout_gated": false,
+    "train_bar": 0.8,
+    "exp60_heldout_bar_not_inherited": 0.55,
+    "why_heldout_not_gated": "the noun inventory is shared across splits by construction, so a noun-identity probe transfers to unseen PAIRINGS. That is a property of the registered split, not a defect, and it is exactly why doc 55 SS11 forbids the novel-filler reading.",
+    "T1": {
+     "seen_pairings_val_accuracy": 1.0,
+     "unseen_pairings_test_accuracy": 1.0,
+     "must_succeed_on_seen_pairings": true
+    },
+    "T2": {
+     "seen_pairings_val_accuracy": 1.0,
+     "unseen_pairings_test_accuracy": 1.0,
+     "must_succeed_on_seen_pairings": true
+    },
+    "passed": true
+   },
+   "V7_label_definition": {
+    "rule": "answer == yes iff the agent of the QUERIED event is a bearer",
+    "items_violating_label_rule": [],
+    "n_violations": 0,
+    "items_without_exactly_one_bearer": [],
+    "n_cast_violations": 0,
+    "per_split_balance": {
+     "T1": {
+      "train": {
+       "yes": 264,
+       "no": 264
+      },
+      "val": {
+       "yes": 66,
+       "no": 66
+      },
+      "test": {
+       "yes": 150,
+       "no": 150
+      }
+     },
+     "T2": {
+      "train": {
+       "yes": 264,
+       "no": 264
+      },
+      "val": {
+       "yes": 66,
+       "no": 66
+      },
+      "test": {
+       "yes": 150,
+       "no": 150
+      }
+     }
+    },
+    "balanced_in_every_split": true,
+    "passed": true
+   },
+   "V8_query_resolvability": {
+    "n_items": 1920,
+    "n_queried_verb_not_unique": 0,
+    "n_queried_verb_in_wrong_event": 0,
+    "n_slot_violations": 0,
+    "examples": [],
+    "slots_disjoint": true,
+    "why": "with DISJOINT slot inventories the query resolves by VERB IDENTITY, not by discourse position (doc 55 SS4.2). That is what makes Q69 well-posed and what costs exp69 any claim about discourse-position resolution, anaphora or multi-hop reasoning (doc 55 SS11).",
+    "passed": true
+   },
+   "gates": {
+    "V1": true,
+    "V3": true,
+    "V4": true,
+    "V5": true,
+    "V6": true,
+    "V7": true,
+    "V8": true
+   },
+   "ungated_recorded": [
+    "V2 (both halves, both T)",
+    "V6 unseen-pairings half (both T)"
+   ],
+   "kill_gate_passed": true
+  }
+ },
+ "kill_gate_passed": true,
+ "consequence_if_failed": "doc 46 SS9 / doc 55 SS7.5: any gate red and NO TRAINING RUNS -- a new doc is required, not a patch."
+}

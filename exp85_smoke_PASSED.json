@@ -1,0 +1,7 @@
+{
+ "assertions_passed": true,
+ "smoke_file": "exp85_smoke.json",
+ "spec": "qnlp_private_docs/77_exp85_identity_T3.md (FROZEN 2026-09-17)",
+ "seed": 85000,
+ "n_smoke_epochs": 5
+}

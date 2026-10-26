@@ -1,0 +1,23 @@
+{
+ "gate": "GATE_PURITY_RANGE",
+ "passed": true,
+ "smoke_unit_ckpt": "exp86_ckpt/A3-T2-identity_s82000.json",
+ "n_epochs_checked": 151,
+ "purity_min_observed": 0.4028749735901753,
+ "purity_max_observed": 0.9942379189531009,
+ "valid_range": [
+  0.125,
+  1.0
+ ],
+ "all_in_range": true,
+ "all_positive": true,
+ "k": 3,
+ "dtf_leg": {
+  "description": "inject unnormalized state (scale |0...0> by 1.5); Tr(rho^2) without normalisation exceeds 1.0",
+  "unnormalized_scale": 1.5,
+  "bad_purity": 5.0625,
+  "out_of_range": true,
+  "passed": true
+ },
+ "subsystem": "per-referent register purity at the at_readout stage, averaged over both registers and all test items. For A3 (q=3): purity in [1/2^3, 1] = [0.125, 1.0]."
+}

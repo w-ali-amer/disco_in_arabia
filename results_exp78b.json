@@ -1,0 +1,309 @@
+{
+ "experiment": "exp78b -- budget-matched scaling (doc 69)",
+ "spec": "doc 69, registered 2026-09-03",
+ "bars": {
+  "collapse_is_budget_artifact": false,
+  "scaling_converts": false,
+  "verdict": "nothing_binds",
+  "verdict_desc": "No cell binds under the scaled budget. The collapse is not a budget artifact; doc 63 §24.2 sharpens to architectural.",
+  "bound_cells": []
+ },
+ "confirm_obligation": {
+  "required": false,
+  "reason": "no positives to confirm"
+ },
+ "twice_evaluation_doc69_S5": "The verdict table is subject to the standing twice-evaluation rule (doc 69 §5) before its addendum commits. Any positive here must survive independent re-read before the confirm draw is registered.",
+ "cell_stats": {
+  "n2_T2": {
+   "n": 2,
+   "T": 490.6,
+   "n_params": 120,
+   "heldout_per_seed": [
+    0.5233333333333333,
+    0.5266666666666666,
+    0.5166666666666667,
+    0.5066666666666667,
+    0.5333333333333333
+   ],
+   "mean": 0.5213333333333333,
+   "sd": 0.01016530045465124,
+   "floor_arm": "S-shuffle-n2_T2",
+   "floor_per_seed": [
+    0.48,
+    0.49333333333333335,
+    0.5233333333333333,
+    0.4666666666666667,
+    0.4866666666666667
+   ],
+   "floor_mean": 0.49,
+   "floor_sd": 0.02108185106778919,
+   "floor_bar": 0.5321637021355784,
+   "binds_bar": 0.65,
+   "floor_multiple": 2.0,
+   "binds": false,
+   "binds_detail": {
+    "mean_ge_065": false,
+    "mean_ge_floor_2sd": false
+   }
+  },
+  "n3_T2": {
+   "n": 3,
+   "T": 743.5,
+   "n_params": 180,
+   "heldout_per_seed": [
+    0.6333333333333333,
+    0.5333333333333333,
+    0.5866666666666667,
+    0.5666666666666667,
+    0.5566666666666666
+   ],
+   "mean": 0.5753333333333334,
+   "sd": 0.03768288736283354,
+   "floor_arm": "S-shuffle-n3_T2",
+   "floor_per_seed": [
+    0.44666666666666666,
+    0.46,
+    0.47333333333333333,
+    0.46,
+    0.5566666666666666
+   ],
+   "floor_mean": 0.47933333333333333,
+   "floor_sd": 0.044246782682786964,
+   "floor_bar": 0.5678268986989072,
+   "binds_bar": 0.65,
+   "floor_multiple": 2.0,
+   "binds": false,
+   "binds_detail": {
+    "mean_ge_065": false,
+    "mean_ge_floor_2sd": true
+   }
+  },
+  "n4_T4": {
+   "n": 4,
+   "T": 1523.2,
+   "n_params": 240,
+   "heldout_per_seed": [
+    0.49333333333333335,
+    0.5233333333333333,
+    0.5133333333333333,
+    0.51,
+    0.5133333333333333
+   ],
+   "mean": 0.5106666666666666,
+   "sd": 0.01090361815586407,
+   "floor_arm": "S-shuffle-n4_T4",
+   "floor_per_seed": [
+    0.49666666666666665,
+    0.49333333333333335,
+    0.49333333333333335,
+    0.5166666666666667,
+    0.48
+   ],
+   "floor_mean": 0.496,
+   "floor_sd": 0.013207741837439323,
+   "floor_bar": 0.5224154836748787,
+   "binds_bar": 0.65,
+   "floor_multiple": 2.0,
+   "binds": false,
+   "binds_detail": {
+    "mean_ge_065": false,
+    "mean_ge_floor_2sd": false
+   }
+  },
+  "n5_T4": {
+   "n": 5,
+   "T": 1904.0,
+   "n_params": 300,
+   "heldout_per_seed": [
+    0.5066666666666667,
+    0.5066666666666667,
+    0.5133333333333333,
+    0.46,
+    0.4866666666666667
+   ],
+   "mean": 0.4946666666666667,
+   "sd": 0.021807236311728165,
+   "floor_arm": "S-shuffle-n5_T4",
+   "floor_per_seed": [
+    0.5033333333333333,
+    0.44,
+    0.48,
+    0.45,
+    0.48
+   ],
+   "floor_mean": 0.4706666666666667,
+   "floor_sd": 0.025538641745837254,
+   "floor_bar": 0.5217439501583412,
+   "binds_bar": 0.65,
+   "floor_multiple": 2.0,
+   "binds": false,
+   "binds_detail": {
+    "mean_ge_065": false,
+    "mean_ge_floor_2sd": false
+   }
+  },
+  "n7_T6": {
+   "n": 7,
+   "T": 3655.0,
+   "n_params": 420,
+   "heldout_per_seed": [
+    0.4866666666666667,
+    0.47,
+    0.48333333333333334,
+    0.52,
+    0.49
+   ],
+   "mean": 0.49,
+   "sd": 0.01840893502864545,
+   "floor_arm": "S-shuffle-n7_T6",
+   "floor_per_seed": [
+    0.53,
+    0.49,
+    0.5366666666666666,
+    0.49333333333333335,
+    0.48
+   ],
+   "floor_mean": 0.506,
+   "floor_sd": 0.02553864174583727,
+   "floor_bar": 0.5570772834916745,
+   "binds_bar": 0.65,
+   "floor_multiple": 2.0,
+   "binds": false,
+   "binds_detail": {
+    "mean_ge_065": false,
+    "mean_ge_floor_2sd": false
+   }
+  }
+ },
+ "n_seeds": 5,
+ "n_arms": 5,
+ "n_runs": 50,
+ "scaling_table": {
+  "2": {
+   "n": 2,
+   "target_60n": 120,
+   "lv": 3,
+   "lr": 3,
+   "total_params": 120,
+   "rounding_residual": 0,
+   "wires": 2,
+   "derivation": "params(n) = (120/wires(2))*wires(n) = 60n; realized as Lv=2n-1 verb-block layers via Circuit4(2, 2n-1), readout fixed Lr=3 via Circuit4(2,3); exact at every n in {2,3,4,5,7}; rejected alternative: uniform L=ceil(1.5n) rounds +/-20 params at odd n in arbitrary direction -- not nearest-realizable; readout-fixed resolved: scaling readout would split the 60n budget ambiguously; fixed Lr=3 keeps the committed readout unchanged and places all scaling in the verb blocks where the composition lives"
+  },
+  "3": {
+   "n": 3,
+   "target_60n": 180,
+   "lv": 5,
+   "lr": 3,
+   "total_params": 180,
+   "rounding_residual": 0,
+   "wires": 3,
+   "derivation": "params(n) = (120/wires(2))*wires(n) = 60n; realized as Lv=2n-1 verb-block layers via Circuit4(2, 2n-1), readout fixed Lr=3 via Circuit4(2,3); exact at every n in {2,3,4,5,7}; rejected alternative: uniform L=ceil(1.5n) rounds +/-20 params at odd n in arbitrary direction -- not nearest-realizable; readout-fixed resolved: scaling readout would split the 60n budget ambiguously; fixed Lr=3 keeps the committed readout unchanged and places all scaling in the verb blocks where the composition lives"
+  },
+  "4": {
+   "n": 4,
+   "target_60n": 240,
+   "lv": 7,
+   "lr": 3,
+   "total_params": 240,
+   "rounding_residual": 0,
+   "wires": 4,
+   "derivation": "params(n) = (120/wires(2))*wires(n) = 60n; realized as Lv=2n-1 verb-block layers via Circuit4(2, 2n-1), readout fixed Lr=3 via Circuit4(2,3); exact at every n in {2,3,4,5,7}; rejected alternative: uniform L=ceil(1.5n) rounds +/-20 params at odd n in arbitrary direction -- not nearest-realizable; readout-fixed resolved: scaling readout would split the 60n budget ambiguously; fixed Lr=3 keeps the committed readout unchanged and places all scaling in the verb blocks where the composition lives"
+  },
+  "5": {
+   "n": 5,
+   "target_60n": 300,
+   "lv": 9,
+   "lr": 3,
+   "total_params": 300,
+   "rounding_residual": 0,
+   "wires": 5,
+   "derivation": "params(n) = (120/wires(2))*wires(n) = 60n; realized as Lv=2n-1 verb-block layers via Circuit4(2, 2n-1), readout fixed Lr=3 via Circuit4(2,3); exact at every n in {2,3,4,5,7}; rejected alternative: uniform L=ceil(1.5n) rounds +/-20 params at odd n in arbitrary direction -- not nearest-realizable; readout-fixed resolved: scaling readout would split the 60n budget ambiguously; fixed Lr=3 keeps the committed readout unchanged and places all scaling in the verb blocks where the composition lives"
+  },
+  "7": {
+   "n": 7,
+   "target_60n": 420,
+   "lv": 13,
+   "lr": 3,
+   "total_params": 420,
+   "rounding_residual": 0,
+   "wires": 7,
+   "derivation": "params(n) = (120/wires(2))*wires(n) = 60n; realized as Lv=2n-1 verb-block layers via Circuit4(2, 2n-1), readout fixed Lr=3 via Circuit4(2,3); exact at every n in {2,3,4,5,7}; rejected alternative: uniform L=ceil(1.5n) rounds +/-20 params at odd n in arbitrary direction -- not nearest-realizable; readout-fixed resolved: scaling readout would split the 60n budget ambiguously; fixed Lr=3 keeps the committed readout unchanged and places all scaling in the verb blocks where the composition lives"
+  }
+ },
+ "compute_table": {
+  "rows": {
+   "n2_T2": {
+    "exp76_wall_mean_s": 490.6,
+    "param_scale_factor": 1.0,
+    "exp78b_est_per_run_s": 490.6,
+    "exp78b_est_5seeds_s": 2453.0
+   },
+   "n3_T2": {
+    "exp76_wall_mean_s": 495.7,
+    "param_scale_factor": 1.5,
+    "exp78b_est_per_run_s": 743.5,
+    "exp78b_est_5seeds_s": 3717.8
+   },
+   "n4_T4": {
+    "exp76_wall_mean_s": 761.6,
+    "param_scale_factor": 2.0,
+    "exp78b_est_per_run_s": 1523.2,
+    "exp78b_est_5seeds_s": 7616.0
+   },
+   "n5_T4": {
+    "exp76_wall_mean_s": 761.6,
+    "param_scale_factor": 2.5,
+    "exp78b_est_per_run_s": 1904.0,
+    "exp78b_est_5seeds_s": 9520.0
+   },
+   "n7_T6": {
+    "exp76_wall_mean_s": 1044.3,
+    "param_scale_factor": 3.5,
+    "exp78b_est_per_run_s": 3655.0,
+    "exp78b_est_5seeds_s": 18275.2
+   },
+   "S-shuffle-n2_T2": {
+    "exp76_wall_mean_s": 507.8,
+    "param_scale_factor": 1.0,
+    "exp78b_est_per_run_s": 507.8,
+    "exp78b_est_5seeds_s": 2539.0
+   },
+   "S-shuffle-n3_T2": {
+    "exp76_wall_mean_s": 538.2,
+    "param_scale_factor": 1.5,
+    "exp78b_est_per_run_s": 807.3,
+    "exp78b_est_5seeds_s": 4036.5
+   },
+   "S-shuffle-n4_T4": {
+    "exp76_wall_mean_s": 875.3,
+    "param_scale_factor": 2.0,
+    "exp78b_est_per_run_s": 1750.6,
+    "exp78b_est_5seeds_s": 8753.0
+   },
+   "S-shuffle-n5_T4": {
+    "exp76_wall_mean_s": 908.2,
+    "param_scale_factor": 2.5,
+    "exp78b_est_per_run_s": 2270.5,
+    "exp78b_est_5seeds_s": 11352.5
+   },
+   "S-shuffle-n7_T6": {
+    "exp76_wall_mean_s": 1300.4,
+    "param_scale_factor": 3.5,
+    "exp78b_est_per_run_s": 4551.4,
+    "exp78b_est_5seeds_s": 22757.0
+   }
+  },
+  "total_serial_s": 91020.0,
+  "hours_on_5_workers": 5.06,
+  "t_inclusion_decision": "T>=4 INCLUDED",
+  "decision_rule": "doc 69 §3: include T>=4 iff total on 5 workers < 12h",
+  "note": "exp76 walls were measured under 5-worker contention (doc 63 SS19.4) so no additional contention factor applies. For n=7 the minimum valid T is 6 (n<=T+1), so n7_T6 is the sole n=7 cell -- not a T-axis extension."
+ },
+ "t_inclusion_decision": "T>=4 INCLUDED",
+ "ckpt_dir": "exp78b_ckpt",
+ "bar_constants": {
+  "BINDS_BAR": 0.65,
+  "FLOOR_MULTIPLE": 2.0,
+  "source": "inherited from exp76 (doc 54 SS7, doc 63 SS12); frozen"
+ }
+}

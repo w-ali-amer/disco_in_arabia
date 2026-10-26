@@ -1,0 +1,185 @@
+{
+ "experiment": "exp61",
+ "spec": "qnlp_private_docs/47_exp61_category_capacity.md (0236976, FROZEN)",
+ "platform": "macOS-26.5.2-arm64-arm-64bit",
+ "python": "3.12.13",
+ "torch": "2.13.0",
+ "torch_num_threads": 1,
+ "dataset_sha256": "ae94ab9c31d62778e1c916aa44566a0ec3c8f74b09f4bf3839bab5f331c87b8c",
+ "frozen_ceilings": {
+  "M1_K1": 1.0,
+  "M1_K2": 1.0,
+  "M2_K1": 0.75,
+  "M2_K2": 1.0,
+  "M2w_K1": 0.75,
+  "M2w_K2": 1.0,
+  "M3_K1": 0.6666666666666666,
+  "M3_K2": 0.8888888888888888
+ },
+ "config": {
+  "lr": 0.02,
+  "batch": 8,
+  "epochs": 150,
+  "seeds": 5,
+  "band_halfwidth": 0.05,
+  "cells": [
+   "M1",
+   "M2",
+   "M2w",
+   "M3"
+  ]
+ },
+ "cells": [
+  {
+   "cell": "M1",
+   "floor_mean": 0.49399999999999994,
+   "floor_sd": 0.024198255217175373,
+   "S1": {
+    "heldout_mean": 1.0,
+    "heldout_sd": 0.0,
+    "n_seeds": 5,
+    "ceiling": 1.0,
+    "delta_from_ceiling": 0.0,
+    "above_floor_sd": 20.91059853112272,
+    "clears_floor": true,
+    "saturates_ceiling": true,
+    "gate_met": "5/5",
+    "fourier_resid_3term": 1.9032237874583302e-07,
+    "fourier_resid_5term": 1.6527134788502096e-07
+   },
+   "S2": {
+    "heldout_mean": 1.0,
+    "heldout_sd": 0.0,
+    "n_seeds": 5,
+    "ceiling": 1.0,
+    "delta_from_ceiling": 0.0,
+    "above_floor_sd": 20.91059853112272,
+    "clears_floor": true,
+    "saturates_ceiling": true,
+    "gate_met": "5/5",
+    "fourier_resid_3term": 0.2597919848285602,
+    "fourier_resid_5term": 3.0305081843984283e-07
+   }
+  },
+  {
+   "cell": "M2",
+   "floor_mean": 0.488,
+   "floor_sd": 0.024675674031095673,
+   "S1": {
+    "heldout_mean": 0.6826666666666666,
+    "heldout_sd": 0.049743787998547555,
+    "n_seeds": 5,
+    "ceiling": 0.75,
+    "delta_from_ceiling": -0.06733333333333336,
+    "above_floor_sd": 7.889011113591165,
+    "clears_floor": true,
+    "saturates_ceiling": false,
+    "gate_met": "5/5",
+    "fourier_resid_3term": 2.422151073044887e-07,
+    "fourier_resid_5term": 2.175474842491809e-07
+   },
+   "S2": {
+    "heldout_mean": 0.6466666666666667,
+    "heldout_sd": 0.01855921454276675,
+    "n_seeds": 5,
+    "ceiling": 1.0,
+    "delta_from_ceiling": -0.3533333333333333,
+    "above_floor_sd": 6.430084400803761,
+    "clears_floor": true,
+    "saturates_ceiling": false,
+    "gate_met": "5/5",
+    "fourier_resid_3term": 0.27015968045358596,
+    "fourier_resid_5term": 2.730300410203057e-07
+   }
+  },
+  {
+   "cell": "M2w",
+   "floor_mean": 0.49066666666666664,
+   "floor_sd": 0.030221405217715058,
+   "S1": {
+    "heldout_mean": 0.672,
+    "heldout_sd": 0.030147784145586717,
+    "n_seeds": 5,
+    "ceiling": 0.75,
+    "delta_from_ceiling": -0.07799999999999996,
+    "above_floor_sd": 6.000162203809113,
+    "clears_floor": true,
+    "saturates_ceiling": false,
+    "gate_met": "5/5",
+    "fourier_resid_3term": 2.883326037927958e-07,
+    "fourier_resid_5term": 2.859607222127636e-07
+   },
+   "S2": {
+    "heldout_mean": 0.8506666666666666,
+    "heldout_sd": 0.09747934254098259,
+    "n_seeds": 5,
+    "ceiling": 1.0,
+    "delta_from_ceiling": -0.14933333333333343,
+    "above_floor_sd": 11.912086728150438,
+    "clears_floor": true,
+    "saturates_ceiling": false,
+    "gate_met": "5/5",
+    "fourier_resid_3term": 0.31683014736202036,
+    "fourier_resid_5term": 3.2899054125401506e-07
+   }
+  },
+  {
+   "cell": "M3",
+   "floor_mean": 0.5006666666666667,
+   "floor_sd": 0.012780193008453893,
+   "S1": {
+    "heldout_mean": 0.4806666666666667,
+    "heldout_sd": 0.07518126244099801,
+    "n_seeds": 5,
+    "ceiling": 0.6666666666666666,
+    "delta_from_ceiling": -0.18599999999999994,
+    "above_floor_sd": -1.5649215928719025,
+    "clears_floor": false,
+    "saturates_ceiling": false,
+    "gate_met": "0/5",
+    "fourier_resid_3term": 2.739119073780216e-07,
+    "fourier_resid_5term": 2.5485234789179856e-07
+   },
+   "S2": {
+    "heldout_mean": 0.47800000000000004,
+    "heldout_sd": 0.048967109142543604,
+    "n_seeds": 5,
+    "ceiling": 0.8888888888888888,
+    "delta_from_ceiling": -0.4108888888888888,
+    "above_floor_sd": -1.7735778052548214,
+    "clears_floor": false,
+    "saturates_ceiling": false,
+    "gate_met": "0/5",
+    "fourier_resid_3term": 0.33107869110686156,
+    "fourier_resid_5term": 3.4715039631816325e-07
+   }
+  }
+ ],
+ "verdicts": {
+  "ceiling_violated": false,
+  "capacity_orders_K1": true,
+  "spectrum_relieves_M2": false,
+  "spectrum_relieves_M2w": false,
+  "cells_failing_floor": [
+   "M3/S1",
+   "M3/S2"
+  ],
+  "cells_saturating_ceiling": [
+   "M1/S1",
+   "M1/S2"
+  ],
+  "arm_validity_S1_closes_at_3": true,
+  "arm_validity_S2_implements_K2": true
+ },
+ "meta_notes": {
+  "headline": "The derived ceiling was NEVER violated, so doc 47 SS3 survives its falsification test. But measured accuracy falls further BELOW the ceiling as demand grows, so beyond m=1 the binding limit is OPTIMISATION, not representation -- which is exactly the separation SS4's instrument was built to make.",
+  "M3_at_floor": "At m=3 BOTH arms sit at the S-shuffle floor (0.4807/0.4780 vs floor 0.5007), so M3 cells FAIL the floor precondition and are reported as FAILED, not as 'below ceiling'.",
+  "spectrum_relieves": "Cell-dependent and registered as such: S2 lifts M2w from 0.6720 to 0.8507 but LOWERS M2 (0.6827 -> 0.6467). Widening the spectrum raises what is representable; whether it is TRAINABLE depends on band spacing. doc 47 SS15 warned that minimum-K is a representational statement, not a recipe -- this measures that.",
+  "scope": "doc 47 SS11: no classical comparator, one task family, simulation. The ceiling is a property of the ENCODING's function class (SS14), not of quantumness. Still not 'meaning' -- the category is constructed."
+ },
+ "git_note": {
+  "exp42_paths": [],
+  "n_untracked": 239
+ },
+ "wall_time_sec": 0.04342007637023926
+}

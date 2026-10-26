@@ -1,0 +1,608 @@
+{
+ "figure": "fig_encoding_pipeline.svg",
+ "produced_by": "encoding_pipeline_figure.py",
+ "what_is_plotted": "a five-panel left-to-right walk of ONE committed exp69 item through the encoding pipeline: (a) the Arabic two-event text with roles and the queried verb, (b) the two story referents among all 24 human referents in the normalised PC1-PC2 plane, (c) the three referent encodings of the same two coordinates (FA single angle, F2 product register, E-in entangled register), (d) all 24 referents coloured by the E-in concurrence under the eps-map, (e) the circuit as run, with the measured mean-wire-purity trace",
+ "encoding": {
+  "panel_b_x": "p1",
+  "panel_b_y": "p2",
+  "panel_b_colour": "identity only -- 2 categorical slots for the two story referents, all other referents muted grey",
+  "panel_c_status": "dashed border + written label = pre-registered and NOT YET RUN; solid = as run at exp69",
+  "panel_d_colour": "sequential single-hue blue ramp, concurrence 0 -> 1 under the eps-map",
+  "panel_d_identity": "the two story referents carry a neutral ink ring and a direct Arabic label, NOT their categorical hue -- a magnitude fill and an identity fill cannot share a mark",
+  "panel_e_annotation": "measured mean wire purity per stage",
+  "panel_d_mark_edge": "every dot carries a 0.6px INK_2 hairline edge. This is the contrast relief for the light end of the sequential ramp on a near-white surface, and it is what keeps overlapping dots separable; it is not a border used in place of a gap",
+  "anti_patterns_checked": "dataviz references/anti-patterns.md, read against the finished figure: no dual axis, colour follows the entity across panels, 2 categorical hues, palette validated by script, one-hue sequential with a scale legend, no status colours, hairline solid grid, selective direct labels (never a number on every point), table view shipped, no texture, monospace only where numbers align in columns"
+ },
+ "palette": {
+  "surface": "#fcfcfb",
+  "referents": {
+   "الرجل": "#2a78d6",
+   "الباحث": "#eb6834"
+  },
+  "sequential": {
+   "hue": "blue",
+   "steps_100_to_700": [
+    "#cde2fb",
+    "#b7d3f6",
+    "#9ec5f4",
+    "#86b6ef",
+    "#6da7ec",
+    "#5598e7",
+    "#3987e5",
+    "#2a78d6",
+    "#256abf",
+    "#1c5cab",
+    "#184f95",
+    "#104281",
+    "#0d366b"
+   ]
+  },
+  "validator": "node scripts/validate_palette.js \"#2a78d6,#eb6834\" --mode light --pairs all -> ALL CHECKS PASS (CVD dE 24.7 protan, normal-vision dE 33.6, both slots >= 3:1 on the surface)"
+ },
+ "sources": {
+  "angles_coordinates_concurrences": "diagnostic_encoding_entanglement.json",
+  "frozen_vectors_and_FA_angles": "exp42_noun_embeddings.json",
+  "story_item": "stories_exp69_QA.json",
+  "purity_trace_and_parameter_count": "results_exp69.json",
+  "kernel_factorisation_check": "diagnostic_kernel_factorisation.json",
+  "dataset_sha256_of_story_file": "2b85822b544571969fd40cab12b03a4ac256b08aee914d2b9643b856a6308c96",
+  "embeddings_sha256": "00c1ecffcaf05b38df082f8a3cbed1d013bddb3e39bc00adf1c2513b4ea674ac"
+ },
+ "panel_a_story": {
+  "source": "stories_exp69_QA.json",
+  "item_id": "train_p2_00002_a",
+  "twin_id": "train_p2_00002_b",
+  "split": "train",
+  "T": 2,
+  "qtype": "Q69",
+  "query_index": 2,
+  "queried_verb": "رفع",
+  "category": "nonoccupational",
+  "category_gloss": "non-occupational state",
+  "cast": [
+   "الباحث",
+   "الرجل"
+  ],
+  "bearer_in_cast": "الرجل",
+  "nonbearer_in_cast": "الباحث",
+  "glosses_shown": {
+   "الرجل": "man",
+   "الباحث": "researcher"
+  },
+  "gloss_source": "stories_exp69_QA.json / stories_exp69_QB.json meta.category.glosses (committed generator manifests)",
+  "events": [
+   {
+    "verb": "سأل",
+    "agent": "الباحث",
+    "patient": "الرجل",
+    "surface_order": "SVO",
+    "sentence": "الباحث سأل الرجل"
+   },
+   {
+    "verb": "رفع",
+    "agent": "الرجل",
+    "patient": "الباحث",
+    "surface_order": "VSO",
+    "sentence": "رفع الرجل الباحث"
+   }
+  ],
+  "question_surface": "الذي رفع هل هو المميز",
+  "answer": "yes",
+  "twin_answer": "no",
+  "twin_construction": "agent and patient exchanged INSIDE the queried event only; the other event is byte-identical and the question surface is identical, so any function of the cast alone scores exactly 0.500 (doc 55 SS4.2)"
+ },
+ "panel_b_coordinates": {
+  "formula": "p_k(r) = PC_k(r) / max_{r' in the 24 humans} |PC_k(r')|  in [-1, 1]; PCA over all 44 referents, sign-pinned (doc 55 SS4.4)",
+  "source": "diagnostic_encoding_entanglement.json (per_noun p1, p2)",
+  "n_points": 24,
+  "story_referents": {
+   "الرجل": {
+    "p1": -0.9372212871519693,
+    "p2": 0.7952469775983478
+   },
+   "الباحث": {
+    "p1": -0.9999999441979489,
+    "p2": -0.7395357545345439
+   }
+  },
+  "FA_provenance_note": "the FA angle shown in panel (c) is atan2(y, x) on the frozen UNIT-NORMED exp42 vec2 plane, not atan2(p2, p1) on the plane plotted here; the two register maps do use p as plotted"
+ },
+ "panel_c_encodings": [
+  {
+   "variant": "FA -- single angle, one wire per referent",
+   "status": "as run at exp69 (arms A0, R1-A, R2-A)",
+   "formula": "phi(r) = atan2(y, x) on the frozen exp42 vec2",
+   "source": "exp42_noun_embeddings.json angle (identical to diagnostic_encoding_entanglement.json per_noun.frozen_angle)",
+   "values": {
+    "الرجل": 2.3589839892285855,
+    "الباحث": -2.4274742817340624
+   }
+  },
+  {
+   "variant": "F2 -- product register, two wires, two RY, no link",
+   "status": "as run at exp69 (arms R1-W, R2-W)",
+   "formula": "theta_k = (p_k + 1) * pi   (instrument_sb_bounds.SCALINGS['full'])",
+   "source": "recomputed here from diagnostic_encoding_entanglement.json per_noun p1, p2",
+   "values": {
+    "الرجل": {
+     "theta_1": 0.19722514308519645,
+     "theta_2": 5.639934716202249,
+     "concurrence": 0.061941237087596086
+    },
+    "الباحث": {
+     "theta_1": 1.7530731376277185e-07,
+     "theta_2": 0.8182725600770855,
+     "concurrence": 6.974023732419556e-08
+    }
+   },
+   "dead_zone_note": "الباحث has p1 = -0.9999999442, so theta_1 = 1.75e-07 and its concurrence under this map is 6.97e-08 -- a normalisation extreme on a sin dead zone, structural, not semantic"
+  },
+  {
+   "variant": "E-in -- entangled register, RY on q0 + controlled-RY q0->q1",
+   "status": "PRE-REGISTERED for doc 56 -- NOT YET RUN; no accuracy is claimed for it on this figure",
+   "formula": "theta_k = p_k * (pi - 2 eps) / 2 + pi/2, eps = pi/6 -> theta in [pi/6, 5pi/6]",
+   "state": "|psi> = cos(t1/2)|00> + sin(t1/2)cos(t2/2)|10> + sin(t1/2)sin(t2/2)|11> (RY(t1) on q0, CRY(t2) q0->q1); concurrence = |sin t1|*|sin(t2/2)| (closed form)",
+   "source": "diagnostic_encoding_entanglement.json (eps_map; concurrences recomputed here and asserted equal to the committed values to < 1e-12)",
+   "values": {
+    "الرجل": {
+     "theta_1": 0.5893404899600309,
+     "theta_2": 2.4035770143323822,
+     "concurrence": 0.5183987184933675
+    },
+    "الباحث": {
+     "theta_1": 0.52359883403407,
+     "theta_2": 0.7963562956239939,
+     "concurrence": 0.1938698496132106
+    }
+   },
+   "design_consequence": "E-in must run on the eps-map, WITH a map-matched product twin arm (same eps-map, no entangler) so the entanglement contrast is not confounded with the angle map; A0 anchors tie exp70 to exp69 on the old map"
+  }
+ ],
+ "panel_d_entanglement": {
+  "quantity": "concurrence of one referent's own two-qubit register",
+  "closed_form": "C(r) = |sin theta_1| * |sin(theta_2 / 2)|",
+  "map": "theta = p*(pi-2*eps)/2 + pi/2, eps=pi/6 -> theta in [pi/6, 5pi/6]; provable floor sin(eps)*sin(eps/2)... computed per-noun below",
+  "source": "diagnostic_encoding_entanglement.json",
+  "n_points": 24,
+  "eps_map_stats": {
+   "min": 0.18983489181010252,
+   "median": 0.5183987184933675,
+   "max": 0.8818824613477051,
+   "n_below_0.05": 0,
+   "argmin": "الصحفي",
+   "argmax": "الولد"
+  },
+  "registered_map_stats": {
+   "min": 2.133677516132565e-08,
+   "median": 0.46165484978716037,
+   "max": 0.9868372414454107,
+   "n_below_0.05": 4,
+   "mechanism": "normalisation extremes (|p|=1) land exactly on sin dead zones; structural, not semantic"
+  },
+  "story_referents": {
+   "الرجل": {
+    "concurrence_eps_map": 0.5183987184933675,
+    "rank_of_24_ascending": 13
+   },
+   "الباحث": {
+    "concurrence_eps_map": 0.1938698496132106,
+    "rank_of_24_ascending": 2
+   }
+  },
+  "all_24": {
+   "الطالب": {
+    "p1": -0.9308603981235838,
+    "p2": 0.17949739420851907,
+    "concurrence_eps_map": 0.4324241422860955,
+    "concurrence_registered_map": 0.2069950371144542,
+    "theta_eps": [
+     0.5960015973739895,
+     1.758765558456228
+    ],
+    "theta_registered": [
+     0.21720846532707225,
+     3.705500348573788
+    ],
+    "frozen_angle_FA": 2.9193353486066616
+   },
+   "الرجل": {
+    "p1": -0.9372212871519693,
+    "p2": 0.7952469775983478,
+    "concurrence_eps_map": 0.5183987184933675,
+    "concurrence_registered_map": 0.061941237087596086,
+    "theta_eps": [
+     0.5893404899600309,
+     2.4035770143323822
+    ],
+    "theta_registered": [
+     0.19722514308519645,
+     5.639934716202249
+    ],
+    "frozen_angle_FA": 2.3589839892285855
+   },
+   "الولد": {
+    "p1": -0.4012976435678019,
+    "p2": 1.0000000142636707,
+    "concurrence_eps_map": 0.8818824613477051,
+    "concurrence_registered_map": 2.133677516132565e-08,
+    "theta_eps": [
+     1.1505584171497292,
+     2.6179938929283755
+    ],
+    "theta_registered": [
+     1.8808789246542912,
+     6.283185351990229
+    ],
+    "frozen_angle_FA": 1.9006956253446787
+   },
+   "المدير": {
+    "p1": -0.8224030109995552,
+    "p2": -0.1872261533334557,
+    "concurrence_eps_map": 0.41338807004463546,
+    "concurrence_registered_map": 0.5067061786321311,
+    "theta_eps": [
+     0.7095779075794537,
+     1.374733557504143
+    ],
+    "theta_registered": [
+     0.5579373959434648,
+     2.5534043457175324
+    ],
+    "frozen_angle_FA": -2.880858229204074
+   },
+   "المعلم": {
+    "p1": -0.9469518820576186,
+    "p2": -0.14610335675669303,
+    "concurrence_eps_map": 0.3562999224350096,
+    "concurrence_registered_map": 0.161535783111057,
+    "theta_eps": [
+     0.5791506348031488,
+     1.4177972493776847
+    ],
+    "theta_registered": [
+     0.1666555776145503,
+     2.6825954213381578
+    ],
+    "frozen_angle_FA": -2.962704356198908
+   },
+   "الطبيب": {
+    "p1": -0.8598313733140952,
+    "p2": 0.2068995480061164,
+    "concurrence_eps_map": 0.48423935741952134,
+    "concurrence_registered_map": 0.403944644712245,
+    "theta_eps": [
+     0.6703830182183683,
+     1.7874610268105846
+    ],
+    "theta_registered": [
+     0.44035272786020874,
+     3.791586753636857
+    ],
+    "frozen_angle_FA": 2.8667217007979224
+   },
+   "العامل": {
+    "p1": -0.4833086346707837,
+    "p2": 0.29346146563954445,
+    "concurrence_eps_map": 0.7058281649267004,
+    "concurrence_registered_map": 0.8943911915815815,
+    "theta_eps": [
+     1.0646767080954809,
+     1.8781084549831921
+    ],
+    "theta_registered": [
+     1.6232337974915456,
+     4.063529038154679
+    ],
+    "frozen_angle_FA": 2.523115359874012
+   },
+   "المهندس": {
+    "p1": -0.7330468537391569,
+    "p2": -0.4317864044488737,
+    "concurrence_eps_map": 0.38179656257958716,
+    "concurrence_registered_map": 0.5791354020987955,
+    "theta_eps": [
+     0.8031514566468808,
+     1.1186306614160522
+    ],
+    "theta_registered": [
+     0.8386580431457462,
+     1.7850956574532602
+    ],
+    "frozen_angle_FA": -2.5373886680819235
+   },
+   "الشرطي": {
+    "p1": -0.5334203741483019,
+    "p2": 0.6169832219410445,
+    "concurrence_eps_map": 0.7589668562169954,
+    "concurrence_registered_map": 0.5628795889624552,
+    "theta_eps": [
+     1.0121998172284217,
+     2.2168996459409454
+    ],
+    "theta_registered": [
+     1.4658031248903691,
+     5.079902611027939
+    ],
+    "frozen_angle_FA": 2.2063780631352197
+   },
+   "الكاتب": {
+    "p1": -0.9173395011331273,
+    "p2": -0.7150221438138392,
+    "concurrence_eps_map": 0.22893525421497665,
+    "concurrence_registered_map": 0.11114355088633543,
+    "theta_eps": [
+     0.6101606475923769,
+     0.8220268887417025
+    ],
+    "theta_registered": [
+     0.25968561598223455,
+     0.8952843394302112
+    ],
+    "frozen_angle_FA": -2.401371125520481
+   },
+   "الطباخ": {
+    "p1": -0.3349717305391408,
+    "p2": 0.22332517022745052,
+    "concurrence_eps_map": 0.7369844746811284,
+    "concurrence_registered_map": 0.8156893643785113,
+    "theta_eps": [
+     1.2200147508542216,
+     1.804661898177646
+    ],
+    "theta_registered": [
+     2.0892479257677685,
+     3.843189367738042
+    ],
+    "frozen_angle_FA": 2.478326362944799
+   },
+   "الجندي": {
+    "p1": -0.9910980683380753,
+    "p2": -0.1423452106601229,
+    "concurrence_eps_map": 0.33149868826073203,
+    "concurrence_registered_map": 0.02726651186038023,
+    "theta_eps": [
+     0.5329208566355856,
+     1.421732770767052
+    ],
+    "theta_registered": [
+     0.027966243111860876,
+     2.6944019855062598
+    ],
+    "frozen_angle_FA": -2.9748328641527593
+   },
+   "الفلاح": {
+    "p1": -0.5199381054039569,
+    "p2": 0.5235993618825159,
+    "concurrence_eps_map": 0.7460244701893285,
+    "concurrence_registered_map": 0.6790803486321565,
+    "theta_eps": [
+     1.0263184160420744,
+     2.1191082963663685
+    ],
+    "theta_registered": [
+     1.5081589213313267,
+     4.786528562304208
+    ],
+    "frozen_angle_FA": 2.2737187177748557
+   },
+   "الحارس": {
+    "p1": -0.4553373105122751,
+    "p2": -0.05226618784795339,
+    "concurrence_eps_map": 0.6108070478568408,
+    "concurrence_registered_map": 0.9868372414454107,
+    "theta_eps": [
+     1.093968210257997,
+     1.5160633028701385
+    ],
+    "theta_registered": [
+     1.711108303979095,
+     2.9773935818155186
+    ],
+    "frozen_angle_FA": -3.007869916786299
+   },
+   "اللاعب": {
+    "p1": -0.9236916037746976,
+    "p2": -0.34698041538768487,
+    "concurrence_eps_map": 0.322194383753531,
+    "concurrence_registered_map": 0.2030372656497307,
+    "theta_eps": [
+     0.603508741261175,
+     1.2074392854877347
+    ],
+    "theta_registered": [
+     0.2397298969886291,
+     2.0515215296683076
+    ],
+    "frozen_angle_FA": -2.7268799326585578
+   },
+   "الموظف": {
+    "p1": -0.5322936097658126,
+    "p2": 0.41128118119573237,
+    "concurrence_eps_map": 0.71443410972747,
+    "concurrence_registered_map": 0.7943689682950265,
+    "theta_eps": [
+     1.01337976213054,
+     2.0014889725963116
+    ],
+    "theta_registered": [
+     1.469342959596724,
+     4.433670590994039
+    ],
+    "frozen_angle_FA": 2.405728492100894
+   },
+   "الصحفي": {
+    "p1": -0.890210201317719,
+    "p2": -0.8809472581587713,
+    "concurrence_eps_map": 0.18983489181010252,
+    "concurrence_registered_map": 0.06286245896626977,
+    "theta_eps": [
+     0.6385703839247509,
+     0.6482705153176742
+    ],
+    "theta_registered": [
+     0.3449148249793563,
+     0.3740152191581263
+    ],
+    "frozen_angle_FA": -2.2823505050786133
+   },
+   "السائق": {
+    "p1": -0.4476011515090463,
+    "p2": 0.6094946665018375,
+    "concurrence_eps_map": 0.7969099813211796,
+    "concurrence_registered_map": 0.5678724452577245,
+    "theta_eps": [
+     1.1020694970218459,
+     2.209057649023008
+    ],
+    "theta_registered": [
+     1.7354121642706413,
+     5.0563766202741265
+    ],
+    "frozen_angle_FA": 2.1305595896563645
+   },
+   "المسافر": {
+    "p1": -0.16898674386735085,
+    "p2": 0.606060878439962,
+    "concurrence_eps_map": 0.8785054408419388,
+    "concurrence_registered_map": 0.2936819956505439,
+    "theta_eps": [
+     1.3938338224323201,
+     2.2054617945732837
+    ],
+    "theta_registered": [
+     2.6107051405020636,
+     5.045589056924954
+    ],
+    "frozen_angle_FA": 1.8043675769528034
+   },
+   "الضابط": {
+    "p1": -0.7927718736003513,
+    "p2": 0.14880196335459084,
+    "concurrence_eps_map": 0.5127986402427052,
+    "concurrence_registered_map": 0.5895244218211636,
+    "theta_eps": [
+     0.7406075621030699,
+     1.72662137843307
+    ],
+    "theta_registered": [
+     0.6510263595143134,
+     3.6090678085043137
+    ],
+    "frozen_angle_FA": 2.925064127816676
+   },
+   "الباحث": {
+    "p1": -0.9999999441979489,
+    "p2": -0.7395357545345439,
+    "concurrence_eps_map": 0.1938698496132106,
+    "concurrence_registered_map": 6.974023732419556e-08,
+    "theta_eps": [
+     0.52359883403407,
+     0.7963562956239939
+    ],
+    "theta_registered": [
+     1.7530731376277185e-07,
+     0.8182725600770855
+    ],
+    "frozen_angle_FA": -2.4274742817340624
+   },
+   "القائد": {
+    "p1": -0.9819531845496421,
+    "p2": -0.4325532722008253,
+    "concurrence_eps_map": 0.27376360792094256,
+    "concurrence_registered_map": 0.044080929011910686,
+    "theta_eps": [
+     0.5424973565448103,
+     1.117827599384117
+    ],
+    "theta_registered": [
+     0.05669574283953519,
+     1.7826864713574544
+    ],
+    "frozen_angle_FA": -2.6650241508676973
+   },
+   "الصياد": {
+    "p1": -0.4166803280825921,
+    "p2": -0.045570959715705725,
+    "concurrence_eps_map": 0.6253798270172174,
+    "concurrence_registered_map": 0.9634632199016896,
+    "theta_eps": [
+     1.134449707595011,
+     1.5230745293749308
+    ],
+    "theta_registered": [
+     1.8325527959901369,
+     2.998427261329896
+    ],
+    "frozen_angle_FA": -3.0141130188409875
+   },
+   "المريض": {
+    "p1": -0.7183416873809556,
+    "p2": 0.5930443245983612,
+    "concurrence_eps_map": 0.6493624549953257,
+    "concurrence_registered_map": 0.46165484978716037,
+    "theta_eps": [
+     0.8185506708471278,
+     2.1918308912653406
+    ],
+    "theta_registered": [
+     0.8848556857464872,
+     5.004696347001126
+    ],
+    "frozen_angle_FA": 2.3726857684351157
+   }
+  }
+ },
+ "panel_e_circuit": {
+  "arm_drawn": "R2-W (T = 2, F2 register, 4 wires)",
+  "n_params": 264,
+  "n_params_source": "results_exp69.json arms.R2-W.n_params",
+  "stages": [
+   "1 intro -- RY(theta_1) on wire 2w and RY(theta_2) on wire 2w+1, once per referent, before event 1",
+   "2 event 1 block -- the verb's trained 4-wire block on the agent register followed by the patient register",
+   "3 event 2 block -- the same six blocks, reused, on the same persistent referent wires",
+   "4 inverse question block -- block(queried verb) applied as its adjoint on the queried wires",
+   "5 readout -- two shared trained effects Q_pos, Q_neg applied as adjoints, then P(queried wires == |0000>), softmax over log p; binary"
+  ],
+  "code_of_record": "exp68_run.F2Model.story_values (register arms) / exp42_models.QuantumStoryModel.story_values (angle arms)",
+  "purity_trace": {
+   "quantity": "mean single-wire purity Tr rho^2 over the 4 wires",
+   "source": "results_exp69.json purity_contrast_doc55_SS19_4.R2-W.cells.q2_correct.mean_wire_purity (n = 134)",
+   "status": "DESCRIPTIVE -- doc 55 SS18.3 / SS19.4; no criterion reads it",
+   "after_intro": 0.9999999867668793,
+   "after_event1": 0.7690551391066011,
+   "after_event2": 0.6372017425610058,
+   "at_readout": 0.6894273725685789,
+   "mean_abs_gap_readout_minus_after_event1_q1": 0.15913378844658535,
+   "mean_abs_gap_readout_minus_after_event1_q2": 0.08162471542755763,
+   "gap_source": "results_exp69.json purity_contrast_doc55_SS19_4.R2-W.readout_minus_after_event1_abs (n = 150 per cell)"
+  }
+ },
+ "footer_numbers": {
+  "kernel_factorisation_claim": "doc 52 SS1.1: <psi(theta)|psi(theta')> = prod_i cos((theta_i-theta'_i)/2) for per-wire RY product encodings; classical O(n)",
+  "max_abs_deviation_sim_complex64": 2.079534144883155e-07,
+  "max_abs_deviation_float64": 3.3306690738754696e-16,
+  "pairs_per_row": 200,
+  "n_qubits_rows": [
+   1,
+   2,
+   3,
+   5,
+   8,
+   12
+  ],
+  "source": "diagnostic_kernel_factorisation.json"
+ },
+ "caveats_shipped_on_the_figure": [
+  "product-state encodings are classically simulable; the kernel factorisation check is committed and quoted on the figure",
+  "E-in is pre-registered for doc 56 and has NOT been run; no accuracy is claimed for it",
+  "no exp69 accuracy is displayed on this figure at all -- it is a mechanism figure, and the results figure is fig_capacity_validation",
+  "the purity trace is DESCRIPTIVE; no registered criterion reads it",
+  "the FA angle is atan2 on the frozen unit-normed vec2 plane, not on the p-plane drawn in panels (b) and (d)",
+  "simulation throughout; no quantum-advantage reading is licensed"
+ ],
+ "arabic_rendering": {
+  "method": "presentation forms FE70-FEFC derived from unicodedata decompositions, standard dual/right joining with the lam-alef ligature, then reversed into visual order",
+  "font": "/System/Library/Fonts/GeezaPro.ttc",
+  "svg_fonttype": "path"
+ }
+}

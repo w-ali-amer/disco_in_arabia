@@ -1,0 +1,383 @@
+{
+ "experiment": "exp69 smoke / validity assertions (doc 55 SS7.1-SS7.4, SS18.3)",
+ "spec": "qnlp_private_docs/55_exp69_reunion.md (da4b8fe, REGISTERED through SS19.7)",
+ "datasets": {
+  "A": {
+   "path": "stories_exp69_QA.json",
+   "sha256": "2b85822b544571969fd40cab12b03a4ac256b08aee914d2b9643b856a6308c96"
+  },
+  "B": {
+   "path": "stories_exp69_QB.json",
+   "sha256": "9fc33eb851397a82957ec16e9e90c52228a1cf2aad109fff6b3f164ff7d87b01"
+  },
+  "exp68": {
+   "path": "stories_exp68_WN.json",
+   "sha256": "9a0b990088a89f5c2697da6f470891a9472fe8e3f4fc2a9d94b81911d54a6ec1"
+  }
+ },
+ "platform": "macOS-26.5.2-arm64-arm-64bit",
+ "python": "3.12.13",
+ "torch": "2.13.0",
+ "numpy": "2.5.1",
+ "features": {
+  "runtime_source": "instrument_sb_bounds.load_raw(fit_on='all44') for PC1/PC2; exp42_compiler.load_embeddings() for FA",
+  "bitmatch_vs_independent_recomputation": 0.0,
+  "bitmatch_is_exact": true,
+  "norm_divisors": [
+   8.669494516224397,
+   10.160404144924657
+  ],
+  "norm_divisors_vs_diagnostic_max_abs": 0.0,
+  "sign_pin_applied": [
+   -1,
+   1
+  ],
+  "FA_runtime_vs_atan2_PC2_PC1_max_rad": 3.9968028886505635e-15,
+  "unit_raw_pca_vs_frozen_vec2_max_abs": 3.7192471324942744e-15,
+  "theta0_range": [
+   0.0,
+   2.6107051108774497
+  ],
+  "theta1_range": [
+   0.3740152586339388,
+   6.283185307179586
+  ],
+  "nondegeneracy": {
+   "raw_radius_mean": 0.8627844740072387,
+   "raw_radius_sd": 0.25124808926972175,
+   "raw_radius_min": 0.4025918566208062,
+   "raw_radius_max": 1.2524146040715955,
+   "frozen2d_radius_sd": 8.34676118839486e-17,
+   "pearson_p1_p2": 0.5842698525485021,
+   "poly_fit_of_p2_on_p1": {
+    "deg1_max_resid": 0.9931869488068175,
+    "deg3_max_resid": 1.0176632745957925,
+    "deg5_max_resid": 0.980393118085943
+   },
+   "verdict": "p2 is NOT a function of p1 on this inventory: a degree-5 polynomial leaves a max residual of 0.980 on a feature whose range is [-1, 1], and the radius has sd 0.251 where the frozen2d family has sd 8.3e-17 (it is exactly unit by construction). doc 54 SS3.1's degeneracy -- the one that made the frozen2d version of this experiment a reparameterisation -- does not hold on the raw family, so exp68 is width-as-INFORMATION."
+  },
+  "instrument_FA_note": "doc 54 SS6.2 writes FA as atan2(PC2, PC1) -- the UNNORMALISED components, i.e. the existing exp42 map -- and that is what this runtime uses, asserted above to 4.0e-15 rad. instrument_sb_bounds.features() computes FA as atan2(p2, p1) on its NORMALISED coords, which on the raw family is a different angle (max difference 7.9e-02 rad). The BOUND is unaffected and the two agree exactly at 148/160: the normalisation is a positive-diagonal linear map of the plane, which preserves the cyclic order of the referents, and a d = 3 single-angle bound depends only on that order. diagnostic_sb_bounds.json carries both computations and they match -- raw FA per-twin 163/190 equals frozen2d FA per-twin 163/190 for tertiary, and the non-occupational target reads 148/160 under the raw-family FA (target_selection.table) and 148/160 under the frozen2d FA, which IS the exp42 map (membership_reconstruction). A TRAINED CIRCUIT is not invariant to the rescaling even though the bound is -- the same reasoning doc 54 SS3.2 gives for pinning the PC signs -- so the doc's literal formula governs the runtime.",
+  "wazn": {
+   "fit_protocol": "exp65_featurizer.angles_for(train_nouns=all 24 humans, all_nouns=all 24 humans) -- doc 55 SS18.4 inventory-wide fit",
+   "n_distinct_angles": 20,
+   "sd": 1.7782664338124867,
+   "range": [
+    -2.9853468891692128,
+    2.0210197706546578
+   ],
+   "bearer_mean": -2.7191316468147106,
+   "nonbearer_mean": 0.587025842562477,
+   "n_bearers": 9,
+   "n_nonbearers": 15,
+   "membership_source": "exp65_featurizer.FAAIL -- doc 51 SS7, user-confirmed; imported, never re-typed",
+   "leakage_note": "doc 55 SS18.4: an inventory-wide fit is NOT leakage here because exp69 holds out PAIRINGS, not nouns. exp65's train-only rule existed because exp65 held out NOUNS. Stated to preempt the doc-42 failure class."
+  }
+ },
+ "word_order": {
+  "derivations_differ": true,
+  "n_event_renderings_checked": 8,
+  "swap_present_in_VSO_only": true,
+  "denotation_max_abs_diff_SVO_vs_VSO": 0.0,
+  "drop_swap_changes_state_max_abs": 1.1357511281967163,
+  "swap_free_VSO_equals_role_reversed_max_abs": 0.0,
+  "archived_source": "archive/01_parser_pipeline/arabic_dep_reader.py:130-138 (the two verb boxes), :167-180 (_vso and its Swap)",
+  "verdict": "SS7.3 DISCHARGED as DERIVATION-DIFFERS / DENOTATION-EQUAL, and the reconciliation is stated rather than buried. The compiled derivations differ -- the VSO reduction carries `Swap(N.l, N)` and the SVO reduction does not -- so the compiler genuinely consults the surface, which is the null-instrument failure SS7.3 exists to catch. The DENOTATIONS are equal (max diff 0.0e+00), which is not a defect but doc 55 SS16.1-Q2's USER-CONFIRMED premise that the two orders are truth-conditionally identical, and which is REQUIRED by SS4.7 ('the same six blocks, reused'), by SS5's 12/72 conditioning-group arithmetic (no surface-order factor) and by SS6.1 (A0 must reproduce exp68 bit-exactly on a dataset that already contains both orders). The Swap is LOAD-BEARING and that is measured, not argued: dropping it moves the state by 1.136 and yields EXACTLY the role-reversed circuit (diff 0.0e+00) -- without the Swap, the VSO clause would say the object did it. CONSEQUENCE FOR THE CLAIM, carried: the circuit is invariant to the alternation by construction, so doc 55 SS6.9's per-surface-order accuracy is a DATA-COMPOSITION statistic and is not evidence about word-order processing. ORCHESTRATOR REVIEW ITEM."
+ },
+ "fourier_closure": {
+  "per_arm": {
+   "A0": {
+    "resid_3term": 1.8439773552536565e-07,
+    "T": 1,
+    "closes_at_3": true,
+    "basis": "u(theta) = (1, cos, sin)"
+   },
+   "R1-A": {
+    "resid_3term": 1.8602389145749854e-07,
+    "T": 1,
+    "closes_at_3": true,
+    "basis": "u(theta) = (1, cos, sin)"
+   },
+   "R2-A": {
+    "resid_3term": 1.7035031907308706e-07,
+    "T": 2,
+    "closes_at_3": true,
+    "basis": "u(theta) = (1, cos, sin)"
+   },
+   "R1-M": {
+    "resid_3term": 2.0101775066727612e-07,
+    "T": 1,
+    "closes_at_3": true,
+    "basis": "u(theta) = (1, cos, sin)"
+   },
+   "R2-M": {
+    "resid_3term": 2.288445863918298e-07,
+    "T": 2,
+    "closes_at_3": true,
+    "basis": "u(theta) = (1, cos, sin)"
+   },
+   "R1-W": {
+    "resid_3term_theta0_only": 0.07327709682694002,
+    "resid_9dim_product_basis": 5.81694342971506e-08,
+    "output_change_under_theta1_perturbation": 0.0027984529733657837,
+    "T": 1,
+    "closes_at_3": false,
+    "basis": "u(theta0) (x) u(theta1), 12 x 12 grid over [0, 2pi)"
+   },
+   "R2-W": {
+    "resid_3term_theta0_only": 0.13591545255948068,
+    "resid_9dim_product_basis": 1.1601592941890004e-07,
+    "output_change_under_theta1_perturbation": 0.04769286513328552,
+    "T": 2,
+    "closes_at_3": false,
+    "basis": "u(theta0) (x) u(theta1), 12 x 12 grid over [0, 2pi)"
+   }
+  },
+  "T2_assertion_doc55_SS7_2": "THE LOAD-BEARING ONE. The T = 2 arms close in the SAME basis as their T = 1 counterparts -- 3-term for R2-A / R2-M, the 9-dim product basis for R2-W. If a T = 2 arm had needed a HIGHER-degree basis, the build would have re-uploaded a referent angle somewhere (a second state prep, or a feature-dependent gate inside an event block), doc 55 SS5's 'T does not multiply the coefficient count' would be FALSE for this build, and the arm would not be admissible. Measured, not assumed.",
+  "coefficient_budget": {
+   "angle_arms_per_referent": 3,
+   "angle_arms_joint_n2": 9,
+   "register_arms_per_referent": 9,
+   "register_arms_joint_n2": 81,
+   "identical_at_T1_and_T2": true,
+   "note": "doc 55 SS5: referents are introduced ONCE as a single RY per qubit, so the output stays a trigonometric polynomial of the SAME degree in the SAME angles at T = 2. What T multiplies is circuit DEPTH and the number of CONDITIONING GROUPS, not the coefficient budget."
+  }
+ },
+ "copy_verification": {
+  "max_abs_diff": {
+   "R2-A": 0.0,
+   "R2-W": 0.0
+  },
+  "exact_zero": true,
+  "note": "doc 55 SS4.7 / SS7.4: with event (3 - q) suppressed and the query fixed to the surviving event, the T = 2 forward pass reproduces the T = 1 pipeline bit-for-bit. This is only possible because the referent state prep happens EXACTLY ONCE, before event 1 (SS4.3), and the events are parameterised gates on already-prepared wires."
+ },
+ "trace_parity": {
+  "max_abs_diff_vs_story_values": {
+   "R2-A": 0.0,
+   "R2-W": 0.0,
+   "R1-M": 0.0
+  },
+  "exact_zero": true,
+  "stages": [
+   "after_intro",
+   "after_event1",
+   "after_event2 (T=2)",
+   "at_readout"
+  ],
+  "quantity": "per-wire purity Tr rho^2 of the single-qubit reduced state",
+  "note": "doc 55 SS18.3: descriptive, NO criterion reads it. It exists so SS19.4's mechanism analysis (does binding failure correlate with purity collapse?) is possible post-hoc WITHOUT a rerun. The reference implementation is the demo's T-trace parity gate (verify_demo_parity_exp68.py, 300/300 items)."
+ },
+ "shuffle": {
+  "per_seed": [
+   {
+    "part": "A",
+    "seed": 0,
+    "n_items": 1920,
+    "twins_still_opposite": true,
+    "casts_unchanged": true,
+    "query_index_unchanged": true,
+    "yes_fraction": 0.5,
+    "true_bearer_rule_accuracy": 0.471875
+   },
+   {
+    "part": "A",
+    "seed": 1,
+    "n_items": 1920,
+    "twins_still_opposite": true,
+    "casts_unchanged": true,
+    "query_index_unchanged": true,
+    "yes_fraction": 0.5,
+    "true_bearer_rule_accuracy": 0.5072916666666667
+   },
+   {
+    "part": "A",
+    "seed": 2,
+    "n_items": 1920,
+    "twins_still_opposite": true,
+    "casts_unchanged": true,
+    "query_index_unchanged": true,
+    "yes_fraction": 0.5,
+    "true_bearer_rule_accuracy": 0.5125
+   },
+   {
+    "part": "A",
+    "seed": 3,
+    "n_items": 1920,
+    "twins_still_opposite": true,
+    "casts_unchanged": true,
+    "query_index_unchanged": true,
+    "yes_fraction": 0.5,
+    "true_bearer_rule_accuracy": 0.5020833333333333
+   },
+   {
+    "part": "A",
+    "seed": 4,
+    "n_items": 1920,
+    "twins_still_opposite": true,
+    "casts_unchanged": true,
+    "query_index_unchanged": true,
+    "yes_fraction": 0.5,
+    "true_bearer_rule_accuracy": 0.478125
+   },
+   {
+    "part": "B",
+    "seed": 0,
+    "n_items": 1920,
+    "twins_still_opposite": true,
+    "casts_unchanged": true,
+    "query_index_unchanged": true,
+    "yes_fraction": 0.5,
+    "true_bearer_rule_accuracy": 0.5052083333333334
+   },
+   {
+    "part": "B",
+    "seed": 1,
+    "n_items": 1920,
+    "twins_still_opposite": true,
+    "casts_unchanged": true,
+    "query_index_unchanged": true,
+    "yes_fraction": 0.5,
+    "true_bearer_rule_accuracy": 0.48020833333333335
+   },
+   {
+    "part": "B",
+    "seed": 2,
+    "n_items": 1920,
+    "twins_still_opposite": true,
+    "casts_unchanged": true,
+    "query_index_unchanged": true,
+    "yes_fraction": 0.5,
+    "true_bearer_rule_accuracy": 0.5104166666666666
+   },
+   {
+    "part": "B",
+    "seed": 3,
+    "n_items": 1920,
+    "twins_still_opposite": true,
+    "casts_unchanged": true,
+    "query_index_unchanged": true,
+    "yes_fraction": 0.5,
+    "true_bearer_rule_accuracy": 0.5145833333333333
+   },
+   {
+    "part": "B",
+    "seed": 4,
+    "n_items": 1920,
+    "twins_still_opposite": true,
+    "casts_unchanged": true,
+    "query_index_unchanged": true,
+    "yes_fraction": 0.5,
+    "true_bearer_rule_accuracy": 0.528125
+   }
+  ],
+  "mean_true_bearer_rule_accuracy": 0.5010416666666667,
+  "note": "doc 46 SS10.2's floor, per PAIR, keyed on the QUERIED event's agent. `exp60_run.relabel_shuffle` keys on events[0] and would relabel a q = 2 item from the UNQUERIED event, breaking the twin structure; exp69 uses its own, with exp60's RNG convention unchanged so the floors stay comparable. The TRUE bearer rule collapses to chance on the shuffled labels, which is the severance, measured rather than asserted."
+ },
+ "two_epoch_probe": {
+  "A0": {
+   "val_acc": 0.9393939393939394,
+   "heldout_test_acc": 0.8833333333333333,
+   "wall_sec": 3.75994873046875,
+   "n_params": 120,
+   "wires": 2,
+   "T": 1
+  },
+  "R1-A": {
+   "val_acc": 0.8484848484848485,
+   "heldout_test_acc": 0.8733333333333333,
+   "wall_sec": 3.6897192001342773,
+   "n_params": 120,
+   "wires": 2,
+   "T": 1
+  },
+  "R1-W": {
+   "val_acc": 0.75,
+   "heldout_test_acc": 0.82,
+   "wall_sec": 7.706525802612305,
+   "n_params": 264,
+   "wires": 4,
+   "T": 1
+  },
+  "R2-A": {
+   "val_acc": 0.6287878787878788,
+   "heldout_test_acc": 0.6566666666666666,
+   "wall_sec": 4.891398906707764,
+   "n_params": 120,
+   "wires": 2,
+   "T": 2
+  },
+  "R2-W": {
+   "val_acc": 0.6439393939393939,
+   "heldout_test_acc": 0.55,
+   "wall_sec": 11.542393207550049,
+   "n_params": 264,
+   "wires": 4,
+   "T": 2
+  },
+  "R1-M": {
+   "val_acc": 1.0,
+   "heldout_test_acc": 1.0,
+   "wall_sec": 3.3520429134368896,
+   "n_params": 120,
+   "wires": 2,
+   "T": 1
+  },
+  "R2-M": {
+   "val_acc": 0.7575757575757576,
+   "heldout_test_acc": 0.6733333333333333,
+   "wall_sec": 4.831631898880005,
+   "n_params": 120,
+   "wires": 2,
+   "T": 2
+  },
+  "S-shuffle-R1-A": {
+   "val_acc": 0.5681818181818182,
+   "heldout_test_acc": 0.5133333333333333,
+   "wall_sec": 3.3016340732574463,
+   "n_params": 120,
+   "wires": 2,
+   "T": 1
+  },
+  "S-shuffle-R1-W": {
+   "val_acc": 0.5378787878787878,
+   "heldout_test_acc": 0.5066666666666667,
+   "wall_sec": 8.671170234680176,
+   "n_params": 264,
+   "wires": 4,
+   "T": 1
+  },
+  "S-shuffle-R2-A": {
+   "val_acc": 0.6060606060606061,
+   "heldout_test_acc": 0.5333333333333333,
+   "wall_sec": 4.8621039390563965,
+   "n_params": 120,
+   "wires": 2,
+   "T": 2
+  },
+  "S-shuffle-R2-W": {
+   "val_acc": 0.44696969696969696,
+   "heldout_test_acc": 0.47,
+   "wall_sec": 10.364726066589355,
+   "n_params": 264,
+   "wires": 4,
+   "T": 2
+  },
+  "S-shuffle-R1-M": {
+   "val_acc": 0.5454545454545454,
+   "heldout_test_acc": 0.49666666666666665,
+   "wall_sec": 3.7096030712127686,
+   "n_params": 120,
+   "wires": 2,
+   "T": 1
+  },
+  "S-shuffle-R2-M": {
+   "val_acc": 0.5757575757575758,
+   "heldout_test_acc": 0.5066666666666667,
+   "wall_sec": 4.419669151306152,
+   "n_params": 120,
+   "wires": 2,
+   "T": 2
+  }
+ },
+ "assertions_passed": true,
+ "wall_time_sec": 78.60499000549316
+}

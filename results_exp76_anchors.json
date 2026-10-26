@@ -1,0 +1,135 @@
+{
+ "component": "exp76 drift anchor (doc 63 SS6.4), the SIXTH enforced use of this gate; the first five returned bit-exact",
+ "spec": "qnlp_private_docs/63_exp76_scaling.md (REGISTERED 2026-08-29, orchestrator rulings in the status header, BINDING over the body)",
+ "rule3_note": "its own file by Rule 3; no exp69 artefact is modified and no results file is overwritten",
+ "dataset": "stories_exp69_QA.json",
+ "dataset_sha256": "2b85822b544571969fd40cab12b03a4ac256b08aee914d2b9643b856a6308c96",
+ "exp69_source": "results_exp69.json",
+ "tolerance": 0.002,
+ "per_arm": {
+  "A0-A-T1": {
+   "exp69_source_arm": "R1-A",
+   "exp69_per_seed": [
+    0.9033333333333333,
+    0.9366666666666666,
+    0.9266666666666666,
+    0.92,
+    0.9266666666666666
+   ],
+   "exp69_mean": 0.9226666666666666,
+   "exp69_sd": 0.012337837015547824,
+   "exp76_per_seed": [
+    0.9033333333333333,
+    0.9366666666666666,
+    0.9266666666666666,
+    0.92,
+    0.9266666666666666
+   ],
+   "exp76_mean": 0.9226666666666666,
+   "exp76_sd": 0.012337837015547824,
+   "per_seed_delta": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "max_abs_per_seed_delta": 0.0,
+   "mean_delta_vs_exp69": 0.0,
+   "registered_mean_doc63_SS6_4": 0.9226667,
+   "mean_delta_vs_registered": -3.333333331578814e-08,
+   "bit_exact": true,
+   "per_seed_within_tolerance": true,
+   "mean_within_tolerance": true,
+   "replicates": true,
+   "val_per_seed": [
+    0.8636363636363636,
+    0.8560606060606061,
+    0.8560606060606061,
+    0.8409090909090909,
+    0.8484848484848485
+   ],
+   "train_per_seed": [
+    0.9109848484848485,
+    0.9185606060606061,
+    0.9147727272727273,
+    0.9166666666666666,
+    0.9223484848484849
+   ],
+   "selected_epoch_per_seed": [
+    5,
+    39,
+    12,
+    1,
+    29
+   ],
+   "n_params": 120,
+   "wall_sec_total": 1613.6821761131287
+  },
+  "A0-A-T2": {
+   "exp69_source_arm": "R2-A",
+   "exp69_per_seed": [
+    0.9166666666666666,
+    0.9466666666666667,
+    0.8733333333333333,
+    0.9133333333333333,
+    0.9433333333333334
+   ],
+   "exp69_mean": 0.9186666666666666,
+   "exp69_sd": 0.02949576240750527,
+   "exp76_per_seed": [
+    0.9166666666666666,
+    0.9466666666666667,
+    0.8733333333333333,
+    0.9133333333333333,
+    0.9433333333333334
+   ],
+   "exp76_mean": 0.9186666666666665,
+   "exp76_sd": 0.029495762407505267,
+   "per_seed_delta": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "max_abs_per_seed_delta": 0.0,
+   "mean_delta_vs_exp69": -1.1102230246251565e-16,
+   "registered_mean_doc63_SS6_4": 0.9186667,
+   "mean_delta_vs_registered": -3.333333342681044e-08,
+   "bit_exact": true,
+   "per_seed_within_tolerance": true,
+   "mean_within_tolerance": true,
+   "replicates": true,
+   "val_per_seed": [
+    0.8712121212121212,
+    0.8712121212121212,
+    0.8787878787878788,
+    0.8712121212121212,
+    0.8636363636363636
+   ],
+   "train_per_seed": [
+    0.9185606060606061,
+    0.9356060606060606,
+    0.8920454545454546,
+    0.9375,
+    0.9412878787878788
+   ],
+   "selected_epoch_per_seed": [
+    121,
+    121,
+    14,
+    99,
+    114
+   ],
+   "n_params": 120,
+   "wall_sec_total": 2365.27885890007
+  }
+ },
+ "n_runs": 10,
+ "bit_exact_all": true,
+ "anchor_replicates_exp69": true,
+ "same_entry_point_doc63_SS8_4_1": "both arms run through exp76's OWN n-generalised codepath at n = 2, on exp69's frozen dataset with exp69's frozen features. SS8.4 item 1 asserts the forward pass bit-for-bit against the committed exp42_models path at smoke, so the anchor tests the TRAINING loop.",
+ "honest_expectation": "doc 63 SS6.4: |delta| = 0 EXACTLY, bit-exact, 10/10, and here that expectation is STRONGER than in any previous use of this gate. The 0.002 tolerance exists only to absorb a documented float/BLAS platform difference, and any non-zero delta is reported with its cause identified.",
+ "consequence_if_failed": "the exp76 pipeline has drifted, every scaling number is a comparison against a moving baseline, and NOTHING ELSE IN THE RUN IS READ. SS6.4.1's floor-omission argument is void along with the run. Hunt the build; interpret nothing."
+}

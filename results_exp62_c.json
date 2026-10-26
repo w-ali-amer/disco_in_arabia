@@ -1,0 +1,124 @@
+{
+ "experiment": "exp62-C",
+ "spec": "qnlp_private_docs/48_exp62_selection_optimisation_width.md (1437f47, FROZEN incl. SS10)",
+ "platform": "macOS-26.5.2-arm64-arm-64bit",
+ "torch": "2.13.0",
+ "dataset_sha256": "b83a654e57cf80b740653b48435e3a7eb0c6c310cfba32e909ca2ed371221c4c",
+ "cells": [
+  {
+   "cell": "M1",
+   "noun_bound_K1": 1.0,
+   "noun_bound_K2": 1.0,
+   "floor_mean": 0.5114583333333333,
+   "floor_sd": 0.035782425077745136,
+   "W-work": {
+    "K": 1,
+    "mean": 0.9947916666666666,
+    "sd": 0.011646187382811389,
+    "bound": 1.0,
+    "delta": -0.00520833333333337,
+    "clears_floor": true,
+    "saturates": true,
+    "fourier_3": 1.6958165122149538e-07,
+    "fourier_5": 1.6049981654830958e-07
+   },
+   "W-wide": {
+    "K": 2,
+    "mean": 0.996875,
+    "sd": 0.004658474953124552,
+    "bound": 1.0,
+    "delta": -0.0031250000000000444,
+    "clears_floor": true,
+    "saturates": true,
+    "fourier_3": 0.07671143328147534,
+    "fourier_5": 7.488401868038785e-08
+   },
+   "S1_mean": 0.9958333333333333,
+   "W-work_minus_S1": -0.0010416666666667185,
+   "S2_mean": 0.9947916666666666,
+   "W-wide_minus_S2": 0.002083333333333326
+  },
+  {
+   "cell": "M2",
+   "noun_bound_K1": 0.75,
+   "noun_bound_K2": 1.0,
+   "floor_mean": 0.5260416666666667,
+   "floor_sd": 0.040844758180620125,
+   "W-work": {
+    "K": 1,
+    "mean": 0.7760416666666667,
+    "sd": 0.033552340434180025,
+    "bound": 0.75,
+    "delta": 0.02604166666666674,
+    "clears_floor": true,
+    "saturates": true,
+    "fourier_3": 6.602547619749544e-08,
+    "fourier_5": 6.908713284792256e-08
+   },
+   "W-wide": {
+    "K": 2,
+    "mean": 0.878125,
+    "sd": 0.00789882858755371,
+    "bound": 1.0,
+    "delta": -0.12187499999999996,
+    "clears_floor": true,
+    "saturates": false,
+    "fourier_3": 0.05675441999882613,
+    "fourier_5": 1.3895859801715815e-07
+   },
+   "S1_mean": 0.7645833333333333,
+   "W-work_minus_S1": 0.01145833333333346,
+   "S2_mean": 0.703125,
+   "W-wide_minus_S2": 0.17500000000000004
+  },
+  {
+   "cell": "M3",
+   "noun_bound_K1": 0.6875,
+   "noun_bound_K2": 0.9375,
+   "floor_mean": 0.4916666666666667,
+   "floor_sd": 0.03367339557342629,
+   "W-work": {
+    "K": 1,
+    "mean": 0.71875,
+    "sd": 0.0426320456868357,
+    "bound": 0.6875,
+    "delta": 0.03125,
+    "clears_floor": true,
+    "saturates": true,
+    "fourier_3": 5.553514287326422e-08,
+    "fourier_5": 5.3670691668727954e-08
+   },
+   "W-wide": {
+    "K": 2,
+    "mean": 0.7822916666666667,
+    "sd": 0.033633092272839435,
+    "bound": 0.9375,
+    "delta": -0.15520833333333328,
+    "clears_floor": true,
+    "saturates": false,
+    "fourier_3": 0.09975031931411893,
+    "fourier_5": 1.511545676402548e-07
+   },
+   "S1_mean": 0.7083333333333334,
+   "W-work_minus_S1": 0.01041666666666663,
+   "S2_mean": 0.6645833333333333,
+   "W-wide_minus_S2": 0.11770833333333341
+  }
+ ],
+ "verdicts": {
+  "saturation_generalises_W": false,
+  "workspace_adds_nothing_K1": true,
+  "width_beats_depth_at_K2": true,
+  "neither_K2_arm_saturates": true
+ },
+ "meta_notes": {
+  "headline": "Saturation is K-DEPENDENT. At K=1 every arm saturates its noun-level bound (W-work delta -0.005/+0.026/+0.031, and W-work == S1 to within 0.012). At K=2 NEITHER arm saturates: W-wide misses by -0.122 (M2) and -0.155 (M3), S2 misses by more. The extra frequency is representationally available but not fully exploitable.",
+  "width_vs_depth": "W-wide beats S2 by +0.175 (M2) and +0.118 (M3). AMBIGUOUS by doc 48 SS10.3: W carries 33 params/verb against S's 15. Extra parameters cannot exceed a ceiling, so K=1 saturation is unconfounded -- but at K=2, where NEITHER arm saturates, width-vs-capacity is NOT resolved by this run and is reported as open.",
+  "scope": "One dataset. Given that three prior 'walls' in this line evaporated on replication, the K=2 shortfall is a single-draw observation and is NOT to be called a wall without a fresh draw."
+ },
+ "git_note": {
+  "exp42_paths": [],
+  "n_untracked": 241
+ },
+ "wall_time_sec": 0
+}

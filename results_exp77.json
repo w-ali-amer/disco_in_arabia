@@ -1,0 +1,245 @@
+{
+ "experiment": "exp77",
+ "spec": "doc 66 §12.5, REGISTERED 2026-09-04",
+ "delta": 0.06,
+ "n_resamples": 10000,
+ "permutation_seed": 77777,
+ "n_checkpoints_found": 25,
+ "n_checkpoints_total": 25,
+ "missing_checkpoints": [],
+ "arm_summaries": {
+  "b1": {
+   "primary_test": {
+    "mean": 0.694244,
+    "sd": 0.049518,
+    "per_seed": [
+     0.669065,
+     0.658273,
+     0.71223,
+     0.658273,
+     0.773381
+    ]
+   },
+   "secondary_test": {
+    "mean": 0.730883,
+    "sd": 0.053681,
+    "per_seed": [
+     0.779412,
+     0.683824,
+     0.735294,
+     0.669118,
+     0.786765
+    ]
+   },
+   "n_seeds_available": 5
+  },
+  "wazn": {
+   "primary_test": {
+    "mean": 0.68705,
+    "sd": 0.043687,
+    "per_seed": [
+     0.701439,
+     0.622302,
+     0.697842,
+     0.672662,
+     0.741007
+    ]
+   },
+   "secondary_test": {
+    "mean": 0.705882,
+    "sd": 0.042558,
+    "per_seed": [
+     0.720588,
+     0.632353,
+     0.742647,
+     0.713235,
+     0.720588
+    ]
+   },
+   "n_seeds_available": 5
+  },
+  "wazn_shuf": {
+   "primary_test": {
+    "mean": 0.67482,
+    "sd": 0.026628,
+    "per_seed": [
+     0.669065,
+     0.640288,
+     0.697842,
+     0.705036,
+     0.661871
+    ]
+   },
+   "secondary_test": {
+    "mean": 0.688235,
+    "sd": 0.038418,
+    "per_seed": [
+     0.713235,
+     0.639706,
+     0.735294,
+     0.661765,
+     0.691176
+    ]
+   },
+   "n_seeds_available": 5
+  },
+  "floor_wazn": {
+   "primary_test": {
+    "mean": 0.651079,
+    "sd": 0.05938,
+    "per_seed": [
+     0.651079,
+     0.557554,
+     0.690647,
+     0.71223,
+     0.643885
+    ]
+   },
+   "secondary_test": {
+    "mean": 0.610294,
+    "sd": 0.065972,
+    "per_seed": [
+     0.617647,
+     0.507353,
+     0.610294,
+     0.625,
+     0.691176
+    ]
+   },
+   "n_seeds_available": 5
+  },
+  "floor_root": {
+   "primary_test": {
+    "mean": 0.589928,
+    "sd": 0.060886,
+    "per_seed": [
+     0.5,
+     0.597122,
+     0.633094,
+     0.564748,
+     0.654676
+    ]
+   },
+   "secondary_test": {
+    "mean": 0.636765,
+    "sd": 0.084734,
+    "per_seed": [
+     0.5,
+     0.676471,
+     0.720588,
+     0.617647,
+     0.669118
+    ]
+   },
+   "n_seeds_available": 5
+  }
+ },
+ "booleans": {
+  "transfers_across_roots_within_wazn": {
+   "value": false,
+   "two_leg": {
+    "mean_wazn": 0.68705,
+    "mean_b1": 0.694245,
+    "delta": 0.06,
+    "n_pairs_aligned": 278,
+    "leg1_margin": -0.007194,
+    "leg1_pass": false,
+    "leg2_observed_diff": -0.007194,
+    "leg2_p_value": 0.6599,
+    "leg2_pass": false,
+    "permutation_n_resamples": 10000,
+    "permutation_seed": 77777,
+    "boolean_value": false
+   },
+   "invalidated_by_capacity_control": false
+  },
+  "transfers_across_wazn_within_root": {
+   "value": false,
+   "two_leg": {
+    "mean_wazn": 0.705882,
+    "mean_b1": 0.730882,
+    "delta": 0.06,
+    "n_pairs_aligned": 136,
+    "leg1_margin": -0.025,
+    "leg1_pass": false,
+    "leg2_observed_diff": -0.025,
+    "leg2_p_value": 0.8591,
+    "leg2_pass": false,
+    "permutation_n_resamples": 10000,
+    "permutation_seed": 77777,
+    "boolean_value": false
+   }
+  },
+  "structure_not_semantics": {
+   "value": false,
+   "two_leg_leave_faail_out": {
+    "mean_wazn": 0.664748,
+    "mean_b1": 0.692086,
+    "delta": 0.06,
+    "n_pairs_aligned": 139,
+    "leg1_margin": -0.027338,
+    "leg1_pass": false,
+    "leg2_observed_diff": -0.027338,
+    "leg2_p_value": 0.8811,
+    "leg2_pass": false,
+    "permutation_n_resamples": 10000,
+    "permutation_seed": 77777,
+    "boolean_value": false
+   },
+   "n_pairs_after_filter": 139,
+   "note": "Leave-فاعِل-out re-read: primary_test pairs with col_a or col_b == 'faail' removed. Tests whether effect survives semantically-loaded template exclusion."
+  },
+  "structure_specificity_control": {
+   "wazn_shuf_beats_b1": false,
+   "two_leg_wazn_shuf_vs_b1": {
+    "mean_wazn": 0.67482,
+    "mean_b1": 0.694245,
+    "delta": 0.06,
+    "n_pairs_aligned": 278,
+    "leg1_margin": -0.019424,
+    "leg1_pass": false,
+    "leg2_observed_diff": -0.019424,
+    "leg2_p_value": 0.8346,
+    "leg2_pass": false,
+    "permutation_n_resamples": 10000,
+    "permutation_seed": 77777,
+    "boolean_value": false
+   },
+   "invalidation_triggered": false,
+   "note": "§12.5 invalidation clause: if WAZN-SHUFFLED (permuted col→topology) beats B1 by >=Δ AND p<0.05, the effect is capacity not structure, and primary boolean is invalidated regardless of its own legs."
+  }
+ },
+ "floors": {
+  "floor_wazn_primary": {
+   "mean_acc": 0.651079,
+   "sd": 0.05938,
+   "per_seed": [
+    0.651079,
+    0.557554,
+    0.690647,
+    0.71223,
+    0.643885
+   ],
+   "note": "WAZN trained on within-wazn (col-pair stratum) label shuffle. Evaluated on real labels. Expected near 0.5 if wazn structure carries signal. Informational — §12.5 boolean legs never read floor values."
+  },
+  "floor_root_secondary": {
+   "mean_acc": 0.636765,
+   "sd": 0.084734,
+   "per_seed": [
+    0.5,
+    0.676471,
+    0.720588,
+    0.617647,
+    0.669118
+   ],
+   "note": "WAZN trained on within-root label shuffle. Evaluated on real secondary_test labels. Expected near 0.5. Informational."
+  }
+ },
+ "interpretation": {
+  "both_true": "Wazn axis converts to architecture — both transfer directions confirmed.",
+  "primary_only": "Root tier carries structure; melody direction doesn't transfer (or vice versa).",
+  "secondary_only": "Wazn direction transfers within root but not across roots.",
+  "both_false": "Wazn axis does NOT convert to architecture on this task — E6 inversion is answered negatively.",
+  "note": "A tie with B2 (classical baseline, not an arm here) refutes nothing — H-T is decided against B1; B2 is the 'how far does learning get you' line (§2)."
+ }
+}

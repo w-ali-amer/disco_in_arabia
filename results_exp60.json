@@ -1,0 +1,442 @@
+{
+ "experiment": "exp60",
+ "spec": "qnlp_private_docs/46_exp60_semantic_binding_and_reuploading.md (ed19946, FROZEN incl. SS16 amendment)",
+ "platform": "macOS-26.5.2-arm64-arm-64bit",
+ "python": "3.12.13",
+ "torch": "2.13.0",
+ "torch_num_threads": 1,
+ "screen_dataset_sha256": "ae94ab9c31d62778e1c916aa44566a0ec3c8f74b09f4bf3839bab5f331c87b8c",
+ "confirm_dataset_sha256": "99fdafb36e5807c3a095af477043eeaa764a2186c5c7da23bb2708be1065d12f",
+ "grid": [
+  "D0.40_w0.05",
+  "D0.80_w0.05",
+  "D1.60_w0.05",
+  "D2.40_w0.05",
+  "D0.40_w0.15",
+  "D0.80_w0.15",
+  "D1.60_w0.15",
+  "D2.40_w0.15"
+ ],
+ "config": {
+  "lr": 0.02,
+  "batch": 8,
+  "epochs": 150,
+  "screen_seeds": 3,
+  "confirm_seeds": 5,
+  "screen_bar": 0.6,
+  "sb_binds_abs": 0.65
+ },
+ "screen": [
+  {
+   "cell": "D0.40_w0.05",
+   "floor_mean": 0.47888888888888886,
+   "floor_sd": 0.008388704928078635,
+   "S-base": {
+    "heldout_mean": 1.0,
+    "heldout_sd": 0.0,
+    "per_seed": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "n_seeds": 3,
+    "gate_met": "3/3",
+    "exceeds_floor_by_sd": 62.12056754635037,
+    "sb_binds": true
+   },
+   "S-reup": {
+    "heldout_mean": 1.0,
+    "heldout_sd": 0.0,
+    "per_seed": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "n_seeds": 3,
+    "gate_met": "3/3",
+    "exceeds_floor_by_sd": 62.12056754635037,
+    "sb_binds": true
+   }
+  },
+  {
+   "cell": "D0.80_w0.05",
+   "floor_mean": 0.4877777777777778,
+   "floor_sd": 0.026943012562182518,
+   "S-base": {
+    "heldout_mean": 1.0,
+    "heldout_sd": 0.0,
+    "per_seed": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "n_seeds": 3,
+    "gate_met": "3/3",
+    "exceeds_floor_by_sd": 19.011319578315543,
+    "sb_binds": true
+   },
+   "S-reup": {
+    "heldout_mean": 1.0,
+    "heldout_sd": 0.0,
+    "per_seed": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "n_seeds": 3,
+    "gate_met": "3/3",
+    "exceeds_floor_by_sd": 19.011319578315543,
+    "sb_binds": true
+   }
+  },
+  {
+   "cell": "D1.60_w0.05",
+   "floor_mean": 0.4711111111111111,
+   "floor_sd": 0.02987628813277502,
+   "S-base": {
+    "heldout_mean": 1.0,
+    "heldout_sd": 0.0,
+    "per_seed": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "n_seeds": 3,
+    "gate_met": "3/3",
+    "exceeds_floor_by_sd": 17.702630478673317,
+    "sb_binds": true
+   },
+   "S-reup": {
+    "heldout_mean": 1.0,
+    "heldout_sd": 0.0,
+    "per_seed": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "n_seeds": 3,
+    "gate_met": "3/3",
+    "exceeds_floor_by_sd": 17.702630478673317,
+    "sb_binds": true
+   }
+  },
+  {
+   "cell": "D2.40_w0.05",
+   "floor_mean": 0.47222222222222215,
+   "floor_sd": 0.010183501544346323,
+   "S-base": {
+    "heldout_mean": 1.0,
+    "heldout_sd": 0.0,
+    "per_seed": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "n_seeds": 3,
+    "gate_met": "3/3",
+    "exceeds_floor_by_sd": 51.826748931048144,
+    "sb_binds": true
+   },
+   "S-reup": {
+    "heldout_mean": 1.0,
+    "heldout_sd": 0.0,
+    "per_seed": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "n_seeds": 3,
+    "gate_met": "3/3",
+    "exceeds_floor_by_sd": 51.826748931048144,
+    "sb_binds": true
+   }
+  },
+  {
+   "cell": "D0.40_w0.15",
+   "floor_mean": 0.4888888888888889,
+   "floor_sd": 0.02143033502442878,
+   "S-base": {
+    "heldout_mean": 0.9933333333333333,
+    "heldout_sd": 0.0,
+    "per_seed": [
+     0.9933333333333333,
+     0.9933333333333333,
+     0.9933333333333333
+    ],
+    "n_seeds": 3,
+    "gate_met": "3/3",
+    "exceeds_floor_by_sd": 23.538803470380664,
+    "sb_binds": true
+   },
+   "S-reup": {
+    "heldout_mean": 0.9977777777777778,
+    "heldout_sd": 0.00384900179459753,
+    "per_seed": [
+     1.0,
+     0.9933333333333333,
+     1.0
+    ],
+    "n_seeds": 3,
+    "gate_met": "3/3",
+    "exceeds_floor_by_sd": 23.74619380932675,
+    "sb_binds": true
+   }
+  },
+  {
+   "cell": "D0.80_w0.15",
+   "floor_mean": 0.48444444444444446,
+   "floor_sd": 0.021688023662159068,
+   "S-base": {
+    "heldout_mean": 1.0,
+    "heldout_sd": 0.0,
+    "per_seed": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "n_seeds": 3,
+    "gate_met": "3/3",
+    "exceeds_floor_by_sd": 23.77144010844515,
+    "sb_binds": true
+   },
+   "S-reup": {
+    "heldout_mean": 1.0,
+    "heldout_sd": 0.0,
+    "per_seed": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "n_seeds": 3,
+    "gate_met": "3/3",
+    "exceeds_floor_by_sd": 23.77144010844515,
+    "sb_binds": true
+   }
+  },
+  {
+   "cell": "D1.60_w0.15",
+   "floor_mean": 0.49333333333333335,
+   "floor_sd": 0.025166114784235853,
+   "S-base": {
+    "heldout_mean": 1.0,
+    "heldout_sd": 0.0,
+    "per_seed": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "n_seeds": 3,
+    "gate_met": "3/3",
+    "exceeds_floor_by_sd": 20.132891827388647,
+    "sb_binds": true
+   },
+   "S-reup": {
+    "heldout_mean": 1.0,
+    "heldout_sd": 0.0,
+    "per_seed": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "n_seeds": 3,
+    "gate_met": "3/3",
+    "exceeds_floor_by_sd": 20.132891827388647,
+    "sb_binds": true
+   }
+  },
+  {
+   "cell": "D2.40_w0.15",
+   "floor_mean": 0.4977777777777778,
+   "floor_sd": 0.019531550923607727,
+   "S-base": {
+    "heldout_mean": 1.0,
+    "heldout_sd": 0.0,
+    "per_seed": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "n_seeds": 3,
+    "gate_met": "3/3",
+    "exceeds_floor_by_sd": 25.71338160428354,
+    "sb_binds": true
+   },
+   "S-reup": {
+    "heldout_mean": 1.0,
+    "heldout_sd": 0.0,
+    "per_seed": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "n_seeds": 3,
+    "gate_met": "3/3",
+    "exceeds_floor_by_sd": 25.71338160428354,
+    "sb_binds": true
+   }
+  }
+ ],
+ "confirm": [
+  {
+   "cell": "D0.40_w0.05",
+   "floor_mean": 0.506,
+   "floor_sd": 0.013824294235551798,
+   "S-base": {
+    "heldout_mean": 1.0,
+    "heldout_sd": 0.0,
+    "per_seed": [
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "n_seeds": 5,
+    "gate_met": "5/5",
+    "exceeds_floor_by_sd": 35.73419312282758,
+    "sb_binds": true
+   },
+   "S-reup": {
+    "heldout_mean": 0.9986666666666666,
+    "heldout_sd": 0.001825741858350535,
+    "per_seed": [
+     1.0,
+     0.9966666666666667,
+     1.0,
+     1.0,
+     0.9966666666666667
+    ],
+    "n_seeds": 5,
+    "gate_met": "5/5",
+    "exceeds_floor_by_sd": 35.63774455839349,
+    "sb_binds": true
+   }
+  },
+  {
+   "cell": "D0.40_w0.15",
+   "floor_mean": 0.4953333333333333,
+   "floor_sd": 0.04337177781819777,
+   "S-base": {
+    "heldout_mean": 0.994,
+    "heldout_sd": 0.005477225575051666,
+    "per_seed": [
+     0.99,
+     1.0,
+     0.99,
+     0.99,
+     1.0
+    ],
+    "n_seeds": 5,
+    "gate_met": "5/5",
+    "exceeds_floor_by_sd": 11.497491957948702,
+    "sb_binds": true
+   },
+   "S-reup": {
+    "heldout_mean": 0.998,
+    "heldout_sd": 0.0029814239699997324,
+    "per_seed": [
+     1.0,
+     0.9966666666666667,
+     0.9933333333333333,
+     1.0,
+     1.0
+    ],
+    "n_seeds": 5,
+    "gate_met": "5/5",
+    "exceeds_floor_by_sd": 11.589717829269146,
+    "sb_binds": true
+   }
+  }
+ ],
+ "controls": {
+  "S-flat": {
+   "heldout_mean": 0.5477777777777778,
+   "heldout_sd": 0.1406466547113065,
+   "per_seed": [
+    0.71,
+    0.47333333333333333,
+    0.46
+   ],
+   "must_fail": true,
+   "fails": true
+  },
+  "S-hash": {
+   "heldout_mean": 0.45555555555555555,
+   "heldout_sd": 0.018358568490953683,
+   "per_seed": [
+    0.45666666666666667,
+    0.47333333333333333,
+    0.43666666666666665
+   ],
+   "must_fail": true,
+   "fails": true
+  }
+ },
+ "fourier_validity": {
+  "S-base": {
+   "resid_3term": 1.312926632413003e-07,
+   "resid_5term": 1.2763083423461552e-07,
+   "kappa": null
+  },
+  "S-reup": {
+   "resid_3term": 0.0018544960457906878,
+   "resid_5term": 0.0017191202953498186,
+   "kappa": -0.0038339952006936073
+  },
+  "S-base_closes_at_3": true,
+  "S-reup_needs_more_than_3": true,
+  "S-reup_closes_at_5": false,
+  "arm_implements_intervention": false
+ },
+ "verdicts": {
+  "screen_sb_binds_S-base_cells": [
+   "D0.40_w0.05",
+   "D0.80_w0.05",
+   "D1.60_w0.05",
+   "D2.40_w0.05",
+   "D0.40_w0.15",
+   "D0.80_w0.15",
+   "D1.60_w0.15",
+   "D2.40_w0.15"
+  ],
+  "screen_sb_binds_S-reup_cells": [
+   "D0.40_w0.05",
+   "D0.80_w0.05",
+   "D1.60_w0.05",
+   "D2.40_w0.05",
+   "D0.40_w0.15",
+   "D0.80_w0.15",
+   "D1.60_w0.15",
+   "D2.40_w0.15"
+  ],
+  "screen_sb_binds": true,
+  "screen_reuploading_relieves": false,
+  "screen_n_cells_tested": 8,
+  "confirm_sb_binds_S-base_cells": [
+   "D0.40_w0.05",
+   "D0.40_w0.15"
+  ],
+  "confirm_sb_binds_S-reup_cells": [
+   "D0.40_w0.05",
+   "D0.40_w0.15"
+  ],
+  "confirm_sb_binds": true,
+  "confirm_reuploading_relieves": false,
+  "confirm_n_cells_tested": 2,
+  "fourier_arm_validity": false,
+  "controls_fail_as_required": true,
+  "sb_binds_CONFIRMED": true,
+  "reuploading_relieves_CONFIRMED": false
+ },
+ "meta_notes": {
+  "floor": "S-shuffle is THE registered floor (doc 46 SS10.2): angle draws bit-for-bit identical to S-base, bearer designation reassigned PER PAIR independently of the angle, so only the angle<->category correlation is removed. S-hash was REJECTED as a floor -- its sha256 angles are ~U(0,2pi), so it would fail for conditioning reasons regardless of binding.",
+  "tie_break_disclosed": "All 8 cells screened positive, so doc 46 SS10.4's top-2 rule ties. DISCLOSED TIE-BREAK, chosen before the confirm ran: advance the two SMALLEST-Delta cells (smallest category margin 2*sin(Delta/2)) -- the theorem's tightest test, and the only cells that were not perfect in the screen.",
+  "prediction_status": "doc 46 SS4 predicted S-base would FAIL across the grid. If it binds, that prediction is REFUTED and the reason is instructive: the theorem supplies ~3 Fourier coefficients per referent and a 1-BIT category demands one. The registered prediction mis-estimated the DEMAND, not the supply.",
+  "scope": "doc 46 SS13: one task family, one arm family, simulation, NO classical comparator registered. Classical models already fail novel-filler binding (arXiv:1902.09006), so nothing here is quantum-specific. A positive binds a 1-BIT CONSTRUCTED category to a role -- the honest minimum viable semantics, NOT 'meaning'."
+ },
+ "git_note": {
+  "exp42_paths": [],
+  "n_untracked": 240
+ },
+ "wall_time_sec": 0.562042236328125
+}

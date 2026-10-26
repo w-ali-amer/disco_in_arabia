@@ -1,0 +1,41 @@
+{
+  "seeds": [
+    {
+      "seed": 42,
+      "n_train": 249879,
+      "n_heldout": 27765,
+      "n_templates": 3993,
+      "n_fused_actual": 8000,
+      "n_bpe_budget": 20004,
+      "vocab_sum": 32000,
+      "bpe_vocab_actual": 32000,
+      "wazn_vocab_actual": 32000,
+      "fused_vocab_actual": 32000
+    },
+    {
+      "seed": 43,
+      "n_train": 249879,
+      "n_heldout": 27765,
+      "n_templates": 4009,
+      "n_fused_actual": 8000,
+      "n_bpe_budget": 19988,
+      "vocab_sum": 32000,
+      "bpe_vocab_actual": 32000,
+      "wazn_vocab_actual": 32000,
+      "fused_vocab_actual": 32000
+    },
+    {
+      "seed": 44,
+      "n_train": 249879,
+      "n_heldout": 27765,
+      "n_templates": 4021,
+      "n_fused_actual": 8000,
+      "n_bpe_budget": 19976,
+      "vocab_sum": 32000,
+      "bpe_vocab_actual": 32000,
+      "wazn_vocab_actual": 32000,
+      "fused_vocab_actual": 32000
+    }
+  ],
+  "elapsed_s": 11604.7
+}

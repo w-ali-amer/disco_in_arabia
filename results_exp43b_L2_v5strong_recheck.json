@@ -1,0 +1,75 @@
+{
+ "purpose": "doc 82 §11.8 D8 re-check",
+ "data": "stories_exp43b_L2.json",
+ "data_sha256": "5a1732ccebccadf966fa8698b5b7a869a70d39dd7e210b63163ce2e977b2e3ff",
+ "validator_sha256": "bec7759d8090818cf1298aa026d08b5ec337172f429f81648feba5afb5135a84",
+ "n": {
+  "train": 1200,
+  "val": 300,
+  "test": 300,
+  "test_two_hop": 150
+ },
+ "two_hop_subset": {
+  "oracle": "sentence-level logistic over question-relative symbolic features + sentence/question 1-2 grams; item score aggregated over sentences; thresholds tuned on val only",
+  "selected_C": 0.1,
+  "n_features": 1240,
+  "n_test": 150,
+  "test_accuracy_max_aggregation": 0.9933333333333333,
+  "ci95_max_aggregation": [
+   0.980310295057803,
+   1.0063563716088635
+  ],
+  "test_accuracy_best_sentence": 0.9866666666666667,
+  "ci95_best_sentence": [
+   0.9683112165728077,
+   1.0050221167605258
+  ],
+  "val_accuracy_max_aggregation": 1.0,
+  "val_accuracy_best_sentence": 1.0,
+  "per_split_accuracy_max_aggregation": {
+   "test": 0.9933333333333333
+  },
+  "descriptive_mean_aggregation": {
+   "note": "mean over sentences can see per-pattern COUNTS, which a strict 'sees ONE sentence' reading does not license; recorded, NOT gating",
+   "test_accuracy": 0.9733333333333334,
+   "ci95": [
+    0.9475507989062938,
+    0.999115867760373
+   ],
+   "val_accuracy": 0.9966666666666667
+  },
+  "passed": false
+ },
+ "full_test_descriptive": {
+  "oracle": "sentence-level logistic over question-relative symbolic features + sentence/question 1-2 grams; item score aggregated over sentences; thresholds tuned on val only",
+  "selected_C": 0.1,
+  "n_features": 1240,
+  "n_test": 300,
+  "test_accuracy_max_aggregation": 0.9966666666666667,
+  "ci95_max_aggregation": [
+   0.9901442313114514,
+   1.003189102021882
+  ],
+  "test_accuracy_best_sentence": 0.9933333333333333,
+  "ci95_best_sentence": [
+   0.9841246546570539,
+   1.0025420120096127
+  ],
+  "val_accuracy_max_aggregation": 1.0,
+  "val_accuracy_best_sentence": 1.0,
+  "per_split_accuracy_max_aggregation": {
+   "test": 0.9966666666666667
+  },
+  "descriptive_mean_aggregation": {
+   "note": "mean over sentences can see per-pattern COUNTS, which a strict 'sees ONE sentence' reading does not license; recorded, NOT gating",
+   "test_accuracy": 0.9833333333333333,
+   "ci95": [
+    0.9688466088869587,
+    0.9978200577797078
+   ],
+   "val_accuracy": 0.9966666666666667
+  },
+  "passed": false
+ },
+ "l2_twohop_v5strong_passed": false
+}

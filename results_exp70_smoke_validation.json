@@ -1,0 +1,561 @@
+{
+ "experiment": "exp70 smoke / validity assertions (doc 56 SS7.1-SS7.4, SS15.1)",
+ "spec": "qnlp_private_docs/56_exp70_entangled_encodings.md (566b9ce, REGISTERED 2026-08-25, orchestrator rulings 1-7 in the status header)",
+ "spec_commit": "566b9ce",
+ "platform": "macOS-26.5.2-arm64-arm-64bit",
+ "python": "3.12.13",
+ "torch": "2.13.0",
+ "numpy": "2.5.1",
+ "dataset": {
+  "path": "stories_exp69_QA.json",
+  "sha256": "2b85822b544571969fd40cab12b03a4ac256b08aee914d2b9643b856a6308c96",
+  "matches_exp69_results": true,
+  "vsuite_source": "results_exp69_WN_validation.json",
+  "vsuite_kill_gate_passed": true,
+  "no_datagen_doc56_SS5_1": "exp70 introduces NO new Arabic surface, no new noun and no new verb. exp70_datagen.py DOES NOT EXIST AND MAY NOT BE WRITTEN (doc 56 SS5.1 / SS16.1). doc 50 SS5.2's native-speaker gate therefore does not reopen (SS17.1) -- and that is stated explicitly because 'nothing changed' is exactly the claim that should be checked rather than assumed. exp69's V-suite results are RE-USED, not re-derived, on the strength of the sha assertion above.",
+  "confirm_draw_obligation_doc56_SS5_1_1": "on any positive, doc 56 SS11 / SS17.3 item 8 mandate a CONFIRM DRAW at generator seed + 1000 which re-runs the COMMITTED exp69_datagen.py UNMODIFIED -- no new template, no new noun, no new verb, only fresh casts and pairings from the same cleared inventories. The full V-suite and every SS7 assertion re-run on that draw, and the S-shuffle floors are RE-DRAWN matched to it (carrying them over would be doc 47 SS16.1's unmatched comparison)."
+ },
+ "features": {
+  "runtime_source": "instrument_sb_bounds.load_raw(fit_on='all44') for PC1/PC2; exp42_compiler.load_embeddings() for FA",
+  "bitmatch_vs_independent_recomputation": 0.0,
+  "bitmatch_is_exact": true,
+  "norm_divisors": [
+   8.669494516224397,
+   10.160404144924657
+  ],
+  "norm_divisors_vs_diagnostic_max_abs": 0.0,
+  "sign_pin_applied": [
+   -1,
+   1
+  ],
+  "FA_runtime_vs_atan2_PC2_PC1_max_rad": 3.9968028886505635e-15,
+  "unit_raw_pca_vs_frozen_vec2_max_abs": 3.7192471324942744e-15,
+  "theta0_range": [
+   0.0,
+   2.6107051108774497
+  ],
+  "theta1_range": [
+   0.3740152586339388,
+   6.283185307179586
+  ],
+  "nondegeneracy": {
+   "raw_radius_mean": 0.8627844740072387,
+   "raw_radius_sd": 0.25124808926972175,
+   "raw_radius_min": 0.4025918566208062,
+   "raw_radius_max": 1.2524146040715955,
+   "frozen2d_radius_sd": 8.34676118839486e-17,
+   "pearson_p1_p2": 0.5842698525485021,
+   "poly_fit_of_p2_on_p1": {
+    "deg1_max_resid": 0.9931869488068175,
+    "deg3_max_resid": 1.0176632745957925,
+    "deg5_max_resid": 0.980393118085943
+   },
+   "verdict": "p2 is NOT a function of p1 on this inventory: a degree-5 polynomial leaves a max residual of 0.980 on a feature whose range is [-1, 1], and the radius has sd 0.251 where the frozen2d family has sd 8.3e-17 (it is exactly unit by construction). doc 54 SS3.1's degeneracy -- the one that made the frozen2d version of this experiment a reparameterisation -- does not hold on the raw family, so exp68 is width-as-INFORMATION."
+  },
+  "instrument_FA_note": "doc 54 SS6.2 writes FA as atan2(PC2, PC1) -- the UNNORMALISED components, i.e. the existing exp42 map -- and that is what this runtime uses, asserted above to 4.0e-15 rad. instrument_sb_bounds.features() computes FA as atan2(p2, p1) on its NORMALISED coords, which on the raw family is a different angle (max difference 7.9e-02 rad). The BOUND is unaffected and the two agree exactly at 148/160: the normalisation is a positive-diagonal linear map of the plane, which preserves the cyclic order of the referents, and a d = 3 single-angle bound depends only on that order. diagnostic_sb_bounds.json carries both computations and they match -- raw FA per-twin 163/190 equals frozen2d FA per-twin 163/190 for tertiary, and the non-occupational target reads 148/160 under the raw-family FA (target_selection.table) and 148/160 under the frozen2d FA, which IS the exp42 map (membership_reconstruction). A TRAINED CIRCUIT is not invariant to the rescaling even though the bound is -- the same reasoning doc 54 SS3.2 gives for pinning the PC signs -- so the doc's literal formula governs the runtime.",
+  "eps_map": {
+   "formula": "theta_k = p_k (pi - 2 eps)/2 + pi/2, eps = pi/6 -> theta in [pi/6, 5pi/6]; FORCED by doc 56 SS3's committed degeneracy check, imported from instrument_entangled_bounds.eps_map",
+   "eps": 0.5235987755982988,
+   "range_theta1": [
+    0.5235987755982987,
+    1.3938338125574488
+   ],
+   "range_theta2": [
+    0.6482705284762783,
+    2.6179938779914944
+   ],
+   "bitmatch_vs_instrument_eps_map": 0.0,
+   "concurrence_min": 0.18983488222434122,
+   "concurrence_median": 0.5155986443044323,
+   "concurrence_max": 0.8818824503417738,
+   "n_nouns_below_0.05": 0,
+   "n_nouns_below_0.10": 0,
+   "disqualified_map_n_below_0.05": 4,
+   "disqualified_map_min": 0.0,
+   "why_forced": "doc 56 SS3: THE EPS-MAP IS FORCED BY THE COMMITTED DEGENERACY CHECK, NOT CHOSEN FOR CONVENIENCE. Under exp68's registered map theta = (p+1)pi the normalisation extremes |p| = 1 land exactly on the dead zones sin t1 = 0 and sin(t2/2) = 0: FOUR of the 24 nouns fall below concurrence 0.05, two of them EXACTLY AT ZERO, and one of those sits in the target category. Those four would have carried a PRODUCT state through an arm named 'entangled' -- a null instrument in doc 53 SS5's exact sense, for a sixth of the inventory. Measured cost: the E-in per-twin bound is 0.9500 (152/160) under the disqualified map against 1.0000 (160/160) under the eps-map -- eight twins.",
+   "exact_divisor_note": "exp70 applies the eps-map to instrument_sb_bounds.load_raw's EXACT normalisation divisors, imported and never re-typed. The committed degeneracy diagnostic used the six-decimal-ROUNDED divisors printed in the instrument's provenance string; under the exact ones its eps-map concurrences shift by at most 4.4e-08, seven orders of magnitude below the SS7.3 gate. The committed finding stands unchanged (doc 56 SS3 note 2, orchestrator ruling 5)."
+  }
+ },
+ "intro_state_closed_forms": {
+  "per_arm": {
+   "N-in-T1": {
+    "encoding": "E-in",
+    "max_abs_diff_vs_closed_form": 2.5857852525845715e-08,
+    "max_abs_diff_vs_closed_form_float64": 2.7755575615628914e-17,
+    "runtime_vs_float64_max_abs": 2.5857852525845715e-08,
+    "closed_form_source": "instrument_entangled_bounds"
+   },
+   "N-across-T1": {
+    "encoding": "E-across",
+    "max_abs_diff_vs_closed_form": 4.7126031396671486e-08,
+    "max_abs_diff_vs_closed_form_float64": 0.0,
+    "runtime_vs_float64_max_abs": 4.7126031396671486e-08,
+    "closed_form_source": "instrument_entangled_bounds"
+   },
+   "P-eps-T1": {
+    "encoding": "P-eps",
+    "max_abs_diff_vs_closed_form": 4.4169963964169057e-08,
+    "max_abs_diff_vs_closed_form_float64": 1.1102230246251565e-16,
+    "runtime_vs_float64_max_abs": 4.4169963964169057e-08,
+    "closed_form_source": "instrument_entangled_bounds"
+   },
+   "EA-ctrl-T1": {
+    "encoding": "FA",
+    "max_abs_diff_vs_closed_form": 4.7126031396671486e-08,
+    "max_abs_diff_vs_closed_form_float64": 0.0,
+    "runtime_vs_float64_max_abs": 4.7126031396671486e-08,
+    "closed_form_source": "instrument_entangled_bounds"
+   },
+   "A0-W-T1": {
+    "encoding": "F2",
+    "max_abs_diff_vs_closed_form": 1.065109659914576e-07,
+    "max_abs_diff_vs_closed_form_float64": 5.551115123125783e-17,
+    "runtime_vs_float64_max_abs": 1.065109659914576e-07,
+    "closed_form_source": "instrument_entangled_bounds"
+   }
+  },
+  "note": "every exp70 intro state is asserted AMPLITUDE BY AMPLITUDE against the committed instrument's closed form: E-in against `ein_coeffs` -> (a, 0, b, c) with the |01> amplitude IDENTICALLY ZERO, E-across against `across_amplitudes` with the CZ's minus sign on |11>, EA-ctrl against the same function with cz=False, and the product registers against RY (x) RY. The instrument is the authority for the maths and this is where the circuit is held to it.",
+  "precision_note": "the simulator is complex64 END TO END (torch_sv_sim.CDTYPE, unchanged since exp40 and left alone here because the anchors' bit-exactness depends on it), so the runtime agreement floor is ~1.2e-07. Each intro state is therefore ALSO recomputed in complex128 from the model's own angle data through the same gate sequence, held to the runtime state at float32 tolerance so it is provably the SAME circuit, and asserted against the closed form at 1e-12."
+ },
+ "word_order": {
+  "derivations_differ": true,
+  "n_event_renderings_checked": 8,
+  "swap_present_in_VSO_only": true,
+  "denotation_max_abs_diff_SVO_vs_VSO": 0.0,
+  "drop_swap_changes_state_max_abs": 1.1357511281967163,
+  "swap_free_VSO_equals_role_reversed_max_abs": 0.0,
+  "archived_source": "archive/01_parser_pipeline/arabic_dep_reader.py:130-138 (the two verb boxes), :167-180 (_vso and its Swap)",
+  "verdict": "SS7.3 DISCHARGED as DERIVATION-DIFFERS / DENOTATION-EQUAL, and the reconciliation is stated rather than buried. The compiled derivations differ -- the VSO reduction carries `Swap(N.l, N)` and the SVO reduction does not -- so the compiler genuinely consults the surface, which is the null-instrument failure SS7.3 exists to catch. The DENOTATIONS are equal (max diff 0.0e+00), which is not a defect but doc 55 SS16.1-Q2's USER-CONFIRMED premise that the two orders are truth-conditionally identical, and which is REQUIRED by SS4.7 ('the same six blocks, reused'), by SS5's 12/72 conditioning-group arithmetic (no surface-order factor) and by SS6.1 (A0 must reproduce exp68 bit-exactly on a dataset that already contains both orders). The Swap is LOAD-BEARING and that is measured, not argued: dropping it moves the state by 1.136 and yields EXACTLY the role-reversed circuit (diff 0.0e+00) -- without the Swap, the VSO clause would say the object did it. CONSEQUENCE FOR THE CLAIM, carried: the circuit is invariant to the alternation by construction, so doc 55 SS6.9's per-surface-order accuracy is a DATA-COMPOSITION statistic and is not evidence about word-order processing. ORCHESTRATOR REVIEW ITEM."
+ },
+ "fourier_closure": {
+  "per_arm": {
+   "EA-ctrl-T1": {
+    "resid_3term": 1.8602389145749854e-07,
+    "closes_at_3": true,
+    "T": 1,
+    "basis": "u(theta) = (1, cos, sin), joint 9"
+   },
+   "EA-ctrl-T2": {
+    "resid_3term": 1.7035031907308706e-07,
+    "closes_at_3": true,
+    "T": 2,
+    "basis": "u(theta) = (1, cos, sin), joint 9"
+   },
+   "A0-W-T1": {
+    "resid_3term_theta1_only": 0.07327709682694002,
+    "resid_9dim_product_basis": 5.81694342971506e-08,
+    "resid_6dim_Ein_basis": 0.03502217007053035,
+    "output_change_under_theta2_perturbation": 0.0027984529733657837,
+    "closes_at_3": false,
+    "T": 1,
+    "basis": "u(theta1) (x) u(theta2), 12 x 12 grid over [0, 2pi)"
+   },
+   "A0-W-T2": {
+    "resid_3term_theta1_only": 0.13591545255948068,
+    "resid_9dim_product_basis": 1.1601592941890004e-07,
+    "resid_6dim_Ein_basis": 0.0832592180106512,
+    "output_change_under_theta2_perturbation": 0.04769286513328552,
+    "closes_at_3": false,
+    "T": 2,
+    "basis": "u(theta1) (x) u(theta2), 12 x 12 grid over [0, 2pi)"
+   },
+   "P-eps-T1": {
+    "resid_3term_theta1_only": 0.059987280225082075,
+    "resid_9dim_product_basis": 7.757636591443351e-08,
+    "resid_6dim_Ein_basis": 0.06049528668509364,
+    "output_change_under_theta2_perturbation": 0.009972246480174363,
+    "closes_at_3": false,
+    "T": 1,
+    "basis": "u(theta1) (x) u(theta2), 12 x 12 grid over [0, 2pi)"
+   },
+   "P-eps-T2": {
+    "resid_3term_theta1_only": 0.22736111605777137,
+    "resid_9dim_product_basis": 1.1286358081452619e-07,
+    "resid_6dim_Ein_basis": 0.22058861265003418,
+    "output_change_under_theta2_perturbation": 0.15847226977348328,
+    "closes_at_3": false,
+    "T": 2,
+    "basis": "u(theta1) (x) u(theta2), 12 x 12 grid over [0, 2pi)"
+   },
+   "N-in-T1": {
+    "resid_6dim_Ein_basis": 6.50450071304487e-08,
+    "resid_3term_theta1_only": 0.08249899902371602,
+    "resid_9dim_product_basis": 0.044521831410165524,
+    "output_change_under_theta2_perturbation": 0.010783705860376358,
+    "closes_at_6": true,
+    "T": 1,
+    "basis": "instrument_entangled_bounds.EIN_BASIS = {1, cos t1, (1-cos t1)cos t2, (1-cos t1)sin t2, sin t1 cos(t2/2), sin t1 sin(t2/2)}, 12 x 12 grid over [0, 2pi)"
+   },
+   "N-in-T2": {
+    "resid_6dim_Ein_basis": 1.1144857936518093e-07,
+    "resid_3term_theta1_only": 0.08161279867684132,
+    "resid_9dim_product_basis": 0.05016523452950539,
+    "output_change_under_theta2_perturbation": 0.011910170316696167,
+    "closes_at_6": true,
+    "T": 2,
+    "basis": "instrument_entangled_bounds.EIN_BASIS = {1, cos t1, (1-cos t1)cos t2, (1-cos t1)sin t2, sin t1 cos(t2/2), sin t1 sin(t2/2)}, 12 x 12 grid over [0, 2pi)"
+   }
+  },
+  "N_in_double_negative_THE_ONE_THAT_MATTERS": "doc 56 SS7.1. A CRY with an UNWIRED TARGET degenerates to (a^2, b^2, ab) in theta1 alone and would pass a naive 'closes in 6 dims' check by closing in 3. A CRY REPLACED BY AN UNCONTROLLED RY would close in the 9-dim product basis. BOTH failures are asserted against explicitly, and no N-in result is admissible unless both directions pass. The measured residuals are 6.505e-08 (6-dim, must close), 8.250e-02 (3-term, must fail) and 4.452e-02 (9-dim product, must fail) at T = 1.",
+  "N_across_has_NO_fourier_gate": "doc 56 SS4.5 / SS7.2, and this is a FINDING, not an omission. CZ is a CLIFFORD gate, so conjugating a general readout by it PERMUTES the Pauli coordinates and leaves the reachable function space INVARIANT: the ten independent coordinates of the E-across joint state all lie in the 9-dim product span {1,cos tA,sin tA} (x) {1,cos tB,sin tB} and together FILL it, exactly as the no-CZ control's do (certified rank 9 = 9 = 9 in diagnostic_entangled_bounds.json). Closure therefore holds with the CZ present AND absent, so the standard SS7.1 assertion is VACUOUS for this arm. doc 49 SS8's newly adopted checklist entry, proposed by doc 56 SS14 and ADOPTED by orchestrator ruling 6: BEFORE ASSERTING A VALIDITY GATE, CHECK WHETHER THE INTERVENTION IS A SYMMETRY OF THE QUANTITY THE GATE MEASURES -- A GATE THAT CANNOT FAIL IS NOT A GATE. Replaced by SS7.2's three assertions; see `across_validity`.",
+  "coefficient_budget": {
+   "EA-ctrl / N-across per referent": 3,
+   "joint": 9,
+   "A0-W / P-eps per referent": 9,
+   "joint_81": 81,
+   "N-in per referent": 6,
+   "joint_36": 36,
+   "identical_at_T1_and_T2": true,
+   "note": "doc 56 SS4.1's registered reading: the E-in span is RESTRUCTURED, NOT ENLARGED. It ACQUIRES the half-frequency terms sin(t1)cos(t2/2) and sin(t1)sin(t2/2) that no product register can produce, and it LOSES sin(t1) standing alone, which every product register has. Six dimensions against nine with a four-dimensional intersection -- NEITHER CLASS CONTAINS THE OTHER, and nothing about which reaches further follows from counting dimensions."
+  }
+ },
+ "across_validity": {
+  "per_T": {
+   "T1": {
+    "n_heldout_items": 300,
+    "max_abs_intro_purity_vs_closed_form": 3.476535181956564e-07,
+    "max_abs_intro_purity_vs_closed_form_float64": 5.551115123125783e-16,
+    "closed_form": "1 - (sin tA sin tB)^2 / 2, identical on both wires",
+    "control_max_abs_intro_purity_minus_1": 3.5762786865234375e-07,
+    "control_max_abs_intro_purity_minus_1_float64": 4.440892098500626e-16,
+    "circuits_differ_structurally": true,
+    "CZ_present_in_N_across_only": true,
+    "max_abs_forward_difference_with_vs_without_CZ": 0.5212103128433228,
+    "control_reproduces_committed_A3_bitwise": true,
+    "heldout_concurrence": {
+     "min": 0.08964664365025261,
+     "median": 0.2640525296658411,
+     "max": 0.8243710789551988,
+     "n_items_below_0.10": 24,
+     "fraction_below_0.10": 0.08
+    }
+   },
+   "T2": {
+    "n_heldout_items": 300,
+    "max_abs_intro_purity_vs_closed_form": 3.476535181956564e-07,
+    "max_abs_intro_purity_vs_closed_form_float64": 5.551115123125783e-16,
+    "closed_form": "1 - (sin tA sin tB)^2 / 2, identical on both wires",
+    "control_max_abs_intro_purity_minus_1": 3.5762786865234375e-07,
+    "control_max_abs_intro_purity_minus_1_float64": 4.440892098500626e-16,
+    "circuits_differ_structurally": true,
+    "CZ_present_in_N_across_only": true,
+    "max_abs_forward_difference_with_vs_without_CZ": 0.6352466344833374,
+    "control_reproduces_committed_A3_bitwise": true,
+    "heldout_concurrence": {
+     "min": 0.08964664365025261,
+     "median": 0.2640525296658411,
+     "max": 0.8243710789551988,
+     "n_items_below_0.10": 24,
+     "fraction_below_0.10": 0.08
+    }
+   }
+  },
+  "why_this_replaces_fourier_closure": "doc 56 SS4.5 proves the readable span is CZ-INVARIANT, so closure is VACUOUS here. This is doc 48 SS10.6's both-directions discipline finding a case where the programme's usual validity instrument fails, AND SAYING SO BEFORE THE RUN rather than passing a vacuous gate.",
+  "three_assertions": "(1) per-item COMPUTED intro purity against the closed form at 1e-6 -- not the vacuous '< 1'; (2) the with-CZ and without-CZ compilations are DIFFERENT CIRCUITS and their forward passes differ by more than 1e-9 on a held-out item; (3) THE FAILING DIRECTION -- the control's purity is exactly 1 on both wires to 1e-9 on EVERY item, without which (1) could be satisfied by a build that entangles everything.",
+  "precision_note_THRESHOLDS_HELD_AS_REGISTERED": "the simulator is complex64, so an exactly-product two-qubit state has runtime purity 1 + 1.19e-07 and doc 56 SS7.2's 1e-9 threshold is BELOW THE SIMULATOR'S RESOLUTION. Loosening the registered threshold to 1e-6 to make the gate pass would be changing a gate after seeing the platform, so the build does the other thing: the INTRO CIRCUIT is recomputed in complex128 from the model's own angle data through the same gate sequence, held to the runtime state at float32 tolerance so it is provably the same circuit, and doc 56's 1e-6 and 1e-9 thresholds are asserted against it AS WRITTEN. Both numbers are reported. The checkpointed purity traces remain the RUNTIME ones, taken from the same forward pass that produces the answer, exactly as SS15.1 requires.",
+  "honest_note_doc56_SS4_4": "MANY PAIRS ARE NEAR-PRODUCT and this is registered rather than discovered: over exp70's 80 SB casts the E-across concurrence runs 0.0884-0.8244 with median 0.4019 and purity 0.6602-0.9961 with median 0.9192. A median cast at purity 0.92 is WEAKLY ENTANGLED. E-across injects real but MODEST mechanism, and the size of any measured effect must be read against that, not against the maximum the gate could produce."
+ },
+ "degenerate_entanglement_gate": {
+  "per_arm": {
+   "N-in-T1": {
+    "n_referent_slots": 1920,
+    "min": 0.18983488222434122,
+    "median": 0.649362428008447,
+    "max": 0.8818824503417738,
+    "n_below_gate": 0,
+    "gate": 0.1,
+    "worst_item": "val_p1_00031_a"
+   },
+   "N-in-T2": {
+    "n_referent_slots": 1920,
+    "min": 0.18983488222434122,
+    "median": 0.649362428008447,
+    "max": 0.8818824503417738,
+    "n_below_gate": 0,
+    "gate": 0.1,
+    "worst_item": "val_p2_00031_a"
+   }
+  },
+  "closed_form": "concurrence(r) = |sin theta1(r)| * |sin(theta2(r)/2)|",
+  "inventory_minimum": 0.18983488222434122,
+  "rule": "doc 56 SS7.3: EVERY N-in item's referents must have concurrence >= 0.10 under the eps-map, computed from the closed form on the item's OWN two nouns. The committed diagnostic guarantees the inventory supports this (minimum 0.1898, zero nouns below 0.05 and zero below 0.10). THE GATE IS ASSERTED PER ITEM ANYWAY, because doc 56 SS3's whole lesson is that 'the map should be fine' is not a gate.",
+  "deliberately_NOT_applied_to_N_across": "doc 56 SS7.3, registered honestly alongside, and RATIFIED by orchestrator ruling 7: 4 of the 80 E-across casts fall below concurrence 0.10 and are NOT excluded. Applying the gate there would mean DROPPING CASTS FROM A FROZEN DATASET TO MAKE AN ARM LOOK ENTANGLED, which is the opposite of a validity gate. N-across's weak-pair fraction is REPORTED (see `across_validity`), and doc 56 SS6.8's per-item entanglement stratification exists so it can be read post-hoc without a rerun. The per-item PURITY gate is the working validity instrument for that arm."
+ },
+ "copy_verification": {
+  "max_abs_diff": {
+   "EA-ctrl-T2": 0.0,
+   "A0-W-T2": 0.0,
+   "P-eps-T2": 0.0,
+   "N-in-T2": 0.0,
+   "N-across-T2": 0.0
+  },
+  "exact_zero": true,
+  "note": "doc 56 SS7.4: with event (3 - q) suppressed and the query fixed to the surviving event, every T = 2 arm reproduces its T = 1 pipeline bit-for-bit. For the ENTANGLED arms this carries extra weight: it proves the CRY and the CZ sit in the INTRO and nowhere else, which is what keeps SS7.1's closure arithmetic valid at T = 2 and what doc 56 SS13 item 2 declines to give up by putting an entangler inside an event block."
+ },
+ "trace_parity": {
+  "max_abs_diff_vs_story_values": {
+   "EA-ctrl-T1": 0.0,
+   "EA-ctrl-T2": 0.0,
+   "A0-W-T1": 0.0,
+   "A0-W-T2": 0.0,
+   "P-eps-T2": 0.0,
+   "N-in-T1": 0.0,
+   "N-in-T2": 0.0,
+   "N-across-T1": 0.0,
+   "N-across-T2": 0.0
+  },
+  "exact_zero": true,
+  "purity_range_per_arm": {
+   "EA-ctrl-T1": [
+    0.5400916337966919,
+    1.0
+   ],
+   "EA-ctrl-T2": [
+    0.5749799609184265,
+    1.0
+   ],
+   "A0-W-T1": [
+    0.511025607585907,
+    1.0000008344650269
+   ],
+   "A0-W-T2": [
+    0.5042723417282104,
+    1.0000005960464478
+   ],
+   "P-eps-T2": [
+    0.5032843947410583,
+    1.0000001192092896
+   ],
+   "N-in-T1": [
+    0.5108439922332764,
+    0.9450546503067017
+   ],
+   "N-in-T2": [
+    0.5100658535957336,
+    0.9691009521484375
+   ],
+   "N-across-T1": [
+    0.6033889651298523,
+    0.9938067197799683
+   ],
+   "N-across-T2": [
+    0.650727391242981,
+    0.9931504726409912
+   ]
+  },
+  "stages": [
+   "after_intro",
+   "after_event1",
+   "after_event2 (T=2)",
+   "at_readout"
+  ],
+  "quantity": "per-wire purity Tr rho^2 of the single-qubit reduced state",
+  "note": "doc 56 SS15.1, doc 55 SS18.3 verbatim plus exp70's re-pinning: THE INTRO STAGE IS ADDED AS A FOURTH RECORDED POINT, because for N-in and N-across the intro purity is no longer 1 and is the quantity SS7.2 and SS7.3 gate on. The E-in per-wire intro purity is 1 - |sin t1|^2|sin(t2/2)|^2/2 and the E-across value is 1 - (sin tA sin tB)^2/2; both are closed forms, both are asserted, neither is inferred. Descriptive; NO criterion reads the traces. SS15.2's amendment: for the entangled arms the readout RESTORATION TARGET is the INTRO purity, not 1."
+ },
+ "shuffle": {
+  "per_seed": [
+   {
+    "seed": 0,
+    "n_items": 1920,
+    "twins_still_opposite": true,
+    "casts_unchanged": true,
+    "query_index_unchanged": true,
+    "yes_fraction": 0.5,
+    "true_bearer_rule_accuracy": 0.471875
+   },
+   {
+    "seed": 1,
+    "n_items": 1920,
+    "twins_still_opposite": true,
+    "casts_unchanged": true,
+    "query_index_unchanged": true,
+    "yes_fraction": 0.5,
+    "true_bearer_rule_accuracy": 0.5072916666666667
+   },
+   {
+    "seed": 2,
+    "n_items": 1920,
+    "twins_still_opposite": true,
+    "casts_unchanged": true,
+    "query_index_unchanged": true,
+    "yes_fraction": 0.5,
+    "true_bearer_rule_accuracy": 0.5125
+   },
+   {
+    "seed": 3,
+    "n_items": 1920,
+    "twins_still_opposite": true,
+    "casts_unchanged": true,
+    "query_index_unchanged": true,
+    "yes_fraction": 0.5,
+    "true_bearer_rule_accuracy": 0.5020833333333333
+   },
+   {
+    "seed": 4,
+    "n_items": 1920,
+    "twins_still_opposite": true,
+    "casts_unchanged": true,
+    "query_index_unchanged": true,
+    "yes_fraction": 0.5,
+    "true_bearer_rule_accuracy": 0.478125
+   }
+  ],
+  "mean_true_bearer_rule_accuracy": 0.49437499999999995,
+  "floored_arms": [
+   "P-eps-T1",
+   "P-eps-T2",
+   "N-in-T1",
+   "N-in-T2",
+   "N-across-T1",
+   "N-across-T2"
+  ],
+  "note": "doc 56 SS5.2: matched S-shuffle floors for the THREE NEW families only, bearer designation reassigned PER PAIR and independently of the features, so twins stay on opposite labels and V1 stays exactly 0.500. exp69's `relabel_shuffle_q` is IMPORTED, unchanged. The ANCHOR families carry NO fresh floor and doc 56 SS5.3 states the argument rather than assuming it: they are gated at |delta| <= 0.002 against exp69 arms that cleared their own matched floors by 8.02-19.08 SD, and a gate that pins an arm to within 0.002 of a floor-clearing measurement is transitively stronger than re-measuring the floor. IF EITHER ANCHOR FAILS, THAT ARGUMENT IS VOID ALONG WITH THE RUN."
+ },
+ "two_epoch_probe": {
+  "A0-W-T1": {
+   "val_acc": 0.75,
+   "heldout_test_acc": 0.82,
+   "wall_sec": 7.641306161880493,
+   "n_params": 264,
+   "wires": 4,
+   "T": 1
+  },
+  "A0-W-T2": {
+   "val_acc": 0.6439393939393939,
+   "heldout_test_acc": 0.55,
+   "wall_sec": 11.40201210975647,
+   "n_params": 264,
+   "wires": 4,
+   "T": 2
+  },
+  "EA-ctrl-T1": {
+   "val_acc": 0.8484848484848485,
+   "heldout_test_acc": 0.8733333333333333,
+   "wall_sec": 3.7337751388549805,
+   "n_params": 120,
+   "wires": 2,
+   "T": 1
+  },
+  "EA-ctrl-T2": {
+   "val_acc": 0.6287878787878788,
+   "heldout_test_acc": 0.6566666666666666,
+   "wall_sec": 4.868973731994629,
+   "n_params": 120,
+   "wires": 2,
+   "T": 2
+  },
+  "P-eps-T1": {
+   "val_acc": 0.946969696969697,
+   "heldout_test_acc": 0.9533333333333334,
+   "wall_sec": 8.64640498161316,
+   "n_params": 264,
+   "wires": 4,
+   "T": 1
+  },
+  "P-eps-T2": {
+   "val_acc": 0.6742424242424242,
+   "heldout_test_acc": 0.7233333333333334,
+   "wall_sec": 11.507990598678589,
+   "n_params": 264,
+   "wires": 4,
+   "T": 2
+  },
+  "N-in-T1": {
+   "val_acc": 0.8257575757575758,
+   "heldout_test_acc": 0.7966666666666666,
+   "wall_sec": 8.570388078689575,
+   "n_params": 264,
+   "wires": 4,
+   "T": 1
+  },
+  "N-in-T2": {
+   "val_acc": 0.5454545454545454,
+   "heldout_test_acc": 0.55,
+   "wall_sec": 10.402963876724243,
+   "n_params": 264,
+   "wires": 4,
+   "T": 2
+  },
+  "N-across-T1": {
+   "val_acc": 0.8560606060606061,
+   "heldout_test_acc": 0.9266666666666666,
+   "wall_sec": 3.7237660884857178,
+   "n_params": 120,
+   "wires": 2,
+   "T": 1
+  },
+  "N-across-T2": {
+   "val_acc": 0.6893939393939394,
+   "heldout_test_acc": 0.7,
+   "wall_sec": 4.914121150970459,
+   "n_params": 120,
+   "wires": 2,
+   "T": 2
+  },
+  "S-shuffle-P-eps-T1": {
+   "val_acc": 0.5303030303030303,
+   "heldout_test_acc": 0.51,
+   "wall_sec": 8.68869400024414,
+   "n_params": 264,
+   "wires": 4,
+   "T": 1
+  },
+  "S-shuffle-P-eps-T2": {
+   "val_acc": 0.5,
+   "heldout_test_acc": 0.54,
+   "wall_sec": 10.367766857147217,
+   "n_params": 264,
+   "wires": 4,
+   "T": 2
+  },
+  "S-shuffle-N-in-T1": {
+   "val_acc": 0.5681818181818182,
+   "heldout_test_acc": 0.5033333333333333,
+   "wall_sec": 7.842827081680298,
+   "n_params": 264,
+   "wires": 4,
+   "T": 1
+  },
+  "S-shuffle-N-in-T2": {
+   "val_acc": 0.49242424242424243,
+   "heldout_test_acc": 0.52,
+   "wall_sec": 11.510157823562622,
+   "n_params": 264,
+   "wires": 4,
+   "T": 2
+  },
+  "S-shuffle-N-across-T1": {
+   "val_acc": 0.5757575757575758,
+   "heldout_test_acc": 0.5466666666666666,
+   "wall_sec": 3.7383580207824707,
+   "n_params": 120,
+   "wires": 2,
+   "T": 1
+  },
+  "S-shuffle-N-across-T2": {
+   "val_acc": 0.553030303030303,
+   "heldout_test_acc": 0.5633333333333334,
+   "wall_sec": 4.8495190143585205,
+   "n_params": 120,
+   "wires": 2,
+   "T": 2
+  }
+ },
+ "parameter_budget_identity": {
+  "per_arm": {
+   "A0-W-T1": 264,
+   "A0-W-T2": 264,
+   "EA-ctrl-T1": 120,
+   "EA-ctrl-T2": 120,
+   "P-eps-T1": 264,
+   "P-eps-T2": 264,
+   "N-in-T1": 264,
+   "N-in-T2": 264,
+   "N-across-T1": 120,
+   "N-across-T2": 120
+  },
+  "note": "doc 56 SS4.3: N-in and P-eps carry the same two features under the same angle map on the same wires with the SAME PARAMETER BUDGET; the ONLY difference is the CRY. The entangling angle is DATA taken from the referent's own AraVec coordinate, never a Parameter, so the entangled arm adds ZERO trainable parameters. Asserted here because a budget difference would confound the entire experiment."
+ },
+ "assertions_passed": true,
+ "wall_time_sec": 129.95203518867493
+}

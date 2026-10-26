@@ -19,8 +19,7 @@ First application of pregroup grammar-based QNLP to Arabic. Converts Arabic sent
     └── 05_dev_history/              ← superseded iterations, kept for transparency
 ```
 
-The root holds only the **active** line — the trained-block story-QA experiments
-(exp40–43), which import nothing but `torch` and are self-contained. Everything
+The root holds the experiments from exp40 onward (see "Experiments 44–133" below for an index); everything before that is under `archive/`. Everything
 else is a closed era and lives under `archive/`, with each era's code, data and
 results kept together. See [`archive/README.md`](archive/README.md) for the map
 and for how to re-run archived experiments.
@@ -220,3 +219,76 @@ booleans — **the verdicts below are those booleans, not a reading of the numbe
   and its observed ceiling matches that degeneracy to ~1pp. A pre-registered
   remediation (matched initialisation plus a per-arm memorisation control) must
   run before any comparative claim is made.
+
+## Experiments 44–133 (August–October 2026)
+
+Corrections to the paper found by these later experiments are listed in [CORRECTION.md](CORRECTION.md).
+
+Each experiment had its pass and fail criteria written down and committed before it ran, and each results file stores those verdicts as computed booleans. Scripts are named `expNN_*.py` and write `results_expNN*.json`; story datasets are `stories_expNN*.json`. Comments in the scripts refer to numbered design notes ("doc 54") that are kept privately; the scripts and results stand on their own.
+
+Not included in this update: model checkpoints and logs (too large), experiments that use licensed treebank data (exp130–131), the poetry demonstration (exp125–126), the hardware-run preparation for a specific device (exp107, exp111, exp129), and the eavesdropper bound (exp134), which is still running.
+
+### Trained blocks: what makes a referent register learnable (exp44–63)
+
+| exp | question |
+|---|---|
+| 44 | Do richer classical comparators close the gap to the quantum arm? |
+| 45, 47–48 | Two-qubit referent registers: does the multi-hop rung need the quantum register, or just capacity? |
+| 46, 50 | Does a verb's morphological pattern (wazn) bind to a role, on a fresh verb inventory? |
+| 49 | Is there a verb-agnostic shortcut, and does the permutation control see it? |
+| 51 | Verb-twin rung: can any arm bind a verb to its argument pair? |
+| 52 | Does the published word-order result survive lexical tying and the nested-cup VSO convention? |
+| 53–54 | Does the model compose root × pattern? (with an extended budget after the positive control missed) |
+| 55–59 | Does the referent encoding carry meaning or only conditioning (angular spread)? |
+| 60–63 | Re-uploading and frequency: does more spectrum per wire convert into held-out accuracy? |
+
+### Capacity levers and composition (exp65–86)
+
+| exp | question |
+|---|---|
+| 65 | Does the circuit bind a real morphological contrast (فاعِل vs not) and transfer it to unseen words? |
+| 67 | Does a wider readout (4 or 8 outcomes) convert into trained capacity? |
+| 68 | Does width (more wires) convert where frequency and readout did not? |
+| 69–70 | Does a bound role survive composition across two events, and do entangled encodings help? |
+| 72–73 | Confirmation draws for the positives of the lever ledger |
+| 75–76 | Re-uploading and scaling rungs |
+| 77 | Type-uniform control for wazn-specific structure |
+| 78–79 | Replication on a fresh band, and the discard (DisCoCirc) arm |
+| 81 | Two qubits per referent |
+| 82–86 | Identity vs uniform initialisation, cost shaping, and why identity initialisation helps |
+
+### Tokenisation side line (exp80–89)
+
+| exp | question |
+|---|---|
+| 80, 84 | Does a root-and-pattern-aware tokenizer beat BPE at matched vocabulary? |
+| 87 | Arabic wug test: do tokenizers handle nonce roots in real patterns? |
+| 88–89 | Skeleton matching at full inventory, and vocabulary allocation across tokenizer arms |
+
+### Arabic axis: where a qubit helps (exp90–133)
+
+| exp | question | verdict |
+|---|---|---|
+| 90–91 | Case as an operator vs its classical twin | the twin is as fast |
+| 92 | Does a learned wazn operator transfer? | no; a fixed swap does (0.87–0.90) |
+| 93 | Supplied routing with a learned agreement control (pro-drop) | yes, 0.948 / 0.971 against an exact 0.5 floor |
+| 94–98 | Structure and depth advantage over a transformer | no |
+| 99 | One qubit per noun storing two features | 0.854 vs 0.75; composition cap proved for three features |
+| 100 | Do Arabic agreement readers ask single features? | no, they nest; qubit = bit |
+| 101 | Which-referent game, six agreement classes | 0.883 vs 0.800 (uniform); +0.029 on real frequencies |
+| 102 | Does syntax select by root or pattern alone? | almost never (0.26% / 0.89%) |
+| 103 | Two readers sharing a qubit | three classes yes, six no |
+| 104–105 | Neutral-atom emulation of the game | all arms clear the classical value with fast pulses |
+| 106 | Root × template store | uniform yes; real data no (0.001) |
+| 108 | Fixed one-qubit router vs learned control | matches with zero parameters |
+| 109 | Contextuality in Arabic homographs | none, in usage or in a language model |
+| 110 | Adjective attachment as a storage game | real text: qubit = bit |
+| 112 | Deflected agreement, contextuality | none (0/20) |
+| 113, 116, 118, 132 | Two qubits vs two bits for three and four referents | exact classical values 13/18 and 812/1440; two qubits beat both |
+| 114–115 | One pulse per word | beats the bit only at three and five classes |
+| 117, 119 | The paper's tense and sense results, re-run | the 56% tense result was a parser artefact |
+| 120–121 | Root–pattern factorisation, quantum vs fair classical comparators | no quantum-specific gain |
+| 124 | Coreference as quantum optimisation | no value |
+| 127 | Certified quantum upper bound (semidefinite relaxation) | K = 3 in [0.7781, 0.8203]; K = 4 ≤ 0.6608 |
+| 128 | Two atoms under one global laser, noiseless | 0.739 vs 2/3 |
+| 133 | Noise robustness of the two-qubit codes as dimension witnesses | critical visibility 0.874 (K = 3), 0.823 (K = 4) |

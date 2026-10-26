@@ -1,0 +1,290 @@
+{
+ "meta": {
+  "avn_commit": "372950484a6335bc0ad4587af9b75cec10fbe1e3",
+  "frozen_sha256": "d4bf1bccf4c1bf81766225f5e56fbe2f215362447bdfaec0384d0545680caf5d"
+ },
+ "states": {
+  "برز/أبرز": {
+   "all_avn_participles": [
+    "بَارِز",
+    "مُبَرِّز"
+   ],
+   "alternation": "I-IV",
+   "intransitive_lex": "بَرَز",
+   "source": "AVN_participle",
+   "state_surface": "مُبَرِّز"
+  },
+  "تعب/أتعب": {
+   "all_avn_participles": [
+    "تَاعِب",
+    "تَعْبَان",
+    "مُتَعِّب"
+   ],
+   "alternation": "I-IV",
+   "intransitive_lex": "تَعِب",
+   "source": "AVN_participle",
+   "state_surface": "مُتَعِّب"
+  },
+  "تلف/أتلف": {
+   "all_avn_participles": [
+    "تَالِف"
+   ],
+   "alternation": "I-IV",
+   "intransitive_lex": "تَلِف",
+   "source": "AVN_participle",
+   "state_surface": "تَالِف"
+  },
+  "ثنى/انثنى": {
+   "all_avn_participles": [
+    "مُنْتَثَنِي",
+    "مُنْثَنِي"
+   ],
+   "alternation": "I-VII",
+   "intransitive_lex": "ٱِنْثَنَى",
+   "source": "AVN_participle",
+   "state_surface": "مُنْثَنِي"
+  },
+  "حجب/انحجب": {
+   "all_avn_participles": [
+    "مُنْحَجِب"
+   ],
+   "alternation": "I-VII",
+   "intransitive_lex": "ٱِنْحَجَب",
+   "source": "AVN_participle",
+   "state_surface": "مُنْحَجِب"
+  },
+  "خاف/أخاف": {
+   "all_avn_participles": [
+    "خَائِف"
+   ],
+   "alternation": "I-IV",
+   "intransitive_lex": "خاف",
+   "source": "AVN_participle",
+   "state_surface": "خَائِف"
+  },
+  "خجل/أخجل": {
+   "all_avn_participles": [
+    "خَجِل",
+    "خَجْلَان",
+    "مُخَجِّل"
+   ],
+   "alternation": "I-IV",
+   "intransitive_lex": "خَجِل",
+   "source": "AVN_participle",
+   "state_surface": "مُخَجِّل"
+  },
+  "خلع/انخلع": {
+   "all_avn_participles": [
+    "مُنْخَلِع"
+   ],
+   "alternation": "I-VII",
+   "intransitive_lex": "ٱِنْخَلَع",
+   "source": "AVN_participle",
+   "state_surface": "مُنْخَلِع"
+  },
+  "ذاب/أذاب": {
+   "all_avn_participles": [
+    "ذَائِب"
+   ],
+   "alternation": "I-IV",
+   "intransitive_lex": "ذاب",
+   "source": "AVN_participle",
+   "state_surface": "ذَائِب"
+  },
+  "سكب/انسكب": {
+   "all_avn_participles": [
+    "مُنْسَكِب"
+   ],
+   "alternation": "I-VII",
+   "intransitive_lex": "ٱِنْسَكَب",
+   "source": "AVN_participle",
+   "state_surface": "مُنْسَكِب"
+  },
+  "شغل/انشغل": {
+   "all_avn_participles": [
+    "مُنشسَغِل"
+   ],
+   "alternation": "I-VII",
+   "intransitive_lex": "ٱِنْشَغَل",
+   "source": "AVN_participle",
+   "state_surface": "مُنشسَغِل"
+  },
+  "شق/انشق": {
+   "all_avn_participles": [
+    "مُنْشَق"
+   ],
+   "alternation": "I-VII",
+   "intransitive_lex": "ٱِنْشَقّ",
+   "source": "AVN_participle",
+   "state_surface": "مُنْشَق"
+  },
+  "ظهر/أظهر": {
+   "all_avn_participles": [
+    "طَاهِر"
+   ],
+   "alternation": "I-IV",
+   "intransitive_lex": "ظَهَر",
+   "source": "AVN_participle",
+   "state_surface": "طَاهِر"
+  },
+  "عزل/انعزل": {
+   "all_avn_participles": [
+    "مُنْعَزِل"
+   ],
+   "alternation": "I-VII",
+   "intransitive_lex": "ٱِنْعَزَل",
+   "source": "AVN_participle",
+   "state_surface": "مُنْعَزِل"
+  },
+  "عكس/انعكس": {
+   "all_avn_participles": [
+    "مُنْعَكِس"
+   ],
+   "alternation": "I-VII",
+   "intransitive_lex": "ٱِنْعَكَس",
+   "source": "AVN_participle",
+   "state_surface": "مُنْعَكِس"
+  },
+  "غرق/أغرق": {
+   "all_avn_participles": [
+    "رَارِق",
+    "غَارِق",
+    "قَارِق",
+    "مُغَرِّق"
+   ],
+   "alternation": "I-IV",
+   "intransitive_lex": "غَرِق",
+   "source": "AVN_participle",
+   "state_surface": "غَارِق"
+  },
+  "غضب/أغضب": {
+   "all_avn_participles": [
+    "غَاضِب",
+    "غَاضْبَان",
+    "غَضبَان",
+    "غَضْبَان"
+   ],
+   "alternation": "I-IV",
+   "intransitive_lex": "غَضِب",
+   "source": "AVN_participle",
+   "state_surface": "غَاضِب"
+  },
+  "فتح/انفتح": {
+   "all_avn_participles": [
+    "مُنْفَتِح"
+   ],
+   "alternation": "I-VII",
+   "intransitive_lex": "ٱِنْفَتَح",
+   "source": "AVN_participle",
+   "state_surface": "مُنْفَتِح"
+  },
+  "فرح/أفرح": {
+   "all_avn_participles": [
+    "فَارِح",
+    "فَرهَان",
+    "فَرِح",
+    "فَرْحَان",
+    "مُفَرِّح"
+   ],
+   "alternation": "I-IV",
+   "intransitive_lex": "فَرِح",
+   "source": "AVN_participle",
+   "state_surface": "مُفَرِّح"
+  },
+  "فسد/أفسد": {
+   "all_avn_participles": [
+    "فَاسِد",
+    "مُفَسِّد"
+   ],
+   "alternation": "I-IV",
+   "intransitive_lex": "فَسَد",
+   "source": "AVN_participle",
+   "state_surface": "فَاسِد"
+  },
+  "فصل/انفصل": {
+   "all_avn_participles": [
+    "فَاصِل",
+    "مُنْفَصِل"
+   ],
+   "alternation": "I-VII",
+   "intransitive_lex": "ٱِنْفَصَل",
+   "source": "AVN_participle",
+   "state_surface": "فَاصِل"
+  },
+  "فك/انفك": {
+   "all_avn_participles": [
+    "مُنْفَك"
+   ],
+   "alternation": "I-VII",
+   "intransitive_lex": "ٱِنْفَكّ",
+   "source": "AVN_participle",
+   "state_surface": "مُنْفَك"
+  },
+  "فلق/انفلق": {
+   "all_avn_participles": [
+    "مُنْفَلِق"
+   ],
+   "alternation": "I-VII",
+   "intransitive_lex": "ٱِنْفَلَق",
+   "source": "AVN_participle",
+   "state_surface": "مُنْفَلِق"
+  },
+  "قطع/انقطع": {
+   "all_avn_participles": [
+    "مُنْقَطِع"
+   ],
+   "alternation": "I-VII",
+   "intransitive_lex": "ٱِنْقَطَع",
+   "source": "AVN_participle",
+   "state_surface": "مُنْقَطِع"
+  },
+  "قلق/أقلق": {
+   "all_avn_participles": [
+    "قَلِق",
+    "قَلْقَان",
+    "مُقَلِّق"
+   ],
+   "alternation": "I-IV",
+   "intransitive_lex": "قَلِق",
+   "source": "AVN_participle",
+   "state_surface": "مُقَلِّق"
+  },
+  "كسر/انكسر": {
+   "all_avn_participles": [
+    "مُنْكَسِر"
+   ],
+   "alternation": "I-VII",
+   "intransitive_lex": "ٱِنْكَسَر",
+   "source": "AVN_participle",
+   "state_surface": "مُنْكَسِر"
+  },
+  "كشف/انكشف": {
+   "all_avn_participles": [
+    "مُنْكَشِف"
+   ],
+   "alternation": "I-VII",
+   "intransitive_lex": "ٱِنْكَشَف",
+   "source": "AVN_participle",
+   "state_surface": "مُنْكَشِف"
+  },
+  "نبت/أنبت": {
+   "all_avn_participles": [
+    "مُنَبِّت",
+    "نَابِت"
+   ],
+   "alternation": "I-IV",
+   "intransitive_lex": "نَبَت",
+   "source": "AVN_participle",
+   "state_surface": "نَابِت"
+  },
+  "هزم/انهزم": {
+   "all_avn_participles": [
+    "مُنهَزِم"
+   ],
+   "alternation": "I-VII",
+   "intransitive_lex": "ٱِنْهَزَم",
+   "source": "AVN_participle",
+   "state_surface": "مُنهَزِم"
+  }
+ }
+}

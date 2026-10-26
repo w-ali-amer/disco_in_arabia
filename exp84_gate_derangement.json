@@ -1,0 +1,21 @@
+{
+  "gate_id": "exp84_gate_derangement",
+  "description": "Corrupted skeleton map tanks FUSED expanded boundary F1",
+  "real_check": {
+    "description": "Designed-to-fail: deranged template→skeleton map on FUSED expanded F1",
+    "derangement_seed": 999,
+    "n_templates_deranged": 3993,
+    "f1_real_fused_expanded": 0.5785,
+    "f1_deranged_fused_expanded": 0.2567,
+    "delta_f1": 0.3217,
+    "gate_fires": true,
+    "verdict": "GATE_FIRES: corrupted expanded F1 tanks as expected"
+  },
+  "dtf_leg": {
+    "description": "The DTF run IS the corrupt check above (same gate structure as exp80)",
+    "f1_deranged": 0.2567,
+    "threshold_checked": "f1_corrupt < f1_real - 0.10",
+    "gate_fires": true,
+    "verdict": "GATE_FIRES: corrupted expanded F1 tanks as expected"
+  }
+}

@@ -1,0 +1,119 @@
+{
+ "experiment": "exp77_pilot_b1",
+ "spec": "doc 66 §11.4, REGISTERED 2026-09-04",
+ "pilot_status": "BARRED from every verdict; only sd matters",
+ "inventory_meta": {
+  "meta_sha256": "a9e9de9ead17cfee6524bf8f44259bb3f3c36b8238e35400b2df7499b21da319",
+  "raw_file_sha256": "7e0c874080f2bfcefcf2c8e14f015709e29db06c00f4649ad37ce62000805af1",
+  "sha_note": "meta_sha256 is the embedded provenance sha, assembled during inventory build on WSL and not reconstructible from the file. raw_file_sha256 is the current on-disk sha256 of exp77_inventory.json. doc 67 §6 registered prefix a9e9de9ead17cfee matches meta_sha256. Both hashes pin file identity; raw_file_sha256 would catch future edits to the words array that leave meta intact.",
+  "sha_verified": true,
+  "admitted_words": 499,
+  "roots": 182
+ },
+ "config": {
+  "n_qubits_per_word": 3,
+  "n_layers": 3,
+  "n_ansatz_params": 24,
+  "n_readout_params": 2,
+  "n_total_params": 26,
+  "FLAG_readout": "computational-basis collision readout: P(same_root) = sigmoid(a * dot(probs_A, probs_B) + b). probs_X = |U(theta) @ encoded_X|^2 as 2^3-dim prob vector. Trainable: U(theta) sits inside probs; collision changes with theta. Reusable verbatim by the wazn-ansatz arm.",
+  "FLAG_featurizer": "per-slot positional extraction, doc 65 lineage adapted for multi-slot. Column->slot indices: faail[0,2,3], faiil[0,1,3], fa33aal[0,1,3], maf3uul[1,2,4], mu1[1,2,3], mu2[1,2,3]. Char->angle: pi*(cp-0x0621)/40 in [0,pi]; out-of-range -> pi/2. Slot clamp fallback: min(s, len(bare)-1). Column as Rz(2*pi*col_idx/6) on all 3 wires (data, not structure). Root field NEVER an input: keys are (surface, column) only.",
+  "ansatz": "Circuit4(n_qubits=3, n_layers=3) from torch_sv_sim.py (lambeq-convention Sim-et-al.)",
+  "readout_params_init": "a=1.0, b=0.0",
+  "split": {
+   "rule": "70/30 root-level split",
+   "root_split_seed": 77490,
+   "neg_sample_seed": 77491,
+   "negative_protocol": "doc 66 §11.2: different-root cross-template pairs with |letter_set(A) & letter_set(B)| >= 3 after stripping ال. Ratio 1:1 with positives per split. Sampling: at least one word has root in the split's anchor-roots set; second word drawn from full inventory. Featurizer is fixed (no learned embeddings) so cross-split words in negatives cause no information leakage.",
+   "FLAG_negative_deviation": "Pilot only. Within-split sampling (doc 66 §11.3's intent) was infeasible at 1:1: test pool produced 139 candidates, 152 needed. Resolution: anchor-words from test-roots + full inventory for second word. This is acceptable here (no learned word parameters). The main run CANNOT inherit this: §11.3's factorial holdout forbids test-root words appearing in train negatives. Main run must either (a) sample strictly within-split and subsample positives to match (recommended), or (b) restate the deviation explicitly in its freeze. Bar-freeze must decide this before wazn-ansatz code runs.",
+   "val_fraction_of_train": 0.15,
+   "epoch_selection": "best val acc across all 150 epochs"
+  },
+  "training": {
+   "optimizer": "Adam",
+   "lr": 0.01,
+   "max_epochs": 150,
+   "batch": "full-batch per epoch (accumulate, one step)",
+   "set_num_threads": 1
+  },
+  "seeds": [
+   77500,
+   77501,
+   77502,
+   77503,
+   77504
+  ],
+  "sd_ddof": 1
+ },
+ "pair_counts": {
+  "total_positives_in_inventory": 478,
+  "train_positive": 326,
+  "train_negative": 326,
+  "test_positive": 152,
+  "test_negative": 152,
+  "train_total": 652,
+  "test_total": 304,
+  "train_roots": 127,
+  "test_roots": 55
+ },
+ "results": {
+  "per_seed": [
+   {
+    "seed": 77500,
+    "test_acc": 0.6743421052631579,
+    "best_val_acc": 0.711340206185567,
+    "wall_sec": 120.3
+   },
+   {
+    "seed": 77501,
+    "test_acc": 0.7269736842105263,
+    "best_val_acc": 0.7731958762886598,
+    "wall_sec": 120.7
+   },
+   {
+    "seed": 77502,
+    "test_acc": 0.6743421052631579,
+    "best_val_acc": 0.8144329896907216,
+    "wall_sec": 121.0
+   },
+   {
+    "seed": 77503,
+    "test_acc": 0.7236842105263158,
+    "best_val_acc": 0.7628865979381443,
+    "wall_sec": 120.6
+   },
+   {
+    "seed": 77504,
+    "test_acc": 0.7236842105263158,
+    "best_val_acc": 0.7731958762886598,
+    "wall_sec": 121.1
+   }
+  ],
+  "test_accuracies": [
+   0.6743421052631579,
+   0.7269736842105263,
+   0.6743421052631579,
+   0.7236842105263158,
+   0.7236842105263158
+  ],
+  "mean_test_acc": 0.704605,
+  "sd_ddof1": 0.027659,
+  "delta": 0.06,
+  "delta_formula": "max(0.06, 2 * sd_ddof1)",
+  "note_barred": "BARRED from verdict. sd and Δ feed doc 66 §6 bar freeze only."
+ },
+ "wall_sec_total": 607.3,
+ "smoke_tests": {
+  "surface_only_assertion": "PASSED: featurizer keys are (surface, column) — root field never accessed",
+  "gradient_nonzero": "PASSED: ansatz theta grad norm = 0.3965 on first pair",
+  "scrambled_labels_fixed": {
+   "method": "ONE fixed scramble drawn before training (seed 54321); train 30 epochs on scrambled labels; evaluate on SAME fixed scramble",
+   "n_pairs": 80,
+   "n_epochs": 30,
+   "acc": 0.55,
+   "threshold": 0.65,
+   "passed": true,
+   "note": "Previous run used a fresh random scramble at eval time (vacuous gate: any model scores ~0.5 on fresh coin flips). This run fixes the scramble before training; 0.55 confirms no memorization of a consistent signal."
+  }
+ }
+}

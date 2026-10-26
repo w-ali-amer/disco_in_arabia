@@ -1,0 +1,571 @@
+{
+ "experiment": "exp72 CONFIRM DRAW smoke -- doc 58 SS7 re-run on the seed + 1000 draw (SS16.2)",
+ "spec": "qnlp_private_docs/58_exp72_rescue_rung.md (REGISTERED 2026-08-27, orchestrator rulings 1-6 in the status header, SS18 post-registration note on I2)",
+ "spec_commit_line": "0fc70b2 doc 58 SS19: exp72 reports -- identity-init partial rescue of I1 (floors clean, mechanism partially restored); directional call missed honestly; I2 resists all four; confirm ordered; reopening consequence registered",
+ "platform": "macOS-26.5.2-arm64-arm-64bit",
+ "python": "3.12.13",
+ "torch": "2.13.0",
+ "numpy": "2.5.1",
+ "dataset_decision": {
+  "decision": "REUSE the committed seed+1000 draw; DO NOT regenerate",
+  "path": "stories_exp70_confirm_QA.json",
+  "sha256": "59e6ada8a98b8917a1bd8e927d09249132a9765f7002e40fceb807a4bd51cd7c",
+  "generator_seed": 70000,
+  "first_draw_seed": 69000,
+  "seed_offset": 1000,
+  "is_confirm_draw": true,
+  "first_draw_sha256": "2b85822b544571969fd40cab12b03a4ac256b08aee914d2b9643b856a6308c96",
+  "differs_from_first_draw": true,
+  "vsuite": "results_exp70_confirm_WN_validation.json",
+  "vsuite_kill_gate_passed": true,
+  "vsuite_validates_this_sha": true,
+  "verb_inventory_identical_to_first_draw": true,
+  "human_inventory_identical_to_first_draw": true,
+  "split_counts": {
+   "1": {
+    "train": 528,
+    "val": 132,
+    "test": 300
+   },
+   "2": {
+    "train": 528,
+    "val": 132,
+    "test": 300
+   }
+  },
+  "verb_slots_first_draw": {
+   "V_A": [
+    "سأل",
+    "ضرب",
+    "عالج"
+   ],
+   "V_B": [
+    "حمل",
+    "رفع",
+    "ساعد"
+   ],
+   "rule": "the 6-verb exp51 inventory split 3/3 into DISJOINT slots at the registered generator seed; event 1 draws from V_A, event 2 from V_B (doc 55 SS4.2). Disjointness is what makes the verb-indexed query well-posed and is what costs exp69 any claim about discourse-position resolution (doc 55 SS11)."
+  },
+  "verb_slots_confirm_draw": {
+   "V_A": [
+    "رفع",
+    "ساعد",
+    "عالج"
+   ],
+   "V_B": [
+    "حمل",
+    "سأل",
+    "ضرب"
+   ],
+   "rule": "the 6-verb exp51 inventory split 3/3 into DISJOINT slots at the registered generator seed; event 1 draws from V_A, event 2 from V_B (doc 55 SS4.2). Disjointness is what makes the verb-indexed query well-posed and is what costs exp69 any claim about discourse-position resolution (doc 55 SS11)."
+  },
+  "argument": "doc 58 SS16.2 defines the confirm draw as a re-run of the COMMITTED exp69_datagen.py, UNMODIFIED, at generator seed + 1000. exp69_datagen.py carries SEED = 69000 and documents its own confirm invocation as `--seed 70000`. This dataset IS that object (meta.seed = 70000, is_confirm_draw = true, same design doc, same verb and noun inventories, same 528/132/300 splits at both T), it was produced by exp70's confirm draw, and its FULL V-SUITE WAS RE-RUN ON IT AND PASSED -- which is exactly what SS16.2 requires. The generator is deterministic, so a third invocation at the same seed produces a BYTE-IDENTICAL file: regenerating would add a duplicate artefact, put Rule 3 at risk, and change nothing. The sha and the V-suite verdict are ASSERTED here rather than trusted, which is doc 58 SS7.4's discipline applied to the fresh draw. doc 50 SS5.2's native-speaker gate stays CLOSED and that is asserted, not assumed: no new surface template, no new noun, no new verb.",
+  "one_thing_that_changes": "the generator RE-DRAWS the V_A / V_B verb split, so R-layerwise's event-1 / event-2 partition is NOT the first draw's. exp72_run.verb_groups reads meta.verb_slots from the dataset being run, so the partition follows the draw automatically; the 99/99/66 arithmetic and the 165/99/264 stage counts are re-asserted on this draw at smoke."
+ },
+ "comparator_target_doc58_SS3": {
+  "comparator": 0.9879999999999999,
+  "sd": 0.010954451150103333,
+  "per_seed": [
+   1.0,
+   0.98,
+   0.98,
+   1.0,
+   0.98
+  ],
+  "feature_dim": 81,
+  "source": "results_exp70_confirm.json :: comparator.arms['A0-W-T2']['class']",
+  "first_draw_comparator": 1.0,
+  "note": "exp72 runs NO comparator on either draw (doc 58 SS3). This value is imported from the committed exp70 confirm results and asserted. It is 0.9880 on this draw against 1.0000 on the first, so the bars MOVE and are recomputed from the registered formulas rather than carried over."
+ },
+ "exp70_confirm_reference": {
+  "A0-W-T1": {
+   "per_seed": [
+    0.97,
+    0.9733333333333334,
+    0.96,
+    0.9666666666666667,
+    0.97
+   ],
+   "mean": 0.968,
+   "sd": 0.005055250296034389,
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "val_per_seed": [
+    0.9545454545454546,
+    0.9545454545454546,
+    0.9621212121212122,
+    0.9545454545454546,
+    0.9696969696969697
+   ],
+   "selected_epoch_per_seed": [
+    58,
+    12,
+    116,
+    19,
+    15
+   ],
+   "ckpt_sha256": [
+    "340f67b338e52b492372167958fedfd23bbb825dbbaad1ad052bf36a42db119c",
+    "b9f387d90f764d5981798aa8746be0cbe7adeb9b9a4ddcdf883f04af2eb6f533",
+    "dcdbdbf6cc1639a29935a78be16119e4e56abb42c46f8dd569dc973f461f2c84",
+    "5350af8c0f65b62a19af9b5435ebaf6f72c905a68f01a2bcaf5dff14e2aa3778",
+    "f57516c39fdb050080e10b2330606cad285c5e87087ed1ff9c739a4b2c57419c"
+   ],
+   "source": "results_exp70_confirm.json :: arms['A0-W-T1']"
+  },
+  "A0-W-T2": {
+   "per_seed": [
+    0.73,
+    0.6833333333333333,
+    0.6933333333333334,
+    0.6633333333333333,
+    0.7266666666666667
+   ],
+   "mean": 0.6993333333333334,
+   "sd": 0.028616234708446334,
+   "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "val_per_seed": [
+    0.7651515151515151,
+    0.7348484848484849,
+    0.7196969696969697,
+    0.75,
+    0.7272727272727273
+   ],
+   "selected_epoch_per_seed": [
+    18,
+    71,
+    59,
+    47,
+    104
+   ],
+   "ckpt_sha256": [
+    "4ab5688130dd91ae61534bdac5ad013caaa6ac514e462ccdc12f160bd7290693",
+    "67d030202af6e18ae8c9385ef8ab8bd4351f8723692a71e1e9abbf0102d98828",
+    "12db2251c228770f823737d8cc500954306e2b84e29c455aaee2007d0cc833c7",
+    "98fc6caa37553e2e12cbcd35d2c639b263017ec3a32c060d55d29361f6967720",
+    "4ecfbd9f557b8d20a21a84353a5d5b0b8fa869353f36225c3d9e32014c5af1ff"
+   ],
+   "source": "results_exp70_confirm.json :: arms['A0-W-T2']"
+  }
+ },
+ "block_partition": {
+  "V_A": [
+   "رفع",
+   "ساعد",
+   "عالج"
+  ],
+  "V_B": [
+   "حمل",
+   "سأل",
+   "ضرب"
+  ],
+  "event1_verbs_observed": [
+   "رفع",
+   "ساعد",
+   "عالج"
+  ],
+  "event2_verbs_observed": [
+   "حمل",
+   "سأل",
+   "ضرب"
+  ],
+  "zero_crossover_on_all_T2_items": true,
+  "n_T2_items_checked": 960,
+  "param_counts": {
+   "event1": 99,
+   "event2": 99,
+   "readout": 66
+  },
+  "total_params": 264,
+  "per_stage_trainable": [
+   165,
+   99,
+   264
+  ],
+  "parameter_update_weighted_budget": 150.0,
+  "raw_epochs": 225,
+  "T1_T2_parameter_identity": {
+   "A0-W-T1 / A0-W-T2": 264,
+   "N-in-T1 / N-in-T2": 264,
+   "EA-ctrl-T1 / EA-ctrl-T2": 120
+  },
+  "note": "doc 58 SS6.3.1 / SS6.3.2. The partition needs NO architectural change: V_A and V_B are disjoint by construction and at T = 2 event 1 draws only from V_A, event 2 only from V_B. The weighted budget is EXACTLY 150.000 only because stage 2 freezes the readout as well (orchestrator ruling 1)."
+ },
+ "shuffle": {
+  "per_seed": [
+   {
+    "T": 1,
+    "seed": 0,
+    "n_items": 960,
+    "twins_still_opposite": true,
+    "casts_unchanged": true,
+    "query_index_unchanged": true,
+    "yes_fraction": 0.5,
+    "true_bearer_rule_accuracy": 0.4708333333333333
+   },
+   {
+    "T": 1,
+    "seed": 1,
+    "n_items": 960,
+    "twins_still_opposite": true,
+    "casts_unchanged": true,
+    "query_index_unchanged": true,
+    "yes_fraction": 0.5,
+    "true_bearer_rule_accuracy": 0.45416666666666666
+   },
+   {
+    "T": 1,
+    "seed": 2,
+    "n_items": 960,
+    "twins_still_opposite": true,
+    "casts_unchanged": true,
+    "query_index_unchanged": true,
+    "yes_fraction": 0.5,
+    "true_bearer_rule_accuracy": 0.5041666666666667
+   },
+   {
+    "T": 1,
+    "seed": 3,
+    "n_items": 960,
+    "twins_still_opposite": true,
+    "casts_unchanged": true,
+    "query_index_unchanged": true,
+    "yes_fraction": 0.5,
+    "true_bearer_rule_accuracy": 0.43333333333333335
+   },
+   {
+    "T": 1,
+    "seed": 4,
+    "n_items": 960,
+    "twins_still_opposite": true,
+    "casts_unchanged": true,
+    "query_index_unchanged": true,
+    "yes_fraction": 0.5,
+    "true_bearer_rule_accuracy": 0.49166666666666664
+   },
+   {
+    "T": 2,
+    "seed": 0,
+    "n_items": 960,
+    "twins_still_opposite": true,
+    "casts_unchanged": true,
+    "query_index_unchanged": true,
+    "yes_fraction": 0.5,
+    "true_bearer_rule_accuracy": 0.5
+   },
+   {
+    "T": 2,
+    "seed": 1,
+    "n_items": 960,
+    "twins_still_opposite": true,
+    "casts_unchanged": true,
+    "query_index_unchanged": true,
+    "yes_fraction": 0.5,
+    "true_bearer_rule_accuracy": 0.4666666666666667
+   },
+   {
+    "T": 2,
+    "seed": 2,
+    "n_items": 960,
+    "twins_still_opposite": true,
+    "casts_unchanged": true,
+    "query_index_unchanged": true,
+    "yes_fraction": 0.5,
+    "true_bearer_rule_accuracy": 0.5208333333333334
+   },
+   {
+    "T": 2,
+    "seed": 3,
+    "n_items": 960,
+    "twins_still_opposite": true,
+    "casts_unchanged": true,
+    "query_index_unchanged": true,
+    "yes_fraction": 0.5,
+    "true_bearer_rule_accuracy": 0.49583333333333335
+   },
+   {
+    "T": 2,
+    "seed": 4,
+    "n_items": 960,
+    "twins_still_opposite": true,
+    "casts_unchanged": true,
+    "query_index_unchanged": true,
+    "yes_fraction": 0.5,
+    "true_bearer_rule_accuracy": 0.475
+   }
+  ],
+  "mean_true_bearer_rule_accuracy": 0.48125,
+  "note": "doc 46 SS10.2's floor, per PAIR, keyed on the QUERIED event's agent, at BOTH T -- because doc 58 SS14.4's severed-donor protocol shuffles the T = 1 item set as well, under the SAME seed (the registered SEED LINKAGE). The TRUE bearer rule collapses to chance on the shuffled labels, which is the severance, measured rather than asserted."
+ },
+ "copy_verification": {
+  "max_abs_diff": {
+   "EA-ctrl-T2": 0.0,
+   "A0-W-T2": 0.0,
+   "P-eps-T2": 0.0,
+   "N-in-T2": 0.0,
+   "N-across-T2": 0.0
+  },
+  "exact_zero": true,
+  "note": "doc 56 SS7.4: with event (3 - q) suppressed and the query fixed to the surviving event, every T = 2 arm reproduces its T = 1 pipeline bit-for-bit. For the ENTANGLED arms this carries extra weight: it proves the CRY and the CZ sit in the INTRO and nowhere else, which is what keeps SS7.1's closure arithmetic valid at T = 2 and what doc 56 SS13 item 2 declines to give up by putting an entangler inside an event block."
+ },
+ "trace_parity": {
+  "max_abs_diff_vs_story_values": {
+   "EA-ctrl-T1": 0.0,
+   "EA-ctrl-T2": 0.0,
+   "A0-W-T1": 0.0,
+   "A0-W-T2": 0.0,
+   "P-eps-T2": 0.0,
+   "N-in-T1": 0.0,
+   "N-in-T2": 0.0,
+   "N-across-T1": 0.0,
+   "N-across-T2": 0.0
+  },
+  "exact_zero": true,
+  "purity_range_per_arm": {
+   "EA-ctrl-T1": [
+    0.5088361501693726,
+    1.0
+   ],
+   "EA-ctrl-T2": [
+    0.5088361501693726,
+    1.0
+   ],
+   "A0-W-T1": [
+    0.5132210850715637,
+    1.0000008344650269
+   ],
+   "A0-W-T2": [
+    0.5119869709014893,
+    1.0000003576278687
+   ],
+   "P-eps-T2": [
+    0.523625373840332,
+    0.9999998211860657
+   ],
+   "N-in-T1": [
+    0.5096452832221985,
+    0.9812073707580566
+   ],
+   "N-in-T2": [
+    0.503117561340332,
+    0.9812072515487671
+   ],
+   "N-across-T1": [
+    0.5246344804763794,
+    0.9971165060997009
+   ],
+   "N-across-T2": [
+    0.5246344804763794,
+    0.9571970105171204
+   ]
+  },
+  "stages": [
+   "after_intro",
+   "after_event1",
+   "after_event2 (T=2)",
+   "at_readout"
+  ],
+  "quantity": "per-wire purity Tr rho^2 of the single-qubit reduced state",
+  "note": "doc 56 SS15.1, doc 55 SS18.3 verbatim plus exp70's re-pinning: THE INTRO STAGE IS ADDED AS A FOURTH RECORDED POINT, because for N-in and N-across the intro purity is no longer 1 and is the quantity SS7.2 and SS7.3 gate on. The E-in per-wire intro purity is 1 - |sin t1|^2|sin(t2/2)|^2/2 and the E-across value is 1 - (sin tA sin tB)^2/2; both are closed forms, both are asserted, neither is inferred. Descriptive; NO criterion reads the traces. SS15.2's amendment: for the entangled arms the readout RESTORATION TARGET is the INTRO purity, not 1."
+ },
+ "fourier_closure": {
+  "arm": "A0-W-T2",
+  "resid_3term_theta1_only": 0.1074767252968821,
+  "resid_9dim_product_basis": 6.118588222192578e-08,
+  "output_change_under_theta2_perturbation": 0.023445025086402893
+ },
+ "failing_directions": {
+  "constant_lr_rejected": true,
+  "constant_lr_message": "the realised lr trace differs from doc 58 SS6.1's registered cosine schedule by 2.000e-02 at the sampled epochs [1, 112, 225, 337, 450]",
+  "wrong_length_rejected": true,
+  "identity_readout_rejected": true,
+  "identity_readout_message": "doc 58 SS6.2.2's NULL-INSTRUMENT CHECK FAILED: q_pos is near-identity at init (max |q_pos - I| = 0.000e+00). Two readout blocks at identity are IDENTICAL, v_yes == v_no everywhere, and the readout is ",
+  "wrong_sigma_rejected": true,
+  "freeze_check_detects_move": true,
+  "freeze_check_smallest_detected_move": 9.989738464355469e-05,
+  "nonempty_optimiser_state_detected": true,
+  "unloaded_warmstart_rejected": true,
+  "identical_finals_rejected": true,
+  "wrong_donor_sha_rejected": true,
+  "note": "doc 58 SS7.2 / doc 48 SS10.6. EVERY procedure assertion is fed the input that must make it fail, and the failure is recorded. An assertion that has never been seen to fail is not a gate (doc 49 SS8's checklist entry, orchestrator ruling 6 of doc 56)."
+ },
+ "two_epoch_probe": {
+  "anchor": {
+   "val_acc": 0.6136363636363636,
+   "heldout_test_acc": 0.57,
+   "epochs": 2,
+   "procedure_assertions": {
+    "rescue": null,
+    "shuffled": false
+   }
+  },
+  "R-budget": {
+   "val_acc": 0.6742424242424242,
+   "heldout_test_acc": 0.6733333333333333,
+   "epochs": 6,
+   "procedure_assertions": {
+    "rescue": "R-budget",
+    "shuffled": false,
+    "PROBE_ONLY": "SMOKE PROBE at a REDUCED epoch budget (6). The procedure assertions below are enforced at THIS budget so the code path is exercised cheaply; the registered budgets (450 for R-budget, 75/75/75 for R-layerwise) are enforced on every real run and their arithmetic is asserted separately in `block_partition`.",
+    "budget": {
+     "n_epochs": 6,
+     "sampled_epochs": [
+      1,
+      1,
+      3,
+      4,
+      6
+     ],
+     "sampled_lr": [
+      0.02,
+      0.02,
+      0.015,
+      0.01,
+      0.001339745962155613
+     ],
+     "sampled_expected": [
+      0.02,
+      0.02,
+      0.015,
+      0.01,
+      0.001339745962155613
+     ],
+     "max_abs_dev": 0.0,
+     "tolerance": 1e-09,
+     "lr_first": 0.02,
+     "lr_last": 0.001339745962155613,
+     "span": 0.01866025403784439,
+     "formula": "lr(e) = 0.02 * 0.5 * (1 + cos(pi * (e - 1) / 450)), e = 1..450 -- torch CosineAnnealingLR(T_max=450, eta_min=0) semantics stepped once per epoch, no restarts. PINNED IN exp72_run.py because doc 58 SS6.1 registers the schedule and not the formula.",
+     "constant_lr_would_fail": true,
+     "multiple_of_baseline": 3,
+     "bundled_intervention_doc58_SS6_1_1": "R-budget changes TWO things -- the epoch count AND the lr schedule (the committed loop is constant-lr Adam). A rescue licenses 'the committed recipe undertrained this instance' and does NOT license a decomposition into budget-versus-schedule; that decomposition is NOTED, NOT RUN (doc 58 SS13 item 3)."
+    }
+   }
+  },
+  "R-identity": {
+   "val_acc": 0.5757575757575758,
+   "heldout_test_acc": 0.58,
+   "epochs": 2,
+   "procedure_assertions": {
+    "rescue": "R-identity",
+    "shuffled": false
+   },
+   "identity": {
+    "verb_block_identity_at_zero_max_abs": 0.0,
+    "identity_tolerance": 1e-09,
+    "realised_init_sd": 0.10401228070259094,
+    "sigma": 0.1,
+    "sd_window": [
+     0.08,
+     0.12
+    ],
+    "readout_untouched": true,
+    "readout_q_pos_distance_from_identity": 1.3979074954986572,
+    "readout_q_neg_distance_from_identity": 1.235662817955017,
+    "readout_separation_matrix_fro": 5.66988468170166,
+    "readout_separation_theta_l2": 14.724343299865723,
+    "identity_rng_stream": "torch.Generator().manual_seed(7200000 + seed)",
+    "note": "doc 58 SS6.2.2: the readout init is UNCHANGED and the noise is drawn from a DEDICATED stream, so every committed draw the readout consumes is bit-identical to the committed recipe's."
+   }
+  },
+  "R-layerwise": {
+   "val_acc": 0.5833333333333334,
+   "heldout_test_acc": 0.5633333333333334,
+   "epochs": 6,
+   "procedure_assertions": {
+    "rescue": "R-layerwise",
+    "shuffled": false,
+    "PROBE_ONLY": "SMOKE PROBE at a REDUCED epoch budget (2). The procedure assertions below are enforced at THIS budget so the code path is exercised cheaply; the registered budgets (450 for R-budget, 75/75/75 for R-layerwise) are enforced on every real run and their arithmetic is asserted separately in `block_partition`.",
+    "layerwise": {
+     "stages": [
+      {
+       "stage": 1,
+       "epochs": 2,
+       "trainable_groups": [
+        "event1",
+        "readout"
+       ],
+       "frozen_groups": [
+        "event2"
+       ],
+       "n_trainable_params": 165,
+       "n_optimiser_params": 165,
+       "optimiser_state_empty_at_entry": true,
+       "weight": 0.625,
+       "frozen_max_abs_move": 0.0,
+       "frozen_bit_identical": true
+      },
+      {
+       "stage": 2,
+       "epochs": 2,
+       "trainable_groups": [
+        "event2"
+       ],
+       "frozen_groups": [
+        "event1",
+        "readout"
+       ],
+       "n_trainable_params": 99,
+       "n_optimiser_params": 99,
+       "optimiser_state_empty_at_entry": true,
+       "weight": 0.375,
+       "frozen_max_abs_move": 0.0,
+       "frozen_bit_identical": true
+      },
+      {
+       "stage": 3,
+       "epochs": 2,
+       "trainable_groups": [
+        "event1",
+        "event2",
+        "readout"
+       ],
+       "frozen_groups": [],
+       "n_trainable_params": 264,
+       "n_optimiser_params": 264,
+       "optimiser_state_empty_at_entry": true,
+       "weight": 1.0,
+       "frozen_max_abs_move": 0.0,
+       "frozen_bit_identical": true
+      }
+     ],
+     "raw_epochs": 6,
+     "raw_multiple_of_baseline": 0.04,
+     "parameter_update_weighted_budget": 4.0,
+     "baseline_budget": 150.0,
+     "budget_matched_exactly": false,
+     "trainable_counts": [
+      165,
+      99,
+      264
+     ],
+     "fresh_optimiser_per_stage": true,
+     "note": "doc 58 SS6.3.2, STATED BOTH WAYS AND NEITHER QUOTED ALONE: raw epochs 6 = 0.04x the committed 150; parameter-update-weighted budget 4.000 = EXACTLY the baseline 150. The guard that makes the raw excess non-fatal is registered in advance: R-budget runs at 3.00x in the same units, so a R-layerwise rescue while R-budget does not rescue CANNOT be attributed to the extra 1.5x of epochs.",
+     "adaptation_clause_doc58_SS4_2": "R-layerwise is an ADAPTATION of arXiv:2006.14904, not a replication. Skolik et al. GROW the circuit; exp72's depth is FIXED by the instance, so this arm implements the paper's other mechanism -- training parameter subsets with the complement frozen. A NULL ON THIS ARM IS NOT A NULL ON THEIR PUBLISHED PROCEDURE."
+    }
+   }
+  }
+ },
+ "assertions_passed": true,
+ "wall_time_sec": 77.77516317367554,
+ "git_note": {
+  "repo_head": "fd7cf97 exp72 rescue rung: anchors bit-exact 10/10; R-IDENTITY PARTIALLY RESCUES I1 (0.886, +0.157, 8.3 floor-SD under all three readings, positive control clean) -- initialisation-basin failure, and the purity descriptive shows the undo asymmetry sharpening 1.95->5.22 toward the healthy profile; the registered directional call (warmstart) MISSED honestly (+0.003, real null, counter-mechanism live); I2: nothing rescues (budget closest, 0.781 vs 0.823); confirm obligation LIVE on I1:R-identity",
+  "exp72_paths": [
+   "?? exp72_ckpt/",
+   "?? exp72_confirm_run.py"
+  ],
+  "n_untracked": 249,
+  "rule3_note": "exp72 writes ONLY exp72_ckpt/ and results_exp72* (through fresh_results_path). No exp68 / exp69 / exp70 artefact is modified; the donor checkpoints are READ-ONLY and sha-asserted before use."
+ }
+}

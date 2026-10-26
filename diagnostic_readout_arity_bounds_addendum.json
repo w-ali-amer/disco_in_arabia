@@ -1,0 +1,2118 @@
+{
+  "instrument": "readout_arity_bounds_addendum.py",
+  "script_sha256": "f017566372b9e819663b91aba97cbd6484d82abbbccad017ef3d8eda8141ea71",
+  "companion": {
+    "file": "diagnostic_readout_arity_bounds.json",
+    "note": "that file is FINISHED and was NOT modified. doc 47's rule 3 (never overwrite a results file; a new computation gets a new filename) applies to instrument outputs too.",
+    "readout_arity_bounds_sha256": "eddb30c5bbee06a1954e95e0b22d95bce89f9f867a0b0f531ff5e2dc8b27c15b"
+  },
+  "generated_for": "closing the ONE supersession readout_arity_bounds.py left open: it re-searched the FROZEN-ANGLE map only, while exp68's arms are F1 and F2 on the RAW AraVec PCA plane.",
+  "not_a_results_file": "named diagnostic_*, not results_*: an instrument output, not an experiment result. No exp68 criterion is read against it (doc 54 SS12 declares these bounds CONTEXT ONLY).",
+  "generated_utc": "2026-08-24T19:51:01Z",
+  "wall_sec": 583.414760351181,
+  "environment": {
+    "python": "3.12.13",
+    "numpy": "2.5.1",
+    "platform": "macOS-26.5.2-arm64-arm-64bit"
+  },
+  "provenance": {
+    "family": {
+      "family": "raw",
+      "file": "aravec_raw_vectors_44.json",
+      "file_sha256": "4e919966b3d359a9c1af397904113ad4d1dad3a6f6f9d2560fb17523843ba35a",
+      "declared_vectors_sha256": "699450d3d292f789d368920c33febf49ee4fe4ceff63501308b6da5759d6ce11",
+      "declared_sha_verified_with_repo_canonical_sha256": true,
+      "source": "aravec/full_uni_cbow_300_twitter.mdl",
+      "convention": "ta-marbuta U+0629 -> U+0647, as exp42_make_embeddings.py",
+      "raw_dim": 300,
+      "pca_fit_on": "all44",
+      "pca_fit_n": 44,
+      "var_explained_pc1": 0.12685513291325928,
+      "var_explained_pc2": 0.08050060927190729,
+      "var_explained_pc1_plus_pc2": 0.20735574218516656,
+      "sign_pin": "REGISTERED: PC signs pinned to the frozen vec2 plane. Bounds are invariant to PC sign; a trained circuit is not.",
+      "normalisation": "REGISTERED: p_k(r) = PC_k(r) / max_{r' in HUMANS} |PC_k(r')| for k = 1, 2. Divisors: PC1 8.669495, PC2 10.160404",
+      "norm_divisors": [
+        8.669494516224397,
+        10.160404144924657
+      ],
+      "plane_agreement_with_frozen2d": {
+        "unit_raw_pca_vs_frozen_vec2_max_abs_coord_diff": 3.7192471324942744e-15,
+        "sign_pin_applied": [
+          -1,
+          1
+        ],
+        "max_angular_difference_rad_after_pin": 3.9968028886505635e-15,
+        "verdict": "the frozen 2D embeddings ARE the unit-normalised raw PCA plane; FA's angle and the raw-PCA angle are the SAME quantity"
+      },
+      "radial_coordinate": {
+        "min": 3.6419608233134277,
+        "max": 11.818584443590053,
+        "mean": 7.897899236390401,
+        "note": "this is exactly the information unit-normalisation destroyed. F2-raw = (PC1, PC2) = (rho cos phi, rho sin phi) carries angle AND radius; FA carries angle only. That is why exp68 on this family is width-as-INFORMATION, not width-as-reparameterisation."
+      },
+      "features_deterministically_dependent": false,
+      "pc1_pc2_pearson_r": 0.5842698525485022
+    },
+    "registered_scaling": {
+      "name": "full",
+      "formula": "theta = (p + 1) * pi        -> [0, 2pi)"
+    },
+    "feature_formulas": {
+      "F1": "F1: PC1 only, p = p1; theta = (p + 1) * pi        -> [0, 2pi); u = (1, cos theta, sin theta). d = 3.",
+      "F2": "F2: two-qubit register, theta0 = SCALE(PC1) on qubit 0, theta1 = SCALE(PC2) on qubit 1, both by theta = (p + 1) * pi        -> [0, 2pi); u = vec(u(theta0) (x) u(theta1)). d = 9.",
+      "FA": "FA: phi = atan2(p2, p1); u = (1, cos phi, sin phi). d = 3. The EXISTING single-angle map (exp42 intro_convention, angle = atan2(y, x)); scaling-free."
+    },
+    "feature_formulas_source": "imported from instrument_sb_bounds.features, never re-typed here",
+    "instrument_sb_bounds_sha256": "a616d1243d5dd589675eb89c6a6341ea6448ea8c716ba14af4139f3fae1d9507",
+    "membership_closure": "doc 47 SS13's four category membership lists, as carried in instrument_sb_bounds.CATEGORIES, were CONFIRMED by the user 2026-08-23; doc 54 SS5.2 is the record of closure and supersedes the BLOCKING native-speaker flag that instrument_sb_bounds.py still prints."
+  },
+  "bound_definition": {
+    "quantity": "PER-TWIN reachable accuracy, doc 47 SS17: the two twins of a cast are SEPARATE constraints on a GENERAL C, so a cast may score 0, 1/2 or 1. Denominator = 2|B||N|.",
+    "identity_used": "argmax over M = 2 outcomes is sign(<V_0 - V_1, phi>) with V_0 - V_1 unrestricted, so the M = 2 cell of the readout-arity calculus IS the per-twin general-C MAX-FS. That identity is why the stronger search applies to a quantity two committed files carry.",
+    "seeding": "the committed per-twin witness is handed to the search as a seed, so the returned value is >= the committed value BY CONSTRUCTION and a 'supersedes' verdict can never be a search artefact in the wrong direction"
+  },
+  "search_budget": {
+    "budget": {
+      "anneal_restarts": 256,
+      "anneal_steps": 1200,
+      "hinge_restarts": 512,
+      "hinge_steps": 1200,
+      "hop_restarts": 256,
+      "hop_steps": 960,
+      "polish": 1200,
+      "hops": 2,
+      "margin_ladder": [
+        0.02,
+        0.05,
+        0.15,
+        0.4
+      ]
+    },
+    "seed_base": 51000,
+    "identical_across_categories_and_maps": true
+  },
+  "table": {
+    "tertiary": {
+      "gloss": "tertiary-educated profession",
+      "size": 5,
+      "n_twins": 190,
+      "F1": {
+        "definition": "F1: PC1 only, p = p1; theta = (p + 1) * pi        -> [0, 2pi); u = (1, cos theta, sin theta). d = 3.",
+        "d_per_referent": 3,
+        "d_joint": 9,
+        "value": 0.8526315789473684,
+        "fraction": "162/190",
+        "count": 162,
+        "denominator": 190,
+        "orientation": "shift-by-one",
+        "committed_value": 0.8105263157894737,
+        "committed_fraction": "154/190",
+        "delta": 0.04210526315789476,
+        "supersedes": true,
+        "never_below_committed": true,
+        "at_or_above_pair_level": true,
+        "pair_level_exact_if_available": 0.8105263157894737,
+        "pair_level_fraction": "77/95",
+        "method": "CONSTRUCTIVE LOWER BOUND (same three-stage search as readout_arity_bounds.py: annealed logsumexp surrogate, latent multiclass hinge over a 4-margin ladder, hard-count polish, plus basin hops; SEEDED with the committed per-twin witness, so it can never return less than the committed value)",
+        "exact": false,
+        "strict_margin_certification": {
+          "argmax_count": 162,
+          "strictly_won_count": 162,
+          "counts_agree": true,
+          "min_margin_over_won_twins": 0.006781520506930816,
+          "n_ties_within_TOL": 0,
+          "tolerance": 1e-12,
+          "note": "a counted-correct twin must beat every wrong-class outcome STRICTLY; an exact tie would be an argmax tie-break banked as a win, which is doc 47 SS16's defect class"
+        },
+        "agent_only_warm_start": {
+          "fraction": "150/190",
+          "value": 0.7894736842105263
+        },
+        "stage_log": [
+          {
+            "stage": "anneal",
+            "count": 154
+          },
+          {
+            "stage": "anneal+polish",
+            "count": 162
+          },
+          {
+            "stage": "hinge(m=0.02)",
+            "count": 157
+          },
+          {
+            "stage": "hinge(m=0.02)+polish",
+            "count": 160
+          },
+          {
+            "stage": "hinge(m=0.05)",
+            "count": 157
+          },
+          {
+            "stage": "hinge(m=0.05)+polish",
+            "count": 157
+          },
+          {
+            "stage": "hinge(m=0.15)",
+            "count": 157
+          },
+          {
+            "stage": "hinge(m=0.15)+polish",
+            "count": 157
+          },
+          {
+            "stage": "hinge(m=0.40)",
+            "count": 155
+          },
+          {
+            "stage": "hinge(m=0.40)+polish",
+            "count": 155
+          },
+          {
+            "stage": "hop0",
+            "count": 155
+          },
+          {
+            "stage": "hop0+polish",
+            "count": 159
+          },
+          {
+            "stage": "hop1",
+            "count": 157
+          },
+          {
+            "stage": "hop1+polish",
+            "count": 157
+          }
+        ],
+        "witness_V": [
+          [
+            0.12152818676834931,
+            -0.343980192350214,
+            0.1396824210833782,
+            0.9520838407268232,
+            -0.3791604846376955,
+            -0.5697283509373681,
+            -0.04114864547807583,
+            0.3118254729396222,
+            -0.020455592944448712
+          ],
+          [
+            -0.31768043479874597,
+            0.48699609763450125,
+            0.027236049016137957,
+            -0.7845115372539677,
+            0.7115161227481753,
+            0.7554823805682038,
+            0.1974161364167515,
+            -0.10164705960257973,
+            0.011924644575165623
+          ]
+        ]
+      },
+      "F2": {
+        "definition": "F2: two-qubit register, theta0 = SCALE(PC1) on qubit 0, theta1 = SCALE(PC2) on qubit 1, both by theta = (p + 1) * pi        -> [0, 2pi); u = vec(u(theta0) (x) u(theta1)). d = 9.",
+        "d_per_referent": 9,
+        "d_joint": 81,
+        "value": 0.9473684210526315,
+        "fraction": "180/190",
+        "count": 180,
+        "denominator": 190,
+        "orientation": "identity",
+        "committed_value": 0.9052631578947369,
+        "committed_fraction": "172/190",
+        "delta": 0.042105263157894646,
+        "supersedes": true,
+        "never_below_committed": true,
+        "at_or_above_pair_level": true,
+        "pair_level_exact_if_available": null,
+        "pair_level_fraction": "86/95",
+        "method": "CONSTRUCTIVE LOWER BOUND (same three-stage search as readout_arity_bounds.py: annealed logsumexp surrogate, latent multiclass hinge over a 4-margin ladder, hard-count polish, plus basin hops; SEEDED with the committed per-twin witness, so it can never return less than the committed value)",
+        "exact": false,
+        "strict_margin_certification": {
+          "argmax_count": 180,
+          "strictly_won_count": 180,
+          "counts_agree": true,
+          "min_margin_over_won_twins": 0.0009151300999543921,
+          "n_ties_within_TOL": 0,
+          "tolerance": 1e-12,
+          "note": "a counted-correct twin must beat every wrong-class outcome STRICTLY; an exact tie would be an argmax tie-break banked as a win, which is doc 47 SS16's defect class"
+        },
+        "agent_only_warm_start": {
+          "fraction": "180/190",
+          "value": 0.9473684210526315
+        },
+        "stage_log": [
+          {
+            "stage": "anneal",
+            "count": 180
+          },
+          {
+            "stage": "anneal+polish",
+            "count": 180
+          },
+          {
+            "stage": "hinge(m=0.02)",
+            "count": 180
+          },
+          {
+            "stage": "hinge(m=0.02)+polish",
+            "count": 180
+          },
+          {
+            "stage": "hinge(m=0.05)",
+            "count": 180
+          },
+          {
+            "stage": "hinge(m=0.05)+polish",
+            "count": 180
+          },
+          {
+            "stage": "hinge(m=0.15)",
+            "count": 180
+          },
+          {
+            "stage": "hinge(m=0.15)+polish",
+            "count": 180
+          },
+          {
+            "stage": "hinge(m=0.40)",
+            "count": 180
+          },
+          {
+            "stage": "hinge(m=0.40)+polish",
+            "count": 180
+          },
+          {
+            "stage": "hop0",
+            "count": 180
+          },
+          {
+            "stage": "hop0+polish",
+            "count": 180
+          },
+          {
+            "stage": "hop1",
+            "count": 180
+          },
+          {
+            "stage": "hop1+polish",
+            "count": 180
+          }
+        ],
+        "witness_V": [
+          [
+            0.2792065734037085,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.3280876977674551,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.3757274018737181,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.2885677341335658,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            0.14371539514407483,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.3869224386521139,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.0190042850209553,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            0.17159842345757112,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.014698218513246378,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -0.1963354431137489,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            0.0925667308134564,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.29554469540104883,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.23698956628552842,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.23997258466536064,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.37142111517753684,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            0.031151115487734603,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.005734647356613452,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.049017698285376395,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0
+          ]
+        ]
+      },
+      "FA": {
+        "definition": "FA: phi = atan2(p2, p1); u = (1, cos phi, sin phi). d = 3. The EXISTING single-angle map (exp42 intro_convention, angle = atan2(y, x)); scaling-free.",
+        "d_per_referent": 3,
+        "d_joint": 9,
+        "value": 0.8789473684210526,
+        "fraction": "167/190",
+        "count": 167,
+        "denominator": 190,
+        "orientation": "shift-by-one",
+        "committed_value": 0.8578947368421053,
+        "committed_fraction": "163/190",
+        "delta": 0.021052631578947323,
+        "supersedes": true,
+        "never_below_committed": true,
+        "at_or_above_pair_level": true,
+        "pair_level_exact_if_available": 0.8526315789473684,
+        "pair_level_fraction": "81/95",
+        "method": "CONSTRUCTIVE LOWER BOUND (same three-stage search as readout_arity_bounds.py: annealed logsumexp surrogate, latent multiclass hinge over a 4-margin ladder, hard-count polish, plus basin hops; SEEDED with the committed per-twin witness, so it can never return less than the committed value)",
+        "exact": false,
+        "strict_margin_certification": {
+          "argmax_count": 167,
+          "strictly_won_count": 167,
+          "counts_agree": true,
+          "min_margin_over_won_twins": 0.028331072554908188,
+          "n_ties_within_TOL": 0,
+          "tolerance": 1e-12,
+          "note": "a counted-correct twin must beat every wrong-class outcome STRICTLY; an exact tie would be an argmax tie-break banked as a win, which is doc 47 SS16's defect class"
+        },
+        "agent_only_warm_start": {
+          "fraction": "151/190",
+          "value": 0.7947368421052632
+        },
+        "stage_log": [
+          {
+            "stage": "anneal",
+            "count": 163
+          },
+          {
+            "stage": "anneal+polish",
+            "count": 167
+          },
+          {
+            "stage": "hinge(m=0.02)",
+            "count": 167
+          },
+          {
+            "stage": "hinge(m=0.02)+polish",
+            "count": 167
+          },
+          {
+            "stage": "hinge(m=0.05)",
+            "count": 167
+          },
+          {
+            "stage": "hinge(m=0.05)+polish",
+            "count": 167
+          },
+          {
+            "stage": "hinge(m=0.15)",
+            "count": 166
+          },
+          {
+            "stage": "hinge(m=0.15)+polish",
+            "count": 167
+          },
+          {
+            "stage": "hinge(m=0.40)",
+            "count": 165
+          },
+          {
+            "stage": "hinge(m=0.40)+polish",
+            "count": 167
+          },
+          {
+            "stage": "hop0",
+            "count": 167
+          },
+          {
+            "stage": "hop0+polish",
+            "count": 167
+          },
+          {
+            "stage": "hop1",
+            "count": 167
+          },
+          {
+            "stage": "hop1+polish",
+            "count": 167
+          }
+        ],
+        "witness_V": [
+          [
+            0.8067110661139703,
+            0.6613123764613279,
+            -0.1570820399259082,
+            0.3210908897433264,
+            -0.13463044308393385,
+            -0.5450942844260929,
+            -0.07244978587204212,
+            -0.8745061575365827,
+            1.445588850807565
+          ],
+          [
+            0.3730097322834616,
+            0.3319663549730442,
+            -0.9813078015202314,
+            0.5500396144971429,
+            0.992906478725034,
+            0.100725431993622,
+            1.261331739031137,
+            -0.9216277864308451,
+            -1.0902171071550861
+          ]
+        ]
+      },
+      "F2_minus_F1_recomputed": 0.09473684210526312,
+      "F2_minus_F1_committed": 0.09473684210526323,
+      "F2_minus_FA_recomputed": 0.06842105263157894
+    },
+    "uniformed": {
+      "gloss": "uniformed / disciplined service",
+      "size": 4,
+      "n_twins": 160,
+      "F1": {
+        "definition": "F1: PC1 only, p = p1; theta = (p + 1) * pi        -> [0, 2pi); u = (1, cos theta, sin theta). d = 3.",
+        "d_per_referent": 3,
+        "d_joint": 9,
+        "value": 0.775,
+        "fraction": "124/160",
+        "count": 124,
+        "denominator": 160,
+        "orientation": "shift-by-one",
+        "committed_value": 0.775,
+        "committed_fraction": "124/160",
+        "delta": 0.0,
+        "supersedes": false,
+        "never_below_committed": true,
+        "at_or_above_pair_level": true,
+        "pair_level_exact_if_available": 0.775,
+        "pair_level_fraction": "62/80",
+        "method": "CONSTRUCTIVE LOWER BOUND (same three-stage search as readout_arity_bounds.py: annealed logsumexp surrogate, latent multiclass hinge over a 4-margin ladder, hard-count polish, plus basin hops; SEEDED with the committed per-twin witness, so it can never return less than the committed value)",
+        "exact": false,
+        "strict_margin_certification": {
+          "argmax_count": 124,
+          "strictly_won_count": 124,
+          "counts_agree": true,
+          "min_margin_over_won_twins": 2.643802724182363e-08,
+          "n_ties_within_TOL": 0,
+          "tolerance": 1e-12,
+          "note": "a counted-correct twin must beat every wrong-class outcome STRICTLY; an exact tie would be an argmax tie-break banked as a win, which is doc 47 SS16's defect class"
+        },
+        "agent_only_warm_start": {
+          "fraction": "120/160",
+          "value": 0.75
+        },
+        "stage_log": [
+          {
+            "stage": "anneal",
+            "count": 124
+          },
+          {
+            "stage": "anneal+polish",
+            "count": 124
+          },
+          {
+            "stage": "hinge(m=0.02)",
+            "count": 124
+          },
+          {
+            "stage": "hinge(m=0.02)+polish",
+            "count": 124
+          },
+          {
+            "stage": "hinge(m=0.05)",
+            "count": 124
+          },
+          {
+            "stage": "hinge(m=0.05)+polish",
+            "count": 124
+          },
+          {
+            "stage": "hinge(m=0.15)",
+            "count": 124
+          },
+          {
+            "stage": "hinge(m=0.15)+polish",
+            "count": 124
+          },
+          {
+            "stage": "hinge(m=0.40)",
+            "count": 124
+          },
+          {
+            "stage": "hinge(m=0.40)+polish",
+            "count": 124
+          },
+          {
+            "stage": "hop0",
+            "count": 124
+          },
+          {
+            "stage": "hop0+polish",
+            "count": 124
+          },
+          {
+            "stage": "hop1",
+            "count": 124
+          },
+          {
+            "stage": "hop1+polish",
+            "count": 124
+          }
+        ],
+        "witness_V": [
+          [
+            0.0,
+            0.19646685329145988,
+            -0.2956752467245307,
+            -0.19646685329145988,
+            0.0,
+            0.35210357003606174,
+            0.2956752467245307,
+            -0.35210357003606174,
+            0.0
+          ],
+          [
+            -0.0,
+            -0.19646685329145988,
+            0.2956752467245307,
+            0.19646685329145988,
+            -0.0,
+            -0.35210357003606174,
+            -0.2956752467245307,
+            0.35210357003606174,
+            -0.0
+          ]
+        ]
+      },
+      "F2": {
+        "definition": "F2: two-qubit register, theta0 = SCALE(PC1) on qubit 0, theta1 = SCALE(PC2) on qubit 1, both by theta = (p + 1) * pi        -> [0, 2pi); u = vec(u(theta0) (x) u(theta1)). d = 9.",
+        "d_per_referent": 9,
+        "d_joint": 81,
+        "value": 1.0,
+        "fraction": "160/160",
+        "count": 160,
+        "denominator": 160,
+        "orientation": "identity",
+        "committed_value": 0.925,
+        "committed_fraction": "148/160",
+        "delta": 0.07499999999999996,
+        "supersedes": true,
+        "never_below_committed": true,
+        "at_or_above_pair_level": true,
+        "pair_level_exact_if_available": null,
+        "pair_level_fraction": "74/80",
+        "method": "CONSTRUCTIVE LOWER BOUND (same three-stage search as readout_arity_bounds.py: annealed logsumexp surrogate, latent multiclass hinge over a 4-margin ladder, hard-count polish, plus basin hops; SEEDED with the committed per-twin witness, so it can never return less than the committed value)",
+        "exact": false,
+        "strict_margin_certification": {
+          "argmax_count": 160,
+          "strictly_won_count": 160,
+          "counts_agree": true,
+          "min_margin_over_won_twins": 0.0004972084546306878,
+          "n_ties_within_TOL": 0,
+          "tolerance": 1e-12,
+          "note": "a counted-correct twin must beat every wrong-class outcome STRICTLY; an exact tie would be an argmax tie-break banked as a win, which is doc 47 SS16's defect class"
+        },
+        "agent_only_warm_start": {
+          "fraction": "160/160",
+          "value": 1.0
+        },
+        "stage_log": [
+          {
+            "stage": "anneal",
+            "count": 160
+          },
+          {
+            "stage": "anneal+polish",
+            "count": 160
+          },
+          {
+            "stage": "hinge(m=0.02)",
+            "count": 160
+          },
+          {
+            "stage": "hinge(m=0.02)+polish",
+            "count": 160
+          },
+          {
+            "stage": "hinge(m=0.05)",
+            "count": 160
+          },
+          {
+            "stage": "hinge(m=0.05)+polish",
+            "count": 160
+          },
+          {
+            "stage": "hinge(m=0.15)",
+            "count": 160
+          },
+          {
+            "stage": "hinge(m=0.15)+polish",
+            "count": 160
+          },
+          {
+            "stage": "hinge(m=0.40)",
+            "count": 160
+          },
+          {
+            "stage": "hinge(m=0.40)+polish",
+            "count": 160
+          },
+          {
+            "stage": "hop0",
+            "count": 160
+          },
+          {
+            "stage": "hop0+polish",
+            "count": 160
+          },
+          {
+            "stage": "hop1",
+            "count": 160
+          },
+          {
+            "stage": "hop1+polish",
+            "count": 160
+          }
+        ],
+        "witness_V": [
+          [
+            0.26115383359255984,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.20931337463099814,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.34142409062681944,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.009353036809888941,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            0.017341667954290506,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.23039071613387319,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.2612480751459947,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.21522162391256533,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            0.32056665588156674,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -0.2577980630073369,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.21167371102809018,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            0.34305287426438086,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.011131089597370877,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.02172017229421225,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.2296904085515127,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            0.2633978677519326,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.22042791066688108,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.31676974248595985,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0,
+            -0.0
+          ]
+        ]
+      },
+      "FA": {
+        "definition": "FA: phi = atan2(p2, p1); u = (1, cos phi, sin phi). d = 3. The EXISTING single-angle map (exp42 intro_convention, angle = atan2(y, x)); scaling-free.",
+        "d_per_referent": 3,
+        "d_joint": 9,
+        "value": 0.875,
+        "fraction": "140/160",
+        "count": 140,
+        "denominator": 160,
+        "orientation": "shift-by-one",
+        "committed_value": 0.875,
+        "committed_fraction": "140/160",
+        "delta": 0.0,
+        "supersedes": false,
+        "never_below_committed": true,
+        "at_or_above_pair_level": true,
+        "pair_level_exact_if_available": 0.875,
+        "pair_level_fraction": "70/80",
+        "method": "CONSTRUCTIVE LOWER BOUND (same three-stage search as readout_arity_bounds.py: annealed logsumexp surrogate, latent multiclass hinge over a 4-margin ladder, hard-count polish, plus basin hops; SEEDED with the committed per-twin witness, so it can never return less than the committed value)",
+        "exact": false,
+        "strict_margin_certification": {
+          "argmax_count": 140,
+          "strictly_won_count": 140,
+          "counts_agree": true,
+          "min_margin_over_won_twins": 1.465376063838164e-09,
+          "n_ties_within_TOL": 0,
+          "tolerance": 1e-12,
+          "note": "a counted-correct twin must beat every wrong-class outcome STRICTLY; an exact tie would be an argmax tie-break banked as a win, which is doc 47 SS16's defect class"
+        },
+        "agent_only_warm_start": {
+          "fraction": "136/160",
+          "value": 0.85
+        },
+        "stage_log": [
+          {
+            "stage": "anneal",
+            "count": 140
+          },
+          {
+            "stage": "anneal+polish",
+            "count": 140
+          },
+          {
+            "stage": "hinge(m=0.02)",
+            "count": 140
+          },
+          {
+            "stage": "hinge(m=0.02)+polish",
+            "count": 140
+          },
+          {
+            "stage": "hinge(m=0.05)",
+            "count": 140
+          },
+          {
+            "stage": "hinge(m=0.05)+polish",
+            "count": 140
+          },
+          {
+            "stage": "hinge(m=0.15)",
+            "count": 140
+          },
+          {
+            "stage": "hinge(m=0.15)+polish",
+            "count": 140
+          },
+          {
+            "stage": "hinge(m=0.40)",
+            "count": 140
+          },
+          {
+            "stage": "hinge(m=0.40)+polish",
+            "count": 140
+          },
+          {
+            "stage": "hop0",
+            "count": 140
+          },
+          {
+            "stage": "hop0+polish",
+            "count": 140
+          },
+          {
+            "stage": "hop1",
+            "count": 140
+          },
+          {
+            "stage": "hop1+polish",
+            "count": 140
+          }
+        ],
+        "witness_V": [
+          [
+            0.0,
+            0.05391115963361081,
+            -0.34941896297467023,
+            -0.05391115963361081,
+            0.0,
+            -0.35355335549343236,
+            0.34941896297467023,
+            0.35355335549343236,
+            0.0
+          ],
+          [
+            -0.0,
+            -0.05391115963361081,
+            0.34941896297467023,
+            0.05391115963361081,
+            -0.0,
+            0.35355335549343236,
+            -0.34941896297467023,
+            -0.35355335549343236,
+            -0.0
+          ]
+        ]
+      },
+      "F2_minus_F1_recomputed": 0.22499999999999998,
+      "F2_minus_F1_committed": 0.15000000000000002,
+      "F2_minus_FA_recomputed": 0.125
+    },
+    "manual": {
+      "gloss": "manual / skilled trade",
+      "size": 5,
+      "n_twins": 190,
+      "F1": {
+        "definition": "F1: PC1 only, p = p1; theta = (p + 1) * pi        -> [0, 2pi); u = (1, cos theta, sin theta). d = 3.",
+        "d_per_referent": 3,
+        "d_joint": 9,
+        "value": 0.9578947368421052,
+        "fraction": "182/190",
+        "count": 182,
+        "denominator": 190,
+        "orientation": "shift-by-one",
+        "committed_value": 0.9578947368421052,
+        "committed_fraction": "182/190",
+        "delta": 0.0,
+        "supersedes": false,
+        "never_below_committed": true,
+        "at_or_above_pair_level": true,
+        "pair_level_exact_if_available": 0.9578947368421052,
+        "pair_level_fraction": "91/95",
+        "method": "CONSTRUCTIVE LOWER BOUND (same three-stage search as readout_arity_bounds.py: annealed logsumexp surrogate, latent multiclass hinge over a 4-margin ladder, hard-count polish, plus basin hops; SEEDED with the committed per-twin witness, so it can never return less than the committed value)",
+        "exact": false,
+        "strict_margin_certification": {
+          "argmax_count": 182,
+          "strictly_won_count": 182,
+          "counts_agree": true,
+          "min_margin_over_won_twins": 5.369122100095275e-09,
+          "n_ties_within_TOL": 0,
+          "tolerance": 1e-12,
+          "note": "a counted-correct twin must beat every wrong-class outcome STRICTLY; an exact tie would be an argmax tie-break banked as a win, which is doc 47 SS16's defect class"
+        },
+        "agent_only_warm_start": {
+          "fraction": "180/190",
+          "value": 0.9473684210526315
+        },
+        "stage_log": [
+          {
+            "stage": "anneal",
+            "count": 182
+          },
+          {
+            "stage": "anneal+polish",
+            "count": 182
+          },
+          {
+            "stage": "hinge(m=0.02)",
+            "count": 182
+          },
+          {
+            "stage": "hinge(m=0.02)+polish",
+            "count": 182
+          },
+          {
+            "stage": "hinge(m=0.05)",
+            "count": 182
+          },
+          {
+            "stage": "hinge(m=0.05)+polish",
+            "count": 182
+          },
+          {
+            "stage": "hinge(m=0.15)",
+            "count": 182
+          },
+          {
+            "stage": "hinge(m=0.15)+polish",
+            "count": 182
+          },
+          {
+            "stage": "hinge(m=0.40)",
+            "count": 182
+          },
+          {
+            "stage": "hinge(m=0.40)+polish",
+            "count": 182
+          },
+          {
+            "stage": "hop0",
+            "count": 182
+          },
+          {
+            "stage": "hop0+polish",
+            "count": 182
+          },
+          {
+            "stage": "hop1",
+            "count": 182
+          },
+          {
+            "stage": "hop1+polish",
+            "count": 182
+          }
+        ],
+        "witness_V": [
+          [
+            0.0,
+            0.35173545816038665,
+            -0.03580770664610927,
+            -0.35173545816038665,
+            0.0,
+            0.35355335611113786,
+            0.03580770664610927,
+            -0.35355335611113786,
+            0.0
+          ],
+          [
+            -0.0,
+            -0.35173545816038665,
+            0.03580770664610927,
+            0.35173545816038665,
+            -0.0,
+            -0.35355335611113786,
+            -0.03580770664610927,
+            0.35355335611113786,
+            -0.0
+          ]
+        ]
+      },
+      "F2": {
+        "definition": "F2: two-qubit register, theta0 = SCALE(PC1) on qubit 0, theta1 = SCALE(PC2) on qubit 1, both by theta = (p + 1) * pi        -> [0, 2pi); u = vec(u(theta0) (x) u(theta1)). d = 9.",
+        "d_per_referent": 9,
+        "d_joint": 81,
+        "value": 1.0,
+        "fraction": "190/190",
+        "count": 190,
+        "denominator": 190,
+        "orientation": "shift-by-one",
+        "committed_value": 1.0,
+        "committed_fraction": "190/190",
+        "delta": 0.0,
+        "supersedes": false,
+        "never_below_committed": true,
+        "at_or_above_pair_level": true,
+        "pair_level_exact_if_available": null,
+        "pair_level_fraction": "95/95",
+        "method": "CONSTRUCTIVE LOWER BOUND (same three-stage search as readout_arity_bounds.py: annealed logsumexp surrogate, latent multiclass hinge over a 4-margin ladder, hard-count polish, plus basin hops; SEEDED with the committed per-twin witness, so it can never return less than the committed value)",
+        "exact": false,
+        "strict_margin_certification": {
+          "argmax_count": 190,
+          "strictly_won_count": 190,
+          "counts_agree": true,
+          "min_margin_over_won_twins": 0.0001524419820541432,
+          "n_ties_within_TOL": 0,
+          "tolerance": 1e-12,
+          "note": "a counted-correct twin must beat every wrong-class outcome STRICTLY; an exact tie would be an argmax tie-break banked as a win, which is doc 47 SS16's defect class"
+        },
+        "agent_only_warm_start": {
+          "fraction": "190/190",
+          "value": 1.0
+        },
+        "stage_log": [
+          {
+            "stage": "anneal",
+            "count": 190
+          },
+          {
+            "stage": "anneal+polish",
+            "count": 190
+          },
+          {
+            "stage": "hinge(m=0.02)",
+            "count": 190
+          },
+          {
+            "stage": "hinge(m=0.02)+polish",
+            "count": 190
+          },
+          {
+            "stage": "hinge(m=0.05)",
+            "count": 190
+          },
+          {
+            "stage": "hinge(m=0.05)+polish",
+            "count": 190
+          },
+          {
+            "stage": "hinge(m=0.15)",
+            "count": 190
+          },
+          {
+            "stage": "hinge(m=0.15)+polish",
+            "count": 190
+          },
+          {
+            "stage": "hinge(m=0.40)",
+            "count": 190
+          },
+          {
+            "stage": "hinge(m=0.40)+polish",
+            "count": 190
+          },
+          {
+            "stage": "hop0",
+            "count": 190
+          },
+          {
+            "stage": "hop0+polish",
+            "count": 190
+          },
+          {
+            "stage": "hop1",
+            "count": 190
+          },
+          {
+            "stage": "hop1+polish",
+            "count": 190
+          }
+        ],
+        "witness_V": [
+          [
+            0.0,
+            0.12283426233804767,
+            0.059341272038126634,
+            0.1523771293401528,
+            -0.1416688226401172,
+            0.00521838165070897,
+            -0.22647600649498947,
+            0.039183970457539546,
+            0.21483465983242261,
+            -0.12283426233804767,
+            0.0,
+            0.0249792174625745,
+            -0.009470528789041458,
+            0.011578428481102078,
+            -0.010773083246353862,
+            -0.05713650572517987,
+            0.015513041678511811,
+            -0.01182147071531416,
+            -0.059341272038126634,
+            -0.0249792174625745,
+            0.0,
+            -0.08277071050761621,
+            0.09394511703219668,
+            -0.011543462135797303,
+            0.08026006696361654,
+            0.031369610782876096,
+            -0.10253431920053435,
+            -0.1523771293401528,
+            0.009470528789041458,
+            0.08277071050761621,
+            0.0,
+            0.0023753716352201727,
+            -0.007541664360047699,
+            -0.11701945182322707,
+            0.01791307400298946,
+            0.06224464592565733,
+            0.1416688226401172,
+            -0.011578428481102078,
+            -0.09394511703219668,
+            -0.0023753716352201727,
+            0.0,
+            0.0048405079111913845,
+            0.12135577912886639,
+            -0.01564210812078333,
+            -0.0831222644682191,
+            -0.00521838165070897,
+            0.010773083246353862,
+            0.011543462135797303,
+            0.007541664360047699,
+            -0.0048405079111913845,
+            0.0,
+            -0.014761997795113198,
+            0.00655230955700169,
+            0.01754503389258762,
+            0.22647600649498947,
+            0.05713650572517987,
+            -0.08026006696361654,
+            0.11701945182322707,
+            -0.12135577912886639,
+            0.014761997795113198,
+            0.0,
+            -0.021904909414330726,
+            0.07410081351847896,
+            -0.039183970457539546,
+            -0.015513041678511811,
+            -0.031369610782876096,
+            -0.01791307400298946,
+            0.01564210812078333,
+            -0.00655230955700169,
+            0.021904909414330726,
+            0.0,
+            -0.06588221613332283,
+            -0.21483465983242261,
+            0.01182147071531416,
+            0.10253431920053435,
+            -0.06224464592565733,
+            0.0831222644682191,
+            -0.01754503389258762,
+            -0.07410081351847896,
+            0.06588221613332283,
+            0.0
+          ],
+          [
+            -0.0,
+            -0.12283426233804767,
+            -0.059341272038126634,
+            -0.1523771293401528,
+            0.1416688226401172,
+            -0.00521838165070897,
+            0.22647600649498947,
+            -0.039183970457539546,
+            -0.21483465983242261,
+            0.12283426233804767,
+            -0.0,
+            -0.0249792174625745,
+            0.009470528789041458,
+            -0.011578428481102078,
+            0.010773083246353862,
+            0.05713650572517987,
+            -0.015513041678511811,
+            0.01182147071531416,
+            0.059341272038126634,
+            0.0249792174625745,
+            -0.0,
+            0.08277071050761621,
+            -0.09394511703219668,
+            0.011543462135797303,
+            -0.08026006696361654,
+            -0.031369610782876096,
+            0.10253431920053435,
+            0.1523771293401528,
+            -0.009470528789041458,
+            -0.08277071050761621,
+            -0.0,
+            -0.0023753716352201727,
+            0.007541664360047699,
+            0.11701945182322707,
+            -0.01791307400298946,
+            -0.06224464592565733,
+            -0.1416688226401172,
+            0.011578428481102078,
+            0.09394511703219668,
+            0.0023753716352201727,
+            -0.0,
+            -0.0048405079111913845,
+            -0.12135577912886639,
+            0.01564210812078333,
+            0.0831222644682191,
+            0.00521838165070897,
+            -0.010773083246353862,
+            -0.011543462135797303,
+            -0.007541664360047699,
+            0.0048405079111913845,
+            -0.0,
+            0.014761997795113198,
+            -0.00655230955700169,
+            -0.01754503389258762,
+            -0.22647600649498947,
+            -0.05713650572517987,
+            0.08026006696361654,
+            -0.11701945182322707,
+            0.12135577912886639,
+            -0.014761997795113198,
+            -0.0,
+            0.021904909414330726,
+            -0.07410081351847896,
+            0.039183970457539546,
+            0.015513041678511811,
+            0.031369610782876096,
+            0.01791307400298946,
+            -0.01564210812078333,
+            0.00655230955700169,
+            -0.021904909414330726,
+            -0.0,
+            0.06588221613332283,
+            0.21483465983242261,
+            -0.01182147071531416,
+            -0.10253431920053435,
+            0.06224464592565733,
+            -0.0831222644682191,
+            0.01754503389258762,
+            0.07410081351847896,
+            -0.06588221613332283,
+            -0.0
+          ]
+        ]
+      },
+      "FA": {
+        "definition": "FA: phi = atan2(p2, p1); u = (1, cos phi, sin phi). d = 3. The EXISTING single-angle map (exp42 intro_convention, angle = atan2(y, x)); scaling-free.",
+        "d_per_referent": 3,
+        "d_joint": 9,
+        "value": 0.8526315789473684,
+        "fraction": "162/190",
+        "count": 162,
+        "denominator": 190,
+        "orientation": "shift-by-one",
+        "committed_value": 0.8421052631578947,
+        "committed_fraction": "160/190",
+        "delta": 0.010526315789473717,
+        "supersedes": true,
+        "never_below_committed": true,
+        "at_or_above_pair_level": true,
+        "pair_level_exact_if_available": 0.8421052631578947,
+        "pair_level_fraction": "80/95",
+        "method": "CONSTRUCTIVE LOWER BOUND (same three-stage search as readout_arity_bounds.py: annealed logsumexp surrogate, latent multiclass hinge over a 4-margin ladder, hard-count polish, plus basin hops; SEEDED with the committed per-twin witness, so it can never return less than the committed value)",
+        "exact": false,
+        "strict_margin_certification": {
+          "argmax_count": 162,
+          "strictly_won_count": 162,
+          "counts_agree": true,
+          "min_margin_over_won_twins": 5.801010781039673e-05,
+          "n_ties_within_TOL": 0,
+          "tolerance": 1e-12,
+          "note": "a counted-correct twin must beat every wrong-class outcome STRICTLY; an exact tie would be an argmax tie-break banked as a win, which is doc 47 SS16's defect class"
+        },
+        "agent_only_warm_start": {
+          "fraction": "155/190",
+          "value": 0.8157894736842105
+        },
+        "stage_log": [
+          {
+            "stage": "anneal",
+            "count": 160
+          },
+          {
+            "stage": "anneal+polish",
+            "count": 160
+          },
+          {
+            "stage": "hinge(m=0.02)",
+            "count": 160
+          },
+          {
+            "stage": "hinge(m=0.02)+polish",
+            "count": 160
+          },
+          {
+            "stage": "hinge(m=0.05)",
+            "count": 160
+          },
+          {
+            "stage": "hinge(m=0.05)+polish",
+            "count": 160
+          },
+          {
+            "stage": "hinge(m=0.15)",
+            "count": 160
+          },
+          {
+            "stage": "hinge(m=0.15)+polish",
+            "count": 162
+          },
+          {
+            "stage": "hinge(m=0.40)",
+            "count": 160
+          },
+          {
+            "stage": "hinge(m=0.40)+polish",
+            "count": 160
+          },
+          {
+            "stage": "hop0",
+            "count": 160
+          },
+          {
+            "stage": "hop0+polish",
+            "count": 160
+          },
+          {
+            "stage": "hop1",
+            "count": 161
+          },
+          {
+            "stage": "hop1+polish",
+            "count": 161
+          }
+        ],
+        "witness_V": [
+          [
+            0.06558560918085908,
+            0.5307887541917938,
+            -0.13986407696866673,
+            -0.4331888547305482,
+            -0.03502934089103619,
+            0.16503583607517633,
+            0.16048790608056981,
+            -0.1431116144323927,
+            -0.008988766833062376
+          ],
+          [
+            -0.04147042907161692,
+            -0.5122737235447642,
+            0.14556734931457282,
+            0.5017549643881495,
+            -0.027756945483930956,
+            -0.18510291594339878,
+            -0.14254021929683888,
+            0.1258646619018752,
+            -0.05282380838658546
+          ]
+        ]
+      },
+      "F2_minus_F1_recomputed": 0.04210526315789476,
+      "F2_minus_F1_committed": 0.04210526315789476,
+      "F2_minus_FA_recomputed": 0.1473684210526316
+    },
+    "nonoccupational": {
+      "gloss": "non-occupational state",
+      "size": 4,
+      "n_twins": 160,
+      "F1": {
+        "definition": "F1: PC1 only, p = p1; theta = (p + 1) * pi        -> [0, 2pi); u = (1, cos theta, sin theta). d = 3.",
+        "d_per_referent": 3,
+        "d_joint": 9,
+        "value": 0.7625,
+        "fraction": "122/160",
+        "count": 122,
+        "denominator": 160,
+        "orientation": "shift-by-one",
+        "committed_value": 0.7625,
+        "committed_fraction": "122/160",
+        "delta": 0.0,
+        "supersedes": false,
+        "never_below_committed": true,
+        "at_or_above_pair_level": true,
+        "pair_level_exact_if_available": 0.7625,
+        "pair_level_fraction": "61/80",
+        "method": "CONSTRUCTIVE LOWER BOUND (same three-stage search as readout_arity_bounds.py: annealed logsumexp surrogate, latent multiclass hinge over a 4-margin ladder, hard-count polish, plus basin hops; SEEDED with the committed per-twin witness, so it can never return less than the committed value)",
+        "exact": false,
+        "strict_margin_certification": {
+          "argmax_count": 122,
+          "strictly_won_count": 122,
+          "counts_agree": true,
+          "min_margin_over_won_twins": 2.1885193634155175e-11,
+          "n_ties_within_TOL": 0,
+          "tolerance": 1e-12,
+          "note": "a counted-correct twin must beat every wrong-class outcome STRICTLY; an exact tie would be an argmax tie-break banked as a win, which is doc 47 SS16's defect class"
+        },
+        "agent_only_warm_start": {
+          "fraction": "120/160",
+          "value": 0.75
+        },
+        "stage_log": [
+          {
+            "stage": "anneal",
+            "count": 122
+          },
+          {
+            "stage": "anneal+polish",
+            "count": 122
+          },
+          {
+            "stage": "hinge(m=0.02)",
+            "count": 122
+          },
+          {
+            "stage": "hinge(m=0.02)+polish",
+            "count": 122
+          },
+          {
+            "stage": "hinge(m=0.05)",
+            "count": 122
+          },
+          {
+            "stage": "hinge(m=0.05)+polish",
+            "count": 122
+          },
+          {
+            "stage": "hinge(m=0.15)",
+            "count": 122
+          },
+          {
+            "stage": "hinge(m=0.15)+polish",
+            "count": 122
+          },
+          {
+            "stage": "hinge(m=0.40)",
+            "count": 122
+          },
+          {
+            "stage": "hinge(m=0.40)+polish",
+            "count": 122
+          },
+          {
+            "stage": "hop0",
+            "count": 122
+          },
+          {
+            "stage": "hop0+polish",
+            "count": 122
+          },
+          {
+            "stage": "hop1",
+            "count": 122
+          },
+          {
+            "stage": "hop1+polish",
+            "count": 122
+          }
+        ],
+        "witness_V": [
+          [
+            0.0,
+            0.3366918625699932,
+            0.107882295591421,
+            -0.3366918625699932,
+            0.0,
+            0.35355339056085155,
+            -0.107882295591421,
+            -0.35355339056085155,
+            0.0
+          ],
+          [
+            -0.0,
+            -0.3366918625699932,
+            -0.107882295591421,
+            0.3366918625699932,
+            -0.0,
+            -0.35355339056085155,
+            0.107882295591421,
+            0.35355339056085155,
+            -0.0
+          ]
+        ]
+      },
+      "F2": {
+        "definition": "F2: two-qubit register, theta0 = SCALE(PC1) on qubit 0, theta1 = SCALE(PC2) on qubit 1, both by theta = (p + 1) * pi        -> [0, 2pi); u = vec(u(theta0) (x) u(theta1)). d = 9.",
+        "d_per_referent": 9,
+        "d_joint": 81,
+        "value": 1.0,
+        "fraction": "160/160",
+        "count": 160,
+        "denominator": 160,
+        "orientation": "shift-by-one",
+        "committed_value": 1.0,
+        "committed_fraction": "160/160",
+        "delta": 0.0,
+        "supersedes": false,
+        "never_below_committed": true,
+        "at_or_above_pair_level": true,
+        "pair_level_exact_if_available": null,
+        "pair_level_fraction": "80/80",
+        "method": "CONSTRUCTIVE LOWER BOUND (same three-stage search as readout_arity_bounds.py: annealed logsumexp surrogate, latent multiclass hinge over a 4-margin ladder, hard-count polish, plus basin hops; SEEDED with the committed per-twin witness, so it can never return less than the committed value)",
+        "exact": false,
+        "strict_margin_certification": {
+          "argmax_count": 160,
+          "strictly_won_count": 160,
+          "counts_agree": true,
+          "min_margin_over_won_twins": 0.024765044911657017,
+          "n_ties_within_TOL": 0,
+          "tolerance": 1e-12,
+          "note": "a counted-correct twin must beat every wrong-class outcome STRICTLY; an exact tie would be an argmax tie-break banked as a win, which is doc 47 SS16's defect class"
+        },
+        "agent_only_warm_start": {
+          "fraction": "160/160",
+          "value": 1.0
+        },
+        "stage_log": [
+          {
+            "stage": "anneal",
+            "count": 160
+          },
+          {
+            "stage": "anneal+polish",
+            "count": 160
+          },
+          {
+            "stage": "hinge(m=0.02)",
+            "count": 160
+          },
+          {
+            "stage": "hinge(m=0.02)+polish",
+            "count": 160
+          },
+          {
+            "stage": "hinge(m=0.05)",
+            "count": 160
+          },
+          {
+            "stage": "hinge(m=0.05)+polish",
+            "count": 160
+          },
+          {
+            "stage": "hinge(m=0.15)",
+            "count": 160
+          },
+          {
+            "stage": "hinge(m=0.15)+polish",
+            "count": 160
+          },
+          {
+            "stage": "hinge(m=0.40)",
+            "count": 160
+          },
+          {
+            "stage": "hinge(m=0.40)+polish",
+            "count": 160
+          },
+          {
+            "stage": "hop0",
+            "count": 160
+          },
+          {
+            "stage": "hop0+polish",
+            "count": 160
+          },
+          {
+            "stage": "hop1",
+            "count": 160
+          },
+          {
+            "stage": "hop1+polish",
+            "count": 160
+          }
+        ],
+        "witness_V": [
+          [
+            0.0,
+            -0.20714560290390024,
+            0.23308763318073766,
+            0.12652367953569638,
+            -0.060429421155962816,
+            0.06726515996465511,
+            0.00268825201468023,
+            -0.10337794030141693,
+            -0.031117958207710374,
+            0.20714560290390024,
+            0.0,
+            -0.06892416292731375,
+            0.07619025628156088,
+            -0.02383470224187091,
+            0.04647060768158562,
+            0.08773064144099701,
+            -0.0008044080098561497,
+            -0.055688641362899,
+            -0.23308763318073766,
+            0.06892416292731375,
+            0.0,
+            -0.04607139880728447,
+            0.022529140728823838,
+            0.013456260413267054,
+            -0.15690900206230857,
+            0.02315042731701564,
+            -0.038361558092014705,
+            -0.12652367953569638,
+            -0.07619025628156088,
+            0.04607139880728447,
+            0.0,
+            0.0074528716843111145,
+            0.1136833707310678,
+            0.012189487500684288,
+            -0.066712668855985,
+            0.013884325698137185,
+            0.060429421155962816,
+            0.02383470224187091,
+            -0.022529140728823838,
+            -0.0074528716843111145,
+            0.0,
+            -0.008730381824509312,
+            0.007317851994611945,
+            0.04314910247471248,
+            -0.07836911541147948,
+            -0.06726515996465511,
+            -0.04647060768158562,
+            -0.013456260413267054,
+            -0.1136833707310678,
+            0.008730381824509312,
+            0.0,
+            -0.1292526430478968,
+            0.051136924837533966,
+            0.05133108962679088,
+            -0.00268825201468023,
+            -0.08773064144099701,
+            0.15690900206230857,
+            -0.012189487500684288,
+            -0.007317851994611945,
+            0.1292526430478968,
+            0.0,
+            -0.06186923673656183,
+            0.03151914188186611,
+            0.10337794030141693,
+            0.0008044080098561497,
+            -0.02315042731701564,
+            0.066712668855985,
+            -0.04314910247471248,
+            -0.051136924837533966,
+            0.06186923673656183,
+            0.0,
+            -0.10349304728727682,
+            0.031117958207710374,
+            0.055688641362899,
+            0.038361558092014705,
+            -0.013884325698137185,
+            0.07836911541147948,
+            -0.05133108962679088,
+            -0.03151914188186611,
+            0.10349304728727682,
+            0.0
+          ],
+          [
+            -0.0,
+            0.20714560290390024,
+            -0.23308763318073766,
+            -0.12652367953569638,
+            0.060429421155962816,
+            -0.06726515996465511,
+            -0.00268825201468023,
+            0.10337794030141693,
+            0.031117958207710374,
+            -0.20714560290390024,
+            -0.0,
+            0.06892416292731375,
+            -0.07619025628156088,
+            0.02383470224187091,
+            -0.04647060768158562,
+            -0.08773064144099701,
+            0.0008044080098561497,
+            0.055688641362899,
+            0.23308763318073766,
+            -0.06892416292731375,
+            -0.0,
+            0.04607139880728447,
+            -0.022529140728823838,
+            -0.013456260413267054,
+            0.15690900206230857,
+            -0.02315042731701564,
+            0.038361558092014705,
+            0.12652367953569638,
+            0.07619025628156088,
+            -0.04607139880728447,
+            -0.0,
+            -0.0074528716843111145,
+            -0.1136833707310678,
+            -0.012189487500684288,
+            0.066712668855985,
+            -0.013884325698137185,
+            -0.060429421155962816,
+            -0.02383470224187091,
+            0.022529140728823838,
+            0.0074528716843111145,
+            -0.0,
+            0.008730381824509312,
+            -0.007317851994611945,
+            -0.04314910247471248,
+            0.07836911541147948,
+            0.06726515996465511,
+            0.04647060768158562,
+            0.013456260413267054,
+            0.1136833707310678,
+            -0.008730381824509312,
+            -0.0,
+            0.1292526430478968,
+            -0.051136924837533966,
+            -0.05133108962679088,
+            0.00268825201468023,
+            0.08773064144099701,
+            -0.15690900206230857,
+            0.012189487500684288,
+            0.007317851994611945,
+            -0.1292526430478968,
+            -0.0,
+            0.06186923673656183,
+            -0.03151914188186611,
+            -0.10337794030141693,
+            -0.0008044080098561497,
+            0.02315042731701564,
+            -0.066712668855985,
+            0.04314910247471248,
+            0.051136924837533966,
+            -0.06186923673656183,
+            -0.0,
+            0.10349304728727682,
+            -0.031117958207710374,
+            -0.055688641362899,
+            -0.038361558092014705,
+            0.013884325698137185,
+            -0.07836911541147948,
+            0.05133108962679088,
+            0.03151914188186611,
+            -0.10349304728727682,
+            -0.0
+          ]
+        ]
+      },
+      "FA": {
+        "definition": "FA: phi = atan2(p2, p1); u = (1, cos phi, sin phi). d = 3. The EXISTING single-angle map (exp42 intro_convention, angle = atan2(y, x)); scaling-free.",
+        "d_per_referent": 3,
+        "d_joint": 9,
+        "value": 0.9625,
+        "fraction": "154/160",
+        "count": 154,
+        "denominator": 160,
+        "orientation": "identity",
+        "committed_value": 0.925,
+        "committed_fraction": "148/160",
+        "delta": 0.03749999999999998,
+        "supersedes": true,
+        "never_below_committed": true,
+        "at_or_above_pair_level": true,
+        "pair_level_exact_if_available": 0.925,
+        "pair_level_fraction": "74/80",
+        "method": "CONSTRUCTIVE LOWER BOUND (same three-stage search as readout_arity_bounds.py: annealed logsumexp surrogate, latent multiclass hinge over a 4-margin ladder, hard-count polish, plus basin hops; SEEDED with the committed per-twin witness, so it can never return less than the committed value)",
+        "exact": false,
+        "strict_margin_certification": {
+          "argmax_count": 154,
+          "strictly_won_count": 154,
+          "counts_agree": true,
+          "min_margin_over_won_twins": 1.7587995191969963e-05,
+          "n_ties_within_TOL": 0,
+          "tolerance": 1e-12,
+          "note": "a counted-correct twin must beat every wrong-class outcome STRICTLY; an exact tie would be an argmax tie-break banked as a win, which is doc 47 SS16's defect class"
+        },
+        "agent_only_warm_start": {
+          "fraction": "148/160",
+          "value": 0.925
+        },
+        "stage_log": [
+          {
+            "stage": "anneal",
+            "count": 149
+          },
+          {
+            "stage": "anneal+polish",
+            "count": 152
+          },
+          {
+            "stage": "hinge(m=0.02)",
+            "count": 152
+          },
+          {
+            "stage": "hinge(m=0.02)+polish",
+            "count": 154
+          },
+          {
+            "stage": "hinge(m=0.05)",
+            "count": 152
+          },
+          {
+            "stage": "hinge(m=0.05)+polish",
+            "count": 152
+          },
+          {
+            "stage": "hinge(m=0.15)",
+            "count": 152
+          },
+          {
+            "stage": "hinge(m=0.15)+polish",
+            "count": 154
+          },
+          {
+            "stage": "hinge(m=0.40)",
+            "count": 150
+          },
+          {
+            "stage": "hinge(m=0.40)+polish",
+            "count": 154
+          },
+          {
+            "stage": "hop0",
+            "count": 152
+          },
+          {
+            "stage": "hop0+polish",
+            "count": 154
+          },
+          {
+            "stage": "hop1",
+            "count": 152
+          },
+          {
+            "stage": "hop1+polish",
+            "count": 152
+          }
+        ],
+        "witness_V": [
+          [
+            -0.18407977976649517,
+            -0.33365022093981733,
+            0.0027235709341951325,
+            -0.055744787978918825,
+            -0.4560563376411076,
+            -0.4052555528102727,
+            -0.40001974197355916,
+            -0.06826780988187635,
+            0.1312521066960011
+          ],
+          [
+            0.21764047885951093,
+            0.22773673174237016,
+            0.034181312629855964,
+            -0.10164298174628647,
+            0.2515893677451242,
+            0.5684711285508793,
+            0.01512428741466259,
+            0.24805709881744725,
+            -0.09932879206006075
+          ]
+        ]
+      },
+      "F2_minus_F1_recomputed": 0.23750000000000004,
+      "F2_minus_F1_committed": 0.23750000000000004,
+      "F2_minus_FA_recomputed": 0.03749999999999998
+    }
+  },
+  "capacity_check_anchor_impact": {
+    "exp68_F1_raw_per_twin": {
+      "committed_expect": 0.7625,
+      "committed_fraction": "122/160",
+      "recomputed": 0.7625,
+      "recomputed_fraction": "122/160",
+      "anchor_still_passes": true,
+      "why": "capacity_check's anchors pin what THAT budgeted search deterministically returns; that behaviour is unchanged and the selftest still passes. What is superseded is the BOUND the anchor's value represents.",
+      "bound_superseded": false
+    },
+    "exp68_FA_per_twin": {
+      "committed_expect": 0.925,
+      "committed_fraction": "148/160",
+      "recomputed": 0.9625,
+      "recomputed_fraction": "154/160",
+      "anchor_still_passes": true,
+      "why": "capacity_check's anchors pin what THAT budgeted search deterministically returns; that behaviour is unchanged and the selftest still passes. What is superseded is the BOUND the anchor's value represents.",
+      "bound_superseded": true
+    }
+  },
+  "headline": {
+    "F1_nonoccupational_committed": 0.7625,
+    "F1_nonoccupational_recomputed": 0.7625,
+    "F1_nonoccupational_fraction": "122/160",
+    "F2_minus_F1_nonoccupational_committed": 0.23750000000000004,
+    "F2_minus_F1_nonoccupational_recomputed": 0.23750000000000004,
+    "largest_F2_minus_F1_committed": "nonoccupational",
+    "largest_F2_minus_F1_recomputed": "nonoccupational",
+    "target_selection_rule_unchanged": true
+  },
+  "any_superseded": true,
+  "none_below_committed": true,
+  "scope": "Representational bounds over the 24 frozen human nouns, one task family (SB), simulation, training-free. doc 54 SS12 reads NO exp68 criterion against these numbers, and neither does this file: it corrects the CONTEXT exp68's design quotes, nothing else."
+}

@@ -1,0 +1,101 @@
+{
+ "experiment": "exp78a -- band32 replication (doc 68)",
+ "spec": "qnlp_private_docs/68_exp78a_band32_replication.md",
+ "platform": "macOS-26.5.2-arm64-arm-64bit",
+ "python": "3.12.13",
+ "N_test": 300,
+ "chance_half": 0.05773502691896258,
+ "quantum_arm": {
+  "arm": "band32_n2_T2",
+  "per_seed": [
+   0.49666666666666665,
+   0.48,
+   0.5033333333333333,
+   0.5466666666666666,
+   0.5466666666666666
+  ],
+  "mean": 0.5146666666666666,
+  "sd_ddof1": 0.030422944557612356
+ },
+ "floor_arm": {
+  "arm": "S-shuffle-band32_n2_T2",
+  "per_seed": [
+   0.4766666666666667,
+   0.52,
+   0.5133333333333333,
+   0.4666666666666667,
+   0.48333333333333334
+  ],
+  "mean": 0.492,
+  "sd_ddof1": 0.023404652908722606
+ },
+ "bar_a": {
+  "criterion": "quantum_mean >= floor_mean + 2*floor_sd",
+  "lhs": 0.5146666666666666,
+  "rhs": 0.5388093058174452,
+  "passed": false
+ },
+ "bar_b": {
+  "criterion": "all tier means in 0.5 +/- 2*sqrt(0.25/N_test)",
+  "chance_half": 0.05773502691896258,
+  "tiers": {
+   "i_raw": {
+    "mean": 0.508,
+    "inside_chance_band": true
+   },
+   "ii_committed": {
+    "mean": 0.5866666666666667,
+    "inside_chance_band": false
+   },
+   "iii_distractor": {
+    "mean": 0.5780000000000001,
+    "inside_chance_band": false
+   }
+  },
+  "passed": false
+ },
+ "band32_replicates": false,
+ "verdict": "FALSE",
+ "verdict_reason": "neither bar cleared: no replication signal",
+ "floor_results": {
+  "floor_comparator": {
+   "i_raw": {
+    "mean": 0.5,
+    "sd": 0.014719601443879751,
+    "per_seed": [
+     0.48,
+     0.5033333333333333,
+     0.52,
+     0.49333333333333335,
+     0.5033333333333333
+    ],
+    "n_seeds": 5
+   },
+   "ii_committed": {
+    "mean": 0.5066666666666666,
+    "sd": 0.030276503540974907,
+    "per_seed": [
+     0.5033333333333333,
+     0.5266666666666666,
+     0.5133333333333333,
+     0.5333333333333333,
+     0.45666666666666667
+    ],
+    "n_seeds": 5
+   },
+   "iii_distractor": {
+    "mean": 0.49000000000000005,
+    "sd": 0.030641293851417076,
+    "per_seed": [
+     0.51,
+     0.4533333333333333,
+     0.5166666666666667,
+     0.51,
+     0.46
+    ],
+    "n_seeds": 5
+   }
+  }
+ },
+ "wall_time_sec": 0.060878753662109375
+}
