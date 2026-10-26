@@ -10,22 +10,30 @@ First application of pregroup grammar-based QNLP to Arabic. Converts Arabic sent
 ## Repository structure
 
 ```
-/                                    ← ACTIVE line only: trained-block story QA (exp40–43)
-└── archive/
-    ├── 01_parser_pipeline/          ← Arabic pipeline: Stanza + CAMeL → pregroup → lambeq
-    ├── 02_discocat_paper/           ← exp8–exp20, the published paper line (+ figures, outputs)
-    ├── 03_semantic_geometry/        ← exp21–exp32, density-matrix geometry
-    ├── 04_frames_scaling_hardware/  ← exp33–exp39 + S1, frames / scaling / IBM hardware
-    └── 05_dev_history/              ← superseded iterations, kept for transparency
+/
+├── arabic_axis/                     ← exp90–133, current line: the which-referent game, exact
+│                                       classical values, certified quantum bounds, the composition cap
+├── archive/
+│   ├── 01_parser_pipeline/          ← Arabic pipeline: Stanza + CAMeL → pregroup → lambeq
+│   ├── 02_discocat_paper/           ← exp8–exp20, the published paper line (+ figures, outputs, re-checks)
+│   ├── 03_semantic_geometry/        ← exp21–exp32, density-matrix geometry
+│   ├── 04_frames_scaling_hardware/  ← exp33–exp39 + S1, frames / scaling / IBM hardware
+│   ├── 05_dev_history/              ← superseded iterations, kept for transparency
+│   ├── 06_trained_blocks/           ← exp40–63, trained blocks on story QA, referent registers
+│   ├── 07_capacity_levers/          ← exp65–86, capacity levers and composition (+ bound checks)
+│   └── 08_tokenisation/             ← exp80, 84, 87–89, root-and-pattern tokenizers
+├── tools/flatten_for_rerun.sh       ← rebuilds the flat layout the scripts were run in
+└── CORRECTION.md                    ← corrections to the paper
 ```
 
-The root holds the experiments from exp40 onward (see "Experiments 44–133" below for an index); everything before that is under `archive/`. Everything
-else is a closed era and lives under `archive/`, with each era's code, data and
-results kept together. See [`archive/README.md`](archive/README.md) for the map
-and for how to re-run archived experiments.
+Each folder keeps an experiment's code, data and results together, and has its own README with that part of the index. Files were moved with `git mv`, so `git log --follow <path>` gives the full history, including the period when a file lived at the root.
 
-Files were moved with `git mv`; `git log --follow <path>` gives the full history
-including the period when a file lived at the root.
+**Re-running.** The scripts were run from one flat directory and find each other's modules and data files by bare name; later experiments import earlier ones' code. To re-run anything, flatten first:
+
+```
+tools/flatten_for_rerun.sh /tmp/qnlp_flat
+cd /tmp/qnlp_flat && python3 exp93_run.py
+```
 
 ---
 
@@ -85,8 +93,8 @@ All paths below are relative to `archive/02_discocat_paper/`.
 
 ## Environment
 
-There are **two** environments. The active exp40–43 line at the root needs only
-`torch` (`requirements_mac.txt`, Python 3.12) and none of the setup below. The
+There are **two** environments. The experiments from exp40 onward use
+`requirements_mac.txt` (Python 3.12) and none of the setup below. The
 heavy stack described here is required only for the archived pipeline and the
 exp8–exp39 experiments.
 
@@ -156,7 +164,7 @@ https://doi.org/10.5281/zenodo.19316164
 ## Recent results (August 2026) — beyond the paper
 
 The paper (arXiv:2607.14100) covers sentence-level word order, tense, and WSD.
-See [ERRATUM.md](ERRATUM.md) for corrections to the paper's methods description (published numbers unchanged) and [RESULTS_EXP21_v2.md](RESULTS_EXP21_v2.md) for a measured negative: on leakage-free splits 0/5 seeds show significant transfer (quantum POST mean AUC 0.563 vs matched classical control 0.975 on all five splits); v1's apparent positive was train→test leakage (see RESULTS_EXP21.md, superseded).
+See [ERRATUM.md](archive/03_semantic_geometry/ERRATUM.md) for corrections to the paper's methods description (published numbers unchanged) and [RESULTS_EXP21_v2.md](archive/03_semantic_geometry/RESULTS_EXP21_v2.md) for a measured negative: on leakage-free splits 0/5 seeds show significant transfer (quantum POST mean AUC 0.563 vs matched classical control 0.975 on all five splits); v1's apparent positive was train→test leakage (see RESULTS_EXP21.md, superseded).
 Since then, committed in this repo:
 
 - **Frame-invariant 4-parameter verb blocks** — `exp33_mixed_ansatz.py`, `exp38_analog_native.py`:
@@ -186,9 +194,9 @@ Since then, committed in this repo:
 - **Parser fix** — CAMeL-POS fusion in `arabic_dep_reader.py` (flag-gated, off by default;
   published numbers unchanged).
 
-## Current line (exp40–43) — trained blocks on story QA
+## Trained blocks on story QA (exp40–43)
 
-At the repository root, and independent of everything above: this line trains the
+In `archive/06_trained_blocks/`, and independent of everything above: this line trains the
 verb blocks on a story question-answering loss rather than solving them against
 classical targets, with a Duneau-style compositional-generalisation gate. It
 imports only `torch` (see `requirements_mac.txt`); the lambeq/numpy<2 constraint
@@ -230,6 +238,8 @@ Not included in this update: model checkpoints and logs (too large), experiments
 
 ### Trained blocks: what makes a referent register learnable (exp44–63)
 
+In [`archive/06_trained_blocks/`](archive/06_trained_blocks/).
+
 | exp | question |
 |---|---|
 | 44 | Do richer classical comparators close the gap to the quantum arm? |
@@ -243,6 +253,8 @@ Not included in this update: model checkpoints and logs (too large), experiments
 | 60–63 | Re-uploading and frequency: does more spectrum per wire convert into held-out accuracy? |
 
 ### Capacity levers and composition (exp65–86)
+
+In [`archive/07_capacity_levers/`](archive/07_capacity_levers/).
 
 | exp | question |
 |---|---|
@@ -259,6 +271,8 @@ Not included in this update: model checkpoints and logs (too large), experiments
 
 ### Tokenisation side line (exp80–89)
 
+In [`archive/08_tokenisation/`](archive/08_tokenisation/).
+
 | exp | question |
 |---|---|
 | 80, 84 | Does a root-and-pattern-aware tokenizer beat BPE at matched vocabulary? |
@@ -266,6 +280,8 @@ Not included in this update: model checkpoints and logs (too large), experiments
 | 88–89 | Skeleton matching at full inventory, and vocabulary allocation across tokenizer arms |
 
 ### Arabic axis: where a qubit helps (exp90–133)
+
+In [`arabic_axis/`](arabic_axis/).
 
 | exp | question | verdict |
 |---|---|---|
