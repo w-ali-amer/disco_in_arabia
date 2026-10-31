@@ -8,14 +8,11 @@ beats standard BPE at matched vocab size on:
   (a) token fertility (tokens/word — lower is better)
   (b) morpheme-boundary recovery (F1 vs CAMeL gold segmentation)
 
-Registration: /Users/wajahath/qnlp_private_docs/72_exp80_wazn_tokenizer.md
-
 CAMeL route: LIVE (camel-tools installed in /tmp/camel_env, calima-msa-r13 DB).
-WSL tunnel: DOWN — Mac-local CAMeL is the primary route.
 Fallback to committed artifacts (exp77_pass1_camel.json etc.) was not needed.
 
 Sole writer: this script.
-Output: /Users/wajahath/discocat_arabic_v2/exp80_results.json
+Output: exp80_results.json (next to this script)
 """
 
 import hashlib
@@ -37,8 +34,8 @@ if VENV_SITE not in sys.path:
 
 # ── constants ──────────────────────────────────────────────────────────────────
 CORPUS_PATH   = '/tmp/arwiki_raw.txt'
-RESULTS_PATH  = '/Users/wajahath/discocat_arabic_v2/exp80_results.json'
-PASS1_PATH    = '/Users/wajahath/discocat_arabic_v2/exp77_pass1_camel.json'
+RESULTS_PATH  = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'exp80_results.json')
+PASS1_PATH    = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'exp77_pass1_camel.json')
 
 VOCAB_SIZE    = 32_000
 TRAIN_FRAC    = 0.90
@@ -1033,7 +1030,6 @@ def main():
     results = {
         'meta': {
             'experiment':     'exp80 — WAZN-aware tokenizer',
-            'registration':   '/Users/wajahath/qnlp_private_docs/72_exp80_wazn_tokenizer.md',
             'script':         __file__,
             'camel_route':    'LIVE (Mac, calima-msa-r13)',
             'wsl_status':     'DOWN — Mac-local CAMeL used',

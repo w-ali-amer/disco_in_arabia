@@ -28,7 +28,7 @@ Also: learning curves on Task A (N = 5, 10, 20, 40, 60 per class)
 Statistics: 10 seeds, 95% bootstrap CI
 
 Usage:
-    /home/waj/discocat_arabic_v2/qiskit_lambeq_env/bin/python3 exp13_arabert_comparison.py
+    python3 exp13_arabert_comparison.py
 """
 
 import os, sys, json, math, hashlib, logging, warnings, time

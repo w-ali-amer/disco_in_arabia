@@ -22,11 +22,12 @@ to a NEW file so results_exp21c.json is never overwritten (hygiene rule #3)
 while every public number still traces to a committed JSON (hygiene rule #6).
 """
 import json
+import os
 
 import numpy as np
 from scipy import stats
 
-PROJ = "/home/waj/discocat_arabic_v2"
+PROJ = os.path.dirname(os.path.abspath(__file__))
 SEEDS = ["42", "43", "44", "45", "46"]
 src = json.load(open(f"{PROJ}/results_exp21c.json"))
 S = src["seeds"]

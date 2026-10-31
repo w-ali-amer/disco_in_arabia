@@ -3,7 +3,7 @@
 """
 exp89_run.py — THE ALLOCATION CELL (four tokenizer arms, 3 seeds each).
 
-Registration: ~/qnlp_private_docs/81_exp88_89_skeleton_scale_and_allocation.md §3
+Registration: qnlp_private_docs/81_exp88_89_skeleton_scale_and_allocation.md §3
 Intermediate writers: exp89_anchor_gate.json, exp89_evaluate.json, exp89_gates.json
 Final results: exp89_aggregate.py → results_exp89.json
 

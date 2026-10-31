@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""exp77_inventory_enum_topup_wsl.py -- §5 TOP-UP enumeration.
+"""exp77_inventory_enum_topup.py -- §5 TOP-UP enumeration.
 
 Amendment (doc 67 §5, committed 2026-09-04 before any run):
     weak/geminate roots admitted at >=2 columns (sound roots stay >=3 -- they
@@ -24,13 +24,13 @@ Exclusion accounting:
 
 Output: exp77_enum_grid_topup.json, same schema as exp77_enum_grid.json.
 
-INTERPRETER: ~/discocat_arabic_v2/qiskit_lambeq_env (gensim 4.3.3 +
+INTERPRETER: qiskit_lambeq_env (gensim 4.3.3 +
 camel_tools 1.5.6; bare python3 has a numpy/gensim binary incompatibility).
 
 Run:
-    source ~/discocat_arabic_v2/qiskit_lambeq_env/bin/activate
-    nohup python ~/discocat_arabic_v2/exp77_inventory_enum_topup_wsl.py \
-        > ~/discocat_arabic_v2/topup_enum.log 2>&1 &
+    source qiskit_lambeq_env/bin/activate
+    nohup python exp77_inventory_enum_topup.py \
+        > topup_enum.log 2>&1 &
 """
 import hashlib
 import importlib.util
@@ -331,10 +331,10 @@ def main():
             "purpose": ("exp77 §5 top-up enumeration: weak/geminate roots at >=2 columns, "
                         "excluding roots already in exp77_enum_grid.json (>=3 col pool)"),
             "amendment_ref": "67_exp77_inventory_protocol.md §5",
-            "route": ("Same AraVec-vocabulary scan as exp77_inventory_enum_wsl.py; "
+            "route": ("Same AraVec-vocabulary scan as exp77_inventory_enum.py; "
                       "selection changed: weak/geminate roots >=2 cols, sound roots excluded. "
                       "AraVec attestation = True for all words by construction."),
-            "script": "exp77_inventory_enum_topup_wsl.py (new, never edits the committed script)",
+            "script": "exp77_inventory_enum_topup.py (new, never edits the committed script)",
             "camel_tools_version": camel_tools.__version__,
             "python_version": sys.version.split()[0],
             "aravec_model": ARAVEC,

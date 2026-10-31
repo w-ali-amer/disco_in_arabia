@@ -30,6 +30,6 @@ AraBERT numbers**, not the `AraBERT_finetuned` field inside `exp13_summary.json`
 
 ```bash
 # Dedicated fine-tuning script (manual PyTorch loop, avoids Trainer/accelerate issues):
-/home/waj/discocat_arabic_v2/qiskit_lambeq_env/bin/python3 exp13_arabert_comparison.py
+python3 exp13_arabert_comparison.py
 # Results are saved to this directory; log written to exp13_finetuned_arabert.log
 ```

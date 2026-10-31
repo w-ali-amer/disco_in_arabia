@@ -94,7 +94,7 @@ All paths below are relative to `archive/02_discocat_paper/`.
 ## Environment
 
 There are **two** environments. The experiments from exp40 onward use
-`requirements_mac.txt` (Python 3.12) and none of the setup below. The
+`requirements_torch.txt` (Python 3.12) and none of the setup below. The
 heavy stack described here is required only for the archived pipeline and the
 exp8–exp39 experiments.
 
@@ -199,7 +199,7 @@ Since then, committed in this repo:
 In `archive/06_trained_blocks/`, and independent of everything above: this line trains the
 verb blocks on a story question-answering loss rather than solving them against
 classical targets, with a Duneau-style compositional-generalisation gate. It
-imports only `torch` (see `requirements_mac.txt`); the lambeq/numpy<2 constraint
+imports only `torch` (see `requirements_torch.txt`); the lambeq/numpy<2 constraint
 does not apply to it. Design criteria for each experiment were committed before
 its results file existed, and each results JSON stores computed pass/fail
 booleans — **the verdicts below are those booleans, not a reading of the numbers.**

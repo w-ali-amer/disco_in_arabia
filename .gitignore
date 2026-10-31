@@ -10,7 +10,7 @@ __pycache__/
 *.pyo
 *.pyd
 
-# Windows Zone.Identifier metadata (WSL artifact)
+# Windows Zone.Identifier metadata
 *:Zone.Identifier
 
 # Experiment logs — large, not needed for reproducibility

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """exp77_tier2_gemma.py -- §2 Tier-2: gemma3:12b per-word MSA validation.
 
-Reads exp77_enum_grid.json (produced by exp77_inventory_enum_wsl.py on WSL,
+Reads exp77_enum_grid.json (produced by exp77_inventory_enum.py on WSL,
 scp'd to Mac). For each candidate word, queries gemma3:12b via ollama local
 API (temperature 0, JSON format) and records accept/reject.
 

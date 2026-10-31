@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""exp77_inventory_enum_wsl.py -- §1 ENUMERATION: root x template grid from AraVec.
+"""exp77_inventory_enum.py -- §1 ENUMERATION: root x template grid from AraVec.
 
 ROUTE CHOSEN (recorded per protocol):
     "analyze the AraVec vocabulary itself (every vocab token through the
@@ -27,12 +27,12 @@ WEAK FLAGS (per d4_roots_of_record.json conventions):
     weak-radical marker.
     geminate = the three consonant radicals include R2==R3 (when neither is '#').
 
-INTERPRETER: ~/discocat_arabic_v2/qiskit_lambeq_env (gensim 4.3.3 +
+INTERPRETER: qiskit_lambeq_env (gensim 4.3.3 +
 camel_tools 1.5.6; bare python3 has a numpy/gensim binary incompatibility).
 
 Run:
-    source ~/discocat_arabic_v2/qiskit_lambeq_env/bin/activate
-    python ~/discocat_arabic_v2/exp77_inventory_enum_wsl.py
+    source qiskit_lambeq_env/bin/activate
+    python exp77_inventory_enum.py
 """
 import hashlib
 import importlib.util

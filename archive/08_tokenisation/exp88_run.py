@@ -3,7 +3,7 @@
 """
 exp88_run.py — SKELETON MATCHING AT FULL INVENTORY (no training).
 
-Registration: ~/qnlp_private_docs/81_exp88_89_skeleton_scale_and_allocation.md §2
+Registration: qnlp_private_docs/81_exp88_89_skeleton_scale_and_allocation.md §2
 Sole writer: results_exp88.json
 
 Run on WSL: ~/venv/bin/python3 exp88_run.py
@@ -740,7 +740,7 @@ def run_all():
     results = {
         'experiment':    'exp88 — SKELETON MATCHING AT FULL INVENTORY',
         'registration':  os.path.expanduser(
-            '~/qnlp_private_docs/81_exp88_89_skeleton_scale_and_allocation.md'),
+            'qnlp_private_docs/81_exp88_89_skeleton_scale_and_allocation.md'),
         'sole_writer':   'exp88_run.py → results_exp88.json',
         'skeleton_meta': skeleton_meta,
         'sample_measures': sample_results,

@@ -13,7 +13,7 @@ Generates:
   6. Progression across experiments (exp5 → exp6 → exp7 → exp8)
 
 Usage:
-    /home/waj/discocat_arabic_v2/qiskit_lambeq_env/bin/python3 visualize_results.py
+    python3 visualize_results.py
 """
 
 import json, math, os, sys, warnings

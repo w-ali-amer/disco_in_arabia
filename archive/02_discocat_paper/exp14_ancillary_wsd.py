@@ -40,7 +40,7 @@ CV: 5-fold × 3-repeat = 15 splits  (RepeatedStratifiedKFold)
 QFM: 10 seeds averaged.  SPSA: 5 seeds × 15 folds.
 
 Usage:
-    /home/waj/discocat_arabic_v2/qiskit_lambeq_env/bin/python3 exp14_ancillary_wsd.py
+    python3 exp14_ancillary_wsd.py
 """
 
 import sys, json, math, hashlib, logging, warnings, time

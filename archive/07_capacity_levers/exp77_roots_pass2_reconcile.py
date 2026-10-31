@@ -7,7 +7,7 @@ THREE ROUTES, none of them allowed to overwrite another.
     analysis (first Al_det definite NOUN reading with rat='r', gen='m',
     num='s'), whose `pattern` field is what doc 63 SS3.2 made D4's wazn
     membership of record and whose `root` field rides on the same analysis.
-    Reproduced bit-identically on WSL (exp77_roots_pass1_wsl.py): 0/519 root,
+    Reproduced bit-identically on WSL (exp77_roots_pass1.py): 0/519 root,
     pattern and lemma mismatch, under camel_tools 1.5.5 AND 1.5.6.
 
   PASS 2 -- INDEPENDENT DERIVATION, this file. The analyser's stored `root` is
@@ -18,7 +18,7 @@ THREE ROUTES, none of them allowed to overwrite another.
     about this surface. What it CANNOT check: whether a different analysis
     should have been chosen -- pass 2 rides the same admitting analysis.
 
-  PASS 2b -- DIFFERENT SELECTOR (exp77_roots_pass2b_wsl.py). CAMeL's MLE
+  PASS 2b -- DIFFERENT SELECTOR (exp77_roots_pass2b.py). CAMeL's MLE
     disambiguator replaces `_classify`'s selection rule. This is the axis pass 2
     cannot probe, and it is reported separately rather than merged.
 
@@ -335,7 +335,7 @@ def main():
                                    "extract_aravec_candidates.py:321-322. The "
                                    "pattern field is what doc 63 SS3.2 made D4's "
                                    "wazn membership of record."),
-            "pass1_reproduction": ("exp77_roots_pass1_wsl.py on WSL: 0/519 root, "
+            "pass1_reproduction": ("exp77_roots_pass1.py on WSL: 0/519 root, "
                                    "0/519 pattern, 0/519 lemma mismatch vs the "
                                    "committed candidate_human_nouns.json, under "
                                    "camel_tools 1.5.5 AND 1.5.6"),
@@ -346,7 +346,7 @@ def main():
                                  "pass 1, so it tests the internal consistency of "
                                  "that analysis, not the choice of analysis. "
                                  "Pass 2b exists because of this."),
-            "pass2b_route": ("exp77_roots_pass2b_wsl.py -- "
+            "pass2b_route": ("exp77_roots_pass2b.py -- "
                              "MLEDisambiguator.pretrained() top analysis replaces "
                              "_classify's selection rule; same DB, different "
                              "SELECTOR"),

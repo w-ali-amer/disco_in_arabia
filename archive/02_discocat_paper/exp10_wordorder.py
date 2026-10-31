@@ -20,7 +20,7 @@ Augmented dataset: 40 per class × 3 classes = 120 sentences (up from 45).
 Also runs the classical AraVec baseline alongside for direct comparison.
 
 Usage:
-    /home/waj/discocat_arabic_v2/qiskit_lambeq_env/bin/python3 exp10_wordorder.py
+    python3 exp10_wordorder.py
 """
 
 import os, sys, json, math, hashlib, logging, warnings, time

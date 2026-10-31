@@ -3,7 +3,7 @@
 §8.6 0747cb0). Does the PUBLISHED Arabic word-order result survive (C) lexical tying
 and (D) the nested-cup VSO convention (doc 82 erratum P5)?
 
-Runs wholly on WSL ~/discocat_arabic_v2/qiskit_lambeq_env (doc 36 §8.1).
+Runs wholly on WSL qiskit_lambeq_env (doc 36 §8.1).
 The published pipeline is NOT copied: the exact function sources are extracted
 from archive/02_discocat_paper/exp13_arabert_comparison.py with `ast` and executed,
 and their sha256 is recorded (code-identity gate). Archive files are never edited.

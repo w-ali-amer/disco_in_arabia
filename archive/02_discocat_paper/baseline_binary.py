@@ -6,7 +6,7 @@ Classical AraVec + ML baseline for the 7 binary polysemous pairs,
 matching the exp8 setup exactly (same augmented dataset, same 5-fold CV).
 
 Usage:
-    /home/waj/discocat_arabic_v2/qiskit_lambeq_env/bin/python3 baseline_binary.py
+    python3 baseline_binary.py
 """
 
 import os, sys, json, logging, warnings

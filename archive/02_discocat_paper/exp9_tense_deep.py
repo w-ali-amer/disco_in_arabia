@@ -16,7 +16,7 @@ Also runs Morphology_Number and Morphology_Possession with n_layers=2
 Uses the augmented sentences.json (Tense: 50 sentences, up from 28).
 
 Usage:
-    /home/waj/discocat_arabic_v2/qiskit_lambeq_env/bin/python3 exp9_tense_deep.py
+    python3 exp9_tense_deep.py
 """
 
 import os, sys, json, math, hashlib, logging, warnings, time

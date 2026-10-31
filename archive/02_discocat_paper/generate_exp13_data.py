@@ -10,7 +10,7 @@ for exp13. Appends to sentences.json under new keys:
       50 Past + 50 Present (morphologically unambiguous)
 
 Run:
-    /home/waj/discocat_arabic_v2/qiskit_lambeq_env/bin/python3 generate_exp13_data.py
+    python3 generate_exp13_data.py
 """
 
 import json

@@ -15,10 +15,11 @@ Sections whose numbers belong to other experiments ("What survives untouched")
 are excised before the sweep, and the reason is recorded in EXCISED.
 """
 import json
+import os
 import re
 import sys
 
-P = "/home/waj/discocat_arabic_v2"
+P = os.path.dirname(os.path.abspath(__file__))
 c = json.load(open(f"{P}/results_exp21c.json"))
 ad = json.load(open(f"{P}/results_exp21c_pooled_addendum.json"))
 c2f = json.load(open(f"{P}/results_exp21b_seed42_c2.json"))

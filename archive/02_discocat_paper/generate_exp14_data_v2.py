@@ -42,7 +42,7 @@ Why this matters for the paper:
   represent this interaction as correlated qubit states.
 
 Run:
-    /home/waj/discocat_arabic_v2/qiskit_lambeq_env/bin/python3 generate_exp14_data_v2.py
+    python3 generate_exp14_data_v2.py
 """
 
 import json

@@ -22,7 +22,7 @@ import numpy as np
 
 os.environ.setdefault("SPLIT_SEED", "42")
 
-PROJ = "/home/waj/discocat_arabic_v2"
+PROJ = os.path.dirname(os.path.abspath(__file__))
 os.chdir(PROJ)
 
 src = open(f"{PROJ}/exp21b_robust.py").read()

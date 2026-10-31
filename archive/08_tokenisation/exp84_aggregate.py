@@ -7,7 +7,7 @@ Reads all gate and LM artifacts produced by exp84_run.py.
 Computes all §3 boolean outcomes and §4's wazn_lm_helps / NO_LM_SIGNAL.
 Must be run after all 6 LM units have completed.
 
-Registration: /Users/wajahath/qnlp_private_docs/76_exp84_fused_vocab_tokenizer.md
+Registration: qnlp_private_docs/76_exp84_fused_vocab_tokenizer.md
 """
 
 import json
@@ -198,7 +198,7 @@ def aggregate():
         'meta': {
             'experiment':     'exp84 — FUSED-VOCAB WAZN-BPE + stage-2 LM',
             'registration':   os.path.expanduser(
-                '~/qnlp_private_docs/76_exp84_fused_vocab_tokenizer.md'),
+                'qnlp_private_docs/76_exp84_fused_vocab_tokenizer.md'),
             'sole_writer':    'exp84_aggregate.py',
             'errors':         errors,
             'lm_units_missing': lm_missing,

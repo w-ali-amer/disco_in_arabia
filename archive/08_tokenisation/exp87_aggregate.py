@@ -2,12 +2,12 @@
 # -*- coding: utf-8 -*-
 """
 exp87_aggregate.py — ARABIC WUG TEST, LEG A: SOLE WRITER OF results_exp87.json
-Registration: /Users/wajahath/qnlp_private_docs/80_exp87_arabic_wug_test.md §3
+Registration: qnlp_private_docs/80_exp87_arabic_wug_test.md §3
 
 Run after exp87_run.py --evaluate (and --gates for anchor status).
 Interpreter: ~/venv/bin/python3
 
-Outputs: ~/discocat_arabic_v2/results_exp87.json
+Outputs: results_exp87.json
 """
 
 import json

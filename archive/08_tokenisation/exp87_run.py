@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 exp87_run.py  — ARABIC WUG TEST, LEG A (TOKENIZERS)
-Registration: /Users/wajahath/qnlp_private_docs/80_exp87_arabic_wug_test.md
+Registration: qnlp_private_docs/80_exp87_arabic_wug_test.md
 
 CLI flags:
   --materials   generate nonce roots, build 360-form set, write exp87_materials.json
@@ -11,7 +11,7 @@ CLI flags:
 
 Interpreter notes:
   --materials requires gensim (AraVec):
-      ~/discocat_arabic_v2/qiskit_lambeq_env/bin/python3 exp87_run.py --materials
+      qiskit_lambeq_env/bin/python3 exp87_run.py --materials
   --gates and --evaluate work with the standard venv:
       ~/venv/bin/python3 exp87_run.py --gates
       ~/venv/bin/python3 exp87_run.py --evaluate
@@ -395,7 +395,7 @@ def run_materials():
     except (ImportError, Exception) as e:
         sys.exit(
             f'[materials] FATAL: gensim not importable ({e}).\n'
-            '  Run with: ~/discocat_arabic_v2/qiskit_lambeq_env/bin/python3 exp87_run.py --materials'
+            '  Run with: qiskit_lambeq_env/bin/python3 exp87_run.py --materials'
         )
 
     aravec_path = os.path.join(WORK_DIR, 'aravec', 'full_uni_cbow_300_twitter.mdl')

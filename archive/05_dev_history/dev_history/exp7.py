@@ -23,7 +23,7 @@ Experiment sets:
      StronglyEntangling dropped — performed worst in exp5 on every task.
 
 Usage:
-    /home/waj/discocat_arabic_v2/qiskit_lambeq_env/bin/python3 exp6.py
+    python3 exp6.py
 """
 
 import os, sys, json, math, logging, time, hashlib

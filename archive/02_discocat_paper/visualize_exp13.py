@@ -11,7 +11,7 @@ Figures:
   fig10_mechanisms.png     — Schematic: 3 mechanisms side-by-side (AraVec / BERT / Quantum)
 
 Usage:
-    /home/waj/discocat_arabic_v2/qiskit_lambeq_env/bin/python3 visualize_exp13.py
+    python3 visualize_exp13.py
 """
 
 import json, warnings

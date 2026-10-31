@@ -6,7 +6,7 @@ exp89_aggregate.py — Aggregate exp89 results and write results_exp89.json.
 Reads: exp89_anchor_gate.json, exp89_evaluate.json, exp89_gates.json
 Sole writer: results_exp89.json
 
-Registration: ~/qnlp_private_docs/81_exp88_89_skeleton_scale_and_allocation.md §3
+Registration: qnlp_private_docs/81_exp88_89_skeleton_scale_and_allocation.md §3
 
 Bars (§3):
   allocation_cell_occupied = some NEW arm (opt or noback) has:
@@ -200,7 +200,7 @@ def main():
     results = {
         'experiment':  'exp89 — THE ALLOCATION CELL',
         'registration': os.path.expanduser(
-            '~/qnlp_private_docs/81_exp88_89_skeleton_scale_and_allocation.md'),
+            'qnlp_private_docs/81_exp88_89_skeleton_scale_and_allocation.md'),
         'sole_writer': 'exp89_aggregate.py → results_exp89.json',
         'bars': {
             'fertility_bar':  f'arm fertility ≤ {FERTILITY_BAR} × BPE fertility',

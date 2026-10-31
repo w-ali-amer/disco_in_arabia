@@ -9,7 +9,7 @@ but replaces the quantum circuit with simple averaged AraVec embeddings
 fed into SVM, Random Forest, and MLP classifiers.
 
 Usage:
-    /home/waj/discocat_arabic_v2/qiskit_lambeq_env/bin/python3 baseline_classical.py
+    python3 baseline_classical.py
 """
 
 import os, sys, json, math, logging, warnings

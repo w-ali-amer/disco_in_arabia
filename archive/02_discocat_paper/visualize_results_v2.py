@@ -13,7 +13,7 @@ Figures generated:
   fig6 — PCA of AraVec embeddings (Tense, Word Order, King/Possess)
 
 Usage:
-    /home/waj/discocat_arabic_v2/qiskit_lambeq_env/bin/python3 visualize_results_v2.py
+    python3 visualize_results_v2.py
 """
 
 import json, warnings, sys

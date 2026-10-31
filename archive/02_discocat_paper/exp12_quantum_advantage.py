@@ -43,7 +43,7 @@ Quantum Feature Map (QFM):
     Advantage: isolates topological contribution; runs in seconds, not hours.
 
 Usage:
-    /home/waj/discocat_arabic_v2/qiskit_lambeq_env/bin/python3 exp12_quantum_advantage.py
+    python3 exp12_quantum_advantage.py
 """
 
 import os, sys, json, math, hashlib, logging, warnings, time

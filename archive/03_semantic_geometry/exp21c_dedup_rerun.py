@@ -156,7 +156,7 @@ import numpy as np
 from scipy import stats
 from sklearn.metrics import roc_auc_score
 
-PROJ = "/home/waj/discocat_arabic_v2"
+PROJ = os.path.dirname(os.path.abspath(__file__))
 os.chdir(PROJ)
 os.environ.setdefault("SPLIT_SEED", "42")   # header only; splits are overridden
 

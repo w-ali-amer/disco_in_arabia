@@ -1,8 +1,8 @@
 import sys, json, random, numpy as np
-sys.path.insert(0, "/Users/wajahath/discocat_arabic_v2")
+ROOT = __import__("os").path.dirname(__import__("os").path.abspath(__file__)); sys.path.insert(0, ROOT)
 import exp124_spike as E
 from scipy.optimize import milp, LinearConstraint, Bounds
-d = json.load(open("/Users/wajahath/discocat_arabic_v2/results_exp124.json"))
+d = json.load(open(ROOT + "/results_exp124.json"))
 rng = random.Random(124)
 bad = 0; maxdiff = 0; st = set(); i = 0
 for R in (3, 4):

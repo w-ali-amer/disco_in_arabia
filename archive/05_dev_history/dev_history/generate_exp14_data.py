@@ -19,7 +19,7 @@ Design principles:
   - Adds key "WordSenseDisambiguation" to sentences.json
 
 Run:
-    /home/waj/discocat_arabic_v2/qiskit_lambeq_env/bin/python3 generate_exp14_data.py
+    python3 generate_exp14_data.py
 """
 
 import json

@@ -17,7 +17,7 @@ Improvements over exp4.py:
 - Results saved in same directory structure as exp4.py outputs
 
 Usage:
-    /home/waj/discocat_arabic_v2/qiskit_lambeq_env/bin/python3 exp5_training.py
+    python3 exp5_training.py
 """
 
 import os

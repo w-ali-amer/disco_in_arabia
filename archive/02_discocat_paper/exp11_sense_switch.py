@@ -20,7 +20,7 @@ Seven binary pairs, matching exp8 exactly (same data, epochs, ansatz).
 Comparison table at the end: exp8 IQP | exp11 oracle | exp11 auto | classical SVM.
 
 Usage:
-    /home/waj/discocat_arabic_v2/qiskit_lambeq_env/bin/python3 exp11_sense_switch.py
+    python3 exp11_sense_switch.py
 """
 
 import os, sys, json, math, hashlib, logging, warnings, time

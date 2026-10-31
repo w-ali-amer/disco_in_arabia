@@ -5,11 +5,12 @@ Rationale: SPSA on binary tasks can converge to the inverted minimum
 (same loss magnitude, opposite orientation). The symmetric result
 recovers the true discriminability regardless of inversion direction.
 """
+import os
 import re
 import numpy as np
 from collections import defaultdict
 
-LOG = "/home/waj/discocat_arabic_v2/exp14_ancillary_wsd_v2.log"
+LOG = os.path.join(os.path.dirname(os.path.abspath(__file__)), "exp14_ancillary_wsd_v2.log")
 
 # Pattern: [verb/method] s=X f=Y/15 acc=Z
 FOLD_PAT = re.compile(

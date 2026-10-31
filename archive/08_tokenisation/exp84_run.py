@@ -3,7 +3,7 @@
 """
 exp84_run.py — FUSED-VOCAB WAZN-BPE experiment.
 
-Registration: /Users/wajahath/qnlp_private_docs/76_exp84_fused_vocab_tokenizer.md
+Registration: qnlp_private_docs/76_exp84_fused_vocab_tokenizer.md
 Predecessor:  exp80_run.py (WAZN-BPE baseline; MORPHOLOGY_TAX finding)
 
 Stages (CLI flags):
@@ -1326,7 +1326,7 @@ def run_evaluate():
     result = {
         'experiment': 'exp84 — FUSED-VOCAB WAZN-BPE',
         'registration': os.path.expanduser(
-            '~/qnlp_private_docs/76_exp84_fused_vocab_tokenizer.md'),
+            'qnlp_private_docs/76_exp84_fused_vocab_tokenizer.md'),
         'per_seed': seed_results,
         'aggregate': agg,
         'elapsed_s': round(time.time() - t0, 1),
@@ -1547,7 +1547,7 @@ def run_lm(arm, lm_seed):
     result = {
         'experiment':     'exp84 stage-2 LM',
         'registration':   os.path.expanduser(
-            '~/qnlp_private_docs/76_exp84_fused_vocab_tokenizer.md'),
+            'qnlp_private_docs/76_exp84_fused_vocab_tokenizer.md'),
         'arm':            arm,
         'lm_seed':        lm_seed,
         'tok_seed':       LM_SEED_TOK,

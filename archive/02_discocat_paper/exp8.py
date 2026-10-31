@@ -14,7 +14,7 @@ Strategy:
   - Also runs augmented 14-class and 6-class experiments for comparison
 
 Usage:
-    /home/waj/discocat_arabic_v2/qiskit_lambeq_env/bin/python3 exp8.py
+    python3 exp8.py
 """
 
 import os, sys, json, math, hashlib, logging, warnings, time
