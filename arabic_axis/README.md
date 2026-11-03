@@ -1,4 +1,4 @@
-# Arabic axis: where a qubit helps (exp90–133)
+# Arabic axis: where a qubit helps (exp90–137)
 
 `proof_qrac_cap*.py` hold the certificate for the composition cap, and `pasqal_*.py` the neutral-atom emulation of the one-qubit game.
 
@@ -27,5 +27,8 @@
 | 127 | Certified quantum upper bound (semidefinite relaxation) | K = 3 in [0.7781, 0.8203]; K = 4 ≤ 0.6608 |
 | 128 | Two atoms under one global laser, noiseless | 0.739 vs 2/3 |
 | 133 | Noise robustness of the two-qubit codes as dimension witnesses | critical visibility 0.874 (K = 3), 0.823 (K = 4) |
+| 134 | Certified randomness against an eavesdropper (level-1 relaxation) | none certified for the three-referent code; 0.228 bit for the optimal two-referent code, gone by 4% noise |
+| 136 | Independent reproduction (RAC-tools) and a dimension-aware relaxation | exp101 reproduced to 1e-10; the tighter relaxation does not move the bound |
+| 137 | The advantage across nine class priors, uniform to real Arabic frequencies | survives every prior at two and three referents; three referents, real frequencies: [0.050, 0.093] |
 
 Scripts here import modules and read data files from other folders by bare name. To re-run one, use `tools/flatten_for_rerun.sh` from the repository root (see the main README).

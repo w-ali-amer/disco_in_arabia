@@ -1,0 +1,116 @@
+{
+ "doc": "137 E1",
+ "registered": "b54fa53",
+ "rows": {
+  "U": {
+   "classical": 0.8000000000000016,
+   "lower": 0.8828427124746205,
+   "upper": 0.8872983356213906,
+   "adv_interval": [
+    0.08284271247461894,
+    0.087298335621389
+   ],
+   "verdict": "survives"
+  },
+  "I_0.25": {
+   "classical": 0.8057594658572214,
+   "lower": 0.8865131026052313,
+   "upper": 0.8905103106161061,
+   "adv_interval": [
+    0.08075363674800995,
+    0.08475084475888472
+   ],
+   "verdict": "survives"
+  },
+  "I_0.5": {
+   "classical": 0.824445873655919,
+   "lower": 0.8979814891519196,
+   "upper": 0.9006901026399885,
+   "adv_interval": [
+    0.07353561549600052,
+    0.07624422898406946
+   ],
+   "verdict": "survives"
+  },
+  "I_0.75": {
+   "classical": 0.8612413883288605,
+   "lower": 0.9196982812863574,
+   "upper": 0.9206769338697853,
+   "adv_interval": [
+    0.0584568929574969,
+    0.059435545540924783
+   ],
+   "verdict": "survives"
+  },
+  "E-6": {
+   "classical": 0.9294277836184851,
+   "lower": 0.9583845251166967,
+   "upper": 0.9583915738035335,
+   "adv_interval": [
+    0.02895674149821159,
+    0.028963790185048355
+   ],
+   "verdict": "survives"
+  },
+  "E-5": {
+   "classical": 0.9049223119966021,
+   "lower": 0.9466619562500667,
+   "upper": 0.9466901782204836,
+   "adv_interval": [
+    0.04173964425346455,
+    0.04176786622388151
+   ],
+   "verdict": "survives"
+  },
+  "Zipf_0.5": {
+   "classical": 0.8066014464361108,
+   "lower": 0.8870505242203177,
+   "upper": 0.8909565459147433,
+   "adv_interval": [
+    0.08044907778420696,
+    0.08435509947863251
+   ],
+   "verdict": "survives"
+  },
+  "Zipf_1": {
+   "classical": 0.8325123152709357,
+   "lower": 0.90075085198588,
+   "upper": 0.9032556476124125,
+   "adv_interval": [
+    0.06823853671494429,
+    0.07074333234147678
+   ],
+   "verdict": "survives"
+  },
+  "Zipf_2": {
+   "classical": 0.9298674298674297,
+   "lower": 0.9452626090716196,
+   "upper": 0.9456108764372619,
+   "adv_interval": [
+    0.01539517920418998,
+    0.015743446569832287
+   ],
+   "verdict": "survives"
+  }
+ },
+ "gates": {
+  "G_REPRO": true,
+  "G_EXP101": true,
+  "G_SANDWICH": true,
+  "G_RACTOOLS_E": true,
+  "G_DUAL": true
+ },
+ "predictions": {
+  "P1_monotone_U_to_E6": true,
+  "P1_monotone_Zipf": true,
+  "P2_survives_all": true
+ },
+ "ractools": {
+  "prior": "I_0.5",
+  "classical": 0.8244458736559195,
+  "seesaw": 0.8979814884115519,
+  "seesaw_converged_flag": false,
+  "wall_s": 926.1921987533569
+ },
+ "runner_sha256": "677973b2b28a4e4581e708cc734b7e451375e93ab9ad48d4be6279545e806c27"
+}

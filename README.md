@@ -11,8 +11,10 @@ First application of pregroup grammar-based QNLP to Arabic. Converts Arabic sent
 
 ```
 /
-├── arabic_axis/                     ← exp90–133, current line: the which-referent game, exact
+├── arabic_axis/                     ← exp90–137, current line: the which-referent game, exact
 │                                       classical values, certified quantum bounds, the composition cap
+├── formal/                          ← Lean 4 proofs of the two-referent bounds under real frequencies
+├── compression/                     ← exp138, exp142: Arabic-trained zstd/Brotli dictionaries (classical)
 ├── archive/
 │   ├── 01_parser_pipeline/          ← Arabic pipeline: Stanza + CAMeL → pregroup → lambeq
 │   ├── 02_discocat_paper/           ← exp8–exp20, the published paper line (+ figures, outputs, re-checks)
@@ -228,13 +230,13 @@ booleans — **the verdicts below are those booleans, not a reading of the numbe
   remediation (matched initialisation plus a per-arm memorisation control) must
   run before any comparative claim is made.
 
-## Experiments 44–133 (August–October 2026)
+## Experiments 44–142 (August–November 2026)
 
 Corrections to the paper found by these later experiments are listed in [CORRECTION.md](CORRECTION.md).
 
 Each experiment had its pass and fail criteria written down and committed before it ran, and each results file stores those verdicts as computed booleans. Scripts are named `expNN_*.py` and write `results_expNN*.json`; story datasets are `stories_expNN*.json`. Comments in the scripts refer to numbered design notes ("doc 54") that are kept privately; the scripts and results stand on their own.
 
-Not included in this update: model checkpoints and logs (too large), experiments that use licensed treebank data (exp130–131), the poetry demonstration (exp125–126), the hardware-run preparation for a specific device (exp107, exp111, exp129), and the eavesdropper bound (exp134), which is still running.
+Not included in this update: model checkpoints and logs (too large), experiments that use licensed treebank data (exp130–131), the poetry demonstration (exp125–126), and the hardware-run preparation for a specific device (exp107, exp111, exp129).
 
 ### Trained blocks: what makes a referent register learnable (exp44–63)
 
@@ -279,7 +281,7 @@ In [`archive/08_tokenisation/`](archive/08_tokenisation/).
 | 87 | Arabic wug test: do tokenizers handle nonce roots in real patterns? |
 | 88–89 | Skeleton matching at full inventory, and vocabulary allocation across tokenizer arms |
 
-### Arabic axis: where a qubit helps (exp90–133)
+### Arabic axis: where a qubit helps (exp90–137)
 
 In [`arabic_axis/`](arabic_axis/).
 
@@ -308,3 +310,21 @@ In [`arabic_axis/`](arabic_axis/).
 | 127 | Certified quantum upper bound (semidefinite relaxation) | K = 3 in [0.7781, 0.8203]; K = 4 ≤ 0.6608 |
 | 128 | Two atoms under one global laser, noiseless | 0.739 vs 2/3 |
 | 133 | Noise robustness of the two-qubit codes as dimension witnesses | critical visibility 0.874 (K = 3), 0.823 (K = 4) |
+| 134 | Certified randomness against an eavesdropper (level-1 relaxation) | none certified for the three-referent code; 0.228 bit for the optimal two-referent code, gone by 4% noise |
+| 136 | Independent reproduction (RAC-tools) and a dimension-aware relaxation | exp101 reproduced to 1e-10; the tighter relaxation does not move the bound |
+| 137 | The advantage across nine class priors, uniform to real Arabic frequencies | survives every prior at two and three referents; three referents, real frequencies: [0.050, 0.093] |
+
+### Machine-checked bounds for the two-referent game (Lean 4)
+
+In [`formal/`](formal/). Under the real Arabic pro-drop subject counts, every one-bit strategy scores at most 871675/937862 ≈ 0.929428, one explicit qubit strategy scores 0.958025, and no qubit strategy scores more than 0.9583915. All three are proved in Lean 4 with Mathlib and checked by the kernel, with no `sorry` and no `native_decide`; the quantum upper bound is a semidefinite certificate that Lean checks exactly. This is a mechanical check of my own result, not a claim about prior formalisations.
+
+### Compression side line (exp138, exp142)
+
+In [`compression/`](compression/). Classical measurements with zstd and Brotli, since quantum compression cannot beat classical compressors on classical data.
+
+| exp | question | verdict |
+|---|---|---|
+| 138 | Does an Arabic-trained dictionary help short Arabic messages? | 0.40 smaller on single sentences (English 0.28); after the 40-byte RFC 9842 header it loses to plain Brotli on single sentences and wins on four-sentence chunks |
+| 142 | JSON API responses, a raw-text Brotli dictionary, and domain | a dictionary trained on Arabic Wikipedia summary JSON cuts it by 0.65, about half of plain Brotli after the header, mostly from JSON structure (text-only dictionary 0.115; English 0.58); raw-text Brotli dictionary 0.086, below the registered 0.22; count gate failed (837/1000 Arabic test responses) |
+
+The downloaded data (FLORES-200, Wikipedia, Wikidata, Tatoeba) is not redistributed; the scripts fetch it.

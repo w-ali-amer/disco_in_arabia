@@ -1,0 +1,440 @@
+{
+ "doc": "142",
+ "registered": "d6f2b1f",
+ "amended": "1105fae",
+ "deviations": [
+  "D_ar_bgen not built: external build not permitted in this environment. PB1 uses D_ar_raw only (registered fallback).",
+  "Action-API calls use utf8=1 to preserve Unicode (not \\uXXXX). Disclosed in §3."
+ ],
+ "licences": [
+  {
+   "source": "wikimedia/wikipedia 20231101.ar shard 00005",
+   "use": "titles for JSON payloads (disjoint from shard 00004 used in exp138 training)",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "source": "Wikipedia REST /api/rest_v1/page/summary/{title} ar and en",
+   "use": "J1 payloads and training set",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "source": "Wikidata wbgetentities (props: labels, descriptions, aliases, claims; languages=ar)",
+   "use": "J2 payloads and training set; re-serialised per-entity compact JSON (key order kept, whitespace minimal); disclosed",
+   "licence": "CC0"
+  },
+  {
+   "source": "Tatoeba per-language export ara_sentences.tsv",
+   "use": "arm C conversational sentences",
+   "licence": "CC BY 2.0 FR"
+  },
+  {
+   "source": "FLORES-200 payloads (reused from exp138)",
+   "use": "arm B FLORES baselines and arm C D_ar reference payload",
+   "licence": "CC BY-SA 4.0"
+  },
+  {
+   "source": "exp138 D_ar_112k and D_en_112k zstd-trained dictionaries",
+   "use": "arm A and arm C encyclopaedic dictionaries",
+   "licence": "CC BY-SA 4.0"
+  }
+ ],
+ "gates": {
+  "G_DISJOINT": true,
+  "G_COUNT": false,
+  "G_LICENCE": true,
+  "G_DET": true,
+  "G_ROUNDTRIP": true
+ },
+ "predictions": {
+  "PJ1": true,
+  "PJ2": true,
+  "PJ3": true,
+  "PJ4": true,
+  "PB1": false,
+  "PB2": true,
+  "PC1": true,
+  "PC2": true
+ },
+ "predictions_detail": {
+  "PJ1": {
+   "value": 0.6496062624937434,
+   "threshold": ">=0.40"
+  },
+  "PJ2": {
+   "j1_ar": true,
+   "j2": true
+  },
+  "PJ3": {
+   "j1_ar_gain": 0.6496062624937434,
+   "j1_en_gain": 0.5764443633695697
+  },
+  "PJ4": {
+   "zstd_D_json_total": 258896,
+   "brotli_none_total": 516887
+  },
+  "PB1": {
+   "value": 0.08615893274554942,
+   "threshold": ">=0.22",
+   "D_ar_bgen": "not_run: external build not permitted (registered fallback)"
+  },
+  "PB2": {
+   "value": 0.08615893274554942,
+   "threshold": "<0.403"
+  },
+  "PC1": {
+   "tat_D_tat_gain": 0.29038788486295786,
+   "tat_D_ar_gain": 0.21838301050541975,
+   "flores_D_ar_gain": 0.4033634741351092,
+   "flores_D_tat_gain": 0.38857348008348847
+  },
+  "PC2": {
+   "tat_cross_gain": 0.21838301050541975,
+   "flores_cross_gain": 0.38857348008348847
+  }
+ },
+ "arm_a": {
+  "j1_ar|zstd19|none": {
+   "bytes": 643322,
+   "n": 837,
+   "ratio": 0.2925816066924446,
+   "gain": null,
+   "gain_with_rfc9842_header": null
+  },
+  "j1_ar|zstd19|D_ar_112k": {
+   "bytes": 569304,
+   "n": 837,
+   "ratio": 0.2589183628360844,
+   "gain": 0.1150559129020926,
+   "gain_with_rfc9842_header": 0.0630135453163424
+  },
+  "j1_ar|zstd19|D_en_112k": {
+   "bytes": 614450,
+   "n": 837,
+   "ratio": 0.2794506766940546,
+   "gain": 0.04487954710082975,
+   "gain_with_rfc9842_header": -0.007162820484920562
+  },
+  "j1_ar|zstd19|D_json": {
+   "bytes": 225416,
+   "n": 837,
+   "ratio": 0.10251876269455125,
+   "gain": 0.6496062624937434,
+   "gain_with_rfc9842_header": 0.5975638949079932
+  },
+  "j1_ar|brotli11|none": {
+   "bytes": 516887,
+   "n": 837,
+   "ratio": 0.23507921218058395,
+   "gain": null,
+   "gain_with_rfc9842_header": null
+  },
+  "j1_en|zstd19|none": {
+   "bytes": 498853,
+   "n": 692,
+   "ratio": 0.3496007490248241,
+   "gain": null,
+   "gain_with_rfc9842_header": null
+  },
+  "j1_en|zstd19|D_ar_112k": {
+   "bytes": 501442,
+   "n": 692,
+   "ratio": 0.35141514392517603,
+   "gain": -0.0051899056435462665,
+   "gain_with_rfc9842_header": -0.0606771934818473
+  },
+  "j1_en|zstd19|D_en_112k": {
+   "bytes": 440875,
+   "n": 692,
+   "ratio": 0.30896923587974673,
+   "gain": 0.11622261467807149,
+   "gain_with_rfc9842_header": 0.060735326839770454
+  },
+  "j1_en|zstd19|D_json": {
+   "bytes": 211292,
+   "n": 692,
+   "ratio": 0.1480753678196846,
+   "gain": 0.5764443633695697,
+   "gain_with_rfc9842_header": 0.5209570755312687
+  },
+  "j1_en|brotli11|none": {
+   "bytes": 394781,
+   "n": 692,
+   "ratio": 0.27666613872377044,
+   "gain": null,
+   "gain_with_rfc9842_header": null
+  },
+  "j2|zstd19|none": {
+   "bytes": 3092720,
+   "n": 990,
+   "ratio": 0.15686062880990786,
+   "gain": null,
+   "gain_with_rfc9842_header": null
+  },
+  "j2|zstd19|D_ar_112k": {
+   "bytes": 3071941,
+   "n": 990,
+   "ratio": 0.15580673223794497,
+   "gain": 0.006718681290255879,
+   "gain_with_rfc9842_header": -0.006085581623942682
+  },
+  "j2|zstd19|D_en_112k": {
+   "bytes": 3041333,
+   "n": 990,
+   "ratio": 0.15425431555405067,
+   "gain": 0.016615471171008034,
+   "gain_with_rfc9842_header": 0.003811208256809584
+  },
+  "j2|zstd19|D_json": {
+   "bytes": 2272372,
+   "n": 990,
+   "ratio": 0.11525314312644791,
+   "gain": 0.2652512998266898,
+   "gain_with_rfc9842_header": 0.25244703691249126
+  },
+  "j2|brotli11|none": {
+   "bytes": 2844750,
+   "n": 990,
+   "ratio": 0.14428376115748773,
+   "gain": null,
+   "gain_with_rfc9842_header": null
+  }
+ },
+ "arm_b": {
+  "flores_ar_A1|brotli11|none": {
+   "bytes": 225026,
+   "gain": null
+  },
+  "flores_ar_A1|brotli11|D_ar_raw": {
+   "bytes": 205638,
+   "gain": 0.08615893274554942
+  },
+  "flores_ar_A1|brotli11|D_en_raw": {
+   "bytes": 223261,
+   "gain": 0.007843538080044121
+  },
+  "flores_ar_A4|brotli11|none": {
+   "bytes": 166715,
+   "gain": null
+  },
+  "flores_ar_A4|brotli11|D_ar_raw": {
+   "bytes": 149429,
+   "gain": 0.1036859310799868
+  },
+  "flores_ar_A4|brotli11|D_en_raw": {
+   "bytes": 167896,
+   "gain": -0.007083945655759871
+  },
+  "flores_en_A1|brotli11|none": {
+   "bytes": 160193,
+   "gain": null
+  },
+  "flores_en_A1|brotli11|D_ar_raw": {
+   "bytes": 162866,
+   "gain": -0.016686122364897304
+  },
+  "flores_en_A1|brotli11|D_en_raw": {
+   "bytes": 159866,
+   "gain": 0.0020412876967158544
+  },
+  "flores_en_A4|brotli11|none": {
+   "bytes": 117254,
+   "gain": null
+  },
+  "flores_en_A4|brotli11|D_ar_raw": {
+   "bytes": 122707,
+   "gain": -0.04650587613215751
+  },
+  "flores_en_A4|brotli11|D_en_raw": {
+   "bytes": 118029,
+   "gain": -0.006609582615518361
+  },
+  "j1_ar|brotli11|none": {
+   "bytes": 516887,
+   "gain": null
+  },
+  "j1_ar|brotli11|D_ar_raw": {
+   "bytes": 507326,
+   "gain": 0.018497273098375455
+  },
+  "j1_ar|brotli11|D_en_raw": {
+   "bytes": 544706,
+   "gain": -0.053820274063770324
+  },
+  "j1_ar|brotli11|D_json_raw": {
+   "bytes": 263362,
+   "gain": 0.4904843805319151
+  },
+  "j1_en|brotli11|none": {
+   "bytes": 394781,
+   "gain": null
+  },
+  "j1_en|brotli11|D_ar_raw": {
+   "bytes": 416717,
+   "gain": -0.055564984130441974
+  },
+  "j1_en|brotli11|D_en_raw": {
+   "bytes": 409247,
+   "gain": -0.03664310085845068
+  },
+  "j1_en|brotli11|D_json_raw": {
+   "bytes": 219382,
+   "gain": 0.44429443159625215
+  },
+  "j2|brotli11|none": {
+   "bytes": 2844750,
+   "gain": null
+  },
+  "j2|brotli11|D_ar_raw": {
+   "bytes": 2841380,
+   "gain": 0.0011846383689252393
+  },
+  "j2|brotli11|D_en_raw": {
+   "bytes": 2862618,
+   "gain": -0.006281044028473515
+  },
+  "j2|brotli11|D_json_raw": {
+   "bytes": 2378634,
+   "gain": 0.16385130503559187
+  }
+ },
+ "arm_c": {
+  "flores_ar_A1|zstd19|none": {
+   "bytes": 284111,
+   "gain": null
+  },
+  "flores_ar_A1|zstd19|D_ar_112k": {
+   "bytes": 169511,
+   "gain": 0.4033634741351092
+  },
+  "flores_ar_A1|zstd19|D_tat": {
+   "bytes": 173713,
+   "gain": 0.38857348008348847
+  },
+  "tat_test|zstd19|none": {
+   "bytes": 101757,
+   "gain": null
+  },
+  "tat_test|zstd19|D_ar_112k": {
+   "bytes": 79535,
+   "gain": 0.21838301050541975
+  },
+  "tat_test|zstd19|D_tat": {
+   "bytes": 72208,
+   "gain": 0.29038788486295786
+  }
+ },
+ "rfc9842_comparison": {
+  "j1_ar": {
+   "zstd_D_json_bytes": 225416,
+   "n_payloads": 837,
+   "rfc9842_header_bytes_per_payload": 40,
+   "zstd_D_json_plus_header_total": 258896,
+   "brotli_none_total": 516887,
+   "delta": -257991,
+   "winner": "zstd+D_json"
+  },
+  "j1_en": {
+   "zstd_D_json_bytes": 211292,
+   "n_payloads": 692,
+   "rfc9842_header_bytes_per_payload": 40,
+   "zstd_D_json_plus_header_total": 238972,
+   "brotli_none_total": 394781,
+   "delta": -155809,
+   "winner": "zstd+D_json"
+  },
+  "j2": {
+   "zstd_D_json_bytes": 2272372,
+   "n_payloads": 990,
+   "rfc9842_header_bytes_per_payload": 40,
+   "zstd_D_json_plus_header_total": 2311972,
+   "brotli_none_total": 2844750,
+   "delta": -532778,
+   "winner": "zstd+D_json"
+  }
+ },
+ "payloads": {
+  "j1_ar": {
+   "n_train": 1920,
+   "n_test": 837,
+   "raw_bytes_train": 5041254,
+   "raw_bytes_test": 2198778
+  },
+  "j1_en": {
+   "n_train": 1399,
+   "n_test": 692,
+   "raw_bytes_train": 2908900,
+   "raw_bytes_test": 1426922
+  },
+  "j2": {
+   "n_train": 1978,
+   "n_test": 990,
+   "raw_bytes_train": 42230888,
+   "raw_bytes_test": 19716356
+  }
+ },
+ "dicts": {
+  "D_ar_raw": {
+   "bytes": 112640,
+   "sha256": "af21942f048bf45f1bf85df102d56dbf1c654e0ba4c853f16fc0d3c57092454c",
+   "separator": "none"
+  },
+  "D_en_raw": {
+   "bytes": 112640,
+   "sha256": "d85671d3a79dff8db61ee55d60768eaa4274726e6d66f617dbad416343b3e29f",
+   "separator": "none"
+  },
+  "D_ar_bgen": "not_run: external build not permitted in this environment (registered fallback)",
+  "D_json_raw_j1ar": {
+   "bytes": 112640,
+   "sha256": "07b930d6d8c2b305d84bdf356d1635322834889876b029e7cbfed11205633ce8",
+   "separator": "none"
+  },
+  "D_json_raw_j1en": {
+   "bytes": 112640,
+   "sha256": "b9bbd6fb930c0cca04adb73e6df1aba26abb663db2d9c8ceaac0de8c197d9206",
+   "separator": "none"
+  },
+  "D_json_raw_j2": {
+   "bytes": 112640,
+   "sha256": "b8a52df71c37a77571a465694f16f01f0c9438879cbb4fe63718386d0b43dfcb",
+   "separator": "none"
+  },
+  "D_json_j1ar": {
+   "bytes": 112640,
+   "sha256": "ed60e37236b707da14b38f15e9a44a14140c085ab0d231d92adcfe2ac85ce1f8",
+   "rep_identical": true
+  },
+  "D_json_j1en": {
+   "bytes": 112640,
+   "sha256": "221d19ff116bb7686af4368a95f2cdc2f699bbf2d27cf6e45a9306703dcca2f0",
+   "rep_identical": true
+  },
+  "D_json_j2": {
+   "bytes": 112640,
+   "sha256": "a65f6731f16785eb1aa542dfebe7ba844eab2369d1f4ff18fcd2573300e89f02",
+   "rep_identical": true
+  },
+  "D_tat": {
+   "bytes": 112640,
+   "sha256": "b6417928fff1e1698f3b50d7c33745e00df779508ee0ec797d883329b5f212ec",
+   "rep_identical": true
+  }
+ },
+ "versions": {
+  "zstd": "*** Zstandard CLI (64-bit) v1.5.7, by Yann Collet ***",
+  "brotli": "brotli 1.2.0"
+ },
+ "fetch_summary": {
+  "n_titles_clean": 3000,
+  "n_with_en": 2301,
+  "n_with_qid": 2968,
+  "n_j1ar_fetched": 2757,
+  "n_j1en_fetched": 2091,
+  "n_j2_fetched": 2968,
+  "ar_failures": 243,
+  "en_failures": 210,
+  "wd_failures": 0,
+  "tatoeba_ok": true
+ },
+ "runner_sha256": "5208a24e06e2839dddb1288e34f335fbdf35721de8b863a7fadbd3a77a49ee61"
+}
